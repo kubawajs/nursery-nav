@@ -1,0 +1,19 @@
+@import 'leaflet/dist/leaflet.css';
+
+.map-component {
+    height: 100vh;
+    width: 100vw;
+}
+
+.leaflet-container {
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+}
+
+.leaflet-container a {
+    color: inherit;
+    text-decoration: none;
+}
