@@ -1,0 +1,7 @@
+@import 'leaflet/dist/leaflet.css';
+
+.leaflet-container {
+    position:fixed;
+    width:100%;
+    height:100%;
+}
