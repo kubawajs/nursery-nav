@@ -13,7 +13,7 @@ import { FamilyRestroom } from '@mui/icons-material';
 
 const pages = ['About'];
 
-function Navigation() {
+export default function Navigation() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -116,5 +116,3 @@ function Navigation() {
         </AppBar>
     );
 }
-
-export default Navigation;
