@@ -1,11 +1,11 @@
-export interface MapComponentProps {
+export interface Institution {
     institutionType: string,
     name: string,
     website: string,
     email: string,
     phone: string,
     capacity: number,
-    kindsEnrolled: number,
+    kidsEnrolled: number,
     basicPricePerMonth: number,
     extendedStayOver10H?: number,
     basicPricePerHour?: number,

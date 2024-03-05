@@ -1,7 +1,7 @@
 import { Box, Button, Card, CardActions, CardContent, Container, Divider, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React from "react";
 
-function ListComponent() {
+export default function ListComponent() {
     const card = (
         <React.Fragment>
             <CardContent>
@@ -46,5 +46,3 @@ function ListComponent() {
         </Box>
     );
 }
-
-export default ListComponent;
