@@ -1,47 +1,42 @@
-import { Box, Button, Card, CardActions, CardContent, Container, Divider, List, ListItem, ListItemText, Typography } from "@mui/material";
-import React from "react";
+import { Box, Button, Card, CardActions, CardContent, List, ListItem, Typography } from "@mui/material";
+import { Institution } from "../../shared/nursery.interface";
 
-export default function ListComponent() {
-    const card = (
-        <React.Fragment>
-            <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    Poznań
-                </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    Żłobek "Bajkowy"
-                </Typography>
-                <Typography variant="body2">
-                    well meaning and kindly.
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
-        </React.Fragment>
-    );
+export interface ListComponentProps {
+    institutions: Institution[];
+}
 
+export default function ListComponent(props: ListComponentProps) {
     return (
         <Box component="section">
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                Found xxx results
+                Znaleziono {props.institutions.length} instytucji
             </Typography>
             <List>
-                <ListItem sx={{ display: 'block' }}>
-                    <Card variant="outlined">
-                        {card}
-                    </Card>
-                </ListItem>
-                <ListItem sx={{ display: 'block' }}>
-                    <Card variant="outlined">
-                        {card}
-                    </Card>
-                </ListItem>
-                <ListItem sx={{ display: 'block' }}>
-                    <Card variant="outlined">
-                        {card}
-                    </Card>
-                </ListItem>
+                {props.institutions.map((institution, index) => (
+                    <ListItem key={index} sx={{ display: 'block' }}>
+                        <Card variant="outlined">
+                            <CardContent>
+                                <Typography sx={{ fontSize: 11 }} color="text.secondary" gutterBottom>
+                                    {institution.institutionType}
+                                </Typography>
+                                <Typography sx={{ mb: 1.0 }} color="text.secondary" gutterBottom>
+                                    {institution.address.city}
+                                </Typography>
+                                <Typography sx={{ mb: 1.5 }} color="text.primary">
+                                    {institution.name}
+                                </Typography>
+                                <Typography sx={{ mb: 1.2 }} color="text.secondary">
+                                    {institution.basicPricePerMonth} zł
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button href={institution.website} target="_blank" rel="noreferrer">
+                                    Strona www
+                                </Button>
+                            </CardActions>
+                        </Card>
+                    </ListItem>
+                ))};
             </List>
         </Box>
     );
