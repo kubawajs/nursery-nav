@@ -4,8 +4,16 @@ import { divIcon } from "leaflet";
 import { renderToStaticMarkup } from "react-dom/server";
 import './MapPin.css';
 
-export default function MapPin() {
-    const position: [number, number] = [49.64, 20.50];
+export interface MapPinProps {
+    name: string,
+    pin: {
+        latitude: number,
+        longitude: number
+    }
+}
+
+export default function MapPin(props: MapPinProps) {
+    const position: [number, number] = [props.pin.latitude, props.pin.longitude];
     const iconMarkup = renderToStaticMarkup(
         <LocationOnIcon />
     );

@@ -1,192 +1,192 @@
 [
     {
-        "InstitutionType": "Żłobek",
-        "Name": "Niepubliczny Żłobek Integracyjny \" Wesołe Krasnoludki\"",
-        "Website": "www.skrzatek.eu",
-        "Email": "boguslawadar@interia.pl",
-        "Phone": "602280814",
-        "Capacity": 42,
-        "KindsEnrolled": 12,
-        "BasicPricePerMonth": 1000,
-        "ExtendedStayOver10H": null,
-        "BasicPricePerHour": null,
-        "FoodPricePerMonth": null,
-        "FoodPricePerDay": 15.0,
-        "Discounts": [
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek Integracyjny \" Wesołe Krasnoludki\"",
+        "website": "www.skrzatek.eu",
+        "email": "boguslawadar@interia.pl",
+        "phone": "602280814",
+        "capacity": 42,
+        "kidsEnrolled": 12,
+        "basicPricePerMonth": 1000,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.0,
+        "discounts": [
             "Wielodzietność/Karta Dużej Rodziny: 10.0%"
         ],
-        "OpeningHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:30",
-        "IsAdaptedToDisabledChildren": true,
-        "OperatingEntity": {
-            "Name": "Re Bud Firma Usługowa Bogusława Darowska",
-            "Address": null,
-            "NIP": "7371420378",
-            "REGON": "120092696",
-            "RegNoPosition": "7097/P",
-            "Website": "http://skrzatek.eu/"
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:30",
+        "isAdaptedToDisabledChildren": true,
+        "operatingEntity": {
+            "name": "Re Bud Firma Usługowa Bogusława Darowska",
+            "address": null,
+            "nip": "7371420378",
+            "regon": "120092696",
+            "regNoPosition": "7097/P",
+            "website": "http://skrzatek.eu/"
         },
-        "BusinessActivitySuspended": false,
-        "Address": {
-            "Voivodeship": "MAŁOPOLSKIE",
-            "County": "Powiat limanowski",
-            "City": "Łukowica",
-            "FullAddress": "Przyszowa Przyszowa 480",
-            "Pin": {
-                "Latitude": 49.64062389999999,
-                "Longitude": 20.5026759
+        "businessActivitySuspended": false,
+        "address": {
+            "voivodeship": "MAŁOPOLSKIE",
+            "county": "Powiat limanowski",
+            "city": "Łukowica",
+            "fullAddress": "Przyszowa Przyszowa 480",
+            "pin": {
+                "latitude": 49.64062389999999,
+                "longitude": 20.5026759
             }
         }
     },
     {
-        "InstitutionType": "Żłobek",
-        "Name": "Niepubliczny Żłobek Super Bobas",
-        "Website": "www.wesoledinusie.pl",
-        "Email": "kontakt@wesoledinusie.pl",
-        "Phone": "600140533",
-        "Capacity": 60,
-        "KindsEnrolled": 60,
-        "BasicPricePerMonth": 1450,
-        "ExtendedStayOver10H": null,
-        "BasicPricePerHour": null,
-        "FoodPricePerMonth": null,
-        "FoodPricePerDay": 15.5,
-        "Discounts": [],
-        "OpeningHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:35-16:45",
-        "IsAdaptedToDisabledChildren": true,
-        "OperatingEntity": {
-            "Name": "Lucky Star Ewa Bałtyk",
-            "Address": null,
-            "NIP": "9661654855",
-            "REGON": "200272057",
-            "RegNoPosition": "2263/P",
-            "Website": "www.wesoledinusie.pl"
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek Super Bobas",
+        "website": "www.wesoledinusie.pl",
+        "email": "kontakt@wesoledinusie.pl",
+        "phone": "600140533",
+        "capacity": 60,
+        "kidsEnrolled": 60,
+        "basicPricePerMonth": 1450,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.5,
+        "discounts": [],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:35-16:45",
+        "isAdaptedToDisabledChildren": true,
+        "operatingEntity": {
+            "name": "Lucky Star Ewa Bałtyk",
+            "address": null,
+            "nip": "9661654855",
+            "regon": "200272057",
+            "regNoPosition": "2263/P",
+            "website": "www.wesoledinusie.pl"
         },
-        "BusinessActivitySuspended": false,
-        "Address": {
-            "Voivodeship": "PODLASKIE",
-            "County": "Powiat Białystok",
-            "City": "Białystok",
-            "FullAddress": "Białystok ul. Gajowa 79",
-            "Pin": {
-                "Latitude": 53.1543035,
-                "Longitude": 23.1164365
+        "businessActivitySuspended": false,
+        "address": {
+            "voivodeship": "PODLASKIE",
+            "county": "Powiat Białystok",
+            "city": "Białystok",
+            "fullAddress": "Białystok ul. Gajowa 79",
+            "pin": {
+                "latitude": 53.1543035,
+                "longitude": 23.1164365
             }
         }
     },
     {
-        "InstitutionType": "Klub dziecięcy",
-        "Name": "Klub Malucha Stacyjkowo Magda Kutka",
-        "Website": "www.stacyjkowo.bydgoszcz.pl",
-        "Email": "kontakt@stacyjkowo.bydgoszcz.pl",
-        "Phone": "730567107",
-        "Capacity": 16,
-        "KindsEnrolled": 16,
-        "BasicPricePerMonth": 1200,
-        "ExtendedStayOver10H": 20.0,
-        "BasicPricePerHour": null,
-        "FoodPricePerMonth": null,
-        "FoodPricePerDay": 13.0,
-        "Discounts": [
+        "institutionType": "Klub dziecięcy",
+        "name": "Klub Malucha Stacyjkowo Magda Kutka",
+        "website": "www.stacyjkowo.bydgoszcz.pl",
+        "email": "kontakt@stacyjkowo.bydgoszcz.pl",
+        "phone": "730567107",
+        "capacity": 16,
+        "kidsEnrolled": 16,
+        "basicPricePerMonth": 1200,
+        "extendedStayOver10H": 20.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 13.0,
+        "discounts": [
             "Rodzeństwo uczęszczające do instytucji: 5.0%"
         ],
-        "OpeningHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00",
-        "IsAdaptedToDisabledChildren": false,
-        "OperatingEntity": {
-            "Name": "KLUB MALUCHA STACYJKOWO MAGDA KUTKA",
-            "Address": "ul.  Glinki 144 85-861 Bydgoszcz, Bydgoszcz, miasto",
-            "NIP": "5581801223",
-            "REGON": "386210110",
-            "RegNoPosition": "18315/P",
-            "Website": "WWW.STACYJKOWO.BYDGOSZCZ.PL"
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00",
+        "isAdaptedToDisabledChildren": false,
+        "operatingEntity": {
+            "name": "KLUB MALUCHA STACYJKOWO MAGDA KUTKA",
+            "address": "ul.  Glinki 144 85-861 Bydgoszcz, Bydgoszcz, miasto",
+            "nip": "5581801223",
+            "regon": "386210110",
+            "regNoPosition": "18315/P",
+            "website": "WWW.STACYJKOWO.BYDGOSZCZ.PL"
         },
-        "BusinessActivitySuspended": false,
-        "Address": {
-            "Voivodeship": "KUJAWSKO-POMORSKIE",
-            "County": "Powiat Bydgoszcz",
-            "City": "Bydgoszcz",
-            "FullAddress": "Bydgoszcz, miasto ul.  Glinki 144",
-            "Pin": {
-                "Latitude": 53.0888134,
-                "Longitude": 18.0439426
+        "businessActivitySuspended": false,
+        "address": {
+            "voivodeship": "KUJAWSKO-POMORSKIE",
+            "county": "Powiat Bydgoszcz",
+            "city": "Bydgoszcz",
+            "fullAddress": "Bydgoszcz, miasto ul.  Glinki 144",
+            "pin": {
+                "latitude": 53.0888134,
+                "longitude": 18.0439426
             }
         }
     },
     {
-        "InstitutionType": "Żłobek",
-        "Name": "Żłobek Ogrody Montessori - filia Golęcin",
-        "Website": "www.ogrodymontessori.pl",
-        "Email": "golecinzlobek@ogrodymontessori.pl",
-        "Phone": "+48602645020",
-        "Capacity": 91,
-        "KindsEnrolled": 45,
-        "BasicPricePerMonth": 1300,
-        "ExtendedStayOver10H": null,
-        "BasicPricePerHour": null,
-        "FoodPricePerMonth": null,
-        "FoodPricePerDay": 21.0,
-        "Discounts": [
+        "institutionType": "Żłobek",
+        "name": "Żłobek Ogrody Montessori - filia Golęcin",
+        "website": "www.ogrodymontessori.pl",
+        "email": "golecinzlobek@ogrodymontessori.pl",
+        "phone": "+48602645020",
+        "capacity": 91,
+        "kidsEnrolled": 45,
+        "basicPricePerMonth": 1300,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 21.0,
+        "discounts": [
             "Wielodzietność/Karta Dużej Rodziny: 10.0%", 
             "Samotne wychowanie dziecka: 10.0%",
             "Rodzeństwo uczęszczające do instytucji: 10.0%"
         ],
-        "OpeningHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00",
-        "IsAdaptedToDisabledChildren": false,
-        "OperatingEntity": {
-            "Name": "ContactMedia Marzena Mierkiewicz",
-            "Address": null,
-            "NIP": "7822226142",
-            "REGON": "301734670",
-            "RegNoPosition": "2205/P",
-            "Website": "www.ogrodymontessori.pl"
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00",
+        "isAdaptedToDisabledChildren": false,
+        "operatingEntity": {
+            "name": "ContactMedia Marzena Mierkiewicz",
+            "address": null,
+            "nip": "7822226142",
+            "regon": "301734670",
+            "regNoPosition": "2205/P",
+            "website": "www.ogrodymontessori.pl"
         },
-        "BusinessActivitySuspended": false,
-        "Address": {
-            "Voivodeship": "WIELKOPOLSKIE",
-            "County": "Powiat Poznań",
-            "City": "Poznań-Jeżyce",
-            "FullAddress": "Poznań-Jeżyce ul. Wojska Polskiego 79",
-            "Pin": {
-                "Latitude": 52.4293929,
-                "Longitude": 16.8930349
+        "businessActivitySuspended": false,
+        "address": {
+            "voivodeship": "WIELKOPOLSKIE",
+            "county": "Powiat Poznań",
+            "city": "Poznań-Jeżyce",
+            "fullAddress": "Poznań-Jeżyce ul. Wojska Polskiego 79",
+            "pin": {
+                "latitude": 52.4293929,
+                "longitude": 16.8930349
             }
         }
     },
     {
-        "InstitutionType": "Żłobek",
-        "Name": "Żłobek Pozytywnego Rozwoju",
-        "Website": "www.pozytywnegorozwoju.pl",
-        "Email": "wolsztyn@pozytywnegorozwoju.pl",
-        "Phone": "730210903",
-        "Capacity": 25,
-        "KindsEnrolled": 25,
-        "BasicPricePerMonth": 1500,
-        "ExtendedStayOver10H": 50,
-        "BasicPricePerHour": null,
-        "FoodPricePerMonth": null,
-        "FoodPricePerDay": 16.0,
-        "Discounts": [
+        "institutionType": "Żłobek",
+        "name": "Żłobek Pozytywnego Rozwoju",
+        "website": "www.pozytywnegorozwoju.pl",
+        "email": "wolsztyn@pozytywnegorozwoju.pl",
+        "phone": "730210903",
+        "capacity": 25,
+        "kidsEnrolled": 25,
+        "basicPricePerMonth": 1500,
+        "extendedStayOver10H": 50,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.0,
+        "discounts": [
             "Rodzeństwo uczęszczające do instytucji: 7.0%",
             "Dotacja z budżetu gminy Wolsztyn ( 300 zł): 20.0%"
         ],
-        "OpeningHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:45-16:45",
-        "IsAdaptedToDisabledChildren": false,
-        "OperatingEntity": {
-            "Name": "Fundacja Pozytywnego Rozwoju",
-            "Address": "ul.  Kaczeńcowa 38 60-175 Poznań-Grunwald, Poznań-Grunwald, delegatura",
-            "NIP": "7792424652",
-            "REGON": "302839743",
-            "RegNoPosition": "7054/P",
-            "Website": "www.pozytywnegorozwoju.pl"
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:45-16:45",
+        "isAdaptedToDisabledChildren": false,
+        "operatingEntity": {
+            "name": "Fundacja Pozytywnego Rozwoju",
+            "address": "ul.  Kaczeńcowa 38 60-175 Poznań-Grunwald, Poznań-Grunwald, delegatura",
+            "nip": "7792424652",
+            "regon": "302839743",
+            "regNoPosition": "7054/P",
+            "website": "www.pozytywnegorozwoju.pl"
         },
-        "BusinessActivitySuspended": false,
-        "Address": {
-            "Voivodeship": "WIELKOPOLSKIE",
-            "County": "Powiat wolsztyński",
-            "City": "Wolsztyn",
-            "FullAddress": "Wolsztyn ul. Źródlana 2",
-            "Pin": {
-                "Latitude": 52.1213201,
-                "Longitude": 16.1208654
+        "businessActivitySuspended": false,
+        "address": {
+            "voivodeship": "WIELKOPOLSKIE",
+            "county": "Powiat wolsztyński",
+            "city": "Wolsztyn",
+            "fullAddress": "Wolsztyn ul. Źródlana 2",
+            "pin": {
+                "latitude": 52.1213201,
+                "longitude": 16.1208654
             }
         }
     }
