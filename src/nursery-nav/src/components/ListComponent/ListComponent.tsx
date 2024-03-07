@@ -34,7 +34,7 @@ function ListComponentItem(props: ListComponentItemProps) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button variant="contained" href={props.website} target="_blank" rel="noreferrer">
+                    <Button variant="contained" href={props.website}>
                         Strona www
                     </Button>
                 </CardActions>

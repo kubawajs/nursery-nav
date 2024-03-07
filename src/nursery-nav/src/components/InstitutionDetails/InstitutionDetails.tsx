@@ -1,6 +1,6 @@
-import { Box, Chip, Paper, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { Box, Chip, Grid, Paper, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import { Institution } from "../../shared/nursery.interface";
-import { PhoneAndroid, AlternateEmail, Language, Restaurant, FoodBankOutlined, CottageOutlined } from '@mui/icons-material';
+import { PhoneAndroid, AlternateEmail, Language, FoodBankOutlined, CottageOutlined } from '@mui/icons-material';
 
 export default function InstitutionDetails(institution: Institution) {
     return (
@@ -8,7 +8,7 @@ export default function InstitutionDetails(institution: Institution) {
             <Box>
                 <Paper elevation={3}>
                     <Chip label={institution.institutionType} />
-                    <h1>{institution.name}</h1>
+                    <Typography variant="h2">{institution.name}</Typography>
                     <Box>
                         <TableContainer>
                             <TableHead>
@@ -27,7 +27,7 @@ export default function InstitutionDetails(institution: Institution) {
                                         {institution.basicPricePerMonth && <>{institution.basicPricePerMonth} PLN / miesiąc</>}
                                     </TableCell>
                                     <TableCell>
-                                        {institution.basicPricePerHour && <>{institution.basicPricePerHour} PLN / godzina</>} 
+                                        {institution.basicPricePerHour && <>{institution.basicPricePerHour} PLN / godzina</>}
                                     </TableCell>
                                     <TableCell>
                                         {institution.foodPricePerMonth && <>{institution.foodPricePerMonth} PLN miesiąc</>}
@@ -43,17 +43,17 @@ export default function InstitutionDetails(institution: Institution) {
             </Box>
             <Box>
                 <Paper elevation={1}>
-                    <h2>Opis</h2>
+                    <Typography variant="subtitle1">Opis</Typography>
                     <Box>
-                        <span>
+                        <Typography variant="body1">
                             {institution.address.fullAddress}
-                        </span>
+                        </Typography>
                     </Box>
-                    <h3>Godziny otwarcia</h3>
+                    <Typography variant="subtitle2">Godziny otwarcia</Typography>
                     <Box>
-                        <p>{institution.openingHours}</p>
+                        <Typography variant="body1">{institution.openingHours}</Typography>
                     </Box>
-                    <h3>Zniżki</h3>
+                    <Typography variant="subtitle2">Zniżki</Typography>
                     {institution.discounts.map((discount, index) => (
                         <Chip key={index} label={discount} />
                     ))}
@@ -61,25 +61,35 @@ export default function InstitutionDetails(institution: Institution) {
             </Box>
             <Box>
                 <Paper elevation={3}>
-                    <h2>Kontakt</h2>
-                    <Box>
-                        <PhoneAndroid />
-                        <span>
-                            {institution.phone}
-                        </span>
-                    </Box>
-                    <Box>
-                        <AlternateEmail />
-                        <span>
-                            {institution.email}
-                        </span>
-                    </Box>
-                    <Box>
-                        <Language />
-                        <span>
-                            {institution.website}
-                        </span>
-                    </Box>
+                    <Grid container>
+                        <Grid item xs={12}>
+                            <Box>
+                                <Typography variant="overline">
+                                    <PhoneAndroid />
+                                    <br />
+                                    {institution.phone}
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Box>
+                                <Typography variant="overline">
+                                    <AlternateEmail />
+                                    <br />
+                                    {institution.email}
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Box>
+                                <Typography variant="overline">
+                                    <Language />
+                                    <br />
+                                    {institution.website}
+                                </Typography>
+                            </Box>
+                        </Grid>
+                    </Grid>
                 </Paper>
             </Box>
         </Box>
