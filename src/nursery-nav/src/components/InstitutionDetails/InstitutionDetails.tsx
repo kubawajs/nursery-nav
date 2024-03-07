@@ -2,13 +2,13 @@ import { Box, Chip, Paper, TableBody, TableCell, TableContainer, TableHead, Tabl
 import { Institution } from "../../shared/nursery.interface";
 import { PhoneAndroid, AlternateEmail, Language, Restaurant, FoodBankOutlined, CottageOutlined } from '@mui/icons-material';
 
-export default function InstitutionDetails(props: Institution) {
+export default function InstitutionDetails(institution: Institution) {
     return (
         <Box>
             <Box>
                 <Paper elevation={3}>
-                    <Chip label={props.institutionType} />
-                    <h1>{props.name}</h1>
+                    <Chip label={institution.institutionType} />
+                    <h1>{institution.name}</h1>
                     <Box>
                         <TableContainer>
                             <TableHead>
@@ -24,16 +24,16 @@ export default function InstitutionDetails(props: Institution) {
                             <TableBody>
                                 <TableRow>
                                     <TableCell>
-                                        {props.basicPricePerMonth && <>{props.basicPricePerMonth} PLN / miesiąc</>}
+                                        {institution.basicPricePerMonth && <>{institution.basicPricePerMonth} PLN / miesiąc</>}
                                     </TableCell>
                                     <TableCell>
-                                        {props.basicPricePerHour && <>{props.basicPricePerHour} PLN / godzina</>} 
+                                        {institution.basicPricePerHour && <>{institution.basicPricePerHour} PLN / godzina</>} 
                                     </TableCell>
                                     <TableCell>
-                                        {props.foodPricePerMonth && <>{props.foodPricePerMonth} PLN miesiąc</>}
+                                        {institution.foodPricePerMonth && <>{institution.foodPricePerMonth} PLN miesiąc</>}
                                     </TableCell>
                                     <TableCell>
-                                        {props.foodPricePerDay && <>{props.foodPricePerDay} PLN / dzień</>}
+                                        {institution.foodPricePerDay && <>{institution.foodPricePerDay} PLN / dzień</>}
                                     </TableCell>
                                 </TableRow>
                             </TableBody>
@@ -42,19 +42,19 @@ export default function InstitutionDetails(props: Institution) {
                 </Paper>
             </Box>
             <Box>
-                <Paper elevation={0}>
+                <Paper elevation={1}>
                     <h2>Opis</h2>
                     <Box>
                         <span>
-                            {props.address.fullAddress}
+                            {institution.address.fullAddress}
                         </span>
                     </Box>
                     <h3>Godziny otwarcia</h3>
                     <Box>
-                        <p>{props.openingHours}</p>
+                        <p>{institution.openingHours}</p>
                     </Box>
                     <h3>Zniżki</h3>
-                    {props.discounts.map((discount, index) => (
+                    {institution.discounts.map((discount, index) => (
                         <Chip key={index} label={discount} />
                     ))}
                 </Paper>
@@ -65,19 +65,19 @@ export default function InstitutionDetails(props: Institution) {
                     <Box>
                         <PhoneAndroid />
                         <span>
-                            {props.phone}
+                            {institution.phone}
                         </span>
                     </Box>
                     <Box>
                         <AlternateEmail />
                         <span>
-                            {props.email}
+                            {institution.email}
                         </span>
                     </Box>
                     <Box>
                         <Language />
                         <span>
-                            {props.website}
+                            {institution.website}
                         </span>
                     </Box>
                 </Paper>

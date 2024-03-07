@@ -6,18 +6,17 @@ import data from "./data/test-data.json";
 import { Institution } from "./shared/nursery.interface";
 
 const mapProps: MapComponentProps = {
-  institutions: data as unknown as Institution[]
+  institutions: data as unknown as Institution[],
+  center: [52.00, 21.37]
 };
 
 const listProps: ListComponentProps = {
   institutions: data as unknown as Institution[]
 };
 
-function App() {
-  console.log(mapProps);
-  console.log(typeof(mapProps));
+export default function App() {
   return (
-    <Grid container>
+    <Grid container margin={0}>
       <Grid item xs={12}>
         <Navigation />
       </Grid>
@@ -30,5 +29,3 @@ function App() {
     </Grid>
   );
 }
-
-export default App;
