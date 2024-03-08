@@ -55,7 +55,7 @@ export default function ListComponent(props: ListComponentProps) {
         );
     }
     return (
-        <Box component="section">
+        <Box component="section" style={{ overflow: 'auto', height: '100vh' }}>
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                 Znaleziono {props.institutions.length} instytucji
             </Typography>
