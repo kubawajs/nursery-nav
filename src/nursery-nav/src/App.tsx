@@ -20,10 +20,10 @@ export default function App() {
       <Grid item xs={12}>
         <Navigation />
       </Grid>
-      <Grid item xs={12} md={5}>
+      <Grid item xs={12} md={5} style={{ position: 'relative' }}>
         <ListComponent {...listProps} />
       </Grid>
-      <Grid item xs={12} md={7}>
+      <Grid item xs={12} md={7} style={{ position: 'relative' }}>
         <MapComponent {...mapProps} />
       </Grid>
     </Grid>

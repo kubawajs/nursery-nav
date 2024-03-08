@@ -1,6 +1,7 @@
-import { Box, Button, Card, CardActions, CardContent, List, ListItem, Typography } from "@mui/material";
+import { Box, Button, Card, CardActions, CardContent, List, ListItem, Paper, Typography } from "@mui/material";
 import { Institution } from "../../shared/nursery.interface";
 import { useState } from "react";
+import { Payment } from "@mui/icons-material";
 import InstitutionDetails from "../InstitutionDetails/InstitutionDetails";
 
 export interface ListComponentProps {
@@ -30,7 +31,7 @@ function ListComponentItem(props: ListComponentItemProps) {
                         {props.name}
                     </Typography>
                     <Typography sx={{ mb: 1.2 }} color="text.secondary">
-                        {props.basicPricePerMonth} PLN / miesiąc
+                        <Payment /> {props.basicPricePerMonth} PLN / miesiąc
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -49,13 +50,13 @@ export default function ListComponent(props: ListComponentProps) {
     if (selectedInstitution) {
         return (
             <Box>
-                <Button variant="contained" onClick={() => setSelectedInstitution(null)}>Powrót</Button>,
+                <Button variant="contained" onClick={() => setSelectedInstitution(null)}>Powrót</Button>
                 <InstitutionDetails {...selectedInstitution} />
             </Box>
         );
     }
     return (
-        <Box component="section">
+        <Box component="section" style={{ overflow: 'auto', height: '100vh' }}>
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                 Znaleziono {props.institutions.length} instytucji
             </Typography>
@@ -71,7 +72,7 @@ export default function ListComponent(props: ListComponentProps) {
                             website={institution.website}
                         />
                     </Box>
-                ))};
+                ))}
             </List>
         </Box>
     );
