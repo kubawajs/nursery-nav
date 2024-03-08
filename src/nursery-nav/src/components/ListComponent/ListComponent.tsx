@@ -49,7 +49,7 @@ export default function ListComponent(props: ListComponentProps) {
     if (selectedInstitution) {
         return (
             <Box>
-                <Button variant="contained" onClick={() => setSelectedInstitution(null)}>Powrót</Button>,
+                <Button variant="contained" onClick={() => setSelectedInstitution(null)}>Powrót</Button>
                 <InstitutionDetails {...selectedInstitution} />
             </Box>
         );

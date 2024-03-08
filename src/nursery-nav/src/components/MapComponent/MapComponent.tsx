@@ -11,8 +11,8 @@ export interface MapComponentProps {
 
 export default function MapComponent(props: MapComponentProps) {
   return (
-    <Container fixed>
-      <MapContainer center={props.center} zoom={7} scrollWheelZoom={true} zoomControl={false}>
+    <Container style={{ padding: 0 }}>
+      <MapContainer center={props.center} zoom={7} scrollWheelZoom={true} zoomControl={false} style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }}>
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {props.institutions.map((institution, index) => (
           <MapPin key={index} name={institution.name} pin={institution.address.pin} /> // Added conditional check for institution.pin
