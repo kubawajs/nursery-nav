@@ -1,14 +1,14 @@
-import { Box, Chip, Paper, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { Box, Chip, Grid, Paper, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import { Institution } from "../../shared/nursery.interface";
-import { PhoneAndroid, AlternateEmail, Language, Restaurant, FoodBankOutlined, CottageOutlined } from '@mui/icons-material';
+import { PhoneAndroid, AlternateEmail, Language, FoodBankOutlined, CottageOutlined } from '@mui/icons-material';
 
-export default function InstitutionDetails(props: Institution) {
+export default function InstitutionDetails(institution: Institution) {
     return (
         <Box>
             <Box>
                 <Paper elevation={3}>
-                    <Chip label={props.institutionType} />
-                    <h1>{props.name}</h1>
+                    <Chip label={institution.institutionType} />
+                    <Typography variant="h2">{institution.name}</Typography>
                     <Box>
                         <TableContainer>
                             <TableHead>
@@ -24,16 +24,16 @@ export default function InstitutionDetails(props: Institution) {
                             <TableBody>
                                 <TableRow>
                                     <TableCell>
-                                        {props.basicPricePerMonth && <>{props.basicPricePerMonth} PLN / miesiąc</>}
+                                        {institution.basicPricePerMonth && <>{institution.basicPricePerMonth} PLN / miesiąc</>}
                                     </TableCell>
                                     <TableCell>
-                                        {props.basicPricePerHour && <>{props.basicPricePerHour} PLN / godzina</>} 
+                                        {institution.basicPricePerHour && <>{institution.basicPricePerHour} PLN / godzina</>}
                                     </TableCell>
                                     <TableCell>
-                                        {props.foodPricePerMonth && <>{props.foodPricePerMonth} PLN miesiąc</>}
+                                        {institution.foodPricePerMonth && <>{institution.foodPricePerMonth} PLN miesiąc</>}
                                     </TableCell>
                                     <TableCell>
-                                        {props.foodPricePerDay && <>{props.foodPricePerDay} PLN / dzień</>}
+                                        {institution.foodPricePerDay && <>{institution.foodPricePerDay} PLN / dzień</>}
                                     </TableCell>
                                 </TableRow>
                             </TableBody>
@@ -42,44 +42,54 @@ export default function InstitutionDetails(props: Institution) {
                 </Paper>
             </Box>
             <Box>
-                <Paper elevation={0}>
-                    <h2>Opis</h2>
+                <Paper elevation={1}>
+                    <Typography variant="subtitle1">Opis</Typography>
                     <Box>
-                        <span>
-                            {props.address.fullAddress}
-                        </span>
+                        <Typography variant="body1">
+                            {institution.address.fullAddress}
+                        </Typography>
                     </Box>
-                    <h3>Godziny otwarcia</h3>
+                    <Typography variant="subtitle2">Godziny otwarcia</Typography>
                     <Box>
-                        <p>{props.openingHours}</p>
+                        <Typography variant="body1">{institution.openingHours}</Typography>
                     </Box>
-                    <h3>Zniżki</h3>
-                    {props.discounts.map((discount, index) => (
+                    <Typography variant="subtitle2">Zniżki</Typography>
+                    {institution.discounts.map((discount, index) => (
                         <Chip key={index} label={discount} />
                     ))}
                 </Paper>
             </Box>
             <Box>
                 <Paper elevation={3}>
-                    <h2>Kontakt</h2>
-                    <Box>
-                        <PhoneAndroid />
-                        <span>
-                            {props.phone}
-                        </span>
-                    </Box>
-                    <Box>
-                        <AlternateEmail />
-                        <span>
-                            {props.email}
-                        </span>
-                    </Box>
-                    <Box>
-                        <Language />
-                        <span>
-                            {props.website}
-                        </span>
-                    </Box>
+                    <Grid container>
+                        <Grid item xs={12}>
+                            <Box>
+                                <Typography variant="overline">
+                                    <PhoneAndroid />
+                                    <br />
+                                    {institution.phone}
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Box>
+                                <Typography variant="overline">
+                                    <AlternateEmail />
+                                    <br />
+                                    {institution.email}
+                                </Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Box>
+                                <Typography variant="overline">
+                                    <Language />
+                                    <br />
+                                    {institution.website}
+                                </Typography>
+                            </Box>
+                        </Grid>
+                    </Grid>
                 </Paper>
             </Box>
         </Box>
