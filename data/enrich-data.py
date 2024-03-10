@@ -33,17 +33,17 @@ def get_coordinates(address):
         return None
 
 df = pd.read_csv('RZ-instytucje.csv', sep=';')
-df[['voivodeship', 'county', 'city', 'address']] = df['Localization'].str.split('>', expand=True)
+df[['voivodeship', 'county', 'city', 'address']] = df['Localization'].str.split('> ', expand=True)
 broken_rows = []
 
 for i in range(len(df)):
     print(f"Processing row {i+1} of {len(df)}")
 
-    if df.at[i, 'Localization'] is None:
+    if df.at[i, 'localization'] is None:
         broken_rows.append(df.at[i])
         continue
 
-    address = df.at[i, 'Localization']
+    address = df.at[i, 'localization']
     lat, lon = get_coordinates(address) or (None, None)
 
     if lat is not None and lon is not None:
