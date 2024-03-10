@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import MapComponent, { MapComponentProps } from "./components/MapComponent/MapComponent";
 import Navigation from "./components/Navigation/Navigation";
 import ListComponent, { ListComponentProps } from "./components/ListComponent/ListComponent";
-import data from "./data/test-data.json";
+import data from "./data/test-data-100.json";
 import { Institution } from "./shared/nursery.interface";
 
 const mapProps: MapComponentProps = {

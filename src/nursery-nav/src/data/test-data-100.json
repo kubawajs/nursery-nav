@@ -1,0 +1,3736 @@
+[
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek Integracyjny \" Wesołe Krasnoludki\"",
+        "website": "www.skrzatek.eu",
+        "email": "boguslawadar@interia.pl",
+        "phone": "602280814",
+        "capacity": 42,
+        "kidsEnrolled": 12.0,
+        "basicPricePerMonth": 1000.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.0,
+        "discounts": [
+            "Wielodzietność\/Karta Dużej Rodziny: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Łukowica",
+            "county": "Powiat limanowski",
+            "fullAddress": "Przyszowa Przyszowa 480",
+            "pin": {
+                "latitude": 49.6406239,
+                "longitude": 20.5026759
+            },
+            "voivodeship": "MAŁOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Re Bud Firma Usługowa Bogusława Darowska",
+            "nip": 7371420378.0,
+            "regNoPosition": "7097\/P",
+            "regon": "120092696",
+            "website": "http:\/\/skrzatek.eu\/"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "NURSING CARE MAGDALENA HARWAS",
+        "website": "WWW.NURSINGCARE.PL",
+        "email": "MAGDALENA_HARWAS@WP.PL",
+        "phone": "608163976",
+        "capacity": 25,
+        "kidsEnrolled": 25.0,
+        "basicPricePerMonth": 550.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 150.0,
+        "foodPricePerDay": null,
+        "discounts": [
+            "Wielodzietność\/Karta Dużej Rodziny: 15.0% ",
+            "Rodzeństwo uczęszczające do instytucji: 20.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Piła",
+            "county": "Powiat pilski",
+            "fullAddress": "Piła ul. Podchorążych 18 lok. A",
+            "pin": {
+                "latitude": 53.1583519,
+                "longitude": 16.7646586
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Magdalena Harwas",
+            "nip": 7642533948.0,
+            "regNoPosition": "1237\/P",
+            "regon": "302622541",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "Zespół Klubów Dziecięcych \"Bajkowa Przystań\" - Klub Dziecięcy \"Bajkowa Przystań 1\"",
+        "website": "https:\/\/przedszkolewdeszcznie.edupage.org\/",
+        "email": "dyrektor.klubmalucha@deszczno.pl",
+        "phone": "95 728 76 72",
+        "capacity": 30,
+        "kidsEnrolled": 30.0,
+        "basicPricePerMonth": 636.3,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 11.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Deszczno",
+            "county": "Powiat gorzowski",
+            "fullAddress": "Maszewo ul. Kręta 1A",
+            "pin": {
+                "latitude": 52.6676951,
+                "longitude": 15.3075503
+            },
+            "voivodeship": "LUBUSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Lubuska 90 66-446 Deszczno",
+            "name": "Gmina Deszczno",
+            "nip": 5992774930.0,
+            "regNoPosition": "11242\/P",
+            "regon": "210966935",
+            "website": "www.deszczno.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek \"MALUSZKOWO\"",
+        "website": "www.maluszkowo.com.pl",
+        "email": "biuro@maluszkowo.com.pl",
+        "phone": "533 324 705",
+        "capacity": 60,
+        "kidsEnrolled": 19.0,
+        "basicPricePerMonth": 850.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 14.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 12.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Dębica",
+            "county": "Powiat dębicki",
+            "fullAddress": "Dębica ul. Paderewskiego 2",
+            "pin": {
+                "latitude": 50.0569509,
+                "longitude": 21.4022593
+            },
+            "voivodeship": "PODKARPACKIE"
+        },
+        "operatingEntity": {
+            "address": " 372 36-052 Sokołów Małopolski, Nienadówka, wieś",
+            "name": "W2 Spółka z ograniczoną odpowiedzialnością Spółka Komandytowa",
+            "nip": 5170362578.0,
+            "regNoPosition": "9932\/P",
+            "regon": "180967337",
+            "website": "www.maluszkowo.com.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek \"Kwiatuszki\" w Siemianicach",
+        "website": null,
+        "email": "przedszkolekolorowe@gmail.com",
+        "phone": "603111574",
+        "capacity": 20,
+        "kidsEnrolled": 20.0,
+        "basicPricePerMonth": 480.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 160.0,
+        "foodPricePerDay": null,
+        "discounts": null,
+        "openingHours": "Godziny pracy: ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Redzikowo",
+            "county": "Powiat słupski",
+            "fullAddress": "Siemianice ul. Spacerowa 2",
+            "pin": {
+                "latitude": 54.4954444,
+                "longitude": 17.0612591
+            },
+            "voivodeship": "POMORSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Niepubliczny Żłobek \"Kwiatuszki\"\/Małgorzata Jażdzewska",
+            "nip": 8431534383.0,
+            "regNoPosition": "7183\/P",
+            "regon": "221936354",
+            "website": "www.kwiatuszkizlobek.pl"
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "Niepubliczny Klub Dziecięcy \"Piaskowy Smok\"",
+        "website": null,
+        "email": "piaskowysmok@wp.pl",
+        "phone": "534-707-608",
+        "capacity": 22,
+        "kidsEnrolled": 22.0,
+        "basicPricePerMonth": 1000.0,
+        "extendedStayOver10H": 20.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 18.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Nowy Dwór Mazowiecki",
+            "county": "Powiat nowodworski",
+            "fullAddress": "Nowy Dwór Mazowiecki ul. Sukienna 19",
+            "pin": {
+                "latitude": 52.433176,
+                "longitude": 20.7182951
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Julia Sochacka",
+            "nip": 7772750199.0,
+            "regNoPosition": "11246\/P",
+            "regon": "146461127",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "Akademia Rozwoju Dziecka \"Bajkowy Dworek\" ",
+        "website": "https:\/\/www.facebook.com\/bajkowydworek.k.zarnowska\/",
+        "email": "bajkowy.dworek@o2.pl",
+        "phone": "695040631",
+        "capacity": 15,
+        "kidsEnrolled": 12.0,
+        "basicPricePerMonth": 1150.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 300.0,
+        "foodPricePerDay": null,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 30.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Lubsko",
+            "county": "Powiat żarski",
+            "fullAddress": "Białków Białków 22",
+            "pin": {
+                "latitude": 51.8024532,
+                "longitude": 15.0438026
+            },
+            "voivodeship": "LUBUSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Katarzyna Żarnowska",
+            "nip": 6991677929.0,
+            "regNoPosition": "11267\/P",
+            "regon": "367099184",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek Smyki w Alwerni",
+        "website": "www.smyki-zlobek.pl",
+        "email": "zlobek.smyki.alwernia@gmail.com",
+        "phone": "510694781",
+        "capacity": 30,
+        "kidsEnrolled": 28.0,
+        "basicPricePerMonth": 1600.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 17.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Alwernia",
+            "county": "Powiat chrzanowski",
+            "fullAddress": "Alwernia, miasto ul. Marii Skłodowskiej-Curie 3E",
+            "pin": {
+                "latitude": 50.0646087,
+                "longitude": 19.5436581
+            },
+            "voivodeship": "MAŁOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Niepubliczny Żłobek Smyki Monika Bakalarz",
+            "nip": 6282077004.0,
+            "regNoPosition": "11434\/P",
+            "regon": "362369408",
+            "website": "www.smyki-zlobek.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Rainbow",
+        "website": null,
+        "email": "maciej_jakubek@wp.pl",
+        "phone": "509442333",
+        "capacity": 43,
+        "kidsEnrolled": 26.0,
+        "basicPricePerMonth": 350.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 300.0,
+        "foodPricePerDay": null,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Kalisz",
+            "county": "Powiat Kalisz",
+            "fullAddress": "Kalisz ul. Jana Długosza 15",
+            "pin": {
+                "latitude": 51.7664262,
+                "longitude": 18.0771081
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Maciej Jakubek EKOMA",
+            "nip": 6181847570.0,
+            "regNoPosition": "11273\/P",
+            "regon": "301965747",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Artystyczny - \"Bose Stópki\" S.C. Aneta Abram Justyna Klityńska",
+        "website": null,
+        "email": "bosestopki.warszawa@gmail.com",
+        "phone": "698715748",
+        "capacity": 15,
+        "kidsEnrolled": 15.0,
+        "basicPricePerMonth": 1600.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Warszawa - Wola",
+            "county": "Powiat Warszawa",
+            "fullAddress": "Wola ul. Jana Olbrachta 26 lok. 1",
+            "pin": {
+                "latitude": 52.2370419,
+                "longitude": 20.9410829
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Jana Olbrachta 26 lok. 1 01-111 Warszawa - Wola, Warszawa - Wola, dzielnica m. st. Warszawy",
+            "name": "BOSE STÓPKI\" - ŻŁOBEK ARTYSTYCZNY SPÓŁKA CYWILNA ANETA ABRAM, JUSTYNA KLITYŃSKA",
+            "nip": 5272812341.0,
+            "regNoPosition": "11316\/P",
+            "regon": "367603004",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek \"Tygrysek\"",
+        "website": "www.wiosnawsercu.pl",
+        "email": "wiosnawsercu@gmil.com",
+        "phone": "510-520-886, 697-35-15-00",
+        "capacity": 15,
+        "kidsEnrolled": 15.0,
+        "basicPricePerMonth": 900.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 12.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 07:00-16:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Konin",
+            "county": "Powiat Konin",
+            "fullAddress": "Konin ul. Akacjowa 5",
+            "pin": {
+                "latitude": 52.2434073,
+                "longitude": 18.2479911
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Akacjowa 5 62-510 Konin, Konin, miasto",
+            "name": "Fundacja \"Wiosna w Sercu\"",
+            "nip": 6652880131.0,
+            "regNoPosition": "157\/P",
+            "regon": "300907742",
+            "website": "www.wiosnawsercu.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Re-Re-Kum-Kum",
+        "website": "www.re-re-kum-kum.pl",
+        "email": "re-re-kum-kum@wp.pl",
+        "phone": "510094775",
+        "capacity": 78,
+        "kidsEnrolled": 73.0,
+        "basicPricePerMonth": 980.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 17.0,
+        "discounts": [
+            "Wielodzietność\/Karta Dużej Rodziny: 10.0% ",
+            "Dziecko niepełnosprawne lub wymagające szczególnej opieki: 20.0% ",
+            "Rodzeństwo uczęszczające do instytucji: 20.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Starachowice",
+            "county": "Powiat starachowicki",
+            "fullAddress": "Starachowice ul. Stanisława Staszica 25",
+            "pin": {
+                "latitude": 51.0507893,
+                "longitude": 21.0832921
+            },
+            "voivodeship": "ŚWIĘTOKRZYSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Stanisława Staszica 25 27-200 Starachowice, Starachowice, miasto",
+            "name": "Klub Malucha Re-Re-Kum-Kum s.c.",
+            "nip": 6642135087.0,
+            "regNoPosition": "2087\/P",
+            "regon": "365445096",
+            "website": "www.re-re-kum-kum.pl"
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "Kochane Urwisy",
+        "website": "www.kochaneurwisy.pl",
+        "email": "kochaneurwisy@op.pl",
+        "phone": "607866401",
+        "capacity": 15,
+        "kidsEnrolled": 8.0,
+        "basicPricePerMonth": 1700.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": null,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:30-17:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Grójec",
+            "county": "Powiat grójecki",
+            "fullAddress": "Marianów, wieś Marianów, wieś 19M",
+            "pin": {
+                "latitude": 51.8725549,
+                "longitude": 20.9023858
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Łukasz Błaszczykowski",
+            "nip": 7971540406.0,
+            "regNoPosition": "750\/P",
+            "regon": "146296421",
+            "website": "www.kochaneurwisy.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Miejski nr 2 ",
+        "website": "http:\/\/www.zlobek2.swidnica.pl",
+        "email": "zlobek_nr2@wp.pl",
+        "phone": "74 637 90 82",
+        "capacity": 100,
+        "kidsEnrolled": 100.0,
+        "basicPricePerMonth": 636.0,
+        "extendedStayOver10H": 63.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 10.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Świdnica",
+            "county": "Powiat świdnicki",
+            "fullAddress": "Świdnica ul. Galla Anonima 5",
+            "pin": {
+                "latitude": 50.8610311,
+                "longitude": 16.4848719
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Armii Krajowej 49 58-100 Świdnica, Świdnica, miasto",
+            "name": "Gmina Miasto Świdnica",
+            "nip": 8840024797.0,
+            "regNoPosition": "7063\/P",
+            "regon": "890718314",
+            "website": "www.um.swidnica.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Gminny w Głuszycy",
+        "website": "www.zlobekgluszyca.pl",
+        "email": "zlobek@gluszyca.pl",
+        "phone": "605616005",
+        "capacity": 45,
+        "kidsEnrolled": 45.0,
+        "basicPricePerMonth": 400.0,
+        "extendedStayOver10H": 40.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.9,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:00-16:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Głuszyca",
+            "county": "Powiat wałbrzyski",
+            "fullAddress": "Głuszyca ul. Grunwaldzka 37",
+            "pin": {
+                "latitude": 50.6816689,
+                "longitude": 16.3786793
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Parkowa 9 58-340 Głuszyca, Głuszyca, miasto",
+            "name": "Gmina Głuszyca",
+            "nip": 8862572750.0,
+            "regNoPosition": "7248\/P",
+            "regon": "890718248",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "\"BRZDĄCE NA ŁĄCE\" KLUB MALUCHA I OPIEKA DZIENNA EWELINA BEDNARKIEWICZ",
+        "website": null,
+        "email": "e.bednarkiewicz90@gmail.com",
+        "phone": "663320431",
+        "capacity": 15,
+        "kidsEnrolled": 12.0,
+        "basicPricePerMonth": 750.0,
+        "extendedStayOver10H": 20.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 9.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-16:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Grzegorzew",
+            "county": "Powiat kolski",
+            "fullAddress": "Grzegorzew ul. Łąkowa 19",
+            "pin": {
+                "latitude": 52.1996232,
+                "longitude": 18.7406167
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "\"BRZDĄCE NA ŁĄCE\" KLUB MALUCHA I OPIEKA DZIENNA EWELINA BEDNARKIEWICZ",
+            "nip": 6662089539.0,
+            "regNoPosition": "11406\/P",
+            "regon": "367289200",
+            "website": "brzdace-grzegorzew.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek \"Bożego Miłosierdzia\"",
+        "website": "www.dom-rodzina.pl",
+        "email": "biuro@dom-rodzina.pl",
+        "phone": "575-241-606",
+        "capacity": 120,
+        "kidsEnrolled": 32.0,
+        "basicPricePerMonth": 1090.0,
+        "extendedStayOver10H": 50.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 12.0,
+        "discounts": [
+            "Rodzina na 5+ obniżenie wyżywienia o 50 % na okres 10 m-cy, opłata wpisowa 3 równe raty co miesiąc: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Zabrze",
+            "county": "Powiat Zabrze",
+            "fullAddress": "Zabrze ul. Pawła Majnusza 7",
+            "pin": {
+                "latitude": 50.3028639,
+                "longitude": 18.7957911
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Księcia Ziemowita 2 44-100 Gliwice, Gliwice, miasto",
+            "name": "Caritas Diecezji Gliwickiej",
+            "nip": 6311008107.0,
+            "regNoPosition": "633\/P",
+            "regon": "040022246",
+            "website": "www.caritasgliwice.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek Super Bobas",
+        "website": "www.wesoledinusie.pl",
+        "email": "kontakt@wesoledinusie.pl",
+        "phone": "600140533",
+        "capacity": 60,
+        "kidsEnrolled": 60.0,
+        "basicPricePerMonth": 1450.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.5,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:35-16:45 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Białystok",
+            "county": "Powiat Białystok",
+            "fullAddress": "Białystok ul. Gajowa 79",
+            "pin": {
+                "latitude": 53.1543035,
+                "longitude": 23.1164365
+            },
+            "voivodeship": "PODLASKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Lucky Star Ewa Bałtyk",
+            "nip": 9661654855.0,
+            "regNoPosition": "2263\/P",
+            "regon": "200272057",
+            "website": "www.wesoledinusie.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek \" Bajkowy Dom\"",
+        "website": "https:\/\/przedszkolebajkowydom.pl\/",
+        "email": "sekretariatbajkowydom@op.pl",
+        "phone": "601055802",
+        "capacity": 15,
+        "kidsEnrolled": 15.0,
+        "basicPricePerMonth": 1000.0,
+        "extendedStayOver10H": 40.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 10.0,
+        "discounts": [
+            "Wielodzietność\/Karta Dużej Rodziny: 5.0% ",
+            "Rodzeństwo uczęszczające do instytucji: 20.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Jabłonna",
+            "county": "Powiat legionowski",
+            "fullAddress": "Jabłonna ul. Modlińska 112",
+            "pin": {
+                "latitude": 52.3763127,
+                "longitude": 20.9225974
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Ewa Kobus",
+            "nip": 5242129792.0,
+            "regNoPosition": "1999\/P",
+            "regon": "012897707",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Niepubliczny \"A Be Ce Strumyk Wiedzy\"",
+        "website": "http:\/\/abcstrumykwiedzy.pl\/",
+        "email": "sekretariat@abcstrumykwiedzy.pl",
+        "phone": "607 397 165 lub 601 652 051",
+        "capacity": 27,
+        "kidsEnrolled": 27.0,
+        "basicPricePerMonth": 890.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 7.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Siedlec",
+            "county": "Powiat wolsztyński",
+            "fullAddress": "Siedlec ul. Szkolna 2",
+            "pin": {
+                "latitude": 52.1376218,
+                "longitude": 16.002302
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Zakłady Mięsne \"SOBKOWIAK\" Elżbieta Sobkowiak",
+            "nip": 9231266197.0,
+            "regNoPosition": "11436\/P",
+            "regon": "301514252",
+            "website": "http:\/\/abcstrumykwiedzy.pl\/"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Gminny w Kłobucku",
+        "website": null,
+        "email": "zlobek@gminaklobuck.pl",
+        "phone": "343131155",
+        "capacity": 12,
+        "kidsEnrolled": 12.0,
+        "basicPricePerMonth": null,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": 3.5,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Kłobuck",
+            "county": "Powiat kłobucki",
+            "fullAddress": "Kłobuck ul. Krzysztofa Kamila Baczyńskiego 2",
+            "pin": {
+                "latitude": 50.909014,
+                "longitude": 18.93811
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "UL. 11 LISTOPADA 6 42-100 KŁOBUCK",
+            "name": "Gmina Kłobuck",
+            "nip": 5742055306.0,
+            "regNoPosition": "11481\/P",
+            "regon": "151398273",
+            "website": "www.gminaklobuck.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek ,,Cudaki-Słodziaki”",
+        "website": null,
+        "email": "mradlinska@wp.pl",
+        "phone": "509 613 307 ",
+        "capacity": 15,
+        "kidsEnrolled": 15.0,
+        "basicPricePerMonth": 1400.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 15.0,
+        "foodPricePerDay": null,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:30-17:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Warszawa - Ursynów",
+            "county": "Powiat Warszawa",
+            "fullAddress": "Warszawa - Ursynów, dzielnica m. st. Warszawy ul.  Na Uboczu 28B lok.  UB6",
+            "pin": {
+                "latitude": 52.1420537,
+                "longitude": 21.0472495
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "RADLAKE Małgorzata Radlińska-Futyma",
+            "nip": 9222052657.0,
+            "regNoPosition": "2159\/P",
+            "regon": "146538730",
+            "website": "http:\/\/cudaki-slodziaki.pl\/"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "ŻŁOBEK",
+        "website": null,
+        "email": "zlobektychy@op.pl",
+        "phone": "732570757",
+        "capacity": 25,
+        "kidsEnrolled": 25.0,
+        "basicPricePerMonth": 640.0,
+        "extendedStayOver10H": 30.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 13.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Tychy",
+            "county": "Powiat Tychy",
+            "fullAddress": "Tychy, miasto ul.  Armii Krajowej 101 lok. D",
+            "pin": {
+                "latitude": 50.0956149,
+                "longitude": 18.9858518
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "ZUZANNA JASIŃSKA",
+            "nip": 6462896092.0,
+            "regNoPosition": "11487\/P",
+            "regon": "243140081",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek nr 61",
+        "website": "www.zlobki.waw.pl",
+        "email": "zlobek61@zlobki.waw.pl",
+        "phone": "789494995",
+        "capacity": 150,
+        "kidsEnrolled": 158.0,
+        "basicPricePerMonth": 0.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 13.75,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Warszawa - Praga-Południe",
+            "county": "Powiat Warszawa",
+            "fullAddress": "Warszawa - Praga-Południe, dzielnica m. st. Warszawy ul. Jana Nowaka-Jeziorańskiego 1A",
+            "pin": {
+                "latitude": 52.2280693,
+                "longitude": 21.1102104
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": "pl.  Plac Bankowy 3\/5 00-950 Warszawa, Warszawa - Śródmieście, dzielnica m. st. Warszawy",
+            "name": "m.st. Warszawa",
+            "nip": 5252248481.0,
+            "regNoPosition": "26702\/P",
+            "regon": "015259640",
+            "website": "um.warszawa.pl"
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "Klub Malucha Sowia 5",
+        "website": "www.przedszkole.sowia5.pl",
+        "email": "klubmalucha.sowia5@gmail.com",
+        "phone": "516577299",
+        "capacity": 13,
+        "kidsEnrolled": 0.0,
+        "basicPricePerMonth": 950.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.0,
+        "discounts": [
+            "Wielodzietność\/Karta Dużej Rodziny: 5.0% ",
+            "Dziecko niepełnosprawne lub wymagające szczególnej opieki: 5.0% ",
+            "Rodzeństwo uczęszczające do instytucji: 5.0% ",
+            "wpisowe za rodzeństwo: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Siemianowice Śląskie",
+            "county": "Powiat Siemianowice Śląskie",
+            "fullAddress": "Siemianowice Śląskie ul. Sowia 5",
+            "pin": {
+                "latitude": 50.3135382,
+                "longitude": 19.0385423
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Sowia 5 41-100 Siemianowice Śląskie, Siemianowice Śląskie, miasto",
+            "name": "Sowia 5 Przedszkole Integracyjne i Żłobek Sp z o.o.",
+            "nip": 6431779178.0,
+            "regNoPosition": "11477\/P",
+            "regon": "524044782",
+            "website": "www.przedszkole.sowia5.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek \"Stonoga\"",
+        "website": null,
+        "email": "stonoga.olkusz@gmail.com",
+        "phone": "509899388",
+        "capacity": 33,
+        "kidsEnrolled": 30.0,
+        "basicPricePerMonth": 900.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 12.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Olkusz",
+            "county": "Powiat olkuski",
+            "fullAddress": "Olkusz ul. Legionów Polskich 14 lok. 1",
+            "pin": {
+                "latitude": 50.2660758,
+                "longitude": 19.5787689
+            },
+            "voivodeship": "MAŁOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Aleksandra Świerczek",
+            "nip": 6372193866.0,
+            "regNoPosition": "2601\/P",
+            "regon": "123156882",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Niepubliczny Elemelek",
+        "website": null,
+        "email": "elemelek@przedszkole-elemelek.pl",
+        "phone": "600247156",
+        "capacity": 20,
+        "kidsEnrolled": 15.0,
+        "basicPricePerMonth": 1110.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.5,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:30-16:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Leoncin",
+            "county": "Powiat nowodworski",
+            "fullAddress": "Leoncin ul. Podleśna 33",
+            "pin": {
+                "latitude": 52.390905,
+                "longitude": 20.5336006
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Przedszkole Niepubliczne Przedszkole Elemelek Barbara Kręźlewicz-Prarat",
+            "nip": 5311568952.0,
+            "regNoPosition": "11492\/P",
+            "regon": "362429406",
+            "website": "www.przedszkole-elemelek.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Króla Zygmunta Ewelina Gromulska-Sulej",
+        "website": null,
+        "email": "ewelina.gromulskasulej@gmail.com",
+        "phone": "506993708",
+        "capacity": 25,
+        "kidsEnrolled": 16.0,
+        "basicPricePerMonth": 1350.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.5,
+        "discounts": [
+            "400 zł - dofinansowanie z Mińskiego Bonu, dla dzieci zamieszkałych na terenie miasta Mińsk Mazowiecki: 30.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Mińsk Mazowiecki",
+            "county": "Powiat miński",
+            "fullAddress": "Mińsk Mazowiecki ul. Warszawska 239",
+            "pin": {
+                "latitude": 52.1784611,
+                "longitude": 21.5798393
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Żłobek Króla Zygmunta Ewelina Gromulska-Sulej",
+            "nip": 8222364155.0,
+            "regNoPosition": "11502\/P",
+            "regon": "368738284",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "PRZYGODY W OBŁOKACH",
+        "website": null,
+        "email": "ivonadabrowska@gmail.com",
+        "phone": "695780077",
+        "capacity": 15,
+        "kidsEnrolled": 12.0,
+        "basicPricePerMonth": 1480.0,
+        "extendedStayOver10H": 40.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 24.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek 06:30-17:30 Piątek 06:30-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Wrocław-Psie Pole",
+            "county": "Powiat Wrocław",
+            "fullAddress": "Wrocław-Psie Pole, delegatura ul.  Gorlicka 62 lok. 4U",
+            "pin": {
+                "latitude": 51.1438505,
+                "longitude": 17.1230865
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Centralna 37 lok. 1 52-114 Wrocław-Krzyki, Wrocław-Krzyki, delegatura",
+            "name": "PWO Iwona Dąbrowska,Marzena Chrzanowska s.c.",
+            "nip": 8992804087.0,
+            "regNoPosition": "1943\/P",
+            "regon": "366001591",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Małe Poziomki Domek na Skraju ",
+        "website": "www.przedszkole-poziomka.pl",
+        "email": "ewaczainska@o2.pl",
+        "phone": "609508305",
+        "capacity": 42,
+        "kidsEnrolled": 37.0,
+        "basicPricePerMonth": 940.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 14.5,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Głogów",
+            "county": "Powiat głogowski",
+            "fullAddress": "Głogów ul. Narciarska 1,3",
+            "pin": {
+                "latitude": 51.6532035,
+                "longitude": 16.0972871
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Narciarska 1,3 67-200 Głogów, Głogów, miasto",
+            "name": "Przedszkole Niepubliczne Poziomka Ewa Czaińska",
+            "nip": 6931240896.0,
+            "regNoPosition": "11511\/P",
+            "regon": "021994642",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek \"SZCZĘŚLIWA KRAINA\" ",
+        "website": "brak",
+        "email": "szczesliwakrainalagiewniki@gmail.com",
+        "phone": "667133481",
+        "capacity": 23,
+        "kidsEnrolled": 16.0,
+        "basicPricePerMonth": 700.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 10.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Łagiewniki",
+            "county": "Powiat dzierżoniowski",
+            "fullAddress": "Łagiewniki ul. Sportowa 9",
+            "pin": {
+                "latitude": 50.790732,
+                "longitude": 16.836226
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Żłobek \"SZCZĘŚLIWA KRAINA\" Jadwiga Kukiełka",
+            "nip": 9141360107.0,
+            "regNoPosition": "11516\/P",
+            "regon": "367894160",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Niepubliczny \"Lechitki\"",
+        "website": "www.lechitki.pl",
+        "email": "zlobek@lechitki.pl",
+        "phone": "667232373",
+        "capacity": 52,
+        "kidsEnrolled": 35.0,
+        "basicPricePerMonth": 1200.0,
+        "extendedStayOver10H": 25.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 11.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Suchy Las",
+            "county": "Powiat poznański",
+            "fullAddress": "Suchy Las ul. Powstańców Wielkopolskich 89",
+            "pin": {
+                "latitude": 52.4751746,
+                "longitude": 16.8615724
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Eduro Anna Świderska",
+            "nip": 9581308186.0,
+            "regNoPosition": "11509\/P",
+            "regon": "300929117",
+            "website": "www.lechitki.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek KARUZELA Magdalena Kornosz",
+        "website": "www.przedszkolekaruzela.pl",
+        "email": "biuro@przedszkolekaruzela.pl",
+        "phone": "508908625",
+        "capacity": 30,
+        "kidsEnrolled": 7.0,
+        "basicPricePerMonth": 900.0,
+        "extendedStayOver10H": 30.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 10.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 20.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Czempiń",
+            "county": "Powiat kościański",
+            "fullAddress": "Czempiń, miasto pl.  Zielony Rynek 18",
+            "pin": {
+                "latitude": 52.1434347,
+                "longitude": 16.7654843
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": "pl.  Zielony Rynek 18 64-020 Czempiń, Czempiń, miasto",
+            "name": "Niepubliczny Żłobek \"KARUZELA\"",
+            "nip": 6981780991.0,
+            "regNoPosition": "11539\/P",
+            "regon": "367897968",
+            "website": "przedszkolekaruzela.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek \"Żabka\" w Przysieczy",
+        "website": null,
+        "email": "zabkazp@wp.pl",
+        "phone": "608499728",
+        "capacity": 20,
+        "kidsEnrolled": 20.0,
+        "basicPricePerMonth": 900.0,
+        "extendedStayOver10H": 15.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Prószków",
+            "county": "Powiat opolski",
+            "fullAddress": "Przysiecz ul. Szkolna 14",
+            "pin": {
+                "latitude": 50.5593987,
+                "longitude": 17.8591601
+            },
+            "voivodeship": "OPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Barbara Wlaźlik",
+            "nip": 8321041142.0,
+            "regNoPosition": "441\/P",
+            "regon": null,
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek KUM-KUM-2",
+        "website": null,
+        "email": "zlobek@kum-kum.pl",
+        "phone": "881 000 080",
+        "capacity": 30,
+        "kidsEnrolled": 30.0,
+        "basicPricePerMonth": 1500.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 20.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:30-17:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Warszawa - Wola",
+            "county": "Powiat Warszawa",
+            "fullAddress": "Warszawa - Wola, dzielnica m. st. Warszawy ul.  Radziwie 7 lok. U7",
+            "pin": {
+                "latitude": 52.2457456,
+                "longitude": 20.960543
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Jana Ostroroga 29 lok. 68 01-163 Warszawa - Wola, Warszawa - Wola, dzielnica m. st. Warszawy",
+            "name": "ARS EDUCANDI – SZTUKA WYCHOWANIA spółka z o.o.",
+            "nip": 5272758133.0,
+            "regNoPosition": "2951\/P",
+            "regon": "363639382",
+            "website": "www.kum-kum.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "GWIAZDOLANDIA ",
+        "website": "www.gwiazdolandia.pl",
+        "email": "gwiazdolandia@gmail.com",
+        "phone": "509983750",
+        "capacity": 60,
+        "kidsEnrolled": 47.0,
+        "basicPricePerMonth": 1790.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 0.0,
+        "foodPricePerDay": null,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Gliwice",
+            "county": "Powiat Gliwice",
+            "fullAddress": "Gliwice ul. Jagiellońska 39",
+            "pin": {
+                "latitude": 50.2937222,
+                "longitude": 18.6880466
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Bernardyńska 46 44-100 Gliwice, Gliwice, miasto",
+            "name": "GWIAZDOLANDIA Branicki sp. j.",
+            "nip": 6312653146.0,
+            "regNoPosition": "2198\/P",
+            "regon": "243544499",
+            "website": "www.gwiazdolandia.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek \"Gryfne Bajtle\" ",
+        "website": "gryfne-bajtle.pl",
+        "email": "gryfnebajtle.slaskie@gmail.com",
+        "phone": "791856308",
+        "capacity": 80,
+        "kidsEnrolled": 80.0,
+        "basicPricePerMonth": 1050.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 17.0,
+        "discounts": [
+            "Opłata wpisowa w przypadku zapisu dwójki dzieci: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Siemianowice Śląskie",
+            "county": "Powiat Siemianowice Śląskie",
+            "fullAddress": "Siemianowice Śląskie ul. 1 Maja 12",
+            "pin": {
+                "latitude": 50.3043241,
+                "longitude": 19.0327789
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Katarzyna Rej",
+            "nip": 7151930456.0,
+            "regNoPosition": "11575\/P",
+            "regon": "368894127",
+            "website": "gryfne-bajtle.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Niepubliczny Cypiskowo.pl 2",
+        "website": "www.cypiskowo.pl",
+        "email": "cypiskowo@cypiskowo.pl",
+        "phone": "602593463",
+        "capacity": 30,
+        "kidsEnrolled": 30.0,
+        "basicPricePerMonth": 1450.0,
+        "extendedStayOver10H": 50.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 13.0,
+        "discounts": [
+            "Rzeczywista opłata za sam pobyt = 1250 zł.200 zł (16%) pokrywa dotacja z budżetu Gminy Lesznowola.: 16.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-18:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Lesznowola",
+            "county": "Powiat piaseczyński",
+            "fullAddress": "Lesznowola ul. Żubra 4",
+            "pin": {
+                "latitude": 52.0815834,
+                "longitude": 20.9444967
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "\"Cypiskowo.pl\" Katarzyna Brogowska",
+            "nip": 8842166277.0,
+            "regNoPosition": "11593\/P",
+            "regon": "142431980",
+            "website": "www.cypiskowo.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek Gumisiowy Las",
+        "website": "www.gumisiowylas.pl",
+        "email": "konopabarbara@gmail.com",
+        "phone": "538437437",
+        "capacity": 40,
+        "kidsEnrolled": 29.0,
+        "basicPricePerMonth": 2240.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 21.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 8.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Kraków-Krowodrza",
+            "county": "Powiat Kraków",
+            "fullAddress": "Kraków-Krowodrza ul. gen. Augusta Fieldorfa-Nila 17 lok. JU11 JU12",
+            "pin": {
+                "latitude": 50.0729783,
+                "longitude": 19.9155773
+            },
+            "voivodeship": "MAŁOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Barbara Konopa",
+            "nip": 6612137957.0,
+            "regNoPosition": "11567\/P",
+            "regon": "123082089",
+            "website": "www.gumisiowylas.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żyrafka",
+        "website": "http:\/\/zlobek-zyrafka-bielany.pl\/",
+        "email": "zyrafka.zlobek@gmail.com",
+        "phone": "577066123",
+        "capacity": 20,
+        "kidsEnrolled": 20.0,
+        "basicPricePerMonth": 1000.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Kobierzyce",
+            "county": "Powiat wrocławski",
+            "fullAddress": "Bielany Wrocławskie ul. Akacjowa 6",
+            "pin": {
+                "latitude": 51.0376589,
+                "longitude": 16.970884
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Aneta Aniśkiewicz",
+            "nip": 7421868797.0,
+            "regNoPosition": "11645\/P",
+            "regon": "021854042",
+            "website": "www.zlobek-zyrafka-bielany.pl"
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "BAJLANDIA NIEPUBLICZNE PRZEDSZKOLE I KLUB MALUCHA S,C SYLWIA SZYGENDA EWELINA CHABIERSKA",
+        "website": "bajlandia2016@wp.pl",
+        "email": "BAJLANDIA@WP.PL",
+        "phone": "794200094",
+        "capacity": 24,
+        "kidsEnrolled": 24.0,
+        "basicPricePerMonth": 500.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 400.0,
+        "foodPricePerDay": null,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 06:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Brzeziny",
+            "county": "Powiat kaliski",
+            "fullAddress": "Brzeziny ul. ks. Józefa Kurzawy 5",
+            "pin": {
+                "latitude": 51.5972691,
+                "longitude": 18.2577092
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. ks. Józefa Kurzawy 5 62-874 Brzeziny, Brzeziny, wieś",
+            "name": "BAJLANDIA NIEPUBLICZNE PRZEDSZKOLE I KLUB MALUCHA S.C SYLWIA SZYGENDA EWELINA CHABIERSKA",
+            "nip": 9680980490.0,
+            "regNoPosition": "11577\/P",
+            "regon": "365907958",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "MAJABAJA ",
+        "website": "www.majabaja.pl",
+        "email": "majabajazlobek@gmail.com",
+        "phone": "512266971",
+        "capacity": 15,
+        "kidsEnrolled": 15.0,
+        "basicPricePerMonth": 1800.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 17.0,
+        "discounts": [
+            "Samotne wychowanie dziecka: 5.0% ",
+            "Rodzeństwo uczęszczające do instytucji: 5.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Warszawa - Ursynów",
+            "county": "Powiat Warszawa",
+            "fullAddress": "Warszawa - Ursynów, dzielnica m. st. Warszawy ul. Jana Żabińskiego 3",
+            "pin": {
+                "latitude": 52.1367363,
+                "longitude": 21.0568093
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Jana Żabińskiego 3 02-793 Warszawa - Ursynów, Warszawa - Ursynów, dzielnica m. st. Warszawy",
+            "name": "PMT COMFORT Paulina Troć",
+            "nip": 7981338853.0,
+            "regNoPosition": "11667\/P",
+            "regon": "147044934",
+            "website": "http:\/\/www.majabaja.pl\/"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek \"Słoneczna Kraina\"",
+        "website": "www.slonecznakraina.pl",
+        "email": "lesya@osowa.com.pl",
+        "phone": "506211876",
+        "capacity": 25,
+        "kidsEnrolled": 4.0,
+        "basicPricePerMonth": 800.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 20.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Wydminy",
+            "county": "Powiat giżycki",
+            "fullAddress": "Wydminy ul. Ełcka 2B",
+            "pin": {
+                "latitude": 53.977589,
+                "longitude": 22.0361079
+            },
+            "voivodeship": "WARMIŃSKO-MAZURSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Jednorożca 28 80-299 Gdańsk, Gdańsk, miasto",
+            "name": "Centrum Edukacji NOVUM Sp.z.o.o",
+            "nip": 8451984497.0,
+            "regNoPosition": "11670\/P",
+            "regon": "281601760",
+            "website": "www.slonecznakraina.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Kolorado",
+        "website": "www.kolorado.edu.pl",
+        "email": "przedszkole@kolorado.edu.pl",
+        "phone": "506177233",
+        "capacity": 30,
+        "kidsEnrolled": 14.0,
+        "basicPricePerMonth": 800.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 12.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Świętochłowice",
+            "county": "Powiat Świętochłowice",
+            "fullAddress": "Świętochłowice ul. Karpacka 33 lok. III",
+            "pin": {
+                "latitude": 50.3110502,
+                "longitude": 18.9154216
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "\"Kolorado\" - usługi edukacyjne Agnieszka Rajczyk",
+            "nip": 6272267938.0,
+            "regNoPosition": "11588\/P",
+            "regon": "241559829",
+            "website": "www.kolorado.edu.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Chatka Skrzatka  ",
+        "website": "Brak",
+        "email": "chatkaskrzatka2@gmail.com",
+        "phone": "578914290",
+        "capacity": 25,
+        "kidsEnrolled": 25.0,
+        "basicPricePerMonth": 1200.0,
+        "extendedStayOver10H": 30.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.5,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Świętochłowice",
+            "county": "Powiat Świętochłowice",
+            "fullAddress": "Świętochłowice ul. Bytomska 26 lok. 2",
+            "pin": {
+                "latitude": 50.293642,
+                "longitude": 18.9167889
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Chatka Skrzatka Luiza Kaintoch",
+            "nip": 6412467897.0,
+            "regNoPosition": "11674\/P",
+            "regon": "367323291",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "ŻŁOBEK NIEPUBLICZNY KULKA",
+        "website": "www.przedszkolekulka.pl",
+        "email": "zlobek@przedszkolekulka.pl",
+        "phone": "575667513",
+        "capacity": 36,
+        "kidsEnrolled": 32.0,
+        "basicPricePerMonth": 1190.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 13.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Komorniki",
+            "county": "Powiat poznański",
+            "fullAddress": "Wiry ul. Poznańska 43",
+            "pin": {
+                "latitude": 52.3245606,
+                "longitude": 16.8599796
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Kulka Ewa Olewińska",
+            "nip": 7791989518.0,
+            "regNoPosition": "11671\/P",
+            "regon": "361783940",
+            "website": "www.przedszkolekulka.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Barwy Dzieciństwa 2",
+        "website": "zlobkiklanza.pl",
+        "email": "zlobekbdz2@klanza.org.pl",
+        "phone": "507406593",
+        "capacity": 30,
+        "kidsEnrolled": 12.0,
+        "basicPricePerMonth": 1650.0,
+        "extendedStayOver10H": 50.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 12.0,
+        "discounts": [
+            "zwolnienie z opłaty wpisowego dla posiadaczy Karty Dużej Rodziny i dla rodzeństwa uczęszczającego do żłobka: 100.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Lublin",
+            "county": "Powiat Lublin",
+            "fullAddress": "Lublin ul. Łęczyńska 51",
+            "pin": {
+                "latitude": 51.2422141,
+                "longitude": 22.5896257
+            },
+            "voivodeship": "LUBELSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Kaprysowa 2 20-843 Lublin, Lublin, miasto",
+            "name": "Polskie Stowarzyszenie Pedagogów i Animatorów KLANZA Lublin",
+            "nip": 9461183262.0,
+            "regNoPosition": "3285\/P",
+            "regon": "430465878",
+            "website": "zlobkiklanza.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Akademia Kinder Centrum",
+        "website": "www.kindercentrum.pl",
+        "email": "biuro@kinder-centrum.pl",
+        "phone": "606224563",
+        "capacity": 81,
+        "kidsEnrolled": 64.0,
+        "basicPricePerMonth": 1395.66,
+        "extendedStayOver10H": 40.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 17.0,
+        "discounts": [
+            "Ulga Dyrektorska wg indywidualnej decyzji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Opole",
+            "county": "Powiat Opole",
+            "fullAddress": "Opole, miasto ul. Partyzancka 7",
+            "pin": {
+                "latitude": 50.6795749,
+                "longitude": 17.8898705
+            },
+            "voivodeship": "OPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Wiejska 11 49-120 Dąbrowa, Narok, wieś",
+            "name": "AKADEMIA KINDER CENTRUM ŚMIGIELSKA ZOFIA  SPÓŁKA KOMANDYTOWA",
+            "nip": 9910309584.0,
+            "regNoPosition": "239\/P",
+            "regon": "532465454",
+            "website": "www.kindercentrum.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Niepubliczny \"Kraina Marzeń\"",
+        "website": "www.krainamarzen.pl",
+        "email": "rodziewiczowny@krainamarzen.pl",
+        "phone": "730794198",
+        "capacity": 60,
+        "kidsEnrolled": 46.0,
+        "basicPricePerMonth": 1095.0,
+        "extendedStayOver10H": 35.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.0,
+        "discounts": [
+            "Opolska Karta Rodziny i Seniora - obowiązuje na 2 dziecko pod warunkiem uczęszczania obojga z nich: 20.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Opole",
+            "county": "Powiat Opole",
+            "fullAddress": "Opole ul. Marii Rodziewiczówny 13a",
+            "pin": {
+                "latitude": 50.6618235,
+                "longitude": 17.9409867
+            },
+            "voivodeship": "OPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "\"Kraina Marzeń\" Grzegorz Tarka",
+            "nip": 7542831103.0,
+            "regNoPosition": "308\/P",
+            "regon": "160341464",
+            "website": "https:\/\/kraina-marzen.pl\/"
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "Bajlandia Niepubliczne Przedszkole i klub Malucha s.c.Sylwia Szygenda i Ewelina Chabierska",
+        "website": "brak",
+        "email": "bajlandia2016@wp.pl",
+        "phone": "609126024",
+        "capacity": 22,
+        "kidsEnrolled": 0.0,
+        "basicPricePerMonth": 510.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 9.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:45-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "TAK",
+        "address": {
+            "city": "Ostrzeszów",
+            "county": "Powiat ostrzeszowski",
+            "fullAddress": "Ostrzeszów ul. Armii Krajowej 1 lok. 1",
+            "pin": {
+                "latitude": 51.4294356,
+                "longitude": 17.9334445
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. ks. Józefa Kurzawy 5 62-874 Brzeziny, Brzeziny, wieś",
+            "name": "BAJLANDIA NIEPUBLICZNE PRZEDSZKOLE I KLUB MALUCHA S.C SYLWIA SZYGENDA EWELINA CHABIERSKA",
+            "nip": 9680980490.0,
+            "regNoPosition": "11577\/P",
+            "regon": "365907958",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek UL",
+        "website": "www.ulprzedszkole.pl",
+        "email": "justyna.tomelka@nickel.com.pl",
+        "phone": "516058960",
+        "capacity": 20,
+        "kidsEnrolled": 20.0,
+        "basicPricePerMonth": 1450.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 17.5,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Suchy Las",
+            "county": "Powiat poznański",
+            "fullAddress": "Złotniki ul. Krzemowa 1",
+            "pin": {
+                "latitude": 52.4859904,
+                "longitude": 16.8498866
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Krzemowa 1 62-002 Suchy Las, Złotniki, wieś",
+            "name": "NICKEL EDU SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+            "nip": 7773102120.0,
+            "regNoPosition": "11697\/P",
+            "regon": "300984926",
+            "website": "www.ulprzedszkole.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek \"Wyspa Szkrabów\"",
+        "website": "http:\/\/wyspaszkrabow.5v.pl",
+        "email": "wyspa.szkrabow@wp.pl",
+        "phone": "538475480",
+        "capacity": 40,
+        "kidsEnrolled": 40.0,
+        "basicPricePerMonth": 1150.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Międzyrzecz",
+            "county": "Powiat międzyrzecki",
+            "fullAddress": "Międzyrzecz ul. ks. inf. Henryka Guzowskiego 1",
+            "pin": {
+                "latitude": 52.4458466,
+                "longitude": 15.6084084
+            },
+            "voivodeship": "LUBUSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Mateusz Kłosowski",
+            "nip": 5961650629.0,
+            "regNoPosition": "11698\/P",
+            "regon": "081033551",
+            "website": "http:\/\/wyspaszkrabow.5v.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek a.gugu",
+        "website": "www.zlobekagugu.pl",
+        "email": "rko@zlobekagugu.pl",
+        "phone": "509777829",
+        "capacity": 31,
+        "kidsEnrolled": 31.0,
+        "basicPricePerMonth": 1633.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 12.5,
+        "discounts": [
+            "Karta Dużej Rodziny - zniżka na wyżywienie: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Lublin",
+            "county": "Powiat Lublin",
+            "fullAddress": "Lublin ul. Pogodna 34",
+            "pin": {
+                "latitude": 51.2351998,
+                "longitude": 22.5930911
+            },
+            "voivodeship": "LUBELSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "CRESCA - EWA TYMIŃSKA-JARASZKIEWICZ",
+            "nip": 7151802178.0,
+            "regNoPosition": "11718\/P",
+            "regon": "361404686",
+            "website": "www.zlobekagugu.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Gminny w Baranowie",
+        "website": null,
+        "email": "sekretariat@barankowo.com.pl",
+        "phone": "530055579",
+        "capacity": 24,
+        "kidsEnrolled": 21.0,
+        "basicPricePerMonth": 468.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 11.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-15:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Baranów",
+            "county": "Powiat kępiński",
+            "fullAddress": "Mroczeń Mroczeń 195A",
+            "pin": {
+                "latitude": 51.225168,
+                "longitude": 17.9811937
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": "rynek Rynek 21 63-604 BARANÓW, Baranów",
+            "name": "Gmina Baranów",
+            "nip": 6191945073.0,
+            "regNoPosition": "3249\/P",
+            "regon": "250855529",
+            "website": "www.baranow.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Hero!Academy",
+        "website": "http:\/\/www.heroacademy.edu.pl\/",
+        "email": "s.laskowska@hero.edu.pl",
+        "phone": "781953211",
+        "capacity": 20,
+        "kidsEnrolled": 5.0,
+        "basicPricePerMonth": 2000.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": null,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-18:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Warszawa - Wilanów",
+            "county": "Powiat Warszawa",
+            "fullAddress": "Wilanów ul. Adama Branickiego 16",
+            "pin": {
+                "latitude": 52.156677,
+                "longitude": 21.0735111
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": "al.  Aleja Rzeczypospolitej 1 02-972 Warszawa - Wilanów, Warszawa - Wilanów, dzielnica m. st. Warszawy",
+            "name": "HERO ACADEMY SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
+            "nip": 5252679258.0,
+            "regNoPosition": "11723\/P",
+            "regon": "365601254",
+            "website": "http:\/\/www.heroacademy.edu.pl\/"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek \"Pluszowy Miś\"",
+        "website": null,
+        "email": "pluszowymisbatorego@gmail.com",
+        "phone": "539330098",
+        "capacity": 20,
+        "kidsEnrolled": 20.0,
+        "basicPricePerMonth": 800.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 400.0,
+        "foodPricePerDay": null,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Poznań-Stare Miasto",
+            "county": "Powiat Poznań",
+            "fullAddress": "Poznań-Stare Miasto os. Stefana Batorego 80F lok. L1",
+            "pin": {
+                "latitude": 52.4642422,
+                "longitude": 16.9201794
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Naramowicka 47A lok. 6 61-622 Poznań-Stare Miasto, Poznań-Stare Miasto, delegatura",
+            "name": "Joanna Mikulska Maciej Górniak",
+            "nip": 9721280721.0,
+            "regNoPosition": "11744\/P",
+            "regon": "368691654",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek Wesołe Dinusie II",
+        "website": "www.wesoledinusie.pl",
+        "email": "kontakt@wesoledinusie.pl",
+        "phone": "600140533",
+        "capacity": 38,
+        "kidsEnrolled": 38.0,
+        "basicPricePerMonth": 1450.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.5,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:45-16:45 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Białystok",
+            "county": "Powiat Białystok",
+            "fullAddress": "Białystok ul. Świętokrzyska 5A lok. U3",
+            "pin": {
+                "latitude": 53.1459187,
+                "longitude": 23.134004
+            },
+            "voivodeship": "PODLASKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Lucky Star Ewa Bałtyk",
+            "nip": 9661654855.0,
+            "regNoPosition": "2263\/P",
+            "regon": "200272057",
+            "website": "www.wesoledinusie.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek Fair Play",
+        "website": "www.przedszkolefairplay-grojecka.pl",
+        "email": "biuro@przedszkolefairplay-grojecka.pl",
+        "phone": "789372156",
+        "capacity": 44,
+        "kidsEnrolled": 33.0,
+        "basicPricePerMonth": 2250.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 21.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Warszawa - Ochota",
+            "county": "Powiat Warszawa",
+            "fullAddress": "Warszawa - Ochota, dzielnica m. st. Warszawy ul.  Grójecka 208",
+            "pin": {
+                "latitude": 52.1995913,
+                "longitude": 20.9656869
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Mazowiecka 11 lok. 49 00-052 Warszawa - Śródmieście, Warszawa - Śródmieście, dzielnica m. st. Warszawy",
+            "name": "Education&Fun Sp. z o.o.",
+            "nip": 5252700610.0,
+            "regNoPosition": "11765\/P",
+            "regon": "366640049",
+            "website": "www.przedszkolafairplay-grojecka.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Karuzela",
+        "website": "www.karuzela.org",
+        "email": "zlobek@karuzela.org",
+        "phone": "510804104",
+        "capacity": 30,
+        "kidsEnrolled": 4.0,
+        "basicPricePerMonth": 850.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 14.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Radom",
+            "county": "Powiat Radom",
+            "fullAddress": "Radom ul. Starokrakowska 135",
+            "pin": {
+                "latitude": 51.3610152,
+                "longitude": 21.0880137
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Cicha 8\/10 lok. 161 26-600 Radom, Radom, miasto",
+            "name": "Stowarzyszenie \"Karuzela\"",
+            "nip": 9482507155.0,
+            "regNoPosition": "11751\/P",
+            "regon": "141219166",
+            "website": "www.karuzela.org"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "MAYA - Baśniowy Dworek",
+        "website": "www.basniowydworek.pl",
+        "email": "maya-zlobek@o2.pl",
+        "phone": "535316123",
+        "capacity": 40,
+        "kidsEnrolled": 26.0,
+        "basicPricePerMonth": 1500.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Swarzędz",
+            "county": "Powiat poznański",
+            "fullAddress": "Jasin, wieś ul.  Wrzesińska 100",
+            "pin": {
+                "latitude": 52.4086113,
+                "longitude": 17.0929334
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Wrzesińska 100 62-020 Swarzędz, Jasin, wieś",
+            "name": "\"MAYA\" PRYWATNY ŻŁOBEK Iwona Muszyńska",
+            "nip": 8551054125.0,
+            "regNoPosition": "3381\/P",
+            "regon": "810528895",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Bajkowy Żłobek Katarzyna Kotecka",
+        "website": "www.jacek-i-agatka.pl",
+        "email": "jacekiagatka0202@gmail.com",
+        "phone": "504007497",
+        "capacity": 18,
+        "kidsEnrolled": 18.0,
+        "basicPricePerMonth": 650.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 13.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Biskupiec",
+            "county": "Powiat olsztyński",
+            "fullAddress": "Nowe Marcinkowo, wieś Nowe Marcinkowo, wieś 4",
+            "pin": {
+                "latitude": 53.8311877,
+                "longitude": 20.9003051
+            },
+            "voivodeship": "WARMIŃSKO-MAZURSKIE"
+        },
+        "operatingEntity": {
+            "address": " 4 11-300 Biskupiec, Nowe Marcinkowo, wieś",
+            "name": "Bajkowy Żłobek Katarzyna Kotecka",
+            "nip": 7391768073.0,
+            "regNoPosition": "11766\/P",
+            "regon": "519583698",
+            "website": "www.jacek-i-agatka.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Roman Turczyn Żłobek Bajkowa Kraina",
+        "website": "brak",
+        "email": "zlobekbajkowakraina@wp.pl",
+        "phone": "725625825",
+        "capacity": 63,
+        "kidsEnrolled": 16.0,
+        "basicPricePerMonth": 1300.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 400.0,
+        "foodPricePerDay": null,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 8.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-16:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Toruń",
+            "county": "Powiat Toruń",
+            "fullAddress": "Toruń ul. Łukasza Watzenrodego 14 lok. 1",
+            "pin": {
+                "latitude": 53.0476081,
+                "longitude": 18.6047608
+            },
+            "voivodeship": "KUJAWSKO-POMORSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Roman Turczyn Żłobek Bajkowa Kraina Toruń",
+            "nip": 8790014100.0,
+            "regNoPosition": "11770\/P",
+            "regon": "871704100",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Opieka nad Dziećmi Zielony Ogródek",
+        "website": "domoweprzedszkole.info.pl",
+        "email": "kontakt@domoweprzedszkole.info.pl",
+        "phone": "535008657",
+        "capacity": 45,
+        "kidsEnrolled": 45.0,
+        "basicPricePerMonth": 1200.0,
+        "extendedStayOver10H": 50.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 10.0,
+        "discounts": [
+            "Wielodzietność\/Karta Dużej Rodziny: 5.0% ",
+            "Dotacja z budżetu Gminy na dziecko zamieszkałe na terenie Gminy Jaktorów, Radziejowice i miasta Żyrardów - 300 zł miesięcznie; : 38.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Jaktorów",
+            "county": "Powiat grodziski",
+            "fullAddress": "Henryszew, wieś Henryszew, wieś 15",
+            "pin": {
+                "latitude": 52.0755533,
+                "longitude": 20.4667553
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": " 15 96-316 Jaktorów, Henryszew, wieś",
+            "name": "Opieka nad Dziećmi Zielony Ogródek, Katarzyna Zbrzeźna",
+            "nip": 8381152046.0,
+            "regNoPosition": "11775\/P",
+            "regon": "015002450",
+            "website": "www.domoweprzedszkole.info.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Prywatny żłobek ,,Kolorowy Domek\" Aleksandra Goździak oddział 2",
+        "website": "www.kolorowydomek.com.pl",
+        "email": "biuropoznankolorowydomek@wp.pl",
+        "phone": "793607460 , 604645202",
+        "capacity": 70,
+        "kidsEnrolled": 68.0,
+        "basicPricePerMonth": 1415.0,
+        "extendedStayOver10H": 25.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.5,
+        "discounts": [
+            "Wielodzietność\/Karta Dużej Rodziny: 5.0% ",
+            "Rodzeństwo uczęszczające do instytucji: 5.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Poznań-Grunwald",
+            "county": "Powiat Poznań",
+            "fullAddress": "Poznań-Grunwald ul. Junacka 7",
+            "pin": {
+                "latitude": 52.3900125,
+                "longitude": 16.8685063
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Prywatny żłobek ,,Kolorowy Domek \" Aleksandra Goździak",
+            "nip": 7861638707.0,
+            "regNoPosition": "11777\/P",
+            "regon": "301274530",
+            "website": "www.kolorowydomek.com.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Gminny w Postolicach",
+        "website": null,
+        "email": "r.serafin@wadrozewielkie.pl",
+        "phone": "768874318",
+        "capacity": 24,
+        "kidsEnrolled": 18.0,
+        "basicPricePerMonth": 432.0,
+        "extendedStayOver10H": 43.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 8.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 40.0% "
+        ],
+        "openingHours": "Godziny pracy: ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Wądroże Wielkie",
+            "county": "Powiat jaworski",
+            "fullAddress": "Postolice Postolice 20A",
+            "pin": {
+                "latitude": 51.1060029,
+                "longitude": 16.4304219
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": " 64 59-430 Wądroże Wielkie",
+            "name": "Gmina Wądroże Wielkie",
+            "nip": 6951400825.0,
+            "regNoPosition": "7169\/P",
+            "regon": "390647430",
+            "website": "www.wadrozewielkie.pl"
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "Klub Dziecięcy w Gaworzycach",
+        "website": "brak",
+        "email": "ewa.osomanska@wp.pl",
+        "phone": "606718179",
+        "capacity": 20,
+        "kidsEnrolled": 20.0,
+        "basicPricePerMonth": 300.0,
+        "extendedStayOver10H": 20.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 100.0,
+        "foodPricePerDay": null,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Gaworzyce",
+            "county": "Powiat polkowicki",
+            "fullAddress": "Gaworzyce ul. Dworcowa 191",
+            "pin": {
+                "latitude": 51.6238071,
+                "longitude": 15.8817668
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Ewa Pawlak-Osmańska",
+            "nip": 6931353933.0,
+            "regNoPosition": "1973\/P",
+            "regon": "390073790",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "ELEMELEK Ewelina Strutynska",
+        "website": "www.elemelek.com.pl",
+        "email": "strutynska.ewelina@gmail.com",
+        "phone": "697918433",
+        "capacity": 13,
+        "kidsEnrolled": 13.0,
+        "basicPricePerMonth": 1450.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 18.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Siechnice",
+            "county": "Powiat wrocławski",
+            "fullAddress": "Siechnice ul. Marszałka Józefa Piłsudskiego 4 B",
+            "pin": {
+                "latitude": 51.034351,
+                "longitude": 17.1510394
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "ELEMELEK Ewelina Strutynska",
+            "nip": 8942902327.0,
+            "regNoPosition": "11848\/P",
+            "regon": "369134105",
+            "website": "www.elemeleksiechnice.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Miejski \"Kolorowe Nutki\" w Krośnie",
+        "website": "zmkrosno.pl",
+        "email": "sekretariat@zmkrosno.pl",
+        "phone": "13 47 43 980, 887200203",
+        "capacity": 50,
+        "kidsEnrolled": 50.0,
+        "basicPricePerMonth": 613.0,
+        "extendedStayOver10H": 50.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 10.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 25.0% ",
+            "Troje i więcej dzieci uczęszczających do żłobka lub przedszkoli miejskich: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Krosno",
+            "county": "Powiat Krosno",
+            "fullAddress": "Krosno ul. Powstańców Warszawskich 42",
+            "pin": {
+                "latitude": 49.6883992,
+                "longitude": 21.7754596
+            },
+            "voivodeship": "PODKARPACKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Lwowska 28a 38-400 Krosno",
+            "name": "Gmina Miasto Krosno",
+            "nip": 6840013798.0,
+            "regNoPosition": "415\/P",
+            "regon": "370440809",
+            "website": "krosno.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Miejski \"Kolorowe Nutki\" w Krośnie",
+        "website": "zmkrosno.pl",
+        "email": "sekretariat@zmkrosno.pl",
+        "phone": "13 47 43 980, 885420003",
+        "capacity": 25,
+        "kidsEnrolled": 25.0,
+        "basicPricePerMonth": 613.0,
+        "extendedStayOver10H": 50.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 10.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 25.0% ",
+            "Troje i więcej dzieci uczęszczających do żłobka lub przedszkoli miejskich: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Krosno",
+            "county": "Powiat Krosno",
+            "fullAddress": "Krosno ul. Stefana Kisielewskiego 15",
+            "pin": {
+                "latitude": 49.6830311,
+                "longitude": 21.7564196
+            },
+            "voivodeship": "PODKARPACKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Lwowska 28a 38-400 Krosno",
+            "name": "Gmina Miasto Krosno",
+            "nip": 6840013798.0,
+            "regNoPosition": "415\/P",
+            "regon": "370440809",
+            "website": "krosno.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Miejski \"Kolorowe Nutki\" w Krośnie",
+        "website": "zmkrosno.pl",
+        "email": "sekretariat@zmkrosno.pl",
+        "phone": "13 47 43 980, 887200205",
+        "capacity": 25,
+        "kidsEnrolled": 25.0,
+        "basicPricePerMonth": 613.0,
+        "extendedStayOver10H": 50.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 10.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 25.0% ",
+            "Troje i więcej dzieci uczęszczających do żłobka lub przedszkoli miejskich: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Krosno",
+            "county": "Powiat Krosno",
+            "fullAddress": "Krosno ul. Prochownia 4a",
+            "pin": {
+                "latitude": 49.6966217,
+                "longitude": 21.7753966
+            },
+            "voivodeship": "PODKARPACKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Lwowska 28a 38-400 Krosno",
+            "name": "Gmina Miasto Krosno",
+            "nip": 6840013798.0,
+            "regNoPosition": "415\/P",
+            "regon": "370440809",
+            "website": "krosno.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek \"Mali Odkrywcy\"",
+        "website": "maliodkrywcy24.pl",
+        "email": "waclawik.karolina@gmail.com",
+        "phone": "697709281",
+        "capacity": 20,
+        "kidsEnrolled": 20.0,
+        "basicPricePerMonth": 1070.0,
+        "extendedStayOver10H": 50.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.5,
+        "discounts": [
+            "Dziecko niepełnosprawne lub wymagające szczególnej opieki: 20.0% ",
+            "Rodzeństwo uczęszczające do instytucji: 30.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Krosno",
+            "county": "Powiat Krosno",
+            "fullAddress": "Krosno ul. Rzeszowska 36",
+            "pin": {
+                "latitude": 49.7225913,
+                "longitude": 21.7146958
+            },
+            "voivodeship": "PODKARPACKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Karolina Wacławik",
+            "nip": 6842285489.0,
+            "regNoPosition": "416\/P",
+            "regon": "180870980",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Kraina marzeń",
+        "website": "www.krainamarzen-buszkowice.edupge.pl",
+        "email": "tabi3@wp.pl",
+        "phone": "506164873",
+        "capacity": 34,
+        "kidsEnrolled": 33.0,
+        "basicPricePerMonth": 400.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 11.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-18:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Żurawica",
+            "county": "Powiat przemyski",
+            "fullAddress": "Buszkowice Buszkowice 144",
+            "pin": {
+                "latitude": 49.8044555,
+                "longitude": 22.8153131
+            },
+            "voivodeship": "PODKARPACKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Alicja Tabinowska",
+            "nip": 7952193783.0,
+            "regNoPosition": "11292\/P",
+            "regon": "180587741",
+            "website": "www.krainamarzen-buszkowice.edupge.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek \"Calineczka\"",
+        "website": "www.calineczka.edu.pl",
+        "email": "biuro@calineczka.edu.pl",
+        "phone": "22 786 67 28",
+        "capacity": 40,
+        "kidsEnrolled": 30.0,
+        "basicPricePerMonth": 1200.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-18:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Radzymin",
+            "county": "Powiat wołomiński",
+            "fullAddress": "Słupno al. Jana Pawła II 64",
+            "pin": {
+                "latitude": 52.3857162,
+                "longitude": 21.1578139
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "KF-EDUKACJA  FRANCISZEK KOZIELEC",
+            "nip": 7351019187.0,
+            "regNoPosition": "11923\/P",
+            "regon": "490588321",
+            "website": "http:\/\/calineczka.edu.pl\/"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Domowa Akademia \"SMYK\" Magdalena Chrząszcz Żłobek ",
+        "website": null,
+        "email": "magdalenachrzaszcz@poczta.onet.pl",
+        "phone": "516086655",
+        "capacity": 10,
+        "kidsEnrolled": 0.0,
+        "basicPricePerMonth": 1350.0,
+        "extendedStayOver10H": 30.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 231.0,
+        "foodPricePerDay": null,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Orneta",
+            "county": "Powiat lidzbarski",
+            "fullAddress": "Orneta ul. Podleśna 2",
+            "pin": {
+                "latitude": 54.1182838,
+                "longitude": 20.1440261
+            },
+            "voivodeship": "WARMIŃSKO-MAZURSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "DOMOWA AKADEMIA ,,SMYK\" MAGDALENA CHRZĄSZCZ",
+            "nip": 5821436936.0,
+            "regNoPosition": "11904\/P",
+            "regon": "171012223",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "ŻŁOBEK MACIUSIOWO",
+        "website": "www.maciusiowo.pl",
+        "email": "carola_w@o2.pl",
+        "phone": "506950121",
+        "capacity": 33,
+        "kidsEnrolled": 33.0,
+        "basicPricePerMonth": 1300.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Łaziska Górne",
+            "county": "Powiat mikołowski",
+            "fullAddress": "Łaziska Górne ul. Rybnicka 18",
+            "pin": {
+                "latitude": 50.1615729,
+                "longitude": 18.8479894
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Nibylandia Karolina Wodarz",
+            "nip": 6351589866.0,
+            "regNoPosition": "11912\/P",
+            "regon": "240903762",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "ŻŁOBEK MIEJSKI Jednostka organizacyjna gminy Bielsko-Biała",
+        "website": "www.zlobekbielsko.pl",
+        "email": "zlobek@zlobekbielsko.pl",
+        "phone": "334964223",
+        "capacity": 94,
+        "kidsEnrolled": 94.0,
+        "basicPricePerMonth": 763.56,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 11.0,
+        "discounts": [
+            "Wielodzietność\/Karta Dużej Rodziny: 50.0% ",
+            "Dochód rodzinny: 50.0% ",
+            "Rodzeństwo uczęszczające do instytucji: 50.0% ",
+            "Rodzina+: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-16:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Bielsko-Biała",
+            "county": "Powiat Bielsko-Biała",
+            "fullAddress": "Bielsko-Biała ul. Pod Grodziskiem 4",
+            "pin": {
+                "latitude": 49.8236389,
+                "longitude": 19.022293
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "pl.  Ratuszowy 1 43-300 Bielsko-Biała, Bielsko-Biała, miasto",
+            "name": "Gmina Bielsko-Biała",
+            "nip": 9372686990.0,
+            "regNoPosition": "366\/P",
+            "regon": "072181741",
+            "website": "www.um.bielsko.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Bystrzaki",
+        "website": null,
+        "email": "bystrzaki@fep.edu.pl",
+        "phone": "733101920",
+        "capacity": 32,
+        "kidsEnrolled": 33.0,
+        "basicPricePerMonth": 1365.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 19.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 27.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Bystrzyca Kłodzka",
+            "county": "Powiat kłodzki",
+            "fullAddress": "Bystrzyca Kłodzka ul. Wojska Polskiego 20",
+            "pin": {
+                "latitude": 50.2982798,
+                "longitude": 16.64935
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "pl. św. Macieja 2 50-244 Wrocław-Śródmieście, Wrocław-Śródmieście, delegatura",
+            "name": "Fundacja Edukacji Przedszkolnej",
+            "nip": 8982112726.0,
+            "regNoPosition": "11941\/P",
+            "regon": "020545528",
+            "website": "brak"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żyrafy",
+        "website": "www.zyrafy.com.pl",
+        "email": "zlobekdabrowka@zyrafy.com.pl",
+        "phone": "577404888",
+        "capacity": 37,
+        "kidsEnrolled": 37.0,
+        "basicPricePerMonth": 1590.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 17.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 20.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Dopiewo",
+            "county": "Powiat poznański",
+            "fullAddress": "Dąbrówka ul. Lipowa 1",
+            "pin": {
+                "latitude": 52.3839581,
+                "longitude": 16.7457426
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "DEA Konsulting Izabela Tokarska",
+            "nip": 5991766905.0,
+            "regNoPosition": "11946\/P",
+            "regon": "300163997",
+            "website": "www.http:\/\/zyrafy.com.pl\/"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek \"Świat Dziecka\" w Staszowie",
+        "website": null,
+        "email": "klubdzieciecy.staszow@op.pl",
+        "phone": "15 864 21 21",
+        "capacity": 26,
+        "kidsEnrolled": 26.0,
+        "basicPricePerMonth": 637.0,
+        "extendedStayOver10H": 64.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 11.5,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Staszów",
+            "county": "Powiat staszowski",
+            "fullAddress": "Staszów ul. Jana Pawła II 17a",
+            "pin": {
+                "latitude": 50.5684834,
+                "longitude": 21.1723976
+            },
+            "voivodeship": "ŚWIĘTOKRZYSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Opatowska 31 28-200 Staszów",
+            "name": "Gmina Staszów",
+            "nip": 8661608731.0,
+            "regNoPosition": "202\/P",
+            "regon": "830409749",
+            "website": "www.staszow.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek Tęcza",
+        "website": "www.teczadzieci.pl",
+        "email": "biuro@teczadzieci.pl",
+        "phone": "506234510",
+        "capacity": 25,
+        "kidsEnrolled": 25.0,
+        "basicPricePerMonth": 1610.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.0,
+        "discounts": [
+            "Wielodzietność\/Karta Dużej Rodziny: 20.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Poznań-Jeżyce",
+            "county": "Powiat Poznań",
+            "fullAddress": "Poznań-Jeżyce ul. Czarnkowska 17",
+            "pin": {
+                "latitude": 52.4336568,
+                "longitude": 16.8445216
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Tęcza Anna Laudańska",
+            "nip": 7811379244.0,
+            "regNoPosition": "11961\/P",
+            "regon": "300971444",
+            "website": "www.teczadzieci.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek \"Szalona Żyrafa\" w Jarocinie",
+        "website": null,
+        "email": "szalonazyrafa@wp.pl",
+        "phone": "505099276",
+        "capacity": 40,
+        "kidsEnrolled": 40.0,
+        "basicPricePerMonth": 750.0,
+        "extendedStayOver10H": 40.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 12.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 30.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Jarocin",
+            "county": "Powiat jarociński",
+            "fullAddress": "Jarocin ul. Wrzosowa 4",
+            "pin": {
+                "latitude": 51.9803025,
+                "longitude": 17.5004942
+            },
+            "voivodeship": "WIELKOPOLSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "SZALONA ŻYRAFA Agata Nelka",
+            "nip": 6172036180.0,
+            "regNoPosition": "11920\/P",
+            "regon": "301997842",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek ABRAKADABRA Filia",
+        "website": "www.zlobekabrakadabra.pl",
+        "email": "biuro@przedszkolehappytime.pl",
+        "phone": "501610422",
+        "capacity": 24,
+        "kidsEnrolled": 24.0,
+        "basicPricePerMonth": null,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 20.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota, Niedziela 7:30-18:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Warszawa - Praga-Południe",
+            "county": "Powiat Warszawa",
+            "fullAddress": "Warszawa - Praga-Południe, dzielnica m. st. Warszawy ul.  Alzacka 16A",
+            "pin": {
+                "latitude": 52.2259843,
+                "longitude": 21.06477
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "PPHU BTP ANNA KÜNSTLE Przedszkole Anglojęzyczne \"HAPPY TIME\" Prywatna Szkoła Podstawowa \"Wonderful Years School\"; Żłobek Abrakadabra",
+            "nip": 8331134810.0,
+            "regNoPosition": "11905\/P",
+            "regon": "750770639",
+            "website": "www.zlobekabrakadabra.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek Bajkolandia",
+        "website": null,
+        "email": "bajkolandia2017@wp.pl",
+        "phone": "537952053",
+        "capacity": 28,
+        "kidsEnrolled": 25.0,
+        "basicPricePerMonth": 450.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 14.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 20.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-16:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Police",
+            "county": "Powiat policki",
+            "fullAddress": "Police ul. Przyjaźni 8",
+            "pin": {
+                "latitude": 53.5400999,
+                "longitude": 14.542569
+            },
+            "voivodeship": "ZACHODNIOPOMORSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Przyjaźni 8 72-010 Police, Police, miasto",
+            "name": "Niepubliczny Żłobek Bajkolandia Spółka Cywilna Anna Hasior Monika Ewald",
+            "nip": 8513245366.0,
+            "regNoPosition": "19448\/P",
+            "regon": "385191533",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "KLUB OPIEKI NAD DZIEĆMI \"NAJLEPSZA NIANIA\"",
+        "website": "www.najlepszaniania.com.pl",
+        "email": "najlepszaniania@onet.eu",
+        "phone": "600292475",
+        "capacity": 13,
+        "kidsEnrolled": 0.0,
+        "basicPricePerMonth": 1600.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 12.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Bielsko-Biała",
+            "county": "Powiat Bielsko-Biała",
+            "fullAddress": "Bielsko-Biała ul. Konstantego Damrota 5",
+            "pin": {
+                "latitude": 49.8175062,
+                "longitude": 19.0275291
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Klub Opieki nad Dziećmi \"Najlepsza Niania\" Aneta Nitecka",
+            "nip": 9372385828.0,
+            "regNoPosition": "349\/P",
+            "regon": "241001330",
+            "website": "www.najlepszaniania.com.pl"
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "KLUB MALUCHA DOMIŚ BEATA MOZGAŁA",
+        "website": "www.domis.rzetelnafirma.pl",
+        "email": "becia784@wp.pl",
+        "phone": "733432530",
+        "capacity": 12,
+        "kidsEnrolled": 10.0,
+        "basicPricePerMonth": 950.0,
+        "extendedStayOver10H": 40.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 6.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 15.0% ",
+            "W przypadku choroby dziecka dłuższej niż 2 tygodnie przysługuje zniżka  w kolejnym miesiącu opłaty za pobyt dziecka w placówce.: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Mysłowice",
+            "county": "Powiat Mysłowice",
+            "fullAddress": "Mysłowice ul. Franciszka Kawy 10",
+            "pin": {
+                "latitude": 50.21798,
+                "longitude": 19.1605942
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Beata Mozgała",
+            "nip": 2220566354.0,
+            "regNoPosition": "11936\/P",
+            "regon": "243439880",
+            "website": "www.do-mis.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek \"Gumisiowa Kraina\" ",
+        "website": "www.gumisiowakraina.pl",
+        "email": "tk49@onet.pl",
+        "phone": "504220625",
+        "capacity": 105,
+        "kidsEnrolled": 105.0,
+        "basicPricePerMonth": 650.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 400.0,
+        "foodPricePerDay": null,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Jedlińsk",
+            "county": "Powiat radomski",
+            "fullAddress": "Jedlińsk ul. Lipowa 21",
+            "pin": {
+                "latitude": 51.5179778,
+                "longitude": 21.1109926
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Teresa Kalbarczyk P.P.U.H. \"KAL-TEX\", Niepubliczne Przedszkole i Żłobek \"GUMISIOWA KRAINA\" Teresa Kalbarczyk",
+            "nip": 7961846084.0,
+            "regNoPosition": "11938\/P",
+            "regon": "672740720",
+            "website": "www.gumisiowakraina.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Prywatny Żłobek \"Tygrysek\"",
+        "website": "www.tygrysek-przedszkole.pl",
+        "email": "tygrysekbiuro@gmail.com",
+        "phone": "785195063",
+        "capacity": 76,
+        "kidsEnrolled": 48.0,
+        "basicPricePerMonth": 890.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 15.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 30.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:00-18:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Łańcut",
+            "county": "Powiat łańcucki",
+            "fullAddress": "Łańcut ul. Podzwierzyniec 41",
+            "pin": {
+                "latitude": 50.0907208,
+                "longitude": 22.2307304
+            },
+            "voivodeship": "PODKARPACKIE"
+        },
+        "operatingEntity": {
+            "address": " 350A 37-111 Rakszawa, Rakszawa, wieś",
+            "name": "Tygrysek S.C. E. Walawender i M. Golenia",
+            "nip": 8151797756.0,
+            "regNoPosition": "11939\/P",
+            "regon": "180992588",
+            "website": "www.tygrysek-przedszkole.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek \"Little AntBee\"",
+        "website": "www.antbee.eu",
+        "email": "biuro@antbee.eu",
+        "phone": "533119911",
+        "capacity": 55,
+        "kidsEnrolled": 19.0,
+        "basicPricePerMonth": 1350.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 200.0,
+        "foodPricePerDay": null,
+        "discounts": [
+            "Wielodzietność\/Karta Dużej Rodziny: 5.0% ",
+            "Rodzeństwo uczęszczające do instytucji: 20.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Radzymin",
+            "county": "Powiat wołomiński",
+            "fullAddress": "Radzymin ul. Marii Skłodowskiej-Curie 9 lok. 11",
+            "pin": {
+                "latitude": 52.4167007,
+                "longitude": 21.1649479
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Little AntBee Dorota Kuźlik",
+            "nip": 1180239883.0,
+            "regNoPosition": "7128\/P",
+            "regon": "142476534",
+            "website": "http:\/\/www.antbee.eu\/"
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "Klub Dziecięcy \"Świat Dziecka\" w Staszowie",
+        "website": null,
+        "email": "klubdzieciecy.staszow@op.pl",
+        "phone": "15 864 21 21",
+        "capacity": 27,
+        "kidsEnrolled": 27.0,
+        "basicPricePerMonth": 637.0,
+        "extendedStayOver10H": 64.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 11.5,
+        "discounts": [
+            "pobyt dziecka do 5 godzin dziennie: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Staszów",
+            "county": "Powiat staszowski",
+            "fullAddress": "Staszów ul. Jana Pawła II 17a",
+            "pin": {
+                "latitude": 50.5684834,
+                "longitude": 21.1723976
+            },
+            "voivodeship": "ŚWIĘTOKRZYSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Opatowska 31 28-200 Staszów",
+            "name": "Gmina Staszów",
+            "nip": 8661608731.0,
+            "regNoPosition": "202\/P",
+            "regon": "830409749",
+            "website": "www.staszow.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Leśny Skrzat ",
+        "website": "www.lesny-skrzat.pl",
+        "email": "biuro@lesny-skrzat.pl",
+        "phone": "71 71 83 833",
+        "capacity": 45,
+        "kidsEnrolled": 29.0,
+        "basicPricePerMonth": 940.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 16.5,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 35.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Oleśnica",
+            "county": "Powiat oleśnicki",
+            "fullAddress": "Oleśnica ul. Okrężna 1",
+            "pin": {
+                "latitude": 51.2101527,
+                "longitude": 17.3821219
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Wojska Polskiego 56h 56-400 Oleśnica, Oleśnica, miasto",
+            "name": "Leśny Skrzat Sp. z o.o.",
+            "nip": 9112020900.0,
+            "regNoPosition": "2254\/P",
+            "regon": "367323492",
+            "website": "www.lesny-skrzat.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Oddział Żłobka Miejskiego w Katowicach",
+        "website": "www.zlobek.katowice.pl",
+        "email": "krzywoustego@zlobek.katowice.pl",
+        "phone": "32 258-60-53",
+        "capacity": 52,
+        "kidsEnrolled": 52.0,
+        "basicPricePerMonth": 400.0,
+        "extendedStayOver10H": 30.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 9.5,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 50.0% ",
+            "na każde dziecko w przypadku jednoczesnego uczęszczania 3 lub więcej dzieci. : 30.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Katowice",
+            "county": "Powiat Katowice",
+            "fullAddress": "Katowice al. Bolesława Krzywoustego 9",
+            "pin": {
+                "latitude": 50.275574,
+                "longitude": 18.9773549
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Młyńska 4 40-098 Katowice, Katowice, miasto",
+            "name": "Gmina Katowice",
+            "nip": 6340010147.0,
+            "regNoPosition": "1968\/P",
+            "regon": "276255387",
+            "website": "katowice.eu"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Centrum Edukacyjne Żłobek Malinka",
+        "website": "cenedu.pl",
+        "email": "kontakt@cenedu.pl",
+        "phone": "576034659",
+        "capacity": 23,
+        "kidsEnrolled": 15.0,
+        "basicPricePerMonth": 760.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 10.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Chojnice",
+            "county": "Powiat chojnicki",
+            "fullAddress": "Chojnice ul. Tucholska 1a",
+            "pin": {
+                "latitude": 53.6967453,
+                "longitude": 17.5917975
+            },
+            "voivodeship": "POMORSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Centrum Edukacyjne Katarzyna Stosik",
+            "nip": 8431137676.0,
+            "regNoPosition": "7278\/P",
+            "regon": "771518984",
+            "website": "cenedu.pl"
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "Klub dziecięcy - Klub Malucha \"Krasnoludki\"",
+        "website": "http:\/\/manufakturarozwojuiradosci.pl",
+        "email": "biuro@fds-consulting.eu",
+        "phone": "523345659",
+        "capacity": 15,
+        "kidsEnrolled": 6.0,
+        "basicPricePerMonth": 700.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": 250.0,
+        "foodPricePerDay": null,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Chojnice",
+            "county": "Powiat chojnicki",
+            "fullAddress": "Chojnice ul. Długa 12",
+            "pin": {
+                "latitude": 53.6889814,
+                "longitude": 17.6009379
+            },
+            "voivodeship": "POMORSKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "CONSULTING Firma Doradczo-Szkoleniowa Julita Orłowska-Szczepańska",
+            "nip": 5551861284.0,
+            "regNoPosition": "11969\/P",
+            "regon": "220906687",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Niepubliczny Żłobek AGUGU",
+        "website": "www.agugu.info",
+        "email": "zlobek.agugu@gmail.com",
+        "phone": "696-130-240",
+        "capacity": 15,
+        "kidsEnrolled": 15.0,
+        "basicPricePerMonth": 1200.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 13.2,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Gdynia",
+            "county": "Powiat Gdynia",
+            "fullAddress": "Gdynia, miasto ul.  Nowodworcowa 1 lok. 1",
+            "pin": {
+                "latitude": 54.4638546,
+                "longitude": 18.4976584
+            },
+            "voivodeship": "POMORSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Nowodworcowa 1 lok. 1 81-581 Gdynia, Gdynia, miasto",
+            "name": "AGUGU Aleksandra Schenk",
+            "nip": 5862173362.0,
+            "regNoPosition": "11970\/P",
+            "regon": "222052284",
+            "website": "www.agugu.info"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Kolorowe Kredki s.c. T.Butniak,B.Jurkowska",
+        "website": "www.zlobekkolorowekredki.pl",
+        "email": "biuro@zlobekkolorowekredki.pl",
+        "phone": "510513550",
+        "capacity": 71,
+        "kidsEnrolled": 61.0,
+        "basicPricePerMonth": 1450.0,
+        "extendedStayOver10H": 50.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 21.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Siechnice",
+            "county": "Powiat wrocławski",
+            "fullAddress": "Siechnice ul. Osiedlowa 31",
+            "pin": {
+                "latitude": 51.0266711,
+                "longitude": 17.1542315
+            },
+            "voivodeship": "DOLNOŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Osiedlowa 31 55-011 Siechnice, Siechnice, miasto",
+            "name": "Kolorowe Kredki spółka cywilna Tobiasz Butniak Barbara Jurkowska",
+            "nip": 8961570429.0,
+            "regNoPosition": "11989\/P",
+            "regon": "368692760",
+            "website": "www.zlobekkolorowekredki.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Akademia Maluszka \"Słodki bobasek\" s.c",
+        "website": "www.slodkibobasek.pl",
+        "email": "kontakt@slodkibobasek.pl",
+        "phone": "695761799",
+        "capacity": 33,
+        "kidsEnrolled": 33.0,
+        "basicPricePerMonth": 1300.0,
+        "extendedStayOver10H": 30.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 14.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Boguchwała",
+            "county": "Powiat rzeszowski",
+            "fullAddress": "Racławówka, wieś Racławówka, wieś 215",
+            "pin": {
+                "latitude": 50.0122066,
+                "longitude": 21.914754
+            },
+            "voivodeship": "PODKARPACKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Reformacka 4 35-026 Rzeszów, Rzeszów, miasto",
+            "name": "Akademia Maluszka\" Słodki Bobasek\" s.c",
+            "nip": 8133649229.0,
+            "regNoPosition": "163\/P",
+            "regon": "180680363",
+            "website": "www.slodkibobasek.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "Żłobek \"Kubuś Puchatek\" w Szubinie",
+        "website": "http:\/\/www.przedszkole2.szubin.pl\/",
+        "email": "sekretariat@przedszkole2.szubin.pl",
+        "phone": "52 384 24 47",
+        "capacity": 40,
+        "kidsEnrolled": 38.0,
+        "basicPricePerMonth": 500.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 11.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Szubin",
+            "county": "Powiat nakielski",
+            "fullAddress": "Szubin ul. gen. Jarosława Dąbrowskiego 16",
+            "pin": {
+                "latitude": 53.0102918,
+                "longitude": 17.736488
+            },
+            "voivodeship": "KUJAWSKO-POMORSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul. Kcyńska 12 89-200 Szubin",
+            "name": "Gmina Szubin",
+            "nip": 5581723233.0,
+            "regNoPosition": "11973\/P",
+            "regon": "092350910",
+            "website": null
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "ZAMECZEK WIOLETTA CHOLEWA-BARANOWSKA",
+        "website": "www.przedszkolezameczek.pl\/",
+        "email": "zameczek50@wp.pl",
+        "phone": "600251606",
+        "capacity": 70,
+        "kidsEnrolled": 70.0,
+        "basicPricePerMonth": 1120.0,
+        "extendedStayOver10H": 30.0,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 12.0,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 50.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-18:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Siedlce",
+            "county": "Powiat Siedlce",
+            "fullAddress": "Siedlce ul. Henryka Sienkiewicza 10A",
+            "pin": {
+                "latitude": 52.165567,
+                "longitude": 22.2810982
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": null,
+            "name": "Zameczek Wioletta Cholewa - Baranowska",
+            "nip": 8241656108.0,
+            "regNoPosition": "775\/P",
+            "regon": "144084867",
+            "website": "http:\/\/www.przedszkolezameczek.pl\/"
+        }
+    },
+    {
+        "institutionType": "Klub dziecięcy",
+        "name": "Klub Dziecięcy\"Miś Uszatek\"",
+        "website": "żłobek-warszawa.pl",
+        "email": "biuro@buka.edu.pl",
+        "phone": "692 859 048",
+        "capacity": 10,
+        "kidsEnrolled": 10.0,
+        "basicPricePerMonth": 1390.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 14.0,
+        "discounts": null,
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-18:00 ",
+        "isAdaptedToDisabledChildren": "NIE",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Warszawa - Praga-Południe",
+            "county": "Powiat Warszawa",
+            "fullAddress": "Warszawa - Praga-Południe, dzielnica m. st. Warszawy ul.  Awionetki RWD 3",
+            "pin": {
+                "latitude": 52.2263626,
+                "longitude": 21.0888063
+            },
+            "voivodeship": "MAZOWIECKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Niekłańska 21 lok. 1 03-924 Warszawa - Praga-Południe, Warszawa - Praga-Południe, dzielnica m. st. Warszawy",
+            "name": "Buka S.C. Karolina Rucińska, Paweł Jóźwik",
+            "nip": 7591740926.0,
+            "regNoPosition": "2989\/P",
+            "regon": "147006649",
+            "website": "żłobek-warszawa.pl"
+        }
+    },
+    {
+        "institutionType": "Żłobek",
+        "name": "NIEPUBLICZNE PRZEDSZKOLE RADOSNE SŁONECZKO spółka z o.o.",
+        "website": "radosnesloneczko.pl",
+        "email": "przedszkole@radosnesloneczko.pl",
+        "phone": "690885588",
+        "capacity": 55,
+        "kidsEnrolled": 55.0,
+        "basicPricePerMonth": 1150.0,
+        "extendedStayOver10H": null,
+        "basicPricePerHour": null,
+        "foodPricePerMonth": null,
+        "foodPricePerDay": 19.5,
+        "discounts": [
+            "Rodzeństwo uczęszczające do instytucji: 10.0% "
+        ],
+        "openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
+        "isAdaptedToDisabledChildren": "TAK",
+        "businessActivitySuspended": "NIE",
+        "address": {
+            "city": "Radzionków",
+            "county": "Powiat tarnogórski",
+            "fullAddress": "Radzionków ul. Gajdasa 1b",
+            "pin": {
+                "latitude": 50.3983713,
+                "longitude": 18.8962475
+            },
+            "voivodeship": "ŚLĄSKIE"
+        },
+        "operatingEntity": {
+            "address": "ul.  Gajdasa 1B 41-922 Radzionków, Radzionków, miasto",
+            "name": "NIEPUBLICZNE PRZEDSZKOLE RADOSNE SŁONECZKO SP. Z O.O.",
+            "nip": 6452552557.0,
+            "regNoPosition": "12021\/P",
+            "regon": "368139247",
+            "website": "radosnesloneczko.pl"
+        }
+    }
+]

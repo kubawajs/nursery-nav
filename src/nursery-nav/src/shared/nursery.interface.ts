@@ -11,7 +11,7 @@ export interface Institution {
     basicPricePerHour?: number,
     foodPricePerMonth?: number,
     foodPricePerDay?: number,
-    discounts: string[],
+    discounts?: string[],
     openingHours: string,
     isAdaptedToDisabledChildren: boolean,
     operatingEntity: OperatingEntity,
