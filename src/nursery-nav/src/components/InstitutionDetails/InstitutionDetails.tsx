@@ -24,16 +24,16 @@ export default function InstitutionDetails(institution: Institution) {
                             <TableBody>
                                 <TableRow>
                                     <TableCell>
-                                        {institution.basicPricePerMonth && <>{institution.basicPricePerMonth} PLN / miesiąc</>}
+                                        {institution.basicPricePerMonth && <>{institution.basicPricePerMonth.toFixed(2)} PLN / miesiąc</>}
                                     </TableCell>
                                     <TableCell>
-                                        {institution.basicPricePerHour && <>{institution.basicPricePerHour} PLN / godzina</>}
+                                        {institution.basicPricePerHour && <>{institution.basicPricePerHour.toFixed(2)} PLN / godzina</>}
                                     </TableCell>
                                     <TableCell>
-                                        {institution.foodPricePerMonth && <>{institution.foodPricePerMonth} PLN miesiąc</>}
+                                        {institution.foodPricePerMonth && <>{institution.foodPricePerMonth.toFixed(2)} PLN miesiąc</>}
                                     </TableCell>
                                     <TableCell>
-                                        {institution.foodPricePerDay && <>{institution.foodPricePerDay} PLN / dzień</>}
+                                        {institution.foodPricePerDay && <>{institution.foodPricePerDay.toFixed(2)} PLN / dzień</>}
                                     </TableCell>
                                 </TableRow>
                             </TableBody>
@@ -54,7 +54,7 @@ export default function InstitutionDetails(institution: Institution) {
                         <Typography variant="body1">{institution.openingHours}</Typography>
                     </Box>
                     <Typography variant="subtitle2">Zniżki</Typography>
-                    {institution.discounts.map((discount, index) => (
+                    {institution.discounts && institution.discounts.map((discount, index) => (
                         <Chip key={index} label={discount} />
                     ))}
                 </Paper>
