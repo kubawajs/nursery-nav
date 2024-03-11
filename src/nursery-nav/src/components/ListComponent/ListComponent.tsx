@@ -1,12 +1,9 @@
 import { Box, Button, Card, CardActions, CardContent, List, ListItem, Paper, Typography } from "@mui/material";
 import { Institution } from "../../shared/nursery.interface";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Payment } from "@mui/icons-material";
 import InstitutionDetails from "../InstitutionDetails/InstitutionDetails";
-
-export interface ListComponentProps {
-    institutions: Institution[];
-}
+import { InstitutionContext } from "../../App";
 
 interface ListComponentItemProps {
     name: string;
@@ -44,8 +41,9 @@ function ListComponentItem(props: ListComponentItemProps) {
     );
 }
 
-export default function ListComponent(props: ListComponentProps) {
+export default function ListComponent() {
     const [selectedInstitution, setSelectedInstitution] = useState<Institution | null>(null);
+    const institutionContext = useContext(InstitutionContext);
 
     if (selectedInstitution) {
         return (
@@ -58,10 +56,10 @@ export default function ListComponent(props: ListComponentProps) {
     return (
         <Box component="section" style={{ overflow: 'auto', height: '100vh' }}>
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                Znaleziono {props.institutions.length} instytucji
+                Znaleziono {institutionContext.institutions.length} instytucji
             </Typography>
             <List>
-                {props.institutions.map((institution, index) => (
+                {institutionContext.institutions.map((institution, index) => (
                     <Box onClick={() => setSelectedInstitution(institution)}>
                         <ListComponentItem
                             key={index}
