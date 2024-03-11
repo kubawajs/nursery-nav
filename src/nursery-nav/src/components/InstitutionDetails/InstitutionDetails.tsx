@@ -11,17 +11,17 @@ export default function InstitutionDetails(institution: Institution) {
                     <Typography variant="h2">{institution.name}</Typography>
                     <Box>
                         <TableContainer>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell colSpan={2}>
-                                        <CottageOutlined />
-                                    </TableCell>
-                                    <TableCell colSpan={2}>
-                                        <FoodBankOutlined />
-                                    </TableCell>
-                                </TableRow>
-                            </TableHead>
                             <TableBody>
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell colSpan={2}>
+                                            <CottageOutlined />
+                                        </TableCell>
+                                        <TableCell colSpan={2}>
+                                            <FoodBankOutlined />
+                                        </TableCell>
+                                    </TableRow>
+                                </TableHead>
                                 <TableRow>
                                     <TableCell>
                                         {institution.basicPricePerMonth && <>{institution.basicPricePerMonth.toFixed(2)} PLN / miesiąc</>}

@@ -12,13 +12,16 @@ const mapProps: MapComponentProps = {
 
 export const InstitutionContext = React.createContext({
   institutions: data as unknown as Institution[],
+  selectedInstitution: null as Institution | null,
+  setSelectedInstitution: (_institution: Institution | null) => {}
 });
 
 export default function App() {
   const institutions = data as unknown as Institution[];
+  const [selectedInstitution, setSelectedInstitution] = React.useState<Institution | null>(null);
 
   return (
-    <InstitutionContext.Provider value={{ institutions }}>
+    <InstitutionContext.Provider value={{ institutions, selectedInstitution, setSelectedInstitution }}>
       <Grid container margin={0}>
         <Grid item xs={12}>
           <Navigation />
