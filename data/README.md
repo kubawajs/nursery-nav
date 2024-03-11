@@ -2,13 +2,15 @@
 
 ## Data
 
-From dane.gov.pl
+[Rejestr Żłobków - lista instytucji - dane.gov.pl](https://dane.gov.pl/pl/dataset/2106/resource/55499/table).
+License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode.pl)
 
 ## enrich-data.py
 
 Script that enriches the original data with geolocalization data from Google GeoCoding API and splits address into separate columns.
 
 ### Run script
+
 ```bash
 python enrich-data.py
 ```
