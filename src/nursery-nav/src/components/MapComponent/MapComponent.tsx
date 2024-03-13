@@ -6,18 +6,12 @@ import { InstitutionContext } from '../../App';
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import './MapComponent.css';
 
-export interface MapComponentProps {
-	center: [number, number];
-}
-
-export default function MapComponent(props: MapComponentProps) {
-	const { institutions, selectedInstitution } = useContext(InstitutionContext);
-	console.log(selectedInstitution);
-
+export default function MapComponent() {
+	const { institutions } = useContext(InstitutionContext);
 	return (
 		<Container style={{ padding: 0 }}>
 			<MapContainer
-				center={props.center}
+				center={[52.0, 21.37]}
 				zoom={7}
 				scrollWheelZoom={true}
 				zoomControl={false}
