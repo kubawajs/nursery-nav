@@ -8,6 +8,7 @@ import './MapComponent.css';
 
 export default function MapComponent() {
 	const { institutions } = useContext(InstitutionContext);
+	console.log(process.env.REACT_APP_GEOAPIFY_API_KEY);
 	return (
 		<Container style={{ padding: 0 }}>
 			<MapContainer
@@ -18,8 +19,9 @@ export default function MapComponent() {
 				style={{ position: 'absolute', top: 0, bottom: 0, width: '100%' }}
 			>
 				<TileLayer
-					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+					attribution='Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors'
+					url={`https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`}
+					maxZoom={20}
 				/>
 				<MarkerClusterGroup
 					polygonOptions={{ opacity: 0 }}
