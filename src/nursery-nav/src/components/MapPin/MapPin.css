@@ -1,12 +1,17 @@
-.leaflet-div-icon {
-	background: transparent;
-	border: none;
-	width: 30px !important;
-	height: 30px !important;
+.map-pin-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #FFBE98;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-.leaflet-div-icon:hover {
-	color: red;
-	background: transparent;
-	border: none;
+.map-pin-div-icon {
+    border: 0;
+    background: none;
 }
