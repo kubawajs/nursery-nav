@@ -1,9 +1,10 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
-import './MapComponent.css';
 import { Container } from '@mui/material';
 import MapPin from '../MapPin/MapPin';
 import { useContext } from 'react';
 import { InstitutionContext } from '../../App';
+import MarkerClusterGroup from 'react-leaflet-cluster'
+import './MapComponent.css';
 
 export interface MapComponentProps {
 	center: [number, number];
@@ -26,14 +27,18 @@ export default function MapComponent(props: MapComponentProps) {
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
-				{institutions.map((institution, index) => (
-					<MapPin
-						key={index}
-						name={institution.name}
-						pin={institution.address.pin}
-						institution={institution}
-					/>
-				))}
+				<MarkerClusterGroup
+					polygonOptions={{ color: 'purple', weight: 1, opacity: 1, fillOpacity: 0.2 }}
+					chunkedLoading>
+					{institutions.map((institution, index) => (
+						<MapPin
+							key={index}
+							name={institution.name}
+							pin={institution.address.pin}
+							institution={institution}
+						/>
+					))}
+				</MarkerClusterGroup>
 			</MapContainer>
 		</Container>
 	);
