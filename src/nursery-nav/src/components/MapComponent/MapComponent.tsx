@@ -28,7 +28,7 @@ export default function MapComponent(props: MapComponentProps) {
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
 				<MarkerClusterGroup
-					polygonOptions={{ color: 'purple', weight: 1, opacity: 1, fillOpacity: 0.2 }}
+					polygonOptions={{ opacity: 0 }}
 					chunkedLoading>
 					{institutions.map((institution, index) => (
 						<MapPin

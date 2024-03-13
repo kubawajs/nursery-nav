@@ -2,10 +2,10 @@ import { Marker, useMap } from 'react-leaflet';
 import { LocationOn } from '@mui/icons-material';
 import { divIcon } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
-import './MapPin.css';
 import { useContext } from 'react';
 import { InstitutionContext } from '../../App';
 import { Institution } from '../../shared/nursery.interface';
+import './MapPin.css';
 
 export interface MapPinProps {
 	name: string;
@@ -19,12 +19,7 @@ export interface MapPinProps {
 export default function MapPin(props: MapPinProps) {
 	const map = useMap();
 	const { setSelectedInstitution } = useContext(InstitutionContext);
-
 	const position: [number, number] = [props.pin.latitude, props.pin.longitude];
-	const iconMarkup = renderToStaticMarkup(<LocationOn fontSize={'large'} />);
-	const pinIcon = divIcon({
-		html: iconMarkup
-	});
 
 	return (
 		<Marker
@@ -37,7 +32,16 @@ export default function MapPin(props: MapPinProps) {
 				}
 			}}
 			position={position}
-			icon={pinIcon}
+			icon={divIcon({
+				html: renderToStaticMarkup(
+					<LocationOn
+						fontSize="large"
+						className="map-pin-icon"
+					/>
+				),
+				iconSize: [30, 30],
+				className: 'map-pin-div-icon'
+			})}
 		></Marker>
 	);
 }
