@@ -1,5 +1,6 @@
 import {
 	Box,
+	Breadcrumbs,
 	Button,
 	Card,
 	CardActions,
@@ -24,7 +25,7 @@ interface ListComponentItemProps {
 function ListComponentItem(props: ListComponentItemProps) {
 	return (
 		<ListItem sx={{ display: 'block' }}>
-			<Card variant="outlined">
+			<Card variant="elevation">
 				<CardContent>
 					<Typography sx={{ fontSize: 11 }} color="text.secondary" gutterBottom>
 						{props.institutionType}
@@ -56,6 +57,11 @@ export default function ListComponent() {
 	if (selectedInstitution) {
 		return (
 			<Box>
+				<Breadcrumbs aria-label="breadcrumb">
+					<Typography color="text.light">{selectedInstitution.address.voivodeship}</Typography>
+					<Typography color="text.light">{selectedInstitution.address.county}</Typography>
+					<Typography color="text.primary">{selectedInstitution.address.city}</Typography>
+				</Breadcrumbs>
 				<Button variant="contained" onClick={() => setSelectedInstitution(null)}>
 					Powrót
 				</Button>

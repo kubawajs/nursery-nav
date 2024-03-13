@@ -43,7 +43,7 @@ Check `./data/RZ-instytucje-enriched.json`
 * [ ] Search
 * [x] Display institution details on pin click
 * [ ] Basic component styling
-* [ ] Group pins on the map
+* [x] Group pins on the map
 
 ### Phase 2
 * [ ] DB data source
