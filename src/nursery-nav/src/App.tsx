@@ -1,11 +1,11 @@
 import { Grid, ThemeProvider } from '@mui/material';
 import MapComponent from './components/MapComponent/MapComponent';
 import Navigation from './components/Navigation/Navigation';
-import ListComponent from './components/ListComponent/ListComponent';
 import data from './data/test-data-100.json';
 import { Institution } from './shared/nursery.interface';
 import React from 'react';
 import { theme } from './shared/theme';
+import ListComponent from './components/ListComponent/ListComponent';
 
 export const InstitutionContext = React.createContext({
   institutions: data as unknown as Institution[],
@@ -22,10 +22,8 @@ export default function App() {
       value={{ institutions, selectedInstitution, setSelectedInstitution }}
     >
       <ThemeProvider theme={theme}>
-        <Grid container margin={0}>
-          <Grid item xs={12}>
-            <Navigation />
-          </Grid>
+        <Navigation />
+        <Grid container>
           <Grid item xs={12} md={5} style={{ position: 'relative' }}>
             <ListComponent />
           </Grid>

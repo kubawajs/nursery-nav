@@ -20,5 +20,24 @@ export const theme = createTheme({
     },
     typography: {
         fontFamily: 'Roboto, sans-serif',
+        h2: {
+            fontSize: '2.5rem'
+        },
+    },
+    components: {
+        MuiAppBar: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: '#ffbe98',
+                },
+            },
+        },
+        MuiPaper: {
+            styleOverrides: {
+                root: {
+                    padding: '1rem',
+                }
+            }
+        },
     }
 });
