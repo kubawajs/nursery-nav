@@ -24,10 +24,10 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <Navigation />
         <Grid container>
-          <Grid item xs={12} md={5} style={{ position: 'relative' }}>
+          <Grid item xs={12} md={8} lg={7} xl={6} style={{ position: 'relative' }}>
             <ListComponent />
           </Grid>
-          <Grid item xs={12} md={7} style={{ position: 'relative' }}>
+          <Grid item xs={12} md={4} lg={5} xl={6} style={{ position: 'relative' }}>
             <MapComponent />
           </Grid>
         </Grid>

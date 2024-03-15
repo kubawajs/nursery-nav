@@ -10,7 +10,7 @@ export default function Navigation() {
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
 					<Typography
-						variant="h6"
+						variant="h5"
 						noWrap
 						sx={{
 							mr: 2,

@@ -40,7 +40,7 @@ export default function MapPin(props: MapPinProps) {
 					/>
 				),
 				iconSize: [30, 30],
-				className: 'map-pin-div-icon'
+				className: 'map-pin-div-icon',
 			})}
 		></Marker>
 	);

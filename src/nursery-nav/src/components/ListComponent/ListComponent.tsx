@@ -34,6 +34,8 @@ export default function ListComponent() {
 							city={institution.address.city}
 							basicPricePerMonth={institution.basicPricePerMonth}
 							website={institution.website}
+							phone={institution.phone}
+							email={institution.email}
 						/>
 					</Box>
 				))}
