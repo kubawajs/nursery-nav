@@ -1,34 +1,37 @@
-import { Payments, MoreTime, RestaurantMenu } from "@mui/icons-material";
 import { Box, Chip, Divider, Paper, Stack, Typography } from "@mui/material";
 import { Institution } from "../../shared/nursery.interface";
 
+function PriceWithLabel(label: string, price?: number) {
+    return (price && (
+        <Stack direction='column'>
+            <Typography variant="subtitle1">
+                {price.toFixed(2)} PLN
+            </Typography>
+            <Typography variant="caption">
+                {label}
+            </Typography>
+        </Stack>
+    ));
+}
+
 export default function InstitutionDetailsHeader(institution: Institution) {
+    const mainColor = institution.institutionType === 'Żłobek' ? 'primary' : 'secondary';
     return (
         <Box p={1}>
             <Paper elevation={2}>
-                <Chip label={institution.institutionType} />
+                <Chip label={institution.institutionType} color={mainColor} />
                 <Typography variant="h2">{institution.name}</Typography>
-                <Box>
+                <Divider />
+                <Box paddingTop={2} display='flex' justifyContent='space-between'>
                     <Stack
                         direction="row"
-                        spacing={2}
-                        divider={<Divider orientation="vertical" flexItem />}
+                        gap={2}
                     >
-                        {institution.basicPricePerMonth && (
-                            <Typography variant="overline"><Payments />{institution.basicPricePerMonth.toFixed(2)} PLN / miesiąc</Typography>
-                        )}
-                        {institution.basicPricePerHour && (
-                            <Typography variant="overline"><Payments />{institution.basicPricePerHour.toFixed(2)} PLN / godzina</Typography>
-                        )}
-                        {institution.extendedStayOver10H && (
-                            <Typography variant="overline"><MoreTime />{institution.extendedStayOver10H.toFixed(2)} PLN / godzina</Typography>
-                        )}
-                        {institution.foodPricePerMonth && (
-                            <Typography variant="overline"><RestaurantMenu />{institution.foodPricePerMonth.toFixed(2)} PLN miesiąc</Typography>
-                        )}
-                        {institution.foodPricePerDay && (
-                            <Typography variant="overline"><RestaurantMenu />{institution.foodPricePerDay.toFixed(2)} PLN / dzień</Typography>
-                        )}
+                        {PriceWithLabel('cena bazowa / miesiąc', institution.basicPricePerMonth)}
+                        {PriceWithLabel('cena bazowa / godzina', institution.basicPricePerHour)}
+                        {PriceWithLabel('cena za pobyt powyżej 10h', institution.extendedStayOver10H)}
+                        {PriceWithLabel('cena za wyżywienie / miesiąc', institution.foodPricePerMonth)}
+                        {PriceWithLabel('cena za wyżywienie / dzień', institution.foodPricePerDay)}
                     </Stack>
                 </Box>
             </Paper>

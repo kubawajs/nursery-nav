@@ -6,7 +6,7 @@ import {
     ListItem,
     Typography
 } from '@mui/material';
-import { FmdGood, Language, Mail, Payment, Phone } from '@mui/icons-material';
+import { FmdGood, Language, Mail, Phone } from '@mui/icons-material';
 
 interface ListComponentItemProps {
     name: string;

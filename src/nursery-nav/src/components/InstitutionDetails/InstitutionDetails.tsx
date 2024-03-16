@@ -1,8 +1,7 @@
-import { Box, Breadcrumbs, Button, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { Institution } from '../../shared/nursery.interface';
 import InstitutionDetailsHeader from './InstitutionDetailsHeader';
 import InstitutionDetailsDescription from './InstitutionDetailsDescription';
-import InstitutionDetailsLinks from './InstitutionDetailsLinks';
 import { useContext } from 'react';
 import { InstitutionContext } from '../../App';
 import InstitutionDetailsTop from './InstitutionDetailsTop';
@@ -17,7 +16,6 @@ export default function InstitutionDetails(institution: Institution) {
 			}
 			<InstitutionDetailsHeader {...institution} />
 			<InstitutionDetailsDescription {...institution} />
-			<InstitutionDetailsLinks {...institution} />
 		</Box>
 	);
 }

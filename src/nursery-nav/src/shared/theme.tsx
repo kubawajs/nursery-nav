@@ -6,28 +6,29 @@ export const theme = createTheme({
         secondary: {
             light: '#fbede9',
             main: '#ffbe98',
-            dark: '#e97413',
+            dark: '#f77c18',
         },
         primary: {
             light: '#e5f6ff',
             main: '#98d9ff',
-            dark: '#5091d7',
+            dark: '#57a5ec',
         },
         text: {
             primary: '#333',
             secondary: '#666',
         },
     },
+    spacing: 8,
     typography: {
         fontFamily: 'Roboto, sans-serif',
         h1: {
-            fontSize: '3rem'
-        },
-        h2: {
             fontSize: '2.5rem'
         },
-        h3: {
+        h2: {
             fontSize: '2rem'
+        },
+        h3: {
+            fontSize: '1.75rem'
         },
         h4: {
             fontSize: '1.5rem'
@@ -54,10 +55,17 @@ export const theme = createTheme({
                 }
             }
         },
+        MuiButton: {
+            styleOverrides: {
+                contained: {
+                    color: '#fff'
+                }
+            }
+        },
         MuiSvgIcon: {
             styleOverrides: {
                 root: {
-                    verticalAlign: 'sub',
+                    verticalAlign: 'top',
                 }
             }
         },
