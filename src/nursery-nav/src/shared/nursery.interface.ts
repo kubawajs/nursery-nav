@@ -29,7 +29,7 @@ export interface OperatingEntity {
 }
 
 export interface Address {
-	voidodeship: string;
+	voivodeship: string;
 	county: string;
 	city: string;
 	fullAddress: string;

@@ -1,0 +1,39 @@
+import { PhoneAndroid, Mail, Language } from "@mui/icons-material";
+import { Box, Stack, Divider, Typography, Link } from "@mui/material";
+import { Institution } from "../../shared/nursery.interface";
+
+export default function InstitutionDetailsLinks(institution: Institution) {
+    return (
+        <Box>
+            <Stack
+                direction={{ xs: 'column', sm: 'row' }}
+                justifyContent="center"
+                alignItems="center"
+                spacing={{ xs: 1, sm: 2 }}
+                divider={<Divider orientation="vertical" flexItem />}
+            >
+                {institution.phone && <Box>
+                    <Typography variant="overline">
+                        <Link href={`tel:${institution.phone}`} underline='none'>
+                            <PhoneAndroid /> {institution.phone}
+                        </Link>
+                    </Typography>
+                </Box>}
+                {institution.email && <Box>
+                    <Typography variant="overline">
+                        <Link href={`mailto:${institution.email}`} underline='none'>
+                            <Mail /> {institution.email}
+                        </Link>
+                    </Typography>
+                </Box>}
+                {institution.website && <Box>
+                    <Typography variant="overline">
+                        <Link href={institution.website} underline='none'>
+                            <Language /> {institution.website}
+                        </Link>
+                    </Typography>
+                </Box>}
+            </Stack>
+        </Box>
+    );
+}

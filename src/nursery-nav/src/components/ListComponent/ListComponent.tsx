@@ -1,66 +1,21 @@
 import {
 	Box,
+	Breadcrumbs,
 	Button,
-	Card,
-	CardActions,
-	CardContent,
 	List,
-	ListItem,
 	Typography
 } from '@mui/material';
 import { useContext } from 'react';
-import { Payment } from '@mui/icons-material';
-import InstitutionDetails from '../InstitutionDetails/InstitutionDetails';
 import { InstitutionContext } from '../../App';
-
-interface ListComponentItemProps {
-	name: string;
-	institutionType: string;
-	city: string;
-	basicPricePerMonth: number;
-	website: string;
-}
-
-function ListComponentItem(props: ListComponentItemProps) {
-	return (
-		<ListItem sx={{ display: 'block' }}>
-			<Card variant="outlined">
-				<CardContent>
-					<Typography sx={{ fontSize: 11 }} color="text.secondary" gutterBottom>
-						{props.institutionType}
-					</Typography>
-					<Typography sx={{ mb: 1.0 }} color="text.secondary" gutterBottom>
-						{props.city}
-					</Typography>
-					<Typography sx={{ mb: 1.5 }} color="text.primary">
-						{props.name}
-					</Typography>
-					<Typography sx={{ mb: 1.2 }} color="text.secondary">
-						<Payment /> {props.basicPricePerMonth} PLN / miesiąc
-					</Typography>
-				</CardContent>
-				<CardActions>
-					<Button variant="contained" href={props.website}>
-						Strona www
-					</Button>
-				</CardActions>
-			</Card>
-		</ListItem>
-	);
-}
+import { ListComponentItem } from './ListComponentItem';
+import InstitutionDetails from '../InstitutionDetails/InstitutionDetails';
 
 export default function ListComponent() {
-	const { institutions, selectedInstitution, setSelectedInstitution } =
-		useContext(InstitutionContext);
+	const { institutions, selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
 
 	if (selectedInstitution) {
 		return (
-			<Box>
-				<Button variant="contained" onClick={() => setSelectedInstitution(null)}>
-					Powrót
-				</Button>
-				<InstitutionDetails {...selectedInstitution} />
-			</Box>
+			<InstitutionDetails {...selectedInstitution} />
 		);
 	}
 
@@ -79,6 +34,8 @@ export default function ListComponent() {
 							city={institution.address.city}
 							basicPricePerMonth={institution.basicPricePerMonth}
 							website={institution.website}
+							phone={institution.phone}
+							email={institution.email}
 						/>
 					</Box>
 				))}
