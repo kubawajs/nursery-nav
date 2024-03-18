@@ -8,35 +8,21 @@ export default function Navigation() {
 	return (
 		<AppBar position="static">
 			<Container maxWidth="xl">
-				<Toolbar disableGutters>
+				<Toolbar>
+					<FamilyRestroom sx={{ display: 'flex', mr: 1 }} />
 					<Typography
 						variant="h5"
 						noWrap
 						sx={{
 							mr: 2,
-							display: { xs: 'none', md: 'flex' },
+							display: 'flex',
 							fontFamily: 'monospace',
 							fontWeight: 700,
 							letterSpacing: '.2rem',
 							textDecoration: 'none'
 						}}
 					>
-						<FamilyRestroom /> NurseryNav
-					</Typography>
-					<Typography
-						variant="h5"
-						noWrap
-						sx={{
-							mr: 2,
-							display: { xs: 'flex', md: 'none' },
-							flexGrow: 1,
-							fontFamily: 'monospace',
-							fontWeight: 700,
-							letterSpacing: '.2rem',
-							textDecoration: 'none'
-						}}
-					>
-						<FamilyRestroom /> NurseryNav
+						NurseryNav
 					</Typography>
 				</Toolbar>
 			</Container>

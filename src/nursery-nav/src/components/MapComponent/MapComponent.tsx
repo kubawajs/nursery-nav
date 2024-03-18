@@ -8,7 +8,6 @@ import './MapComponent.css';
 
 export default function MapComponent() {
 	const { institutions } = useContext(InstitutionContext);
-	console.log(process.env.REACT_APP_GEOAPIFY_API_KEY);
 	return (
 		<Container style={{ padding: 0 }}>
 			<MapContainer
