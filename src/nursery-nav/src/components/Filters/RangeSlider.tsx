@@ -22,6 +22,7 @@ export default function RangeSlider() {
                 getAriaValueText={valuetext}
                 max={3000}
                 aria-labelledby="range-slider-label"
+                sx={{ left: '10px', maxWidth: '90%' }}
             />
         </Box>
     );
