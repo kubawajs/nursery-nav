@@ -26,6 +26,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                     component="img"
                     sx={{ width: 151 }}
                     image="https://source.unsplash.com/random"
+                    alt='random image from unsplash.com'
                 />
                 <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
                     <CardContent sx={{ flex: '1 0 auto', paddingRight: '0' }}>
@@ -49,9 +50,15 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                     <FmdGood />{props.city}
                                 </Typography>
                                 <ButtonGroup variant="text" aria-label="basic outlined button group" color={mainColor}>
-                                    <Button href={`tel:${props.phone}`}><Phone sx={{ fontSize: '1.25rem' }} /></Button>
-                                    <Button href={`mailto:${props.email}`}><Mail sx={{ fontSize: '1.25rem' }} /></Button>
-                                    <Button href={props.website}><Language sx={{ fontSize: '1.25rem' }} /></Button>
+                                    <Button href={`tel:${props.phone}`} aria-label='Zadzwoń do instytucji'>
+                                        <Phone sx={{ fontSize: '1.25rem' }} />
+                                    </Button>
+                                    <Button href={`mailto:${props.email}`} aria-label='Napisz wiadomość email'>
+                                        <Mail sx={{ fontSize: '1.25rem' }} />
+                                    </Button>
+                                    <Button href={props.website} aria-label='Odwiedź stronę internetową'>
+                                        <Language sx={{ fontSize: '1.25rem' }} />
+                                    </Button>
                                 </ButtonGroup>
                             </Box>
                         </Box>

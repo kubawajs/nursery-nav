@@ -44,7 +44,9 @@ Check `./data/RZ-instytucje-enriched.json`
 * [x] Display institution details on pin click
 * [x] Basic component styling
 * [x] Group pins on the map
-* [ ] SEO
+* [x] SEO
+* [ ] CICD
+* [ ] Live URL
 
 ### Phase 2
 * [ ] DB data source
