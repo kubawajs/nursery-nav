@@ -1,4 +1,4 @@
-import { Marker, useMap } from 'react-leaflet';
+import { Marker, Tooltip, useMap } from 'react-leaflet';
 import { LocationOn } from '@mui/icons-material';
 import { divIcon } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -42,6 +42,8 @@ export default function MapPin(props: MapPinProps) {
 				iconSize: [30, 30],
 				className: 'map-pin-div-icon',
 			})}
-		></Marker>
+		>
+			<Tooltip>{props.institution.name}</Tooltip>
+		</Marker>
 	);
 }
