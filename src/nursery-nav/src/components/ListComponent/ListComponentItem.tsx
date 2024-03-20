@@ -17,8 +17,10 @@ interface ListComponentItemProps {
     phone: string;
     email: string;
 }
+
 export function ListComponentItem(props: ListComponentItemProps) {
     const mainColor = props.institutionType === 'Żłobek' ? "primary" : "secondary";
+
     return (
         <ListItem sx={{ display: 'block' }}>
             <Card sx={{ display: 'flex', padding: 0, paddingRight: 2 }}>

@@ -19,6 +19,13 @@ export interface MapPinProps {
 export default function MapPin(props: MapPinProps) {
 	const map = useMap();
 	const { setSelectedInstitution } = useContext(InstitutionContext);
+	const setSelectedInstitutionAndZoom = (institution: Institution) => {
+		map.setView([institution.address.pin.latitude, institution.address.pin.longitude], 16, {
+			animate: true
+		});
+		setSelectedInstitution(institution);
+	};
+
 	const position: [number, number] = [props.pin.latitude, props.pin.longitude];
 	const institutionType = props.institution.institutionType === 'Żłobek' ? 'nursery' : 'childclub';
 	const iconBackgroundColor = `map-pin-icon map-pin-icon-${institutionType}`;
@@ -26,12 +33,7 @@ export default function MapPin(props: MapPinProps) {
 	return (
 		<Marker
 			eventHandlers={{
-				click: () => {
-					map.setView([position[0], position[1]], 14, {
-						animate: true
-					});
-					setSelectedInstitution(props.institution);
-				}
+				click: () => { setSelectedInstitutionAndZoom(props.institution); }
 			}}
 			position={position}
 			icon={divIcon({
