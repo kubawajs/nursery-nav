@@ -1,5 +1,5 @@
 import { Marker, Tooltip, useMap } from 'react-leaflet';
-import { LocationOn } from '@mui/icons-material';
+import { LocationOnOutlined } from '@mui/icons-material';
 import { divIcon } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { useContext } from 'react';
@@ -20,6 +20,8 @@ export default function MapPin(props: MapPinProps) {
 	const map = useMap();
 	const { setSelectedInstitution } = useContext(InstitutionContext);
 	const position: [number, number] = [props.pin.latitude, props.pin.longitude];
+	const institutionType = props.institution.institutionType === 'Żłobek' ? 'nursery' : 'childclub';
+	const iconBackgroundColor = `map-pin-icon map-pin-icon-${institutionType}`;
 
 	return (
 		<Marker
@@ -34,9 +36,8 @@ export default function MapPin(props: MapPinProps) {
 			position={position}
 			icon={divIcon({
 				html: renderToStaticMarkup(
-					<LocationOn
-						fontSize="large"
-						className="map-pin-icon"
+					<LocationOnOutlined
+						className={iconBackgroundColor}
 					/>
 				),
 				iconSize: [30, 30],

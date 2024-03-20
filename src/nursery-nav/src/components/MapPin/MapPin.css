@@ -1,14 +1,24 @@
 .map-pin-icon {
-    width: 30px;
-    height: 30px;
-    background-color: #FFBE98;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s;
+    font-size: small;
+    padding: 5px;
+}
+
+.map-pin-icon-nursery {
+    background-color: #98d9ff;
+    color: #fff;
+}
+
+.map-pin-icon-childclub {
+    background-color: #ffbe98;
+    color: #fff;
 }
 
 .map-pin-div-icon {
