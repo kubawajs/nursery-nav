@@ -27,11 +27,11 @@ export default function InstitutionDetailsHeader(institution: Institution) {
                         direction="row"
                         gap={2}
                     >
-                        {PriceWithLabel('cena bazowa / miesiąc', institution.basicPricePerMonth)}
-                        {PriceWithLabel('cena bazowa / godzina', institution.basicPricePerHour)}
-                        {PriceWithLabel('cena za pobyt powyżej 10h', institution.extendedStayOver10H)}
-                        {PriceWithLabel('cena za wyżywienie / miesiąc', institution.foodPricePerMonth)}
-                        {PriceWithLabel('cena za wyżywienie / dzień', institution.foodPricePerDay)}
+                        {PriceWithLabel('miesiąc', institution.basicPricePerMonth)}
+                        {PriceWithLabel('godzina', institution.basicPricePerHour)}
+                        {PriceWithLabel('pobyt powyżej 10h', institution.extendedStayOver10H)}
+                        {PriceWithLabel('wyżywienie / miesiąc', institution.foodPricePerMonth)}
+                        {PriceWithLabel('wyżywienie / dzień', institution.foodPricePerDay)}
                     </Stack>
                 </Box>
             </Paper>
