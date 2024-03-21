@@ -23,6 +23,7 @@ export default function MapComponent() {
 					maxZoom={20}
 				/>
 				<MarkerClusterGroup
+					className="marker-cluster-group"
 					polygonOptions={{ opacity: 0 }}
 					chunkedLoading>
 					{institutions.map((institution, index) => (

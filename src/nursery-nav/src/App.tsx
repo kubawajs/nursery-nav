@@ -11,7 +11,7 @@ import Filters from './components/Filters/Filters';
 export const InstitutionContext = React.createContext({
   institutions: data as unknown as Institution[],
   selectedInstitution: null as Institution | null,
-  setSelectedInstitution: (_institution: Institution | null) => { }
+  setSelectedInstitution: (_institution: Institution | null) => { },
 });
 
 export default function App() {
