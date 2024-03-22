@@ -13,8 +13,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - working-directory: ./src/nursery-nav
     - uses: actions/checkout@v3
+    - name: Set directory
+      run: cd ./src/nursery-nav
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
