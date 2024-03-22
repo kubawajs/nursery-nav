@@ -4,6 +4,8 @@
     <img width="300" height="300" src="./img/promo.jpg">
 </p>
 
+![build](https://github.com/kubawajs/nursery-nav/actions/workflows/node.js.yml/badge.svg)
+
 NurseryNav simplifies the search for nearby nursery schools by providing an easy-to-use map interface to help you find the perfect childcare option for your little ones.
 
 **Live URL:** TBD
