@@ -26,7 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: npm install
+      with: 
         path: ./src/nursery-nav/
-    - run: npm ci
     - run: npm run build --if-present
     - run: npm test
