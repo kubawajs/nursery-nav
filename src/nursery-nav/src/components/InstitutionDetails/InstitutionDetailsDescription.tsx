@@ -24,6 +24,10 @@ export default function InstitutionDetailsDescription(institution: Institution) 
         <Box p={1}>
             <Paper elevation={2}>
                 <DescriptionBox>
+                    <Typography variant="subtitle2">Dane adresowe</Typography>
+                    <Typography variant="body1">{institution.address.fullAddress}</Typography>
+                </DescriptionBox>
+                <DescriptionBox>
                     <Typography variant="subtitle2">Godziny otwarcia</Typography>
                     <Typography variant="body1">{openingHours}</Typography>
                 </DescriptionBox>
