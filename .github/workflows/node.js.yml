@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
-        cache-dependency-path: ./src/nursery-nav/package-lock.json
+        working-directory: src/nursery-nav
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
