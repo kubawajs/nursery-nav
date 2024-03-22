@@ -4,6 +4,8 @@
     <img width="300" height="300" src="./img/promo.jpg">
 </p>
 
+[![Build](https://github.com/kubawajs/nursery-nav/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/kubawajs/nursery-nav/actions/workflows/node.js.yml)
+
 NurseryNav simplifies the search for nearby nursery schools by providing an easy-to-use map interface to help you find the perfect childcare option for your little ones.
 
 **Live URL:** TBD
@@ -40,17 +42,17 @@ Check `./data/RZ-instytucje-enriched.json`
 * [x] Map
 * [x] Pins on map
 * [x] Institution details view
-* [ ] Search
+* [x] Search
 * [x] Display institution details on pin click
 * [x] Basic component styling
 * [x] Group pins on the map
 * [x] SEO
+* [ ] Filtering
 * [ ] CICD
 * [ ] Live URL
 
 ### Phase 2
 * [ ] DB data source
-* [ ] Filtering
 * [ ] API
 * [ ] Infinite scroll
 * [ ] CSV import
