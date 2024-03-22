@@ -1,11 +1,12 @@
-import { Marker, Tooltip, useMap } from 'react-leaflet';
+import { Marker, Popup, Tooltip, useMap } from 'react-leaflet';
 import { LocationOnOutlined } from '@mui/icons-material';
-import { divIcon } from 'leaflet';
+import { divIcon, popup } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { useContext, useEffect } from 'react';
 import { InstitutionContext } from '../../App';
 import { Institution } from '../../shared/nursery.interface';
 import './MapPin.css';
+import { Box, Typography } from '@mui/material';
 
 export interface MapPinProps {
 	name: string;
@@ -50,7 +51,13 @@ export default function MapPin(props: MapPinProps) {
 				className: 'map-pin-div-icon',
 			})}
 		>
-			<Tooltip>{props.institution.name}</Tooltip>
+			<Popup>
+				<Box>
+					<Typography variant='subtitle1'>{props.institution.institutionType}</Typography>
+					<Typography variant='h5'>{props.institution.name}</Typography>
+					<Typography variant='body1'>{props.institution.address.fullAddress}</Typography>
+				</Box>
+			</Popup>
 		</Marker>
 	);
 }
