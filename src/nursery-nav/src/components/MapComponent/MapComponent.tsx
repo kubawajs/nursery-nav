@@ -11,7 +11,7 @@ export default function MapComponent() {
 	return (
 		<Container style={{ padding: 0 }}>
 			<MapContainer
-				center={[52.0, 21.37]}
+				center={[52.0, 19.37]}
 				zoom={7}
 				scrollWheelZoom={true}
 				zoomControl={false}
