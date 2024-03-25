@@ -8,8 +8,9 @@ export default function Filters() {
     const [cityFilter, setCityFilter] = useState<string | null>(null);
     const [nurseryFilter, setNurseryFilter] = useState<boolean>(true);
     const [childClubFilter, setChildClubFilter] = useState<boolean>(true);
+    const [priceFilter, setPriceFilter] = useState<number[]>([0, 3000]);
 
-    function setCurrentSelection(event: any, value: any) {
+    function setCurrentSelection(_event: any, value: any) {
         const currentSelection = institutions.find(institution => institution.name === value);
         if (currentSelection) {
             setSelectedInstitution(currentSelection);
@@ -19,16 +20,17 @@ export default function Filters() {
     useEffect(() => {
         setFilteredInstitutions(institutions.filter(institution =>
             (!cityFilter || institution.address.city === cityFilter) &&
-            (nurseryFilter && institution.institutionType === 'Żłobek' || childClubFilter && institution.institutionType === 'Klub dziecięcy')
+            ((nurseryFilter && institution.institutionType === 'Żłobek') || (childClubFilter && institution.institutionType === 'Klub dziecięcy')) &&
+            institution.basicPricePerMonth >= priceFilter[0] && institution.basicPricePerMonth <= priceFilter[1]
         ));
-    }, [cityFilter, nurseryFilter, childClubFilter]);
+    }, [cityFilter, nurseryFilter, childClubFilter, priceFilter]);
 
     return (
         <>
             <Autocomplete
                 disablePortal
                 onChange={setCurrentSelection}
-                options={institutions.map(institution => institution.name)}
+                options={institutions.map(institution => institution.name).filter((value, index, self) => self.indexOf(value) === index)}
                 renderInput={(params) => <TextField {...params} label="Nazwa żłobka" />}
                 size="small"
                 sx={{ width: 400, maxWidth: '100%' }}
@@ -51,7 +53,7 @@ export default function Filters() {
                     label="Klub dziecięcy"
                 />
             </FormGroup>
-            <RangeSlider />
+            <RangeSlider handleChangeCommited={(_event, value) => setPriceFilter(value)} />
         </>
     );
 }
