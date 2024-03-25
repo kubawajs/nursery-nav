@@ -8,7 +8,9 @@ export default function Filters() {
     const [cityFilter, setCityFilter] = useState<string | null>(null);
     const [nurseryFilter, setNurseryFilter] = useState<boolean>(true);
     const [childClubFilter, setChildClubFilter] = useState<boolean>(true);
-    const [priceFilter, setPriceFilter] = useState<number[]>([0, 3000]);
+    const [priceFilter, setPriceFilter] = useState<number[]>([0, 5000]);
+    const cities = institutions.map(institution => institution.address.city).filter((value, index, self) => self.indexOf(value) === index).sort();
+    const institutionsAutocomplete = institutions.map(institution => institution.name).filter((value, index, self) => self.indexOf(value) === index).sort();
 
     function setCurrentSelection(_event: any, value: any) {
         const currentSelection = institutions.find(institution => institution.name === value);
@@ -30,14 +32,14 @@ export default function Filters() {
             <Autocomplete
                 disablePortal
                 onChange={setCurrentSelection}
-                options={institutions.map(institution => institution.name).filter((value, index, self) => self.indexOf(value) === index)}
+                options={institutionsAutocomplete}
                 renderInput={(params) => <TextField {...params} label="Nazwa żłobka" />}
                 size="small"
                 sx={{ width: 400, maxWidth: '100%' }}
             />
             <Autocomplete
                 id="cityFilter"
-                options={institutions.map(institution => institution.address.city).filter((value, index, self) => self.indexOf(value) === index)}
+                options={cities}
                 onChange={(_event, value) => setCityFilter(value)}
                 renderInput={(params) => <TextField {...params} label="Miasto" />}
                 size="small"

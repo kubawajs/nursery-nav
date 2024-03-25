@@ -6,7 +6,7 @@ function valuetext(value: number) {
 }
 
 export default function RangeSlider({ handleChangeCommited }: { handleChangeCommited: (event: Event, value: number[]) => void }) {
-    const [value, setValue] = useState<number[]>([0, 3000]);
+    const [value, setValue] = useState<number[]>([0, 5000]);
     const handleChange = (_event: Event, newValue: number | number[]) => {
         setValue(newValue as number[]);
     };
