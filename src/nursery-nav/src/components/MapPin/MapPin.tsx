@@ -1,6 +1,6 @@
-import { Marker, Popup, Tooltip, useMap } from 'react-leaflet';
+import { Marker, Popup, useMap } from 'react-leaflet';
 import { LocationOnOutlined } from '@mui/icons-material';
-import { divIcon, popup } from 'leaflet';
+import { divIcon } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { useContext, useEffect } from 'react';
 import { InstitutionContext } from '../../App';

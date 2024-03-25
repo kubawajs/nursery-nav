@@ -10,17 +10,20 @@ import FiltersBar from './components/Filters/FiltersBar';
 
 export const InstitutionContext = React.createContext({
   institutions: data as unknown as Institution[],
+  filteredInstitutions: data as unknown as Institution[],
   selectedInstitution: null as Institution | null,
   setSelectedInstitution: (_institution: Institution | null) => { },
+  setFilteredInstitutions: (_institutions: Institution[]) => { }
 });
 
 export default function App() {
   const institutions = data as unknown as Institution[];
+  const [filteredInstitutions, setFilteredInstitutions] = React.useState<Institution[]>(data as unknown as Institution[]);
   const [selectedInstitution, setSelectedInstitution] = React.useState<Institution | null>(null);
 
   return (
     <InstitutionContext.Provider
-      value={{ institutions, selectedInstitution, setSelectedInstitution }}
+      value={{ institutions, filteredInstitutions, setFilteredInstitutions, selectedInstitution, setSelectedInstitution }}
     >
       <ThemeProvider theme={theme}>
         <Navigation />
