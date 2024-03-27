@@ -40,17 +40,19 @@ Check `./data/RZ-instytucje-enriched.json`
 * [x] Map
 * [x] Pins on map
 * [x] Institution details view
-* [ ] Search
+* [x] Search
 * [x] Display institution details on pin click
 * [x] Basic component styling
 * [x] Group pins on the map
 * [x] SEO
+* [x] Sorting
+* [x] Filtering
+* [x] Direct URLs to each institution
 * [ ] CICD
 * [ ] Live URL
 
 ### Phase 2
 * [ ] DB data source
-* [ ] Filtering
 * [ ] API
 * [ ] Infinite scroll
 * [ ] CSV import
