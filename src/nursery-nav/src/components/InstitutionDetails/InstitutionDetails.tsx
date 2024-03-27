@@ -10,7 +10,7 @@ export default function InstitutionDetails(institution: Institution) {
 	const { selectedInstitution } = useContext(InstitutionContext);
 
 	return (
-		<Box p={1} height='100vh'>
+		<Box p={1} height='82.4vh'>
 			{selectedInstitution && <>
 				<InstitutionDetailsTop {...selectedInstitution} /></>
 			}
