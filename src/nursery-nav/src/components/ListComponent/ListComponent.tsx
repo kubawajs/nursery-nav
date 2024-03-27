@@ -1,13 +1,26 @@
 import { Box, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
-import { ReactNode, useContext, useState } from 'react';
+import { ReactNode, useContext, useEffect, useState } from 'react';
 import { InstitutionContext } from '../../App';
 import { ListComponentItem } from './ListComponentItem';
 import InstitutionDetails from '../InstitutionDetails/InstitutionDetails';
 import { SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
+import { useSearchParams } from 'react-router-dom';
+import { Institution } from '../../shared/nursery.interface';
 
 export default function ListComponent() {
 	const { filteredInstitutions, selectedInstitution, setFilteredInstitutions, setSelectedInstitution } = useContext(InstitutionContext);
 	const [sortingParam, setSortingParam] = useState('');
+	const [queryParam, setQueryParam] = useSearchParams();
+
+	useEffect(() => {
+		const institutionQueryParam = queryParam.get('regNo');
+		if (institutionQueryParam) {
+			const institution = filteredInstitutions.find(institution => institution.operatingEntity.regNoPosition === institutionQueryParam);
+			if (institution) {
+				setSelectedInstitution(institution);
+			}
+		}
+	}, [queryParam]);
 
 	if (selectedInstitution) {
 		return (
@@ -15,7 +28,7 @@ export default function ListComponent() {
 		);
 	}
 
-	function handleChange(event: SelectChangeEvent<string>, child: ReactNode): void {
+	function handleChange(event: SelectChangeEvent<string>, _child: ReactNode): void {
 		setSortingParam(event.target.value);
 		const sortedInstitutions = filteredInstitutions.sort((a, b) => {
 			switch (event.target.value) {
@@ -60,7 +73,7 @@ export default function ListComponent() {
 			</Box>
 			<List>
 				{filteredInstitutions.map((institution, index) => (
-					<Box key={index} onClick={() => setSelectedInstitution(institution)}>
+					<Box key={index} onClick={handleSelectedInstitutionChange(institution)}>
 						<ListComponentItem
 							key={index}
 							name={institution.name}
@@ -76,4 +89,12 @@ export default function ListComponent() {
 			</List>
 		</Box>
 	);
+
+	function handleSelectedInstitutionChange(institution: Institution) {
+		return () => {
+			queryParam.set('regNo', institution.operatingEntity.regNoPosition);
+			setQueryParam(queryParam);
+			setSelectedInstitution(institution);
+		};
+	}
 }

@@ -7,6 +7,7 @@ import React from 'react';
 import { theme } from './shared/theme';
 import ListComponent from './components/ListComponent/ListComponent';
 import FiltersBar from './components/Filters/FiltersBar';
+import { BrowserRouter } from 'react-router-dom';
 
 export const InstitutionContext = React.createContext({
   institutions: data as unknown as Institution[],
@@ -22,21 +23,23 @@ export default function App() {
   const [selectedInstitution, setSelectedInstitution] = React.useState<Institution | null>(null);
 
   return (
-    <InstitutionContext.Provider
-      value={{ institutions, filteredInstitutions, setFilteredInstitutions, selectedInstitution, setSelectedInstitution }}
-    >
-      <ThemeProvider theme={theme}>
-        <Navigation />
-        <FiltersBar />
-        <Grid container>
-          <Grid item xs={12} md={8} lg={7} xl={6} style={{ position: 'relative' }}>
-            <ListComponent />
+    <BrowserRouter>
+      <InstitutionContext.Provider
+        value={{ institutions, filteredInstitutions, setFilteredInstitutions, selectedInstitution, setSelectedInstitution }}
+      >
+        <ThemeProvider theme={theme}>
+          <Navigation />
+          <FiltersBar />
+          <Grid container>
+            <Grid item xs={12} md={8} lg={7} xl={6} style={{ position: 'relative' }}>
+              <ListComponent />
+            </Grid>
+            <Grid item xs={12} md={4} lg={5} xl={6} style={{ position: 'relative' }}>
+              <MapComponent />
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={4} lg={5} xl={6} style={{ position: 'relative' }}>
-            <MapComponent />
-          </Grid>
-        </Grid>
-      </ThemeProvider>
-    </InstitutionContext.Provider>
+        </ThemeProvider>
+      </InstitutionContext.Provider>
+    </BrowserRouter>
   );
 }

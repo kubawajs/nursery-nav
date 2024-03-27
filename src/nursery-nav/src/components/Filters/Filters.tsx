@@ -25,7 +25,7 @@ export default function Filters() {
             ((nurseryFilter && institution.institutionType === 'Żłobek') || (childClubFilter && institution.institutionType === 'Klub dziecięcy')) &&
             institution.basicPricePerMonth >= priceFilter[0] && institution.basicPricePerMonth <= priceFilter[1]
         ));
-    }, [cityFilter, nurseryFilter, childClubFilter, priceFilter]);
+    }, [cityFilter, nurseryFilter, childClubFilter, priceFilter, institutions, setFilteredInstitutions]);
 
     return (
         <>

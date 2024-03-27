@@ -7,6 +7,7 @@ import { InstitutionContext } from '../../App';
 import { Institution } from '../../shared/nursery.interface';
 import './MapPin.css';
 import { Box, Typography } from '@mui/material';
+import { useSearchParams } from 'react-router-dom';
 
 export interface MapPinProps {
 	name: string;
@@ -20,11 +21,13 @@ export interface MapPinProps {
 export default function MapPin(props: MapPinProps) {
 	const map = useMap();
 	const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
+	const [queryParam, setQueryParam] = useSearchParams();
 	const zoomOnInstitution = (institution: Institution) => {
 		map.setView([institution.address.pin.latitude, institution.address.pin.longitude], 18, {
 			animate: true
 		});
 	};
+
 	useEffect(() => {
 		if (selectedInstitution !== null) {
 			zoomOnInstitution(selectedInstitution);
@@ -38,7 +41,11 @@ export default function MapPin(props: MapPinProps) {
 	return (
 		<Marker
 			eventHandlers={{
-				click: () => { setSelectedInstitution(props.institution); }
+				click: () => {
+					setSelectedInstitution(props.institution);
+					queryParam.set('regNo', props.institution.operatingEntity.regNoPosition);
+					setQueryParam(queryParam);
+				}
 			}}
 			position={position}
 			icon={divIcon({
