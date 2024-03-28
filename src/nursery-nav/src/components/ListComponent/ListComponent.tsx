@@ -50,8 +50,8 @@ export default function ListComponent() {
 	}
 
 	return (
-		<Box component="section" style={{ overflow: 'auto', height: '100vh' }}>
-			<Box p={2} display='flex' justifyContent='space-between' alignItems='end'>
+		<Box>
+			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
 				<Typography variant='body2' color="text.secondary" gutterBottom>
 					Znaleziono {filteredInstitutions.length} instytucji
 				</Typography>
@@ -71,7 +71,7 @@ export default function ListComponent() {
 					</Select>
 				</FormControl>
 			</Box>
-			<List>
+			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
 				{filteredInstitutions.map((institution, index) => (
 					<Box key={index} onClick={handleSelectedInstitutionChange(institution)}>
 						<ListComponentItem
@@ -87,7 +87,7 @@ export default function ListComponent() {
 					</Box>
 				))}
 			</List>
-		</Box>
+		</Box >
 	);
 
 	function handleSelectedInstitutionChange(institution: Institution) {
