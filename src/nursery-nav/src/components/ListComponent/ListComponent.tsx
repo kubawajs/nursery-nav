@@ -1,5 +1,5 @@
 import { Box, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
-import { ReactNode, useContext, useEffect, useState } from 'react';
+import { ReactNode, useCallback, useContext, useEffect, useState } from 'react';
 import { InstitutionContext } from '../../App';
 import { ListComponentItem } from './ListComponentItem';
 import InstitutionDetails from '../InstitutionDetails/InstitutionDetails';
@@ -11,27 +11,11 @@ export default function ListComponent() {
 	const { filteredInstitutions, selectedInstitution, setFilteredInstitutions, setSelectedInstitution } = useContext(InstitutionContext);
 	const [sortingParam, setSortingParam] = useState('');
 	const [queryParam, setQueryParam] = useSearchParams();
+	const [sortedInstitutions, setSortedInstitutions] = useState<Institution[]>([]);
 
 	useEffect(() => {
-		const institutionQueryParam = queryParam.get('regNo');
-		if (institutionQueryParam) {
-			const institution = filteredInstitutions.find(institution => institution.operatingEntity.regNoPosition === institutionQueryParam);
-			if (institution) {
-				setSelectedInstitution(institution);
-			}
-		}
-	}, [queryParam]);
-
-	if (selectedInstitution) {
-		return (
-			<InstitutionDetails {...selectedInstitution} />
-		);
-	}
-
-	function handleChange(event: SelectChangeEvent<string>, _child: ReactNode): void {
-		setSortingParam(event.target.value);
 		const sortedInstitutions = filteredInstitutions.sort((a, b) => {
-			switch (event.target.value) {
+			switch (sortingParam) {
 				case 'price-inc':
 					return a.basicPricePerMonth - b.basicPricePerMonth;
 				case 'price-dec':
@@ -44,16 +28,39 @@ export default function ListComponent() {
 					return 0;
 			}
 		});
-		setSelectedInstitution(null);
+		setSortedInstitutions([...sortedInstitutions]);
+	}, [sortingParam, filteredInstitutions, setFilteredInstitutions]);
+
+	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		setSortingParam(event.target.value);
-		setFilteredInstitutions([...sortedInstitutions]);
+		setSelectedInstitution(null);
+	}, [setSelectedInstitution]);
+
+	const handleSelectedInstitutionChange = useCallback((institution: Institution) => {
+		queryParam.set('regNo', institution.operatingEntity.regNoPosition);
+		setQueryParam(queryParam);
+		setSelectedInstitution(institution);
+	}, [queryParam, setQueryParam, setSelectedInstitution]);
+
+	const institutionQueryParam = queryParam.get('regNo');
+	if (institutionQueryParam) {
+		const institution = filteredInstitutions.find(institution => institution.operatingEntity.regNoPosition === institutionQueryParam);
+		if (institution) {
+			setSelectedInstitution(institution);
+		}
+	}
+
+	if (selectedInstitution) {
+		return (
+			<InstitutionDetails {...selectedInstitution} />
+		);
 	}
 
 	return (
 		<Box>
 			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
 				<Typography variant='body2' color="text.secondary" gutterBottom>
-					Znaleziono {filteredInstitutions.length} instytucji
+					Znaleziono {sortedInstitutions.length} instytucji
 				</Typography>
 				<FormControl variant="standard" sx={{ m: 1, minWidth: 180 }}>
 					<InputLabel id="sorting-select-label">Sortowanie</InputLabel>
@@ -72,8 +79,8 @@ export default function ListComponent() {
 				</FormControl>
 			</Box>
 			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
-				{filteredInstitutions.map((institution, index) => (
-					<Box key={index} onClick={handleSelectedInstitutionChange(institution)}>
+				{sortedInstitutions.map((institution, index) => (
+					<Box key={index} onClick={() => handleSelectedInstitutionChange(institution)}>
 						<ListComponentItem
 							key={index}
 							name={institution.name}
@@ -89,12 +96,4 @@ export default function ListComponent() {
 			</List>
 		</Box >
 	);
-
-	function handleSelectedInstitutionChange(institution: Institution) {
-		return () => {
-			queryParam.set('regNo', institution.operatingEntity.regNoPosition);
-			setQueryParam(queryParam);
-			setSelectedInstitution(institution);
-		};
-	}
 }

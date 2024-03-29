@@ -2,7 +2,7 @@ import { Box, Chip, Divider, Paper, Stack, Typography } from "@mui/material";
 import { Institution } from "../../shared/nursery.interface";
 
 function PriceWithLabel(label: string, price?: number) {
-    return (price && (
+    return (price && price > 0 && (
         <Stack direction='column'>
             <Typography variant="subtitle1">
                 {price.toFixed(2)} PLN
@@ -25,7 +25,7 @@ export default function InstitutionDetailsHeader(institution: Institution) {
                 <Box paddingTop={2} display='flex' justifyContent='space-between'>
                     <Stack
                         direction="row"
-                        gap={2}
+                        gap={3}
                     >
                         {PriceWithLabel('miesiąc', institution.basicPricePerMonth)}
                         {PriceWithLabel('godzina', institution.basicPricePerHour)}

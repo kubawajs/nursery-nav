@@ -1,7 +1,8 @@
 import { Autocomplete, TextField, FormGroup, FormControlLabel, Checkbox } from "@mui/material";
 import RangeSlider from "./RangeSlider";
-import { useContext, useEffect, useState } from "react";
+import { SyntheticEvent, useCallback, useContext, useEffect, useState } from "react";
 import { InstitutionContext } from "../../App";
+import { useSearchParams } from "react-router-dom";
 
 export default function Filters() {
     const { institutions, setFilteredInstitutions, setSelectedInstitution } = useContext(InstitutionContext);
@@ -9,15 +10,9 @@ export default function Filters() {
     const [nurseryFilter, setNurseryFilter] = useState<boolean>(true);
     const [childClubFilter, setChildClubFilter] = useState<boolean>(true);
     const [priceFilter, setPriceFilter] = useState<number[]>([0, 5000]);
+    const [queryParam, setQueryParam] = useSearchParams();
     const cities = institutions.map(institution => institution.address.city).filter((value, index, self) => self.indexOf(value) === index).sort();
     const institutionsAutocomplete = institutions.map(institution => institution.name).filter((value, index, self) => self.indexOf(value) === index).sort();
-
-    function setCurrentSelection(_event: any, value: any) {
-        const currentSelection = institutions.find(institution => institution.name === value);
-        if (currentSelection) {
-            setSelectedInstitution(currentSelection);
-        }
-    }
 
     useEffect(() => {
         setFilteredInstitutions(institutions.filter(institution =>
@@ -26,6 +21,15 @@ export default function Filters() {
             institution.basicPricePerMonth >= priceFilter[0] && institution.basicPricePerMonth <= priceFilter[1]
         ));
     }, [cityFilter, nurseryFilter, childClubFilter, priceFilter, institutions, setFilteredInstitutions]);
+
+    const setCurrentSelection = useCallback((_event: SyntheticEvent<Element, Event>, value: string | null) => {
+        const currentSelection = institutions.find(institution => institution.name === value);
+        if (currentSelection) {
+            queryParam.set('regNo', currentSelection.operatingEntity.regNoPosition);
+            setQueryParam(queryParam);
+            setSelectedInstitution(currentSelection);
+        }
+    }, [institutions, queryParam, setQueryParam, setSelectedInstitution]);
 
     return (
         <>

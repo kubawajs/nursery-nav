@@ -47,6 +47,10 @@ export default function InstitutionDetailsDescription(institution: Institution) 
                                 <Chip key={index} label={discount} color={mainColor} />)}
                         </Stack>
                     }
+                    {
+                        !institution.discounts &&
+                        <Typography variant="caption">Brak zniżek</Typography>
+                    }
                 </DescriptionBox>
                 <ContactBox>
                     <Button variant="contained" color="success" href={`mailto:${institution.email}`}>Napisz wiadomość</Button>
