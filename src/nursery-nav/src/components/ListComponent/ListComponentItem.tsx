@@ -20,16 +20,22 @@ interface ListComponentItemProps {
 
 export function ListComponentItem(props: ListComponentItemProps) {
     const mainColor = props.institutionType === 'Żłobek' ? "primary" : "secondary";
+    const imagePath = props.institutionType === 'Żłobek' ? '/images/nursery-placeholder.jpg' : '/images/child-club-placeholder.jpg';
+    const imageAlt = props.institutionType === 'Żłobek'
+        ? 'Photo by <a href="https://unsplash.com/@charlesdeluvio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">charlesdeluvio</a> on < a href = "https://unsplash.com/photos/white-sheep-baby-mobile-2vfwTakDTIo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"> Unsplash</a >'
+        : 'Photo by <a href="https://unsplash.com/@babynatur?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Baby Natur</a> on <a href="https://unsplash.com/photos/five-assorted-color-racing-car-toys-Hld-gd-WN7k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>';
 
     return (
         <ListItem sx={{ display: 'block' }}>
             <Card sx={{ display: 'flex', padding: 0, paddingRight: 2 }}>
-                <CardMedia
-                    component="img"
-                    sx={{ width: 151 }}
-                    image="https://source.unsplash.com/random"
-                    alt='random image from unsplash.com'
-                />
+                <Box>
+                    <CardMedia
+                        component="img"
+                        sx={{ display: { xs: 'none', sm: 'block' }, width: 160, height: '100%', objectFit: 'cover' }}
+                        image={imagePath}
+                        alt={imageAlt}
+                    />
+                </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
                     <CardContent sx={{ flex: '1 0 auto', paddingRight: '0' }}>
                         <Box>
