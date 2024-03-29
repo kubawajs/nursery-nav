@@ -20,7 +20,9 @@ export default function ListComponent() {
 				setSelectedInstitution(institution);
 			}
 		}
-	}, [queryParam]);
+		const sortedInstitutions = sortInstitutions(sortingParam);
+		setFilteredInstitutions([...sortedInstitutions]);
+	}, [queryParam, filteredInstitutions, sortingParam, sortInstitutions, setSelectedInstitution, setFilteredInstitutions]);
 
 	if (selectedInstitution) {
 		return (
@@ -30,20 +32,7 @@ export default function ListComponent() {
 
 	function handleChange(event: SelectChangeEvent<string>, _child: ReactNode): void {
 		setSortingParam(event.target.value);
-		const sortedInstitutions = filteredInstitutions.sort((a, b) => {
-			switch (event.target.value) {
-				case 'price-inc':
-					return a.basicPricePerMonth - b.basicPricePerMonth;
-				case 'price-dec':
-					return b.basicPricePerMonth - a.basicPricePerMonth;
-				case 'name-inc':
-					return a.name.localeCompare(b.name);
-				case 'name-dec':
-					return b.name.localeCompare(a.name);
-				default:
-					return 0;
-			}
-		});
+		const sortedInstitutions = sortInstitutions(event.target.value);
 		setSelectedInstitution(null);
 		setSortingParam(event.target.value);
 		setFilteredInstitutions([...sortedInstitutions]);
@@ -89,6 +78,23 @@ export default function ListComponent() {
 			</List>
 		</Box >
 	);
+
+	function sortInstitutions(sortingParam: string) {
+		return filteredInstitutions.sort((a, b) => {
+			switch (sortingParam) {
+				case 'price-inc':
+					return a.basicPricePerMonth - b.basicPricePerMonth;
+				case 'price-dec':
+					return b.basicPricePerMonth - a.basicPricePerMonth;
+				case 'name-inc':
+					return a.name.localeCompare(b.name);
+				case 'name-dec':
+					return b.name.localeCompare(a.name);
+				default:
+					return 0;
+			}
+		});
+	}
 
 	function handleSelectedInstitutionChange(institution: Institution) {
 		return () => {
