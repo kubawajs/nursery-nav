@@ -1,5 +1,5 @@
 import { Marker, Popup, useMap } from 'react-leaflet';
-import { LocationOnOutlined } from '@mui/icons-material';
+import { AccountBalance, Crib, FamilyRestroom, LocationOnOutlined } from '@mui/icons-material';
 import { divIcon } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { useContext, useEffect } from 'react';
@@ -50,8 +50,9 @@ export default function MapPin(props: MapPinProps) {
 			position={position}
 			icon={divIcon({
 				html: renderToStaticMarkup(
-					<LocationOnOutlined
+					<Crib
 						className={iconBackgroundColor}
+						fill='#fff'
 					/>
 				),
 				iconSize: [30, 30],
