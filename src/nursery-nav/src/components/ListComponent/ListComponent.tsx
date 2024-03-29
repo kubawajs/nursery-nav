@@ -1,5 +1,5 @@
 import { Box, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
-import { ReactNode, useContext, useEffect, useState } from 'react';
+import { ReactNode, useCallback, useContext, useEffect, useState } from 'react';
 import { InstitutionContext } from '../../App';
 import { ListComponentItem } from './ListComponentItem';
 import InstitutionDetails from '../InstitutionDetails/InstitutionDetails';
@@ -11,18 +11,44 @@ export default function ListComponent() {
 	const { filteredInstitutions, selectedInstitution, setFilteredInstitutions, setSelectedInstitution } = useContext(InstitutionContext);
 	const [sortingParam, setSortingParam] = useState('');
 	const [queryParam, setQueryParam] = useSearchParams();
+	const [sortedInstitutions, setSortedInstitutions] = useState<Institution[]>([]);
 
 	useEffect(() => {
-		const institutionQueryParam = queryParam.get('regNo');
-		if (institutionQueryParam) {
-			const institution = filteredInstitutions.find(institution => institution.operatingEntity.regNoPosition === institutionQueryParam);
-			if (institution) {
-				setSelectedInstitution(institution);
+		const sortedInstitutions = filteredInstitutions.sort((a, b) => {
+			switch (sortingParam) {
+				case 'price-inc':
+					return a.basicPricePerMonth - b.basicPricePerMonth;
+				case 'price-dec':
+					return b.basicPricePerMonth - a.basicPricePerMonth;
+				case 'name-inc':
+					return a.name.localeCompare(b.name);
+				case 'name-dec':
+					return b.name.localeCompare(a.name);
+				default:
+					return 0;
 			}
+		});
+		setSortedInstitutions([...sortedInstitutions]);
+	}, [sortingParam, filteredInstitutions, setFilteredInstitutions]);
+
+	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
+		setSortingParam(event.target.value);
+		setSelectedInstitution(null);
+	}, [setSelectedInstitution]);
+
+	const handleSelectedInstitutionChange = useCallback((institution: Institution) => {
+		queryParam.set('regNo', institution.operatingEntity.regNoPosition);
+		setQueryParam(queryParam);
+		setSelectedInstitution(institution);
+	}, [queryParam, setQueryParam, setSelectedInstitution]);
+
+	const institutionQueryParam = queryParam.get('regNo');
+	if (institutionQueryParam) {
+		const institution = filteredInstitutions.find(institution => institution.operatingEntity.regNoPosition === institutionQueryParam);
+		if (institution) {
+			setSelectedInstitution(institution);
 		}
-		const sortedInstitutions = sortInstitutions(sortingParam);
-		setFilteredInstitutions([...sortedInstitutions]);
-	}, [queryParam, filteredInstitutions, sortingParam, sortInstitutions, setSelectedInstitution, setFilteredInstitutions]);
+	}
 
 	if (selectedInstitution) {
 		return (
@@ -30,19 +56,11 @@ export default function ListComponent() {
 		);
 	}
 
-	function handleChange(event: SelectChangeEvent<string>, _child: ReactNode): void {
-		setSortingParam(event.target.value);
-		const sortedInstitutions = sortInstitutions(event.target.value);
-		setSelectedInstitution(null);
-		setSortingParam(event.target.value);
-		setFilteredInstitutions([...sortedInstitutions]);
-	}
-
 	return (
 		<Box>
 			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
 				<Typography variant='body2' color="text.secondary" gutterBottom>
-					Znaleziono {filteredInstitutions.length} instytucji
+					Znaleziono {sortedInstitutions.length} instytucji
 				</Typography>
 				<FormControl variant="standard" sx={{ m: 1, minWidth: 180 }}>
 					<InputLabel id="sorting-select-label">Sortowanie</InputLabel>
@@ -61,8 +79,8 @@ export default function ListComponent() {
 				</FormControl>
 			</Box>
 			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
-				{filteredInstitutions.map((institution, index) => (
-					<Box key={index} onClick={handleSelectedInstitutionChange(institution)}>
+				{sortedInstitutions.map((institution, index) => (
+					<Box key={index} onClick={() => handleSelectedInstitutionChange(institution)}>
 						<ListComponentItem
 							key={index}
 							name={institution.name}
@@ -78,29 +96,4 @@ export default function ListComponent() {
 			</List>
 		</Box >
 	);
-
-	function sortInstitutions(sortingParam: string) {
-		return filteredInstitutions.sort((a, b) => {
-			switch (sortingParam) {
-				case 'price-inc':
-					return a.basicPricePerMonth - b.basicPricePerMonth;
-				case 'price-dec':
-					return b.basicPricePerMonth - a.basicPricePerMonth;
-				case 'name-inc':
-					return a.name.localeCompare(b.name);
-				case 'name-dec':
-					return b.name.localeCompare(a.name);
-				default:
-					return 0;
-			}
-		});
-	}
-
-	function handleSelectedInstitutionChange(institution: Institution) {
-		return () => {
-			queryParam.set('regNo', institution.operatingEntity.regNoPosition);
-			setQueryParam(queryParam);
-			setSelectedInstitution(institution);
-		};
-	}
 }
