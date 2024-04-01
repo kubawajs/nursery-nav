@@ -8,30 +8,33 @@
 
 .marker-cluster-medium {
 	background-color: #98d9ff;
-	color: #fff;
+	color: #333;
 }
 
 .marker-cluster-medium div {
 	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
 	background-color: #57a5ec;
 }
 
 .marker-cluster-small {
 	background-color: #e5f6ff;
-	color: #fff;
+	color: #666;
 }
 
 .marker-cluster-small div {
 	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
 	background-color: #98d9ff;
 }
 
 .marker-cluster-large {
 	background-color: #57a5ec;
-	color: #fff;
+	color: #666;
 }
 
 .marker-cluster-large div {
 	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
 	background-color: #57a5ec;
 }
