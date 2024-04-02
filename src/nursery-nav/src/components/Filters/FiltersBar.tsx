@@ -1,5 +1,6 @@
 import { Accordion, AccordionDetails, AccordionSummary, Box, Stack, Typography } from "@mui/material";
 import Filters from "./Filters";
+import { FilterList } from "@mui/icons-material";
 
 export default function FiltersBar() {
     return (
@@ -21,11 +22,13 @@ export default function FiltersBar() {
             </Box >
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                 <Accordion sx={{
-                    display: { xs: 'block', md: 'none' }, bgcolor: 'primary.light',
+                    display: 'block',
                     borderBottomLeftRadius: 8,
                     borderBottomRightRadius: 8,
+                    p: 0
                 }}>
-                    <AccordionSummary>
+                    <AccordionSummary sx={{ bgcolor: 'primary.light' }}>
+                        <FilterList />
                         <Typography variant='h5'>
                             Filtruj
                         </Typography>
