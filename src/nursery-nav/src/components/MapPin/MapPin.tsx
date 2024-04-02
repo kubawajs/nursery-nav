@@ -1,5 +1,5 @@
 import { Marker, Popup, useMap } from 'react-leaflet';
-import { AccountBalance, Crib, FamilyRestroom, LocationOnOutlined } from '@mui/icons-material';
+import { Crib } from '@mui/icons-material';
 import { divIcon } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { useContext, useEffect } from 'react';
