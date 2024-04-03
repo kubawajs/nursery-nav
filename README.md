@@ -4,21 +4,27 @@
     <img width="300" height="300" src="./img/promo.jpg">
 </p>
 
-[![Build](https://github.com/kubawajs/nursery-nav/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/kubawajs/nursery-nav/actions/workflows/node.js.yml)
+[![Frontend build](https://github.com/kubawajs/nursery-nav/actions/workflows/frontend.yml/badge.svg?branch=main)](https://github.com/kubawajs/nursery-nav/actions/workflows/frontend.yml)
 
 NurseryNav simplifies the search for nearby nursery schools by providing an easy-to-use map interface to help you find the perfect childcare option for your little ones.
 
 **Live URL:** [https://nursery-nav.vercel.app/](https://nursery-nav.vercel.app/)
 
 ---
-This project is part of [100 commitow challenge](https://100commitow.pl/). It helps me learn front-end technologies like React and Typescript.
+This project is part of [100 commitow challenge](https://100commitow.pl/). It helps me learn front-end technologies like React, Typescript and NestJS.
 
 ## Stack
+
+### Frontend
 
 * [React](https://react.dev/)
 * [Typescript](https://www.typescriptlang.org/)
 * [React Leaflet](https://react-leaflet.js.org/)
 * [MUI](https://mui.com/material-ui/getting-started/)
+
+### Backend
+
+* [NestJS](https://nestjs.com/)
 
 ## Getting Started
 
@@ -35,9 +41,23 @@ Go to `./src/nursery-nav` and run `npm start`.
 A static JSON file is provided as the backend API for the MVP version.
 Check `./data/RZ-instytucje-enriched.json`
 
+[Coming soon]
+Go to `./src/nursery-nav-api` and run `npm run start`.
+
 ## Features
 
-### MVP
+### MVP ✅
+
+#### Map view
+
+![Map view](./img/map-view.png)
+
+#### Details view
+
+![Details view](./img/details-view.png)
+
+#### Frontend
+
 * [x] Static data source
 * [x] Map
 * [x] Pins on map
@@ -54,14 +74,34 @@ Check `./data/RZ-instytucje-enriched.json`
 * [x] Live URL
 
 ### Phase 2
-* [ ] DB data source
-* [ ] API
+
+#### Frontend
+
+* [ ] Connection to the API
 * [ ] Infinite scroll
-* [ ] CSV import
+
+#### API
+
+* [x] API project
+* [ ] GET all institutions
+* [ ] GET institution details
+* [ ] Autocomplete endpoint
+* [ ] Filtering
+* [ ] Pagination
+* [ ] CICD
+* [ ] Live URL
+* [ ] DB data source
 
 ### Phase 3
+
+#### Frontend
+
 * [ ] Institution profile
 * [ ] Institution rating
+
+#### API
+
+* [ ] CSV import
 
 ## Data source
 
