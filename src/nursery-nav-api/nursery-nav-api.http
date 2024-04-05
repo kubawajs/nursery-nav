@@ -1,0 +1,4 @@
+@apiUrl = http://localhost:3000/
+
+# Hello world endpoint
+GET {{apiUrl}}
