@@ -9,6 +9,7 @@
 NurseryNav simplifies the search for nearby nursery schools by providing an easy-to-use map interface to help you find the perfect childcare option for your little ones.
 
 **Live URL:** [https://nursery-nav.vercel.app/](https://nursery-nav.vercel.app/)
+**Backend API DEMO:** [TBD]
 
 ---
 This project is part of [100 commitow challenge](https://100commitow.pl/). It helps me learn front-end technologies like React, Typescript and NestJS.
@@ -40,8 +41,9 @@ Go to `./src/nursery-nav` and run `npm start`.
 
 A static JSON file is provided as the backend API for the MVP version.
 Check `./data/RZ-instytucje-enriched.json`
+Soon will be connected to the API.
 
-[Coming soon]
+#### Running backend
 Go to `./src/nursery-nav-api` and run `npm run start`.
 
 ## Features
@@ -83,7 +85,8 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 #### API
 
 * [x] API project
-* [ ] GET all institutions
+* [x] Swagger `/api`
+* [x] GET all institutions
 * [ ] GET institution details
 * [ ] Autocomplete endpoint
 * [ ] Filtering
