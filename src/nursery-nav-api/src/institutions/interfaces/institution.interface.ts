@@ -3,7 +3,7 @@ import { InstitutionType } from "./institutiontype.interface";
 import { OperatingEntity } from "./operatingentity.interface";
 
 export interface Institution {
-    // institutionType: InstitutionType;
+    institutionType: InstitutionType;
     name: string;
     website: string;
     email: string;

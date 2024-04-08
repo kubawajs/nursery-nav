@@ -1,6 +1,6 @@
 [
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek Integracyjny \" Wesołe Krasnoludki\"",
 		"website": "www.skrzatek.eu",
 		"email": "boguslawadar@interia.pl",
@@ -12,10 +12,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 15.0,
-		"discounts": ["Wielodzietność/Karta Dużej Rodziny: 10.0% "],
+		"discounts": [
+			"Wielodzietność/Karta Dużej Rodziny: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Łukowica",
 			"county": "Powiat limanowski",
@@ -36,7 +38,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "NURSING CARE MAGDALENA HARWAS",
 		"website": "WWW.NURSINGCARE.PL",
 		"email": "MAGDALENA_HARWAS@WP.PL",
@@ -53,8 +55,8 @@
 			"Rodzeństwo uczęszczające do instytucji: 20.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Piła",
 			"county": "Powiat pilski",
@@ -75,7 +77,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "Zespół Klubów Dziecięcych \"Bajkowa Przystań\" - Klub Dziecięcy \"Bajkowa Przystań 1\"",
 		"website": "https://przedszkolewdeszcznie.edupage.org/",
 		"email": "dyrektor.klubmalucha@deszczno.pl",
@@ -89,8 +91,8 @@
 		"foodPricePerDay": 11.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Deszczno",
 			"county": "Powiat gorzowski",
@@ -111,7 +113,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek \"MALUSZKOWO\"",
 		"website": "www.maluszkowo.com.pl",
 		"email": "biuro@maluszkowo.com.pl",
@@ -123,10 +125,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 14.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 12.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 12.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Dębica",
 			"county": "Powiat dębicki",
@@ -147,7 +151,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek \"Kwiatuszki\" w Siemianicach",
 		"website": null,
 		"email": "przedszkolekolorowe@gmail.com",
@@ -161,8 +165,8 @@
 		"foodPricePerDay": null,
 		"discounts": null,
 		"openingHours": "Godziny pracy: ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Redzikowo",
 			"county": "Powiat słupski",
@@ -183,7 +187,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "Niepubliczny Klub Dziecięcy \"Piaskowy Smok\"",
 		"website": null,
 		"email": "piaskowysmok@wp.pl",
@@ -195,10 +199,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 18.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 50.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 50.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Nowy Dwór Mazowiecki",
 			"county": "Powiat nowodworski",
@@ -219,7 +225,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "Akademia Rozwoju Dziecka \"Bajkowy Dworek\" ",
 		"website": "https://www.facebook.com/bajkowydworek.k.zarnowska/",
 		"email": "bajkowy.dworek@o2.pl",
@@ -231,10 +237,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": 300.0,
 		"foodPricePerDay": null,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 30.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 30.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Lubsko",
 			"county": "Powiat żarski",
@@ -255,7 +263,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek Smyki w Alwerni",
 		"website": "www.smyki-zlobek.pl",
 		"email": "zlobek.smyki.alwernia@gmail.com",
@@ -267,10 +275,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 17.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Alwernia",
 			"county": "Powiat chrzanowski",
@@ -291,7 +301,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Rainbow",
 		"website": null,
 		"email": "maciej_jakubek@wp.pl",
@@ -305,8 +315,8 @@
 		"foodPricePerDay": null,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Kalisz",
 			"county": "Powiat Kalisz",
@@ -327,7 +337,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Artystyczny - \"Bose Stópki\" S.C. Aneta Abram Justyna Klityńska",
 		"website": null,
 		"email": "bosestopki.warszawa@gmail.com",
@@ -341,8 +351,8 @@
 		"foodPricePerDay": 15.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Warszawa - Wola",
 			"county": "Powiat Warszawa",
@@ -363,7 +373,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek \"Tygrysek\"",
 		"website": "www.wiosnawsercu.pl",
 		"email": "wiosnawsercu@gmil.com",
@@ -377,8 +387,8 @@
 		"foodPricePerDay": 12.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 07:00-16:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Konin",
 			"county": "Powiat Konin",
@@ -399,7 +409,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Re-Re-Kum-Kum",
 		"website": "www.re-re-kum-kum.pl",
 		"email": "re-re-kum-kum@wp.pl",
@@ -417,8 +427,8 @@
 			"Rodzeństwo uczęszczające do instytucji: 20.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Starachowice",
 			"county": "Powiat starachowicki",
@@ -439,7 +449,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "Kochane Urwisy",
 		"website": "www.kochaneurwisy.pl",
 		"email": "kochaneurwisy@op.pl",
@@ -451,10 +461,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": null,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:30-17:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Grójec",
 			"county": "Powiat grójecki",
@@ -475,7 +487,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Miejski nr 2 ",
 		"website": "http://www.zlobek2.swidnica.pl",
 		"email": "zlobek_nr2@wp.pl",
@@ -487,10 +499,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 10.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 50.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 50.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Świdnica",
 			"county": "Powiat świdnicki",
@@ -511,7 +525,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Gminny w Głuszycy",
 		"website": "www.zlobekgluszyca.pl",
 		"email": "zlobek@gluszyca.pl",
@@ -525,8 +539,8 @@
 		"foodPricePerDay": 15.9,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:00-16:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Głuszyca",
 			"county": "Powiat wałbrzyski",
@@ -547,7 +561,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "\"BRZDĄCE NA ŁĄCE\" KLUB MALUCHA I OPIEKA DZIENNA EWELINA BEDNARKIEWICZ",
 		"website": null,
 		"email": "e.bednarkiewicz90@gmail.com",
@@ -561,8 +575,8 @@
 		"foodPricePerDay": 9.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-16:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Grzegorzew",
 			"county": "Powiat kolski",
@@ -583,7 +597,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek \"Bożego Miłosierdzia\"",
 		"website": "www.dom-rodzina.pl",
 		"email": "biuro@dom-rodzina.pl",
@@ -599,8 +613,8 @@
 			"Rodzina na 5+ obniżenie wyżywienia o 50 % na okres 10 m-cy, opłata wpisowa 3 równe raty co miesiąc: 50.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Zabrze",
 			"county": "Powiat Zabrze",
@@ -621,7 +635,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek Super Bobas",
 		"website": "www.wesoledinusie.pl",
 		"email": "kontakt@wesoledinusie.pl",
@@ -635,8 +649,8 @@
 		"foodPricePerDay": 15.5,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:35-16:45 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Białystok",
 			"county": "Powiat Białystok",
@@ -657,7 +671,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek \" Bajkowy Dom\"",
 		"website": "https://przedszkolebajkowydom.pl/",
 		"email": "sekretariatbajkowydom@op.pl",
@@ -674,8 +688,8 @@
 			"Rodzeństwo uczęszczające do instytucji: 20.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Jabłonna",
 			"county": "Powiat legionowski",
@@ -696,7 +710,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Niepubliczny \"A Be Ce Strumyk Wiedzy\"",
 		"website": "http://abcstrumykwiedzy.pl/",
 		"email": "sekretariat@abcstrumykwiedzy.pl",
@@ -710,8 +724,8 @@
 		"foodPricePerDay": 7.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Siedlec",
 			"county": "Powiat wolsztyński",
@@ -732,7 +746,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Gminny w Kłobucku",
 		"website": null,
 		"email": "zlobek@gminaklobuck.pl",
@@ -746,8 +760,8 @@
 		"foodPricePerDay": 16.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Kłobuck",
 			"county": "Powiat kłobucki",
@@ -768,7 +782,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek ,,Cudaki-Słodziaki”",
 		"website": null,
 		"email": "mradlinska@wp.pl",
@@ -782,8 +796,8 @@
 		"foodPricePerDay": null,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:30-17:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Warszawa - Ursynów",
 			"county": "Powiat Warszawa",
@@ -804,7 +818,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "ŻŁOBEK",
 		"website": null,
 		"email": "zlobektychy@op.pl",
@@ -818,8 +832,8 @@
 		"foodPricePerDay": 13.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Tychy",
 			"county": "Powiat Tychy",
@@ -840,7 +854,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek nr 61",
 		"website": "www.zlobki.waw.pl",
 		"email": "zlobek61@zlobki.waw.pl",
@@ -854,8 +868,8 @@
 		"foodPricePerDay": 13.75,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Warszawa - Praga-Południe",
 			"county": "Powiat Warszawa",
@@ -876,7 +890,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "Klub Malucha Sowia 5",
 		"website": "www.przedszkole.sowia5.pl",
 		"email": "klubmalucha.sowia5@gmail.com",
@@ -895,8 +909,8 @@
 			"wpisowe za rodzeństwo: 50.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Siemianowice Śląskie",
 			"county": "Powiat Siemianowice Śląskie",
@@ -917,7 +931,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek \"Stonoga\"",
 		"website": null,
 		"email": "stonoga.olkusz@gmail.com",
@@ -931,8 +945,8 @@
 		"foodPricePerDay": 12.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Olkusz",
 			"county": "Powiat olkuski",
@@ -953,7 +967,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Niepubliczny Elemelek",
 		"website": null,
 		"email": "elemelek@przedszkole-elemelek.pl",
@@ -967,8 +981,8 @@
 		"foodPricePerDay": 16.5,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:30-16:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Leoncin",
 			"county": "Powiat nowodworski",
@@ -989,7 +1003,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Króla Zygmunta Ewelina Gromulska-Sulej",
 		"website": null,
 		"email": "ewelina.gromulskasulej@gmail.com",
@@ -1005,8 +1019,8 @@
 			"400 zł - dofinansowanie z Mińskiego Bonu, dla dzieci zamieszkałych na terenie miasta Mińsk Mazowiecki: 30.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Mińsk Mazowiecki",
 			"county": "Powiat miński",
@@ -1027,7 +1041,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "PRZYGODY W OBŁOKACH",
 		"website": null,
 		"email": "ivonadabrowska@gmail.com",
@@ -1041,8 +1055,8 @@
 		"foodPricePerDay": 24.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek 06:30-17:30 Piątek 06:30-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Wrocław-Psie Pole",
 			"county": "Powiat Wrocław",
@@ -1063,7 +1077,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Małe Poziomki Domek na Skraju ",
 		"website": "www.przedszkole-poziomka.pl",
 		"email": "ewaczainska@o2.pl",
@@ -1077,8 +1091,8 @@
 		"foodPricePerDay": 14.5,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Głogów",
 			"county": "Powiat głogowski",
@@ -1099,7 +1113,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek \"SZCZĘŚLIWA KRAINA\" ",
 		"website": "brak",
 		"email": "szczesliwakrainalagiewniki@gmail.com",
@@ -1113,8 +1127,8 @@
 		"foodPricePerDay": 10.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Łagiewniki",
 			"county": "Powiat dzierżoniowski",
@@ -1135,7 +1149,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Niepubliczny \"Lechitki\"",
 		"website": "www.lechitki.pl",
 		"email": "zlobek@lechitki.pl",
@@ -1149,8 +1163,8 @@
 		"foodPricePerDay": 11.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Suchy Las",
 			"county": "Powiat poznański",
@@ -1171,7 +1185,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek KARUZELA Magdalena Kornosz",
 		"website": "www.przedszkolekaruzela.pl",
 		"email": "biuro@przedszkolekaruzela.pl",
@@ -1183,10 +1197,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 10.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 20.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 20.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Czempiń",
 			"county": "Powiat kościański",
@@ -1207,7 +1223,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek \"Żabka\" w Przysieczy",
 		"website": null,
 		"email": "zabkazp@wp.pl",
@@ -1221,8 +1237,8 @@
 		"foodPricePerDay": 15.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Prószków",
 			"county": "Powiat opolski",
@@ -1243,7 +1259,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek KUM-KUM-2",
 		"website": null,
 		"email": "zlobek@kum-kum.pl",
@@ -1257,8 +1273,8 @@
 		"foodPricePerDay": 20.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:30-17:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Warszawa - Wola",
 			"county": "Powiat Warszawa",
@@ -1279,7 +1295,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "GWIAZDOLANDIA ",
 		"website": "www.gwiazdolandia.pl",
 		"email": "gwiazdolandia@gmail.com",
@@ -1293,8 +1309,8 @@
 		"foodPricePerDay": null,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Gliwice",
 			"county": "Powiat Gliwice",
@@ -1315,7 +1331,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek \"Gryfne Bajtle\" ",
 		"website": "gryfne-bajtle.pl",
 		"email": "gryfnebajtle.slaskie@gmail.com",
@@ -1327,10 +1343,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 17.0,
-		"discounts": ["Opłata wpisowa w przypadku zapisu dwójki dzieci: 50.0% "],
+		"discounts": [
+			"Opłata wpisowa w przypadku zapisu dwójki dzieci: 50.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Siemianowice Śląskie",
 			"county": "Powiat Siemianowice Śląskie",
@@ -1351,7 +1369,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Niepubliczny Cypiskowo.pl 2",
 		"website": "www.cypiskowo.pl",
 		"email": "cypiskowo@cypiskowo.pl",
@@ -1367,8 +1385,8 @@
 			"Rzeczywista opłata za sam pobyt = 1250 zł.200 zł (16%) pokrywa dotacja z budżetu Gminy Lesznowola.: 16.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-18:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Lesznowola",
 			"county": "Powiat piaseczyński",
@@ -1389,7 +1407,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek Gumisiowy Las",
 		"website": "www.gumisiowylas.pl",
 		"email": "konopabarbara@gmail.com",
@@ -1401,10 +1419,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 21.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 8.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 8.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Kraków-Krowodrza",
 			"county": "Powiat Kraków",
@@ -1425,7 +1445,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żyrafka",
 		"website": "http://zlobek-zyrafka-bielany.pl/",
 		"email": "zyrafka.zlobek@gmail.com",
@@ -1439,8 +1459,8 @@
 		"foodPricePerDay": 16.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Kobierzyce",
 			"county": "Powiat wrocławski",
@@ -1461,7 +1481,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "BAJLANDIA NIEPUBLICZNE PRZEDSZKOLE I KLUB MALUCHA S,C SYLWIA SZYGENDA EWELINA CHABIERSKA",
 		"website": "bajlandia2016@wp.pl",
 		"email": "BAJLANDIA@WP.PL",
@@ -1475,8 +1495,8 @@
 		"foodPricePerDay": null,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 06:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Brzeziny",
 			"county": "Powiat kaliski",
@@ -1497,7 +1517,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "MAJABAJA ",
 		"website": "www.majabaja.pl",
 		"email": "majabajazlobek@gmail.com",
@@ -1514,8 +1534,8 @@
 			"Rodzeństwo uczęszczające do instytucji: 5.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Warszawa - Ursynów",
 			"county": "Powiat Warszawa",
@@ -1536,7 +1556,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek \"Słoneczna Kraina\"",
 		"website": "www.slonecznakraina.pl",
 		"email": "lesya@osowa.com.pl",
@@ -1550,8 +1570,8 @@
 		"foodPricePerDay": 20.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Wydminy",
 			"county": "Powiat giżycki",
@@ -1572,7 +1592,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Kolorado",
 		"website": "www.kolorado.edu.pl",
 		"email": "przedszkole@kolorado.edu.pl",
@@ -1586,8 +1606,8 @@
 		"foodPricePerDay": 12.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Świętochłowice",
 			"county": "Powiat Świętochłowice",
@@ -1608,7 +1628,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Chatka Skrzatka  ",
 		"website": "Brak",
 		"email": "chatkaskrzatka2@gmail.com",
@@ -1620,10 +1640,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 16.5,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Świętochłowice",
 			"county": "Powiat Świętochłowice",
@@ -1644,7 +1666,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "ŻŁOBEK NIEPUBLICZNY KULKA",
 		"website": "www.przedszkolekulka.pl",
 		"email": "zlobek@przedszkolekulka.pl",
@@ -1656,10 +1678,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 15.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 13.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 13.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Komorniki",
 			"county": "Powiat poznański",
@@ -1680,7 +1704,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Barwy Dzieciństwa 2",
 		"website": "zlobkiklanza.pl",
 		"email": "zlobekbdz2@klanza.org.pl",
@@ -1696,8 +1720,8 @@
 			"zwolnienie z opłaty wpisowego dla posiadaczy Karty Dużej Rodziny i dla rodzeństwa uczęszczającego do żłobka: 100.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Lublin",
 			"county": "Powiat Lublin",
@@ -1718,7 +1742,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Akademia Kinder Centrum",
 		"website": "www.kindercentrum.pl",
 		"email": "biuro@kinder-centrum.pl",
@@ -1730,10 +1754,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 17.0,
-		"discounts": ["Ulga Dyrektorska wg indywidualnej decyzji: 10.0% "],
+		"discounts": [
+			"Ulga Dyrektorska wg indywidualnej decyzji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Opole",
 			"county": "Powiat Opole",
@@ -1754,7 +1780,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Niepubliczny \"Kraina Marzeń\"",
 		"website": "www.krainamarzen.pl",
 		"email": "rodziewiczowny@krainamarzen.pl",
@@ -1770,8 +1796,8 @@
 			"Opolska Karta Rodziny i Seniora - obowiązuje na 2 dziecko pod warunkiem uczęszczania obojga z nich: 20.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Opole",
 			"county": "Powiat Opole",
@@ -1792,7 +1818,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "Bajlandia Niepubliczne Przedszkole i klub Malucha s.c.Sylwia Szygenda i Ewelina Chabierska",
 		"website": "brak",
 		"email": "bajlandia2016@wp.pl",
@@ -1806,8 +1832,8 @@
 		"foodPricePerDay": 9.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:45-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "TAK",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": true,
 		"address": {
 			"city": "Ostrzeszów",
 			"county": "Powiat ostrzeszowski",
@@ -1828,7 +1854,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek UL",
 		"website": "www.ulprzedszkole.pl",
 		"email": "justyna.tomelka@nickel.com.pl",
@@ -1840,10 +1866,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 17.5,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Suchy Las",
 			"county": "Powiat poznański",
@@ -1864,7 +1892,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek \"Wyspa Szkrabów\"",
 		"website": "http://wyspaszkrabow.5v.pl",
 		"email": "wyspa.szkrabow@wp.pl",
@@ -1878,8 +1906,8 @@
 		"foodPricePerDay": 15.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Międzyrzecz",
 			"county": "Powiat międzyrzecki",
@@ -1900,7 +1928,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek a.gugu",
 		"website": "www.zlobekagugu.pl",
 		"email": "rko@zlobekagugu.pl",
@@ -1912,10 +1940,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 12.5,
-		"discounts": ["Karta Dużej Rodziny - zniżka na wyżywienie: 50.0% "],
+		"discounts": [
+			"Karta Dużej Rodziny - zniżka na wyżywienie: 50.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Lublin",
 			"county": "Powiat Lublin",
@@ -1936,7 +1966,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Gminny w Baranowie",
 		"website": null,
 		"email": "sekretariat@barankowo.com.pl",
@@ -1950,8 +1980,8 @@
 		"foodPricePerDay": 11.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-15:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Baranów",
 			"county": "Powiat kępiński",
@@ -1972,7 +2002,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Hero!Academy",
 		"website": "http://www.heroacademy.edu.pl/",
 		"email": "s.laskowska@hero.edu.pl",
@@ -1986,8 +2016,8 @@
 		"foodPricePerDay": null,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-18:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Warszawa - Wilanów",
 			"county": "Powiat Warszawa",
@@ -2008,7 +2038,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek \"Pluszowy Miś\"",
 		"website": null,
 		"email": "pluszowymisbatorego@gmail.com",
@@ -2020,10 +2050,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": 400.0,
 		"foodPricePerDay": null,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Poznań-Stare Miasto",
 			"county": "Powiat Poznań",
@@ -2044,7 +2076,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek Wesołe Dinusie II",
 		"website": "www.wesoledinusie.pl",
 		"email": "kontakt@wesoledinusie.pl",
@@ -2056,10 +2088,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 15.5,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:45-16:45 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Białystok",
 			"county": "Powiat Białystok",
@@ -2080,7 +2114,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek Fair Play",
 		"website": "www.przedszkolefairplay-grojecka.pl",
 		"email": "biuro@przedszkolefairplay-grojecka.pl",
@@ -2092,10 +2126,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 21.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Warszawa - Ochota",
 			"county": "Powiat Warszawa",
@@ -2116,7 +2152,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Karuzela",
 		"website": "www.karuzela.org",
 		"email": "zlobek@karuzela.org",
@@ -2130,8 +2166,8 @@
 		"foodPricePerDay": 14.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Radom",
 			"county": "Powiat Radom",
@@ -2152,7 +2188,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "MAYA - Baśniowy Dworek",
 		"website": "www.basniowydworek.pl",
 		"email": "maya-zlobek@o2.pl",
@@ -2166,8 +2202,8 @@
 		"foodPricePerDay": 16.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Swarzędz",
 			"county": "Powiat poznański",
@@ -2188,7 +2224,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Bajkowy Żłobek Katarzyna Kotecka",
 		"website": "www.jacek-i-agatka.pl",
 		"email": "jacekiagatka0202@gmail.com",
@@ -2202,8 +2238,8 @@
 		"foodPricePerDay": 13.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Biskupiec",
 			"county": "Powiat olsztyński",
@@ -2224,7 +2260,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Roman Turczyn Żłobek Bajkowa Kraina",
 		"website": "brak",
 		"email": "zlobekbajkowakraina@wp.pl",
@@ -2236,10 +2272,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": 400.0,
 		"foodPricePerDay": null,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 8.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 8.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-16:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Toruń",
 			"county": "Powiat Toruń",
@@ -2260,7 +2298,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Opieka nad Dziećmi Zielony Ogródek",
 		"website": "domoweprzedszkole.info.pl",
 		"email": "kontakt@domoweprzedszkole.info.pl",
@@ -2277,8 +2315,8 @@
 			"Dotacja z budżetu Gminy na dziecko zamieszkałe na terenie Gminy Jaktorów, Radziejowice i miasta Żyrardów - 300 zł miesięcznie; : 38.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Jaktorów",
 			"county": "Powiat grodziski",
@@ -2299,7 +2337,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Prywatny żłobek ,,Kolorowy Domek\" Aleksandra Goździak oddział 2",
 		"website": "www.kolorowydomek.com.pl",
 		"email": "biuropoznankolorowydomek@wp.pl",
@@ -2316,8 +2354,8 @@
 			"Rodzeństwo uczęszczające do instytucji: 5.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Poznań-Grunwald",
 			"county": "Powiat Poznań",
@@ -2338,7 +2376,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Gminny w Postolicach",
 		"website": null,
 		"email": "r.serafin@wadrozewielkie.pl",
@@ -2350,10 +2388,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 8.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 40.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 40.0% "
+		],
 		"openingHours": "Godziny pracy: ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Wądroże Wielkie",
 			"county": "Powiat jaworski",
@@ -2374,7 +2414,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "Klub Dziecięcy w Gaworzycach",
 		"website": "brak",
 		"email": "ewa.osomanska@wp.pl",
@@ -2386,10 +2426,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": 100.0,
 		"foodPricePerDay": null,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 50.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 50.0% "
+		],
 		"openingHours": "Godziny pracy: ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Gaworzyce",
 			"county": "Powiat polkowicki",
@@ -2410,7 +2452,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "ELEMELEK Ewelina Strutynska",
 		"website": "www.elemelek.com.pl",
 		"email": "strutynska.ewelina@gmail.com",
@@ -2422,10 +2464,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 18.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Siechnice",
 			"county": "Powiat wrocławski",
@@ -2446,7 +2490,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Miejski \"Kolorowe Nutki\" w Krośnie",
 		"website": "zmkrosno.pl",
 		"email": "sekretariat@zmkrosno.pl",
@@ -2463,8 +2507,8 @@
 			"Troje i więcej dzieci uczęszczających do żłobka lub przedszkoli miejskich: 50.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Krosno",
 			"county": "Powiat Krosno",
@@ -2485,7 +2529,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Miejski \"Kolorowe Nutki\" w Krośnie",
 		"website": "zmkrosno.pl",
 		"email": "sekretariat@zmkrosno.pl",
@@ -2502,8 +2546,8 @@
 			"Troje i więcej dzieci uczęszczających do żłobka lub przedszkoli miejskich: 50.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Krosno",
 			"county": "Powiat Krosno",
@@ -2524,7 +2568,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Miejski \"Kolorowe Nutki\" w Krośnie",
 		"website": "zmkrosno.pl",
 		"email": "sekretariat@zmkrosno.pl",
@@ -2541,8 +2585,8 @@
 			"Troje i więcej dzieci uczęszczających do żłobka lub przedszkoli miejskich: 50.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Krosno",
 			"county": "Powiat Krosno",
@@ -2563,7 +2607,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek \"Mali Odkrywcy\"",
 		"website": "maliodkrywcy24.pl",
 		"email": "waclawik.karolina@gmail.com",
@@ -2580,8 +2624,8 @@
 			"Rodzeństwo uczęszczające do instytucji: 30.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Krosno",
 			"county": "Powiat Krosno",
@@ -2602,7 +2646,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Kraina marzeń",
 		"website": "www.krainamarzen-buszkowice.edupge.pl",
 		"email": "tabi3@wp.pl",
@@ -2616,8 +2660,8 @@
 		"foodPricePerDay": 11.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-18:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Żurawica",
 			"county": "Powiat przemyski",
@@ -2638,7 +2682,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek \"Calineczka\"",
 		"website": "www.calineczka.edu.pl",
 		"email": "biuro@calineczka.edu.pl",
@@ -2652,8 +2696,8 @@
 		"foodPricePerDay": 16.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-18:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Radzymin",
 			"county": "Powiat wołomiński",
@@ -2674,7 +2718,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Domowa Akademia \"SMYK\" Magdalena Chrząszcz Żłobek ",
 		"website": null,
 		"email": "magdalenachrzaszcz@poczta.onet.pl",
@@ -2688,8 +2732,8 @@
 		"foodPricePerDay": null,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Orneta",
 			"county": "Powiat lidzbarski",
@@ -2710,7 +2754,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "ŻŁOBEK MACIUSIOWO",
 		"website": "www.maciusiowo.pl",
 		"email": "carola_w@o2.pl",
@@ -2724,8 +2768,8 @@
 		"foodPricePerDay": 15.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Łaziska Górne",
 			"county": "Powiat mikołowski",
@@ -2746,7 +2790,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "ŻŁOBEK MIEJSKI Jednostka organizacyjna gminy Bielsko-Biała",
 		"website": "www.zlobekbielsko.pl",
 		"email": "zlobek@zlobekbielsko.pl",
@@ -2765,8 +2809,8 @@
 			"Rodzina+: 50.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-16:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Bielsko-Biała",
 			"county": "Powiat Bielsko-Biała",
@@ -2787,7 +2831,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Bystrzaki",
 		"website": null,
 		"email": "bystrzaki@fep.edu.pl",
@@ -2799,10 +2843,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 19.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 27.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 27.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Bystrzyca Kłodzka",
 			"county": "Powiat kłodzki",
@@ -2823,7 +2869,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żyrafy",
 		"website": "www.zyrafy.com.pl",
 		"email": "zlobekdabrowka@zyrafy.com.pl",
@@ -2835,10 +2881,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 17.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 20.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 20.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Dopiewo",
 			"county": "Powiat poznański",
@@ -2859,7 +2907,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek \"Świat Dziecka\" w Staszowie",
 		"website": null,
 		"email": "klubdzieciecy.staszow@op.pl",
@@ -2871,10 +2919,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 11.5,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 50.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 50.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Staszów",
 			"county": "Powiat staszowski",
@@ -2895,7 +2945,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek Tęcza",
 		"website": "www.teczadzieci.pl",
 		"email": "biuro@teczadzieci.pl",
@@ -2907,10 +2957,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 16.0,
-		"discounts": ["Wielodzietność/Karta Dużej Rodziny: 20.0% "],
+		"discounts": [
+			"Wielodzietność/Karta Dużej Rodziny: 20.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Poznań-Jeżyce",
 			"county": "Powiat Poznań",
@@ -2931,7 +2983,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek \"Szalona Żyrafa\" w Jarocinie",
 		"website": null,
 		"email": "szalonazyrafa@wp.pl",
@@ -2943,10 +2995,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 12.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 30.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 30.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Jarocin",
 			"county": "Powiat jarociński",
@@ -2967,7 +3021,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek ABRAKADABRA Filia",
 		"website": "www.zlobekabrakadabra.pl",
 		"email": "biuro@przedszkolehappytime.pl",
@@ -2981,8 +3035,8 @@
 		"foodPricePerDay": 20.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota, Niedziela 7:30-18:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Warszawa - Praga-Południe",
 			"county": "Powiat Warszawa",
@@ -3003,7 +3057,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek Bajkolandia",
 		"website": null,
 		"email": "bajkolandia2017@wp.pl",
@@ -3015,10 +3069,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 14.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 20.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 20.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-16:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Police",
 			"county": "Powiat policki",
@@ -3039,7 +3095,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "KLUB OPIEKI NAD DZIEĆMI \"NAJLEPSZA NIANIA\"",
 		"website": "www.najlepszaniania.com.pl",
 		"email": "najlepszaniania@onet.eu",
@@ -3051,10 +3107,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 12.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Bielsko-Biała",
 			"county": "Powiat Bielsko-Biała",
@@ -3075,7 +3133,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "KLUB MALUCHA DOMIŚ BEATA MOZGAŁA",
 		"website": "www.domis.rzetelnafirma.pl",
 		"email": "becia784@wp.pl",
@@ -3092,8 +3150,8 @@
 			"W przypadku choroby dziecka dłuższej niż 2 tygodnie przysługuje zniżka  w kolejnym miesiącu opłaty za pobyt dziecka w placówce.: 10.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Mysłowice",
 			"county": "Powiat Mysłowice",
@@ -3114,7 +3172,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek \"Gumisiowa Kraina\" ",
 		"website": "www.gumisiowakraina.pl",
 		"email": "tk49@onet.pl",
@@ -3128,8 +3186,8 @@
 		"foodPricePerDay": null,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Jedlińsk",
 			"county": "Powiat radomski",
@@ -3150,7 +3208,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Prywatny Żłobek \"Tygrysek\"",
 		"website": "www.tygrysek-przedszkole.pl",
 		"email": "tygrysekbiuro@gmail.com",
@@ -3162,10 +3220,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 15.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 30.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 30.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:00-18:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Łańcut",
 			"county": "Powiat łańcucki",
@@ -3186,7 +3246,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek \"Little AntBee\"",
 		"website": "www.antbee.eu",
 		"email": "biuro@antbee.eu",
@@ -3203,8 +3263,8 @@
 			"Rodzeństwo uczęszczające do instytucji: 20.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Radzymin",
 			"county": "Powiat wołomiński",
@@ -3225,7 +3285,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "Klub Dziecięcy \"Świat Dziecka\" w Staszowie",
 		"website": null,
 		"email": "klubdzieciecy.staszow@op.pl",
@@ -3237,10 +3297,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 11.5,
-		"discounts": ["pobyt dziecka do 5 godzin dziennie: 50.0% "],
+		"discounts": [
+			"pobyt dziecka do 5 godzin dziennie: 50.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Staszów",
 			"county": "Powiat staszowski",
@@ -3261,7 +3323,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Leśny Skrzat ",
 		"website": "www.lesny-skrzat.pl",
 		"email": "biuro@lesny-skrzat.pl",
@@ -3273,10 +3335,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 16.5,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 35.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 35.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Oleśnica",
 			"county": "Powiat oleśnicki",
@@ -3297,7 +3361,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Oddział Żłobka Miejskiego w Katowicach",
 		"website": "www.zlobek.katowice.pl",
 		"email": "krzywoustego@zlobek.katowice.pl",
@@ -3314,8 +3378,8 @@
 			"na każde dziecko w przypadku jednoczesnego uczęszczania 3 lub więcej dzieci. : 30.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Katowice",
 			"county": "Powiat Katowice",
@@ -3336,7 +3400,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Centrum Edukacyjne Żłobek Malinka",
 		"website": "cenedu.pl",
 		"email": "kontakt@cenedu.pl",
@@ -3348,10 +3412,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 10.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Chojnice",
 			"county": "Powiat chojnicki",
@@ -3372,7 +3438,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "Klub dziecięcy - Klub Malucha \"Krasnoludki\"",
 		"website": "http://manufakturarozwojuiradosci.pl",
 		"email": "biuro@fds-consulting.eu",
@@ -3384,10 +3450,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": 250.0,
 		"foodPricePerDay": null,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Chojnice",
 			"county": "Powiat chojnicki",
@@ -3408,7 +3476,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek AGUGU",
 		"website": "www.agugu.info",
 		"email": "zlobek.agugu@gmail.com",
@@ -3422,8 +3490,8 @@
 		"foodPricePerDay": 13.2,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Gdynia",
 			"county": "Powiat Gdynia",
@@ -3444,7 +3512,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Kolorowe Kredki s.c. T.Butniak,B.Jurkowska",
 		"website": "www.zlobekkolorowekredki.pl",
 		"email": "biuro@zlobekkolorowekredki.pl",
@@ -3456,10 +3524,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 21.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Siechnice",
 			"county": "Powiat wrocławski",
@@ -3480,7 +3550,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Akademia Maluszka \"Słodki bobasek\" s.c",
 		"website": "www.slodkibobasek.pl",
 		"email": "kontakt@slodkibobasek.pl",
@@ -3494,8 +3564,8 @@
 		"foodPricePerDay": 14.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Boguchwała",
 			"county": "Powiat rzeszowski",
@@ -3516,7 +3586,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "Żłobek \"Kubuś Puchatek\" w Szubinie",
 		"website": "http://www.przedszkole2.szubin.pl/",
 		"email": "sekretariat@przedszkole2.szubin.pl",
@@ -3530,8 +3600,8 @@
 		"foodPricePerDay": 11.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Szubin",
 			"county": "Powiat nakielski",
@@ -3552,7 +3622,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "ZAMECZEK WIOLETTA CHOLEWA-BARANOWSKA",
 		"website": "www.przedszkolezameczek.pl/",
 		"email": "zameczek50@wp.pl",
@@ -3564,10 +3634,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 12.0,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 50.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 50.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-18:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Siedlce",
 			"county": "Powiat Siedlce",
@@ -3588,7 +3660,7 @@
 		}
 	},
 	{
-		"institutionType": "Klub dziecięcy",
+		"institutionType": "CHILDCLUB",
 		"name": "Klub Dziecięcy\"Miś Uszatek\"",
 		"website": "żłobek-warszawa.pl",
 		"email": "biuro@buka.edu.pl",
@@ -3602,8 +3674,8 @@
 		"foodPricePerDay": 14.0,
 		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-18:00 ",
-		"isAdaptedToDisabledChildren": "NIE",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": false,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Warszawa - Praga-Południe",
 			"county": "Powiat Warszawa",
@@ -3624,7 +3696,7 @@
 		}
 	},
 	{
-		"institutionType": "Żłobek",
+		"institutionType": "NURSERY",
 		"name": "NIEPUBLICZNE PRZEDSZKOLE RADOSNE SŁONECZKO spółka z o.o.",
 		"website": "radosnesloneczko.pl",
 		"email": "przedszkole@radosnesloneczko.pl",
@@ -3636,10 +3708,12 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 19.5,
-		"discounts": ["Rodzeństwo uczęszczające do instytucji: 10.0% "],
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
+		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
-		"isAdaptedToDisabledChildren": "TAK",
-		"businessActivitySuspended": "NIE",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
 		"address": {
 			"city": "Radzionków",
 			"county": "Powiat tarnogórski",
