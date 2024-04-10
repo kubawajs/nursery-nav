@@ -1,45 +1,80 @@
 import { Injectable } from '@nestjs/common';
-import { Institution } from './interfaces/institution.interface';
-import { InstitutionListItem } from './interfaces/institutionlistitem.interface';
-import { InstitutionType } from './interfaces/institutiontype.interface';
+import { InstitutionDto } from './interfaces/institutionDto';
+import { InstitutionListItemDto } from './interfaces/institutionListItemDto';
+import { InstitutionType } from './interfaces/institutionType';
+import { PaginatedResult } from 'src/shared/interfaces/paginatedresult';
 import * as data from '../../data/test-data-100.json';
 
 @Injectable()
 export class InstitutionsService {
-    private institutions: Institution[];
+    private institutions: InstitutionDto[];
 
     constructor() {
-        this.institutions = data as unknown as Institution[];
+        this.institutions = data as unknown as InstitutionDto[];
     }
 
-    async findAll(): Promise<InstitutionListItem[]> {
+    async findAll(page: number, size: number): Promise<PaginatedResult<InstitutionListItemDto>> {
+        size = this.setPageSize(size);
+        const totalPages = this.institutions?.length ? Math.ceil(this.institutions.length / size) : 0;
+        page = this.setPage(page, totalPages);
+
+        const paginatedResult: PaginatedResult<InstitutionListItemDto> = {
+            items: [],
+            totalItems: data?.length ?? 0,
+            pageIndex: page,
+            pageSize: size,
+            totalPages: totalPages
+        };
         if (data) {
-            const institutionList = data.map((institution) => {
-                const institutionListItem: InstitutionListItem = {
-                    institutionType: institution.institutionType as InstitutionType,
-                    name: institution.name,
-                    website: institution.website,
-                    email: institution.email,
-                    phone: institution.phone,
-                    basicPricePerMonth: institution.basicPricePerMonth,
-                    isAdaptedToDisabledChildren: institution.isAdaptedToDisabledChildren,
-                    city: institution.address.city
-                };
+            const pageData = this.institutions.slice((page - 1) * size, page * size);
+            const institutionList = pageData.map((institution) => {
+                const institutionListItem: InstitutionListItemDto = this.MapToInstutionListItem(institution);
                 return institutionListItem;
             });
-            return Promise.resolve(institutionList);
+            paginatedResult.items = institutionList;
+            return Promise.resolve(paginatedResult);
         }
 
-        return Promise.resolve([]);
+        return Promise.resolve(paginatedResult);
     }
 
-    async getById(regNo: string): Promise<Institution> {
+    async getById(regNo: string): Promise<InstitutionDto> {
         const institution = this.institutions.find((institution) => institution.operatingEntity.regNoPosition === regNo);
-        console.log(institution);
         if (institution) {
             return Promise.resolve(institution);
         }
 
         return Promise.reject(`Institution with id ${regNo} not found`);
+    }
+
+    private setPage(page: number, totalPages: number): number {
+        if (page === undefined || isNaN(page)) {
+            return 1;
+        }
+        page = page < 1 ? 1 : page;
+        page = page > totalPages ? totalPages : page;
+        return page;
+    }
+
+    private setPageSize(size: number): number {
+        if (size === undefined || isNaN(size)) {
+            return 10;
+        }
+        size = size < 1 ? 10 : size;
+        size = size > 100 ? 100 : size;
+        return size;
+    }
+
+    private MapToInstutionListItem(institution: InstitutionDto): InstitutionListItemDto {
+        return {
+            institutionType: institution.institutionType as InstitutionType,
+            name: institution.name,
+            website: institution.website,
+            email: institution.email,
+            phone: institution.phone,
+            basicPricePerMonth: institution.basicPricePerMonth,
+            isAdaptedToDisabledChildren: institution.isAdaptedToDisabledChildren,
+            city: institution.address.city
+        };
     }
 }
