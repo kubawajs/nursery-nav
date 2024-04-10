@@ -2,6 +2,7 @@ import { Controller, Get, HttpCode, Param } from '@nestjs/common';
 import { Institution } from './interfaces/institution.interface';
 import { InstitutionsService } from './institutions.service';
 import { ApiTags } from '@nestjs/swagger';
+import { InstitutionListItem } from './interfaces/institutionlistitem.interface';
 
 @Controller('institutions')
 export class InstitutionsController {
@@ -10,7 +11,7 @@ export class InstitutionsController {
     @Get()
     @HttpCode(200)
     @ApiTags('nursery-nav')
-    async findAll(): Promise<Institution[]> {
+    async findAll(): Promise<InstitutionListItem[]> {
         return await this.institutionsService.findAll();
     }
 
