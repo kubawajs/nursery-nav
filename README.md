@@ -88,9 +88,10 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Swagger `/api`
 * [x] GET all institutions
 * [x] GET institution details
+* [x] Sorting
 * [ ] Autocomplete endpoint
 * [ ] Filtering
-* [ ] Pagination
+* [x] Pagination
 * [ ] CICD
 * [ ] Live URL
 * [ ] DB data source
