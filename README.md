@@ -35,6 +35,18 @@ This project is part of [100 commitow challenge](https://100commitow.pl/). It he
 
 ### Frontend
 
+#### Configuration
+
+Add `.env` file in the folder root with key to enable map:
+
+```
+REACT_APP_GEOAPIFY_API_KEY=you_geoapify_key
+```
+
+Key can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project)
+
+#### Running frontend
+
 Go to `./src/nursery-nav` and run `npm start`.
 
 ### Backend
@@ -42,6 +54,16 @@ Go to `./src/nursery-nav` and run `npm start`.
 A static JSON file is provided as the backend API for the MVP version.
 Check `./data/RZ-instytucje-enriched.json`
 Soon will be connected to the API.
+
+#### Configuration
+
+Add `.env` file in the folder root with key to your frontend instance.
+
+```
+FRONTEND_URL=your_frontend_app_url
+```
+
+This step is not required, but enables frontend application origin to access backend API.
 
 #### Running backend
 Go to `./src/nursery-nav-api` and run `npm run start`.
@@ -95,6 +117,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [ ] CICD
 * [ ] Live URL
 * [ ] DB data source
+* [x] CORS
 
 ### Phase 3
 
