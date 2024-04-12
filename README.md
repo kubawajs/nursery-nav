@@ -95,6 +95,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [ ] CICD
 * [ ] Live URL
 * [ ] DB data source
+* [x] CORS
 
 ### Phase 3
 
