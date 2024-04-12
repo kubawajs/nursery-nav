@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { InstitutionDto } from './interfaces/institutionDto';
-import { InstitutionListItemDto } from './interfaces/institutionListItemDto';
-import { InstitutionType } from './interfaces/institutionType';
+import { InstitutionDto } from './DTO/institutionDto';
+import { InstitutionListItemDto } from './DTO/institutionListItemDto';
+import { InstitutionType } from './DTO/institutionType';
 import { PaginatedResult } from 'src/shared/interfaces/paginatedresult';
 import * as data from '../../data/test-data-100.json';
+import { SortParams } from './params/sortParams';
 
 @Injectable()
 export class InstitutionsService {
@@ -13,7 +14,7 @@ export class InstitutionsService {
         this.institutions = data as unknown as InstitutionDto[];
     }
 
-    async findAll(page: number, size: number): Promise<PaginatedResult<InstitutionListItemDto>> {
+    async findAll(page: number, size: number, sort: SortParams): Promise<PaginatedResult<InstitutionListItemDto>> {
         size = this.setPageSize(size);
         const totalPages = this.institutions?.length ? Math.ceil(this.institutions.length / size) : 0;
         page = this.setPage(page, totalPages);
@@ -26,7 +27,8 @@ export class InstitutionsService {
             totalPages: totalPages
         };
         if (data) {
-            const pageData = this.institutions.slice((page - 1) * size, page * size);
+            const sortedInstutions = this.institutions.sort((a, b) => { return this.SortMethod(sort, a, b); });
+            const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
                 const institutionListItem: InstitutionListItemDto = this.MapToInstutionListItem(institution);
                 return institutionListItem;
@@ -76,5 +78,20 @@ export class InstitutionsService {
             isAdaptedToDisabledChildren: institution.isAdaptedToDisabledChildren,
             city: institution.address.city
         };
+    }
+
+    private SortMethod(sort: SortParams, a: InstitutionDto, b: InstitutionDto) {
+        switch (sort) {
+            case SortParams.PRICE_ASC:
+                return a.basicPricePerMonth - b.basicPricePerMonth;
+            case SortParams.PRICE_DESC:
+                return b.basicPricePerMonth - a.basicPricePerMonth;
+            case SortParams.NAME_ASC:
+                return a.name.localeCompare(b.name);
+            case SortParams.NAME_DESC:
+                return b.name.localeCompare(a.name);
+            default:
+                return 0;
+        }
     }
 }

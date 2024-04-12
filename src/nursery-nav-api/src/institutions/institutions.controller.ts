@@ -1,9 +1,10 @@
 import { Controller, Get, HttpCode, Param, Query } from '@nestjs/common';
-import { InstitutionDto } from './interfaces/institutionDto';
+import { InstitutionDto } from './DTO/institutionDto';
 import { InstitutionsService } from './institutions.service';
-import { ApiParam, ApiProduces, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { InstitutionListItemDto } from './interfaces/institutionListItemDto';
+import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 import { PaginatedResult } from 'src/shared/interfaces/paginatedresult';
+import { SortParams } from './params/sortParams';
 
 @Controller('institutions')
 export class InstitutionsController {
@@ -13,10 +14,11 @@ export class InstitutionsController {
     @HttpCode(200)
     @ApiQuery({ name: 'page', required: false, type: Number })
     @ApiQuery({ name: 'size', required: false, type: Number })
-    @ApiResponse({ status: 200, description: 'Returns a paginated list of institutions', type: PaginatedResult<InstitutionListItemDto> })
+    @ApiQuery({ name: 'sort', required: false, enum: SortParams })
+    @ApiResponse({ status: 200, description: 'Returns a sorted and paginated list of institutions', type: PaginatedResult<InstitutionListItemDto> })
     @ApiTags('nursery-nav')
-    async findAll(@Query('page') page: number, @Query('size') size: number): Promise<PaginatedResult<InstitutionListItemDto>> {
-        return await this.institutionsService.findAll(page, size);
+    async findAll(@Query('page') page: number, @Query('size') size: number, @Query('sort') sort: SortParams = SortParams.NAME_ASC): Promise<PaginatedResult<InstitutionListItemDto>> {
+        return await this.institutionsService.findAll(page, size, sort);
     }
 
     @Get(':regNo')
