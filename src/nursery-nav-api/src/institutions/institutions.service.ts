@@ -27,7 +27,11 @@ export class InstitutionsService {
             totalPages: totalPages
         };
         if (data) {
-            const sortedInstutions = [].slice.call(this.institutions).sort((a, b) => { return this.SortMethod(sort, a, b); });
+            if (!Array.isArray(this.institutions)) {
+                // convert to array if not an array
+                this.institutions = [this.institutions];
+            }
+            const sortedInstutions = this.institutions.sort((a, b) => { return this.SortMethod(sort, a, b); });
             const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
                 const institutionListItem: InstitutionListItemDto = this.MapToInstutionListItem(institution);
