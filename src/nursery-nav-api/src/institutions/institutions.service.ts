@@ -80,7 +80,7 @@ export class InstitutionsService {
             phone: institution.phone,
             basicPricePerMonth: institution.basicPricePerMonth,
             isAdaptedToDisabledChildren: institution.isAdaptedToDisabledChildren,
-            city: institution.address.city
+            city: institution.address?.city ?? '',
         };
     }
 
