@@ -3,7 +3,7 @@ import { InstitutionDto } from './DTO/institutionDto';
 import { InstitutionsService } from './institutions.service';
 import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { InstitutionListItemDto } from './DTO/institutionListItemDto';
-import { PaginatedResult } from 'src/shared/models/paginatedresult';
+import { PaginatedResult } from '../../../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
 
 @Controller('institutions')
