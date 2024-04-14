@@ -27,8 +27,8 @@ export class InstitutionsService {
             totalPages: totalPages
         };
         if (data) {
-            console.log('institutions', this.institutions);
-            const sortedInstutions = this.institutions.sort((a, b) => { return this.SortMethod(sort, a, b); });
+            const institutionsArray = this.institutions as InstitutionDto[];
+            const sortedInstutions = institutionsArray.sort((a, b) => this.SortMethod(sort, a, b));
             const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
                 const institutionListItem: InstitutionListItemDto = this.MapToInstutionListItem(institution);
