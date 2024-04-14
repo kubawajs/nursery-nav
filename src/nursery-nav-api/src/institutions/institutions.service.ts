@@ -27,7 +27,7 @@ export class InstitutionsService {
             totalPages: totalPages
         };
         if (data) {
-            const institutionsArray = this.institutions as InstitutionDto[];
+            const institutionsArray = Array.from(this.institutions) as InstitutionDto[];
             const sortedInstutions = institutionsArray.sort((a, b) => this.SortMethod(sort, a, b));
             const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
