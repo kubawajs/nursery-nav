@@ -27,8 +27,7 @@ export class InstitutionsService {
             totalPages: totalPages
         };
         if (data) {
-            const institutions = this.institutions;
-            const sortedInstutions = institutions.sort((a, b) => { return this.SortMethod(sort, a, b); });
+            const sortedInstutions = [].slice.call(this.institutions).sort((a, b) => { return this.SortMethod(sort, a, b); });
             const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
                 const institutionListItem: InstitutionListItemDto = this.MapToInstutionListItem(institution);
