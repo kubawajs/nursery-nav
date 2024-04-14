@@ -27,10 +27,7 @@ export class InstitutionsService {
             totalPages: totalPages
         };
         if (data) {
-            if (!Array.isArray(this.institutions)) {
-                // convert to array if not an array
-                this.institutions = [this.institutions];
-            }
+            console.log('institutions', this.institutions);
             const sortedInstutions = this.institutions.sort((a, b) => { return this.SortMethod(sort, a, b); });
             const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
@@ -80,7 +77,7 @@ export class InstitutionsService {
             phone: institution.phone,
             basicPricePerMonth: institution.basicPricePerMonth,
             isAdaptedToDisabledChildren: institution.isAdaptedToDisabledChildren,
-            city: institution.address?.city ?? '',
+            city: institution.address?.city,
         };
     }
 
