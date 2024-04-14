@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InstitutionDto } from './DTO/institutionDto';
 import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 import { InstitutionType } from './DTO/institutionType';
-import { PaginatedResult } from 'src/shared/interfaces/paginatedresult';
+import PaginatedResult from '../shared/models/paginatedresult';
 import * as data from '../../data/test-data-100.json';
 import { SortParams } from './params/sortParams';
 
@@ -27,7 +27,8 @@ export class InstitutionsService {
             totalPages: totalPages
         };
         if (data) {
-            const sortedInstutions = this.institutions.sort((a, b) => { return this.SortMethod(sort, a, b); });
+            const institutionsArray = Array.from(this.institutions) as InstitutionDto[];
+            const sortedInstutions = institutionsArray.sort((a, b) => this.SortMethod(sort, a, b));
             const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
                 const institutionListItem: InstitutionListItemDto = this.MapToInstutionListItem(institution);
@@ -76,7 +77,7 @@ export class InstitutionsService {
             phone: institution.phone,
             basicPricePerMonth: institution.basicPricePerMonth,
             isAdaptedToDisabledChildren: institution.isAdaptedToDisabledChildren,
-            city: institution.address.city
+            city: institution.address?.city,
         };
     }
 

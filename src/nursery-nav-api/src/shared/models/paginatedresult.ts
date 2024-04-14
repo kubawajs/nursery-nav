@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 
-export class PaginatedResult<T> {
+export default class PaginatedResult<T> {
     @ApiProperty()
     totalItems: number;
 
