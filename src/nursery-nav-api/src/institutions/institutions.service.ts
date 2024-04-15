@@ -3,7 +3,6 @@ import { InstitutionDto } from './DTO/institutionDto';
 import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 import { InstitutionType } from './DTO/institutionType';
 import PaginatedResult from '../shared/models/paginatedresult';
-import * as data from '../../data/test-data-100.json';
 import { SortParams } from './params/sortParams';
 
 @Injectable()
@@ -11,7 +10,7 @@ export class InstitutionsService {
     private institutions: InstitutionDto[];
 
     constructor() {
-        this.institutions = data as unknown as InstitutionDto[];
+        this.loadData();
     }
 
     async findAll(page: number, size: number, sort: SortParams): Promise<PaginatedResult<InstitutionListItemDto>> {
@@ -21,17 +20,17 @@ export class InstitutionsService {
 
         const paginatedResult: PaginatedResult<InstitutionListItemDto> = {
             items: [],
-            totalItems: data?.length ?? 0,
+            totalItems: this.institutions?.length ?? 0,
             pageIndex: page,
             pageSize: size,
             totalPages: totalPages
         };
-        if (data) {
-            const institutionsArray = Array.from(this.institutions) as InstitutionDto[];
-            const sortedInstutions = institutionsArray.sort((a, b) => this.SortMethod(sort, a, b));
+        if (this.institutions) {
+            const institutionsArray = Array.from(this.institutions);
+            const sortedInstutions = institutionsArray.sort((a, b) => this.sortMethod(sort, a, b));
             const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
-                const institutionListItem: InstitutionListItemDto = this.MapToInstutionListItem(institution);
+                const institutionListItem: InstitutionListItemDto = this.mapToInstutionListItem(institution);
                 return institutionListItem;
             });
             paginatedResult.items = institutionList;
@@ -48,6 +47,15 @@ export class InstitutionsService {
         }
 
         return Promise.reject(`Institution with id ${regNo} not found`);
+    }
+
+    private async loadData() {
+        try {
+            const data = require('../../data/test-data-100.json');
+            this.institutions = data as InstitutionDto[];
+        } catch (error) {
+            console.error('Error loading data:', error);
+        }
     }
 
     private setPage(page: number, totalPages: number): number {
@@ -68,7 +76,7 @@ export class InstitutionsService {
         return size;
     }
 
-    private MapToInstutionListItem(institution: InstitutionDto): InstitutionListItemDto {
+    private mapToInstutionListItem(institution: InstitutionDto): InstitutionListItemDto {
         return {
             institutionType: institution.institutionType as InstitutionType,
             name: institution.name,
@@ -81,7 +89,7 @@ export class InstitutionsService {
         };
     }
 
-    private SortMethod(sort: SortParams, a: InstitutionDto, b: InstitutionDto) {
+    private sortMethod(sort: SortParams, a: InstitutionDto, b: InstitutionDto) {
         switch (sort) {
             case SortParams.PRICE_ASC:
                 return a.basicPricePerMonth - b.basicPricePerMonth;
