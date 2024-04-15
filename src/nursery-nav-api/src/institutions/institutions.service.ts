@@ -11,7 +11,7 @@ export class InstitutionsService {
     private institutions: InstitutionDto[];
 
     constructor() {
-        this.institutions = data as unknown as InstitutionDto[];
+        this.institutions = data ? data.map((institution) => { return institution as unknown as InstitutionDto }) : [];
     }
 
     async findAll(page: number, size: number, sort: SortParams): Promise<PaginatedResult<InstitutionListItemDto>> {
@@ -26,10 +26,10 @@ export class InstitutionsService {
             pageSize: size,
             totalPages: totalPages
         };
-        if (data) {
-            console.warn('this.institutions', this.institutions);
-            const institutionsArray = Array.from(this.institutions) as InstitutionDto[];
-            console.warn('institutionsArray', institutionsArray);
+        if (this.institutions) {
+            console.warn(typeof this.institutions);
+            const institutionsArray = Array.from(this.institutions);
+            console.warn(typeof institutionsArray);
             const sortedInstutions = institutionsArray.sort((a, b) => this.SortMethod(sort, a, b));
             const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
