@@ -5,11 +5,13 @@
 </p>
 
 [![Frontend build](https://github.com/kubawajs/nursery-nav/actions/workflows/frontend.yml/badge.svg?branch=main)](https://github.com/kubawajs/nursery-nav/actions/workflows/frontend.yml)
+[![Backend build](https://github.com/kubawajs/nursery-nav/actions/workflows/backend.yml/badge.svg?branch=main)](https://github.com/kubawajs/nursery-nav/actions/workflows/backend.yml)
 
 NurseryNav simplifies the search for nearby nursery schools by providing an easy-to-use map interface to help you find the perfect childcare option for your little ones.
 
 **Live URL:** [https://nursery-nav.vercel.app/](https://nursery-nav.vercel.app/)
-**Backend API DEMO:** [TBD]
+
+**Backend API DEMO:** [https://nursery-nav-api.vercel.app/](https://nursery-nav-api.vercel.app/api/)
 
 ---
 This project is part of [100 commitow challenge](https://100commitow.pl/). It helps me learn front-end technologies like React, Typescript and NestJS.
@@ -114,8 +116,8 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [ ] Autocomplete endpoint
 * [ ] Filtering
 * [x] Pagination
-* [ ] CICD
-* [ ] Live URL
+* [x] CICD
+* [x] Live URL
 * [ ] DB data source
 * [x] CORS
 
