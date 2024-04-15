@@ -6,8 +6,12 @@ name: Frontend Build
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'src/nursery-nav/**'
   pull_request:
     branches: [ "main" ]
+    paths:
+      - 'src/nursery-nav/**'
 
 jobs:
   build:
