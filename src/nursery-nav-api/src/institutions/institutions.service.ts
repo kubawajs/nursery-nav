@@ -5,13 +5,14 @@ import { InstitutionType } from './DTO/institutionType';
 import PaginatedResult from '../shared/models/paginatedresult';
 import * as data from '../../data/test-data-100.json';
 import { SortParams } from './params/sortParams';
+import * as fs from 'fs';
 
 @Injectable()
 export class InstitutionsService {
     private institutions: InstitutionDto[];
 
     constructor() {
-        this.institutions = data ? data.map((institution) => { return institution as unknown as InstitutionDto }) : [];
+        this.institutions = JSON.parse(fs.readFileSync('./data/test-data-100.json', 'utf8'));
     }
 
     async findAll(page: number, size: number, sort: SortParams): Promise<PaginatedResult<InstitutionListItemDto>> {
