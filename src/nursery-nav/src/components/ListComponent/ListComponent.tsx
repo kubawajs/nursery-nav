@@ -90,6 +90,7 @@ export default function ListComponent() {
 							website={institution.website}
 							phone={institution.phone}
 							email={institution.email}
+							isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
 						/>
 					</Box>
 				))}
