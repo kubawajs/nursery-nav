@@ -3,6 +3,7 @@ import RangeSlider from "./RangeSlider";
 import { SyntheticEvent, useCallback, useContext, useEffect, useState } from "react";
 import { InstitutionContext } from "../../App";
 import { useSearchParams } from "react-router-dom";
+import { InstitutionType } from "../../shared/nursery.interface";
 
 export default function Filters() {
     const { institutions, setFilteredInstitutions, setSelectedInstitution } = useContext(InstitutionContext);
@@ -17,7 +18,7 @@ export default function Filters() {
     useEffect(() => {
         setFilteredInstitutions(institutions.filter(institution =>
             (!cityFilter || institution.address.city === cityFilter) &&
-            ((nurseryFilter && institution.institutionType === 'Żłobek') || (childClubFilter && institution.institutionType === 'Klub dziecięcy')) &&
+            ((nurseryFilter && institution.institutionType === InstitutionType.NURSERY) || (childClubFilter && institution.institutionType === InstitutionType.CHILDCLUB)) &&
             institution.basicPricePerMonth >= priceFilter[0] && institution.basicPricePerMonth <= priceFilter[1]
         ));
     }, [cityFilter, nurseryFilter, childClubFilter, priceFilter, institutions, setFilteredInstitutions]);

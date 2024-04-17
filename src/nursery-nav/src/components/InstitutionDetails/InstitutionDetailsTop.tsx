@@ -1,5 +1,5 @@
 import { Breadcrumbs, Typography, Button, Box, Stack } from "@mui/material";
-import { Institution } from "../../shared/nursery.interface";
+import { Institution, InstitutionType } from "../../shared/nursery.interface";
 import { useContext } from "react";
 import { InstitutionContext } from "../../App";
 import { useSearchParams } from "react-router-dom";
@@ -7,7 +7,7 @@ import { useSearchParams } from "react-router-dom";
 export default function InstitutionDetailsTop(institution: Institution) {
     const { setSelectedInstitution } = useContext(InstitutionContext);
     const [queryParam, setQueryParam] = useSearchParams();
-    const mainColor = institution.institutionType === 'Żłobek' ? 'primary' : 'secondary';
+    const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
 
     function handleBackButton() {
         return () => {

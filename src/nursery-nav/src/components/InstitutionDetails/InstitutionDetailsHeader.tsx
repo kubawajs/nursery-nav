@@ -1,5 +1,5 @@
 import { Box, Chip, Divider, Paper, Stack, Typography } from "@mui/material";
-import { Institution } from "../../shared/nursery.interface";
+import { Institution, InstitutionType } from "../../shared/nursery.interface";
 
 function PriceWithLabel(label: string, price?: number) {
     return (price && price > 0 && (
@@ -15,7 +15,7 @@ function PriceWithLabel(label: string, price?: number) {
 }
 
 export default function InstitutionDetailsHeader(institution: Institution) {
-    const mainColor = institution.institutionType === 'Żłobek' ? 'primary' : 'secondary';
+    const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
     return (
         <Box p={1}>
             <Paper elevation={2}>

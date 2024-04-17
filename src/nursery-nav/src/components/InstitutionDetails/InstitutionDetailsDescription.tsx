@@ -1,5 +1,5 @@
 import { Box, Paper, Typography, Chip, Button, Stack } from "@mui/material";
-import { Institution } from "../../shared/nursery.interface";
+import { Institution, InstitutionType } from "../../shared/nursery.interface";
 import styled from "@emotion/styled";
 import { theme } from "../../shared/theme";
 import InstitutionDetailsLinks from "./InstitutionDetailsLinks";
@@ -18,7 +18,7 @@ const ContactBox = styled(Box)(() => ({
 }));
 
 export default function InstitutionDetailsDescription(institution: Institution) {
-    const mainColor = institution.institutionType === 'Żłobek' ? 'primary' : 'secondary';
+    const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
     const openingHours = institution.openingHours.split(': ')[1] ?? institution.openingHours;
     return (
         <Box p={1}>
