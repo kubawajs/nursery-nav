@@ -22,7 +22,7 @@ export default function InstitutionDetails() {
 			setInstitution(institution);
 		};
 		fetchInstitution();
-	}, [institution, regNo]);
+	}, [regNo]);
 
 	return (
 		<Box p={1} height='82.4vh'>
