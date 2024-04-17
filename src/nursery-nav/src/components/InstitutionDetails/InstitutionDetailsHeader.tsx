@@ -1,5 +1,6 @@
 import { Box, Chip, Divider, Paper, Stack, Typography } from "@mui/material";
 import { Institution } from "../../shared/nursery.interface";
+import { Accessible } from "@mui/icons-material";
 
 function PriceWithLabel(label: string, price?: number) {
     return (price && price > 0 && (
@@ -20,7 +21,7 @@ export default function InstitutionDetailsHeader(institution: Institution) {
         <Box p={1}>
             <Paper elevation={2}>
                 <Chip label={institution.institutionType} color={mainColor} />
-                <Typography variant="h2">{institution.name}</Typography>
+                <Typography variant="h2">{institution.name} {institution.isAdaptedToDisabledChildren && <Accessible fontSize="large" />}</Typography>
                 <Divider />
                 <Box paddingTop={2} display='flex' justifyContent='space-between'>
                     <Stack
