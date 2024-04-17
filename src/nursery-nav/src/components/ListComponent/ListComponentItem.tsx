@@ -1,4 +1,5 @@
 import {
+    Badge,
     Box, Button, ButtonGroup, Card,
     CardContent,
     CardMedia,
@@ -6,7 +7,7 @@ import {
     ListItem,
     Typography
 } from '@mui/material';
-import { FmdGood, Language, Mail, Phone } from '@mui/icons-material';
+import { Accessible, FmdGood, Language, Mail, Phone } from '@mui/icons-material';
 
 interface ListComponentItemProps {
     name: string;
@@ -16,6 +17,7 @@ interface ListComponentItemProps {
     website: string;
     phone: string;
     email: string;
+    isAdaptedToDisabledChildren: boolean;
 }
 
 export function ListComponentItem(props: ListComponentItemProps) {
@@ -40,7 +42,9 @@ export function ListComponentItem(props: ListComponentItemProps) {
                     <CardContent sx={{ flex: '1 0 auto', paddingRight: '0' }}>
                         <Box>
                             <Box display='flex' marginBottom={1} sx={{ justifyContent: 'space-between' }}>
-                                <Chip label={props.institutionType} color={mainColor} />
+                                <Box>
+                                    <Chip label={props.institutionType} color={mainColor} />
+                                </Box>
                                 <Typography
                                     component="span"
                                     variant="subtitle1"
@@ -52,7 +56,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                 </Typography>
                             </Box>
                             <Typography variant="h5" paddingBottom={2}>
-                                {props.name}
+                                {props.name} {props.isAdaptedToDisabledChildren && <Accessible />}
                             </Typography>
                             <Box display='flex' justifyContent='space-between'>
                                 <Typography variant="subtitle2" color="text.secondary">
