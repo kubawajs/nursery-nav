@@ -4,7 +4,7 @@ import { divIcon } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { useContext, useEffect } from 'react';
 import { InstitutionContext } from '../../App';
-import { Institution } from '../../shared/nursery.interface';
+import { Institution, InstitutionType } from '../../shared/nursery.interface';
 import './MapPin.css';
 import { Box, Typography } from '@mui/material';
 import { useSearchParams } from 'react-router-dom';
@@ -35,7 +35,7 @@ export default function MapPin(props: MapPinProps) {
 	});
 
 	const position: [number, number] = [props.pin.latitude, props.pin.longitude];
-	const institutionType = props.institution.institutionType === 'Żłobek' ? 'nursery' : 'childclub';
+	const institutionType = props.institution.institutionType === InstitutionType.NURSERY ? 'nursery' : 'childclub';
 	const iconBackgroundColor = `map-pin-icon map-pin-icon-${institutionType}`;
 
 	return (

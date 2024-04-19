@@ -52,7 +52,7 @@ export default function ListComponent() {
 
 	if (selectedInstitution) {
 		return (
-			<InstitutionDetails {...selectedInstitution} />
+			<InstitutionDetails />
 		);
 	}
 

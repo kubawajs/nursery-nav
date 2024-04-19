@@ -9,6 +9,8 @@ async function bootstrap() {
   // Enable CORS
   var corsOptions = {
     origin: env.FRONTEND_URL,
+    METHODS: 'GET',
+    OPTIONS: 'GET',
   }
   app.enableCors(corsOptions);
 

@@ -1,5 +1,5 @@
 export interface Institution {
-	institutionType: string;
+	institutionType: InstitutionType;
 	name: string;
 	website: string;
 	email: string;
@@ -17,6 +17,11 @@ export interface Institution {
 	operatingEntity: OperatingEntity;
 	businessActivitySuspended: boolean;
 	address: Address;
+}
+
+export enum InstitutionType {
+	NURSERY = 'NURSERY',
+	CHILDCLUB = 'CHILDCLUB'
 }
 
 export interface OperatingEntity {
