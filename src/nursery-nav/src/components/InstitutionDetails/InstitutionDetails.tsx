@@ -15,9 +15,8 @@ export default function InstitutionDetails() {
 
 	useEffect(() => {
 		const fetchInstitution = async () => {
-			console.log(regNo);
 			const regNoUtf8 = regNo && encodeURIComponent(regNo);
-			const response = await fetch(`http://localhost:3000/institutions/${regNoUtf8}`);
+			const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions/${regNoUtf8}`);
 			const institution = await response.json();
 			setInstitution(institution);
 		};
