@@ -31,11 +31,11 @@ export default function ListComponent() {
 		queryParam.set('regNo', institution.regNo);
 		setQueryParam(queryParam);
 		//setSelectedInstitution(institution);
-	}, [queryParam, setQueryParam, setSelectedInstitution]);
+	}, [queryParam, setQueryParam]);
 
 	const institutionQueryParam = queryParam.get('regNo');
 	if (institutionQueryParam) {
-		const institution = filteredInstitutions.find(institution => institution.regNo === institutionQueryParam);
+		//const institution = filteredInstitutions.find(institution => institution.regNo === institutionQueryParam);
 		// if (institution) {
 		// 	setSelectedInstitution(institution);
 		// }
