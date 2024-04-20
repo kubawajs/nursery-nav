@@ -5,49 +5,40 @@ import { ListComponentItem } from './ListComponentItem';
 import InstitutionDetails from '../InstitutionDetails/InstitutionDetails';
 import { SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
 import { useSearchParams } from 'react-router-dom';
-import { Institution } from '../../shared/nursery.interface';
+import { InstitutionListItem } from '../../shared/nursery.interface';
 
 export default function ListComponent() {
-	const { filteredInstitutions, selectedInstitution, setFilteredInstitutions, setSelectedInstitution } = useContext(InstitutionContext);
+	const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
+	const [filteredInstitutions, setFilteredInstitutions] = useState<InstitutionListItem[]>([]);
 	const [sortingParam, setSortingParam] = useState('');
 	const [queryParam, setQueryParam] = useSearchParams();
-	const [sortedInstitutions, setSortedInstitutions] = useState<Institution[]>([]);
 
 	useEffect(() => {
-		const sortedInstitutions = filteredInstitutions.sort((a, b) => {
-			switch (sortingParam) {
-				case 'price-inc':
-					return a.basicPricePerMonth - b.basicPricePerMonth;
-				case 'price-dec':
-					return b.basicPricePerMonth - a.basicPricePerMonth;
-				case 'name-inc':
-					return a.name.localeCompare(b.name);
-				case 'name-dec':
-					return b.name.localeCompare(a.name);
-				default:
-					return 0;
-			}
-		});
-		setSortedInstitutions([...sortedInstitutions]);
-	}, [sortingParam, filteredInstitutions, setFilteredInstitutions]);
+		const fetchInstitutions = async () => {
+			const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions`);
+			const institutions = await response.json();
+			setFilteredInstitutions(institutions);
+		};
+		fetchInstitutions();
+	}, [sortingParam, setFilteredInstitutions]);
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		setSortingParam(event.target.value);
 		setSelectedInstitution(null);
 	}, [setSelectedInstitution]);
 
-	const handleSelectedInstitutionChange = useCallback((institution: Institution) => {
-		queryParam.set('regNo', institution.operatingEntity.regNoPosition);
+	const handleSelectedInstitutionChange = useCallback((institution: InstitutionListItem) => {
+		queryParam.set('regNo', institution.regNo);
 		setQueryParam(queryParam);
-		setSelectedInstitution(institution);
+		//setSelectedInstitution(institution);
 	}, [queryParam, setQueryParam, setSelectedInstitution]);
 
 	const institutionQueryParam = queryParam.get('regNo');
 	if (institutionQueryParam) {
-		const institution = filteredInstitutions.find(institution => institution.operatingEntity.regNoPosition === institutionQueryParam);
-		if (institution) {
-			setSelectedInstitution(institution);
-		}
+		const institution = filteredInstitutions.find(institution => institution.regNo === institutionQueryParam);
+		// if (institution) {
+		// 	setSelectedInstitution(institution);
+		// }
 	}
 
 	if (selectedInstitution) {
@@ -60,7 +51,7 @@ export default function ListComponent() {
 		<Box>
 			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
 				<Typography variant='body2' color="text.secondary" gutterBottom>
-					Znaleziono {sortedInstitutions.length} instytucji
+					Znaleziono {filteredInstitutions.length} instytucji
 				</Typography>
 				<FormControl variant="standard" sx={{ m: 1, minWidth: 180 }}>
 					<InputLabel id="sorting-select-label">Sortowanie</InputLabel>
@@ -79,13 +70,13 @@ export default function ListComponent() {
 				</FormControl>
 			</Box>
 			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
-				{sortedInstitutions.map((institution, index) => (
+				{filteredInstitutions.map((institution, index) => (
 					<Box key={index} onClick={() => handleSelectedInstitutionChange(institution)}>
 						<ListComponentItem
 							key={index}
 							name={institution.name}
 							institutionType={institution.institutionType}
-							city={institution.address.city}
+							city={institution.city}
 							basicPricePerMonth={institution.basicPricePerMonth}
 							website={institution.website}
 							phone={institution.phone}

@@ -19,6 +19,18 @@ export interface Institution {
 	address: Address;
 }
 
+export interface InstitutionListItem {
+	regNo: string;
+	institutionType: InstitutionType;
+	name: string;
+	website: string;
+	email: string;
+	phone: string;
+	basicPricePerMonth: number;
+	isAdaptedToDisabledChildren: boolean;
+	city: string;
+}
+
 export enum InstitutionType {
 	NURSERY = 'NURSERY',
 	CHILDCLUB = 'CHILDCLUB'

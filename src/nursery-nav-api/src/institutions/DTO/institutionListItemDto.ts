@@ -3,6 +3,9 @@ import { InstitutionType } from "./institutionType";
 
 export class InstitutionListItemDto {
     @ApiProperty()
+    regNo: string;
+
+    @ApiProperty()
     institutionType: InstitutionType;
 
     @ApiProperty()

@@ -78,6 +78,7 @@ export class InstitutionsService {
 
     private mapToInstutionListItem(institution: InstitutionDto): InstitutionListItemDto {
         return {
+            regNo: institution.operatingEntity.regNoPosition,
             institutionType: institution.institutionType as InstitutionType,
             name: institution.name,
             website: institution.website,
