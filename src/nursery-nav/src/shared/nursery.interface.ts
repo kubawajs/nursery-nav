@@ -55,3 +55,11 @@ export interface Address {
 		longitude: number;
 	};
 }
+
+export interface InstitutionsResponse {
+	items: InstitutionListItem[];
+	pageIndex: number;
+	pageSize: number;
+	totalItems: number;
+	totalPages: number;
+}
