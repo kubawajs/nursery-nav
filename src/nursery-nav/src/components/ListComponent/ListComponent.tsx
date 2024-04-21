@@ -50,9 +50,12 @@ export default function ListComponent() {
 	return (
 		<Box>
 			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
-				<Typography variant='body2' color="text.secondary" gutterBottom>
-					Znaleziono {filteredInstitutions.length} instytucji
-				</Typography>
+				{filteredInstitutions && (
+					<Typography variant='body2' color="text.secondary" gutterBottom>
+						Znaleziono {filteredInstitutions.length} instytucji
+					</Typography>
+				)}
+
 				<FormControl variant="standard" sx={{ m: 1, minWidth: 180 }}>
 					<InputLabel id="sorting-select-label">Sortowanie</InputLabel>
 					<Select
@@ -70,7 +73,7 @@ export default function ListComponent() {
 				</FormControl>
 			</Box>
 			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
-				{filteredInstitutions.map((institution, index) => (
+				{filteredInstitutions && filteredInstitutions.map((institution, index) => (
 					<Box key={index} onClick={() => handleSelectedInstitutionChange(institution)}>
 						<ListComponentItem
 							key={index}
