@@ -1,4 +1,4 @@
-import { Box, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
+import { Box, CircularProgress, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
 import { ReactNode, useCallback, useContext, useEffect, useState } from 'react';
 import { InstitutionContext } from '../../App';
 import { ListComponentItem } from './ListComponentItem';
@@ -6,21 +6,21 @@ import InstitutionDetails from '../InstitutionDetails/InstitutionDetails';
 import { SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
 import { useSearchParams } from 'react-router-dom';
 import { InstitutionListItem } from '../../shared/nursery.interface';
+import useFetch from '../../shared/API/useFetch';
 
 export default function ListComponent() {
 	const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
-	const [filteredInstitutions, setFilteredInstitutions] = useState<InstitutionListItem[]>([]);
 	const [sortingParam, setSortingParam] = useState('');
 	const [queryParam, setQueryParam] = useSearchParams();
 
+	const { data, isLoading } = useFetch(`${process.env.REACT_APP_API_URL}/institutions`) as { data: { items: InstitutionListItem[] } | null, isLoading: boolean };
+	const [institutions, setInstitutions] = useState<InstitutionListItem[] | null>();
+
 	useEffect(() => {
-		const fetchInstitutions = async () => {
-			const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions`);
-			const institutions = await response.json();
-			setFilteredInstitutions(institutions);
-		};
-		fetchInstitutions();
-	}, [sortingParam, setFilteredInstitutions]);
+		if (data) {
+			setInstitutions(data.items as InstitutionListItem[]);
+		}
+	}, [data]);
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		setSortingParam(event.target.value);
@@ -49,10 +49,16 @@ export default function ListComponent() {
 
 	return (
 		<Box>
+			{isLoading &&
+				<Box p={10} display='flex' justifyContent='center' alignItems='center'>
+					<CircularProgress />
+				</Box>
+			}
+
 			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
-				{filteredInstitutions && (
+				{institutions && (
 					<Typography variant='body2' color="text.secondary" gutterBottom>
-						Znaleziono {filteredInstitutions.length} instytucji
+						Znaleziono {institutions.length} instytucji
 					</Typography>
 				)}
 
@@ -73,7 +79,7 @@ export default function ListComponent() {
 				</FormControl>
 			</Box>
 			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
-				{filteredInstitutions && filteredInstitutions.map((institution, index) => (
+				{institutions && institutions.length > 0 && institutions.map((institution, index) => (
 					<Box key={index} onClick={() => handleSelectedInstitutionChange(institution)}>
 						<ListComponentItem
 							key={index}
