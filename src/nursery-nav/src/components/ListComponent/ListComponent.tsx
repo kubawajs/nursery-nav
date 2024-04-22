@@ -1,26 +1,58 @@
 import { Box, CircularProgress, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
-import { ReactNode, useCallback, useContext, useEffect, useState } from 'react';
+import { ReactNode, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { InstitutionContext } from '../../App';
 import { ListComponentItem } from './ListComponentItem';
 import InstitutionDetails from '../InstitutionDetails/InstitutionDetails';
 import { SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
 import { useSearchParams } from 'react-router-dom';
 import { InstitutionListItem } from '../../shared/nursery.interface';
-import useFetch from '../../shared/API/useFetch';
 
 export default function ListComponent() {
 	const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
 	const [sortingParam, setSortingParam] = useState('');
 	const [queryParam, setQueryParam] = useSearchParams();
 
-	const { data, isLoading } = useFetch(`${process.env.REACT_APP_API_URL}/institutions`) as { data: { items: InstitutionListItem[] } | null, isLoading: boolean };
-	const [institutions, setInstitutions] = useState<InstitutionListItem[] | null>();
+	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
+
+	const [pageNum, setPageNum] = useState(1);
+	const [totalPages, setTotalPages] = useState(1);
+	const [totalItems, setTotalItems] = useState(1);
+	const [loading, setLoading] = useState(true);
+	const bottom = useRef(null);
 
 	useEffect(() => {
-		if (data) {
-			setInstitutions(data.items as InstitutionListItem[]);
+		async function fetchInstitutions() {
+			setLoading(true);
+			const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}`);
+			const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
+			setInstitutions(data.items);
+			setTotalItems(data.totalItems);
+			setTotalPages(data.totalPages);
+			setLoading(false);
 		}
-	}, [data]);
+		fetchInstitutions();
+	}, [pageNum]);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver((entries) => {
+			if (entries[0].isIntersecting) {
+				const fetchMoreInstitutions = async () => {
+					setPageNum(pageNum + 1);
+					if (pageNum >= totalPages) return;
+
+					setLoading(true);
+					const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}`);
+					const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
+					setInstitutions((institutions) => [...institutions, ...data.items]);
+					setLoading(false);
+				};
+				fetchMoreInstitutions();
+			}
+		});
+		if (bottom.current) {
+			observer.observe(bottom.current);
+		}
+	}, [pageNum, totalPages]);
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		setSortingParam(event.target.value);
@@ -49,16 +81,10 @@ export default function ListComponent() {
 
 	return (
 		<Box>
-			{isLoading &&
-				<Box p={10} display='flex' justifyContent='center' alignItems='center'>
-					<CircularProgress />
-				</Box>
-			}
-
 			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
 				{institutions && (
 					<Typography variant='body2' color="text.secondary" gutterBottom>
-						Znaleziono {institutions.length} instytucji
+						Znaleziono {totalItems} instytucji
 					</Typography>
 				)}
 
@@ -94,7 +120,13 @@ export default function ListComponent() {
 						/>
 					</Box>
 				))}
+				<div ref={bottom} />
 			</List>
+			{loading &&
+				<Box p={10} display='flex' justifyContent='center' alignItems='center'>
+					<CircularProgress />
+				</Box>
+			}
 		</Box >
 	);
 }
