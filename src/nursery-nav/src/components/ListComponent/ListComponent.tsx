@@ -13,46 +13,59 @@ export default function ListComponent() {
 	const [queryParam, setQueryParam] = useSearchParams();
 
 	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
-
-	const [pageNum, setPageNum] = useState(1);
+	const [loading, setLoading] = useState(true);
+	const [pageNum, setPageNum] = useState(2);
 	const [totalPages, setTotalPages] = useState(1);
 	const [totalItems, setTotalItems] = useState(1);
-	const [loading, setLoading] = useState(true);
-	const bottom = useRef(null);
+	const loaderRef = useRef(null);
 
-	useEffect(() => {
-		async function fetchInstitutions() {
-			setLoading(true);
-			const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}`);
-			const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
-			setInstitutions(data.items);
-			setTotalItems(data.totalItems);
-			setTotalPages(data.totalPages);
-			setLoading(false);
-		}
-		fetchInstitutions();
-	}, [pageNum]);
+	const fetchInstitutions = useCallback(async () => {
+		if (loading || pageNum > totalPages) return;
+
+		setLoading(true);
+		const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}`);
+		const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
+		setInstitutions((prevInstitutions) => [...prevInstitutions, ...data.items]);
+		setPageNum((prevPageNum) => prevPageNum + 1);
+		setLoading(false);
+	}, [pageNum, loading, totalPages]);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
-			if (entries[0].isIntersecting) {
-				const fetchMoreInstitutions = async () => {
-					setPageNum(pageNum + 1);
-					if (pageNum >= totalPages) return;
-
-					setLoading(true);
-					const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}`);
-					const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
-					setInstitutions((institutions) => [...institutions, ...data.items]);
-					setLoading(false);
-				};
-				fetchMoreInstitutions();
+			const target = entries[0];
+			if (target.isIntersecting) {
+				fetchInstitutions();
 			}
 		});
-		if (bottom.current) {
-			observer.observe(bottom.current);
+
+		if (loaderRef.current) {
+			observer.observe(loaderRef.current);
 		}
-	}, [pageNum, totalPages]);
+
+		return () => {
+			if (loaderRef.current) {
+				observer.unobserve(loaderRef.current);
+			}
+		};
+	}, [fetchInstitutions]);
+
+	useEffect(() => {
+		const getData = async () => {
+			setLoading(true);
+			try {
+				const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions`);
+				const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
+				setInstitutions(data.items);
+				setTotalItems(data.totalItems);
+				setTotalPages(data.totalPages);
+			} catch (error) {
+				console.log(error);
+			}
+			setLoading(false);
+		};
+
+		getData();
+	}, []);
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		setSortingParam(event.target.value);
@@ -120,13 +133,14 @@ export default function ListComponent() {
 						/>
 					</Box>
 				))}
-				<div ref={bottom} />
+				<div ref={loaderRef}>
+					{loading &&
+						<Box p={10} display='flex' justifyContent='center' alignItems='center'>
+							<CircularProgress />
+						</Box>
+					}
+				</div>
 			</List>
-			{loading &&
-				<Box p={10} display='flex' justifyContent='center' alignItems='center'>
-					<CircularProgress />
-				</Box>
-			}
 		</Box >
 	);
 }
