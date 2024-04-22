@@ -38,13 +38,14 @@ export default function ListComponent() {
 			}
 		});
 
-		if (loaderRef.current) {
-			observer.observe(loaderRef.current);
+		const bottom = loaderRef.current;
+		if (bottom) {
+			observer.observe(bottom);
 		}
 
 		return () => {
-			if (loaderRef.current) {
-				observer.unobserve(loaderRef.current);
+			if (bottom) {
+				observer.unobserve(bottom);
 			}
 		};
 	}, [fetchInstitutions]);
