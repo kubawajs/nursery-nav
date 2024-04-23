@@ -103,8 +103,12 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 
 #### Frontend
 
-* [ ] Connection to the API
-* [ ] Infinite scroll
+* [x] Connection to the API
+* [x] Infinite scroll
+* [ ] Sorting with API
+* [ ] Filtering with API
+* [ ] Caching
+* [ ] About page
 
 #### API
 
@@ -112,14 +116,16 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Swagger `/api`
 * [x] GET all institutions
 * [x] GET institution details
+* [ ] GET location pins
 * [x] Sorting
 * [ ] Autocomplete endpoint
 * [ ] Filtering
 * [x] Pagination
 * [x] CICD
 * [x] Live URL
-* [ ] DB data source
 * [x] CORS
+* [ ] Automate data update process
+* [ ] Data update with new file
 
 ### Phase 3
 
@@ -131,6 +137,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 #### API
 
 * [ ] CSV import
+* [ ] DB data source
 
 ## Data source
 

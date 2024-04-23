@@ -9,7 +9,7 @@ import { InstitutionListItem } from '../../shared/nursery.interface';
 
 export default function ListComponent() {
 	const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
-	const [sortingParam, setSortingParam] = useState('');
+	const [sortingParam, setSortingParam] = useState('name-asc');
 	const [queryParam, setQueryParam] = useSearchParams();
 
 	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
@@ -23,12 +23,12 @@ export default function ListComponent() {
 		if (loading || pageNum > totalPages) return;
 
 		setLoading(true);
-		const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}`);
+		const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}&sort=${sortingParam}`);
 		const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
 		setInstitutions((prevInstitutions) => [...prevInstitutions, ...data.items]);
 		setPageNum((prevPageNum) => prevPageNum + 1);
 		setLoading(false);
-	}, [pageNum, loading, totalPages]);
+	}, [pageNum, sortingParam, loading, totalPages]);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
@@ -54,7 +54,7 @@ export default function ListComponent() {
 		const getData = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions`);
+				const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?sort=${sortingParam}`);
 				const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
 				setInstitutions(data.items);
 				setTotalItems(data.totalItems);
@@ -66,7 +66,7 @@ export default function ListComponent() {
 		};
 
 		getData();
-	}, []);
+	}, [sortingParam]);
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		setSortingParam(event.target.value);
@@ -111,10 +111,10 @@ export default function ListComponent() {
 						label="Sortowanie"
 						onChange={handleChange}
 					>
-						<MenuItem value={'price-inc'}><TrendingUp /> Cena rosnąco</MenuItem>
-						<MenuItem value={'price-dec'}><TrendingDown /> Cena malejąco</MenuItem>
-						<MenuItem value={'name-inc'}><SortByAlpha /> Nazwa rosnąco</MenuItem>
-						<MenuItem value={'name-dec'}><SortByAlpha /> Nazwa malejąco</MenuItem>
+						<MenuItem value={'price-asc'}><TrendingUp /> Cena rosnąco</MenuItem>
+						<MenuItem value={'price-desc'}><TrendingDown /> Cena malejąco</MenuItem>
+						<MenuItem value={'name-asc'}><SortByAlpha /> Nazwa rosnąco</MenuItem>
+						<MenuItem value={'name-desc'}><SortByAlpha /> Nazwa malejąco</MenuItem>
 					</Select>
 				</FormControl>
 			</Box>
