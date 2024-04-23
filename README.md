@@ -105,7 +105,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 
 * [x] Connection to the API
 * [x] Infinite scroll
-* [ ] Sorting with API
+* [x] Sorting with API
 * [ ] Filtering with API
 * [ ] Caching
 * [ ] About page
@@ -116,7 +116,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Swagger `/api`
 * [x] GET all institutions
 * [x] GET institution details
-* [ ] GET location pins
+* [x] GET locations
 * [x] Sorting
 * [ ] Autocomplete endpoint
 * [ ] Filtering
