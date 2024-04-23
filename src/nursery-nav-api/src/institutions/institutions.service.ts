@@ -4,6 +4,7 @@ import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 import { InstitutionType } from './DTO/institutionType';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
+import { env } from 'process';
 
 @Injectable()
 export class InstitutionsService {
@@ -51,7 +52,7 @@ export class InstitutionsService {
 
     private async loadData() {
         try {
-            const data = require('../../data/test-data-100.json');
+            const data = require(env.DATA_PATH);
             this.institutions = data as InstitutionDto[];
         } catch (error) {
             console.error('Error loading data:', error);

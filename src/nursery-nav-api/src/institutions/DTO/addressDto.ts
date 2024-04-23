@@ -12,10 +12,4 @@ export class AddressDto {
 
     @ApiProperty()
     fullAddress: string;
-
-    @ApiProperty()
-    pin: {
-        latitude: number;
-        longitude: number;
-    };
 }
