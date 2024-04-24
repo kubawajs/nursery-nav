@@ -16,7 +16,7 @@ export class LocationsService {
 
     private async loadData() {
         try {
-            const data = require(env.DATA_PATH);
+            const data = require('../../data/test-data-1000.json');
             this.locations = data.map((location: { operatingEntity: { regNoPosition: string; }; address: { pin: { longitude: number; latitude: number; }; }; }) => {
                 return {
                     regNo: location.operatingEntity.regNoPosition,
