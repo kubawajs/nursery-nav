@@ -7,6 +7,7 @@ import {
     Typography
 } from '@mui/material';
 import { Accessible, FmdGood, Language, Mail, Phone } from '@mui/icons-material';
+import { InstitutionType } from '../../shared/nursery.interface';
 
 interface ListComponentItemProps {
     name: string;
@@ -20,9 +21,9 @@ interface ListComponentItemProps {
 }
 
 export function ListComponentItem(props: ListComponentItemProps) {
-    const mainColor = props.institutionType === 'Żłobek' ? "primary" : "secondary";
-    const imagePath = props.institutionType === 'Żłobek' ? '/images/nursery-placeholder.jpg' : '/images/child-club-placeholder.jpg';
-    const imageAlt = props.institutionType === 'Żłobek'
+    const mainColor = props.institutionType === InstitutionType.NURSERY ? "primary" : "secondary";
+    const imagePath = props.institutionType === InstitutionType.NURSERY ? '/images/nursery-placeholder.jpg' : '/images/child-club-placeholder.jpg';
+    const imageAlt = props.institutionType === InstitutionType.NURSERY
         ? 'Photo by <a href="https://unsplash.com/@charlesdeluvio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">charlesdeluvio</a> on < a href = "https://unsplash.com/photos/white-sheep-baby-mobile-2vfwTakDTIo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"> Unsplash</a >'
         : 'Photo by <a href="https://unsplash.com/@babynatur?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Baby Natur</a> on <a href="https://unsplash.com/photos/five-assorted-color-racing-car-toys-Hld-gd-WN7k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>';
 
