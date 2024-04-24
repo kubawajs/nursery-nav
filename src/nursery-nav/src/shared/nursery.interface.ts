@@ -63,3 +63,11 @@ export interface InstitutionsResponse {
 	totalItems: number;
 	totalPages: number;
 }
+
+export interface LocationResponse {
+	institutionType: InstitutionType;
+	regNo: string;
+	name: string;
+	longitude: number;
+	latitude: number;
+}

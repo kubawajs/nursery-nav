@@ -1,13 +1,24 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
 import { Container } from '@mui/material';
 import MapPin from '../MapPin/MapPin';
-import { useContext } from 'react';
-import { InstitutionContext } from '../../App';
+import { useEffect, useState } from 'react';
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import './MapComponent.css';
+import { LocationResponse } from '../../shared/nursery.interface';
 
 export default function MapComponent() {
-	const { institutions } = useContext(InstitutionContext);
+	const [locations, setLocations] = useState<LocationResponse[]>([]);
+
+	const fetchLocations = async () => {
+		const res = await fetch(`${process.env.REACT_APP_API_URL}/locations`);
+		const data = await res.json() as LocationResponse[];
+		setLocations(data);
+	};
+
+	useEffect(() => {
+		fetchLocations();
+	}, []);
+
 	return (
 		<Container style={{ padding: 0 }}>
 			<MapContainer
@@ -26,12 +37,14 @@ export default function MapComponent() {
 					className="marker-cluster-group"
 					polygonOptions={{ opacity: 0 }}
 					chunkedLoading>
-					{institutions.map((institution, index) => (
+					{locations.map((location) => (
 						<MapPin
-							key={index}
-							name={institution.name}
-							pin={institution.address.pin}
-							institution={institution}
+							key={location.regNo}
+							regNo={location.regNo}
+							name={location.name}
+							latitude={location.latitude}
+							longitude={location.longitude}
+							institutionType={location.institutionType}
 						/>
 					))}
 				</MarkerClusterGroup>
