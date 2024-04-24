@@ -106,6 +106,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Connection to the API
 * [x] Infinite scroll
 * [x] Sorting with API
+* [x] Connect map with API
 * [ ] Filtering with API
 * [ ] Caching
 * [ ] About page

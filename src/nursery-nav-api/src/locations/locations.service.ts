@@ -25,7 +25,7 @@ export class LocationsService {
                 return {
                     institutionType: location.institutionType,
                     regNo: location.operatingEntity.regNoPosition,
-                    name: location.name,
+                    name: location.name, /* TODO: will be removed later */
                     longitude: location.address.pin.longitude,
                     latitude: location.address.pin.latitude
                 };

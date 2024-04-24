@@ -12,7 +12,7 @@ import { Box, Typography } from '@mui/material';
 export interface MapPinProps {
 	institutionType: InstitutionType;
 	regNo: string;
-	name: string;
+	name: string; /* TODO: will be retrieved from selected institution context */
 	// institution: Institution;
 	latitude: number;
 	longitude: number;
