@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InstitutionDto } from './DTO/institutionDto';
 import { InstitutionListItemDto } from './DTO/institutionListItemDto';
-import { InstitutionType } from './DTO/institutionType';
+import { InstitutionType } from '../shared/models/institutionType';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
 import { env } from 'process';
