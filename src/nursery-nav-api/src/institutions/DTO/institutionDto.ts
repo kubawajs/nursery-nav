@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { AddressDto } from "./addressDto";
-import { InstitutionType } from "./institutionType";
+import { InstitutionType } from "../../shared/models/institutionType";
 import { OperatingEntityDto } from "./operatingEntityDto";
 
 export class InstitutionDto {
