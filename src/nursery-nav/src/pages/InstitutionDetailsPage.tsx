@@ -6,7 +6,8 @@ export default function InstitutionDetailsPage() {
         <Grid container>
             <Grid item xs={12} sm={6}>
                 <InstitutionDetailsPage />
-            </Grid><Grid item xs={12} sm={6}>
+            </Grid>
+            <Grid item xs={12} sm={6}>
                 <MapComponent />
             </Grid>
         </Grid>

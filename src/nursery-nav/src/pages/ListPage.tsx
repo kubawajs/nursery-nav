@@ -7,7 +7,8 @@ export default function ListPage() {
         <Grid container>
             <Grid item xs={12} sm={6}>
                 <ListComponent />
-            </Grid><Grid item xs={12} sm={6}>
+            </Grid>
+            <Grid item xs={12} sm={6}>
                 <MapComponent />
             </Grid>
         </Grid>
