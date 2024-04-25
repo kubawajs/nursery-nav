@@ -6,7 +6,7 @@ import { FamilyRestroom } from '@mui/icons-material';
 
 export default function Navigation() {
 	return (
-		<AppBar position="static">
+		<AppBar position="sticky">
 			<Container maxWidth="xl">
 				<Toolbar>
 					<FamilyRestroom sx={{ display: 'flex', mr: 1 }} />

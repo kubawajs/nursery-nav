@@ -1,4 +1,11 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Stack, Typography } from "@mui/material";
+import {
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
+    Box,
+    Stack,
+    Typography
+} from "@mui/material";
 import Filters from "./Filters";
 import { FilterList } from "@mui/icons-material";
 
