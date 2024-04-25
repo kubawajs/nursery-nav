@@ -22,7 +22,7 @@ export default function Navigation() {
 							textDecoration: 'none'
 						}}
 					>
-						NurseryNav
+						{process.env.REACT_APP_NAME}
 					</Typography>
 				</Toolbar>
 			</Container>

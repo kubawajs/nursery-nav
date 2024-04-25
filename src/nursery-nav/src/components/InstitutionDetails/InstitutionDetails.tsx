@@ -4,7 +4,7 @@ import InstitutionDetailsDescription from './InstitutionDetailsDescription';
 import { useContext, useEffect } from 'react';
 import InstitutionDetailsTop from './InstitutionDetailsTop';
 import { useSearchParams } from 'react-router-dom';
-import { InstitutionContext } from '../../App';
+import { InstitutionContext } from '../Layout/Layout';
 
 export default function InstitutionDetails() {
 	const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);

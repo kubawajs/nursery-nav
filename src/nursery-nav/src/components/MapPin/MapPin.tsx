@@ -3,7 +3,7 @@ import { Crib } from '@mui/icons-material';
 import { divIcon } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { useContext, useEffect } from 'react';
-import { InstitutionContext } from '../../App';
+import { InstitutionContext } from '../Layout/Layout';
 import { Institution, InstitutionType } from '../../shared/nursery.interface';
 import './MapPin.css';
 import { useSearchParams } from 'react-router-dom';
@@ -12,15 +12,13 @@ import { Box, Typography } from '@mui/material';
 export interface MapPinProps {
 	institutionType: InstitutionType;
 	regNo: string;
-	name: string; /* TODO: will be retrieved from selected institution context */
-	// institution: Institution;
 	latitude: number;
 	longitude: number;
 }
 
 export default function MapPin(props: MapPinProps) {
 	const map = useMap();
-	const { selectedInstitution } = useContext(InstitutionContext);
+	const { selectedInstitution, setSelectedInstitutionRegNo } = useContext(InstitutionContext);
 	const [queryParam, setQueryParam] = useSearchParams();
 	const zoomOnInstitution = (institution: Institution) => {
 		map.setView([institution.address.pin.latitude, institution.address.pin.longitude], 18, {
@@ -42,7 +40,7 @@ export default function MapPin(props: MapPinProps) {
 		<Marker
 			eventHandlers={{
 				click: () => {
-					//setSelectedInstitution(props.institution);
+					setSelectedInstitutionRegNo(props.regNo);
 					queryParam.set('regNo', props.regNo);
 					setQueryParam(queryParam);
 				}
@@ -62,7 +60,8 @@ export default function MapPin(props: MapPinProps) {
 			<Popup>
 				<Box>
 					<Typography variant='subtitle1'>{props.institutionType}</Typography>
-					<Typography variant='h5'>{props.name}</Typography>
+					{selectedInstitution && <Typography variant='h5'>{selectedInstitution?.name}</Typography>}
+					{selectedInstitution && <Typography variant='body1'>{selectedInstitution?.address.fullAddress}</Typography>}
 				</Box>
 			</Popup>
 		</Marker>

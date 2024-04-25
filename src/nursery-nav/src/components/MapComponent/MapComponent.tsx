@@ -41,7 +41,6 @@ export default function MapComponent() {
 						<MapPin
 							key={index}
 							regNo={location.regNo}
-							name={location.name}
 							latitude={location.latitude}
 							longitude={location.longitude}
 							institutionType={location.institutionType}

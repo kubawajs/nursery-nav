@@ -1,6 +1,6 @@
 import { Box, CircularProgress, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
 import { ReactNode, useCallback, useContext, useEffect, useRef, useState } from 'react';
-import { InstitutionContext } from '../../App';
+import { InstitutionContext } from '../Layout/Layout';
 import { ListComponentItem } from './ListComponentItem';
 import InstitutionDetails from '../InstitutionDetails/InstitutionDetails';
 import { SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';

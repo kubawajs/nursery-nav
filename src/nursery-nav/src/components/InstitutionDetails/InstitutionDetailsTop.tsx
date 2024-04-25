@@ -1,7 +1,7 @@
 import { Breadcrumbs, Typography, Button, Box, Stack } from "@mui/material";
 import { Institution, InstitutionType } from "../../shared/nursery.interface";
 import { useContext } from "react";
-import { InstitutionContext } from "../../App";
+import { InstitutionContext } from '../Layout/Layout';
 import { useSearchParams } from "react-router-dom";
 
 export default function InstitutionDetailsTop(institution: Institution) {

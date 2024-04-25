@@ -1,7 +1,7 @@
 import { Autocomplete, TextField, FormGroup, FormControlLabel, Checkbox } from "@mui/material";
 import RangeSlider from "./RangeSlider";
 import { SyntheticEvent, useCallback, useContext, useEffect, useState } from "react";
-import { InstitutionContext } from "../../App";
+import { InstitutionContext } from '../Layout/Layout';
 import { useSearchParams } from "react-router-dom";
 import { InstitutionType } from "../../shared/nursery.interface";
 
