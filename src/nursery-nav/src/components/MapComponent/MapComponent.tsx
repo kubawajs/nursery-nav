@@ -37,9 +37,9 @@ export default function MapComponent() {
 					className="marker-cluster-group"
 					polygonOptions={{ opacity: 0 }}
 					chunkedLoading>
-					{locations.map((location) => (
+					{locations.map((location, index) => (
 						<MapPin
-							key={location.regNo}
+							key={index}
 							regNo={location.regNo}
 							name={location.name}
 							latitude={location.latitude}

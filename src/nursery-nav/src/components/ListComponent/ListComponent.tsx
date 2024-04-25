@@ -8,7 +8,7 @@ import { useSearchParams } from 'react-router-dom';
 import { InstitutionListItem } from '../../shared/nursery.interface';
 
 export default function ListComponent() {
-	const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
+	const { selectedInstitutionRegNo, setSelectedInstitution, setSelectedInstitutionRegNo } = useContext(InstitutionContext);
 	const [sortingParam, setSortingParam] = useState('name-asc');
 	const [queryParam, setQueryParam] = useSearchParams();
 
@@ -71,23 +71,23 @@ export default function ListComponent() {
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		setSortingParam(event.target.value);
 		setSelectedInstitution(null);
-	}, [setSelectedInstitution]);
+		setSelectedInstitutionRegNo(null);
+	}, [setSelectedInstitution, setSelectedInstitutionRegNo]);
 
 	const handleSelectedInstitutionChange = useCallback((institution: InstitutionListItem) => {
 		queryParam.set('regNo', institution.regNo);
 		setQueryParam(queryParam);
-		//setSelectedInstitution(institution);
-	}, [queryParam, setQueryParam]);
+		setSelectedInstitutionRegNo(institution.regNo);
+	}, [queryParam, setQueryParam, setSelectedInstitutionRegNo]);
 
 	const institutionQueryParam = queryParam.get('regNo');
 	if (institutionQueryParam) {
-		//const institution = filteredInstitutions.find(institution => institution.regNo === institutionQueryParam);
-		// if (institution) {
-		// 	setSelectedInstitution(institution);
-		// }
+		console.log('institutionQueryParam', institutionQueryParam);
+		setSelectedInstitutionRegNo(institutionQueryParam);
 	}
 
-	if (selectedInstitution) {
+	if (selectedInstitutionRegNo) {
+		console.log('selectedInstitutionRegNo', selectedInstitutionRegNo);
 		return (
 			<InstitutionDetails />
 		);
