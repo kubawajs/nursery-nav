@@ -4,7 +4,6 @@ import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 import { InstitutionType } from '../shared/models/institutionType';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
-import { env } from 'process';
 
 @Injectable()
 export class InstitutionsService {
@@ -14,7 +13,8 @@ export class InstitutionsService {
         this.loadData();
     }
 
-    async findAll(page: number, size: number, sort: SortParams): Promise<PaginatedResult<InstitutionListItemDto>> {
+    async findAll(page: number, size: number, sort: SortParams, city?: string, priceMin?: number, priceMax?: number)
+        : Promise<PaginatedResult<InstitutionListItemDto>> {
         size = this.setPageSize(size);
         const totalPages = this.institutions?.length ? Math.ceil(this.institutions.length / size) : 0;
         page = this.setPage(page, totalPages);
@@ -27,7 +27,17 @@ export class InstitutionsService {
             totalPages: totalPages
         };
         if (this.institutions) {
-            const institutionsArray = Array.from(this.institutions);
+            let institutionsArray = Array.from(this.institutions);
+            if (city) {
+                institutionsArray = institutionsArray.filter((institution) => institution.address.city.toLowerCase().indexOf(city.toLowerCase()) !== -1);
+            }
+            if (priceMin) {
+                console.log(priceMin);
+                institutionsArray = institutionsArray.filter((institution) => institution.basicPricePerMonth >= priceMin);
+            }
+            if (priceMax) {
+                institutionsArray = institutionsArray.filter((institution) => institution.basicPricePerMonth <= priceMax);
+            }
             const sortedInstutions = institutionsArray.sort((a, b) => this.sortMethod(sort, a, b));
             const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
