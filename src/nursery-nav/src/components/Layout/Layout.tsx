@@ -1,6 +1,5 @@
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "../../shared/theme";
-import FiltersBar from "../Filters/FiltersBar";
 import React, { Suspense } from "react";
 import { Institution } from "../../shared/nursery.interface";
 import Navigation from "../Navigation/Navigation";
@@ -22,7 +21,6 @@ export default function Layout() {
         <InstitutionContext.Provider value={{ selectedInstitutionRegNo, setSelectedInstitutionRegNo, selectedInstitution, setSelectedInstitution }}>
             <ThemeProvider theme={theme}>
                 <Navigation />
-                <FiltersBar />
                 <Suspense fallback={<CircularProgress />}>
                     <Outlet />
                 </Suspense>

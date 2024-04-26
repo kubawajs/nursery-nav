@@ -22,11 +22,11 @@ export default function MapComponent() {
 	return (
 		<Container style={{ padding: 0 }}>
 			<MapContainer
-				center={[52.0, 19.14]}
+				center={[52.5, 19.14]}
 				zoom={7}
 				scrollWheelZoom={true}
 				zoomControl={false}
-				style={{ position: 'fixed', top: 0, bottom: 0, width: '100%' }}
+				style={{ position: 'fixed', top: 0, bottom: 0, width: '50%' }}
 			>
 				<TileLayer
 					attribution='Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors'
