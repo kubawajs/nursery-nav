@@ -1,11 +1,5 @@
 @import 'leaflet/dist/leaflet.css';
 
-.leaflet-container {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-}
-
 .marker-cluster-medium {
 	background-color: #98d9ff;
 	color: #333;

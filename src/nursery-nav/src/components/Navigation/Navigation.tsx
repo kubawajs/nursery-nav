@@ -6,7 +6,7 @@ import { FamilyRestroom } from '@mui/icons-material';
 
 export default function Navigation() {
 	return (
-		<AppBar position="static">
+		<AppBar position="sticky">
 			<Container maxWidth="xl">
 				<Toolbar>
 					<FamilyRestroom sx={{ display: 'flex', mr: 1 }} />
@@ -22,7 +22,7 @@ export default function Navigation() {
 							textDecoration: 'none'
 						}}
 					>
-						NurseryNav
+						{process.env.REACT_APP_NAME}
 					</Typography>
 				</Toolbar>
 			</Container>
