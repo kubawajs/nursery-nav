@@ -1,10 +1,17 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Stack, Typography } from "@mui/material";
+import {
+    Accordion,
+    AccordionDetails,
+    AccordionSummary,
+    Box,
+    Stack,
+    Typography
+} from "@mui/material";
 import Filters from "./Filters";
 import { FilterList } from "@mui/icons-material";
 
 export default function FiltersBar() {
     return (
-        <Box>
+        <Box boxShadow={3}>
             <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                 <Stack
                     spacing={2}
