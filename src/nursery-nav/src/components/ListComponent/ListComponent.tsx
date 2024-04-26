@@ -1,16 +1,11 @@
 import { Box, CircularProgress, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
-import { ReactNode, useCallback, useContext, useEffect, useRef, useState } from 'react';
-import { InstitutionContext } from '../Layout/Layout';
+import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { ListComponentItem } from './ListComponentItem';
-import InstitutionDetails from '../InstitutionDetails/InstitutionDetails';
 import { SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
-import { useSearchParams } from 'react-router-dom';
 import { InstitutionListItem } from '../../shared/nursery.interface';
 
 export default function ListComponent() {
-	const { selectedInstitutionRegNo, setSelectedInstitution, setSelectedInstitutionRegNo } = useContext(InstitutionContext);
 	const [sortingParam, setSortingParam] = useState('name-asc');
-	const [queryParam, setQueryParam] = useSearchParams();
 
 	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
 	const [loading, setLoading] = useState(true);
@@ -70,28 +65,7 @@ export default function ListComponent() {
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		setSortingParam(event.target.value);
-		setSelectedInstitution(null);
-		setSelectedInstitutionRegNo(null);
-	}, [setSelectedInstitution, setSelectedInstitutionRegNo]);
-
-	const handleSelectedInstitutionChange = useCallback((institution: InstitutionListItem) => {
-		queryParam.set('regNo', institution.regNo);
-		setQueryParam(queryParam);
-		setSelectedInstitutionRegNo(institution.regNo);
-	}, [queryParam, setQueryParam, setSelectedInstitutionRegNo]);
-
-	const institutionQueryParam = queryParam.get('regNo');
-	if (institutionQueryParam) {
-		console.log('institutionQueryParam', institutionQueryParam);
-		setSelectedInstitutionRegNo(institutionQueryParam);
-	}
-
-	if (selectedInstitutionRegNo) {
-		console.log('selectedInstitutionRegNo', selectedInstitutionRegNo);
-		return (
-			<InstitutionDetails />
-		);
-	}
+	}, []);
 
 	return (
 		<Box>
@@ -120,10 +94,11 @@ export default function ListComponent() {
 			</Box>
 			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
 				{institutions && institutions.length > 0 && institutions.map((institution, index) => (
-					<Box key={index} onClick={() => handleSelectedInstitutionChange(institution)}>
+					<Box key={index}>
 						<ListComponentItem
 							key={index}
 							name={institution.name}
+							regNo={encodeURIComponent(institution.regNo)}
 							institutionType={institution.institutionType}
 							city={institution.city}
 							basicPricePerMonth={institution.basicPricePerMonth}

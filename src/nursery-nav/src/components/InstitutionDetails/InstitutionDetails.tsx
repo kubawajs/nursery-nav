@@ -3,13 +3,12 @@ import InstitutionDetailsHeader from './InstitutionDetailsHeader';
 import InstitutionDetailsDescription from './InstitutionDetailsDescription';
 import { useContext, useEffect } from 'react';
 import InstitutionDetailsTop from './InstitutionDetailsTop';
-import { useSearchParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { InstitutionContext } from '../Layout/Layout';
 
 export default function InstitutionDetails() {
 	const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
-	const [queryParam] = useSearchParams();
-	const regNo = queryParam.get('regNo');
+	const { regNo } = useParams<{ regNo: string }>();
 
 	useEffect(() => {
 		const fetchInstitution = async () => {

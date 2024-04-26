@@ -1,21 +1,10 @@
 import { Breadcrumbs, Typography, Button, Box, Stack } from "@mui/material";
 import { Institution, InstitutionType } from "../../shared/nursery.interface";
-import { useContext } from "react";
-import { InstitutionContext } from '../Layout/Layout';
-import { useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import PathConstants from "../../shared/pathConstants";
 
 export default function InstitutionDetailsTop(institution: Institution) {
-    const { setSelectedInstitution } = useContext(InstitutionContext);
-    const [queryParam, setQueryParam] = useSearchParams();
     const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
-
-    function handleBackButton() {
-        return () => {
-            setSelectedInstitution(null);
-            queryParam.delete('regNo');
-            setQueryParam(queryParam);
-        };
-    }
 
     return (
         <Box p={1}>
@@ -25,9 +14,9 @@ export default function InstitutionDetailsTop(institution: Institution) {
                     <Typography color="text.light" variant="overline">{institution.address.county}</Typography>
                     <Typography color="text.primary" variant="overline">{institution.address.city}</Typography>
                 </Breadcrumbs>
-                <Button color={mainColor} onClick={handleBackButton()}>
-                    Powrót
-                </Button>
+                <Link to={PathConstants.HOME}>
+                    <Button color={mainColor}>Powrót</Button>
+                </Link>
             </Stack>
         </Box>
     );
