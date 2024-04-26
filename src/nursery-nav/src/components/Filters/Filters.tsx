@@ -1,17 +1,13 @@
-import { Autocomplete, TextField, FormGroup, FormControlLabel, Checkbox } from "@mui/material";
+import { FormGroup, FormControlLabel, Checkbox } from "@mui/material";
 import RangeSlider from "./RangeSlider";
-import { SyntheticEvent, useCallback, useContext, useEffect, useState } from "react";
-import { InstitutionContext } from '../Layout/Layout';
-import { useSearchParams } from "react-router-dom";
-import { InstitutionType } from "../../shared/nursery.interface";
+import { useEffect, useState } from "react";
 
 export default function Filters() {
     // const { institutions, setFilteredInstitutions, setSelectedInstitution } = useContext(InstitutionContext);
-    const [cityFilter, setCityFilter] = useState<string | null>(null);
+    const [cityFilter] = useState<string | null>(null);
     const [nurseryFilter, setNurseryFilter] = useState<boolean>(true);
     const [childClubFilter, setChildClubFilter] = useState<boolean>(true);
     const [priceFilter, setPriceFilter] = useState<number[]>([0, 5000]);
-    const [queryParam, setQueryParam] = useSearchParams();
     // const cities = institutions.map(institution => institution.address.city).filter((value, index, self) => self.indexOf(value) === index).sort();
     // const institutionsAutocomplete = institutions.map(institution => institution.name).filter((value, index, self) => self.indexOf(value) === index).sort();
 
