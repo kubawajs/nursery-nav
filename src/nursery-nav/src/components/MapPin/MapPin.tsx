@@ -6,8 +6,9 @@ import { useContext, useEffect } from 'react';
 import { InstitutionContext } from '../Layout/Layout';
 import { Institution, InstitutionType } from '../../shared/nursery.interface';
 import './MapPin.css';
-import { useSearchParams } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
+import { useNavigate, generatePath } from 'react-router-dom';
+import PathConstants from '../../shared/pathConstants';
 
 export interface MapPinProps {
 	institutionType: InstitutionType;
@@ -18,8 +19,8 @@ export interface MapPinProps {
 
 export default function MapPin(props: MapPinProps) {
 	const map = useMap();
-	const { selectedInstitution, setSelectedInstitutionRegNo } = useContext(InstitutionContext);
-	const [queryParam, setQueryParam] = useSearchParams();
+	const { selectedInstitution } = useContext(InstitutionContext);
+	const navigate = useNavigate();
 	const zoomOnInstitution = (institution: Institution) => {
 		map.setView([institution.address.pin.latitude, institution.address.pin.longitude], 18, {
 			animate: true
@@ -40,9 +41,8 @@ export default function MapPin(props: MapPinProps) {
 		<Marker
 			eventHandlers={{
 				click: () => {
-					setSelectedInstitutionRegNo(props.regNo);
-					queryParam.set('regNo', props.regNo);
-					setQueryParam(queryParam);
+					let regNo = encodeURIComponent(props.regNo);
+					navigate(generatePath(PathConstants.INSTITUTION_DETAILS, { regNo: regNo }));
 				}
 			}}
 			position={position}
@@ -57,13 +57,15 @@ export default function MapPin(props: MapPinProps) {
 				className: 'map-pin-div-icon',
 			})}
 		>
-			<Popup>
-				<Box>
-					<Typography variant='subtitle1'>{props.institutionType}</Typography>
-					{selectedInstitution && <Typography variant='h5'>{selectedInstitution?.name}</Typography>}
-					{selectedInstitution && <Typography variant='body1'>{selectedInstitution?.address.fullAddress}</Typography>}
-				</Box>
-			</Popup>
+			{selectedInstitution &&
+				<Popup>
+					<Box>
+						<Typography variant='subtitle1'>{props.institutionType}</Typography>
+						<Typography variant='h5'>{selectedInstitution?.name}</Typography>
+						<Typography variant='body1'>{selectedInstitution?.address.fullAddress}</Typography>
+					</Box>
+				</Popup>
+			}
 		</Marker>
 	);
 }

@@ -1,11 +1,14 @@
 import { Box, CircularProgress, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
-import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { ReactNode, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { ListComponentItem } from './ListComponentItem';
 import { SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
 import { InstitutionListItem } from '../../shared/nursery.interface';
+import { InstitutionContext } from '../Layout/Layout';
 
 export default function ListComponent() {
 	const [sortingParam, setSortingParam] = useState('name-asc');
+	const { setSelectedInstitution } = useContext(InstitutionContext);
+	setSelectedInstitution(null);
 
 	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
 	const [loading, setLoading] = useState(true);
