@@ -19,13 +19,11 @@ export class LocationsService {
         try {
             const data = require('../../data/test-data-1000.json');
             this.locations = data.map((location: {
-                name: string;
                 institutionType: InstitutionType; operatingEntity: { regNoPosition: string; }; address: { pin: { longitude: number; latitude: number; }; };
             }) => {
                 return {
                     institutionType: location.institutionType,
                     regNo: location.operatingEntity.regNoPosition,
-                    name: location.name, /* TODO: will be removed later */
                     longitude: location.address.pin.longitude,
                     latitude: location.address.pin.latitude
                 };
