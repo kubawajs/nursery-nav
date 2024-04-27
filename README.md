@@ -120,7 +120,8 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] GET locations
 * [x] Sorting
 * [ ] Autocomplete endpoint
-* [ ] Filtering
+* [ ] Cities/voivodeships endpoint
+* [x] Filtering
 * [x] Pagination
 * [x] CICD
 * [x] Live URL
