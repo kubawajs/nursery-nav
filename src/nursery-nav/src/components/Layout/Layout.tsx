@@ -8,15 +8,18 @@ import { CircularProgress, Grid } from "@mui/material";
 import FiltersBar from "../Filters/FiltersBar";
 
 export const InstitutionContext = React.createContext({
+    filtersQuery: '',
+    setFiltersQuery: (_query: string) => { },
     selectedInstitution: null as Institution | null,
     setSelectedInstitution: (_institution: Institution | null) => { },
 });
 
 export default function Layout() {
     const [selectedInstitution, setSelectedInstitution] = React.useState<Institution | null>(null);
+    const [filtersQuery, setFiltersQuery] = React.useState('');
 
     return (
-        <InstitutionContext.Provider value={{ selectedInstitution, setSelectedInstitution }}>
+        <InstitutionContext.Provider value={{ filtersQuery, setFiltersQuery, selectedInstitution, setSelectedInstitution }}>
             <ThemeProvider theme={theme}>
                 <Navigation />
                 <Grid container>

@@ -1,8 +1,11 @@
 import { FormGroup, FormControlLabel, Checkbox, Autocomplete, TextField } from "@mui/material";
 import RangeSlider from "./RangeSlider";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { InstitutionContext } from "../Layout/Layout";
 
 export default function Filters() {
+    const { setFiltersQuery } = useContext(InstitutionContext);
+
     const [cityFilter, setCityFilter] = useState<string | null>(null);
     const [voivodeshipFilter, setVoivodeshipFilter] = useState<string | null>(null);
     const [nurseryFilter, setNurseryFilter] = useState<boolean>(true);
@@ -12,27 +15,46 @@ export default function Filters() {
     const [voivodeships, setVoivodeships] = useState<string[]>([]);
 
     useEffect(() => {
+        const buildFiltersQuery = () => {
+            let query = '';
+            if (cityFilter) {
+                query += `city=${encodeURIComponent(cityFilter)}&`;
+            }
+            if (voivodeshipFilter) {
+                query += `voivodeship=${encodeURIComponent(voivodeshipFilter)}&`;
+            }
+            if (nurseryFilter) {
+                query += `nursery=${nurseryFilter}&`;
+            }
+            if (childClubFilter) {
+                query += `childClub=${childClubFilter}&`;
+            }
+            if (priceFilter) {
+                query += `priceMin=${priceFilter[0]}&priceMax=${priceFilter[1]}&`;
+            }
+            return query;
+        }
+
+        const query = buildFiltersQuery();
+        setFiltersQuery(query);
+        console.log(query);
+    }, [cityFilter, voivodeshipFilter, nurseryFilter, childClubFilter, priceFilter, setFiltersQuery]);
+
+    useEffect(() => {
         const fetchCities = async () => {
             const response = await fetch(`${process.env.REACT_APP_API_URL}/cities`);
-            const cities = await response.json() as { city: string, voivodeship: string }[];
-            setCities(cities.map(city => city.city));
+            const citiesResponse = await response.json() as { city: string, voivodeship: string }[];
+            const citiesUnique = citiesResponse.map(city => city.city)
+                .filter((city, index, self) => self.indexOf(city) === index);
+            setCities(citiesUnique);
 
-            const voivodeshipsUnique = cities.map(city => city.voivodeship)
+            const voivodeshipsUnique = citiesResponse.map(city => city.voivodeship)
                 .filter((voivodeship, index, self) => self.indexOf(voivodeship) === index)
                 .sort((a, b) => a.localeCompare(b));
             setVoivodeships(voivodeshipsUnique);
         };
         fetchCities();
-    }, [cities, setCities]);
-
-    // const setCurrentSelection = useCallback((_event: SyntheticEvent<Element, Event>, value: string | null) => {
-    //     const currentSelection = institutions.find(institution => institution.name === value);
-    //     if (currentSelection) {
-    //         queryParam.set('regNo', currentSelection.operatingEntity.regNoPosition);
-    //         setQueryParam(queryParam);
-    //         setSelectedInstitution(currentSelection);
-    //     }
-    // }, [institutions, queryParam, setQueryParam, setSelectedInstitution]);
+    }, [setCities]);
 
     return (
         <>
