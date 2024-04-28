@@ -7,7 +7,7 @@ import { InstitutionContext } from '../Layout/Layout';
 
 export default function ListComponent() {
 	const [sortingParam, setSortingParam] = useState('name-asc');
-	const { setSelectedInstitution } = useContext(InstitutionContext);
+	const { filtersQuery, setSelectedInstitution } = useContext(InstitutionContext);
 	setSelectedInstitution(null);
 
 	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
@@ -21,12 +21,12 @@ export default function ListComponent() {
 		if (loading || pageNum > totalPages) return;
 
 		setLoading(true);
-		const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}&sort=${sortingParam}`);
+		const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}&sort=${sortingParam}&${filtersQuery}`);
 		const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
 		setInstitutions((prevInstitutions) => [...prevInstitutions, ...data.items]);
 		setPageNum((prevPageNum) => prevPageNum + 1);
 		setLoading(false);
-	}, [pageNum, sortingParam, loading, totalPages]);
+	}, [pageNum, sortingParam, loading, totalPages, filtersQuery]);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
@@ -52,7 +52,7 @@ export default function ListComponent() {
 		const getData = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?sort=${sortingParam}`);
+				const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?sort=${sortingParam}&${filtersQuery}`);
 				const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
 				setInstitutions(data.items);
 				setTotalItems(data.totalItems);
@@ -64,7 +64,7 @@ export default function ListComponent() {
 		};
 
 		getData();
-	}, [sortingParam]);
+	}, [sortingParam, filtersQuery]);
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		setSortingParam(event.target.value);

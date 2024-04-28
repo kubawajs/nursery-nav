@@ -22,7 +22,7 @@ export default function RangeSlider({ handleChangeCommited }: { handleChangeComm
                     onChange={handleChange}
                     valueLabelDisplay="auto"
                     getAriaValueText={valuetext}
-                    max={3000}
+                    max={5000}
                     aria-labelledby="range-slider-label"
                     sx={{ maxWidth: '90%', marginLeft: '10px', marginRight: '12px' }}
                     onChangeCommitted={(_event, value) => handleChangeCommited(_event as Event, value as number[])}
