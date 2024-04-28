@@ -51,7 +51,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                             <Box>
                                 <Box display='flex' marginBottom={1} sx={{ justifyContent: 'space-between' }}>
                                     <Box>
-                                        <Chip label={props.institutionType} color={mainColor} />
+                                        <Chip label={props.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY'} color={mainColor} />
                                     </Box>
                                     <Typography
                                         component="span"
