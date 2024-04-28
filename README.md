@@ -107,7 +107,10 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Infinite scroll
 * [x] Sorting with API
 * [x] Connect map with API
-* [ ] Filtering with API
+* [x] Filtering with API
+* [ ] Direct URLs to filtered results by query params
+* [ ] Filtering map locations
+* [ ] Autocomplete for institution name
 * [ ] Caching
 * [ ] About page
 
@@ -120,7 +123,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] GET locations
 * [x] Sorting
 * [ ] Autocomplete endpoint
-* [ ] Cities/voivodeships endpoint
+* [x] Cities/voivodeships endpoint
 * [x] Filtering
 * [x] Pagination
 * [x] CICD

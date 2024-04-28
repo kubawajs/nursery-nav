@@ -12,3 +12,6 @@ GET {{apiUrl}}/institutions/{{id}}
 
 ### Get all locations
 GET {{apiUrl}}/locations
+
+### Get all cities
+GET {{apiUrl}}/cities
