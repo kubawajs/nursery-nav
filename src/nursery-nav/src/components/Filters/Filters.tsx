@@ -1,23 +1,29 @@
-import { FormGroup, FormControlLabel, Checkbox } from "@mui/material";
+import { FormGroup, FormControlLabel, Checkbox, Autocomplete, TextField } from "@mui/material";
 import RangeSlider from "./RangeSlider";
 import { useEffect, useState } from "react";
 
 export default function Filters() {
-    // const { institutions, setFilteredInstitutions, setSelectedInstitution } = useContext(InstitutionContext);
-    const [cityFilter] = useState<string | null>(null);
+    const [cityFilter, setCityFilter] = useState<string | null>(null);
+    const [voivodeshipFilter, setVoivodeshipFilter] = useState<string | null>(null);
     const [nurseryFilter, setNurseryFilter] = useState<boolean>(true);
     const [childClubFilter, setChildClubFilter] = useState<boolean>(true);
     const [priceFilter, setPriceFilter] = useState<number[]>([0, 5000]);
-    // const cities = institutions.map(institution => institution.address.city).filter((value, index, self) => self.indexOf(value) === index).sort();
-    // const institutionsAutocomplete = institutions.map(institution => institution.name).filter((value, index, self) => self.indexOf(value) === index).sort();
+    const [cities, setCities] = useState<string[]>([]);
+    const [voivodeships, setVoivodeships] = useState<string[]>([]);
 
     useEffect(() => {
-        // setFilteredInstitutions(institutions.filter(institution =>
-        //     (!cityFilter || institution.address.city === cityFilter) &&
-        //     ((nurseryFilter && institution.institutionType === InstitutionType.NURSERY) || (childClubFilter && institution.institutionType === InstitutionType.CHILDCLUB)) &&
-        //     institution.basicPricePerMonth >= priceFilter[0] && institution.basicPricePerMonth <= priceFilter[1]
-        // ));
-    }, [cityFilter, nurseryFilter, childClubFilter, priceFilter]);
+        const fetchCities = async () => {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/cities`);
+            const cities = await response.json() as { city: string, voivodeship: string }[];
+            setCities(cities.map(city => city.city));
+
+            const voivodeshipsUnique = cities.map(city => city.voivodeship)
+                .filter((voivodeship, index, self) => self.indexOf(voivodeship) === index)
+                .sort((a, b) => a.localeCompare(b));
+            setVoivodeships(voivodeshipsUnique);
+        };
+        fetchCities();
+    }, [cities, setCities]);
 
     // const setCurrentSelection = useCallback((_event: SyntheticEvent<Element, Event>, value: string | null) => {
     //     const currentSelection = institutions.find(institution => institution.name === value);
@@ -37,7 +43,7 @@ export default function Filters() {
                 renderInput={(params) => <TextField {...params} label="Nazwa żłobka" />}
                 size="small"
                 sx={{ width: 400, maxWidth: '100%' }}
-            />
+    />*/}
             <Autocomplete
                 id="cityFilter"
                 options={cities}
@@ -45,7 +51,15 @@ export default function Filters() {
                 renderInput={(params) => <TextField {...params} label="Miasto" />}
                 size="small"
                 sx={{ width: 300, maxWidth: '100%' }}
-            /> */}
+            />
+            <Autocomplete
+                id="voivodeshipFilter"
+                options={voivodeships || []}
+                onChange={(_event, value) => setVoivodeshipFilter(value)}
+                renderInput={(params) => <TextField {...params} label="Województwo" />}
+                size="small"
+                sx={{ width: 300, maxWidth: '100%' }}
+            />
             <FormGroup sx={{ display: 'flex', flexDirection: 'row' }} >
                 <FormControlLabel
                     control={<Checkbox defaultChecked onChange={(_event, value) => setNurseryFilter(value)} />}
