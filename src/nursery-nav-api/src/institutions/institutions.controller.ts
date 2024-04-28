@@ -16,6 +16,7 @@ export class InstitutionsController {
     @ApiQuery({ name: 'size', required: false, type: Number })
     @ApiQuery({ name: 'sort', required: false, enum: SortParams })
     @ApiQuery({ name: 'city', required: false, type: String })
+    @ApiQuery({ name: 'voivodeship', required: false, type: String })
     @ApiQuery({ name: 'priceMin', required: false, type: Number })
     @ApiQuery({ name: 'priceMax', required: false, type: Number })
     @ApiResponse({ status: 200, description: 'Returns a sorted and paginated list of institutions', type: PaginatedResult<InstitutionListItemDto> })
@@ -24,11 +25,12 @@ export class InstitutionsController {
         @Query('page') page: number,
         @Query('size') size: number,
         @Query('city') city: string,
+        @Query('voivodeship') voivodeship: string,
         @Query('priceMin') priceMin: number,
         @Query('priceMax') priceMax: number,
         @Query('sort') sort: SortParams = SortParams.NAME_ASC)
         : Promise<PaginatedResult<InstitutionListItemDto>> {
-        return await this.institutionsService.findAll(page, size, sort, city, priceMin, priceMax);
+        return await this.institutionsService.findAll(page, size, sort, city, voivodeship, priceMin, priceMax);
     }
 
     @Get(':regNo')
