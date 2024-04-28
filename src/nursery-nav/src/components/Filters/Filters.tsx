@@ -38,7 +38,6 @@ export default function Filters() {
 
         const query = buildFiltersQuery();
         setFiltersQuery(query);
-        console.log(query);
     }, [cityFilter, voivodeshipFilter, nurseryFilter, childClubFilter, priceFilter, setFiltersQuery]);
 
     useEffect(() => {

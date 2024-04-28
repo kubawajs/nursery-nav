@@ -38,7 +38,6 @@ export class InstitutionsService {
                 institutionsArray = institutionsArray.filter((institution) => institutionType.includes(institution.institutionType));
             }
             if (priceMin) {
-                console.log(priceMin);
                 institutionsArray = institutionsArray.filter((institution) => institution.basicPricePerMonth >= priceMin);
             }
             if (priceMax) {
