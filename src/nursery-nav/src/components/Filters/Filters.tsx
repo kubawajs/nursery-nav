@@ -2,6 +2,7 @@ import { FormGroup, FormControlLabel, Checkbox, Autocomplete, TextField } from "
 import RangeSlider from "./RangeSlider";
 import { useContext, useEffect, useState } from "react";
 import { InstitutionContext } from "../Layout/Layout";
+import { InstitutionType } from "../../shared/nursery.interface";
 
 export default function Filters() {
     const { setFiltersQuery } = useContext(InstitutionContext);
@@ -24,13 +25,13 @@ export default function Filters() {
                 query += `voivodeship=${encodeURIComponent(voivodeshipFilter)}&`;
             }
             if (nurseryFilter) {
-                query += `nursery=${nurseryFilter}&`;
+                query += `insType=${InstitutionType.NURSERY}&`;
             }
             if (childClubFilter) {
-                query += `childClub=${childClubFilter}&`;
+                query += `insType=${InstitutionType.CHILDCLUB}&`;
             }
             if (priceFilter) {
-                query += `priceMin=${priceFilter[0]}&priceMax=${priceFilter[1]}&`;
+                query += `${priceFilter[0] ? `priceMin=${priceFilter[0]}` : ''}&${priceFilter[1] ? `priceMax=${priceFilter[1]}` : ''}`;
             }
             return query;
         }
