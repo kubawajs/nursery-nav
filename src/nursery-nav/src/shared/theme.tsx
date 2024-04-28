@@ -20,7 +20,7 @@ export const theme = createTheme({
     },
     spacing: 8,
     typography: {
-        fontFamily: 'Roboto, sans-serif',
+        fontFamily: 'Roboto Latin, sans-serif',
         h1: {
             fontSize: '2.5rem'
         },
