@@ -13,7 +13,7 @@ export class InstitutionsService {
         this.loadData();
     }
 
-    async findAll(page: number, size: number, sort: SortParams, city?: string, priceMin?: number, priceMax?: number)
+    async findAll(page: number, size: number, sort: SortParams, city?: string, voivodeship?: string, institutionType?: InstitutionType[], priceMin?: number, priceMax?: number)
         : Promise<PaginatedResult<InstitutionListItemDto>> {
         size = this.setPageSize(size);
         const totalPages = this.institutions?.length ? Math.ceil(this.institutions.length / size) : 0;
@@ -31,8 +31,13 @@ export class InstitutionsService {
             if (city) {
                 institutionsArray = institutionsArray.filter((institution) => institution.address.city.toLowerCase().indexOf(city.toLowerCase()) !== -1);
             }
+            if (voivodeship) {
+                institutionsArray = institutionsArray.filter((institution) => institution.address.voivodeship.toLowerCase().indexOf(voivodeship.toLowerCase()) !== -1);
+            }
+            if (institutionType && institutionType.length > 0) {
+                institutionsArray = institutionsArray.filter((institution) => institutionType.includes(institution.institutionType));
+            }
             if (priceMin) {
-                console.log(priceMin);
                 institutionsArray = institutionsArray.filter((institution) => institution.basicPricePerMonth >= priceMin);
             }
             if (priceMax) {
