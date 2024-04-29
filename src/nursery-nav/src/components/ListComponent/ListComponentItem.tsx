@@ -77,9 +77,9 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                         <Button href={`mailto:${props.email}`} aria-label='Napisz wiadomość email'>
                                             <Mail sx={{ fontSize: '1.25rem' }} />
                                         </Button>
-                                        <Button href={props.website} aria-label='Odwiedź stronę internetową'>
+                                        {props.website && <Button href={props.website.startsWith('http') ? props.website : `http://${props.website}`} aria-label='Odwiedź stronę internetową'>
                                             <Language sx={{ fontSize: '1.25rem' }} />
-                                        </Button>
+                                        </Button>}
                                     </ButtonGroup>
                                 </Box>
                             </Box>
