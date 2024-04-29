@@ -17,10 +17,12 @@ function PriceWithLabel(label: string, price?: number) {
 
 export default function InstitutionDetailsHeader(institution: Institution) {
     const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
+    const institutionType = institution.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY';
+
     return (
         <Box p={1}>
             <Paper elevation={2}>
-                <Chip label={institution.institutionType} color={mainColor} />
+                <Chip label={institutionType} color={mainColor} />
                 <Typography variant="h2">{institution.name} {institution.isAdaptedToDisabledChildren && <Accessible fontSize="large" />}</Typography>
                 <Divider />
                 <Box paddingTop={2} display='flex' justifyContent='space-between'>
