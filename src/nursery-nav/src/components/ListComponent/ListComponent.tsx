@@ -7,14 +7,14 @@ import { InstitutionContext } from '../Layout/Layout';
 
 export default function ListComponent() {
 	const [sortingParam, setSortingParam] = useState('name-asc');
-	const { filtersQuery, setSelectedInstitution } = useContext(InstitutionContext);
+	const { setInstitutionIds, filtersQuery, setSelectedInstitution } = useContext(InstitutionContext);
 	setSelectedInstitution(null);
 
 	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
 	const [loading, setLoading] = useState(true);
 	const [pageNum, setPageNum] = useState(2);
 	const [totalPages, setTotalPages] = useState(1);
-	const [totalItems, setTotalItems] = useState(1);
+	const [totalItems, setTotalItems] = useState(0);
 	const loaderRef = useRef(null);
 
 	const fetchInstitutions = useCallback(async () => {
@@ -53,10 +53,11 @@ export default function ListComponent() {
 			setLoading(true);
 			try {
 				const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?sort=${sortingParam}&${filtersQuery}`);
-				const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
+				const data = await res.json() as { items: InstitutionListItem[], ids: string[], totalItems: number, totalPages: number };
 				setInstitutions(data.items);
 				setTotalItems(data.totalItems);
 				setTotalPages(data.totalPages);
+				setInstitutionIds(data.ids);
 			} catch (error) {
 				console.log(error);
 			}
@@ -64,7 +65,7 @@ export default function ListComponent() {
 		};
 
 		getData();
-	}, [sortingParam, filtersQuery]);
+	}, [sortingParam, filtersQuery, setInstitutionIds]);
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		setSortingParam(event.target.value);
