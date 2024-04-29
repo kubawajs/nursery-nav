@@ -28,7 +28,7 @@ export default function InstitutionDetailsLinks(institution: Institution) {
                 </Box>}
                 {institution.website && <Box>
                     <Typography variant="overline">
-                        <Link href={institution.website} underline='none' aria-label="Odwiedź stronę internetową">
+                        <Link href={institution.website.startsWith('http') ? institution.website : `http://${institution.website}`} underline='none' aria-label="Odwiedź stronę internetową">
                             <Language /> {institution.website}
                         </Link>
                     </Typography>

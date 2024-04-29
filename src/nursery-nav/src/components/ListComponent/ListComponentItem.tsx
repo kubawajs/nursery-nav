@@ -38,10 +38,10 @@ export function ListComponentItem(props: ListComponentItemProps) {
         <Link component={RouterLink} to={generatePath(PathConstants.INSTITUTION_DETAILS, { regNo: props.regNo })} underline='none'>
             <ListItem sx={{ display: 'block' }}>
                 <Card sx={{ display: 'flex', padding: 0, paddingRight: 2 }}>
-                    <Box>
+                    <Box paddingLeft={2} paddingBottom={2} paddingTop={2}>
                         <CardMedia
                             component="img"
-                            sx={{ display: { xs: 'none', sm: 'block' }, width: 160, height: '100%', objectFit: 'cover' }}
+                            sx={{ display: { xs: 'none', sm: 'block' }, width: 120, height: 120, objectFit: 'cover' }}
                             image={imagePath}
                             alt={imageAlt}
                         />
@@ -77,9 +77,9 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                         <Button href={`mailto:${props.email}`} aria-label='Napisz wiadomość email'>
                                             <Mail sx={{ fontSize: '1.25rem' }} />
                                         </Button>
-                                        <Button href={props.website} aria-label='Odwiedź stronę internetową'>
+                                        {props.website && <Button href={props.website.startsWith('http') ? props.website : `http://${props.website}`} aria-label='Odwiedź stronę internetową'>
                                             <Language sx={{ fontSize: '1.25rem' }} />
-                                        </Button>
+                                        </Button>}
                                     </ButtonGroup>
                                 </Box>
                             </Box>

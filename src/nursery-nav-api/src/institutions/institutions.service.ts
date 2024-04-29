@@ -24,7 +24,8 @@ export class InstitutionsService {
             totalItems: this.institutions?.length ?? 0,
             pageIndex: page,
             pageSize: size,
-            totalPages: totalPages
+            ids: [],
+            totalPages: totalPages,
         };
         if (this.institutions) {
             let institutionsArray = Array.from(this.institutions);
@@ -43,6 +44,7 @@ export class InstitutionsService {
             if (priceMax) {
                 institutionsArray = institutionsArray.filter((institution) => institution.basicPricePerMonth <= priceMax);
             }
+            paginatedResult.ids = institutionsArray?.map((institution) => institution.operatingEntity.regNoPosition) ?? [];
             const sortedInstutions = institutionsArray.sort((a, b) => this.sortMethod(sort, a, b));
             const pageData = sortedInstutions.slice((page - 1) * size, page * size);
             const institutionList = pageData.map((institution) => {
