@@ -1,13 +1,16 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
 import { Container } from '@mui/material';
 import MapPin from '../MapPin/MapPin';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import './MapComponent.css';
 import { LocationResponse } from '../../shared/nursery.interface';
+import { InstitutionContext } from '../Layout/Layout';
 
 export default function MapComponent() {
+	const { institutionIds } = useContext(InstitutionContext);
 	const [locations, setLocations] = useState<LocationResponse[]>([]);
+	const [locationsFiltered, setLocationsFiltered] = useState<LocationResponse[]>([]);
 
 	const fetchLocations = async () => {
 		const res = await fetch(`${process.env.REACT_APP_API_URL}/locations`);
@@ -18,6 +21,10 @@ export default function MapComponent() {
 	useEffect(() => {
 		fetchLocations();
 	}, []);
+
+	useEffect(() => {
+		setLocationsFiltered(locations.filter((location) => institutionIds.includes(location.regNo)));
+	}, [institutionIds, locations]);
 
 	return (
 		<Container style={{ padding: 0 }}>
@@ -37,7 +44,7 @@ export default function MapComponent() {
 					className="marker-cluster-group"
 					polygonOptions={{ opacity: 0 }}
 					chunkedLoading>
-					{locations.map((location, index) => (
+					{locationsFiltered.map((location, index) => (
 						<MapPin
 							key={index}
 							regNo={location.regNo}
