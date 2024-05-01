@@ -26,9 +26,6 @@ export default function Layout() {
             <ThemeProvider theme={theme}>
                 <Navigation />
                 <Grid container>
-                    <Grid item xs={12} zIndex={19}>
-                        <FiltersBar />
-                    </Grid>
                     <Suspense fallback={<CircularProgress />}>
                         <Outlet />
                     </Suspense>
