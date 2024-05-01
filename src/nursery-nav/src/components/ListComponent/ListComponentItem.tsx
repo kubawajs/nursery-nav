@@ -5,6 +5,7 @@ import {
     Chip,
     Link,
     ListItem,
+    Stack,
     Typography
 } from '@mui/material';
 import { Accessible, FmdGood, Language, Mail, Phone } from '@mui/icons-material';
@@ -50,9 +51,10 @@ export function ListComponentItem(props: ListComponentItemProps) {
                         <CardContent sx={{ flex: '1 0 auto', paddingRight: '0' }}>
                             <Box>
                                 <Box display='flex' marginBottom={1} sx={{ justifyContent: 'space-between' }}>
-                                    <Box>
+                                    <Stack direction='row' spacing={1}>
                                         <Chip label={props.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY'} color={mainColor} />
-                                    </Box>
+                                        {props.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" />}
+                                    </Stack>
                                     <Typography
                                         component="span"
                                         variant="subtitle1"
@@ -64,20 +66,20 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                     </Typography>
                                 </Box>
                                 <Typography variant="h5" paddingBottom={2}>
-                                    {props.name} {props.isAdaptedToDisabledChildren && <Accessible />}
+                                    {props.name}
                                 </Typography>
                                 <Box display='flex' justifyContent='space-between'>
                                     <Typography variant="subtitle2" color="text.secondary">
                                         <FmdGood />{props.city}
                                     </Typography>
                                     <ButtonGroup variant="text" aria-label="basic outlined button group" color={mainColor}>
-                                        <Button href={`tel:${props.phone}`} aria-label='Zadzwoń do instytucji'>
+                                        {props.phone && <Button aria-label='Zadzwoń do instytucji'>
                                             <Phone sx={{ fontSize: '1.25rem' }} />
-                                        </Button>
-                                        <Button href={`mailto:${props.email}`} aria-label='Napisz wiadomość email'>
+                                        </Button>}
+                                        {props.email && <Button aria-label='Napisz wiadomość email'>
                                             <Mail sx={{ fontSize: '1.25rem' }} />
-                                        </Button>
-                                        {props.website && <Button href={props.website.startsWith('http') ? props.website : `http://${props.website}`} aria-label='Odwiedź stronę internetową'>
+                                        </Button>}
+                                        {props.website && <Button aria-label='Odwiedź stronę internetową'>
                                             <Language sx={{ fontSize: '1.25rem' }} />
                                         </Button>}
                                     </ButtonGroup>
