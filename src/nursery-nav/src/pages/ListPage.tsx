@@ -1,10 +1,14 @@
 import { Grid } from "@mui/material";
 import ListComponent from "../components/ListComponent/ListComponent";
 import MapComponent from "../components/MapComponent/MapComponent";
+import FiltersBar from "../components/Filters/FiltersBar";
 
 export default function ListPage() {
     return (
         <>
+            <Grid item xs={12} zIndex={19}>
+                <FiltersBar />
+            </Grid>
             <Grid item xs={12} md={6}>
                 <ListComponent />
             </Grid>

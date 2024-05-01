@@ -15,7 +15,7 @@ export default function InstitutionDetailsTop(institution: Institution) {
                     <Typography color="text.primary" variant="overline">{institution.address.city}</Typography>
                 </Breadcrumbs>
                 <Link to={PathConstants.HOME}>
-                    <Button color={mainColor}>Powrót</Button>
+                    <Button variant="outlined" color={mainColor}>Powrót</Button>
                 </Link>
             </Stack>
         </Box>
