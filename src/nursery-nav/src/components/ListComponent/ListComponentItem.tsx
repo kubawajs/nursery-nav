@@ -5,9 +5,10 @@ import {
     Chip,
     Link,
     ListItem,
+    Stack,
     Typography
 } from '@mui/material';
-import { Accessible, FmdGood, Language, Mail, Phone } from '@mui/icons-material';
+import { Accessible, FmdGood, Language, Mail, Padding, Phone } from '@mui/icons-material';
 import { InstitutionType } from '../../shared/nursery.interface';
 import PathConstants from '../../shared/pathConstants';
 import {
@@ -50,9 +51,10 @@ export function ListComponentItem(props: ListComponentItemProps) {
                         <CardContent sx={{ flex: '1 0 auto', paddingRight: '0' }}>
                             <Box>
                                 <Box display='flex' marginBottom={1} sx={{ justifyContent: 'space-between' }}>
-                                    <Box>
+                                    <Stack direction='row' spacing={1}>
                                         <Chip label={props.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY'} color={mainColor} />
-                                    </Box>
+                                        {props.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" />}
+                                    </Stack>
                                     <Typography
                                         component="span"
                                         variant="subtitle1"
@@ -64,7 +66,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                     </Typography>
                                 </Box>
                                 <Typography variant="h5" paddingBottom={2}>
-                                    {props.name} {props.isAdaptedToDisabledChildren && <Accessible />}
+                                    {props.name}
                                 </Typography>
                                 <Box display='flex' justifyContent='space-between'>
                                     <Typography variant="subtitle2" color="text.secondary">
