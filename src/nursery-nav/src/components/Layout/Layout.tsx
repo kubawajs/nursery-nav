@@ -5,7 +5,6 @@ import { Institution } from "../../shared/nursery.interface";
 import Navigation from "../Navigation/Navigation";
 import { Outlet } from "react-router-dom";
 import { CircularProgress, Grid } from "@mui/material";
-import FiltersBar from "../Filters/FiltersBar";
 
 export const InstitutionContext = React.createContext({
     institutionIds: [] as string[],

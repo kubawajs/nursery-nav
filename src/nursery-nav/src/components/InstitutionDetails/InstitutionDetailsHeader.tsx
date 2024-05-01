@@ -26,7 +26,7 @@ export default function InstitutionDetailsHeader(institution: Institution) {
                     <Chip label={institutionType} color={mainColor} />
                     {institution.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" />}
                 </Stack>
-                <Typography variant="h2">{institution.name}</Typography>
+                <Typography variant="h3">{institution.name}</Typography>
                 <Divider />
                 <Box paddingTop={2} display='flex' justifyContent='space-between'>
                     <Stack

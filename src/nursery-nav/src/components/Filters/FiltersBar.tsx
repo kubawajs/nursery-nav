@@ -9,10 +9,16 @@ import {
 } from "@mui/material";
 import Filters from "./Filters";
 import { Close, FilterList } from "@mui/icons-material";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { InstitutionContext } from "../Layout/Layout";
 
 export default function FiltersBar() {
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
+    const { institutionIds } = useContext(InstitutionContext);
+
+    useEffect(() => {
+        setIsExpanded(false);
+    }, [institutionIds]);
 
     return (
         <Box boxShadow={3}>

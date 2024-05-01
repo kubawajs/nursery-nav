@@ -8,7 +8,7 @@ import {
     Stack,
     Typography
 } from '@mui/material';
-import { Accessible, FmdGood, Language, Mail, Padding, Phone } from '@mui/icons-material';
+import { Accessible, FmdGood, Language, Mail, Phone } from '@mui/icons-material';
 import { InstitutionType } from '../../shared/nursery.interface';
 import PathConstants from '../../shared/pathConstants';
 import {
@@ -73,13 +73,13 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                         <FmdGood />{props.city}
                                     </Typography>
                                     <ButtonGroup variant="text" aria-label="basic outlined button group" color={mainColor}>
-                                        <Button href={`tel:${props.phone}`} aria-label='Zadzwoń do instytucji'>
+                                        {props.phone && <Button aria-label='Zadzwoń do instytucji'>
                                             <Phone sx={{ fontSize: '1.25rem' }} />
-                                        </Button>
-                                        <Button href={`mailto:${props.email}`} aria-label='Napisz wiadomość email'>
+                                        </Button>}
+                                        {props.email && <Button aria-label='Napisz wiadomość email'>
                                             <Mail sx={{ fontSize: '1.25rem' }} />
-                                        </Button>
-                                        {props.website && <Button href={props.website.startsWith('http') ? props.website : `http://${props.website}`} aria-label='Odwiedź stronę internetową'>
+                                        </Button>}
+                                        {props.website && <Button aria-label='Odwiedź stronę internetową'>
                                             <Language sx={{ fontSize: '1.25rem' }} />
                                         </Button>}
                                     </ButtonGroup>
