@@ -1,8 +1,8 @@
-import { FormGroup, FormControlLabel, Checkbox, Autocomplete, TextField } from "@mui/material";
+import { FormGroup, FormControlLabel, Checkbox, Autocomplete, TextField, debounce } from "@mui/material";
 import RangeSlider from "./RangeSlider";
 import { useContext, useEffect, useState } from "react";
 import { InstitutionContext } from "../Layout/Layout";
-import { InstitutionType } from "../../shared/nursery.interface";
+import { InstitutionAutocomplete, InstitutionType } from "../../shared/nursery.interface";
 
 export default function Filters() {
     const { setFiltersQuery } = useContext(InstitutionContext);
@@ -12,6 +12,7 @@ export default function Filters() {
     const [nurseryFilter, setNurseryFilter] = useState<boolean>(true);
     const [childClubFilter, setChildClubFilter] = useState<boolean>(true);
     const [priceFilter, setPriceFilter] = useState<number[]>([0, 5000]);
+    const [institutionsAutocomplete, setInstitutionsAutocomplete] = useState<InstitutionAutocomplete[]>([]);
     const [cities, setCities] = useState<string[]>([]);
     const [voivodeships, setVoivodeships] = useState<string[]>([]);
 
@@ -56,16 +57,35 @@ export default function Filters() {
         fetchCities();
     }, [setCities]);
 
+    const getAutocompleteData = async (value: string) => {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions/autocomplete?search=${value}`);
+        const institutions = await response.json() as { name: string, regNoPosition: string }[];
+        setInstitutionsAutocomplete(institutions.map(institution => ({ name: institution.name, regNoPosition: institution.regNoPosition })));
+    }
+
+    const onInputChange = (_event: any, value: string | null) => {
+        if (value) {
+            getAutocompleteData(value);
+        }
+        else {
+            setInstitutionsAutocomplete([]);
+        }
+    }
+
     return (
         <>
-            {/* <Autocomplete
+            <Autocomplete
                 disablePortal
-                onChange={setCurrentSelection}
+                onChange={(_event, value) => window.location.href = `/institutions/details/${encodeURIComponent(value?.regNoPosition || '')}`}
+                onInputChange={debounce(onInputChange, 250)}
                 options={institutionsAutocomplete}
+                getOptionKey={(option) => option.regNoPosition}
+                getOptionLabel={(option) => option.name}
+                noOptionsText="Wpisz nazwę żłobka lub klubu dziecięcego"
                 renderInput={(params) => <TextField {...params} label="Nazwa żłobka" />}
                 size="small"
                 sx={{ width: 400, maxWidth: '100%' }}
-    />*/}
+            />
             <Autocomplete
                 id="cityFilter"
                 options={cities}
