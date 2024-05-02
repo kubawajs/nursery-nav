@@ -1,5 +1,6 @@
 @apiUrl = http://localhost:3000
 @id = 308%2FP
+@query = "tes"
 
 ### Hello world endpoint
 GET {{apiUrl}}
@@ -8,7 +9,10 @@ GET {{apiUrl}}
 GET {{apiUrl}}/institutions
 
 ### Get by id
-GET {{apiUrl}}/institutions/{{id}}
+GET {{apiUrl}}/institutions/details/{{id}}
+
+### Get by search query
+GET {{apiUrl}}/institutions/autocomplete?search={{query}}
 
 ### Get all locations
 GET {{apiUrl}}/locations
