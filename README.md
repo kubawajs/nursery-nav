@@ -110,9 +110,9 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Filtering with API
 * [ ] Direct URLs to filtered results by query params
 * [x] Filtering map locations
-* [ ] Autocomplete for institution name
+* [x] Autocomplete for institution name
 * [ ] Caching
-* [ ] About page
+* [x] About page
 
 #### API
 
@@ -122,13 +122,14 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] GET institution details
 * [x] GET locations
 * [x] Sorting
-* [ ] Autocomplete endpoint
+* [x] Autocomplete endpoint
 * [x] Cities/voivodeships endpoint
 * [x] Filtering
 * [x] Pagination
 * [x] CICD
 * [x] Live URL
 * [x] CORS
+* [ ] Add real ID to the data source
 * [ ] Automate data update process
 * [ ] Data update with new file
 
