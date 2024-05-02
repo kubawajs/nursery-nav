@@ -36,6 +36,11 @@ export enum InstitutionType {
 	CHILDCLUB = 'CHILDCLUB'
 }
 
+export interface InstitutionAutocomplete {
+	name: string;
+	regNoPosition: string;
+}
+
 export interface OperatingEntity {
 	name: string;
 	address: string;
