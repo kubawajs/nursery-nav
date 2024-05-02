@@ -4,6 +4,7 @@ import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 import { InstitutionType } from '../shared/models/institutionType';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
+import { InstitutionAutocompleteDto } from './DTO/institutionAutocompleteDto';
 
 @Injectable()
 export class InstitutionsService {
@@ -65,6 +66,19 @@ export class InstitutionsService {
         }
 
         return Promise.reject(`Institution with id ${regNo} not found`);
+    }
+
+    async getInstitutionsAutocomplete(searchQuery: string): Promise<InstitutionAutocompleteDto[]> {
+        const institutions = this.institutions.filter((institution) => institution.name.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1);
+        const institutionList = institutions.map((institution) => {
+            const institutionAutocompleteDto: InstitutionAutocompleteDto = {
+                name: institution.name,
+                regNoPosition: institution.operatingEntity.regNoPosition,
+            };
+            return institutionAutocompleteDto;
+        });
+
+        return Promise.resolve(institutionList);
     }
 
     private async loadData() {

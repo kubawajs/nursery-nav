@@ -6,6 +6,7 @@ import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
 import { InstitutionType } from '../shared/models/institutionType';
+import { InstitutionAutocompleteDto } from './DTO/institutionAutocompleteDto';
 
 @Controller('institutions')
 export class InstitutionsController {
@@ -36,7 +37,7 @@ export class InstitutionsController {
         return await this.institutionsService.findAll(page, size, sort, city, voivodeship, insType, priceMin, priceMax);
     }
 
-    @Get(':regNo')
+    @Get('details/:regNo')
     @HttpCode(200)
     @HttpCode(404)
     @ApiResponse({ status: 200, description: 'Returns an institution by regNo', type: InstitutionDto })
@@ -44,5 +45,14 @@ export class InstitutionsController {
     @ApiTags('nursery-nav')
     async getById(@Param() params: any): Promise<InstitutionDto> {
         return await this.institutionsService.getById(params.regNo);
+    }
+
+    @Get('autocomplete')
+    @HttpCode(200)
+    @ApiQuery({ name: 'search', required: true, type: String })
+    @ApiResponse({ status: 200, description: 'Returns a list of institutions that match the search query', type: [InstitutionListItemDto] })
+    @ApiTags('nursery-nav')
+    async autocomplete(@Query('search') search: string): Promise<InstitutionAutocompleteDto[]> {
+        return await this.institutionsService.getInstitutionsAutocomplete(search);
     }
 }
