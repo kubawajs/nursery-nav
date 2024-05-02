@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import PathConstants from './shared/pathConstants';
 import React from 'react';
+import AboutPage from './pages/AboutPage';
 
 const ListPage = React.lazy(() => import("./pages/ListPage"));
 const InstitutionDetailsPage = React.lazy(() => import("./pages/InstitutionDetailsPage"));
@@ -14,6 +15,10 @@ const routes = [
   {
     path: PathConstants.INSTITUTION_DETAILS,
     element: <InstitutionDetailsPage />
+  },
+  {
+    path: PathConstants.ABOUT,
+    element: <AboutPage />
   }
 ];
 
