@@ -1,3 +1,4 @@
+import sys
 import pandas as pd
 import requests
 
@@ -32,11 +33,29 @@ def get_coordinates(address):
         print(f"Error: {str(e)}")
         return None
 
-df = pd.read_csv('RZ-instytucje.csv', sep=';')
-df[['voivodeship', 'county', 'city', 'address']] = df['Localization'].str.split('> ', expand=True)
-broken_rows = []
+# Read the input file
+input_file = sys.argv[1]
+df = pd.read_csv(input_file, sep=';')
+print(f"Loaded input file with {len(df)} rows")
 
-for i in range(len(df)):
+# Replace column names with the ones from the mapping file with format 'old_name;new_name'
+mapping_file = sys.argv[2]
+mapping = pd.read_csv(mapping_file, sep=';')
+print(f"Loaded mapping file with {len(mapping)} rows")
+
+for i in range(len(mapping)):
+    old_name = mapping.at[i, 'old_name']
+    new_name = mapping.at[i, 'new_name']
+    df.rename(columns={old_name: new_name}, inplace=True)
+
+print("Replaced column names")
+
+# Split the Localization column into separate columns
+df[['voivodeship', 'county', 'city', 'address']] = df['localization'].str.split('> ', expand=True)
+print("Split Localization column")
+
+broken_rows = []
+for i in range(100):#len(df)):
     print(f"Processing row {i+1} of {len(df)}")
 
     if df.at[i, 'localization'] is None:
@@ -52,6 +71,6 @@ for i in range(len(df)):
     else:
         broken_rows.append(df.iloc[i])
 
-df.to_csv('RZ-instytucje-enriched.csv', sep=';', index=False)
-pd.DataFrame(broken_rows).to_csv('RZ-instytucje-broken.csv', sep=';', index=False)
+df.to_csv(input_file.replace('.csv', '-enriched.csv'), sep=';', index=False)
+pd.DataFrame(broken_rows).to_csv(input_file.replace('.csv', '-broken.csv'), sep=';', index=False)
 print("End")

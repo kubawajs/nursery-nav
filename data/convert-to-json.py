@@ -27,6 +27,16 @@ class Pin:
 input_file = sys.argv[1]
 df = pd.read_csv(input_file, sep=';')
 
+# Add ID column
+df['id'] = range(1, len(df) + 1)
+
+# Convert institution type to enum
+df['institutionType'] = df['institutionType'].map({'Żłobek': 'NURSERY', 'Klub dziecięcy': 'CHILDCLUB'})
+
+# Convert TAK/NIE to boolean
+df['isAdaptedToDisabledChildren'] = df['isAdaptedToDisabledChildren'].map({'TAK': True, 'NIE': False})
+df['businessActivitySuspended'] = df['businessActivitySuspended'].map({'TAK': True, 'NIE': False})
+
 # Convert price columns
 df['basicPricePerMonth'] = df['basicPricePerMonth'].str.replace(' zł', '').astype(float)
 df['extendedStayOver10H'] = df['extendedStayOver10H'].str.replace(' zł', '').astype(float)
