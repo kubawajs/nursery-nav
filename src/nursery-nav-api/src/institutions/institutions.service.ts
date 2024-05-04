@@ -83,7 +83,7 @@ export class InstitutionsService {
 
     private async loadData() {
         try {
-            const data = require('../../data/test-data-1000.json');
+            const data = require('../../data/052024-RZ-instytucje-enriched.json');
             this.institutions = data as InstitutionDto[];
         } catch (error) {
             console.error('Error loading data:', error);

@@ -6,14 +6,14 @@
 		"email": "boguslawadar@interia.pl",
 		"phone": "602280814",
 		"capacity": 42,
-		"kidsEnrolled": 12.0,
+		"kidsEnrolled": 14.0,
 		"basicPricePerMonth": 1000.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 15.0,
 		"discounts": [
-			"Wielodzietność/Karta Dużej Rodziny: 10.0% "
+			"Wielodzietność\/Karta Dużej Rodziny: 10.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-17:30 ",
 		"isAdaptedToDisabledChildren": true,
@@ -28,13 +28,14 @@
 			},
 			"voivodeship": "MAŁOPOLSKIE"
 		},
+		"id": 1,
 		"operatingEntity": {
 			"address": null,
 			"name": "Re Bud Firma Usługowa Bogusława Darowska",
 			"nip": 7371420378.0,
-			"regNoPosition": "7097/P",
-			"regon": "120092696",
-			"website": "http://skrzatek.eu/"
+			"regNoPosition": "7097\/P",
+			"regon": 120092696.0,
+			"website": "http:\/\/skrzatek.eu\/"
 		}
 	},
 	{
@@ -51,7 +52,7 @@
 		"foodPricePerMonth": 150.0,
 		"foodPricePerDay": null,
 		"discounts": [
-			"Wielodzietność/Karta Dużej Rodziny: 15.0% ",
+			"Wielodzietność\/Karta Dużej Rodziny: 15.0% ",
 			"Rodzeństwo uczęszczające do instytucji: 20.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 6:30-17:00 ",
@@ -67,19 +68,20 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 2,
 		"operatingEntity": {
 			"address": null,
 			"name": "Magdalena Harwas",
 			"nip": 7642533948.0,
-			"regNoPosition": "1237/P",
-			"regon": "302622541",
+			"regNoPosition": "1237\/P",
+			"regon": 302622541.0,
 			"website": null
 		}
 	},
 	{
 		"institutionType": "CHILDCLUB",
 		"name": "Zespół Klubów Dziecięcych \"Bajkowa Przystań\" - Klub Dziecięcy \"Bajkowa Przystań 1\"",
-		"website": "https://przedszkolewdeszcznie.edupage.org/",
+		"website": "https:\/\/przedszkolewdeszcznie.edupage.org\/",
 		"email": "dyrektor.klubmalucha@deszczno.pl",
 		"phone": "95 728 76 72",
 		"capacity": 30,
@@ -103,12 +105,13 @@
 			},
 			"voivodeship": "LUBUSKIE"
 		},
+		"id": 3,
 		"operatingEntity": {
 			"address": "ul. Lubuska 90 66-446 Deszczno",
 			"name": "Gmina Deszczno",
 			"nip": 5992774930.0,
-			"regNoPosition": "11242/P",
-			"regon": "210966935",
+			"regNoPosition": "11242\/P",
+			"regon": 210966935.0,
 			"website": "www.deszczno.pl"
 		}
 	},
@@ -119,12 +122,12 @@
 		"email": "biuro@maluszkowo.com.pl",
 		"phone": "533 324 705",
 		"capacity": 60,
-		"kidsEnrolled": 19.0,
-		"basicPricePerMonth": 850.0,
+		"kidsEnrolled": 37.0,
+		"basicPricePerMonth": 930.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
-		"foodPricePerDay": 14.0,
+		"foodPricePerDay": 16.0,
 		"discounts": [
 			"Rodzeństwo uczęszczające do instytucji: 12.0% "
 		],
@@ -141,12 +144,13 @@
 			},
 			"voivodeship": "PODKARPACKIE"
 		},
+		"id": 4,
 		"operatingEntity": {
 			"address": " 372 36-052 Sokołów Małopolski, Nienadówka, wieś",
 			"name": "W2 Spółka z ograniczoną odpowiedzialnością Spółka Komandytowa",
 			"nip": 5170362578.0,
-			"regNoPosition": "9932/P",
-			"regon": "180967337",
+			"regNoPosition": "9932\/P",
+			"regon": 180967337.0,
 			"website": "www.maluszkowo.com.pl"
 		}
 	},
@@ -177,12 +181,13 @@
 			},
 			"voivodeship": "POMORSKIE"
 		},
+		"id": 5,
 		"operatingEntity": {
 			"address": null,
-			"name": "Niepubliczny Żłobek \"Kwiatuszki\"/Małgorzata Jażdzewska",
+			"name": "Niepubliczny Żłobek \"Kwiatuszki\"\/Małgorzata Jażdzewska",
 			"nip": 8431534383.0,
-			"regNoPosition": "7183/P",
-			"regon": "221936354",
+			"regNoPosition": "7183\/P",
+			"regon": 221936354.0,
 			"website": "www.kwiatuszkizlobek.pl"
 		}
 	},
@@ -215,19 +220,20 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 6,
 		"operatingEntity": {
 			"address": null,
 			"name": "Julia Sochacka",
 			"nip": 7772750199.0,
-			"regNoPosition": "11246/P",
-			"regon": "146461127",
+			"regNoPosition": "11246\/P",
+			"regon": 146461127.0,
 			"website": null
 		}
 	},
 	{
 		"institutionType": "CHILDCLUB",
 		"name": "Akademia Rozwoju Dziecka \"Bajkowy Dworek\" ",
-		"website": "https://www.facebook.com/bajkowydworek.k.zarnowska/",
+		"website": "https:\/\/www.facebook.com\/bajkowydworek.k.zarnowska\/",
 		"email": "bajkowy.dworek@o2.pl",
 		"phone": "695040631",
 		"capacity": 15,
@@ -253,12 +259,13 @@
 			},
 			"voivodeship": "LUBUSKIE"
 		},
+		"id": 7,
 		"operatingEntity": {
 			"address": null,
 			"name": "Katarzyna Żarnowska",
 			"nip": 6991677929.0,
-			"regNoPosition": "11267/P",
-			"regon": "367099184",
+			"regNoPosition": "11267\/P",
+			"regon": 367099184.0,
 			"website": null
 		}
 	},
@@ -269,7 +276,7 @@
 		"email": "zlobek.smyki.alwernia@gmail.com",
 		"phone": "510694781",
 		"capacity": 30,
-		"kidsEnrolled": 28.0,
+		"kidsEnrolled": 30.0,
 		"basicPricePerMonth": 1600.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
@@ -291,12 +298,13 @@
 			},
 			"voivodeship": "MAŁOPOLSKIE"
 		},
+		"id": 8,
 		"operatingEntity": {
 			"address": null,
 			"name": "Niepubliczny Żłobek Smyki Monika Bakalarz",
 			"nip": 6282077004.0,
-			"regNoPosition": "11434/P",
-			"regon": "362369408",
+			"regNoPosition": "11434\/P",
+			"regon": 362369408.0,
 			"website": "www.smyki-zlobek.pl"
 		}
 	},
@@ -327,12 +335,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 9,
 		"operatingEntity": {
 			"address": null,
 			"name": "Maciej Jakubek EKOMA",
 			"nip": 6181847570.0,
-			"regNoPosition": "11273/P",
-			"regon": "301965747",
+			"regNoPosition": "11273\/P",
+			"regon": 301965747.0,
 			"website": null
 		}
 	},
@@ -363,12 +372,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 10,
 		"operatingEntity": {
 			"address": "ul.  Jana Olbrachta 26 lok. 1 01-111 Warszawa - Wola, Warszawa - Wola, dzielnica m. st. Warszawy",
 			"name": "BOSE STÓPKI\" - ŻŁOBEK ARTYSTYCZNY SPÓŁKA CYWILNA ANETA ABRAM, JUSTYNA KLITYŃSKA",
 			"nip": 5272812341.0,
-			"regNoPosition": "11316/P",
-			"regon": "367603004",
+			"regNoPosition": "11316\/P",
+			"regon": 367603004.0,
 			"website": null
 		}
 	},
@@ -399,12 +409,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 11,
 		"operatingEntity": {
 			"address": "ul.  Akacjowa 5 62-510 Konin, Konin, miasto",
 			"name": "Fundacja \"Wiosna w Sercu\"",
 			"nip": 6652880131.0,
-			"regNoPosition": "157/P",
-			"regon": "300907742",
+			"regNoPosition": "157\/P",
+			"regon": 300907742.0,
 			"website": "www.wiosnawsercu.pl"
 		}
 	},
@@ -422,7 +433,7 @@
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 17.0,
 		"discounts": [
-			"Wielodzietność/Karta Dużej Rodziny: 10.0% ",
+			"Wielodzietność\/Karta Dużej Rodziny: 10.0% ",
 			"Dziecko niepełnosprawne lub wymagające szczególnej opieki: 20.0% ",
 			"Rodzeństwo uczęszczające do instytucji: 20.0% "
 		],
@@ -439,12 +450,13 @@
 			},
 			"voivodeship": "ŚWIĘTOKRZYSKIE"
 		},
+		"id": 12,
 		"operatingEntity": {
 			"address": "ul. Stanisława Staszica 25 27-200 Starachowice, Starachowice, miasto",
 			"name": "Klub Malucha Re-Re-Kum-Kum s.c.",
 			"nip": 6642135087.0,
-			"regNoPosition": "2087/P",
-			"regon": "365445096",
+			"regNoPosition": "2087\/P",
+			"regon": 365445096.0,
 			"website": "www.re-re-kum-kum.pl"
 		}
 	},
@@ -477,19 +489,20 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 13,
 		"operatingEntity": {
 			"address": null,
 			"name": "Łukasz Błaszczykowski",
 			"nip": 7971540406.0,
-			"regNoPosition": "750/P",
-			"regon": "146296421",
+			"regNoPosition": "750\/P",
+			"regon": 146296421.0,
 			"website": "www.kochaneurwisy.pl"
 		}
 	},
 	{
 		"institutionType": "NURSERY",
 		"name": "Żłobek Miejski nr 2 ",
-		"website": "http://www.zlobek2.swidnica.pl",
+		"website": "http:\/\/www.zlobek2.swidnica.pl",
 		"email": "zlobek_nr2@wp.pl",
 		"phone": "74 637 90 82",
 		"capacity": 100,
@@ -515,12 +528,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 14,
 		"operatingEntity": {
 			"address": "ul.  Armii Krajowej 49 58-100 Świdnica, Świdnica, miasto",
 			"name": "Gmina Miasto Świdnica",
 			"nip": 8840024797.0,
-			"regNoPosition": "7063/P",
-			"regon": "890718314",
+			"regNoPosition": "7063\/P",
+			"regon": 890718314.0,
 			"website": "www.um.swidnica.pl"
 		}
 	},
@@ -532,8 +546,8 @@
 		"phone": "605616005",
 		"capacity": 45,
 		"kidsEnrolled": 45.0,
-		"basicPricePerMonth": 400.0,
-		"extendedStayOver10H": 40.0,
+		"basicPricePerMonth": 580.0,
+		"extendedStayOver10H": 58.0,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 15.9,
@@ -551,12 +565,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 15,
 		"operatingEntity": {
 			"address": "ul.  Parkowa 9 58-340 Głuszyca, Głuszyca, miasto",
 			"name": "Gmina Głuszyca",
 			"nip": 8862572750.0,
-			"regNoPosition": "7248/P",
-			"regon": "890718248",
+			"regNoPosition": "7248\/P",
+			"regon": 890718248.0,
 			"website": null
 		}
 	},
@@ -567,14 +582,14 @@
 		"email": "e.bednarkiewicz90@gmail.com",
 		"phone": "663320431",
 		"capacity": 15,
-		"kidsEnrolled": 12.0,
-		"basicPricePerMonth": 750.0,
+		"kidsEnrolled": 9.0,
+		"basicPricePerMonth": 1300.0,
 		"extendedStayOver10H": 20.0,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
-		"foodPricePerDay": 9.0,
+		"foodPricePerDay": 12.0,
 		"discounts": null,
-		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-16:30 ",
+		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-16:00 ",
 		"isAdaptedToDisabledChildren": false,
 		"businessActivitySuspended": false,
 		"address": {
@@ -587,12 +602,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 16,
 		"operatingEntity": {
 			"address": null,
 			"name": "\"BRZDĄCE NA ŁĄCE\" KLUB MALUCHA I OPIEKA DZIENNA EWELINA BEDNARKIEWICZ",
 			"nip": 6662089539.0,
-			"regNoPosition": "11406/P",
-			"regon": "367289200",
+			"regNoPosition": "11406\/P",
+			"regon": 367289200.0,
 			"website": "brzdace-grzegorzew.pl"
 		}
 	},
@@ -625,12 +641,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 17,
 		"operatingEntity": {
 			"address": "ul. Księcia Ziemowita 2 44-100 Gliwice, Gliwice, miasto",
 			"name": "Caritas Diecezji Gliwickiej",
 			"nip": 6311008107.0,
-			"regNoPosition": "633/P",
-			"regon": "040022246",
+			"regNoPosition": "633\/P",
+			"regon": 40022246.0,
 			"website": "www.caritasgliwice.pl"
 		}
 	},
@@ -641,7 +658,7 @@
 		"email": "kontakt@wesoledinusie.pl",
 		"phone": "600140533",
 		"capacity": 60,
-		"kidsEnrolled": 60.0,
+		"kidsEnrolled": 52.0,
 		"basicPricePerMonth": 1450.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
@@ -661,30 +678,31 @@
 			},
 			"voivodeship": "PODLASKIE"
 		},
+		"id": 18,
 		"operatingEntity": {
 			"address": null,
 			"name": "Lucky Star Ewa Bałtyk",
 			"nip": 9661654855.0,
-			"regNoPosition": "2263/P",
-			"regon": "200272057",
+			"regNoPosition": "2263\/P",
+			"regon": 200272057.0,
 			"website": "www.wesoledinusie.pl"
 		}
 	},
 	{
 		"institutionType": "NURSERY",
 		"name": "Żłobek \" Bajkowy Dom\"",
-		"website": "https://przedszkolebajkowydom.pl/",
+		"website": "https:\/\/przedszkolebajkowydom.pl\/",
 		"email": "sekretariatbajkowydom@op.pl",
 		"phone": "601055802",
 		"capacity": 15,
 		"kidsEnrolled": 15.0,
-		"basicPricePerMonth": 1000.0,
-		"extendedStayOver10H": 40.0,
+		"basicPricePerMonth": 1200.0,
+		"extendedStayOver10H": 50.0,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
-		"foodPricePerDay": 10.0,
+		"foodPricePerDay": 20.0,
 		"discounts": [
-			"Wielodzietność/Karta Dużej Rodziny: 5.0% ",
+			"Wielodzietność\/Karta Dużej Rodziny: 5.0% ",
 			"Rodzeństwo uczęszczające do instytucji: 20.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
@@ -700,30 +718,31 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 19,
 		"operatingEntity": {
 			"address": null,
 			"name": "Ewa Kobus",
 			"nip": 5242129792.0,
-			"regNoPosition": "1999/P",
-			"regon": "012897707",
+			"regNoPosition": "1999\/P",
+			"regon": 12897707.0,
 			"website": null
 		}
 	},
 	{
 		"institutionType": "NURSERY",
 		"name": "Żłobek Niepubliczny \"A Be Ce Strumyk Wiedzy\"",
-		"website": "http://abcstrumykwiedzy.pl/",
+		"website": "http:\/\/abcstrumykwiedzy.pl\/",
 		"email": "sekretariat@abcstrumykwiedzy.pl",
 		"phone": "607 397 165 lub 601 652 051",
-		"capacity": 27,
-		"kidsEnrolled": 27.0,
-		"basicPricePerMonth": 890.0,
+		"capacity": 50,
+		"kidsEnrolled": 50.0,
+		"basicPricePerMonth": 1150.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
-		"foodPricePerDay": 7.0,
+		"foodPricePerDay": 14.0,
 		"discounts": null,
-		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
+		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-16:30 ",
 		"isAdaptedToDisabledChildren": false,
 		"businessActivitySuspended": false,
 		"address": {
@@ -736,13 +755,14 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 20,
 		"operatingEntity": {
 			"address": null,
 			"name": "Zakłady Mięsne \"SOBKOWIAK\" Elżbieta Sobkowiak",
 			"nip": 9231266197.0,
-			"regNoPosition": "11436/P",
-			"regon": "301514252",
-			"website": "http://abcstrumykwiedzy.pl/"
+			"regNoPosition": "11436\/P",
+			"regon": 301514252.0,
+			"website": "http:\/\/abcstrumykwiedzy.pl\/"
 		}
 	},
 	{
@@ -772,12 +792,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 21,
 		"operatingEntity": {
 			"address": "UL. 11 LISTOPADA 6 42-100 KŁOBUCK",
 			"name": "Gmina Kłobuck",
 			"nip": 5742055306.0,
-			"regNoPosition": "11481/P",
-			"regon": "151398273",
+			"regNoPosition": "11481\/P",
+			"regon": 151398273.0,
 			"website": "www.gminaklobuck.pl"
 		}
 	},
@@ -808,13 +829,14 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 22,
 		"operatingEntity": {
 			"address": null,
 			"name": "RADLAKE Małgorzata Radlińska-Futyma",
 			"nip": 9222052657.0,
-			"regNoPosition": "2159/P",
-			"regon": "146538730",
-			"website": "http://cudaki-slodziaki.pl/"
+			"regNoPosition": "2159\/P",
+			"regon": 146538730.0,
+			"website": "http:\/\/cudaki-slodziaki.pl\/"
 		}
 	},
 	{
@@ -844,12 +866,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 23,
 		"operatingEntity": {
 			"address": null,
 			"name": "ZUZANNA JASIŃSKA",
 			"nip": 6462896092.0,
-			"regNoPosition": "11487/P",
-			"regon": "243140081",
+			"regNoPosition": "11487\/P",
+			"regon": 243140081.0,
 			"website": null
 		}
 	},
@@ -880,12 +903,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 24,
 		"operatingEntity": {
-			"address": "pl.  Plac Bankowy 3/5 00-950 Warszawa, Warszawa - Śródmieście, dzielnica m. st. Warszawy",
+			"address": "pl.  Plac Bankowy 3\/5 00-950 Warszawa, Warszawa - Śródmieście, dzielnica m. st. Warszawy",
 			"name": "m.st. Warszawa",
 			"nip": 5252248481.0,
-			"regNoPosition": "26702/P",
-			"regon": "015259640",
+			"regNoPosition": "26702\/P",
+			"regon": 15259640.0,
 			"website": "um.warszawa.pl"
 		}
 	},
@@ -903,7 +927,7 @@
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 16.0,
 		"discounts": [
-			"Wielodzietność/Karta Dużej Rodziny: 5.0% ",
+			"Wielodzietność\/Karta Dużej Rodziny: 5.0% ",
 			"Dziecko niepełnosprawne lub wymagające szczególnej opieki: 5.0% ",
 			"Rodzeństwo uczęszczające do instytucji: 5.0% ",
 			"wpisowe za rodzeństwo: 50.0% "
@@ -921,12 +945,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 25,
 		"operatingEntity": {
 			"address": "ul.  Sowia 5 41-100 Siemianowice Śląskie, Siemianowice Śląskie, miasto",
 			"name": "Sowia 5 Przedszkole Integracyjne i Żłobek Sp z o.o.",
 			"nip": 6431779178.0,
-			"regNoPosition": "11477/P",
-			"regon": "524044782",
+			"regNoPosition": "11477\/P",
+			"regon": 524044782.0,
 			"website": "www.przedszkole.sowia5.pl"
 		}
 	},
@@ -957,12 +982,13 @@
 			},
 			"voivodeship": "MAŁOPOLSKIE"
 		},
+		"id": 26,
 		"operatingEntity": {
 			"address": null,
 			"name": "Aleksandra Świerczek",
 			"nip": 6372193866.0,
-			"regNoPosition": "2601/P",
-			"regon": "123156882",
+			"regNoPosition": "2601\/P",
+			"regon": 123156882.0,
 			"website": null
 		}
 	},
@@ -993,12 +1019,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 27,
 		"operatingEntity": {
 			"address": null,
 			"name": "Przedszkole Niepubliczne Przedszkole Elemelek Barbara Kręźlewicz-Prarat",
 			"nip": 5311568952.0,
-			"regNoPosition": "11492/P",
-			"regon": "362429406",
+			"regNoPosition": "11492\/P",
+			"regon": 362429406.0,
 			"website": "www.przedszkole-elemelek.pl"
 		}
 	},
@@ -1009,13 +1036,14 @@
 		"email": "ewelina.gromulskasulej@gmail.com",
 		"phone": "506993708",
 		"capacity": 25,
-		"kidsEnrolled": 16.0,
-		"basicPricePerMonth": 1350.0,
+		"kidsEnrolled": 25.0,
+		"basicPricePerMonth": 1600.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
-		"foodPricePerDay": 15.5,
+		"foodPricePerDay": 17.0,
 		"discounts": [
+			"Wielodzietność\/Karta Dużej Rodziny: 20.0% ",
 			"400 zł - dofinansowanie z Mińskiego Bonu, dla dzieci zamieszkałych na terenie miasta Mińsk Mazowiecki: 30.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
@@ -1031,12 +1059,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 28,
 		"operatingEntity": {
 			"address": null,
 			"name": "Żłobek Króla Zygmunta Ewelina Gromulska-Sulej",
 			"nip": 8222364155.0,
-			"regNoPosition": "11502/P",
-			"regon": "368738284",
+			"regNoPosition": "11502\/P",
+			"regon": 368738284.0,
 			"website": null
 		}
 	},
@@ -1067,12 +1096,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 29,
 		"operatingEntity": {
 			"address": "ul.  Centralna 37 lok. 1 52-114 Wrocław-Krzyki, Wrocław-Krzyki, delegatura",
 			"name": "PWO Iwona Dąbrowska,Marzena Chrzanowska s.c.",
 			"nip": 8992804087.0,
-			"regNoPosition": "1943/P",
-			"regon": "366001591",
+			"regNoPosition": "1943\/P",
+			"regon": 366001591.0,
 			"website": null
 		}
 	},
@@ -1083,7 +1113,7 @@
 		"email": "ewaczainska@o2.pl",
 		"phone": "609508305",
 		"capacity": 42,
-		"kidsEnrolled": 37.0,
+		"kidsEnrolled": 28.0,
 		"basicPricePerMonth": 940.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
@@ -1103,12 +1133,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 30,
 		"operatingEntity": {
 			"address": "ul.  Narciarska 1,3 67-200 Głogów, Głogów, miasto",
 			"name": "Przedszkole Niepubliczne Poziomka Ewa Czaińska",
 			"nip": 6931240896.0,
-			"regNoPosition": "11511/P",
-			"regon": "021994642",
+			"regNoPosition": "11511\/P",
+			"regon": 21994642.0,
 			"website": null
 		}
 	},
@@ -1120,7 +1151,7 @@
 		"phone": "667133481",
 		"capacity": 23,
 		"kidsEnrolled": 16.0,
-		"basicPricePerMonth": 700.0,
+		"basicPricePerMonth": 850.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
@@ -1139,12 +1170,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 31,
 		"operatingEntity": {
 			"address": null,
 			"name": "Żłobek \"SZCZĘŚLIWA KRAINA\" Jadwiga Kukiełka",
 			"nip": 9141360107.0,
-			"regNoPosition": "11516/P",
-			"regon": "367894160",
+			"regNoPosition": "11516\/P",
+			"regon": 367894160.0,
 			"website": null
 		}
 	},
@@ -1175,12 +1207,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 32,
 		"operatingEntity": {
 			"address": null,
 			"name": "Eduro Anna Świderska",
 			"nip": 9581308186.0,
-			"regNoPosition": "11509/P",
-			"regon": "300929117",
+			"regNoPosition": "11509\/P",
+			"regon": 300929117.0,
 			"website": "www.lechitki.pl"
 		}
 	},
@@ -1213,12 +1246,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 33,
 		"operatingEntity": {
 			"address": "pl.  Zielony Rynek 18 64-020 Czempiń, Czempiń, miasto",
 			"name": "Niepubliczny Żłobek \"KARUZELA\"",
 			"nip": 6981780991.0,
-			"regNoPosition": "11539/P",
-			"regon": "367897968",
+			"regNoPosition": "11539\/P",
+			"regon": 367897968.0,
 			"website": "przedszkolekaruzela.pl"
 		}
 	},
@@ -1249,11 +1283,12 @@
 			},
 			"voivodeship": "OPOLSKIE"
 		},
+		"id": 34,
 		"operatingEntity": {
 			"address": null,
 			"name": "Barbara Wlaźlik",
 			"nip": 8321041142.0,
-			"regNoPosition": "441/P",
+			"regNoPosition": "441\/P",
 			"regon": null,
 			"website": null
 		}
@@ -1285,12 +1320,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 35,
 		"operatingEntity": {
 			"address": "ul. Jana Ostroroga 29 lok. 68 01-163 Warszawa - Wola, Warszawa - Wola, dzielnica m. st. Warszawy",
 			"name": "ARS EDUCANDI – SZTUKA WYCHOWANIA spółka z o.o.",
 			"nip": 5272758133.0,
-			"regNoPosition": "2951/P",
-			"regon": "363639382",
+			"regNoPosition": "2951\/P",
+			"regon": 363639382.0,
 			"website": "www.kum-kum.pl"
 		}
 	},
@@ -1301,7 +1337,7 @@
 		"email": "gwiazdolandia@gmail.com",
 		"phone": "509983750",
 		"capacity": 60,
-		"kidsEnrolled": 47.0,
+		"kidsEnrolled": 60.0,
 		"basicPricePerMonth": 1790.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
@@ -1321,12 +1357,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 36,
 		"operatingEntity": {
 			"address": "ul.  Bernardyńska 46 44-100 Gliwice, Gliwice, miasto",
 			"name": "GWIAZDOLANDIA Branicki sp. j.",
 			"nip": 6312653146.0,
-			"regNoPosition": "2198/P",
-			"regon": "243544499",
+			"regNoPosition": "2198\/P",
+			"regon": 243544499.0,
 			"website": "www.gwiazdolandia.pl"
 		}
 	},
@@ -1359,12 +1396,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 37,
 		"operatingEntity": {
 			"address": null,
 			"name": "Katarzyna Rej",
 			"nip": 7151930456.0,
-			"regNoPosition": "11575/P",
-			"regon": "368894127",
+			"regNoPosition": "11575\/P",
+			"regon": 368894127.0,
 			"website": "gryfne-bajtle.pl"
 		}
 	},
@@ -1397,12 +1435,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 38,
 		"operatingEntity": {
 			"address": null,
 			"name": "\"Cypiskowo.pl\" Katarzyna Brogowska",
 			"nip": 8842166277.0,
-			"regNoPosition": "11593/P",
-			"regon": "142431980",
+			"regNoPosition": "11593\/P",
+			"regon": 142431980.0,
 			"website": "www.cypiskowo.pl"
 		}
 	},
@@ -1430,24 +1469,25 @@
 			"county": "Powiat Kraków",
 			"fullAddress": "Kraków-Krowodrza ul. gen. Augusta Fieldorfa-Nila 17 lok. JU11 JU12",
 			"pin": {
-				"latitude": 50.0729783,
-				"longitude": 19.9155773
+				"latitude": 50.0883387,
+				"longitude": 19.9340167
 			},
 			"voivodeship": "MAŁOPOLSKIE"
 		},
+		"id": 39,
 		"operatingEntity": {
 			"address": null,
 			"name": "Barbara Konopa",
 			"nip": 6612137957.0,
-			"regNoPosition": "11567/P",
-			"regon": "123082089",
+			"regNoPosition": "11567\/P",
+			"regon": 123082089.0,
 			"website": "www.gumisiowylas.pl"
 		}
 	},
 	{
 		"institutionType": "NURSERY",
 		"name": "Żyrafka",
-		"website": "http://zlobek-zyrafka-bielany.pl/",
+		"website": "http:\/\/zlobek-zyrafka-bielany.pl\/",
 		"email": "zyrafka.zlobek@gmail.com",
 		"phone": "577066123",
 		"capacity": 20,
@@ -1471,12 +1511,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 40,
 		"operatingEntity": {
 			"address": null,
-			"name": "Aneta Aniśkiewicz",
-			"nip": 7421868797.0,
-			"regNoPosition": "11645/P",
-			"regon": "021854042",
+			"name": "CISEK I ANIŚKIEWICZ sc",
+			"nip": 8961615267.0,
+			"regNoPosition": "11645\/P",
+			"regon": 522404153.0,
 			"website": "www.zlobek-zyrafka-bielany.pl"
 		}
 	},
@@ -1507,12 +1548,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 41,
 		"operatingEntity": {
 			"address": "ul. ks. Józefa Kurzawy 5 62-874 Brzeziny, Brzeziny, wieś",
 			"name": "BAJLANDIA NIEPUBLICZNE PRZEDSZKOLE I KLUB MALUCHA S.C SYLWIA SZYGENDA EWELINA CHABIERSKA",
 			"nip": 9680980490.0,
-			"regNoPosition": "11577/P",
-			"regon": "365907958",
+			"regNoPosition": "11577\/P",
+			"regon": 365907958.0,
 			"website": null
 		}
 	},
@@ -1546,13 +1588,14 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 42,
 		"operatingEntity": {
 			"address": "ul. Jana Żabińskiego 3 02-793 Warszawa - Ursynów, Warszawa - Ursynów, dzielnica m. st. Warszawy",
 			"name": "PMT COMFORT Paulina Troć",
 			"nip": 7981338853.0,
-			"regNoPosition": "11667/P",
-			"regon": "147044934",
-			"website": "http://www.majabaja.pl/"
+			"regNoPosition": "11667\/P",
+			"regon": 147044934.0,
+			"website": "http:\/\/www.majabaja.pl\/"
 		}
 	},
 	{
@@ -1582,12 +1625,13 @@
 			},
 			"voivodeship": "WARMIŃSKO-MAZURSKIE"
 		},
+		"id": 43,
 		"operatingEntity": {
-			"address": "ul.  Jednorożca 28 80-299 Gdańsk, Gdańsk, miasto",
+			"address": "ul.  Aleja Niepodległości 606 lok. 610 81-855 SOPOT, Sopot, miasto",
 			"name": "Centrum Edukacji NOVUM Sp.z.o.o",
 			"nip": 8451984497.0,
-			"regNoPosition": "11670/P",
-			"regon": "281601760",
+			"regNoPosition": "11670\/P",
+			"regon": 281601760.0,
 			"website": "www.slonecznakraina.pl"
 		}
 	},
@@ -1618,12 +1662,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 44,
 		"operatingEntity": {
 			"address": null,
 			"name": "\"Kolorado\" - usługi edukacyjne Agnieszka Rajczyk",
 			"nip": 6272267938.0,
-			"regNoPosition": "11588/P",
-			"regon": "241559829",
+			"regNoPosition": "11588\/P",
+			"regon": 241559829.0,
 			"website": "www.kolorado.edu.pl"
 		}
 	},
@@ -1656,12 +1701,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 45,
 		"operatingEntity": {
 			"address": null,
 			"name": "Chatka Skrzatka Luiza Kaintoch",
 			"nip": 6412467897.0,
-			"regNoPosition": "11674/P",
-			"regon": "367323291",
+			"regNoPosition": "11674\/P",
+			"regon": 367323291.0,
 			"website": null
 		}
 	},
@@ -1694,12 +1740,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 46,
 		"operatingEntity": {
 			"address": null,
 			"name": "Kulka Ewa Olewińska",
 			"nip": 7791989518.0,
-			"regNoPosition": "11671/P",
-			"regon": "361783940",
+			"regNoPosition": "11671\/P",
+			"regon": 361783940.0,
 			"website": "www.przedszkolekulka.pl"
 		}
 	},
@@ -1710,7 +1757,7 @@
 		"email": "zlobekbdz2@klanza.org.pl",
 		"phone": "507406593",
 		"capacity": 30,
-		"kidsEnrolled": 12.0,
+		"kidsEnrolled": 13.0,
 		"basicPricePerMonth": 1650.0,
 		"extendedStayOver10H": 50.0,
 		"basicPricePerHour": null,
@@ -1732,12 +1779,13 @@
 			},
 			"voivodeship": "LUBELSKIE"
 		},
+		"id": 47,
 		"operatingEntity": {
 			"address": "ul.  Kaprysowa 2 20-843 Lublin, Lublin, miasto",
 			"name": "Polskie Stowarzyszenie Pedagogów i Animatorów KLANZA Lublin",
 			"nip": 9461183262.0,
-			"regNoPosition": "3285/P",
-			"regon": "430465878",
+			"regNoPosition": "3285\/P",
+			"regon": 430465878.0,
 			"website": "zlobkiklanza.pl"
 		}
 	},
@@ -1770,12 +1818,13 @@
 			},
 			"voivodeship": "OPOLSKIE"
 		},
+		"id": 48,
 		"operatingEntity": {
 			"address": "ul.  Wiejska 11 49-120 Dąbrowa, Narok, wieś",
 			"name": "AKADEMIA KINDER CENTRUM ŚMIGIELSKA ZOFIA  SPÓŁKA KOMANDYTOWA",
 			"nip": 9910309584.0,
-			"regNoPosition": "239/P",
-			"regon": "532465454",
+			"regNoPosition": "239\/P",
+			"regon": 532465454.0,
 			"website": "www.kindercentrum.pl"
 		}
 	},
@@ -1786,8 +1835,8 @@
 		"email": "rodziewiczowny@krainamarzen.pl",
 		"phone": "730794198",
 		"capacity": 60,
-		"kidsEnrolled": 46.0,
-		"basicPricePerMonth": 1095.0,
+		"kidsEnrolled": 49.0,
+		"basicPricePerMonth": 1420.0,
 		"extendedStayOver10H": 35.0,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
@@ -1808,13 +1857,14 @@
 			},
 			"voivodeship": "OPOLSKIE"
 		},
+		"id": 49,
 		"operatingEntity": {
 			"address": null,
 			"name": "\"Kraina Marzeń\" Grzegorz Tarka",
 			"nip": 7542831103.0,
-			"regNoPosition": "308/P",
-			"regon": "160341464",
-			"website": "https://kraina-marzen.pl/"
+			"regNoPosition": "308\/P",
+			"regon": 160341464.0,
+			"website": "https:\/\/kraina-marzen.pl\/"
 		}
 	},
 	{
@@ -1844,12 +1894,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 50,
 		"operatingEntity": {
 			"address": "ul. ks. Józefa Kurzawy 5 62-874 Brzeziny, Brzeziny, wieś",
 			"name": "BAJLANDIA NIEPUBLICZNE PRZEDSZKOLE I KLUB MALUCHA S.C SYLWIA SZYGENDA EWELINA CHABIERSKA",
 			"nip": 9680980490.0,
-			"regNoPosition": "11577/P",
-			"regon": "365907958",
+			"regNoPosition": "11577\/P",
+			"regon": 365907958.0,
 			"website": null
 		}
 	},
@@ -1882,19 +1933,20 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 51,
 		"operatingEntity": {
 			"address": "ul.  Krzemowa 1 62-002 Suchy Las, Złotniki, wieś",
 			"name": "NICKEL EDU SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
 			"nip": 7773102120.0,
-			"regNoPosition": "11697/P",
-			"regon": "300984926",
+			"regNoPosition": "11697\/P",
+			"regon": 300984926.0,
 			"website": "www.ulprzedszkole.pl"
 		}
 	},
 	{
 		"institutionType": "NURSERY",
 		"name": "Niepubliczny Żłobek \"Wyspa Szkrabów\"",
-		"website": "http://wyspaszkrabow.5v.pl",
+		"website": "http:\/\/wyspaszkrabow.5v.pl",
 		"email": "wyspa.szkrabow@wp.pl",
 		"phone": "538475480",
 		"capacity": 40,
@@ -1918,13 +1970,14 @@
 			},
 			"voivodeship": "LUBUSKIE"
 		},
+		"id": 52,
 		"operatingEntity": {
 			"address": null,
 			"name": "Mateusz Kłosowski",
 			"nip": 5961650629.0,
-			"regNoPosition": "11698/P",
-			"regon": "081033551",
-			"website": "http://wyspaszkrabow.5v.pl"
+			"regNoPosition": "11698\/P",
+			"regon": 81033551.0,
+			"website": "http:\/\/wyspaszkrabow.5v.pl"
 		}
 	},
 	{
@@ -1935,13 +1988,13 @@
 		"phone": "509777829",
 		"capacity": 31,
 		"kidsEnrolled": 31.0,
-		"basicPricePerMonth": 1633.0,
+		"basicPricePerMonth": 1830.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
-		"foodPricePerDay": 12.5,
+		"foodPricePerDay": 15.0,
 		"discounts": [
-			"Karta Dużej Rodziny - zniżka na wyżywienie: 50.0% "
+			"wyżywienie przy drugim i kolejnym dziecku w rodzinie (w a.gugu) + KDR: 50.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 7:00-17:00 ",
 		"isAdaptedToDisabledChildren": true,
@@ -1956,12 +2009,13 @@
 			},
 			"voivodeship": "LUBELSKIE"
 		},
+		"id": 53,
 		"operatingEntity": {
 			"address": null,
 			"name": "CRESCA - EWA TYMIŃSKA-JARASZKIEWICZ",
 			"nip": 7151802178.0,
-			"regNoPosition": "11718/P",
-			"regon": "361404686",
+			"regNoPosition": "11718\/P",
+			"regon": 361404686.0,
 			"website": "www.zlobekagugu.pl"
 		}
 	},
@@ -1992,19 +2046,20 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 54,
 		"operatingEntity": {
 			"address": "rynek Rynek 21 63-604 BARANÓW, Baranów",
 			"name": "Gmina Baranów",
 			"nip": 6191945073.0,
-			"regNoPosition": "3249/P",
-			"regon": "250855529",
+			"regNoPosition": "3249\/P",
+			"regon": 250855529.0,
 			"website": "www.baranow.pl"
 		}
 	},
 	{
 		"institutionType": "NURSERY",
 		"name": "Żłobek Hero!Academy",
-		"website": "http://www.heroacademy.edu.pl/",
+		"website": "http:\/\/www.heroacademy.edu.pl\/",
 		"email": "s.laskowska@hero.edu.pl",
 		"phone": "781953211",
 		"capacity": 20,
@@ -2028,13 +2083,14 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 55,
 		"operatingEntity": {
 			"address": "al.  Aleja Rzeczypospolitej 1 02-972 Warszawa - Wilanów, Warszawa - Wilanów, dzielnica m. st. Warszawy",
 			"name": "HERO ACADEMY SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ",
 			"nip": 5252679258.0,
-			"regNoPosition": "11723/P",
-			"regon": "365601254",
-			"website": "http://www.heroacademy.edu.pl/"
+			"regNoPosition": "11723\/P",
+			"regon": 365601254.0,
+			"website": "http:\/\/www.heroacademy.edu.pl\/"
 		}
 	},
 	{
@@ -2066,12 +2122,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 56,
 		"operatingEntity": {
 			"address": "ul.  Naramowicka 47A lok. 6 61-622 Poznań-Stare Miasto, Poznań-Stare Miasto, delegatura",
 			"name": "Joanna Mikulska Maciej Górniak",
 			"nip": 9721280721.0,
-			"regNoPosition": "11744/P",
-			"regon": "368691654",
+			"regNoPosition": "11744\/P",
+			"regon": 368691654.0,
 			"website": null
 		}
 	},
@@ -2088,9 +2145,7 @@
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 15.5,
-		"discounts": [
-			"Rodzeństwo uczęszczające do instytucji: 10.0% "
-		],
+		"discounts": null,
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:45-16:45 ",
 		"isAdaptedToDisabledChildren": true,
 		"businessActivitySuspended": false,
@@ -2104,12 +2159,13 @@
 			},
 			"voivodeship": "PODLASKIE"
 		},
+		"id": 57,
 		"operatingEntity": {
 			"address": null,
 			"name": "Lucky Star Ewa Bałtyk",
 			"nip": 9661654855.0,
-			"regNoPosition": "2263/P",
-			"regon": "200272057",
+			"regNoPosition": "2263\/P",
+			"regon": 200272057.0,
 			"website": "www.wesoledinusie.pl"
 		}
 	},
@@ -2142,12 +2198,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 58,
 		"operatingEntity": {
 			"address": "ul.  Mazowiecka 11 lok. 49 00-052 Warszawa - Śródmieście, Warszawa - Śródmieście, dzielnica m. st. Warszawy",
 			"name": "Education&Fun Sp. z o.o.",
 			"nip": 5252700610.0,
-			"regNoPosition": "11765/P",
-			"regon": "366640049",
+			"regNoPosition": "11765\/P",
+			"regon": 366640049.0,
 			"website": "www.przedszkolafairplay-grojecka.pl"
 		}
 	},
@@ -2178,12 +2235,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 59,
 		"operatingEntity": {
-			"address": "ul.  Cicha 8/10 lok. 161 26-600 Radom, Radom, miasto",
+			"address": "ul.  Cicha 8\/10 lok. 161 26-600 Radom, Radom, miasto",
 			"name": "Stowarzyszenie \"Karuzela\"",
 			"nip": 9482507155.0,
-			"regNoPosition": "11751/P",
-			"regon": "141219166",
+			"regNoPosition": "11751\/P",
+			"regon": 141219166.0,
 			"website": "www.karuzela.org"
 		}
 	},
@@ -2214,12 +2272,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 60,
 		"operatingEntity": {
 			"address": "ul.  Wrzesińska 100 62-020 Swarzędz, Jasin, wieś",
 			"name": "\"MAYA\" PRYWATNY ŻŁOBEK Iwona Muszyńska",
 			"nip": 8551054125.0,
-			"regNoPosition": "3381/P",
-			"regon": "810528895",
+			"regNoPosition": "3381\/P",
+			"regon": 810528895.0,
 			"website": null
 		}
 	},
@@ -2250,12 +2309,13 @@
 			},
 			"voivodeship": "WARMIŃSKO-MAZURSKIE"
 		},
+		"id": 61,
 		"operatingEntity": {
 			"address": " 4 11-300 Biskupiec, Nowe Marcinkowo, wieś",
 			"name": "Bajkowy Żłobek Katarzyna Kotecka",
 			"nip": 7391768073.0,
-			"regNoPosition": "11766/P",
-			"regon": "519583698",
+			"regNoPosition": "11766\/P",
+			"regon": 519583698.0,
 			"website": "www.jacek-i-agatka.pl"
 		}
 	},
@@ -2288,12 +2348,13 @@
 			},
 			"voivodeship": "KUJAWSKO-POMORSKIE"
 		},
+		"id": 62,
 		"operatingEntity": {
 			"address": null,
 			"name": "Roman Turczyn Żłobek Bajkowa Kraina Toruń",
 			"nip": 8790014100.0,
-			"regNoPosition": "11770/P",
-			"regon": "871704100",
+			"regNoPosition": "11770\/P",
+			"regon": 871704100.0,
 			"website": null
 		}
 	},
@@ -2311,7 +2372,7 @@
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 10.0,
 		"discounts": [
-			"Wielodzietność/Karta Dużej Rodziny: 5.0% ",
+			"Wielodzietność\/Karta Dużej Rodziny: 5.0% ",
 			"Dotacja z budżetu Gminy na dziecko zamieszkałe na terenie Gminy Jaktorów, Radziejowice i miasta Żyrardów - 300 zł miesięcznie; : 38.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
@@ -2327,12 +2388,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 63,
 		"operatingEntity": {
 			"address": " 15 96-316 Jaktorów, Henryszew, wieś",
 			"name": "Opieka nad Dziećmi Zielony Ogródek, Katarzyna Zbrzeźna",
 			"nip": 8381152046.0,
-			"regNoPosition": "11775/P",
-			"regon": "015002450",
+			"regNoPosition": "11775\/P",
+			"regon": 15002450.0,
 			"website": "www.domoweprzedszkole.info.pl"
 		}
 	},
@@ -2350,7 +2412,7 @@
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 16.5,
 		"discounts": [
-			"Wielodzietność/Karta Dużej Rodziny: 5.0% ",
+			"Wielodzietność\/Karta Dużej Rodziny: 5.0% ",
 			"Rodzeństwo uczęszczające do instytucji: 5.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:00 ",
@@ -2366,12 +2428,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 64,
 		"operatingEntity": {
 			"address": null,
 			"name": "Prywatny żłobek ,,Kolorowy Domek \" Aleksandra Goździak",
 			"nip": 7861638707.0,
-			"regNoPosition": "11777/P",
-			"regon": "301274530",
+			"regNoPosition": "11777\/P",
+			"regon": 301274530.0,
 			"website": "www.kolorowydomek.com.pl"
 		}
 	},
@@ -2404,12 +2467,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 65,
 		"operatingEntity": {
 			"address": " 64 59-430 Wądroże Wielkie",
 			"name": "Gmina Wądroże Wielkie",
 			"nip": 6951400825.0,
-			"regNoPosition": "7169/P",
-			"regon": "390647430",
+			"regNoPosition": "7169\/P",
+			"regon": 390647430.0,
 			"website": "www.wadrozewielkie.pl"
 		}
 	},
@@ -2420,16 +2484,16 @@
 		"email": "ewa.osomanska@wp.pl",
 		"phone": "606718179",
 		"capacity": 20,
-		"kidsEnrolled": 20.0,
-		"basicPricePerMonth": 300.0,
+		"kidsEnrolled": 17.0,
+		"basicPricePerMonth": 400.0,
 		"extendedStayOver10H": 20.0,
 		"basicPricePerHour": null,
-		"foodPricePerMonth": 100.0,
+		"foodPricePerMonth": 200.0,
 		"foodPricePerDay": null,
 		"discounts": [
 			"Rodzeństwo uczęszczające do instytucji: 50.0% "
 		],
-		"openingHours": "Godziny pracy: ",
+		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-16:00 ",
 		"isAdaptedToDisabledChildren": true,
 		"businessActivitySuspended": false,
 		"address": {
@@ -2442,12 +2506,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 66,
 		"operatingEntity": {
 			"address": null,
 			"name": "Ewa Pawlak-Osmańska",
 			"nip": 6931353933.0,
-			"regNoPosition": "1973/P",
-			"regon": "390073790",
+			"regNoPosition": "1973\/P",
+			"regon": 390073790.0,
 			"website": null
 		}
 	},
@@ -2459,11 +2524,11 @@
 		"phone": "697918433",
 		"capacity": 13,
 		"kidsEnrolled": 13.0,
-		"basicPricePerMonth": 1450.0,
+		"basicPricePerMonth": 1570.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
-		"foodPricePerDay": 18.0,
+		"foodPricePerDay": 19.0,
 		"discounts": [
 			"Rodzeństwo uczęszczające do instytucji: 10.0% "
 		],
@@ -2480,12 +2545,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 67,
 		"operatingEntity": {
 			"address": null,
 			"name": "ELEMELEK Ewelina Strutynska",
 			"nip": 8942902327.0,
-			"regNoPosition": "11848/P",
-			"regon": "369134105",
+			"regNoPosition": "11848\/P",
+			"regon": 369134105.0,
 			"website": "www.elemeleksiechnice.pl"
 		}
 	},
@@ -2519,12 +2585,13 @@
 			},
 			"voivodeship": "PODKARPACKIE"
 		},
+		"id": 68,
 		"operatingEntity": {
 			"address": "ul. Lwowska 28a 38-400 Krosno",
 			"name": "Gmina Miasto Krosno",
 			"nip": 6840013798.0,
-			"regNoPosition": "415/P",
-			"regon": "370440809",
+			"regNoPosition": "415\/P",
+			"regon": 370440809.0,
 			"website": "krosno.pl"
 		}
 	},
@@ -2558,12 +2625,13 @@
 			},
 			"voivodeship": "PODKARPACKIE"
 		},
+		"id": 69,
 		"operatingEntity": {
 			"address": "ul. Lwowska 28a 38-400 Krosno",
 			"name": "Gmina Miasto Krosno",
 			"nip": 6840013798.0,
-			"regNoPosition": "415/P",
-			"regon": "370440809",
+			"regNoPosition": "415\/P",
+			"regon": 370440809.0,
 			"website": "krosno.pl"
 		}
 	},
@@ -2597,12 +2665,13 @@
 			},
 			"voivodeship": "PODKARPACKIE"
 		},
+		"id": 70,
 		"operatingEntity": {
 			"address": "ul. Lwowska 28a 38-400 Krosno",
 			"name": "Gmina Miasto Krosno",
 			"nip": 6840013798.0,
-			"regNoPosition": "415/P",
-			"regon": "370440809",
+			"regNoPosition": "415\/P",
+			"regon": 370440809.0,
 			"website": "krosno.pl"
 		}
 	},
@@ -2613,7 +2682,7 @@
 		"email": "waclawik.karolina@gmail.com",
 		"phone": "697709281",
 		"capacity": 20,
-		"kidsEnrolled": 20.0,
+		"kidsEnrolled": 12.0,
 		"basicPricePerMonth": 1070.0,
 		"extendedStayOver10H": 50.0,
 		"basicPricePerHour": null,
@@ -2636,12 +2705,13 @@
 			},
 			"voivodeship": "PODKARPACKIE"
 		},
+		"id": 71,
 		"operatingEntity": {
 			"address": null,
 			"name": "Karolina Wacławik",
 			"nip": 6842285489.0,
-			"regNoPosition": "416/P",
-			"regon": "180870980",
+			"regNoPosition": "416\/P",
+			"regon": 180870980.0,
 			"website": null
 		}
 	},
@@ -2672,12 +2742,13 @@
 			},
 			"voivodeship": "PODKARPACKIE"
 		},
+		"id": 72,
 		"operatingEntity": {
 			"address": null,
 			"name": "Alicja Tabinowska",
 			"nip": 7952193783.0,
-			"regNoPosition": "11292/P",
-			"regon": "180587741",
+			"regNoPosition": "11292\/P",
+			"regon": 180587741.0,
 			"website": "www.krainamarzen-buszkowice.edupge.pl"
 		}
 	},
@@ -2708,13 +2779,14 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 73,
 		"operatingEntity": {
 			"address": null,
 			"name": "KF-EDUKACJA  FRANCISZEK KOZIELEC",
 			"nip": 7351019187.0,
-			"regNoPosition": "11923/P",
-			"regon": "490588321",
-			"website": "http://calineczka.edu.pl/"
+			"regNoPosition": "11923\/P",
+			"regon": 490588321.0,
+			"website": "http:\/\/calineczka.edu.pl\/"
 		}
 	},
 	{
@@ -2744,12 +2816,13 @@
 			},
 			"voivodeship": "WARMIŃSKO-MAZURSKIE"
 		},
+		"id": 74,
 		"operatingEntity": {
 			"address": null,
 			"name": "DOMOWA AKADEMIA ,,SMYK\" MAGDALENA CHRZĄSZCZ",
 			"nip": 5821436936.0,
-			"regNoPosition": "11904/P",
-			"regon": "171012223",
+			"regNoPosition": "11904\/P",
+			"regon": 171012223.0,
 			"website": null
 		}
 	},
@@ -2780,12 +2853,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 75,
 		"operatingEntity": {
 			"address": null,
 			"name": "Nibylandia Karolina Wodarz",
 			"nip": 6351589866.0,
-			"regNoPosition": "11912/P",
-			"regon": "240903762",
+			"regNoPosition": "11912\/P",
+			"regon": 240903762.0,
 			"website": null
 		}
 	},
@@ -2803,7 +2877,7 @@
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 11.0,
 		"discounts": [
-			"Wielodzietność/Karta Dużej Rodziny: 50.0% ",
+			"Wielodzietność\/Karta Dużej Rodziny: 50.0% ",
 			"Dochód rodzinny: 50.0% ",
 			"Rodzeństwo uczęszczające do instytucji: 50.0% ",
 			"Rodzina+: 50.0% "
@@ -2821,12 +2895,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 76,
 		"operatingEntity": {
 			"address": "pl.  Ratuszowy 1 43-300 Bielsko-Biała, Bielsko-Biała, miasto",
 			"name": "Gmina Bielsko-Biała",
 			"nip": 9372686990.0,
-			"regNoPosition": "366/P",
-			"regon": "072181741",
+			"regNoPosition": "366\/P",
+			"regon": 72181741.0,
 			"website": "www.um.bielsko.pl"
 		}
 	},
@@ -2837,7 +2912,7 @@
 		"email": "bystrzaki@fep.edu.pl",
 		"phone": "733101920",
 		"capacity": 32,
-		"kidsEnrolled": 33.0,
+		"kidsEnrolled": 31.0,
 		"basicPricePerMonth": 1365.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
@@ -2859,12 +2934,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 77,
 		"operatingEntity": {
 			"address": "pl. św. Macieja 2 50-244 Wrocław-Śródmieście, Wrocław-Śródmieście, delegatura",
 			"name": "Fundacja Edukacji Przedszkolnej",
 			"nip": 8982112726.0,
-			"regNoPosition": "11941/P",
-			"regon": "020545528",
+			"regNoPosition": "11941\/P",
+			"regon": 20545528.0,
 			"website": "brak"
 		}
 	},
@@ -2897,13 +2973,14 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 78,
 		"operatingEntity": {
 			"address": null,
 			"name": "DEA Konsulting Izabela Tokarska",
 			"nip": 5991766905.0,
-			"regNoPosition": "11946/P",
-			"regon": "300163997",
-			"website": "www.http://zyrafy.com.pl/"
+			"regNoPosition": "11946\/P",
+			"regon": 300163997.0,
+			"website": "www.http:\/\/zyrafy.com.pl\/"
 		}
 	},
 	{
@@ -2935,12 +3012,13 @@
 			},
 			"voivodeship": "ŚWIĘTOKRZYSKIE"
 		},
+		"id": 79,
 		"operatingEntity": {
 			"address": "ul. Opatowska 31 28-200 Staszów",
 			"name": "Gmina Staszów",
 			"nip": 8661608731.0,
-			"regNoPosition": "202/P",
-			"regon": "830409749",
+			"regNoPosition": "202\/P",
+			"regon": 830409749.0,
 			"website": "www.staszow.pl"
 		}
 	},
@@ -2958,7 +3036,7 @@
 		"foodPricePerMonth": null,
 		"foodPricePerDay": 16.0,
 		"discounts": [
-			"Wielodzietność/Karta Dużej Rodziny: 20.0% "
+			"Wielodzietność\/Karta Dużej Rodziny: 20.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-16:30 ",
 		"isAdaptedToDisabledChildren": true,
@@ -2973,12 +3051,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 80,
 		"operatingEntity": {
 			"address": null,
 			"name": "Tęcza Anna Laudańska",
 			"nip": 7811379244.0,
-			"regNoPosition": "11961/P",
-			"regon": "300971444",
+			"regNoPosition": "11961\/P",
+			"regon": 300971444.0,
 			"website": "www.teczadzieci.pl"
 		}
 	},
@@ -3011,12 +3090,13 @@
 			},
 			"voivodeship": "WIELKOPOLSKIE"
 		},
+		"id": 81,
 		"operatingEntity": {
 			"address": null,
 			"name": "SZALONA ŻYRAFA Agata Nelka",
 			"nip": 6172036180.0,
-			"regNoPosition": "11920/P",
-			"regon": "301997842",
+			"regNoPosition": "11920\/P",
+			"regon": 301997842.0,
 			"website": null
 		}
 	},
@@ -3047,12 +3127,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 82,
 		"operatingEntity": {
 			"address": null,
 			"name": "PPHU BTP ANNA KÜNSTLE Przedszkole Anglojęzyczne \"HAPPY TIME\" Prywatna Szkoła Podstawowa \"Wonderful Years School\"; Żłobek Abrakadabra",
 			"nip": 8331134810.0,
-			"regNoPosition": "11905/P",
-			"regon": "750770639",
+			"regNoPosition": "11905\/P",
+			"regon": 750770639.0,
 			"website": "www.zlobekabrakadabra.pl"
 		}
 	},
@@ -3085,51 +3166,14 @@
 			},
 			"voivodeship": "ZACHODNIOPOMORSKIE"
 		},
+		"id": 83,
 		"operatingEntity": {
 			"address": "ul.  Przyjaźni 8 72-010 Police, Police, miasto",
 			"name": "Niepubliczny Żłobek Bajkolandia Spółka Cywilna Anna Hasior Monika Ewald",
 			"nip": 8513245366.0,
-			"regNoPosition": "19448/P",
-			"regon": "385191533",
+			"regNoPosition": "19448\/P",
+			"regon": 385191533.0,
 			"website": null
-		}
-	},
-	{
-		"institutionType": "CHILDCLUB",
-		"name": "KLUB OPIEKI NAD DZIEĆMI \"NAJLEPSZA NIANIA\"",
-		"website": "www.najlepszaniania.com.pl",
-		"email": "najlepszaniania@onet.eu",
-		"phone": "600292475",
-		"capacity": 13,
-		"kidsEnrolled": 0.0,
-		"basicPricePerMonth": 1600.0,
-		"extendedStayOver10H": null,
-		"basicPricePerHour": null,
-		"foodPricePerMonth": null,
-		"foodPricePerDay": 12.0,
-		"discounts": [
-			"Rodzeństwo uczęszczające do instytucji: 10.0% "
-		],
-		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 07:00-17:00 ",
-		"isAdaptedToDisabledChildren": false,
-		"businessActivitySuspended": false,
-		"address": {
-			"city": "Bielsko-Biała",
-			"county": "Powiat Bielsko-Biała",
-			"fullAddress": "Bielsko-Biała ul. Konstantego Damrota 5",
-			"pin": {
-				"latitude": 49.8175062,
-				"longitude": 19.0275291
-			},
-			"voivodeship": "ŚLĄSKIE"
-		},
-		"operatingEntity": {
-			"address": null,
-			"name": "Klub Opieki nad Dziećmi \"Najlepsza Niania\" Aneta Nitecka",
-			"nip": 9372385828.0,
-			"regNoPosition": "349/P",
-			"regon": "241001330",
-			"website": "www.najlepszaniania.com.pl"
 		}
 	},
 	{
@@ -3139,17 +3183,17 @@
 		"email": "becia784@wp.pl",
 		"phone": "733432530",
 		"capacity": 12,
-		"kidsEnrolled": 10.0,
-		"basicPricePerMonth": 950.0,
-		"extendedStayOver10H": 40.0,
+		"kidsEnrolled": 9.0,
+		"basicPricePerMonth": 1100.0,
+		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
-		"foodPricePerDay": 6.0,
+		"foodPricePerDay": 13.0,
 		"discounts": [
 			"Rodzeństwo uczęszczające do instytucji: 15.0% ",
 			"W przypadku choroby dziecka dłuższej niż 2 tygodnie przysługuje zniżka  w kolejnym miesiącu opłaty za pobyt dziecka w placówce.: 10.0% "
 		],
-		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 6:30-16:30 ",
+		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota 7:00-16:00 ",
 		"isAdaptedToDisabledChildren": false,
 		"businessActivitySuspended": false,
 		"address": {
@@ -3162,12 +3206,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 84,
 		"operatingEntity": {
 			"address": null,
 			"name": "Beata Mozgała",
 			"nip": 2220566354.0,
-			"regNoPosition": "11936/P",
-			"regon": "243439880",
+			"regNoPosition": "11936\/P",
+			"regon": 243439880.0,
 			"website": "www.do-mis.pl"
 		}
 	},
@@ -3177,8 +3222,8 @@
 		"website": "www.gumisiowakraina.pl",
 		"email": "tk49@onet.pl",
 		"phone": "504220625",
-		"capacity": 105,
-		"kidsEnrolled": 105.0,
+		"capacity": 120,
+		"kidsEnrolled": 120.0,
 		"basicPricePerMonth": 650.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
@@ -3198,12 +3243,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 85,
 		"operatingEntity": {
 			"address": null,
 			"name": "Teresa Kalbarczyk P.P.U.H. \"KAL-TEX\", Niepubliczne Przedszkole i Żłobek \"GUMISIOWA KRAINA\" Teresa Kalbarczyk",
 			"nip": 7961846084.0,
-			"regNoPosition": "11938/P",
-			"regon": "672740720",
+			"regNoPosition": "11938\/P",
+			"regon": 672740720.0,
 			"website": "www.gumisiowakraina.pl"
 		}
 	},
@@ -3236,12 +3282,13 @@
 			},
 			"voivodeship": "PODKARPACKIE"
 		},
+		"id": 86,
 		"operatingEntity": {
 			"address": " 350A 37-111 Rakszawa, Rakszawa, wieś",
 			"name": "Tygrysek S.C. E. Walawender i M. Golenia",
 			"nip": 8151797756.0,
-			"regNoPosition": "11939/P",
-			"regon": "180992588",
+			"regNoPosition": "11939\/P",
+			"regon": 180992588.0,
 			"website": "www.tygrysek-przedszkole.pl"
 		}
 	},
@@ -3252,15 +3299,15 @@
 		"email": "biuro@antbee.eu",
 		"phone": "533119911",
 		"capacity": 55,
-		"kidsEnrolled": 19.0,
+		"kidsEnrolled": 22.0,
 		"basicPricePerMonth": 1350.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": 200.0,
 		"foodPricePerDay": null,
 		"discounts": [
-			"Wielodzietność/Karta Dużej Rodziny: 5.0% ",
-			"Rodzeństwo uczęszczające do instytucji: 20.0% "
+			"Wielodzietność\/Karta Dużej Rodziny: 5.0% ",
+			"Rodzeństwo uczęszczające do instytucji: 10.0% "
 		],
 		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 06:30-17:30 ",
 		"isAdaptedToDisabledChildren": false,
@@ -3275,13 +3322,14 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 87,
 		"operatingEntity": {
 			"address": null,
 			"name": "Little AntBee Dorota Kuźlik",
 			"nip": 1180239883.0,
-			"regNoPosition": "7128/P",
-			"regon": "142476534",
-			"website": "http://www.antbee.eu/"
+			"regNoPosition": "7128\/P",
+			"regon": 142476534.0,
+			"website": "http:\/\/www.antbee.eu\/"
 		}
 	},
 	{
@@ -3313,12 +3361,13 @@
 			},
 			"voivodeship": "ŚWIĘTOKRZYSKIE"
 		},
+		"id": 88,
 		"operatingEntity": {
 			"address": "ul. Opatowska 31 28-200 Staszów",
 			"name": "Gmina Staszów",
 			"nip": 8661608731.0,
-			"regNoPosition": "202/P",
-			"regon": "830409749",
+			"regNoPosition": "202\/P",
+			"regon": 830409749.0,
 			"website": "www.staszow.pl"
 		}
 	},
@@ -3351,12 +3400,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 89,
 		"operatingEntity": {
 			"address": "ul.  Wojska Polskiego 56h 56-400 Oleśnica, Oleśnica, miasto",
 			"name": "Leśny Skrzat Sp. z o.o.",
 			"nip": 9112020900.0,
-			"regNoPosition": "2254/P",
-			"regon": "367323492",
+			"regNoPosition": "2254\/P",
+			"regon": 367323492.0,
 			"website": "www.lesny-skrzat.pl"
 		}
 	},
@@ -3366,8 +3416,8 @@
 		"website": "www.zlobek.katowice.pl",
 		"email": "krzywoustego@zlobek.katowice.pl",
 		"phone": "32 258-60-53",
-		"capacity": 52,
-		"kidsEnrolled": 52.0,
+		"capacity": 64,
+		"kidsEnrolled": 64.0,
 		"basicPricePerMonth": 400.0,
 		"extendedStayOver10H": 30.0,
 		"basicPricePerHour": null,
@@ -3390,12 +3440,13 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 90,
 		"operatingEntity": {
 			"address": "ul.  Młyńska 4 40-098 Katowice, Katowice, miasto",
 			"name": "Gmina Katowice",
 			"nip": 6340010147.0,
-			"regNoPosition": "1968/P",
-			"regon": "276255387",
+			"regNoPosition": "1968\/P",
+			"regon": 276255387.0,
 			"website": "katowice.eu"
 		}
 	},
@@ -3406,7 +3457,7 @@
 		"email": "kontakt@cenedu.pl",
 		"phone": "576034659",
 		"capacity": 23,
-		"kidsEnrolled": 15.0,
+		"kidsEnrolled": 8.0,
 		"basicPricePerMonth": 760.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
@@ -3428,23 +3479,24 @@
 			},
 			"voivodeship": "POMORSKIE"
 		},
+		"id": 91,
 		"operatingEntity": {
 			"address": null,
 			"name": "Centrum Edukacyjne Katarzyna Stosik",
 			"nip": 8431137676.0,
-			"regNoPosition": "7278/P",
-			"regon": "771518984",
+			"regNoPosition": "7278\/P",
+			"regon": 771518984.0,
 			"website": "cenedu.pl"
 		}
 	},
 	{
 		"institutionType": "CHILDCLUB",
 		"name": "Klub dziecięcy - Klub Malucha \"Krasnoludki\"",
-		"website": "http://manufakturarozwojuiradosci.pl",
+		"website": "http:\/\/manufakturarozwojuiradosci.pl",
 		"email": "biuro@fds-consulting.eu",
 		"phone": "523345659",
 		"capacity": 15,
-		"kidsEnrolled": 6.0,
+		"kidsEnrolled": 0.0,
 		"basicPricePerMonth": 700.0,
 		"extendedStayOver10H": null,
 		"basicPricePerHour": null,
@@ -3466,12 +3518,13 @@
 			},
 			"voivodeship": "POMORSKIE"
 		},
+		"id": 92,
 		"operatingEntity": {
 			"address": null,
 			"name": "CONSULTING Firma Doradczo-Szkoleniowa Julita Orłowska-Szczepańska",
 			"nip": 5551861284.0,
-			"regNoPosition": "11969/P",
-			"regon": "220906687",
+			"regNoPosition": "11969\/P",
+			"regon": 220906687.0,
 			"website": null
 		}
 	},
@@ -3502,12 +3555,13 @@
 			},
 			"voivodeship": "POMORSKIE"
 		},
+		"id": 93,
 		"operatingEntity": {
 			"address": "ul.  Nowodworcowa 1 lok. 1 81-581 Gdynia, Gdynia, miasto",
 			"name": "AGUGU Aleksandra Schenk",
 			"nip": 5862173362.0,
-			"regNoPosition": "11970/P",
-			"regon": "222052284",
+			"regNoPosition": "11970\/P",
+			"regon": 222052284.0,
 			"website": "www.agugu.info"
 		}
 	},
@@ -3518,8 +3572,8 @@
 		"email": "biuro@zlobekkolorowekredki.pl",
 		"phone": "510513550",
 		"capacity": 71,
-		"kidsEnrolled": 61.0,
-		"basicPricePerMonth": 1450.0,
+		"kidsEnrolled": 64.0,
+		"basicPricePerMonth": 1575.0,
 		"extendedStayOver10H": 50.0,
 		"basicPricePerHour": null,
 		"foodPricePerMonth": null,
@@ -3540,12 +3594,13 @@
 			},
 			"voivodeship": "DOLNOŚLĄSKIE"
 		},
+		"id": 94,
 		"operatingEntity": {
 			"address": "ul.  Osiedlowa 31 55-011 Siechnice, Siechnice, miasto",
 			"name": "Kolorowe Kredki spółka cywilna Tobiasz Butniak Barbara Jurkowska",
 			"nip": 8961570429.0,
-			"regNoPosition": "11989/P",
-			"regon": "368692760",
+			"regNoPosition": "11989\/P",
+			"regon": 368692760.0,
 			"website": "www.zlobekkolorowekredki.pl"
 		}
 	},
@@ -3576,19 +3631,20 @@
 			},
 			"voivodeship": "PODKARPACKIE"
 		},
+		"id": 95,
 		"operatingEntity": {
 			"address": "ul.  Reformacka 4 35-026 Rzeszów, Rzeszów, miasto",
 			"name": "Akademia Maluszka\" Słodki Bobasek\" s.c",
 			"nip": 8133649229.0,
-			"regNoPosition": "163/P",
-			"regon": "180680363",
+			"regNoPosition": "163\/P",
+			"regon": 180680363.0,
 			"website": "www.slodkibobasek.pl"
 		}
 	},
 	{
 		"institutionType": "NURSERY",
 		"name": "Żłobek \"Kubuś Puchatek\" w Szubinie",
-		"website": "http://www.przedszkole2.szubin.pl/",
+		"website": "http:\/\/www.przedszkole2.szubin.pl\/",
 		"email": "sekretariat@przedszkole2.szubin.pl",
 		"phone": "52 384 24 47",
 		"capacity": 40,
@@ -3612,19 +3668,20 @@
 			},
 			"voivodeship": "KUJAWSKO-POMORSKIE"
 		},
+		"id": 96,
 		"operatingEntity": {
 			"address": "ul. Kcyńska 12 89-200 Szubin",
 			"name": "Gmina Szubin",
 			"nip": 5581723233.0,
-			"regNoPosition": "11973/P",
-			"regon": "092350910",
+			"regNoPosition": "11973\/P",
+			"regon": 92350910.0,
 			"website": null
 		}
 	},
 	{
 		"institutionType": "NURSERY",
 		"name": "ZAMECZEK WIOLETTA CHOLEWA-BARANOWSKA",
-		"website": "www.przedszkolezameczek.pl/",
+		"website": "www.przedszkolezameczek.pl\/",
 		"email": "zameczek50@wp.pl",
 		"phone": "600251606",
 		"capacity": 70,
@@ -3650,13 +3707,14 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 97,
 		"operatingEntity": {
 			"address": null,
 			"name": "Zameczek Wioletta Cholewa - Baranowska",
 			"nip": 8241656108.0,
-			"regNoPosition": "775/P",
-			"regon": "144084867",
-			"website": "http://www.przedszkolezameczek.pl/"
+			"regNoPosition": "775\/P",
+			"regon": 144084867.0,
+			"website": "http:\/\/www.przedszkolezameczek.pl\/"
 		}
 	},
 	{
@@ -3686,12 +3744,13 @@
 			},
 			"voivodeship": "MAZOWIECKIE"
 		},
+		"id": 98,
 		"operatingEntity": {
 			"address": "ul.  Niekłańska 21 lok. 1 03-924 Warszawa - Praga-Południe, Warszawa - Praga-Południe, dzielnica m. st. Warszawy",
 			"name": "Buka S.C. Karolina Rucińska, Paweł Jóźwik",
 			"nip": 7591740926.0,
-			"regNoPosition": "2989/P",
-			"regon": "147006649",
+			"regNoPosition": "2989\/P",
+			"regon": 147006649.0,
 			"website": "żłobek-warszawa.pl"
 		}
 	},
@@ -3724,13 +3783,53 @@
 			},
 			"voivodeship": "ŚLĄSKIE"
 		},
+		"id": 99,
 		"operatingEntity": {
 			"address": "ul.  Gajdasa 1B 41-922 Radzionków, Radzionków, miasto",
 			"name": "NIEPUBLICZNE PRZEDSZKOLE RADOSNE SŁONECZKO SP. Z O.O.",
 			"nip": 6452552557.0,
-			"regNoPosition": "12021/P",
-			"regon": "368139247",
+			"regNoPosition": "12021\/P",
+			"regon": 368139247.0,
 			"website": "radosnesloneczko.pl"
+		}
+	},
+	{
+		"institutionType": "CHILDCLUB",
+		"name": "ZAMECZEK WIOLETTA CHOLEWA-BARANOWSKA",
+		"website": "www\/przedszkolezameczek.pl\/",
+		"email": "zameczek50@wp.pl",
+		"phone": "600251606",
+		"capacity": 14,
+		"kidsEnrolled": 14.0,
+		"basicPricePerMonth": 820.0,
+		"extendedStayOver10H": null,
+		"basicPricePerHour": null,
+		"foodPricePerMonth": null,
+		"foodPricePerDay": 12.0,
+		"discounts": [
+			"Rodzeństwo uczęszczające do instytucji: 50.0% "
+		],
+		"openingHours": "Godziny pracy: Poniedziałek, Wtorek, Środa, Czwartek, Piątek 6:30-18:00 ",
+		"isAdaptedToDisabledChildren": true,
+		"businessActivitySuspended": false,
+		"address": {
+			"city": "Siedlce",
+			"county": "Powiat Siedlce",
+			"fullAddress": "Siedlce ul. Grabianowska 50",
+			"pin": {
+				"latitude": 52.1537674,
+				"longitude": 22.2746158
+			},
+			"voivodeship": "MAZOWIECKIE"
+		},
+		"id": 100,
+		"operatingEntity": {
+			"address": null,
+			"name": "Zameczek Wioletta Cholewa - Baranowska",
+			"nip": 8241656108.0,
+			"regNoPosition": "775\/P",
+			"regon": 144084867.0,
+			"website": "http:\/\/www.przedszkolezameczek.pl\/"
 		}
 	}
 ]

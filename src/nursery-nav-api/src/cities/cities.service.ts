@@ -15,7 +15,7 @@ export class CitiesService {
 
     private async loadData() {
         try {
-            const data = require('../../data/test-data-1000.json');
+            const data = require('../../data/052024-RZ-instytucje-enriched.json');
             this.locations = data.map((location: {
                 address: { city: string; county: string; voivodeship: string; };
             }) => {

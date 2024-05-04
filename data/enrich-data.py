@@ -55,7 +55,7 @@ df[['voivodeship', 'county', 'city', 'address']] = df['localization'].str.split(
 print("Split Localization column")
 
 broken_rows = []
-for i in range(100):#len(df)):
+for i in range(len(df)):
     print(f"Processing row {i+1} of {len(df)}")
 
     if df.at[i, 'localization'] is None:
