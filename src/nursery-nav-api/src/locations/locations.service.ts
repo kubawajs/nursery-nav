@@ -17,7 +17,7 @@ export class LocationsService {
 
     private async loadData() {
         try {
-            const data = require('../../data/test-data-1000.json');
+            const data = require('../../data/052024-RZ-instytucje-enriched.json');
             this.locations = data.map((location: {
                 institutionType: InstitutionType; operatingEntity: { regNoPosition: string; }; address: { pin: { longitude: number; latitude: number; }; };
             }) => {

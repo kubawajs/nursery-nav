@@ -1,0 +1,24 @@
+old_name;new_name
+Typ instytucji;institutionType
+Nazwa;name
+Lokalizacja instytucji;localization
+Adress WWW żłobka/klubu;website
+E-mail żłobka/klubu;email
+Telefon żłobka/klubu;phone
+Liczba miejsc;capacity
+Liczba dzieci zapisanych;kidsEnrolled
+Opłata miesięczna - podstawowa opłata ponoszona przez rodziców za pobyt dziecka (bez zniżek i bez wyżywienia);basicPricePerMonth
+stawka za pobyt dziecka przekraczający 10 godzin dziennie - opłata godzinowa;extendedStayOver10H
+Opłata godzinowa - podstawowa opłata ponoszona przez rodziców za pobyt dziecka (bez zniżek i bez wyżywienia);basicPricePerHour
+Opłata za wyżywienie - miesięczna;foodPricePerMonth
+Opłata za wyżywienie - dzienna;foodPricePerDay
+Zniżki;discounts
+Godziny otwarcia;openingHours
+Czy żłobek/klub jest dostosowany do potrzeb dzieci niepełnosprawnych lub wymagających szczególnej opieki?;isAdaptedToDisabledChildren
+Podmiot prowadzący - nazwa;operatingEntityName
+Podmiot prowadzacy - adres;operatingEntityAddress
+Podmiot prowadzący - NIP;operatingEntityNIP
+Podmiot prowadzący - REGON;operatingEntityREGON
+Podmiot prowadzący - numery pozycji rejestru;operatingEntityRegNoPosition
+Adres WWW podmiotu prowadzącego żłobek/klub;operatingEntityWebsite
+Czy podmiot prowadzący zawiesił działalność gospodarczą?;businessActivitySuspended
