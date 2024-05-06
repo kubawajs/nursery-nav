@@ -44,7 +44,11 @@ export class InstitutionsController {
     @ApiParam({ name: 'id', description: 'The id of the institution', required: true })
     @ApiTags('nursery-nav')
     async getById(@Param() params: any): Promise<InstitutionDto> {
-        return await this.institutionsService.getById(params.id);
+        const id = parseInt(params.id);
+        if (isNaN(id)) {
+            return Promise.reject('Id parameter must be a correct number');
+        }
+        return await this.institutionsService.getById(id);
     }
 
     @Get('autocomplete')
