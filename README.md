@@ -101,6 +101,8 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 
 ### Phase 2
 
+* [ ] Go-live
+
 #### Frontend
 
 * [x] Connection to the API
@@ -113,6 +115,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Autocomplete for institution name
 * [ ] Caching
 * [x] About page
+* [ ] SEO
 
 #### API
 
@@ -129,9 +132,9 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] CICD
 * [x] Live URL
 * [x] CORS
-* [ ] Add real ID to the data source
+* [x] Add real ID to the data source
 * [ ] Automate data update process
-* [ ] Data update with new file
+* [x] Data update with new file
 
 ### Phase 3
 
