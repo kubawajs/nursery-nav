@@ -23,7 +23,7 @@ export default function MapComponent() {
 	}, []);
 
 	useEffect(() => {
-		setLocationsFiltered(locations.filter((location) => institutionIds.includes(location.regNo)));
+		setLocationsFiltered(locations.filter((location) => institutionIds.includes(location.id)));
 	}, [institutionIds, locations]);
 
 	return (
@@ -47,7 +47,7 @@ export default function MapComponent() {
 					{locationsFiltered.map((location, index) => (
 						<MapPin
 							key={index}
-							regNo={location.regNo}
+							id={location.id}
 							latitude={location.latitude}
 							longitude={location.longitude}
 							institutionType={location.institutionType}

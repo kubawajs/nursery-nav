@@ -37,14 +37,18 @@ export class InstitutionsController {
         return await this.institutionsService.findAll(page, size, sort, city, voivodeship, insType, priceMin, priceMax);
     }
 
-    @Get('details/:regNo')
+    @Get('details/:id')
     @HttpCode(200)
     @HttpCode(404)
-    @ApiResponse({ status: 200, description: 'Returns an institution by regNo', type: InstitutionDto })
-    @ApiParam({ name: 'regNo', description: 'The regNo of the institution', required: true })
+    @ApiResponse({ status: 200, description: 'Returns an institution by id', type: InstitutionDto })
+    @ApiParam({ name: 'id', description: 'The id of the institution', required: true })
     @ApiTags('nursery-nav')
     async getById(@Param() params: any): Promise<InstitutionDto> {
-        return await this.institutionsService.getById(params.regNo);
+        const id = parseInt(params.id);
+        if (isNaN(id)) {
+            return Promise.reject('Id parameter must be a correct number');
+        }
+        return await this.institutionsService.getById(id);
     }
 
     @Get('autocomplete')

@@ -7,8 +7,8 @@ import { Outlet } from "react-router-dom";
 import { CircularProgress, Grid } from "@mui/material";
 
 export const InstitutionContext = React.createContext({
-    institutionIds: [] as string[],
-    setInstitutionIds: (_ids: string[]) => { },
+    institutionIds: [] as number[],
+    setInstitutionIds: (_ids: number[]) => { },
     filtersQuery: '',
     setFiltersQuery: (_query: string) => { },
     selectedInstitution: null as Institution | null,
@@ -18,7 +18,7 @@ export const InstitutionContext = React.createContext({
 export default function Layout() {
     const [selectedInstitution, setSelectedInstitution] = React.useState<Institution | null>(null);
     const [filtersQuery, setFiltersQuery] = React.useState('');
-    const [institutionIds, setInstitutionIds] = React.useState<string[]>([]);
+    const [institutionIds, setInstitutionIds] = React.useState<number[]>([]);
 
     return (
         <InstitutionContext.Provider value={{ institutionIds, setInstitutionIds, filtersQuery, setFiltersQuery, selectedInstitution, setSelectedInstitution }}>

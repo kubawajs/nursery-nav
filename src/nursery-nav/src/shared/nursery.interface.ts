@@ -1,4 +1,5 @@
 export interface Institution {
+	id: number;
 	institutionType: InstitutionType;
 	name: string;
 	website: string;
@@ -20,7 +21,7 @@ export interface Institution {
 }
 
 export interface InstitutionListItem {
-	regNo: string;
+	id: number;
 	institutionType: InstitutionType;
 	name: string;
 	website: string;
@@ -38,7 +39,7 @@ export enum InstitutionType {
 
 export interface InstitutionAutocomplete {
 	name: string;
-	regNoPosition: string;
+	id: number;
 }
 
 export interface OperatingEntity {
@@ -70,8 +71,8 @@ export interface InstitutionsResponse {
 }
 
 export interface LocationResponse {
+	id: number;
 	institutionType: InstitutionType;
-	regNo: string;
 	name: string;
 	longitude: number;
 	latitude: number;

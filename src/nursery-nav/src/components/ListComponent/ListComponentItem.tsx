@@ -18,7 +18,7 @@ import {
 
 interface ListComponentItemProps {
     name: string;
-    regNo: string;
+    id: number;
     institutionType: string;
     city: string;
     basicPricePerMonth: number;
@@ -36,7 +36,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
         : 'Photo by <a href="https://unsplash.com/@babynatur?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Baby Natur</a> on <a href="https://unsplash.com/photos/five-assorted-color-racing-car-toys-Hld-gd-WN7k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>';
 
     return (
-        <Link component={RouterLink} to={generatePath(PathConstants.INSTITUTION_DETAILS, { regNo: props.regNo })} underline='none'>
+        <Link component={RouterLink} to={generatePath(PathConstants.INSTITUTION_DETAILS, { id: props.id })} underline='none'>
             <ListItem sx={{ display: 'block' }}>
                 <Card sx={{ display: 'flex', padding: 0, paddingRight: 2 }}>
                     <Box paddingLeft={2} paddingBottom={2} paddingTop={2}>

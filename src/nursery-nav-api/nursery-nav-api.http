@@ -1,6 +1,6 @@
 @apiUrl = http://localhost:3000
-@id = 308%2FP
-@query = "tes"
+@id = 308
+@query = żłobek
 
 ### Hello world endpoint
 GET {{apiUrl}}

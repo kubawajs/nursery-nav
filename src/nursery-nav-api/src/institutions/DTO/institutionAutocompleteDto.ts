@@ -5,5 +5,5 @@ export class InstitutionAutocompleteDto {
     name: string;
 
     @ApiProperty()
-    regNoPosition: string;
+    id: number;
 }
