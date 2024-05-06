@@ -3,9 +3,12 @@ import RangeSlider from "./RangeSlider";
 import { useContext, useEffect, useState } from "react";
 import { InstitutionContext } from "../Layout/Layout";
 import { InstitutionAutocomplete, InstitutionType } from "../../shared/nursery.interface";
+import { generatePath, useNavigate } from "react-router-dom";
+import PathConstants from "../../shared/pathConstants";
 
 export default function Filters() {
     const { setFiltersQuery } = useContext(InstitutionContext);
+    const navigate = useNavigate();
 
     const [cityFilter, setCityFilter] = useState<string | null>(null);
     const [voivodeshipFilter, setVoivodeshipFilter] = useState<string | null>(null);
@@ -73,11 +76,17 @@ export default function Filters() {
         }
     }
 
+    const goToDetails = (_event: any, value: InstitutionAutocomplete | null) => {
+        if (value) {
+            navigate(generatePath(PathConstants.INSTITUTION_DETAILS, { id: value.id }));
+        }
+    }
+
     return (
         <>
             <Autocomplete
                 disablePortal
-                onChange={(_event, value) => window.location.href = `/institutions/details/${value?.id || ''}`}
+                onChange={goToDetails}
                 onInputChange={debounce(onInputChange, 250)}
                 options={institutionsAutocomplete}
                 getOptionKey={(option) => option.id}

@@ -116,6 +116,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [ ] Caching
 * [x] About page
 * [ ] SEO
+* [ ] Performance
 
 #### API
 
@@ -140,18 +141,20 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 
 #### Frontend
 
+* [ ] Comparison view
 * [ ] Institution profile
 * [ ] Institution rating
 
 #### API
 
-* [ ] CSV import
 * [ ] DB data source
+* [ ] API key authentication
+* [ ] CSV import
 
 ## Data source
 
-Static file `/data/RZ-instytucje.csv`.
+Static file `/data/RZ-instytucje.csv` + subfolders.
 
-Original data source - [Rejestr Żłobków - lista instytucji - dane.gov.pl](https://dane.gov.pl/pl/dataset/2106/resource/55499/table).
+Original data source - [Rejestr Żłobków - lista instytucji - dane.gov.pl](https://dane.gov.pl/pl/dataset/2106,rejestr-zobkow-lista-instytucji/resource/56682,rejestr-zobkow-lista-instytucji/table).
 
 License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode.pl)
