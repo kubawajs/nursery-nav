@@ -12,7 +12,7 @@ import PathConstants from '../../shared/pathConstants';
 
 export interface MapPinProps {
 	institutionType: InstitutionType;
-	regNo: string;
+	id: number;
 	latitude: number;
 	longitude: number;
 }
@@ -41,8 +41,7 @@ export default function MapPin(props: MapPinProps) {
 		<Marker
 			eventHandlers={{
 				click: () => {
-					let regNo = encodeURIComponent(props.regNo);
-					navigate(generatePath(PathConstants.INSTITUTION_DETAILS, { regNo: regNo }));
+					navigate(generatePath(PathConstants.INSTITUTION_DETAILS, { regNo: props.id }));
 				}
 			}}
 			position={position}

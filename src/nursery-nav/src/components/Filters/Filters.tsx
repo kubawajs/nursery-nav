@@ -59,8 +59,8 @@ export default function Filters() {
 
     const getAutocompleteData = async (value: string) => {
         const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions/autocomplete?search=${value}`);
-        const institutions = await response.json() as { name: string, regNoPosition: string }[];
-        setInstitutionsAutocomplete(institutions.map(institution => ({ name: institution.name, regNoPosition: institution.regNoPosition })));
+        const institutions = await response.json() as { name: string, id: number }[];
+        setInstitutionsAutocomplete(institutions.map(institution => ({ name: institution.name, id: institution.id })));
     }
 
     const onInputChange = (_event: any, value: string | null) => {
@@ -76,10 +76,10 @@ export default function Filters() {
         <>
             <Autocomplete
                 disablePortal
-                onChange={(_event, value) => window.location.href = `/institutions/details/${encodeURIComponent(value?.regNoPosition || '')}`}
+                onChange={(_event, value) => window.location.href = `/institutions/details/${value?.id || ''}`}
                 onInputChange={debounce(onInputChange, 250)}
                 options={institutionsAutocomplete}
-                getOptionKey={(option) => option.regNoPosition}
+                getOptionKey={(option) => option.id}
                 getOptionLabel={(option) => option.name}
                 noOptionsText="Wpisz nazwę żłobka lub klubu dziecięcego"
                 renderInput={(params) => <TextField {...params} label="Nazwa żłobka" />}

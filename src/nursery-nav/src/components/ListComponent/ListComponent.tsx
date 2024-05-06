@@ -53,7 +53,7 @@ export default function ListComponent() {
 			setLoading(true);
 			try {
 				const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?sort=${sortingParam}&${filtersQuery}`);
-				const data = await res.json() as { items: InstitutionListItem[], ids: string[], totalItems: number, totalPages: number };
+				const data = await res.json() as { items: InstitutionListItem[], ids: number[], totalItems: number, totalPages: number };
 				setInstitutions(data.items);
 				setTotalItems(data.totalItems);
 				setTotalPages(data.totalPages);
@@ -100,9 +100,9 @@ export default function ListComponent() {
 				{institutions && institutions.length > 0 && institutions.map((institution, index) => (
 					<Box key={index}>
 						<ListComponentItem
-							key={index}
+							key={institution.id}
 							name={institution.name}
-							regNo={encodeURIComponent(institution.regNo)}
+							id={institution.id}
 							institutionType={institution.institutionType}
 							city={institution.city}
 							basicPricePerMonth={institution.basicPricePerMonth}

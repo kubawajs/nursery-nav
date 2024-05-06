@@ -8,17 +8,16 @@ import { InstitutionContext } from '../Layout/Layout';
 
 export default function InstitutionDetails() {
 	const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
-	const { regNo } = useParams<{ regNo: string }>();
+	const { id } = useParams<{ id: string }>();
 
 	useEffect(() => {
 		const fetchInstitution = async () => {
-			const regNoUtf8 = regNo && encodeURIComponent(regNo);
-			const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions/details/${regNoUtf8}`);
+			const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions/details/${id}`);
 			const institution = await response.json();
 			setSelectedInstitution(institution);
 		};
 		fetchInstitution();
-	}, [regNo, setSelectedInstitution]);
+	}, [id, setSelectedInstitution]);
 
 	return (
 		<Box p={1} height='82.4vh'>
