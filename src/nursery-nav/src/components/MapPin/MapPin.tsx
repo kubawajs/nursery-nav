@@ -41,7 +41,7 @@ export default function MapPin(props: MapPinProps) {
 		<Marker
 			eventHandlers={{
 				click: () => {
-					navigate(generatePath(PathConstants.INSTITUTION_DETAILS, { regNo: props.id }));
+					navigate(generatePath(PathConstants.INSTITUTION_DETAILS, { id: props.id }));
 				}
 			}}
 			position={position}
