@@ -54,8 +54,9 @@ export default function Filters() {
                 .sort((a, b) => a.localeCompare(b));
             setVoivodeships(voivodeshipsUnique);
         };
+
         fetchCities();
-    }, [setCities]);
+    }, []);
 
     const getAutocompleteData = async (value: string) => {
         const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions/autocomplete?search=${value}`);
