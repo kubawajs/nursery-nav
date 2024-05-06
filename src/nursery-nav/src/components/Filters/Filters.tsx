@@ -7,7 +7,7 @@ import { generatePath, useNavigate } from "react-router-dom";
 import PathConstants from "../../shared/pathConstants";
 
 export default function Filters() {
-    const { setFiltersQuery, setSelectedInstitution } = useContext(InstitutionContext);
+    const { setFiltersQuery } = useContext(InstitutionContext);
     const navigate = useNavigate();
 
     const [cityFilter, setCityFilter] = useState<string | null>(null);
