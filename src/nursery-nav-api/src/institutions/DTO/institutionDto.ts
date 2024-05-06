@@ -5,6 +5,9 @@ import { OperatingEntityDto } from "./operatingEntityDto";
 
 export class InstitutionDto {
     @ApiProperty()
+    id: number;
+
+    @ApiProperty()
     institutionType: InstitutionType;
 
     @ApiProperty()

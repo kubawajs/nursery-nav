@@ -3,7 +3,7 @@ import { InstitutionType } from "../../shared/models/institutionType";
 
 export class InstitutionListItemDto {
     @ApiProperty()
-    regNo: string;
+    id: number;
 
     @ApiProperty()
     institutionType: InstitutionType;

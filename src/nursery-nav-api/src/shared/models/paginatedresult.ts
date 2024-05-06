@@ -14,7 +14,7 @@ export default class PaginatedResult<T> {
     totalPages: number;
 
     @ApiProperty()
-    ids: string[];
+    ids: number[];
 
     @ApiProperty()
     items: T[];
