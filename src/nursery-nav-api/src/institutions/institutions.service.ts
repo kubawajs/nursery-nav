@@ -17,16 +17,14 @@ export class InstitutionsService {
     async findAll(page: number, size: number, sort: SortParams, city?: string, voivodeship?: string, institutionType?: InstitutionType[], priceMin?: number, priceMax?: number)
         : Promise<PaginatedResult<InstitutionListItemDto>> {
         size = this.setPageSize(size);
-        const totalPages = this.institutions?.length ? Math.ceil(this.institutions.length / size) : 0;
-        page = this.setPage(page, totalPages);
 
         const paginatedResult: PaginatedResult<InstitutionListItemDto> = {
             items: [],
-            totalItems: this.institutions?.length ?? 0,
-            pageIndex: page,
+            totalItems: 0,
+            pageIndex: 1,
             pageSize: size,
             ids: [],
-            totalPages: totalPages,
+            totalPages: 1,
         };
         if (this.institutions) {
             let institutionsArray = Array.from(this.institutions);
@@ -45,14 +43,19 @@ export class InstitutionsService {
             if (priceMax) {
                 institutionsArray = institutionsArray.filter((institution) => institution.basicPricePerMonth <= priceMax);
             }
+            paginatedResult.totalPages = this.institutions?.length ? Math.ceil(institutionsArray.length / size) : 0;
+            paginatedResult.pageIndex = this.setPage(paginatedResult.pageIndex, paginatedResult.totalPages);
+            paginatedResult.totalItems = institutionsArray.length;
             paginatedResult.ids = institutionsArray?.map((institution) => institution.id) ?? [];
+
             const sortedInstutions = institutionsArray.sort((a, b) => this.sortMethod(sort, a, b));
-            const pageData = sortedInstutions.slice((page - 1) * size, page * size);
+            const pageData = sortedInstutions.slice((paginatedResult.pageIndex - 1) * size, paginatedResult.pageIndex * size);
             const institutionList = pageData.map((institution) => {
                 const institutionListItem: InstitutionListItemDto = this.mapToInstutionListItem(institution);
                 return institutionListItem;
             });
             paginatedResult.items = institutionList;
+
             return Promise.resolve(paginatedResult);
         }
 
