@@ -1,4 +1,7 @@
-import { FormGroup, FormControlLabel, Checkbox, Autocomplete, TextField, debounce } from "@mui/material";
+import { FormControlLabel, Autocomplete, TextField, debounce, RadioGroup } from "@mui/material";
+import Radio from '@mui/material/Radio';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 import RangeSlider from "./RangeSlider";
 import { useEffect, useState } from "react";
 import { InstitutionAutocomplete, InstitutionType } from "../../shared/nursery.interface";
@@ -51,6 +54,16 @@ export default function Filters() {
         }
     }
 
+    const handleInstitutionTypeFilter = (value: string) => {
+        if (value === 'ALL') {
+            searchParams.delete('insType');
+        }
+        else {
+            searchParams.set('insType', value);
+        }
+        setSearchParams(searchParams);
+    }
+
     return (
         <>
             <Autocomplete
@@ -98,33 +111,19 @@ export default function Filters() {
                 size="small"
                 sx={{ width: 300, maxWidth: '100%' }}
             />
-            <FormGroup sx={{ display: 'flex', flexDirection: 'row' }} >
-                <FormControlLabel
-                    control={<Checkbox defaultChecked
-                        onChange={(_event, value) => {
-                            if (value) {
-                                searchParams.append('insType', InstitutionType.NURSERY)
-                            }
-                            else if (searchParams.has('insType') && searchParams.get('insType') === InstitutionType.NURSERY) {
-                                searchParams.delete('insType');
-                            }
-                            setSearchParams(searchParams);
-                        }} />}
-                    label="Żłobek"
-                />
-                <FormControlLabel
-                    control={<Checkbox defaultChecked onChange={(_event, value) => {
-                        if (value) {
-                            searchParams.append('insType', InstitutionType.CHILDCLUB)
-                        }
-                        else if (searchParams.has('insType') && searchParams.get('insType') === InstitutionType.CHILDCLUB) {
-                            searchParams.delete('insType');
-                        }
-                        setSearchParams(searchParams);
-                    }} />}
-                    label="Klub dziecięcy"
-                />
-            </FormGroup>
+            <FormControl>
+                <FormLabel id="demo-row-radio-buttons-group-label">Typ instytucji</FormLabel>
+                <RadioGroup
+                    row
+                    aria-labelledby="demo-row-radio-buttons-group-label"
+                    name="row-radio-buttons-group"
+                    defaultValue={searchParams.get('insType') || 'ALL'}
+                    onChange={(_event, value) => handleInstitutionTypeFilter(value)}>
+                    <FormControlLabel value={InstitutionType.NURSERY} control={<Radio />} label="Żłobek" />
+                    <FormControlLabel value={InstitutionType.CHILDCLUB} control={<Radio />} label="Klub dziecięcy" />
+                    <FormControlLabel value="ALL" control={<Radio />} label="Wszystkie" />
+                </RadioGroup>
+            </FormControl>
             <RangeSlider handleChangeCommited={(_event, value) => {
                 value[0] && searchParams.set('priceMin', value[0].toString());
                 value[1] && searchParams.set('priceMax', value[1].toString());
