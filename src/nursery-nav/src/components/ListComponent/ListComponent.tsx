@@ -4,10 +4,11 @@ import { ListComponentItem } from './ListComponentItem';
 import { SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
 import { InstitutionListItem } from '../../shared/nursery.interface';
 import { InstitutionContext } from '../Layout/Layout';
+import { useSearchParams } from 'react-router-dom';
 
 export default function ListComponent() {
-	const [sortingParam, setSortingParam] = useState('name-asc');
-	const { setInstitutionIds, filtersQuery, setSelectedInstitution } = useContext(InstitutionContext);
+	const { setInstitutionIds, setSelectedInstitution } = useContext(InstitutionContext);
+	const [searchParams, setSearchParams] = useSearchParams();
 	setSelectedInstitution(null);
 
 	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
@@ -21,12 +22,12 @@ export default function ListComponent() {
 		if (loading || pageNum > totalPages) return;
 
 		setLoading(true);
-		const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}&sort=${sortingParam}&${filtersQuery}`);
+		const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}&${searchParams}`);
 		const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
 		setInstitutions((prevInstitutions) => [...prevInstitutions, ...data.items]);
 		setPageNum((prevPageNum) => prevPageNum + 1);
 		setLoading(false);
-	}, [pageNum, sortingParam, loading, totalPages, filtersQuery]);
+	}, [pageNum, loading, totalPages, searchParams]);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
@@ -52,7 +53,7 @@ export default function ListComponent() {
 		const getData = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?sort=${sortingParam}&${filtersQuery}`);
+				const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?${searchParams}`);
 				const data = await res.json() as { items: InstitutionListItem[], ids: number[], totalItems: number, totalPages: number };
 				setInstitutions(data.items);
 				setTotalItems(data.totalItems);
@@ -65,11 +66,12 @@ export default function ListComponent() {
 		};
 
 		getData();
-	}, [sortingParam, filtersQuery, setInstitutionIds]);
+	}, [searchParams, setInstitutionIds]);
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
-		setSortingParam(event.target.value);
-	}, []);
+		searchParams.set('sort', event.target.value);
+		setSearchParams(searchParams);
+	}, [searchParams, setSearchParams]);
 
 	return (
 		<Box>
@@ -85,7 +87,7 @@ export default function ListComponent() {
 					<Select
 						labelId="sorting-select-label"
 						id="sorting-select"
-						value={sortingParam}
+						value={searchParams.get('sort') || 'name-asc'}
 						label="Sortowanie"
 						onChange={handleChange}
 					>
