@@ -1,48 +1,20 @@
-import { FormGroup, FormControlLabel, Checkbox, Autocomplete, TextField, debounce } from "@mui/material";
+import { FormControlLabel, Autocomplete, TextField, debounce, RadioGroup } from "@mui/material";
+import Radio from '@mui/material/Radio';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 import RangeSlider from "./RangeSlider";
-import { useContext, useEffect, useState } from "react";
-import { InstitutionContext } from "../Layout/Layout";
+import { useEffect, useState } from "react";
 import { InstitutionAutocomplete, InstitutionType } from "../../shared/nursery.interface";
-import { generatePath, useNavigate } from "react-router-dom";
+import { generatePath, useNavigate, useSearchParams } from "react-router-dom";
 import PathConstants from "../../shared/pathConstants";
 
 export default function Filters() {
-    const { setFiltersQuery } = useContext(InstitutionContext);
+    const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
 
-    const [cityFilter, setCityFilter] = useState<string | null>(null);
-    const [voivodeshipFilter, setVoivodeshipFilter] = useState<string | null>(null);
-    const [nurseryFilter, setNurseryFilter] = useState<boolean>(true);
-    const [childClubFilter, setChildClubFilter] = useState<boolean>(true);
-    const [priceFilter, setPriceFilter] = useState<number[]>([0, 5000]);
     const [institutionsAutocomplete, setInstitutionsAutocomplete] = useState<InstitutionAutocomplete[]>([]);
     const [cities, setCities] = useState<string[]>([]);
     const [voivodeships, setVoivodeships] = useState<string[]>([]);
-
-    useEffect(() => {
-        const buildFiltersQuery = () => {
-            let query = '';
-            if (cityFilter) {
-                query += `city=${encodeURIComponent(cityFilter)}&`;
-            }
-            if (voivodeshipFilter) {
-                query += `voivodeship=${encodeURIComponent(voivodeshipFilter)}&`;
-            }
-            if (nurseryFilter) {
-                query += `insType=${InstitutionType.NURSERY}&`;
-            }
-            if (childClubFilter) {
-                query += `insType=${InstitutionType.CHILDCLUB}&`;
-            }
-            if (priceFilter) {
-                query += `${priceFilter[0] ? `priceMin=${priceFilter[0]}` : ''}&${priceFilter[1] ? `priceMax=${priceFilter[1]}` : ''}`;
-            }
-            return query;
-        }
-
-        const query = buildFiltersQuery();
-        setFiltersQuery(query);
-    }, [cityFilter, voivodeshipFilter, nurseryFilter, childClubFilter, priceFilter, setFiltersQuery]);
 
     useEffect(() => {
         const fetchCities = async () => {
@@ -82,6 +54,16 @@ export default function Filters() {
         }
     }
 
+    const handleInstitutionTypeFilter = (value: string) => {
+        if (value === 'ALL') {
+            searchParams.delete('insType');
+        }
+        else {
+            searchParams.set('insType', value);
+        }
+        setSearchParams(searchParams);
+    }
+
     return (
         <>
             <Autocomplete
@@ -99,7 +81,15 @@ export default function Filters() {
             <Autocomplete
                 id="cityFilter"
                 options={cities}
-                onChange={(_event, value) => setCityFilter(value)}
+                onChange={(_event, value) => {
+                    if (!value && searchParams.has('city')) {
+                        searchParams.delete('city');
+                    }
+                    else if (value) {
+                        searchParams.set('city', value);
+                    }
+                    setSearchParams(searchParams);
+                }}
                 renderInput={(params) => <TextField {...params} label="Miasto" />}
                 size="small"
                 sx={{ width: 300, maxWidth: '100%' }}
@@ -107,22 +97,38 @@ export default function Filters() {
             <Autocomplete
                 id="voivodeshipFilter"
                 options={voivodeships || []}
-                onChange={(_event, value) => setVoivodeshipFilter(value)}
+                onChange={(_event, value) => {
+                    if (!value && searchParams.has('voivodeship')) {
+                        searchParams.delete('voivodeship');
+                    }
+                    else if (value) {
+                        searchParams.set('voivodeship', value);
+                    }
+                    setSearchParams(searchParams);
+                }}
+                onReset={() => { console.log('reset') }}
                 renderInput={(params) => <TextField {...params} label="Województwo" />}
                 size="small"
                 sx={{ width: 300, maxWidth: '100%' }}
             />
-            <FormGroup sx={{ display: 'flex', flexDirection: 'row' }} >
-                <FormControlLabel
-                    control={<Checkbox defaultChecked onChange={(_event, value) => setNurseryFilter(value)} />}
-                    label="Żłobek"
-                />
-                <FormControlLabel
-                    control={<Checkbox defaultChecked onChange={(_event, value) => setChildClubFilter(value)} />}
-                    label="Klub dziecięcy"
-                />
-            </FormGroup>
-            <RangeSlider handleChangeCommited={(_event, value) => setPriceFilter(value)} />
+            <FormControl>
+                <FormLabel id="demo-row-radio-buttons-group-label">Typ instytucji</FormLabel>
+                <RadioGroup
+                    row
+                    aria-labelledby="demo-row-radio-buttons-group-label"
+                    name="row-radio-buttons-group"
+                    defaultValue={searchParams.get('insType') || 'ALL'}
+                    onChange={(_event, value) => handleInstitutionTypeFilter(value)}>
+                    <FormControlLabel value={InstitutionType.NURSERY} control={<Radio />} label="Żłobek" />
+                    <FormControlLabel value={InstitutionType.CHILDCLUB} control={<Radio />} label="Klub dziecięcy" />
+                    <FormControlLabel value="ALL" control={<Radio />} label="Wszystkie" />
+                </RadioGroup>
+            </FormControl>
+            <RangeSlider handleChangeCommited={(_event, value) => {
+                value[0] && searchParams.set('priceMin', value[0].toString());
+                value[1] && searchParams.set('priceMax', value[1].toString());
+                setSearchParams(searchParams);
+            }} />
         </>
     );
 }

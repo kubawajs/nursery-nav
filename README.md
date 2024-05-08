@@ -110,7 +110,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Sorting with API
 * [x] Connect map with API
 * [x] Filtering with API
-* [ ] Direct URLs to filtered results by query params
+* [x] Direct URLs to filtered results by query params
 * [x] Filtering map locations
 * [x] Autocomplete for institution name
 * [ ] Caching
