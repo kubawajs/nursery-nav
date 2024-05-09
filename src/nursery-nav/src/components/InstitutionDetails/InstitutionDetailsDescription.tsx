@@ -21,8 +21,11 @@ export default function InstitutionDetailsDescription(institution: Institution) 
     const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
     const openingHours = institution.openingHours.split(': ')[1] ?? institution.openingHours;
     return (
-        <Box p={1}>
+        <Box p={2}>
             <Paper elevation={2}>
+                <Box pb={2}>
+                    <Typography variant="h2">Informacje</Typography>
+                </Box>
                 <DescriptionBox>
                     <Typography variant="subtitle2">Dane adresowe</Typography>
                     <Typography variant="body1">{institution.address.fullAddress}</Typography>

@@ -117,7 +117,8 @@ export default function Filters() {
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"
                     name="row-radio-buttons-group"
-                    defaultValue={searchParams.get('insType') || 'ALL'}
+                    defaultValue='ALL'
+                    value={searchParams.get('insType') || 'ALL'}
                     onChange={(_event, value) => handleInstitutionTypeFilter(value)}>
                     <FormControlLabel value={InstitutionType.NURSERY} control={<Radio />} label="Żłobek" />
                     <FormControlLabel value={InstitutionType.CHILDCLUB} control={<Radio />} label="Klub dziecięcy" />
