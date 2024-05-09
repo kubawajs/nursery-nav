@@ -26,14 +26,13 @@ interface ListComponentItemProps {
     phone: string;
     email: string;
     isAdaptedToDisabledChildren: boolean;
+    isAvailable: boolean;
 }
 
 export function ListComponentItem(props: ListComponentItemProps) {
     const mainColor = props.institutionType === InstitutionType.NURSERY ? "primary" : "secondary";
     const imagePath = props.institutionType === InstitutionType.NURSERY ? '/images/nursery-placeholder.jpg' : '/images/child-club-placeholder.jpg';
-    const imageAlt = props.institutionType === InstitutionType.NURSERY
-        ? 'Photo by <a href="https://unsplash.com/@charlesdeluvio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">charlesdeluvio</a> on < a href = "https://unsplash.com/photos/white-sheep-baby-mobile-2vfwTakDTIo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"> Unsplash</a >'
-        : 'Photo by <a href="https://unsplash.com/@babynatur?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Baby Natur</a> on <a href="https://unsplash.com/photos/five-assorted-color-racing-car-toys-Hld-gd-WN7k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>';
+    const imageAlt = "Photo created by DALL-E from OpenAI";
 
     return (
         <Link component={RouterLink} to={generatePath(PathConstants.INSTITUTION_DETAILS, { id: props.id })} underline='none'>
@@ -42,7 +41,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                     <Box paddingLeft={2} paddingBottom={2} paddingTop={2}>
                         <CardMedia
                             component="img"
-                            sx={{ display: { xs: 'none', sm: 'block' }, width: 120, height: 120, objectFit: 'cover' }}
+                            sx={{ display: { xs: 'none', sm: 'block' }, width: 120, height: 120, objectFit: 'cover', borderRadius: '10px' }}
                             image={imagePath}
                             alt={imageAlt}
                         />
@@ -54,6 +53,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                     <Stack direction='row' spacing={1}>
                                         <Chip label={props.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY'} color={mainColor} />
                                         {props.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" />}
+                                        {!props.isAvailable && <Chip label='Brak wolnych miejsc' color='error' />}
                                     </Stack>
                                     <Typography
                                         component="span"

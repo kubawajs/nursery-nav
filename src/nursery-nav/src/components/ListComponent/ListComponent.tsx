@@ -112,6 +112,7 @@ export default function ListComponent() {
 							phone={institution.phone}
 							email={institution.email}
 							isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
+							isAvailable={institution.isAvailable}
 						/>
 					</Box>
 				))}

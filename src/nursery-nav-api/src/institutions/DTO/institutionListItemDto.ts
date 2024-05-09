@@ -27,5 +27,8 @@ export class InstitutionListItemDto {
     isAdaptedToDisabledChildren: boolean;
 
     @ApiProperty()
+    isAvailable: boolean;
+
+    @ApiProperty()
     city: string;
 }
