@@ -34,7 +34,7 @@ export default function InstitutionDetailsHeader(institution: Institution) {
                     <Box pb={0} height='10rem'>
                         <img
                             src={imagePath}
-                            alt="Photo created by DALL-E from OpenAI"
+                            alt="Created by DALL-E from OpenAI"
                             style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}
                         />
                     </Box>
