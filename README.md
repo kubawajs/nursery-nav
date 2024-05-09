@@ -102,6 +102,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 ### Phase 2
 
 * [ ] Go-live
+* [ ] Update docs
 
 #### Frontend
 
@@ -134,7 +135,6 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Live URL
 * [x] CORS
 * [x] Add real ID to the data source
-* [ ] Automate data update process
 * [x] Data update with new file
 
 ### Phase 3
@@ -150,6 +150,11 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [ ] DB data source
 * [ ] API key authentication
 * [ ] CSV import
+* [ ] Fully automate data update process
+
+### Known bugs
+
+* [x] "Back" button on institution details does not remember parameters of previous page
 
 ## Data source
 
