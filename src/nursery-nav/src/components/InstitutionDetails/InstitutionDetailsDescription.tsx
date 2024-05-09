@@ -35,8 +35,8 @@ export default function InstitutionDetailsDescription(institution: Institution) 
                     <Typography variant="body1">{openingHours}</Typography>
                 </DescriptionBox>
                 <DescriptionBox>
-                    <Typography variant="subtitle2">Liczba miejsc</Typography>
-                    <Typography variant="body1">{institution.capacity}</Typography>
+                    <Typography variant="subtitle2">Liczba dostępnych miejsc</Typography>
+                    <Typography variant="body1">{institution.capacity - institution.kidsEnrolled} ({institution.kidsEnrolled}/{institution.capacity} zajęte)</Typography>
                 </DescriptionBox>
                 <DescriptionBox>
                     <Typography variant="subtitle2">Zniżki</Typography>

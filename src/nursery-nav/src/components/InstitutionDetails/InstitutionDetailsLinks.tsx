@@ -3,6 +3,8 @@ import { Box, Stack, Divider, Typography, Link } from "@mui/material";
 import { Institution } from "../../shared/nursery.interface";
 
 export default function InstitutionDetailsLinks(institution: Institution) {
+    const mainColor = institution.institutionType === 'NURSERY' ? 'primary.dark' : 'secondary.dark';
+
     return (
         <Box p={2}>
             <Stack
@@ -14,21 +16,21 @@ export default function InstitutionDetailsLinks(institution: Institution) {
             >
                 {institution.phone && <Box>
                     <Typography variant="overline">
-                        <Link href={`tel:${institution.phone}`} underline='none' aria-label="Zadzwoń do instytucji">
+                        <Link href={`tel:${institution.phone}`} color={mainColor} underline='none' aria-label="Zadzwoń do instytucji">
                             <PhoneAndroid /> {institution.phone}
                         </Link>
                     </Typography>
                 </Box>}
                 {institution.email && <Box>
                     <Typography variant="overline">
-                        <Link href={`mailto:${institution.email}`} underline='none' aria-label="Wyślij wiadomość email">
+                        <Link href={`mailto:${institution.email}`} color={mainColor} underline='none' aria-label="Wyślij wiadomość email">
                             <Mail /> {institution.email}
                         </Link>
                     </Typography>
                 </Box>}
                 {institution.website && <Box>
                     <Typography variant="overline">
-                        <Link href={institution.website.startsWith('http') ? institution.website : `http://${institution.website}`} underline='none' aria-label="Odwiedź stronę internetową">
+                        <Link href={institution.website.startsWith('http') ? institution.website : `http://${institution.website}`} color={mainColor} underline='none' aria-label="Odwiedź stronę internetową">
                             <Language /> {institution.website}
                         </Link>
                     </Typography>
