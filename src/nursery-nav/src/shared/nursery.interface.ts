@@ -29,6 +29,7 @@ export interface InstitutionListItem {
 	phone: string;
 	basicPricePerMonth: number;
 	isAdaptedToDisabledChildren: boolean;
+	isAvailable: boolean;
 	city: string;
 }
 

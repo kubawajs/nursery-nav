@@ -44,7 +44,7 @@ export class InstitutionsService {
                 institutionsArray = institutionsArray.filter((institution) => institution.basicPricePerMonth <= priceMax);
             }
             paginatedResult.totalPages = this.institutions?.length ? Math.ceil(institutionsArray.length / size) : 0;
-            paginatedResult.pageIndex = this.setPage(paginatedResult.pageIndex, paginatedResult.totalPages);
+            paginatedResult.pageIndex = this.setPage(page, paginatedResult.totalPages);
             paginatedResult.totalItems = institutionsArray.length;
             paginatedResult.ids = institutionsArray?.map((institution) => institution.id) ?? [];
 
@@ -121,6 +121,7 @@ export class InstitutionsService {
             phone: institution.phone,
             basicPricePerMonth: institution.basicPricePerMonth,
             isAdaptedToDisabledChildren: institution.isAdaptedToDisabledChildren,
+            isAvailable: institution.capacity > institution.kidsEnrolled,
             city: institution.address?.city,
         };
     }
