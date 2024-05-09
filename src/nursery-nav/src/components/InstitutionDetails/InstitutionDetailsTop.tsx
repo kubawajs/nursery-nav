@@ -23,7 +23,7 @@ export default function InstitutionDetailsTop(institution: Institution) {
                     <Typography color="text.light" variant="overline">{institution.address.county}</Typography>
                     <Typography color="text.primary" variant="overline">{institution.address.city}</Typography>
                 </Breadcrumbs>
-                <Button variant="outlined" color={mainColor} onClick={handleBackButton}>Powrót</Button>
+                <Button variant="contained" color={mainColor} onClick={handleBackButton}>Powrót</Button>
             </Stack>
         </Box>
     );

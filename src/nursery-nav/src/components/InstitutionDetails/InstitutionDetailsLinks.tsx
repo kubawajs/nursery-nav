@@ -4,7 +4,7 @@ import { Institution } from "../../shared/nursery.interface";
 
 export default function InstitutionDetailsLinks(institution: Institution) {
     return (
-        <Box>
+        <Box p={2}>
             <Stack
                 direction={{ xs: 'column', sm: 'row' }}
                 justifyContent="center"
