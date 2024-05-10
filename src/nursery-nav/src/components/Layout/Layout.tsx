@@ -5,6 +5,7 @@ import { Institution } from "../../shared/nursery.interface";
 import Navigation from "../Navigation/Navigation";
 import { Outlet } from "react-router-dom";
 import { CircularProgress, Grid } from "@mui/material";
+import { HelmetProvider } from "react-helmet-async";
 
 export const InstitutionContext = React.createContext({
     institutionIds: [] as number[],
@@ -20,12 +21,14 @@ export default function Layout() {
     return (
         <InstitutionContext.Provider value={{ institutionIds, setInstitutionIds, selectedInstitution, setSelectedInstitution }}>
             <ThemeProvider theme={theme}>
-                <Navigation />
-                <Grid container>
-                    <Suspense fallback={<CircularProgress />}>
-                        <Outlet />
-                    </Suspense>
-                </Grid>
+                <HelmetProvider>
+                    <Navigation />
+                    <Grid container>
+                        <Suspense fallback={<CircularProgress />}>
+                            <Outlet />
+                        </Suspense>
+                    </Grid>
+                </HelmetProvider>
             </ThemeProvider>
         </InstitutionContext.Provider>
     );
