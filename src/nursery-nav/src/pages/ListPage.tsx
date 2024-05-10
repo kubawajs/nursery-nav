@@ -5,8 +5,8 @@ import FiltersBar from "../components/Filters/FiltersBar";
 import { Helmet } from "react-helmet-async";
 
 export default function ListPage() {
-    const title = `Lista żłobków i klubów dziecięcych - ${process.env.REACT_APP_NAME}`;
-    const description = "Lista placówek - żłobków i klubów dziecięcych - w twojej okolicy";
+    const title = `Najlepsza Wyszukiwarka Żłobków i Klubów Dziecięcych w Polsce | ${process.env.REACT_APP_NAME}`;
+    const description = "Znajdź najlepsze żłobki i kluby dziecięce w swojej okolicy za pomocą naszej wygodnej wyszukiwarki placówek. Odkryj różnorodne oferty i wybierz najlepszą opiekę dla Twojego dziecka.";
     const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
     return (
         <>

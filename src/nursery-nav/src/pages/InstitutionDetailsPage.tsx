@@ -9,9 +9,9 @@ import { Helmet } from "react-helmet-async";
 export default function InstitutionDetailsPage() {
     const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
     const { id } = useParams<{ id: string }>();
+    const title = `${selectedInstitution?.name} - ${process.env.REACT_APP_NAME}`;
     const description = `Informacje o placówce wraz z lokalizacją na mapie - ${selectedInstitution?.name}`;
     const image = selectedInstitution?.institutionType === 'NURSERY' ? '/images/nursery-placeholder.jpg' : '/images/child-club-placeholder.jpg';
-    const title = `${selectedInstitution?.name} - ${process.env.REACT_APP_NAME}`;
 
     useEffect(() => {
         const fetchInstitution = async () => {

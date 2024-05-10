@@ -2,8 +2,8 @@ import { Container, Link, Stack, Typography } from "@mui/material";
 import { Helmet } from "react-helmet-async";
 
 export default function AboutPage() {
-    const title = `O projekcie - ${process.env.REACT_APP_NAME}`;
-    const description = "Informacje o projekcie aplikacji";
+    const title = `O aplikacji - ${process.env.REACT_APP_NAME}`;
+    const description = "Informacje o aplikacji";
     const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
 
     return (
