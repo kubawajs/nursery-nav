@@ -18,6 +18,7 @@
 		"mini.css": "^3.0.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-helmet-async": "^2.0.5",
 		"react-leaflet": "^4.2.1",
 		"react-leaflet-cluster": "^2.1.0",
 		"react-router-dom": "^6.23.0",
@@ -27,7 +28,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"build": "react-scripts build && compress-cra",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
@@ -51,6 +52,7 @@
 	},
 	"devDependencies": {
 		"@types/leaflet": "^1.9.8",
+		"compress-create-react-app": "^1.4.5",
 		"prettier": "^3.2.5"
 	}
 }
