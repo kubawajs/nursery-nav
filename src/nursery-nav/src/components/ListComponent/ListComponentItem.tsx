@@ -52,8 +52,8 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                 <Box display='flex' marginBottom={1} sx={{ justifyContent: 'space-between' }}>
                                     <Stack direction='row' spacing={1}>
                                         <Chip label={props.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY'} color={mainColor} />
-                                        {props.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" />}
-                                        {!props.isAvailable && <Chip label='Brak wolnych miejsc' color='error' />}
+                                        {props.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" sx={{ display: { xs: 'none', lg: 'flex' } }} />}
+                                        {!props.isAvailable && <Chip label='Brak wolnych miejsc' color='error' sx={{ display: { xs: 'none', lg: 'flex' } }} />}
                                     </Stack>
                                     <Typography
                                         component="span"
