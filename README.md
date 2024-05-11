@@ -116,7 +116,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Autocomplete for institution name
 * [ ] Caching
 * [x] About page
-* [ ] SEO
+* [x] SEO
 * [ ] Performance
 
 #### API
@@ -155,6 +155,9 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 ### Known bugs
 
 * [x] "Back" button on institution details does not remember parameters of previous page
+* [x] City and voivodeship filters not selected based on query parameter
+* [ ] Price is not visible in mobile view when "Brak wolnych miejsc" chip is displayed
+* [ ] City dropdown is not filtered based on voivodeship
 
 ## Data source
 
