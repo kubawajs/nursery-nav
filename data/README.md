@@ -22,7 +22,7 @@ Script that converts data from CSV into JSON file with given structure:
 ```json
 [
     {
-        "institutionType": "Żłobek",
+        "institutionType": "NURSERY",
         "name": "Nursery School 1",
         "website": "www.nursery.com",
         "email": "nursery@nurseryschool.com",
