@@ -81,6 +81,7 @@ export default function Filters() {
             <Autocomplete
                 id="cityFilter"
                 options={cities}
+                defaultValue={searchParams.get('city') || ''}
                 onChange={(_event, value) => {
                     if (!value && searchParams.has('city')) {
                         searchParams.delete('city');
@@ -97,6 +98,7 @@ export default function Filters() {
             <Autocomplete
                 id="voivodeshipFilter"
                 options={voivodeships || []}
+                defaultValue={searchParams.get('voivodeship') || ''}
                 onChange={(_event, value) => {
                     if (!value && searchParams.has('voivodeship')) {
                         searchParams.delete('voivodeship');
