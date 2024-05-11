@@ -20,6 +20,8 @@ const ContactBox = styled(Box)(() => ({
 export default function InstitutionDetailsDescription(institution: Institution) {
     const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
     const openingHours = institution.openingHours.split(': ')[1] ?? institution.openingHours;
+    const isAvailable = institution.capacity - institution.kidsEnrolled > 0;
+
     return (
         <Box p={2}>
             <Paper elevation={2}>
@@ -36,7 +38,12 @@ export default function InstitutionDetailsDescription(institution: Institution) 
                 </DescriptionBox>
                 <DescriptionBox>
                     <Typography variant="subtitle2">Liczba dostępnych miejsc</Typography>
-                    <Typography variant="body1">{institution.capacity - institution.kidsEnrolled} ({institution.kidsEnrolled}/{institution.capacity} zajęte)</Typography>
+                    {
+                        isAvailable ?
+                            <Chip label={`Dostępne miejsca: ${institution.capacity - institution.kidsEnrolled} (${institution.kidsEnrolled}/${institution.capacity} zajęte)`} color="success" />
+                            :
+                            <Chip label="Brak miejsc" color="error" />
+                    }
                 </DescriptionBox>
                 <DescriptionBox>
                     <Typography variant="subtitle2">Zniżki</Typography>

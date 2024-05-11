@@ -1,6 +1,6 @@
-import { Breadcrumbs, Typography, Button, Box, Stack } from "@mui/material";
+import { Breadcrumbs, Typography, Button, Box, Stack, Link } from "@mui/material";
 import { Institution, InstitutionType } from "../../shared/nursery.interface";
-import { useNavigate } from "react-router-dom";
+import { generatePath, useNavigate } from "react-router-dom";
 import PathConstants from "../../shared/pathConstants";
 
 export default function InstitutionDetailsTop(institution: Institution) {
@@ -19,9 +19,9 @@ export default function InstitutionDetailsTop(institution: Institution) {
         <Box p={1}>
             <Stack direction='row' justifyContent='space-between' alignItems='center'>
                 <Breadcrumbs aria-label="breadcrumb">
-                    <Typography color="text.light" variant="overline">{institution.address.voivodeship}</Typography>
+                    <Link href={generatePath(`${PathConstants.HOME}?voivodeship=${institution.address.voivodeship}`)} color="inherit" variant="overline">{institution.address.voivodeship}</Link>
                     <Typography color="text.light" variant="overline">{institution.address.county}</Typography>
-                    <Typography color="text.primary" variant="overline">{institution.address.city}</Typography>
+                    <Link href={generatePath(`${PathConstants.HOME}?city=${institution.address.city}`)} variant="overline" underline="none">{institution.address.city}</Link>
                 </Breadcrumbs>
 
                 <Button variant="contained" color={mainColor} onClick={handleBackButton}>Powrót</Button>
