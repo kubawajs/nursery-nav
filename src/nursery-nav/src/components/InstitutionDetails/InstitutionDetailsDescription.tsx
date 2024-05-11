@@ -1,4 +1,4 @@
-import { Box, Paper, Typography, Chip, Button, Stack, Divider } from "@mui/material";
+import { Box, Paper, Typography, Chip, Button, Stack } from "@mui/material";
 import { Institution, InstitutionType } from "../../shared/nursery.interface";
 import styled from "@emotion/styled";
 import { theme } from "../../shared/theme";
