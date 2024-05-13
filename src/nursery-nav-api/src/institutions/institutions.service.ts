@@ -79,8 +79,16 @@ export class InstitutionsService {
     }
 
     async getById(id: number): Promise<InstitutionDto> {
+        const CACHE_KEY = 'InstitutionsService_getById';
+        const cacheKey = `${CACHE_KEY}_${id}`;
+        const cacheData = await this.cacheManager.get(cacheKey) as InstitutionDto;
+        if (cacheData) {
+            return Promise.resolve(cacheData);
+        }
+
         const institution = this.institutions.find((institution) => institution.id === id);
         if (institution) {
+            await this.cacheManager.set(cacheKey, institution, Number(env.CACHE_TTL));
             return Promise.resolve(institution);
         }
 
@@ -88,6 +96,13 @@ export class InstitutionsService {
     }
 
     async getInstitutionsAutocomplete(searchQuery: string): Promise<InstitutionAutocompleteDto[]> {
+        const CACHE_KEY = 'InstitutionsService_getInstitutionsAutocomplete';
+        const cacheKey = `${CACHE_KEY}_${searchQuery}`;
+        const cacheData = await this.cacheManager.get(cacheKey) as InstitutionAutocompleteDto[];
+        if (cacheData) {
+            return Promise.resolve(cacheData);
+        }
+
         const institutions = this.institutions.filter((institution) => institution.name.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1);
         const institutionList = institutions.map((institution) => {
             const institutionAutocompleteDto: InstitutionAutocompleteDto = {
@@ -97,6 +112,7 @@ export class InstitutionsService {
             return institutionAutocompleteDto;
         });
 
+        await this.cacheManager.set(cacheKey, institutionList, Number(env.CACHE_TTL));
         return Promise.resolve(institutionList);
     }
 
