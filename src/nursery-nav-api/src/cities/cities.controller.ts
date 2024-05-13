@@ -1,9 +1,11 @@
-import { Controller, Get, HttpCode } from '@nestjs/common';
+import { Controller, Get, HttpCode, UseInterceptors } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { CitiesService } from './cities.service';
 import { CityDto } from './DTO/cityDto';
+import { CacheInterceptor } from '@nestjs/cache-manager';
 
 @Controller('cities')
+@UseInterceptors(CacheInterceptor)
 export class CitiesController {
     constructor(private readonly citiesService: CitiesService) { }
 

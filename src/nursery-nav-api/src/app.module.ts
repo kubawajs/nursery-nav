@@ -8,9 +8,12 @@ import { LocationsController } from './locations/locations.controller';
 import { LocationsService } from './locations/locations.service';
 import { CitiesController } from './cities/cities.controller';
 import { CitiesService } from './cities/cities.service';
+import { CacheModule } from '@nestjs/cache-manager';
 
 @Module({
-  imports: [ConfigModule.forRoot()],
+  imports: [ConfigModule.forRoot(), CacheModule.register({
+    ttl: Number(process.env.CACHE_TTL)
+  })],
   controllers: [AppController, InstitutionsController, LocationsController, CitiesController],
   providers: [AppService, InstitutionsService, LocationsService, CitiesService],
 })

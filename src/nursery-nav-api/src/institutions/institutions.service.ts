@@ -1,21 +1,25 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { InstitutionDto } from './DTO/institutionDto';
 import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 import { InstitutionType } from '../shared/models/institutionType';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
 import { InstitutionAutocompleteDto } from './DTO/institutionAutocompleteDto';
+import { Cache } from 'cache-manager';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { env } from 'process';
 
 @Injectable()
 export class InstitutionsService {
     private institutions: InstitutionDto[];
 
-    constructor() {
+    constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {
         this.loadData();
     }
 
     async findAll(page: number, size: number, sort: SortParams, city?: string, voivodeship?: string, institutionType?: InstitutionType[], priceMin?: number, priceMax?: number)
         : Promise<PaginatedResult<InstitutionListItemDto>> {
+        const CACHE_KEY = 'InstitutionsService_findAll';
         size = this.setPageSize(size);
 
         const paginatedResult: PaginatedResult<InstitutionListItemDto> = {
@@ -26,6 +30,15 @@ export class InstitutionsService {
             ids: [],
             totalPages: 1,
         };
+
+        // If cache exists, return it
+        const cacheKey = `${CACHE_KEY}_${page || 1}_${size}_${sort}_${city}_${voivodeship}_${institutionType}_${priceMin}_${priceMax}`;
+        const result = await this.cacheManager.get(cacheKey) as PaginatedResult<InstitutionListItemDto>;
+        if (result) {
+            return Promise.resolve(result);
+        }
+
+        // If cache doesn't exist, filter and sort data
         if (this.institutions) {
             let institutionsArray = Array.from(this.institutions);
             if (city) {
@@ -56,6 +69,9 @@ export class InstitutionsService {
             });
             paginatedResult.items = institutionList;
 
+            // Save to cache
+            const cacheKey = `${CACHE_KEY}_${paginatedResult.pageIndex}_${size}_${sort}_${city}_${voivodeship}_${institutionType}_${priceMin}_${priceMax}`;
+            await this.cacheManager.set(cacheKey, paginatedResult);
             return Promise.resolve(paginatedResult);
         }
 
@@ -63,8 +79,16 @@ export class InstitutionsService {
     }
 
     async getById(id: number): Promise<InstitutionDto> {
+        const CACHE_KEY = 'InstitutionsService_getById';
+        const cacheKey = `${CACHE_KEY}_${id}`;
+        const cacheData = await this.cacheManager.get(cacheKey) as InstitutionDto;
+        if (cacheData) {
+            return Promise.resolve(cacheData);
+        }
+
         const institution = this.institutions.find((institution) => institution.id === id);
         if (institution) {
+            await this.cacheManager.set(cacheKey, institution);
             return Promise.resolve(institution);
         }
 
@@ -72,6 +96,13 @@ export class InstitutionsService {
     }
 
     async getInstitutionsAutocomplete(searchQuery: string): Promise<InstitutionAutocompleteDto[]> {
+        const CACHE_KEY = 'InstitutionsService_getInstitutionsAutocomplete';
+        const cacheKey = `${CACHE_KEY}_${searchQuery}`;
+        const cacheData = await this.cacheManager.get(cacheKey) as InstitutionAutocompleteDto[];
+        if (cacheData) {
+            return Promise.resolve(cacheData);
+        }
+
         const institutions = this.institutions.filter((institution) => institution.name.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1);
         const institutionList = institutions.map((institution) => {
             const institutionAutocompleteDto: InstitutionAutocompleteDto = {
@@ -81,6 +112,7 @@ export class InstitutionsService {
             return institutionAutocompleteDto;
         });
 
+        await this.cacheManager.set(cacheKey, institutionList);
         return Promise.resolve(institutionList);
     }
 
