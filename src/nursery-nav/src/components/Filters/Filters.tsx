@@ -108,7 +108,6 @@ export default function Filters() {
                     }
                     setSearchParams(searchParams);
                 }}
-                onReset={() => { console.log('reset') }}
                 renderInput={(params) => <TextField {...params} label="Województwo" />}
                 size="small"
                 sx={{ width: 300, maxWidth: '100%' }}
