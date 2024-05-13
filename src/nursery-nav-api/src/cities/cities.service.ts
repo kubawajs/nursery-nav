@@ -19,7 +19,7 @@ export class CitiesService {
             return Promise.resolve(cacheData);
         }
 
-        await this.cacheManager.set(CACHE_KEY, this.locations, Number(env.CACHE_TTL));
+        await this.cacheManager.set(CACHE_KEY, this.locations);
         return Promise.resolve(this.locations);
     }
 

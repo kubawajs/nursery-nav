@@ -71,7 +71,7 @@ export class InstitutionsService {
 
             // Save to cache
             const cacheKey = `${CACHE_KEY}_${paginatedResult.pageIndex}_${size}_${sort}_${city}_${voivodeship}_${institutionType}_${priceMin}_${priceMax}`;
-            await this.cacheManager.set(cacheKey, paginatedResult, Number(env.CACHE_TTL));
+            await this.cacheManager.set(cacheKey, paginatedResult);
             return Promise.resolve(paginatedResult);
         }
 
@@ -88,7 +88,7 @@ export class InstitutionsService {
 
         const institution = this.institutions.find((institution) => institution.id === id);
         if (institution) {
-            await this.cacheManager.set(cacheKey, institution, Number(env.CACHE_TTL));
+            await this.cacheManager.set(cacheKey, institution);
             return Promise.resolve(institution);
         }
 
@@ -112,7 +112,7 @@ export class InstitutionsService {
             return institutionAutocompleteDto;
         });
 
-        await this.cacheManager.set(cacheKey, institutionList, Number(env.CACHE_TTL));
+        await this.cacheManager.set(cacheKey, institutionList);
         return Promise.resolve(institutionList);
     }
 
