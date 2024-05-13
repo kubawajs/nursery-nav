@@ -39,36 +39,47 @@ This project is part of [100 commitow challenge](https://100commitow.pl/). It he
 
 #### Configuration
 
-Add `.env` file in the folder root with key to enable map:
+Add `.env` file in the folder root with keys:
 
 ```
-REACT_APP_GEOAPIFY_API_KEY=you_geoapify_key
+REACT_APP_GEOAPIFY_API_KEY=
+REACT_APP_API_URL=
+REACT_APP_NAME=
 ```
 
-Key can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project)
+* REACT_APP_GEOAPIFY_API_KEY - key to enable the map. Can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project)
+* REACT_APP_API_URL - URL to the API instance, e.g. on local it can be `http://localhost:3000`
+* REACT_APP_NAME - custom name of your application. Is displayed in the header and in titles across the website
 
 #### Running frontend
 
-Go to `./src/nursery-nav` and run `npm start`.
+Go to `./src/nursery-nav` and run `npm run start`.
 
 ### Backend
 
 A static JSON file is provided as the backend API for the MVP version.
 Check `./data/RZ-instytucje-enriched.json`
-Soon will be connected to the API.
 
 #### Configuration
 
-Add `.env` file in the folder root with key to your frontend instance.
+Add `.env` file in the folder root with keys:
 
 ```
-FRONTEND_URL=your_frontend_app_url
+FRONTEND_URL=
+CACHE_TTL=3600000
 ```
 
-This step is not required, but enables frontend application origin to access backend API.
+* FRONTEND_URL - provide URL to your frontend instance, e.g. `http://localhost:3001` when running on local. This step is not required, but enables frontend application origin to access backend API - app has CORS enabled by default.
+* CACHE_TTL - cache expiration TTL in miliseconds
 
 #### Running backend
-Go to `./src/nursery-nav-api` and run `npm run start`.
+Go to `./src/nursery-nav-api` and run `npm run start:dev`.
+
+#### API doc
+
+Go to `/api` to display API Swagger doc:
+
+![API Swagger doc](./img/api-swagger-doc.png)
 
 ## Features
 
@@ -101,8 +112,7 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 
 ### Phase 2
 
-* [ ] Go-live
-* [ ] Update docs
+* [x] Update docs
 
 #### Frontend
 
@@ -114,10 +124,9 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 * [x] Direct URLs to filtered results by query params
 * [x] Filtering map locations
 * [x] Autocomplete for institution name
-* [ ] Caching
+* [x] Caching
 * [x] About page
 * [x] SEO
-* [ ] Performance
 
 #### API
 
@@ -139,15 +148,23 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 
 ### Phase 3
 
+* [ ] Go-live
+
 #### Frontend
 
+* [ ] Add sitemap
+* [ ] Add Google Analytics
 * [ ] Comparison view
 * [ ] Institution profile
 * [ ] Institution rating
+* [ ] Performance upgrades
+* [ ] Feedback form (report data error, suggest change)
+* [ ] *About* page content
+* [ ] Display day/hour price when monthly not provided
 
 #### API
 
-* [ ] DB data source
+* [ ] Convert data source to MongoDB
 * [ ] API key authentication
 * [ ] CSV import
 * [ ] Fully automate data update process
@@ -156,8 +173,9 @@ Go to `./src/nursery-nav-api` and run `npm run start`.
 
 * [x] "Back" button on institution details does not remember parameters of previous page
 * [x] City and voivodeship filters not selected based on query parameter
-* [ ] Price is not visible in mobile view when "Brak wolnych miejsc" chip is displayed
+* [x] Price is not visible in mobile view when "Brak wolnych miejsc" chip is displayed
 * [ ] City dropdown is not filtered based on voivodeship
+* [ ] Voivodeship is not automatically selected on city dropdown change
 
 ## Data source
 
