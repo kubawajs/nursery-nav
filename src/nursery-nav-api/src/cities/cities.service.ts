@@ -1,15 +1,25 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable, Inject } from "@nestjs/common";
 import { CityDto } from "./DTO/cityDto";
+import { Cache } from "cache-manager";
+import { CACHE_MANAGER } from "@nestjs/cache-manager";
+import { env } from "process";
 
 @Injectable()
 export class CitiesService {
     private locations: CityDto[];
 
-    constructor() {
+    constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {
         this.loadData();
     }
 
     async findAll() {
+        const CACHE_KEY = 'CitiesService_findAll';
+        const cacheData = await this.cacheManager.get(CACHE_KEY) as CityDto[];
+        if (cacheData) {
+            return Promise.resolve(cacheData);
+        }
+
+        await this.cacheManager.set(CACHE_KEY, this.locations, Number(env.CACHE_TTL));
         return Promise.resolve(this.locations);
     }
 
