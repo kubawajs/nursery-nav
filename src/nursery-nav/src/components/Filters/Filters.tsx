@@ -86,7 +86,7 @@ export default function Filters() {
             />
             <Autocomplete
                 id="cityFilter"
-                options={cities.map(city => city.city) || []}
+                options={cities.filter(city => !searchParams.get('voivodeship') || city.voivodeship === searchParams.get('voivodeship'))?.map(city => city.city) || []}
                 value={searchParams.get('city') || ''}
                 onChange={(_event, value) => {
                     if (!value && searchParams.has('city')) {

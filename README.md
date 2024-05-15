@@ -174,8 +174,9 @@ Go to `/api` to display API Swagger doc:
 * [x] "Back" button on institution details does not remember parameters of previous page
 * [x] City and voivodeship filters not selected based on query parameter
 * [x] Price is not visible in mobile view when "Brak wolnych miejsc" chip is displayed
-* [ ] City dropdown is not filtered based on voivodeship
+* [x] City dropdown is not filtered based on voivodeship
 * [x] Voivodeship is not automatically selected on city dropdown change
+* [ ] If filters selected on list view, map pin is not displayed on details view when redirected from autocomplete
 
 ## Data source
 
