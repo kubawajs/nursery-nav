@@ -175,7 +175,7 @@ Go to `/api` to display API Swagger doc:
 * [x] City and voivodeship filters not selected based on query parameter
 * [x] Price is not visible in mobile view when "Brak wolnych miejsc" chip is displayed
 * [ ] City dropdown is not filtered based on voivodeship
-* [ ] Voivodeship is not automatically selected on city dropdown change
+* [x] Voivodeship is not automatically selected on city dropdown change
 
 ## Data source
 
