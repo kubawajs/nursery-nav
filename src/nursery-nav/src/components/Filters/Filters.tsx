@@ -8,20 +8,26 @@ import { InstitutionAutocomplete, InstitutionType } from "../../shared/nursery.i
 import { generatePath, useNavigate, useSearchParams } from "react-router-dom";
 import PathConstants from "../../shared/pathConstants";
 
+interface CitiesFilterValue {
+    city: string;
+    voivodeship: string;
+}
+
 export default function Filters() {
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
 
     const [institutionsAutocomplete, setInstitutionsAutocomplete] = useState<InstitutionAutocomplete[]>([]);
-    const [cities, setCities] = useState<string[]>([]);
+    const [cities, setCities] = useState<CitiesFilterValue[]>([]);
     const [voivodeships, setVoivodeships] = useState<string[]>([]);
 
     useEffect(() => {
         const fetchCities = async () => {
             const response = await fetch(`${process.env.REACT_APP_API_URL}/cities`);
             const citiesResponse = await response.json() as { city: string, voivodeship: string }[];
-            const citiesUnique = citiesResponse.map(city => city.city)
-                .filter((city, index, self) => self.indexOf(city) === index);
+            const citiesUnique = citiesResponse
+                .map(city => ({ city: city.city, voivodeship: city.voivodeship }))
+                .filter((city, index, self) => self.findIndex(c => c.city === city.city) === index);
             setCities(citiesUnique);
 
             const voivodeshipsUnique = citiesResponse.map(city => city.voivodeship)
@@ -80,14 +86,15 @@ export default function Filters() {
             />
             <Autocomplete
                 id="cityFilter"
-                options={cities}
-                defaultValue={searchParams.get('city') || ''}
+                options={cities.map(city => city.city) || []}
+                value={searchParams.get('city') || ''}
                 onChange={(_event, value) => {
                     if (!value && searchParams.has('city')) {
                         searchParams.delete('city');
                     }
                     else if (value) {
                         searchParams.set('city', value);
+                        searchParams.set('voivodeship', cities.find(city => city.city === value)?.voivodeship || '');
                     }
                     setSearchParams(searchParams);
                 }}
@@ -98,7 +105,7 @@ export default function Filters() {
             <Autocomplete
                 id="voivodeshipFilter"
                 options={voivodeships || []}
-                defaultValue={searchParams.get('voivodeship') || ''}
+                value={searchParams.get('voivodeship') || ''}
                 onChange={(_event, value) => {
                     if (!value && searchParams.has('voivodeship')) {
                         searchParams.delete('voivodeship');
