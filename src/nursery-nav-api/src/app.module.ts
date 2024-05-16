@@ -9,12 +9,35 @@ import { LocationsService } from './locations/locations.service';
 import { CitiesController } from './cities/cities.controller';
 import { CitiesService } from './cities/cities.service';
 import { CacheModule } from '@nestjs/cache-manager';
+import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
+import { APP_GUARD } from '@nestjs/core';
 
 @Module({
-  imports: [ConfigModule.forRoot(), CacheModule.register({
-    ttl: Number(process.env.CACHE_TTL)
-  })],
-  controllers: [AppController, InstitutionsController, LocationsController, CitiesController],
-  providers: [AppService, InstitutionsService, LocationsService, CitiesService],
+  imports: [
+    ConfigModule.forRoot(),
+    CacheModule.register({
+      ttl: Number(process.env.CACHE_TTL)
+    }),
+    ThrottlerModule.forRoot([{
+      ttl: Number(process.env.THROTTLE_TTL),
+      limit: Number(process.env.THROTTLE_LIMIT),
+    }])
+  ],
+  controllers: [
+    AppController,
+    InstitutionsController,
+    LocationsController,
+    CitiesController
+  ],
+  providers: [
+    {
+      provide: APP_GUARD,
+      useClass: ThrottlerGuard,
+    },
+    AppService,
+    InstitutionsService,
+    LocationsService,
+    CitiesService
+  ],
 })
 export class AppModule { }
