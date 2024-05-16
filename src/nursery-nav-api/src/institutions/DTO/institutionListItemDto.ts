@@ -24,6 +24,9 @@ export class InstitutionListItemDto {
     basicPricePerMonth: number;
 
     @ApiProperty()
+    basicPricePerHour: number;
+
+    @ApiProperty()
     isAdaptedToDisabledChildren: boolean;
 
     @ApiProperty()
