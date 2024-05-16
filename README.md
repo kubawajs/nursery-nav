@@ -66,11 +66,15 @@ Add `.env` file in the folder root with keys:
 
 ```
 FRONTEND_URL=
-CACHE_TTL=3600000
+CACHE_TTL=
+THROTTLE_TTL=
+THROTTLE_LIMIT=
 ```
 
 * FRONTEND_URL - provide URL to your frontend instance, e.g. `http://localhost:3001` when running on local. This step is not required, but enables frontend application origin to access backend API - app has CORS enabled by default.
 * CACHE_TTL - cache expiration TTL in miliseconds
+* THROTTLE_TTL - throttle time limit in miliseconds
+* THROTTLE_LIMIT - calls limit within the TTL
 
 #### Running backend
 Go to `./src/nursery-nav-api` and run `npm run start:dev`.
@@ -165,7 +169,8 @@ Go to `/api` to display API Swagger doc:
 #### API
 
 * [ ] Convert data source to MongoDB
-* [ ] API key authentication
+* [x] Rate limiting
+* [x] Helmet
 * [ ] CSV import
 * [ ] Fully automate data update process
 
