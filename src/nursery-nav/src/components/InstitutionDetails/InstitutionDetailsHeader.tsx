@@ -18,7 +18,7 @@ function PriceWithLabel(label: string, icon: PropTypes.ReactComponentLike, color
                 </Typography>
             </Stack>
         </Paper>
-    ));
+    )) || null;
 }
 
 export default function InstitutionDetailsHeader(institution: Institution) {
