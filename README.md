@@ -164,7 +164,7 @@ Go to `/api` to display API Swagger doc:
 * [ ] Performance upgrades
 * [ ] Feedback form (report data error, suggest change)
 * [ ] *About* page content
-* [ ] Display day/hour price when monthly not provided
+* [x] Display hour price when monthly not provided
 
 #### API
 

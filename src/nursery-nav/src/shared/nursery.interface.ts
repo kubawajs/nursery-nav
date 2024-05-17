@@ -27,6 +27,7 @@ export interface InstitutionListItem {
 	website: string;
 	email: string;
 	phone: string;
+	basicPricePerHour: number;
 	basicPricePerMonth: number;
 	isAdaptedToDisabledChildren: boolean;
 	isAvailable: boolean;

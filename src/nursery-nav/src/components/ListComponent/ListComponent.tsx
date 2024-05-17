@@ -107,6 +107,7 @@ export default function ListComponent() {
 							id={institution.id}
 							institutionType={institution.institutionType}
 							city={institution.city}
+							basicPricePerHour={institution.basicPricePerHour}
 							basicPricePerMonth={institution.basicPricePerMonth}
 							website={institution.website}
 							phone={institution.phone}

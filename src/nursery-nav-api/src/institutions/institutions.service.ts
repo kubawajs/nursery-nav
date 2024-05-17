@@ -152,6 +152,7 @@ export class InstitutionsService {
             email: institution.email,
             phone: institution.phone,
             basicPricePerMonth: institution.basicPricePerMonth,
+            basicPricePerHour: institution.basicPricePerHour,
             isAdaptedToDisabledChildren: institution.isAdaptedToDisabledChildren,
             isAvailable: institution.capacity > institution.kidsEnrolled,
             city: institution.address?.city,
@@ -161,9 +162,9 @@ export class InstitutionsService {
     private sortMethod(sort: SortParams, a: InstitutionDto, b: InstitutionDto) {
         switch (sort) {
             case SortParams.PRICE_ASC:
-                return a.basicPricePerMonth - b.basicPricePerMonth;
+                return a.basicPricePerMonth - b.basicPricePerMonth || a.basicPricePerHour - b.basicPricePerHour;
             case SortParams.PRICE_DESC:
-                return b.basicPricePerMonth - a.basicPricePerMonth;
+                return b.basicPricePerMonth - a.basicPricePerMonth || b.basicPricePerHour - a.basicPricePerHour;
             case SortParams.NAME_ASC:
                 return a.name.localeCompare(b.name);
             case SortParams.NAME_DESC:

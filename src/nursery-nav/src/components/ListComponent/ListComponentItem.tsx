@@ -21,6 +21,7 @@ interface ListComponentItemProps {
     id: number;
     institutionType: string;
     city: string;
+    basicPricePerHour: number;
     basicPricePerMonth: number;
     website: string;
     phone: string;
@@ -61,8 +62,9 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                         padding={0.25}
                                         fontWeight={700}
                                     >
+                                        {props.basicPricePerHour > 0 && <>{props.basicPricePerHour.toFixed(2)} PLN / godzina</>}
                                         {props.basicPricePerMonth > 0 && <>{props.basicPricePerMonth.toFixed(2)} PLN / miesiąc</>}
-                                        {!props.basicPricePerMonth && <Typography variant='overline'>Brak danych</Typography>}
+                                        {!props.basicPricePerMonth && !props.basicPricePerHour && <Typography variant='overline'>Brak danych</Typography>}
                                     </Typography>
                                 </Box>
                                 <Typography variant="h5" paddingBottom={2}>
