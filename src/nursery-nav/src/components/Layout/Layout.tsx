@@ -4,8 +4,9 @@ import React, { Suspense } from "react";
 import { Institution } from "../../shared/nursery.interface";
 import Navigation from "../Navigation/Navigation";
 import { Outlet } from "react-router-dom";
-import { CircularProgress, Grid } from "@mui/material";
+import { CircularProgress, Fab, Grid } from "@mui/material";
 import { HelmetProvider } from "react-helmet-async";
+import ContactUs from "../ContactUs/ContactUs";
 
 export const InstitutionContext = React.createContext({
     institutionIds: [] as number[],
@@ -28,6 +29,7 @@ export default function Layout() {
                             <Outlet />
                         </Suspense>
                     </Grid>
+                    <ContactUs />
                 </HelmetProvider>
             </ThemeProvider>
         </InstitutionContext.Provider>
