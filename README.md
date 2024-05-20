@@ -153,6 +153,7 @@ Go to `/api` to display API Swagger doc:
 ### Phase 3
 
 * [ ] Go-live
+* [ ] Update README
 
 #### Frontend
 
@@ -162,9 +163,10 @@ Go to `/api` to display API Swagger doc:
 * [ ] Institution profile
 * [ ] Institution rating
 * [ ] Performance upgrades
-* [ ] Feedback form (report data error, suggest change)
+* [x] Feedback form v1 (report data error, suggest change)
 * [ ] *About* page content
 * [x] Display hour price when monthly not provided
+* [ ] Update README
 
 #### API
 
@@ -173,6 +175,7 @@ Go to `/api` to display API Swagger doc:
 * [x] Helmet
 * [ ] CSV import
 * [ ] Fully automate data update process
+* [ ] Update README
 
 ### Known bugs
 
