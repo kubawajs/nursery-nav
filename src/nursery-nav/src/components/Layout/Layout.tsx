@@ -4,7 +4,7 @@ import React, { Suspense } from "react";
 import { Institution } from "../../shared/nursery.interface";
 import Navigation from "../Navigation/Navigation";
 import { Outlet } from "react-router-dom";
-import { CircularProgress, Fab, Grid } from "@mui/material";
+import { CircularProgress, Grid } from "@mui/material";
 import { HelmetProvider } from "react-helmet-async";
 import ContactUs from "../ContactUs/ContactUs";
 
