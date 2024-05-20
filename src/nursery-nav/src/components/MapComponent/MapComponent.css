@@ -2,7 +2,7 @@
 
 .marker-cluster-medium {
 	background-color: #98d9ff;
-	color: #333;
+	color: #fff;
 }
 
 .marker-cluster-medium div {
@@ -13,7 +13,7 @@
 
 .marker-cluster-small {
 	background-color: #e5f6ff;
-	color: #666;
+	color: #fff;
 }
 
 .marker-cluster-small div {
@@ -24,7 +24,7 @@
 
 .marker-cluster-large {
 	background-color: #57a5ec;
-	color: #666;
+	color: #fff;
 }
 
 .marker-cluster-large div {
