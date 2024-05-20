@@ -45,11 +45,13 @@ Add `.env` file in the folder root with keys:
 REACT_APP_GEOAPIFY_API_KEY=
 REACT_APP_API_URL=
 REACT_APP_NAME=
+REACT_APP_CONTACT_MAIL=
 ```
 
 * REACT_APP_GEOAPIFY_API_KEY - key to enable the map. Can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project)
 * REACT_APP_API_URL - URL to the API instance, e.g. on local it can be `http://localhost:3000`
 * REACT_APP_NAME - custom name of your application. Is displayed in the header and in titles across the website
+* REACT_APP_CONTACT_MAIL - email used in contact dialog on map view
 
 #### Running frontend
 
