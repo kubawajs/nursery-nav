@@ -47,7 +47,7 @@ export default function InstitutionDetailsHeader(institution: Institution) {
                             <Typography variant="h1" typography="h3">{institution.name}</Typography>
                         </Box>
                         <Box pt={1}>
-                            <Typography variant="subtitle2" color="text.secondary">
+                            <Typography variant="subtitle1" color="text.secondary">
                                 <FmdGood />{institution.address.city}
                             </Typography>
                         </Box>

@@ -67,11 +67,11 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                         {!props.basicPricePerMonth && !props.basicPricePerHour && <Typography variant='overline'>Brak danych</Typography>}
                                     </Typography>
                                 </Box>
-                                <Typography variant="h5" paddingBottom={2}>
+                                <Typography variant="h2" typography="h5" paddingBottom={2}>
                                     {props.name}
                                 </Typography>
                                 <Box display='flex' justifyContent='space-between'>
-                                    <Typography variant="subtitle2" color="text.secondary">
+                                    <Typography variant="h4" typography="body1" color="text.secondary">
                                         <FmdGood />{props.city}
                                     </Typography>
                                     <ButtonGroup variant="text" aria-label="basic outlined button group" color={mainColor}>
