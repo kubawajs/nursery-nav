@@ -75,7 +75,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                         <FmdGood />{props.city}
                                     </Typography>
                                     <ButtonGroup variant="text" aria-label="basic outlined button group" color={mainColor}>
-                                        {props.phone && <Button aria-label='Zadzwoń do instytucji'>
+                                        {props.phone && <Button aria-label='Zadzwoń do placówki'>
                                             <Phone sx={{ fontSize: '1.25rem' }} />
                                         </Button>}
                                         {props.email && <Button aria-label='Napisz wiadomość email'>
