@@ -68,3 +68,21 @@ Script that converts data from CSV into JSON file with given structure:
 ```bash
 python convert-to-json.py file-name.csv
 ```
+
+## compare-data.py
+
+Script that compares two CSV files with data source and produces diff file.
+
+### Run script
+
+```bash
+python compare-data.py file1.csv file2.csv
+```
+
+## generate-sitemap.py
+
+Script that generates sitemap file for given number of institutions.
+
+```bash
+python generate.py domain number_of_institutions
+```
