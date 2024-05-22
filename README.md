@@ -87,6 +87,10 @@ Go to `/api` to display API Swagger doc:
 
 ![API Swagger doc](./img/api-swagger-doc.png)
 
+## Project backlog
+
+Project backlog is available in [Github Projects](https://github.com/users/kubawajs/projects/4)
+
 ## Features
 
 ### MVP ✅
@@ -154,21 +158,20 @@ Go to `/api` to display API Swagger doc:
 
 ### Phase 3
 
-* [ ] Go-live
+* [x] Go-live
 * [ ] Update README
 
 #### Frontend
 
-* [ ] Add sitemap
+* [x] Add sitemap
 * [ ] Add Google Analytics
 * [ ] Comparison view
-* [ ] Institution profile
-* [ ] Institution rating
 * [ ] Performance upgrades
 * [x] Feedback form v1 (report data error, suggest change)
 * [ ] *About* page content
 * [x] Display hour price when monthly not provided
 * [ ] Update README
+* [ ] Add 404 page
 
 #### API
 
@@ -178,6 +181,17 @@ Go to `/api` to display API Swagger doc:
 * [ ] CSV import
 * [ ] Fully automate data update process
 * [ ] Update README
+
+### Phase 4
+
+#### Frontend
+
+* [ ] Institution profile
+* [ ] Institution rating
+
+#### Backend
+
+* [ ] Profile management
 
 ### Known bugs
 
