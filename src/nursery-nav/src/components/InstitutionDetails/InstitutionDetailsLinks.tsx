@@ -16,7 +16,7 @@ export default function InstitutionDetailsLinks(institution: Institution) {
             >
                 {institution.phone && <Box>
                     <Typography variant="overline">
-                        <Link href={`tel:${institution.phone}`} color={mainColor} underline='none' aria-label="Zadzwoń do instytucji">
+                        <Link href={`tel:${institution.phone}`} color={mainColor} underline='none' aria-label="Zadzwoń do placówki">
                             <PhoneAndroid /> {institution.phone}
                         </Link>
                     </Typography>
