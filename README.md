@@ -192,6 +192,6 @@ Go to `/api` to display API Swagger doc:
 
 Static file `/data/RZ-instytucje.csv` + subfolders.
 
-Original data source - [Rejestr Żłobków - lista instytucji - dane.gov.pl](https://dane.gov.pl/pl/dataset/2106,rejestr-zobkow-lista-instytucji/resource/56682,rejestr-zobkow-lista-instytucji/table).
+Original data source - [Rejestr Żłobków - lista instytucji - dane.gov.pl](https://dane.gov.pl/pl/dataset/2106,rejestr-zobkow-lista-instytucji).
 
 License: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode.pl)
