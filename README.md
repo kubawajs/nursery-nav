@@ -52,6 +52,7 @@ REACT_APP_CONTACT_MAIL=
 * REACT_APP_API_URL - URL to the API instance, e.g. on local it can be `http://localhost:3000`
 * REACT_APP_NAME - custom name of your application. Is displayed in the header and in titles across the website
 * REACT_APP_CONTACT_MAIL - email used in contact dialog on map view
+* REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID - Google Analytics 4 tracking ID
 
 #### Running frontend
 
@@ -86,6 +87,10 @@ Go to `./src/nursery-nav-api` and run `npm run start:dev`.
 Go to `/api` to display API Swagger doc:
 
 ![API Swagger doc](./img/api-swagger-doc.png)
+
+## Project backlog
+
+Project backlog is available in [Github Projects](https://github.com/users/kubawajs/projects/4)
 
 ## Features
 
@@ -154,21 +159,20 @@ Go to `/api` to display API Swagger doc:
 
 ### Phase 3
 
-* [ ] Go-live
+* [x] Go-live
 * [ ] Update README
 
 #### Frontend
 
-* [ ] Add sitemap
-* [ ] Add Google Analytics
+* [x] Add sitemap
+* [x] Add Google Analytics
 * [ ] Comparison view
-* [ ] Institution profile
-* [ ] Institution rating
 * [ ] Performance upgrades
 * [x] Feedback form v1 (report data error, suggest change)
 * [ ] *About* page content
 * [x] Display hour price when monthly not provided
 * [ ] Update README
+* [ ] Add 404 page
 
 #### API
 
@@ -178,6 +182,17 @@ Go to `/api` to display API Swagger doc:
 * [ ] CSV import
 * [ ] Fully automate data update process
 * [ ] Update README
+
+### Phase 4
+
+#### Frontend
+
+* [ ] Institution profile
+* [ ] Institution rating
+
+#### Backend
+
+* [ ] Profile management
 
 ### Known bugs
 

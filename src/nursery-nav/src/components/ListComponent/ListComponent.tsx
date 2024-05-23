@@ -78,7 +78,7 @@ export default function ListComponent() {
 			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
 				{institutions && (
 					<Typography variant='body2' color="text.secondary" gutterBottom>
-						Znaleziono {totalItems} instytucji
+						Znaleziono {totalItems} placówek
 					</Typography>
 				)}
 

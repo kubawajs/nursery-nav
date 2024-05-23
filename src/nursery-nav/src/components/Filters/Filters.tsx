@@ -120,7 +120,7 @@ export default function Filters() {
                 sx={{ width: 300, maxWidth: '100%' }}
             />
             <FormControl>
-                <FormLabel id="demo-row-radio-buttons-group-label">Typ instytucji</FormLabel>
+                <FormLabel id="demo-row-radio-buttons-group-label">Typ placówki</FormLabel>
                 <RadioGroup
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"
