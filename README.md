@@ -52,6 +52,7 @@ REACT_APP_CONTACT_MAIL=
 * REACT_APP_API_URL - URL to the API instance, e.g. on local it can be `http://localhost:3000`
 * REACT_APP_NAME - custom name of your application. Is displayed in the header and in titles across the website
 * REACT_APP_CONTACT_MAIL - email used in contact dialog on map view
+* REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID - Google Analytics 4 tracking ID
 
 #### Running frontend
 
@@ -164,7 +165,7 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 #### Frontend
 
 * [x] Add sitemap
-* [ ] Add Google Analytics
+* [x] Add Google Analytics
 * [ ] Comparison view
 * [ ] Performance upgrades
 * [x] Feedback form v1 (report data error, suggest change)
