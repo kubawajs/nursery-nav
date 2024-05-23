@@ -3,6 +3,7 @@ import Layout from './components/Layout/Layout';
 import PathConstants from './shared/pathConstants';
 import React from 'react';
 import AboutPage from './pages/AboutPage';
+import PageNotFoundPage from './pages/PageNotFoundPage';
 
 const ListPage = React.lazy(() => import("./pages/ListPage"));
 const InstitutionDetailsPage = React.lazy(() => import("./pages/InstitutionDetailsPage"));
@@ -10,7 +11,7 @@ const InstitutionDetailsPage = React.lazy(() => import("./pages/InstitutionDetai
 const routes = [
   {
     path: PathConstants.HOME,
-    element: <ListPage />
+    element: <ListPage />,
   },
   {
     path: PathConstants.INSTITUTION_DETAILS,
@@ -19,6 +20,10 @@ const routes = [
   {
     path: PathConstants.ABOUT,
     element: <AboutPage />
+  },
+  {
+    path: '*',
+    element: <PageNotFoundPage />
   }
 ];
 
