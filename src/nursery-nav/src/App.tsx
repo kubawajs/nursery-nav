@@ -10,7 +10,7 @@ const InstitutionDetailsPage = React.lazy(() => import("./pages/InstitutionDetai
 const routes = [
   {
     path: PathConstants.HOME,
-    element: <ListPage />
+    element: <ListPage />,
   },
   {
     path: PathConstants.INSTITUTION_DETAILS,
@@ -19,6 +19,10 @@ const routes = [
   {
     path: PathConstants.ABOUT,
     element: <AboutPage />
+  },
+  {
+    path: '*',
+    element: <h1>404 Not Found</h1>
   }
 ];
 
