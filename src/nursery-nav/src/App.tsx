@@ -3,6 +3,7 @@ import Layout from './components/Layout/Layout';
 import PathConstants from './shared/pathConstants';
 import React from 'react';
 import AboutPage from './pages/AboutPage';
+import PageNotFoundPage from './pages/PageNotFoundPage';
 
 const ListPage = React.lazy(() => import("./pages/ListPage"));
 const InstitutionDetailsPage = React.lazy(() => import("./pages/InstitutionDetailsPage"));
@@ -22,7 +23,7 @@ const routes = [
   },
   {
     path: '*',
-    element: <h1>404 Not Found</h1>
+    element: <PageNotFoundPage />
   }
 ];
 

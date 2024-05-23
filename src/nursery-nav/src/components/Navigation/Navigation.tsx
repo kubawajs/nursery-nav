@@ -16,7 +16,7 @@ export default function Navigation() {
 								display: 'flex',
 								fontFamily: 'monospace',
 								fontWeight: 700,
-								letterSpacing: '.2rem',
+								letterSpacing: '.1rem',
 								textDecoration: 'none'
 							}}
 						>
