@@ -46,6 +46,7 @@ REACT_APP_GEOAPIFY_API_KEY=
 REACT_APP_API_URL=
 REACT_APP_NAME=
 REACT_APP_CONTACT_MAIL=
+REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID=
 ```
 
 * REACT_APP_GEOAPIFY_API_KEY - key to enable the map. Can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project)
@@ -169,10 +170,10 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 * [ ] Comparison view
 * [ ] Performance upgrades
 * [x] Feedback form v1 (report data error, suggest change)
-* [ ] *About* page content
+* [x] *About* page content
 * [x] Display hour price when monthly not provided
 * [ ] Update README
-* [ ] Add 404 page
+* [x] Add 404 page
 
 #### API
 
