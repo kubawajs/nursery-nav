@@ -1,10 +1,10 @@
-import { Container, Link, Stack, Typography } from "@mui/material";
+import { Box, Container, Link, List, ListItem, ListItemText, Paper, Stack, Typography } from "@mui/material";
 import { Helmet } from "react-helmet-async";
 
 export default function AboutPage() {
     const title = `O aplikacji - ${process.env.REACT_APP_NAME}`;
     const description = "Informacje o aplikacji";
-    const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
+    const image = `${process.env.REACT_APP_API_URL}/favicon.ico`;
 
     return (
         <>
@@ -21,18 +21,41 @@ export default function AboutPage() {
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <Container sx={{ padding: '1rem' }}>
-                <Stack direction="column" spacing={2}>
-                    <Typography variant="h1">O projekcie</Typography>
-                    <Typography variant="body1">
-                        Aplikacja {process.env.REACT_APP_NAME} to projekt stworzony w oparciu o dane udostępnione na stronie Otwarte Dane - <Link href="https://dane.gov.pl/pl/dataset/2106,rejestr-zobkow-lista-instytucji/resource/56670/table">Rejestr Żłobków - lista instytucji</Link>.
-                    </Typography>
-                    <Typography variant="body1">
-                        Celem aplikacji jest umożliwienie użytkownikom przeglądanie i wyszukiwanie żłobków oraz klubów dziecięcych w Polsce.
-                    </Typography>
-                    <Typography variant="body1">
-                        Kod źródłowy aplikacji dostępny jest pod adresem URL: <Link href="https://github.com/kubawajs/nursery-nav">github.com/kubawajs/nursery-nav</Link>.
-                    </Typography>
-                </Stack>
+                <Paper elevation={3} sx={{ padding: '1rem' }}>
+                    <Stack direction="column" spacing={2}>
+                        <Box justifyItems={'center'} textAlign={'center'}>
+                            <img src="/logo512.png" alt={process.env.REACT_APP_NAME} width="200px" height="200px" />
+                        </Box>
+                        <Typography variant="h1" textAlign={'center'}>O projekcie</Typography>
+                        <Typography variant="body1">
+                            Celem projektu <Link href="/">{process.env.REACT_APP_NAME}</Link> jest ułatwienie rodzicom wyszukiwania pobliskich żłobków i przedszkoli.
+                            Dzięki intuicyjnemu interfejsowi, użytkownicy mogą szybko znaleźć idealne miejsce dla swojego dziecka, spełniające ich wymagania i oczekiwania.
+                        </Typography>
+                        <Typography variant="h2" typography="h3" textAlign={'center'}>Funkcje</Typography>
+                        <Typography variant="body1">
+                            <List>
+                                <ListItem>
+                                    <ListItemText><strong>Mapa z pinezkami:</strong> Widok mapy pokazujący lokalizacje żłobków i przedszkoli.</ListItemText>
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText><strong>Szczegóły instytucji:</strong> Informacje o wybranej placówce.</ListItemText>
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText><strong>Integracja z API:</strong> API z bieżąco aktualizowaną bazą danych</ListItemText>
+                                </ListItem>
+                            </List>
+                        </Typography>
+                        <Typography variant="h2" typography="h3" textAlign={'center'}>Technologie</Typography>
+                        <Typography variant="body1">
+                            Projekt wykorzystuje technologie takie jak React, Typescript, NestJS, oraz biblioteki MUI i React Leaflet.
+                            Kod źródłowy aplikacji dostępny jest pod adresem URL: <Link href="https://github.com/kubawajs/nursery-nav">github.com/kubawajs/nursery-nav</Link>.
+                        </Typography>
+                        <Typography variant="h2" typography="h3" textAlign={'center'}>Autor</Typography>
+                        <Box justifyItems={'center'} textAlign={'center'}>
+                            <Link href="www.wajs-dev.net"><img src="/author.png" alt="Author's logo" width="150px" height="150px" /></Link>
+                        </Box>
+                    </Stack>
+                </Paper>
             </Container>
         </>
     );
