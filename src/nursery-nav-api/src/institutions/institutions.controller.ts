@@ -1,18 +1,18 @@
-import { Controller, Get, HttpCode, Param, Query, UseInterceptors } from '@nestjs/common';
-import { InstitutionDto } from './DTO/institutionDto';
-import { InstitutionsService } from './institutions.service';
+import { Controller, Get, HttpCode, Inject, Param, Query, UseInterceptors } from '@nestjs/common';
 import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
-import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
 import { InstitutionType } from '../shared/models/institutionType';
-import { InstitutionAutocompleteDto } from './DTO/institutionAutocompleteDto';
 import { CacheInterceptor } from '@nestjs/cache-manager';
+import { IInstitutionsService } from './iinstitutions.service';
+import { InstitutionAutocompleteDto } from './DTO/institutionAutocompleteDto';
+import { InstitutionDto } from './DTO/institutionDto';
+import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 
 @Controller('institutions')
 @UseInterceptors(CacheInterceptor)
 export class InstitutionsController {
-    constructor(private readonly institutionsService: InstitutionsService) { }
+    constructor(@Inject(IInstitutionsService) private readonly institutionsService: IInstitutionsService) { }
 
     @Get()
     @HttpCode(200)
