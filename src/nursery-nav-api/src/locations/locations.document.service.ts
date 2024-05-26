@@ -3,10 +3,10 @@ import { LocationDto } from "./DTO/locationDto";
 import { InstitutionType } from "../shared/models/institutionType";
 import { Cache } from "cache-manager";
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
-import { env } from "process";
+import { ILocationsService } from "./ilocations.service";
 
 @Injectable()
-export class LocationsService {
+export class LocationsDocumentService implements ILocationsService {
     private locations: LocationDto[];
 
     constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {

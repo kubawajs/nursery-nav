@@ -1,16 +1,16 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { InstitutionDto } from './DTO/institutionDto';
-import { InstitutionListItemDto } from './DTO/institutionListItemDto';
 import { InstitutionType } from '../shared/models/institutionType';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
-import { InstitutionAutocompleteDto } from './DTO/institutionAutocompleteDto';
 import { Cache } from 'cache-manager';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
-import { env } from 'process';
+import { InstitutionAutocompleteDto } from './DTO/institutionAutocompleteDto';
+import { InstitutionDto } from './DTO/institutionDto';
+import { InstitutionListItemDto } from './DTO/institutionListItemDto';
+import { IInstitutionsService } from './iinstitutions.service';
 
 @Injectable()
-export class InstitutionsService {
+export class InstitutionsDocumentService implements IInstitutionsService {
     private institutions: InstitutionDto[];
 
     constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {

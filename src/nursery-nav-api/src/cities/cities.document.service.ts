@@ -2,10 +2,10 @@ import { Injectable, Inject } from "@nestjs/common";
 import { CityDto } from "./DTO/cityDto";
 import { Cache } from "cache-manager";
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
-import { env } from "process";
+import { ICitiesService } from "./icities.service";
 
 @Injectable()
-export class CitiesService {
+export class CitiesDocumentService implements ICitiesService {
     private locations: CityDto[];
 
     constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {

@@ -1,13 +1,13 @@
-import { Controller, Get, HttpCode, UseInterceptors } from '@nestjs/common';
+import { Controller, Get, HttpCode, Inject, UseInterceptors } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { LocationDto } from './DTO/locationDto';
-import { LocationsService } from './locations.service';
 import { CacheInterceptor } from '@nestjs/cache-manager';
+import { ILocationsService } from './ilocations.service';
 
 @Controller('locations')
 @UseInterceptors(CacheInterceptor)
 export class LocationsController {
-    constructor(private readonly locationsService: LocationsService) { }
+    constructor(@Inject(ILocationsService) private readonly locationsService: ILocationsService) { }
 
     @Get()
     @HttpCode(200)
