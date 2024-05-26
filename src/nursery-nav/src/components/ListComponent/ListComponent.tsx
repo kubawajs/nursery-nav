@@ -86,6 +86,10 @@ export default function ListComponent() {
 				</Button>
 			</Box>
 			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
+				<Button variant='contained'>
+					Porównaj
+				</Button>
+
 				{institutions && (
 					<Typography variant='body2' color="text.secondary" gutterBottom>
 						Znaleziono {totalItems} placówek
