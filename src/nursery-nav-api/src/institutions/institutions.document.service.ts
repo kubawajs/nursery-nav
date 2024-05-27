@@ -42,10 +42,10 @@ export class InstitutionsDocumentService implements IInstitutionsService {
         if (this.institutions) {
             let institutionsArray = Array.from(this.institutions);
             if (city) {
-                institutionsArray = institutionsArray.filter((institution) => institution.address.city.toLowerCase().indexOf(city.toLowerCase()) !== -1);
+                institutionsArray = institutionsArray.filter((institution) => institution.address.city && institution.address.city.toLowerCase().indexOf(city.toLowerCase()) !== -1);
             }
             if (voivodeship) {
-                institutionsArray = institutionsArray.filter((institution) => institution.address.voivodeship.toLowerCase().indexOf(voivodeship.toLowerCase()) !== -1);
+                institutionsArray = institutionsArray.filter((institution) => institution.address.voivodeship && institution.address.voivodeship.toLowerCase().indexOf(voivodeship.toLowerCase()) !== -1);
             }
             if (institutionType && institutionType.length > 0) {
                 institutionsArray = institutionsArray.filter((institution) => institutionType.includes(institution.institutionType));
