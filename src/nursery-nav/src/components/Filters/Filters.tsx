@@ -28,12 +28,12 @@ export default function Filters() {
             const citiesUnique = citiesResponse
                 .map(city => ({ city: city.city, voivodeship: city.voivodeship }))
                 .filter((city, index, self) => self.findIndex(c => c.city === city.city) === index);
-            setCities(citiesUnique);
+            setCities(citiesUnique.filter(city => city !== undefined && city !== null));
 
             const voivodeshipsUnique = citiesResponse.map(city => city.voivodeship)
                 .filter((voivodeship, index, self) => self.indexOf(voivodeship) === index)
                 .sort((a, b) => a.localeCompare(b));
-            setVoivodeships(voivodeshipsUnique);
+            setVoivodeships(voivodeshipsUnique.filter(voivodeship => voivodeship !== undefined && voivodeship !== null && voivodeship !== ''));
         };
 
         fetchCities();
