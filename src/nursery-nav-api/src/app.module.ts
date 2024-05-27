@@ -14,10 +14,12 @@ import { ICitiesService } from './cities/icities.service';
 import { IInstitutionsService } from './institutions/iinstitutions.service';
 import { ILocationsService } from './locations/ilocations.service';
 import { LocationsDocumentService } from './locations/locations.document.service';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGODB_URI as string, { dbName: process.env.MONGODB_DB }),
     CacheModule.register({
       ttl: Number(process.env.CACHE_TTL)
     }),
