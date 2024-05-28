@@ -174,6 +174,7 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 * [x] Display hour price when monthly not provided
 * [ ] Update README
 * [x] Add 404 page
+* [ ] Add map to mobile view
 
 #### API
 

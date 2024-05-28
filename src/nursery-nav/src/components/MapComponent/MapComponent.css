@@ -1,34 +1,34 @@
 @import 'leaflet/dist/leaflet.css';
 
-.marker-cluster-medium {
-	background-color: #98d9ff;
-	color: #fff;
-}
-
-.marker-cluster-medium div {
-	font-family: 'Roboto Latin', sans-serif;
-	font-weight: bold;
-	background-color: #57a5ec;
-}
-
 .marker-cluster-small {
-	background-color: #e5f6ff;
+	background-color: #e6f3fb;
 	color: #fff;
 }
 
 .marker-cluster-small div {
 	font-family: 'Roboto Latin', sans-serif;
 	font-weight: bold;
-	background-color: #98d9ff;
+	background-color: #4580c4;
+}
+
+.marker-cluster-medium {
+	background-color: #4580c4;
+	color: #fff;
+}
+
+.marker-cluster-medium div {
+	font-family: 'Roboto Latin', sans-serif;
+	font-weight: bold;
+	background-color: #315292;
 }
 
 .marker-cluster-large {
-	background-color: #57a5ec;
+	background-color: #315292;
 	color: #fff;
 }
 
 .marker-cluster-large div {
 	font-family: 'Roboto Latin', sans-serif;
 	font-weight: bold;
-	background-color: #57a5ec;
+	background-color: #0d0c1d;
 }
