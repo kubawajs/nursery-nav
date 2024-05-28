@@ -1,7 +1,6 @@
 import {
     Box, Button, ButtonGroup, Card,
     CardContent,
-    CardMedia,
     Chip,
     Link,
     ListItem,
@@ -32,8 +31,6 @@ interface ListComponentItemProps {
 
 export function ListComponentItem(props: ListComponentItemProps) {
     const mainColor = props.institutionType === InstitutionType.NURSERY ? "primary" : "secondary";
-    const imagePath = props.institutionType === InstitutionType.NURSERY ? '/images/nursery-placeholder.jpg' : '/images/child-club-placeholder.jpg';
-    const imageAlt = "Photo created by DALL-E from OpenAI";
 
     return (
         <Link component={RouterLink} to={generatePath(PathConstants.INSTITUTION_DETAILS, { id: props.id })} underline='none'>
