@@ -38,15 +38,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
     return (
         <Link component={RouterLink} to={generatePath(PathConstants.INSTITUTION_DETAILS, { id: props.id })} underline='none'>
             <ListItem sx={{ display: 'block' }}>
-                <Card sx={{ display: 'flex', padding: 0, paddingRight: 2 }}>
-                    <Box paddingLeft={2} paddingBottom={2} paddingTop={2}>
-                        <CardMedia
-                            component="img"
-                            sx={{ display: { xs: 'none', sm: 'block' }, width: 120, height: 120, objectFit: 'cover', borderRadius: '10px' }}
-                            image={imagePath}
-                            alt={imageAlt}
-                        />
-                    </Box>
+                <Card sx={{ display: 'flex', padding: 0, paddingRight: 2, paddingLeft: 2 }}>
                     <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
                         <CardContent sx={{ flex: '1 0 auto', paddingRight: '0' }}>
                             <Box>
