@@ -1,16 +1,19 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
-import { Container } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import MapPin from '../MapPin/MapPin';
 import { useContext, useEffect, useState } from 'react';
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import './MapComponent.css';
 import { LocationResponse } from '../../shared/nursery.interface';
 import { InstitutionContext } from '../Layout/Layout';
+import { Map } from '@mui/icons-material';
 
 export default function MapComponent() {
 	const { institutionIds } = useContext(InstitutionContext);
 	const [locations, setLocations] = useState<LocationResponse[]>([]);
 	const [locationsFiltered, setLocationsFiltered] = useState<LocationResponse[]>([]);
+	const isXs = window.innerWidth < 600;
+	const isSm = window.innerWidth < 900;
 
 	const fetchLocations = async () => {
 		const res = await fetch(`${process.env.REACT_APP_API_URL}/locations`);
@@ -27,34 +30,43 @@ export default function MapComponent() {
 	}, [institutionIds, locations]);
 
 	return (
-		<Container style={{ padding: 0 }}>
-			<MapContainer
-				center={[52.5, 19.14]}
-				zoom={7}
-				scrollWheelZoom={true}
-				zoomControl={false}
-				style={{ position: 'fixed', top: 0, bottom: 0, width: '50%' }}
-			>
-				<TileLayer
-					attribution='Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors'
-					url={`https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`}
-					maxZoom={20}
-				/>
-				<MarkerClusterGroup
-					className="marker-cluster-group"
-					polygonOptions={{ opacity: 0 }}
-					chunkedLoading>
-					{locationsFiltered.map((location, index) => (
-						<MapPin
-							key={index}
-							id={location.id}
-							latitude={location.latitude}
-							longitude={location.longitude}
-							institutionType={location.institutionType}
-						/>
-					))}
-				</MarkerClusterGroup>
-			</MapContainer>
-		</Container>
+		<Box>
+			<Box position='relative'>
+				<Button color="success" variant="contained"
+					sx={{ position: 'absolute', bottom: '1.25rem', left: '1rem' }}
+				>
+					<Typography variant='h4' typography='subtitle1'>Zobacz na mapie <Map /></Typography>
+				</Button>
+			</Box>
+			<Container style={{ padding: 0 }} sx={{ display: { xs: 'none', md: 'block' } }}>
+				<MapContainer
+					center={[52.5, 19.14]}
+					zoom={isXs ? 6 : 7}
+					scrollWheelZoom={true}
+					zoomControl={false}
+					style={{ position: 'fixed', top: 0, bottom: 0, width: isSm ? '100%' : '50%' }}
+				>
+					<TileLayer
+						attribution='Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors'
+						url={`https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`}
+						maxZoom={20}
+					/>
+					<MarkerClusterGroup
+						className="marker-cluster-group"
+						polygonOptions={{ opacity: 0 }}
+						chunkedLoading>
+						{locationsFiltered.map((location, index) => (
+							<MapPin
+								key={index}
+								id={location.id}
+								latitude={location.latitude}
+								longitude={location.longitude}
+								institutionType={location.institutionType}
+							/>
+						))}
+					</MarkerClusterGroup>
+				</MapContainer>
+			</Container>
+		</Box>
 	);
 }
