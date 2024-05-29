@@ -43,7 +43,6 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                     <Stack direction='row' spacing={1}>
                                         <Chip label={props.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY'} color={mainColor} />
                                         {props.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" sx={{ display: { xs: 'none', lg: 'flex' } }} />}
-                                        {!props.isAvailable && <Chip label='Brak dostępnych miejsc' color='error' sx={{ display: { xs: 'none', lg: 'flex' } }} />}
                                     </Stack>
                                     <Typography
                                         component="span"
