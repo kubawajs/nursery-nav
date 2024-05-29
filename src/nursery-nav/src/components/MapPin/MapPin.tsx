@@ -6,7 +6,7 @@ import { useContext, useEffect } from 'react';
 import { InstitutionContext } from '../Layout/Layout';
 import { Institution, InstitutionType } from '../../shared/nursery.interface';
 import './MapPin.css';
-import { Box, Typography } from '@mui/material';
+import { Box, Chip, Typography } from '@mui/material';
 import { useNavigate, generatePath } from 'react-router-dom';
 import PathConstants from '../../shared/pathConstants';
 
@@ -34,8 +34,9 @@ export default function MapPin(props: MapPinProps) {
 	});
 
 	const position: [number, number] = [props.latitude, props.longitude];
-	const institutionType = props.institutionType === InstitutionType.NURSERY ? 'nursery' : 'childclub';
+	const institutionType = props.institutionType === InstitutionType.NURSERY ? 'żłobek' : 'klub dziecięcy';
 	const iconBackgroundColor = `map-pin-icon map-pin-icon-${institutionType}`;
+	const mainColor = props.institutionType === InstitutionType.NURSERY ? "primary" : "secondary";
 
 	return (
 		<Marker
@@ -59,7 +60,7 @@ export default function MapPin(props: MapPinProps) {
 			{selectedInstitution &&
 				<Popup>
 					<Box>
-						<Typography variant='subtitle1'>{props.institutionType}</Typography>
+						<Chip label={institutionType.toLocaleUpperCase()} color={mainColor} sx={{ marginBottom: 1 }} />
 						<Typography variant='h5'>{selectedInstitution?.name}</Typography>
 						<Typography variant='body1'>{selectedInstitution?.address.fullAddress}</Typography>
 					</Box>
