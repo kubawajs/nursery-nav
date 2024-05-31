@@ -1,12 +1,11 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
-import { Box, Button, Container, Typography } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import MapPin from '../MapPin/MapPin';
 import { useContext, useEffect, useState } from 'react';
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import './MapComponent.css';
 import { LocationResponse } from '../../shared/nursery.interface';
 import { InstitutionContext } from '../Layout/Layout';
-import { Map } from '@mui/icons-material';
 
 export default function MapComponent() {
 	const { institutionIds } = useContext(InstitutionContext);
@@ -31,13 +30,6 @@ export default function MapComponent() {
 
 	return (
 		<Box>
-			<Box position='relative'>
-				<Button color="success" variant="contained"
-					sx={{ position: 'absolute', bottom: '1.25rem', left: '1rem' }}
-				>
-					<Typography variant='h4' typography='subtitle1'>Zobacz na mapie <Map /></Typography>
-				</Button>
-			</Box>
 			<Container style={{ padding: 0 }} sx={{ display: { xs: 'none', md: 'block' } }}>
 				<MapContainer
 					center={[52.5, 19.14]}
