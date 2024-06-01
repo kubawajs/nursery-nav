@@ -10,7 +10,7 @@ export default function Navigation() {
 						<Link href="/" underline="none" color="inherit" display='flex' sx={{ flexGrow: 1 }}>
 							<FamilyRestroom sx={{ display: 'flex', mr: 1 }} />
 							<Typography
-								variant="h5"
+								variant="h4"
 								noWrap
 								sx={{
 									mr: 2,
