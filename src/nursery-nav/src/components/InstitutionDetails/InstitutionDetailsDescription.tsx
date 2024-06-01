@@ -29,24 +29,24 @@ export default function InstitutionDetailsDescription(institution: Institution) 
                     <Typography variant="h2">Informacje</Typography>
                 </Box>
                 <DescriptionBox>
-                    <Typography variant="subtitle2">Dane adresowe</Typography>
+                    <Typography variant="h6">Dane adresowe</Typography>
                     <Typography variant="body1">{institution.address.fullAddress}</Typography>
                 </DescriptionBox>
                 <DescriptionBox>
-                    <Typography variant="subtitle2">Godziny otwarcia</Typography>
+                    <Typography variant="h6">Godziny otwarcia</Typography>
                     <Typography variant="body1">{openingHours}</Typography>
                 </DescriptionBox>
                 <DescriptionBox>
-                    <Typography variant="subtitle2">Liczba dostępnych miejsc</Typography>
+                    <Typography variant="h6">Liczba dostępnych miejsc</Typography>
                     {
                         isAvailable ?
                             <Chip label={`Dostępne miejsca: ${institution.capacity - institution.kidsEnrolled} (${institution.kidsEnrolled}/${institution.capacity} zajęte)`} color="success" />
                             :
-                            <Chip label="Brak miejsc" color="error" />
+                            <Chip label="Brak wolnych miejsc" color="error" />
                     }
                 </DescriptionBox>
                 <DescriptionBox>
-                    <Typography variant="subtitle2">Zniżki</Typography>
+                    <Typography variant="h6">Zniżki</Typography>
                     {institution.discounts &&
                         <Stack
                             direction="column"
@@ -54,7 +54,8 @@ export default function InstitutionDetailsDescription(institution: Institution) 
                             alignItems="flex-start"
                         >
                             {institution.discounts.map((discount, index) =>
-                                <Chip key={index} label={discount} color={mainColor} />)}
+                                <Chip key={index} label={discount} color={mainColor} />
+                            )}
                         </Stack>
                     }
                     {

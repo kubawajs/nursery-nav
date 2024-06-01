@@ -15,9 +15,8 @@ export default function Navigation() {
 								sx={{
 									mr: 2,
 									display: 'flex',
-									fontFamily: 'monospace',
-									fontWeight: 700,
-									letterSpacing: '.1rem',
+									fontWeight: 500,
+									fontFamily: 'Mynerve, sans-serif',
 									textDecoration: 'none'
 								}}
 							>
