@@ -2,7 +2,6 @@ import { FormControlLabel, Autocomplete, TextField, debounce, RadioGroup } from 
 import Radio from '@mui/material/Radio';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-import RangeSlider from "./RangeSlider";
 import { useEffect, useState } from "react";
 import { InstitutionAutocomplete, InstitutionType } from "../../shared/nursery.interface";
 import { generatePath, useNavigate, useSearchParams } from "react-router-dom";
