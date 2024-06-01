@@ -133,11 +133,11 @@ export default function Filters() {
                     <FormControlLabel value="ALL" control={<Radio />} label="Wszystkie" />
                 </RadioGroup>
             </FormControl>
-            <RangeSlider handleChangeCommited={(_event, value) => {
+            {/* <RangeSlider handleChangeCommited={(_event, value) => {
                 value[0] && searchParams.set('priceMin', value[0].toString());
                 value[1] && searchParams.set('priceMax', value[1].toString());
                 setSearchParams(searchParams);
-            }} />
+            }} /> */}
         </>
     );
 }
