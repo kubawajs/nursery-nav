@@ -10,14 +10,13 @@ export default function Navigation() {
 						<Link href="/" underline="none" color="inherit" display='flex' sx={{ flexGrow: 1 }}>
 							<FamilyRestroom sx={{ display: 'flex', mr: 1 }} />
 							<Typography
-								variant="h5"
+								variant="h4"
 								noWrap
 								sx={{
 									mr: 2,
 									display: 'flex',
-									fontFamily: 'monospace',
-									fontWeight: 700,
-									letterSpacing: '.1rem',
+									fontWeight: 500,
+									fontFamily: 'Mynerve, sans-serif',
 									textDecoration: 'none'
 								}}
 							>

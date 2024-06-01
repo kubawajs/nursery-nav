@@ -2,7 +2,6 @@ import { FormControlLabel, Autocomplete, TextField, debounce, RadioGroup } from 
 import Radio from '@mui/material/Radio';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-import RangeSlider from "./RangeSlider";
 import { useEffect, useState } from "react";
 import { InstitutionAutocomplete, InstitutionType } from "../../shared/nursery.interface";
 import { generatePath, useNavigate, useSearchParams } from "react-router-dom";
@@ -133,11 +132,11 @@ export default function Filters() {
                     <FormControlLabel value="ALL" control={<Radio />} label="Wszystkie" />
                 </RadioGroup>
             </FormControl>
-            <RangeSlider handleChangeCommited={(_event, value) => {
+            {/* <RangeSlider handleChangeCommited={(_event, value) => {
                 value[0] && searchParams.set('priceMin', value[0].toString());
                 value[1] && searchParams.set('priceMax', value[1].toString());
                 setSearchParams(searchParams);
-            }} />
+            }} /> */}
         </>
     );
 }

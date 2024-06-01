@@ -55,7 +55,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                         {!props.basicPricePerMonth && !props.basicPricePerHour && <Typography variant='overline'>Brak danych</Typography>}
                                     </Typography>
                                 </Box>
-                                <Typography variant="h2" typography="h5" paddingBottom={2}>
+                                <Typography variant="h2" typography="h4" paddingBottom={2}>
                                     {props.name}
                                 </Typography>
                                 <Box display='flex' justifyContent='space-between'>

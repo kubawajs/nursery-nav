@@ -58,7 +58,8 @@ export default function InstitutionDetailsHeader(institution: Institution) {
                         direction="row"
                         justifyContent='center'
                         alignItems='center'
-                        gap={2}
+                        textAlign='center'
+                        gap={{ xs: 1, sm: 2, md: 3 }}
                     >
                         {PriceWithLabel('miesiąc', Payments, mainColor, institution.basicPricePerMonth)}
                         {PriceWithLabel('godzina', CurrencyExchange, mainColor, institution.basicPricePerHour)}
