@@ -1,10 +1,15 @@
-import { Box, CircularProgress, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
+import { Box, Button, CircularProgress, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
 import { ReactNode, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { ListComponentItem } from './ListComponentItem';
-import { SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
+import { Map, SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
 import { InstitutionListItem } from '../../shared/nursery.interface';
 import { InstitutionContext } from '../Layout/Layout';
 import { useSearchParams } from 'react-router-dom';
+import {
+	Link as RouterLink,
+	generatePath,
+} from 'react-router-dom';
+import PathConstants from '../../shared/pathConstants';
 
 export default function ListComponent() {
 	const { setInstitutionIds, setSelectedInstitution } = useContext(InstitutionContext);
@@ -75,6 +80,11 @@ export default function ListComponent() {
 
 	return (
 		<Box>
+			<Box display={{ xs: 'flex', md: 'none' }} pt={3} pb={3} justifyContent='center' sx={{ backgroundColor: 'GrayText' }}>
+				<Button component={RouterLink} to={generatePath(PathConstants.MAP)} variant='contained' color='success'>
+					<Map /> Zobacz na mapie
+				</Button>
+			</Box>
 			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
 				{institutions && (
 					<Typography variant='body2' color="text.secondary" gutterBottom>

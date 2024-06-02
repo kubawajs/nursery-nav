@@ -4,6 +4,7 @@ import PathConstants from './shared/pathConstants';
 import React from 'react';
 import AboutPage from './pages/AboutPage';
 import PageNotFoundPage from './pages/PageNotFoundPage';
+import MapPage from './pages/MapPage';
 
 const ListPage = React.lazy(() => import("./pages/ListPage"));
 const InstitutionDetailsPage = React.lazy(() => import("./pages/InstitutionDetailsPage"));
@@ -20,6 +21,10 @@ const routes = [
   {
     path: PathConstants.ABOUT,
     element: <AboutPage />
+  },
+  {
+    path: PathConstants.MAP,
+    element: <MapPage />
   },
   {
     path: '*',

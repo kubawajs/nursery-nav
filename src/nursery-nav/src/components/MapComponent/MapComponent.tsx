@@ -1,11 +1,16 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
-import { Box, Container } from '@mui/material';
+import { Box, Button, Container } from '@mui/material';
 import MapPin from '../MapPin/MapPin';
 import { useContext, useEffect, useState } from 'react';
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import './MapComponent.css';
 import { LocationResponse } from '../../shared/nursery.interface';
 import { InstitutionContext } from '../Layout/Layout';
+import {
+	Link as RouterLink,
+	generatePath,
+} from 'react-router-dom';
+import PathConstants from '../../shared/pathConstants';
 
 export default function MapComponent() {
 	const { institutionIds } = useContext(InstitutionContext);
@@ -30,7 +35,12 @@ export default function MapComponent() {
 
 	return (
 		<Box>
-			<Container style={{ padding: 0 }} sx={{ display: { xs: 'none', md: 'block' } }}>
+			<Box display={{ xs: 'block', md: 'none' }} zIndex='100' position='fixed' p={1}>
+				<Button component={RouterLink} to={generatePath(PathConstants.HOME)} variant='contained'>
+					Powrót
+				</Button>
+			</Box>
+			<Container style={{ padding: 0 }}>
 				<MapContainer
 					center={[52.5, 19.14]}
 					zoom={isXs ? 6 : 7}
