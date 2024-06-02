@@ -34,7 +34,8 @@ export default function MapPin(props: MapPinProps) {
 	});
 
 	const position: [number, number] = [props.latitude, props.longitude];
-	const institutionType = props.institutionType === InstitutionType.NURSERY ? 'żłobek' : 'klub dziecięcy';
+	const institutionType = props.institutionType === InstitutionType.NURSERY ? 'nursery' : 'childclub';
+	const institutionLabel = props.institutionType === InstitutionType.NURSERY ? 'żłobek' : 'klub dziecięcy';
 	const iconBackgroundColor = `map-pin-icon map-pin-icon-${institutionType}`;
 	const mainColor = props.institutionType === InstitutionType.NURSERY ? "primary" : "secondary";
 
@@ -60,7 +61,7 @@ export default function MapPin(props: MapPinProps) {
 			{selectedInstitution &&
 				<Popup>
 					<Box>
-						<Chip label={institutionType.toLocaleUpperCase()} color={mainColor} sx={{ marginBottom: 1 }} />
+						<Chip label={institutionLabel.toLocaleUpperCase()} color={mainColor} sx={{ marginBottom: 1 }} />
 						<Typography variant='h5'>{selectedInstitution?.name}</Typography>
 						<Typography variant='body1'>{selectedInstitution?.address.fullAddress}</Typography>
 					</Box>

@@ -1,8 +1,9 @@
-import { Box, Paper, Typography, Chip, Button, Stack } from "@mui/material";
+import { Box, Paper, Typography, Chip, Button, Stack, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
 import { Institution, InstitutionType } from "../../shared/nursery.interface";
 import styled from "@emotion/styled";
 import { theme } from "../../shared/theme";
 import InstitutionDetailsLinks from "./InstitutionDetailsLinks";
+import { useState } from "react";
 
 const DescriptionBox = styled(Box)(() => ({
     paddingBottom: theme.spacing(2),
@@ -21,6 +22,14 @@ export default function InstitutionDetailsDescription(institution: Institution) 
     const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
     const openingHours = institution.openingHours.split(': ')[1] ?? institution.openingHours;
     const isAvailable = institution.capacity - institution.kidsEnrolled > 0;
+
+    const [discountText, setDiscountText] = useState<string>('');
+    const [showDiscountDialog, setShowDiscountDialog] = useState<boolean>(false);
+
+    const handleDiscountDialog = (discount: string) => {
+        setDiscountText(discount);
+        setShowDiscountDialog(true);
+    }
 
     return (
         <Box p={2}>
@@ -54,8 +63,21 @@ export default function InstitutionDetailsDescription(institution: Institution) 
                             alignItems="flex-start"
                         >
                             {institution.discounts.map((discount, index) =>
-                                <Chip key={index} label={discount} color={mainColor} />
+                                <Chip key={index} label={discount} color={mainColor} onClick={() => handleDiscountDialog(discount)} />
                             )}
+                            <Dialog open={showDiscountDialog}>
+                                <DialogTitle variant="h3">
+                                    Opis zniżki
+                                </DialogTitle>
+                                <DialogContent>
+                                    <DialogContentText>
+                                        {discountText}
+                                    </DialogContentText>
+                                    <DialogActions>
+                                        <Button onClick={() => setShowDiscountDialog(false)}>Zamknij</Button>
+                                    </DialogActions>
+                                </DialogContent>
+                            </Dialog>
                         </Stack>
                     }
                     {
@@ -71,3 +93,4 @@ export default function InstitutionDetailsDescription(institution: Institution) 
         </Box>
     );
 }
+

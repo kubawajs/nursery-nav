@@ -1,11 +1,11 @@
 import { Grid } from "@mui/material";
-import ListComponent from "../components/ListComponent/ListComponent";
-import MapComponent from "../components/MapComponent/MapComponent";
-import FiltersBar from "../components/Filters/FiltersBar";
 import { Helmet } from "react-helmet-async";
+import FiltersBar from "../components/Filters/FiltersBar";
+import MapComponent from "../components/MapComponent/MapComponent";
+import ListComponent from "../components/ListComponent/ListComponent";
 
-export default function ListPage() {
-    const title = `Najlepsza Wyszukiwarka Żłobków i Klubów Dziecięcych | ${process.env.REACT_APP_NAME}`;
+export default function MapPage() {
+    const title = `Wyszukiwarka Żłobków i Klubów Dziecięcych - widok mapy | ${process.env.REACT_APP_NAME}`;
     const description = "Znajdź idealny żłobek dla dziecka w najlepszej cenie PLN na miesiąc. Sprawdź dostępność miejsc i dowiedz się, gdzie ich brak. Poznaj nazwy żłobków w okolicy.";
     const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
 
@@ -26,10 +26,10 @@ export default function ListPage() {
             <Grid item xs={12} zIndex={19}>
                 <FiltersBar />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
                 <ListComponent />
             </Grid>
-            <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
+            <Grid item xs={12} md={6}>
                 <MapComponent />
             </Grid>
         </>
