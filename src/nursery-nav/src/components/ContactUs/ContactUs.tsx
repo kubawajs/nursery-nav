@@ -17,7 +17,7 @@ export default function ContactUs() {
     return (
         contactMail ? <>
             <Fab color="secondary" aria-label="Skontaktuj się z nami"
-                sx={{ position: 'absolute', right: '0.5rem', bottom: '0.5rem', color: '#fff' }}
+                sx={{ position: 'fixed', right: '0.5rem', bottom: '0.5rem', color: '#fff' }}
                 onClick={handleClickOpen}>
                 <ChatBubble />
             </Fab>
