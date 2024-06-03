@@ -47,6 +47,7 @@ REACT_APP_API_URL=
 REACT_APP_NAME=
 REACT_APP_CONTACT_MAIL=
 REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID=
+REACT_APP_DATA_SOURCE_UPDATE_DATE=
 ```
 
 * REACT_APP_GEOAPIFY_API_KEY - key to enable the map. Can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project)
@@ -54,6 +55,7 @@ REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID=
 * REACT_APP_NAME - custom name of your application. Is displayed in the header and in titles across the website
 * REACT_APP_CONTACT_MAIL - email used in contact dialog on map view
 * REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID - Google Analytics 4 tracking ID
+* REACT_APP_DATA_SOURCE_UPDATE_DATE - last data update date, manually entered (displayed in tooltips)
 
 #### Running frontend
 
@@ -174,7 +176,7 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 * [x] Display hour price when monthly not provided
 * [ ] Update README
 * [x] Add 404 page
-* [ ] Add map to mobile view
+* [x] Add map to mobile view
 
 #### API
 
