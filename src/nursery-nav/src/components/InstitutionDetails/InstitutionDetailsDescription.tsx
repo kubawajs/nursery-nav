@@ -1,9 +1,10 @@
-import { Box, Paper, Typography, Chip, Button, Stack, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Tooltip } from "@mui/material";
+import { Box, Paper, Typography, Chip, Button, Stack, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
 import { Institution, InstitutionType } from "../../shared/nursery.interface";
 import styled from "@emotion/styled";
 import { theme } from "../../shared/theme";
 import InstitutionDetailsLinks from "./InstitutionDetailsLinks";
 import { useState } from "react";
+import { HelpOutline } from "@mui/icons-material";
 
 const DescriptionBox = styled(Box)(() => ({
     paddingBottom: theme.spacing(2),
@@ -25,6 +26,7 @@ export default function InstitutionDetailsDescription(institution: Institution) 
 
     const [discountText, setDiscountText] = useState<string>('');
     const [showDiscountDialog, setShowDiscountDialog] = useState<boolean>(false);
+    const [availabilityDialog, setAvailabilityDialog] = useState<boolean>(false);
 
     const handleDiscountDialog = (discount: string) => {
         setDiscountText(discount);
@@ -47,14 +49,25 @@ export default function InstitutionDetailsDescription(institution: Institution) 
                 </DescriptionBox>
                 <DescriptionBox>
                     <Typography variant="h6">Liczba dostępnych miejsc</Typography>
-                    <Tooltip title={`Dane aktualne na dzień ${process.env.REACT_APP_DATA_SOURCE_UPDATE_DATE}`} arrow>
-                        {
-                            isAvailable ?
-                                <Chip label={`Dostępne miejsca: ${institution.capacity - institution.kidsEnrolled} (${institution.kidsEnrolled}/${institution.capacity} zajęte)`} color="success" />
-                                :
-                                <Chip label="Brak wolnych miejsc" color="error" />
-                        }
-                    </Tooltip>
+                    {
+                        isAvailable ?
+                            <Chip label={`Dostępne miejsca: ${institution.capacity - institution.kidsEnrolled} (${institution.kidsEnrolled}/${institution.capacity} zajęte)`} icon={<HelpOutline />} color="success" onClick={() => setAvailabilityDialog(true)} />
+                            :
+                            <Chip label="Brak wolnych miejsc" icon={<HelpOutline />} color="error" clickable={true} onClick={() => setAvailabilityDialog(true)} />
+                    }
+                    <Dialog open={availabilityDialog}>
+                        <DialogTitle variant="h3">
+                            Aktualizacja danych
+                        </DialogTitle>
+                        <DialogContent>
+                            <DialogContentText>
+                                Dane dotyczące dostępności żłobków i klubów dziecięcych wyświetlane na stronie mogą nie być aktualne, gdyż są odświeżane cyklicznie. Ostatnia aktualizacja: {process.env.REACT_APP_DATA_SOURCE_UPDATE_DATE}
+                            </DialogContentText>
+                            <DialogActions>
+                                <Button onClick={() => setAvailabilityDialog(false)}>Zamknij</Button>
+                            </DialogActions>
+                        </DialogContent>
+                    </Dialog>
                 </DescriptionBox>
                 <DescriptionBox>
                     <Typography variant="h6">Zniżki</Typography>
