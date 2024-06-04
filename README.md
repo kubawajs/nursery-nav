@@ -171,6 +171,8 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 * [x] Add Google Analytics
 * [ ] Comparison view
 * [ ] Performance upgrades
+* [ ] Quick filters with cities
+* [ ] Direct URLs to filtered cities
 * [x] Feedback form v1 (report data error, suggest change)
 * [x] *About* page content
 * [x] Display hour price when monthly not provided
@@ -206,6 +208,7 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 * [x] City dropdown is not filtered based on voivodeship
 * [x] Voivodeship is not automatically selected on city dropdown change
 * [ ] If filters selected on list view, map pin is not displayed on details view when redirected from autocomplete
+* [x] Map does not focus on pin when visiting institution details page from direct link
 
 ## Data source
 
