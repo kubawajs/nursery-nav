@@ -30,7 +30,12 @@ export default function MapComponent() {
 	}, []);
 
 	useEffect(() => {
-		setLocationsFiltered(locations.filter((location) => institutionIds.includes(location.id)));
+		if (institutionIds.length === 0) {
+			setLocationsFiltered(locations);
+		}
+		else {
+			setLocationsFiltered(locations.filter((location) => institutionIds.includes(location.id)));
+		}
 	}, [institutionIds, locations]);
 
 	return (
