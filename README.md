@@ -9,7 +9,7 @@
 
 NurseryNav simplifies the search for nearby nursery schools by providing an easy-to-use map interface to help you find the perfect childcare option for your little ones.
 
-**Live URL:** [https://nursery-nav.vercel.app/](https://nursery-nav.vercel.app/)
+**Live URL:** [https://znajdzzlobek.pl/](https://znajdzzlobek.pl/)
 
 **Backend API DEMO:** [https://nursery-nav-api.vercel.app/](https://nursery-nav-api.vercel.app/api/)
 
@@ -101,11 +101,25 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 #### Map view
 
-![Map view](./img/map-view.png)
+##### Desktop
+
+![Map view desktop](./img/map-view.png)
+
+##### Mobile
+
+![List view mobile](./img/list-view-mobile.png)
+
+![Map view mobile](./img/map-view-mobile.png)
 
 #### Details view
 
-![Details view](./img/details-view.png)
+##### Desktop
+
+![Details view desktop](./img/details-view.png)
+
+##### Mobile
+
+![Details view mobile](./img/details-view-mobile.png)
 
 #### Frontend
 
@@ -163,7 +177,7 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 ### Phase 3
 
 * [x] Go-live
-* [ ] Update README
+* [x] Update README
 
 #### Frontend
 
@@ -182,11 +196,8 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 #### API
 
-* [ ] Convert data source to MongoDB
 * [x] Rate limiting
 * [x] Helmet
-* [ ] CSV import
-* [ ] Fully automate data update process
 * [ ] Update README
 
 ### Phase 4
@@ -199,6 +210,9 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 #### Backend
 
 * [ ] Profile management
+* [ ] Convert data source to MongoDB
+* [ ] CSV import
+* [ ] Fully automate data update process
 
 ### Known bugs
 
