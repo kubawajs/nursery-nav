@@ -40,7 +40,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                         <CardContent sx={{ flex: '1 0 auto', paddingRight: '0' }}>
                             <Box>
                                 <Box display='flex' marginBottom={1} sx={{ justifyContent: 'space-between' }}>
-                                    <Stack direction='row' spacing={1}>
+                                    <Stack direction='row' spacing={1} alignItems='center'>
                                         <Chip label={props.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY'} color={mainColor} />
                                         {props.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" sx={{ display: { xs: 'none', lg: 'flex' } }} />}
                                     </Stack>
@@ -49,13 +49,14 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                         variant="subtitle1"
                                         padding={0.25}
                                         fontWeight={700}
+                                        textAlign={'end'}
                                     >
                                         {props.basicPricePerHour > 0 && <>{props.basicPricePerHour.toFixed(2)} PLN / godzina</>}
                                         {props.basicPricePerMonth > 0 && <>{props.basicPricePerMonth.toFixed(2)} PLN / miesiąc</>}
                                         {!props.basicPricePerMonth && !props.basicPricePerHour && <Typography variant='overline'>Brak danych</Typography>}
                                     </Typography>
                                 </Box>
-                                <Typography variant="h2" typography="h4" paddingBottom={2}>
+                                <Typography variant="h2" typography={{ xs: 'h5', md: 'h4' }} paddingBottom={2}>
                                     {props.name}
                                 </Typography>
                                 <Box display='flex' justifyContent='space-between'>
