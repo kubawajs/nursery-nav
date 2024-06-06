@@ -80,7 +80,7 @@ export default function ListComponent() {
 
 	return (
 		<Box>
-			<Box display={{ xs: 'flex', md: 'none' }} pt={3} pb={3} justifyContent='center' sx={{ backgroundColor: 'GrayText' }}>
+			<Box display={{ xs: 'flex', md: 'none' }} pt={3} pb={3} justifyContent='center' sx={{ backgroundImage: `url(${"/images/map-mobile-background.png"})` }}>
 				<Button component={RouterLink} to={generatePath(PathConstants.MAP)} variant='contained' color='success'>
 					<Map /> Zobacz na mapie
 				</Button>
