@@ -55,7 +55,7 @@ export default function Comparison({ ids }: ComparisonProps) {
     return (
         <Box p={2} display='flex'>
             <TableContainer component={Paper}>
-                <Table style={{ tableLayout: 'fixed' }}>
+                <Table style={{ tableLayout: 'auto' }}>
                     <TableHead>
                         <TableRow>
                             <TableCell />
