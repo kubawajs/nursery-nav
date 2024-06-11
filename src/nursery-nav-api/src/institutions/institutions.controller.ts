@@ -58,7 +58,7 @@ export class InstitutionsController {
     @ApiQuery({ name: 'id', required: true, type: [Number], isArray: true })
     @ApiResponse({ status: 200, description: 'Returns a list of institutions by ids. Maximum 5 ids.', type: [InstitutionListItemDto] })
     @ApiTags('nursery-nav')
-    async getByIds(@Query('id') ids: Number[]): Promise<InstitutionListItemDto[]> {
+    async getByIds(@Query('id') ids: Number[]): Promise<InstitutionDto[]> {
         if (ids.length > 5) {
             return Promise.reject('Maximum 5 ids can be passed');
         }
