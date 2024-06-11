@@ -53,6 +53,18 @@ export class InstitutionsController {
         return await this.institutionsService.getById(id);
     }
 
+    @Get('details')
+    @HttpCode(200)
+    @ApiQuery({ name: 'id', required: true, type: [Number], isArray: true })
+    @ApiResponse({ status: 200, description: 'Returns a list of institutions by ids. Maximum 5 ids.', type: [InstitutionListItemDto] })
+    @ApiTags('nursery-nav')
+    async getByIds(@Query('id') ids: Number[]): Promise<InstitutionDto[]> {
+        if (ids.length > 5) {
+            return Promise.reject('Maximum 5 ids can be passed');
+        }
+        return await this.institutionsService.getByIds(ids.map(id => Number(id)));
+    }
+
     @Get('autocomplete')
     @HttpCode(200)
     @ApiQuery({ name: 'search', required: true, type: String })

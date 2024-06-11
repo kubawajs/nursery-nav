@@ -95,6 +95,24 @@ export class InstitutionsDocumentService implements IInstitutionsService {
         return Promise.reject(`Institution with id ${id} not found`);
     }
 
+    async getByIds(ids: number[]): Promise<InstitutionDto[]> {
+        const CACHE_KEY = 'InstitutionsService_getByIds';
+        const cacheKey = `${CACHE_KEY}_${ids.join('_')}`;
+        const cacheData = await this.cacheManager.get(cacheKey) as InstitutionDto[];
+        if (cacheData) {
+            console.log('Cache hit');
+            return Promise.resolve(cacheData);
+        }
+
+        const institutions = this.institutions.filter((institution) => ids.includes(institution.id));
+        if (institutions.length === 0) {
+            return Promise.reject('Institutions not found');
+        }
+
+        await this.cacheManager.set(cacheKey, institutions);
+        return Promise.resolve(institutions);
+    }
+
     async getInstitutionsAutocomplete(searchQuery: string): Promise<InstitutionAutocompleteDto[]> {
         const CACHE_KEY = 'InstitutionsService_getInstitutionsAutocomplete';
         const cacheKey = `${CACHE_KEY}_${searchQuery}`;
