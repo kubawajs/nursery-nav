@@ -1,4 +1,4 @@
-import { Controller, Get, HttpCode, Inject, Param, ParseArrayPipe, Query, UseInterceptors } from '@nestjs/common';
+import { Controller, Get, HttpCode, Inject, Param, Query, UseInterceptors } from '@nestjs/common';
 import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
