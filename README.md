@@ -184,7 +184,6 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 * [x] Add sitemap
 * [x] Add Google Analytics
 * [x] Comparison view
-* [ ] Comparison view - mobile
 * [ ] Select items to compare on list view
 * [ ] Quick filters with cities
 * [ ] Direct URLs to filtered cities
