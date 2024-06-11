@@ -8,6 +8,7 @@ import { SortParams } from "./params/sortParams";
 export interface IInstitutionsService {
     findAll(page: number, size: number, sort: SortParams, city?: string, voivodeship?: string, institutionType?: InstitutionType[], priceMin?: number, priceMax?: number): Promise<PaginatedResult<InstitutionListItemDto>>;
     getById(id: number): Promise<InstitutionDto>;
+    getByIds(ids: number[]): Promise<InstitutionListItemDto[]>;
     getInstitutionsAutocomplete(searchQuery: string): Promise<InstitutionAutocompleteDto[]>;
 }
 export const IInstitutionsService = Symbol('IInstitutionsService');

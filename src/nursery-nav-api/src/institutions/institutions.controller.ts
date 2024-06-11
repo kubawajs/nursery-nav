@@ -1,4 +1,4 @@
-import { Controller, Get, HttpCode, Inject, Param, Query, UseInterceptors } from '@nestjs/common';
+import { Controller, Get, HttpCode, Inject, Param, ParseArrayPipe, Query, UseInterceptors } from '@nestjs/common';
 import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
@@ -51,6 +51,18 @@ export class InstitutionsController {
             return Promise.reject('Id parameter must be a correct number');
         }
         return await this.institutionsService.getById(id);
+    }
+
+    @Get('details')
+    @HttpCode(200)
+    @ApiQuery({ name: 'id', required: true, type: [Number], isArray: true })
+    @ApiResponse({ status: 200, description: 'Returns a list of institutions by ids. Maximum 5 ids.', type: [InstitutionListItemDto] })
+    @ApiTags('nursery-nav')
+    async getByIds(@Query('id') ids: Number[]): Promise<InstitutionListItemDto[]> {
+        if (ids.length > 5) {
+            return Promise.reject('Maximum 5 ids can be passed');
+        }
+        return await this.institutionsService.getByIds(ids.map(id => Number(id)));
     }
 
     @Get('autocomplete')
