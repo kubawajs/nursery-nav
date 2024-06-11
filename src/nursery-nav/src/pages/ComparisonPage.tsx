@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import { Helmet } from "react-helmet-async";
 import Comparison from "../components/Comparison/Comparison";
-import { useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 
 export default function ComparisonPage() {
@@ -9,7 +9,7 @@ export default function ComparisonPage() {
     const description = "Porównaj wybrane żłobki i kluby dziecięce. Sprawdź dostępność miejsc, ceny oraz opinie o placówkach.";
     const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
 
-    const { ids } = useParams<{ ids: string }>();
+    const ids = useSearchParams()[0].get("ids");
     const idsArr: string[] = ids ? ids.split(",") : [];
     const institutionIds: number[] = idsArr.map(id => parseInt(id));
 
