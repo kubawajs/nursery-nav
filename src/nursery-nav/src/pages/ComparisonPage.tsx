@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import { Helmet } from "react-helmet-async";
 import Comparison from "../components/Comparison/Comparison";
 import { useParams } from "react-router-dom";
@@ -12,7 +12,9 @@ export default function ComparisonPage() {
     const { ids } = useParams<{ ids: string }>();
     const idsArr: string[] = ids ? ids.split(",") : [];
     const institutionIds: number[] = idsArr.map(id => parseInt(id));
-    console.log(institutionIds);
+
+    const displayError = !institutionIds || institutionIds.length <= 0 || institutionIds.length > 5;
+    const heading = !institutionIds || institutionIds.length <= 0 ? "Brak wybranych placówek do porównania" : institutionIds.length > 5 ? "Możesz porównać maksymalnie 5 placówek" : "";
 
     return (
         <>
@@ -29,14 +31,22 @@ export default function ComparisonPage() {
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <Grid item xs={12}>
-                <Box display='flex' justifyContent='center' p={2}>
-                    <Typography variant="h1">
-                        {institutionIds && institutionIds.length === 0 && <>Brak wybranych placówek do porównania</>}
-                        {institutionIds && institutionIds.length > 5 && <>Możesz porównać maksymalnie 5 placówek</>}
-                        {institutionIds && institutionIds.length > 0 && institutionIds.length <= 5 && <>Porównanie placówek</>}
-                    </Typography>
-                </Box>
-                {institutionIds && institutionIds.length > 0 && institutionIds.length <= 5 && <Comparison ids={institutionIds} />}
+                {displayError &&
+                    <Container fixed>
+                        <Stack direction="column" justifyContent="center" alignItems="center" height="80vh">
+                            <Typography variant="h1">{heading}</Typography>
+                        </Stack>
+                    </Container>
+                }
+
+                {!displayError &&
+                    <>
+                        <Box display='flex' justifyContent='center' pt={2}>
+                            <Typography variant="h1">Porównanie placówek</Typography>
+                        </Box>
+                        <Comparison ids={institutionIds} />
+                    </>
+                }
             </Grid>
         </>
     );
