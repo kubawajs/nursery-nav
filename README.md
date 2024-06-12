@@ -14,7 +14,7 @@ NurseryNav simplifies the search for nearby nursery schools by providing an easy
 **Backend API DEMO:** [https://nursery-nav-api.vercel.app/](https://nursery-nav-api.vercel.app/api/)
 
 ---
-This project is part of [100 commitow challenge](https://100commitow.pl/). It helps me learn front-end technologies like React, Typescript and NestJS.
+This project is part of [100 commitow challenge](https://100commitow.pl/). It helps me learn front-end technologies like React, Typescript, and NestJS.
 
 ## Stack
 
@@ -39,7 +39,7 @@ This project is part of [100 commitow challenge](https://100commitow.pl/). It he
 
 #### Configuration
 
-Add `.env` file in the folder root with keys:
+Add the `.env` file in the folder root with the keys:
 
 ```
 REACT_APP_GEOAPIFY_API_KEY=
@@ -50,12 +50,14 @@ REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID=
 REACT_APP_DATA_SOURCE_UPDATE_DATE=
 ```
 
-* REACT_APP_GEOAPIFY_API_KEY - key to enable the map. Can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project)
-* REACT_APP_API_URL - URL to the API instance, e.g. on local it can be `http://localhost:3000`
-* REACT_APP_NAME - custom name of your application. Is displayed in the header and in titles across the website
-* REACT_APP_CONTACT_MAIL - email used in contact dialog on map view
-* REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID - Google Analytics 4 tracking ID
-* REACT_APP_DATA_SOURCE_UPDATE_DATE - last data update date, manually entered (displayed in tooltips)
+| Parameter | Type | Description |
+| --- | --- | --- |
+| **REACT_APP_GEOAPIFY_API_KEY** | string | Key to enable the map. Can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project) |
+| **REACT_APP_API_URL** | string | URL to the API instance, e.g. on local it can be `http://localhost:3000` |
+| **REACT_APP_NAME** | string | The custom name of your application. It is displayed in the header and titles across the website |
+| **REACT_APP_CONTACT_MAIL** | string | Email used in contact dialog on a map view |
+| **REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID** | string | Google Analytics 4 tracking ID |
+| **REACT_APP_DATA_SOURCE_UPDATE_DATE** | date | Last data update date, manually entered (displayed in tooltips) |
 
 #### Running frontend
 
@@ -68,7 +70,7 @@ Check `./data/RZ-instytucje-enriched.json`
 
 #### Configuration
 
-Add `.env` file in the folder root with keys:
+Add the `.env` file in the folder root with the keys:
 
 ```
 FRONTEND_URL=
@@ -77,10 +79,12 @@ THROTTLE_TTL=
 THROTTLE_LIMIT=
 ```
 
-* FRONTEND_URL - provide URL to your frontend instance, e.g. `http://localhost:3001` when running on local. This step is not required, but enables frontend application origin to access backend API - app has CORS enabled by default.
-* CACHE_TTL - cache expiration TTL in miliseconds
-* THROTTLE_TTL - throttle time limit in miliseconds
-* THROTTLE_LIMIT - calls limit within the TTL
+| Parameter | Type | Description |
+| --- | --- | --- |
+| **FRONTEND_URL** | string | Provide URL to your frontend instance, e.g. `http://localhost:3001` when running on local. This step is not required, but enables the frontend application origin to access the backend API - the app has CORS enabled by default. |
+| **CACHE_TTL** | number | Cache expiration TTL in milliseconds. |
+| **THROTTLE_TTL** | number | Throttle time limit in milliseconds. |
+| **THROTTLE_LIMIT** | number | Calls limit within the TTL. |
 
 #### Running backend
 Go to `./src/nursery-nav-api` and run `npm run start:dev`.
@@ -101,42 +105,36 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 #### Map view
 
-##### Desktop
-
-![Map view desktop](./img/map-view.png)
-
-##### Mobile
-
-![List view mobile](./img/list-view-mobile.png)
-
-![Map view mobile](./img/map-view-mobile.png)
+| Desktop | Mobile |
+| --- | --- |
+| ![Map view desktop](./img/map-view.png) | ![List view mobile](./img/list-view-mobile.png) ![Map view mobile](./img/map-view-mobile.png) |
 
 #### Details view
 
-##### Desktop
+| Desktop | Mobile |
+| --- | --- |
+| ![Details view desktop](./img/details-view.png) | ![Details view mobile](./img/details-view-mobile.png) |
 
-![Details view desktop](./img/details-view.png)
-
-##### Mobile
-
-![Details view mobile](./img/details-view-mobile.png)
+### Phase 1
 
 #### Frontend
 
-* [x] Static data source
-* [x] Map
-* [x] Pins on map
-* [x] Institution details view
-* [x] Search
-* [x] Display institution details on pin click
-* [x] Basic component styling
-* [x] Group pins on the map
-* [x] SEO
-* [x] Sorting
-* [x] Filtering
-* [x] Direct URLs to each institution
-* [x] CICD
-* [x] Live URL
+| Feature | Status |
+| --- | --- |
+| Static data source | ✅ |
+| Map | ✅ |
+| Pins on map | ✅ |
+| Institution details view | ✅ |
+| Search | ✅ |
+| Display institution details on the pin click | ✅ |
+| Basic component styling | ✅ |
+| Group pins on the map | ✅ |
+| SEO | ✅ |
+| Sorting | ✅ |
+| Filtering | ✅ |
+| Direct URLs to each institution | ✅ |
+| CICD | ✅ |
+| Live URL | ✅ |
 
 ### Phase 2
 
@@ -144,35 +142,39 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 #### Frontend
 
-* [x] Connection to the API
-* [x] Infinite scroll
-* [x] Sorting with API
-* [x] Connect map with API
-* [x] Filtering with API
-* [x] Direct URLs to filtered results by query params
-* [x] Filtering map locations
-* [x] Autocomplete for institution name
-* [x] Caching
-* [x] About page
-* [x] SEO
+| Feature | Status |
+| --- | --- |
+| Connection to the API | ✅ |
+| Infinite scroll | ✅ |
+| Sorting with API | ✅ |
+| Connect map with API | ✅ |
+| Filtering with API | ✅ |
+| Direct URLs to filtered results by query params | ✅ |
+| Filtering map locations | ✅ |
+| Autocomplete for institution name | ✅ |
+| Caching | ✅ |
+| About page | ✅ |
+| SEO improvements | ✅ |
 
 #### API
 
-* [x] API project
-* [x] Swagger `/api`
-* [x] GET all institutions
-* [x] GET institution details
-* [x] GET locations
-* [x] Sorting
-* [x] Autocomplete endpoint
-* [x] Cities/voivodeships endpoint
-* [x] Filtering
-* [x] Pagination
-* [x] CICD
-* [x] Live URL
-* [x] CORS
-* [x] Add real ID to the data source
-* [x] Data update with new file
+| Feature | Status |
+| --- | --- |
+| API project | ✅ |
+| Swagger `/api` | ✅ |
+| GET all institutions | ✅ |
+| GET institution details | ✅ |
+| GET locations | ✅ |
+| Sorting | ✅ |
+| Autocomplete endpoint | ✅ |
+| Cities/voivodeships endpoint | ✅ |
+| Filtering | ✅ |
+| Pagination | ✅ |
+| CICD | ✅ |
+| Live URL | ✅ |
+| CORS | ✅ |
+| Add real ID to the data source | ✅ |
+| Data update with new file | ✅ |
 
 ### Phase 3
 
@@ -181,26 +183,28 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 #### Frontend
 
-* [x] Add sitemap
-* [x] Add Google Analytics
-* [x] Comparison view
-* [ ] Select items to compare on list view
-* [ ] Quick filters with cities
-* [ ] Direct URLs to filtered cities
-* [x] Feedback form v1 (report data error, suggest change)
-* [x] *About* page content
-* [x] Display hour price when monthly not provided
-* [ ] Update README
-* [x] Add 404 page
-* [x] Add map to mobile view
+| Feature | Status |
+| --- | --- |
+| Add sitemap | ✅ |
+| Add Google Analytics | ✅ |
+| Comparison view | ✅ |
+| Select items to compare on the list view | |
+| Quick filters with cities | |
+| Direct URLs to filtered cities | |
+| Feedback form v1 (report data error, suggest change) | ✅ |
+| *About* page content | ✅ |
+| Display hour price when monthly not provided | ✅ |
+| Add 404 page | ✅ |
+| Add a map to mobile view | ✅ |
 
 #### API
 
-* [x] Rate limiting
-* [x] Helmet
-* [ ] Update README
+| Feature | Status |
+| --- | --- |
+| Rate limiting | ✅ |
+| Helmet | ✅ |
 
-### Phase 4
+### [Plan] Phase 4
 
 #### Frontend
 
@@ -217,13 +221,13 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 ### Known bugs
 
-* [x] "Back" button on institution details does not remember parameters of previous page
+* [x] The "Powrót" button on institution details does not remember the parameters of the previous page
 * [x] City and voivodeship filters not selected based on query parameter
-* [x] Price is not visible in mobile view when "Brak wolnych miejsc" chip is displayed
+* [x] Price is not visible in mobile view when the "Brak wolnych miejsc" chip is displayed
 * [x] City dropdown is not filtered based on voivodeship
 * [x] Voivodeship is not automatically selected on city dropdown change
-* [ ] If filters selected on list view, map pin is not displayed on details view when redirected from autocomplete
-* [x] Map does not focus on pin when visiting institution details page from direct link
+* [ ] If filters are selected on the list view, the map pin is not displayed on the details view when redirected from autocomplete
+* [x] Map does not focus on the pin when visiting the institution details page from a direct link
 
 ## Data source
 
