@@ -50,14 +50,14 @@ REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID=
 REACT_APP_DATA_SOURCE_UPDATE_DATE=
 ```
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| **REACT_APP_GEOAPIFY_API_KEY** | string | Key to enable the map. Can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project) |
-| **REACT_APP_API_URL** | string | URL to the API instance, e.g. on local it can be `http://localhost:3000` |
-| **REACT_APP_NAME** | string | The custom name of your application. It is displayed in the header and titles across the website |
-| **REACT_APP_CONTACT_MAIL** | string | Email used in contact dialog on a map view |
-| **REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID** | string | Google Analytics 4 tracking ID |
-| **REACT_APP_DATA_SOURCE_UPDATE_DATE** | date | Last data update date, manually entered (displayed in tooltips) |
+| Parameter                                  | Type   | Description                                                                                                                                                                        |
+| ------------------------------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **REACT_APP_GEOAPIFY_API_KEY**             | string | Key to enable the map. Can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project) |
+| **REACT_APP_API_URL**                      | string | URL to the API instance, e.g. on local it can be `http://localhost:3000`                                                                                                           |
+| **REACT_APP_NAME**                         | string | The custom name of your application. It is displayed in the header and titles across the website                                                                                   |
+| **REACT_APP_CONTACT_MAIL**                 | string | Email used in contact dialog on a map view                                                                                                                                         |
+| **REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID** | string | Google Analytics 4 tracking ID                                                                                                                                                     |
+| **REACT_APP_DATA_SOURCE_UPDATE_DATE**      | date   | Last data update date, manually entered (displayed in tooltips)                                                                                                                    |
 
 #### Running frontend
 
@@ -79,12 +79,12 @@ THROTTLE_TTL=
 THROTTLE_LIMIT=
 ```
 
-| Parameter | Type | Description |
-| --- | --- | --- |
-| **FRONTEND_URL** | string | Provide URL to your frontend instance, e.g. `http://localhost:3001` when running on local. This step is not required, but enables the frontend application origin to access the backend API - the app has CORS enabled by default. |
-| **CACHE_TTL** | number | Cache expiration TTL in milliseconds. |
-| **THROTTLE_TTL** | number | Throttle time limit in milliseconds. |
-| **THROTTLE_LIMIT** | number | Calls limit within the TTL. |
+| Parameter          | Type   | Description                                                                                                                                                                                                                        |
+| ------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **FRONTEND_URL**   | string | Provide URL to your frontend instance, e.g. `http://localhost:3001` when running on local. This step is not required, but enables the frontend application origin to access the backend API - the app has CORS enabled by default. |
+| **CACHE_TTL**      | number | Cache expiration TTL in milliseconds.                                                                                                                                                                                              |
+| **THROTTLE_TTL**   | number | Throttle time limit in milliseconds.                                                                                                                                                                                               |
+| **THROTTLE_LIMIT** | number | Calls limit within the TTL.                                                                                                                                                                                                        |
 
 #### Running backend
 Go to `./src/nursery-nav-api` and run `npm run start:dev`.
@@ -105,36 +105,36 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 #### Map view
 
-| Desktop | Mobile |
-| --- | --- |
+| Desktop                                 | Mobile                                                                                        |
+| --------------------------------------- | --------------------------------------------------------------------------------------------- |
 | ![Map view desktop](./img/map-view.png) | ![List view mobile](./img/list-view-mobile.png) ![Map view mobile](./img/map-view-mobile.png) |
 
 #### Details view
 
-| Desktop | Mobile |
-| --- | --- |
+| Desktop                                         | Mobile                                                |
+| ----------------------------------------------- | ----------------------------------------------------- |
 | ![Details view desktop](./img/details-view.png) | ![Details view mobile](./img/details-view-mobile.png) |
 
 ### Phase 1
 
 #### Frontend
 
-| Feature | Status |
-| --- | --- |
-| Static data source | ✅ |
-| Map | ✅ |
-| Pins on map | ✅ |
-| Institution details view | ✅ |
-| Search | ✅ |
-| Display institution details on the pin click | ✅ |
-| Basic component styling | ✅ |
-| Group pins on the map | ✅ |
-| SEO | ✅ |
-| Sorting | ✅ |
-| Filtering | ✅ |
-| Direct URLs to each institution | ✅ |
-| CICD | ✅ |
-| Live URL | ✅ |
+| Feature                                      | Status |
+| -------------------------------------------- | ------ |
+| Static data source                           | ✅      |
+| Map                                          | ✅      |
+| Pins on map                                  | ✅      |
+| Institution details view                     | ✅      |
+| Search                                       | ✅      |
+| Display institution details on the pin click | ✅      |
+| Basic component styling                      | ✅      |
+| Group pins on the map                        | ✅      |
+| SEO                                          | ✅      |
+| Sorting                                      | ✅      |
+| Filtering                                    | ✅      |
+| Direct URLs to each institution              | ✅      |
+| CICD                                         | ✅      |
+| Live URL                                     | ✅      |
 
 ### Phase 2
 
@@ -142,39 +142,39 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 #### Frontend
 
-| Feature | Status |
-| --- | --- |
-| Connection to the API | ✅ |
-| Infinite scroll | ✅ |
-| Sorting with API | ✅ |
-| Connect map with API | ✅ |
-| Filtering with API | ✅ |
-| Direct URLs to filtered results by query params | ✅ |
-| Filtering map locations | ✅ |
-| Autocomplete for institution name | ✅ |
-| Caching | ✅ |
-| About page | ✅ |
-| SEO improvements | ✅ |
+| Feature                                         | Status |
+| ----------------------------------------------- | ------ |
+| Connection to the API                           | ✅      |
+| Infinite scroll                                 | ✅      |
+| Sorting with API                                | ✅      |
+| Connect map with API                            | ✅      |
+| Filtering with API                              | ✅      |
+| Direct URLs to filtered results by query params | ✅      |
+| Filtering map locations                         | ✅      |
+| Autocomplete for institution name               | ✅      |
+| Caching                                         | ✅      |
+| About page                                      | ✅      |
+| SEO improvements                                | ✅      |
 
 #### API
 
-| Feature | Status |
-| --- | --- |
-| API project | ✅ |
-| Swagger `/api` | ✅ |
-| GET all institutions | ✅ |
-| GET institution details | ✅ |
-| GET locations | ✅ |
-| Sorting | ✅ |
-| Autocomplete endpoint | ✅ |
-| Cities/voivodeships endpoint | ✅ |
-| Filtering | ✅ |
-| Pagination | ✅ |
-| CICD | ✅ |
-| Live URL | ✅ |
-| CORS | ✅ |
-| Add real ID to the data source | ✅ |
-| Data update with new file | ✅ |
+| Feature                        | Status |
+| ------------------------------ | ------ |
+| API project                    | ✅      |
+| Swagger `/api`                 | ✅      |
+| GET all institutions           | ✅      |
+| GET institution details        | ✅      |
+| GET locations                  | ✅      |
+| Sorting                        | ✅      |
+| Autocomplete endpoint          | ✅      |
+| Cities/voivodeships endpoint   | ✅      |
+| Filtering                      | ✅      |
+| Pagination                     | ✅      |
+| CICD                           | ✅      |
+| Live URL                       | ✅      |
+| CORS                           | ✅      |
+| Add real ID to the data source | ✅      |
+| Data update with new file      | ✅      |
 
 ### Phase 3
 
@@ -183,26 +183,26 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 #### Frontend
 
-| Feature | Status |
-| --- | --- |
-| Add sitemap | ✅ |
-| Add Google Analytics | ✅ |
-| Comparison view | ✅ |
-| Select items to compare on the list view | |
-| Quick filters with cities | |
-| Direct URLs to filtered cities | |
-| Feedback form v1 (report data error, suggest change) | ✅ |
-| *About* page content | ✅ |
-| Display hour price when monthly not provided | ✅ |
-| Add 404 page | ✅ |
-| Add a map to mobile view | ✅ |
+| Feature                                              | Status |
+| ---------------------------------------------------- | ------ |
+| Add sitemap                                          | ✅      |
+| Add Google Analytics                                 | ✅      |
+| Comparison view                                      | ✅      |
+| Select items to compare on the list view             | ✅      |
+| Quick filters with cities                            |        |
+| Direct URLs to filtered cities                       |        |
+| Feedback form v1 (report data error, suggest change) | ✅      |
+| *About* page content                                 | ✅      |
+| Display hour price when monthly not provided         | ✅      |
+| Add 404 page                                         | ✅      |
+| Add a map to mobile view                             | ✅      |
 
 #### API
 
-| Feature | Status |
-| --- | --- |
-| Rate limiting | ✅ |
-| Helmet | ✅ |
+| Feature       | Status |
+| ------------- | ------ |
+| Rate limiting | ✅      |
+| Helmet        | ✅      |
 
 ### [Plan] Phase 4
 
