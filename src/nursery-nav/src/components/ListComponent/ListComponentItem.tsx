@@ -113,7 +113,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                     <FmdGood />{props.city}
                                 </Typography>
                                 <Button onClick={() => handleCompare(props.id)} disabled={disabled} color={addMode ? 'primary' : 'secondary'}>
-                                    <Typography variant='button' >{addMode ? "Dodaj do" : "Usuń z"} porównania</Typography>
+                                    <Typography variant='button' >{addMode ? "+ Dodaj do" : "- Usuń z"} porównania</Typography>
                                 </Button>
                             </Box>
                         </Box>
