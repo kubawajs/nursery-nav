@@ -1,4 +1,4 @@
-import { Box, Button, CircularProgress, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
+import { Box, Button, CircularProgress, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Stack, Typography } from '@mui/material';
 import { ReactNode, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { ListComponentItem } from './ListComponentItem';
 import { Map, SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
@@ -21,6 +21,8 @@ export default function ListComponent() {
 	const [pageNum, setPageNum] = useState(2);
 	const [totalPages, setTotalPages] = useState(1);
 	const [totalItems, setTotalItems] = useState(0);
+	const [itemsToCompare, setItemsToCompare] = useState<number[]>([]);
+
 	const loaderRef = useRef(null);
 
 	const fetchInstitutions = useCallback(async () => {
@@ -73,6 +75,11 @@ export default function ListComponent() {
 		getData();
 	}, [searchParams, setInstitutionIds]);
 
+	useEffect(() => {
+		const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
+		setItemsToCompare(itemsToCompare);
+	}, [itemsToCompare]);
+
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		searchParams.set('sort', event.target.value);
 		setSearchParams(searchParams);
@@ -85,34 +92,35 @@ export default function ListComponent() {
 					<Map /> Zobacz na mapie
 				</Button>
 			</Box>
-			<Box pl={2} pr={2} display='flex' justifyContent='space-between' alignItems='end'>
-				{/* <Button variant='contained'>
-					Porównaj
-				</Button> */}
+			<Box p={2}>
+				<Stack direction={{ xs: 'column', md: 'row' }} spacing={1} justifyContent='space-between' alignItems='center'>
+					<Button variant='contained' color='success' disabled={itemsToCompare.length < 1 || itemsToCompare.length > 5} href={`${generatePath(PathConstants.COMPARISON)}?ids=${itemsToCompare.join(',')}`}>
+						Porównanie ({itemsToCompare.length}/5)
+					</Button>
 
-				{institutions && (
-					<Typography variant='body2' color="text.secondary" gutterBottom>
-						Znaleziono {totalItems} placówek
-					</Typography>
-				)}
+					{institutions && (
+						<Typography variant='body2' color="text.secondary" gutterBottom>
+							Znaleziono {totalItems} placówek
+						</Typography>
+					)}
 
-				<FormControl variant="standard" sx={{ m: 1, minWidth: 180 }}>
-					<InputLabel id="sorting-select-label">Sortowanie</InputLabel>
-					<Select
-						labelId="sorting-select-label"
-						id="sorting-select"
-						value={searchParams.get('sort') || 'name-asc'}
-						label="Sortowanie"
-						onChange={handleChange}
-					>
-						<MenuItem value={'price-asc'}><TrendingUp /> Cena rosnąco</MenuItem>
-						<MenuItem value={'price-desc'}><TrendingDown /> Cena malejąco</MenuItem>
-						<MenuItem value={'name-asc'}><SortByAlpha /> Nazwa rosnąco</MenuItem>
-						<MenuItem value={'name-desc'}><SortByAlpha /> Nazwa malejąco</MenuItem>
-					</Select>
-				</FormControl>
-			</Box>
-			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
+					<FormControl variant="standard" sx={{ m: 1, minWidth: 180 }}>
+						<InputLabel id="sorting-select-label">Sortowanie</InputLabel>
+						<Select
+							labelId="sorting-select-label"
+							id="sorting-select"
+							value={searchParams.get('sort') || 'name-asc'}
+							label="Sortowanie"
+							onChange={handleChange}
+						>
+							<MenuItem value={'price-asc'}><TrendingUp /> Cena rosnąco</MenuItem>
+							<MenuItem value={'price-desc'}><TrendingDown /> Cena malejąco</MenuItem>
+							<MenuItem value={'name-asc'}><SortByAlpha /> Nazwa rosnąco</MenuItem>
+							<MenuItem value={'name-desc'}><SortByAlpha /> Nazwa malejąco</MenuItem>
+						</Select>
+					</FormControl>
+				</Stack>
+			</Box><List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
 				{institutions && institutions.length > 0 && institutions.map((institution, index) => (
 					<Box key={index}>
 						<ListComponentItem
@@ -127,16 +135,14 @@ export default function ListComponent() {
 							phone={institution.phone}
 							email={institution.email}
 							isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
-							isAvailable={institution.isAvailable}
-						/>
+							isAvailable={institution.isAvailable} />
 					</Box>
 				))}
 				<div ref={loaderRef}>
 					{loading &&
 						<Box p={10} display='flex' justifyContent='center' alignItems='center'>
 							<CircularProgress />
-						</Box>
-					}
+						</Box>}
 				</div>
 			</List>
 		</Box >
