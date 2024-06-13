@@ -1,11 +1,5 @@
 import {
-    Box, Button, ButtonGroup, Card,
-    CardContent,
-    Chip,
-    Link,
-    ListItem,
-    Stack,
-    Typography
+    Box, Button, Card, CardContent, Chip, Link, ListItem, Stack, Typography
 } from '@mui/material';
 import { Accessible, FmdGood, Language, Mail, Phone } from '@mui/icons-material';
 import { InstitutionType } from '../../shared/nursery.interface';
@@ -14,6 +8,7 @@ import {
     Link as RouterLink,
     generatePath,
 } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 interface ListComponentItemProps {
     name: string;
@@ -31,6 +26,40 @@ interface ListComponentItemProps {
 
 export function ListComponentItem(props: ListComponentItemProps) {
     const mainColor = props.institutionType === InstitutionType.NURSERY ? "primary" : "secondary";
+    const [compareItems, setCompareItems] = useState<number[]>([]);
+    const [disabled, setDisabled] = useState(true);
+    const [addMode, setAddMode] = useState(true);
+
+    const handleCompare = (id: number) => {
+        const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
+        if (itemsToCompare.includes(id)) {
+            setCompareItems(compareItems.filter((item) => item !== id));
+            itemsToCompare.splice(itemsToCompare.indexOf(id), 1);
+        } else if (itemsToCompare.length <= 5) {
+            setCompareItems([...compareItems, id]);
+            itemsToCompare.push(id);
+        }
+        localStorage.setItem('itemsToCompare', JSON.stringify(itemsToCompare));
+    }
+
+    useEffect(() => {
+        const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
+        setCompareItems(itemsToCompare);
+    }, []);
+
+    useEffect(() => {
+        const isDisabled = compareItems.length >= 5 && !compareItems.includes(props.id);
+        setDisabled(isDisabled);
+    }, [compareItems, props.id]);
+
+    useEffect(() => {
+        if (compareItems.includes(props.id)) {
+            setAddMode(false);
+        }
+        else {
+            setAddMode(true);
+        }
+    }, [compareItems, props.id]);
 
     return (
         <ListItem sx={{ display: 'block' }}>
@@ -83,8 +112,8 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                 <Typography variant="h4" typography="body1" color="text.secondary">
                                     <FmdGood />{props.city}
                                 </Typography>
-                                <Button color='primary'>
-                                    <Typography variant='button'>Dodaj do porównania</Typography>
+                                <Button onClick={() => handleCompare(props.id)} disabled={disabled} color={addMode ? 'primary' : 'secondary'}>
+                                    <Typography variant='button' >{addMode ? "Dodaj do" : "Usuń z"} porównania</Typography>
                                 </Button>
                             </Box>
                         </Box>

@@ -75,6 +75,11 @@ export default function ListComponent() {
 		getData();
 	}, [searchParams, setInstitutionIds]);
 
+	useEffect(() => {
+		const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
+		setItemsToCompare(itemsToCompare);
+	}, [itemsToCompare]);
+
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		searchParams.set('sort', event.target.value);
 		setSearchParams(searchParams);
@@ -87,11 +92,9 @@ export default function ListComponent() {
 					<Map /> Zobacz na mapie
 				</Button>
 			</Box>
-			<Box p={2} >
-				<Stack direction={{ xs: 'column', md: 'row' }} spacing={1} justifyContent='space-between'>
-					<Button variant='contained' color='success' disabled={itemsToCompare.length < 1} href={generatePath(PathConstants.COMPARISON, {
-						ids: itemsToCompare.join(',')
-					})}>
+			<Box p={2}>
+				<Stack direction={{ xs: 'column', md: 'row' }} spacing={1} justifyContent='space-between' alignItems='center'>
+					<Button variant='contained' color='success' disabled={itemsToCompare.length < 1 || itemsToCompare.length > 5} href={`${generatePath(PathConstants.COMPARISON)}?ids=${itemsToCompare.join(',')}`}>
 						Porównanie ({itemsToCompare.length}/5)
 					</Button>
 
@@ -117,9 +120,7 @@ export default function ListComponent() {
 						</Select>
 					</FormControl>
 				</Stack>
-			</Box>
-
-			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
+			</Box><List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
 				{institutions && institutions.length > 0 && institutions.map((institution, index) => (
 					<Box key={index}>
 						<ListComponentItem
@@ -134,16 +135,14 @@ export default function ListComponent() {
 							phone={institution.phone}
 							email={institution.email}
 							isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
-							isAvailable={institution.isAvailable}
-						/>
+							isAvailable={institution.isAvailable} />
 					</Box>
 				))}
 				<div ref={loaderRef}>
 					{loading &&
 						<Box p={10} display='flex' justifyContent='center' alignItems='center'>
 							<CircularProgress />
-						</Box>
-					}
+						</Box>}
 				</div>
 			</List>
 		</Box >
