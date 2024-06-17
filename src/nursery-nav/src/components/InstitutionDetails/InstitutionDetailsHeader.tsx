@@ -24,20 +24,12 @@ function PriceWithLabel(label: string, icon: PropTypes.ReactComponentLike, color
 export default function InstitutionDetailsHeader(institution: Institution) {
     const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
     const institutionType = institution.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY';
-    const imagePath = institution.institutionType === InstitutionType.NURSERY ? '/images/nursery-placeholder.jpg' : '/images/child-club-placeholder.jpg';
     const backgroundColor = mainColor + '.light';
 
     return (
         <Box p={2}>
             <Paper elevation={2} sx={{ padding: 0 }}>
                 <Box>
-                    <Box pb={0} height='10rem'>
-                        <img
-                            src={imagePath}
-                            alt="Created by DALL-E from OpenAI"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}
-                        />
-                    </Box>
                     <Paper elevation={0} sx={{ backgroundColor: backgroundColor }}>
                         <Stack direction='row' justifyContent='flex-start' spacing={1} pt={2}>
                             <Chip label={institutionType} color={mainColor} />

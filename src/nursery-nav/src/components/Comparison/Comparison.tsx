@@ -29,7 +29,6 @@ export default function Comparison({ ids }: ComparisonProps) {
         const fetchInstitution = async () => {
             const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions/details?id=${ids.join('&id=')}`);
             const institutionsDto = await response.json() as Institution[];
-            console.log(institutionsDto);
             const institutionsToCompare: InstitutionToCompare[] = institutionsDto.map((institution: Institution) => {
                 const institutionToCompare: InstitutionToCompare = {
                     id: institution.id,
@@ -46,7 +45,6 @@ export default function Comparison({ ids }: ComparisonProps) {
                 };
                 return institutionToCompare;
             });
-            console.log(institutionsToCompare);
             setInstitutions(institutionsToCompare);
         };
         fetchInstitution();

@@ -100,7 +100,6 @@ export class InstitutionsDocumentService implements IInstitutionsService {
         const cacheKey = `${CACHE_KEY}_${ids.join('_')}`;
         const cacheData = await this.cacheManager.get(cacheKey) as InstitutionDto[];
         if (cacheData) {
-            console.log('Cache hit');
             return Promise.resolve(cacheData);
         }
 
