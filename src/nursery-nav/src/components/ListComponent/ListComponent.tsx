@@ -107,9 +107,9 @@ export default function ListComponent() {
 								Porównanie ({itemsToCompare.length}/5)
 							</Button>
 							{itemsToCompare.length > 0 && (
-								<IconButton color='error' aria-label="Wyczyść porównanie" sx={{ border: '1px solid', padding: '0.25rem', marginLeft: '0.5rem' }} onClick={() => clearComparison()}>
-									<Clear />
-								</IconButton>
+								<Button variant='contained' color='error' aria-label="Wyczyść porównanie" sx={{ marginLeft: '0.5rem' }} onClick={() => clearComparison()}>
+									<Clear /> Wyczyść
+								</Button>
 							)}
 						</Box>
 

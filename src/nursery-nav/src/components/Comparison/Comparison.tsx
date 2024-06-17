@@ -86,7 +86,9 @@ export default function Comparison({ ids }: ComparisonProps) {
                             </TableCell>
                             {institutions.map((institution, index) => (
                                 <TableCell key={index} align="center">
-                                    {institution.price}
+                                    <Typography variant="h2" typography="h6">
+                                        <strong>{institution.price}</strong>
+                                    </Typography>
                                 </TableCell>
                             ))}
                         </TableRow>
