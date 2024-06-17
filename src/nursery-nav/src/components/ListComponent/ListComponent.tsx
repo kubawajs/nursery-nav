@@ -1,4 +1,4 @@
-import { Box, Button, CircularProgress, FormControl, IconButton, InputLabel, List, MenuItem, Paper, Select, SelectChangeEvent, Stack, Typography } from '@mui/material';
+import { Box, Button, CircularProgress, FormControl, InputLabel, List, MenuItem, Paper, Select, SelectChangeEvent, Stack, Typography } from '@mui/material';
 import { ReactNode, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { ListComponentItem } from './ListComponentItem';
 import { Clear, Map, SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
@@ -100,9 +100,9 @@ export default function ListComponent() {
 				</Button>
 			</Box>
 			<Box>
-				<Paper elevation={2}>
-					<Stack direction={{ xs: 'column', md: 'row' }} spacing={1} justifyContent='space-between' alignItems='center'>
-						<Box>
+				<Paper elevation={0}>
+					<Stack direction={{ xs: 'column', sm: 'row', md: 'column', lg: 'row' }} spacing={1} justifyContent='space-between' alignItems='center'>
+						<Box display='flex' justifyContent='space-around' alignItems='center'>
 							<Button variant='contained' color='success' disabled={itemsToCompare.length < 1 || itemsToCompare.length > 5} href={`${generatePath(PathConstants.COMPARISON)}?ids=${itemsToCompare.join(',')}`}>
 								Porównanie ({itemsToCompare.length}/5)
 							</Button>
