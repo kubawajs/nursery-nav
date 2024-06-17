@@ -43,8 +43,10 @@ export function ListComponentItem(props: ListComponentItemProps) {
     }
 
     useEffect(() => {
-        const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
-        setCompareItems(itemsToCompare);
+        window.addEventListener('storage', () => {
+            const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
+            setCompareItems(itemsToCompare)
+        });
     }, []);
 
     useEffect(() => {
