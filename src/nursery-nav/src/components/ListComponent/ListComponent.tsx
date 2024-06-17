@@ -1,7 +1,7 @@
-import { Box, Button, CircularProgress, FormControl, InputLabel, List, MenuItem, Select, SelectChangeEvent, Stack, Typography } from '@mui/material';
+import { Box, Button, CircularProgress, FormControl, InputLabel, List, MenuItem, Paper, Select, SelectChangeEvent, Stack, Typography } from '@mui/material';
 import { ReactNode, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { ListComponentItem } from './ListComponentItem';
-import { Map, SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
+import { Clear, Map, SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
 import { InstitutionListItem } from '../../shared/nursery.interface';
 import { InstitutionContext } from '../Layout/Layout';
 import { useSearchParams } from 'react-router-dom';
@@ -78,12 +78,19 @@ export default function ListComponent() {
 	useEffect(() => {
 		const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
 		setItemsToCompare(itemsToCompare);
+		window.dispatchEvent(new Event('storage'))
 	}, [itemsToCompare]);
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		searchParams.set('sort', event.target.value);
 		setSearchParams(searchParams);
 	}, [searchParams, setSearchParams]);
+
+	const clearComparison = () => {
+		localStorage.removeItem('itemsToCompare');
+		setItemsToCompare([]);
+		window.dispatchEvent(new Event('storage'))
+	};
 
 	return (
 		<Box>
@@ -92,35 +99,45 @@ export default function ListComponent() {
 					<Map /> Zobacz na mapie
 				</Button>
 			</Box>
-			<Box p={2}>
-				<Stack direction={{ xs: 'column', md: 'row' }} spacing={1} justifyContent='space-between' alignItems='center'>
-					<Button variant='contained' color='success' disabled={itemsToCompare.length < 1 || itemsToCompare.length > 5} href={`${generatePath(PathConstants.COMPARISON)}?ids=${itemsToCompare.join(',')}`}>
-						Porównanie ({itemsToCompare.length}/5)
-					</Button>
+			<Box>
+				<Paper elevation={0}>
+					<Stack direction={{ xs: 'column', sm: 'row', md: 'column', lg: 'row' }} spacing={1} justifyContent='space-between' alignItems='center'>
+						<Box display='flex' justifyContent='space-around' alignItems='center'>
+							<Button variant='contained' color='success' disabled={itemsToCompare.length < 1 || itemsToCompare.length > 5} href={`${generatePath(PathConstants.COMPARISON)}?ids=${itemsToCompare.join(',')}`}>
+								Porównanie ({itemsToCompare.length}/5)
+							</Button>
+							{itemsToCompare.length > 0 && (
+								<Button variant='contained' color='error' aria-label="Wyczyść porównanie" sx={{ marginLeft: '0.5rem' }} onClick={() => clearComparison()}>
+									<Clear /> Wyczyść
+								</Button>
+							)}
+						</Box>
 
-					{institutions && (
-						<Typography variant='body2' color="text.secondary" gutterBottom>
-							Znaleziono {totalItems} placówek
-						</Typography>
-					)}
+						{institutions && (
+							<Typography variant='body2' color="text.secondary" gutterBottom>
+								Znaleziono {totalItems} placówek
+							</Typography>
+						)}
 
-					<FormControl variant="standard" sx={{ m: 1, minWidth: 180 }}>
-						<InputLabel id="sorting-select-label">Sortowanie</InputLabel>
-						<Select
-							labelId="sorting-select-label"
-							id="sorting-select"
-							value={searchParams.get('sort') || 'name-asc'}
-							label="Sortowanie"
-							onChange={handleChange}
-						>
-							<MenuItem value={'price-asc'}><TrendingUp /> Cena rosnąco</MenuItem>
-							<MenuItem value={'price-desc'}><TrendingDown /> Cena malejąco</MenuItem>
-							<MenuItem value={'name-asc'}><SortByAlpha /> Nazwa rosnąco</MenuItem>
-							<MenuItem value={'name-desc'}><SortByAlpha /> Nazwa malejąco</MenuItem>
-						</Select>
-					</FormControl>
-				</Stack>
-			</Box><List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
+						<FormControl variant="standard" sx={{ m: 1, minWidth: 180 }}>
+							<InputLabel id="sorting-select-label">Sortowanie</InputLabel>
+							<Select
+								labelId="sorting-select-label"
+								id="sorting-select"
+								value={searchParams.get('sort') || 'name-asc'}
+								label="Sortowanie"
+								onChange={handleChange}
+							>
+								<MenuItem value={'price-asc'}><TrendingUp /> Cena rosnąco</MenuItem>
+								<MenuItem value={'price-desc'}><TrendingDown /> Cena malejąco</MenuItem>
+								<MenuItem value={'name-asc'}><SortByAlpha /> Nazwa rosnąco</MenuItem>
+								<MenuItem value={'name-desc'}><SortByAlpha /> Nazwa malejąco</MenuItem>
+							</Select>
+						</FormControl>
+					</Stack>
+				</Paper>
+			</Box>
+			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
 				{institutions && institutions.length > 0 && institutions.map((institution, index) => (
 					<Box key={index}>
 						<ListComponentItem
