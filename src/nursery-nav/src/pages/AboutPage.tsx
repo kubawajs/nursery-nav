@@ -24,7 +24,7 @@ export default function AboutPage() {
                 <Paper elevation={3} sx={{ padding: '1rem' }}>
                     <Stack direction="column" spacing={2}>
                         <Box justifyItems={'center'} textAlign={'center'}>
-                            <img src="/logo512.png" alt={process.env.REACT_APP_NAME} width="200px" height="200px" />
+                            <img src="/images/logo.png" alt={process.env.REACT_APP_NAME} width="200px" />
                         </Box>
                         <Typography variant="h1" textAlign={'center'}>O projekcie</Typography>
                         <Typography variant="body1">
@@ -41,6 +41,9 @@ export default function AboutPage() {
                                     <ListItemText><strong>Szczegóły instytucji:</strong> Informacje o wybranej placówce.</ListItemText>
                                 </ListItem>
                                 <ListItem>
+                                    <ListItemText><strong>Porównanie instytucji:</strong> Porównanie cech wybranych placówek.</ListItemText>
+                                </ListItem>
+                                <ListItem>
                                     <ListItemText><strong>Integracja z API:</strong> API z bieżąco aktualizowaną bazą danych</ListItemText>
                                 </ListItem>
                             </List>
@@ -49,6 +52,13 @@ export default function AboutPage() {
                         <Typography variant="body1">
                             Projekt wykorzystuje technologie takie jak React, Typescript, NestJS, oraz biblioteki MUI i React Leaflet.
                             Kod źródłowy aplikacji dostępny jest pod adresem URL: <Link href="https://github.com/kubawajs/nursery-nav">github.com/kubawajs/nursery-nav</Link>.
+                        </Typography>
+                        <Typography variant="h2" typography="h3" textAlign={'center'}>Dane</Typography>
+                        <Typography variant="body1">
+                            Projekt wykorzystuje dane z serwisu Otwarte Dane.
+                        </Typography>
+                        <Typography variant="body1">
+                            Źródło: <Link href="https://dane.gov.pl/pl/dataset/2106,rejestr-zobkow-lista-instytucji">Rejestr Żłobków - lista instytucji</Link>.
                         </Typography>
                         <Typography variant="h2" typography="h3" textAlign={'center'}>Autor</Typography>
                         <Box justifyItems={'center'} textAlign={'center'}>
