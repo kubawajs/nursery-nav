@@ -8,6 +8,7 @@ export default function ListPage() {
     const title = `Darmowa Wyszukiwarka Żłobków i Klubów Dziecięcych | ${process.env.REACT_APP_NAME}`;
     const description = "Znajdź idealny żłobek dla dziecka w najlepszej cenie PLN na miesiąc. Sprawdź dostępność miejsc i dowiedz się, gdzie ich brak. Poznaj nazwy żłobków w okolicy.";
     const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
+    const isMobile = window.innerWidth < 600;
 
     return (
         <>
@@ -29,9 +30,9 @@ export default function ListPage() {
             <Grid item xs={12} md={6}>
                 <ListComponent />
             </Grid>
-            <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
+            {!isMobile && <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
                 <MapComponent />
-            </Grid>
+            </Grid>}
         </>
     );
 }
