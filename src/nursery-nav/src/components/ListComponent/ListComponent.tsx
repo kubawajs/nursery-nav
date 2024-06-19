@@ -1,5 +1,5 @@
-import { Box, Button, CircularProgress, FormControl, InputLabel, List, MenuItem, Paper, Select, SelectChangeEvent, Stack, Typography } from '@mui/material';
-import { ReactNode, useCallback, useContext, useEffect, useRef, useState } from 'react';
+import { Box, Button, FormControl, InputLabel, List, MenuItem, Paper, Select, SelectChangeEvent, Skeleton, Stack, Typography } from '@mui/material';
+import { ReactNode, useCallback, useContext, useEffect, useState } from 'react';
 import { ListComponentItem } from './ListComponentItem';
 import { Clear, Map, SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
 import { InstitutionListItem } from '../../shared/nursery.interface';
@@ -10,6 +10,7 @@ import {
 	generatePath,
 } from 'react-router-dom';
 import PathConstants from '../../shared/pathConstants';
+import InfiniteScroll from 'react-infinite-scroller';
 
 export default function ListComponent() {
 	const { setInstitutionIds, setSelectedInstitution } = useContext(InstitutionContext);
@@ -23,8 +24,6 @@ export default function ListComponent() {
 	const [totalItems, setTotalItems] = useState(0);
 	const [itemsToCompare, setItemsToCompare] = useState<number[]>([]);
 
-	const loaderRef = useRef(null);
-
 	const fetchInstitutions = useCallback(async () => {
 		if (loading || pageNum > totalPages) return;
 
@@ -35,26 +34,6 @@ export default function ListComponent() {
 		setPageNum((prevPageNum) => prevPageNum + 1);
 		setLoading(false);
 	}, [pageNum, loading, totalPages, searchParams]);
-
-	useEffect(() => {
-		const observer = new IntersectionObserver((entries) => {
-			const target = entries[0];
-			if (target.isIntersecting) {
-				fetchInstitutions();
-			}
-		});
-
-		const bottom = loaderRef.current;
-		if (bottom) {
-			observer.observe(bottom);
-		}
-
-		return () => {
-			if (bottom) {
-				observer.unobserve(bottom);
-			}
-		};
-	}, [fetchInstitutions]);
 
 	useEffect(() => {
 		const getData = async () => {
@@ -113,7 +92,7 @@ export default function ListComponent() {
 							)}
 						</Box>
 
-						{institutions && (
+						{institutions && institutions.length > 0 && (
 							<Typography variant='body2' color="text.secondary" gutterBottom>
 								Znaleziono {totalItems} placówek
 							</Typography>
@@ -138,29 +117,38 @@ export default function ListComponent() {
 				</Paper>
 			</Box>
 			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
-				{institutions && institutions.length > 0 && institutions.map((institution, index) => (
-					<Box key={index}>
-						<ListComponentItem
-							key={institution.id}
-							name={institution.name}
-							id={institution.id}
-							institutionType={institution.institutionType}
-							city={institution.city}
-							basicPricePerHour={institution.basicPricePerHour}
-							basicPricePerMonth={institution.basicPricePerMonth}
-							website={institution.website}
-							phone={institution.phone}
-							email={institution.email}
-							isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
-							isAvailable={institution.isAvailable} />
-					</Box>
-				))}
-				<div ref={loaderRef}>
-					{loading &&
-						<Box p={10} display='flex' justifyContent='center' alignItems='center'>
-							<CircularProgress />
-						</Box>}
-				</div>
+				<InfiniteScroll
+					pageStart={0}
+					loadMore={fetchInstitutions}
+					hasMore={pageNum <= totalPages}
+					useWindow={false}
+					loader={
+						<Stack spacing={2} direction={'column'} p={2} key={0}>
+							<Skeleton variant="rectangular" width='100%' height={150} />
+							<Skeleton variant="rectangular" width='100%' height={150} />
+							<Skeleton variant="rectangular" width='100%' height={150} />
+							<Skeleton variant="rectangular" width='100%' height={150} />
+						</Stack>
+					}
+				>
+					{institutions && institutions.length > 0 && institutions.map((institution, index) => (
+						<Box key={index}>
+							<ListComponentItem
+								key={institution.id}
+								name={institution.name}
+								id={institution.id}
+								institutionType={institution.institutionType}
+								city={institution.city}
+								basicPricePerHour={institution.basicPricePerHour}
+								basicPricePerMonth={institution.basicPricePerMonth}
+								website={institution.website}
+								phone={institution.phone}
+								email={institution.email}
+								isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
+								isAvailable={institution.isAvailable} />
+						</Box>
+					))}
+				</InfiniteScroll>
 			</List>
 		</Box >
 	);

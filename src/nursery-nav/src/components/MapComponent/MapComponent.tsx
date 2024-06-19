@@ -47,6 +47,7 @@ export default function MapComponent() {
 			</Box>
 			<Container style={{ padding: 0 }}>
 				<MapContainer
+					preferCanvas={true}
 					center={[52.5, 19.14]}
 					zoom={isXs ? 6 : 7}
 					scrollWheelZoom={true}
