@@ -3,12 +3,22 @@ import ListComponent from "../components/ListComponent/ListComponent";
 import MapComponent from "../components/MapComponent/MapComponent";
 import FiltersBar from "../components/Filters/FiltersBar";
 import { Helmet } from "react-helmet-async";
+import { useEffect, useState } from "react";
 
 export default function ListPage() {
     const title = `Darmowa Wyszukiwarka Żłobków i Klubów Dziecięcych | ${process.env.REACT_APP_NAME}`;
     const description = "Znajdź idealny żłobek dla dziecka w najlepszej cenie PLN na miesiąc. Sprawdź dostępność miejsc i dowiedz się, gdzie ich brak. Poznaj nazwy żłobków w okolicy.";
     const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
-    const isMobile = window.innerWidth < 600;
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 600);
+        }
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <>

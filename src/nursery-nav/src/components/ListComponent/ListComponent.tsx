@@ -1,5 +1,5 @@
 import { Box, Button, FormControl, InputLabel, List, MenuItem, Paper, Select, SelectChangeEvent, Skeleton, Stack, Typography } from '@mui/material';
-import { ReactNode, useCallback, useContext, useEffect, useState } from 'react';
+import { ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { ListComponentItem } from './ListComponentItem';
 import { Clear, Map, SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
 import { InstitutionListItem } from '../../shared/nursery.interface';
@@ -34,6 +34,24 @@ export default function ListComponent() {
 		setPageNum((prevPageNum) => prevPageNum + 1);
 		setLoading(false);
 	}, [pageNum, loading, totalPages, searchParams]);
+
+	const institutionItems = useMemo(() => institutions.map((institution, index) => (
+		<Box key={index}>
+			<ListComponentItem
+				key={institution.id}
+				name={institution.name}
+				id={institution.id}
+				institutionType={institution.institutionType}
+				city={institution.city}
+				basicPricePerHour={institution.basicPricePerHour}
+				basicPricePerMonth={institution.basicPricePerMonth}
+				website={institution.website}
+				phone={institution.phone}
+				email={institution.email}
+				isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
+				isAvailable={institution.isAvailable} />
+		</Box>
+	)), [institutions]);
 
 	useEffect(() => {
 		const getData = async () => {
@@ -131,23 +149,7 @@ export default function ListComponent() {
 						</Stack>
 					}
 				>
-					{institutions && institutions.length > 0 && institutions.map((institution, index) => (
-						<Box key={index}>
-							<ListComponentItem
-								key={institution.id}
-								name={institution.name}
-								id={institution.id}
-								institutionType={institution.institutionType}
-								city={institution.city}
-								basicPricePerHour={institution.basicPricePerHour}
-								basicPricePerMonth={institution.basicPricePerMonth}
-								website={institution.website}
-								phone={institution.phone}
-								email={institution.email}
-								isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
-								isAvailable={institution.isAvailable} />
-						</Box>
-					))}
+					{institutions && institutions.length > 0 && institutionItems}
 				</InfiniteScroll>
 			</List>
 		</Box >

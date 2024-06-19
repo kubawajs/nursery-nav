@@ -1,7 +1,7 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
 import { Box, Button, Container } from '@mui/material';
 import MapPin from '../MapPin/MapPin';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useMemo, useState } from 'react';
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import './MapComponent.css';
 import { LocationResponse } from '../../shared/nursery.interface';
@@ -16,6 +16,9 @@ export default function MapComponent() {
 	const { institutionIds } = useContext(InstitutionContext);
 	const [locations, setLocations] = useState<LocationResponse[]>([]);
 	const [locationsFiltered, setLocationsFiltered] = useState<LocationResponse[]>([]);
+
+	const mapUrl = `https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`;
+	const attributionText = 'Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors';
 	const isXs = window.innerWidth < 600;
 	const isSm = window.innerWidth < 900;
 
@@ -24,6 +27,16 @@ export default function MapComponent() {
 		const data = await res.json() as LocationResponse[];
 		setLocations(data);
 	};
+
+	const markers = useMemo(() => locationsFiltered.map((location) => (
+		<MapPin
+			key={location.id}
+			id={location.id}
+			latitude={location.latitude}
+			longitude={location.longitude}
+			institutionType={location.institutionType}
+		/>
+	)), [locationsFiltered]);
 
 	useEffect(() => {
 		fetchLocations();
@@ -55,23 +68,15 @@ export default function MapComponent() {
 					style={{ position: 'fixed', top: 0, bottom: 0, width: isSm ? '100%' : '50%' }}
 				>
 					<TileLayer
-						attribution='Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors'
-						url={`https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`}
+						attribution={attributionText}
+						url={mapUrl}
 						maxZoom={20}
 					/>
 					<MarkerClusterGroup
 						className="marker-cluster-group"
 						polygonOptions={{ opacity: 0 }}
 						chunkedLoading>
-						{locationsFiltered.map((location, index) => (
-							<MapPin
-								key={index}
-								id={location.id}
-								latitude={location.latitude}
-								longitude={location.longitude}
-								institutionType={location.institutionType}
-							/>
-						))}
+						{markers}
 					</MarkerClusterGroup>
 				</MapContainer>
 			</Container>
