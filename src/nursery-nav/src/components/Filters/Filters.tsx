@@ -18,7 +18,24 @@ export default function Filters() {
 
     const [institutionsAutocomplete, setInstitutionsAutocomplete] = useState<InstitutionAutocomplete[]>([]);
     const [cities, setCities] = useState<CitiesFilterValue[]>([]);
-    const [voivodeships, setVoivodeships] = useState<string[]>([]);
+    const voivodeships = [
+        'DOLNOŚLĄSKIE',
+        'KUJAWSKO-POMORSKIE',
+        'LUBELSKIE',
+        'LUBUSKIE',
+        'ŁÓDZKIE',
+        'MAŁOPOLSKIE',
+        'MAZOWIECKIE',
+        'OPOLSKIE',
+        'PODKARPACKIE',
+        'PODLASKIE',
+        'POMORSKIE',
+        'ŚLĄSKIE',
+        'ŚWIĘTOKRZYSKIE',
+        'WARMIŃSKO-MAZURSKIE',
+        'WIELKOPOLSKIE',
+        'ZACHODNIOPOMORSKIE',
+    ];
 
     useEffect(() => {
         const fetchCities = async () => {
@@ -28,11 +45,6 @@ export default function Filters() {
                 .map(city => ({ city: city.city, voivodeship: city.voivodeship }))
                 .filter((city, index, self) => self.findIndex(c => c.city === city.city) === index);
             setCities(citiesUnique.filter(city => city !== undefined && city !== null));
-
-            const voivodeshipsUnique = citiesResponse.map(city => city.voivodeship)
-                .filter((voivodeship, index, self) => self.indexOf(voivodeship) === index)
-                .sort((a, b) => a.localeCompare(b));
-            setVoivodeships(voivodeshipsUnique.filter(voivodeship => voivodeship !== undefined && voivodeship !== null && voivodeship !== ''));
         };
 
         fetchCities();
