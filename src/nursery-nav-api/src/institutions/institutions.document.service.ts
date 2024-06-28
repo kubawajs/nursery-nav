@@ -135,7 +135,7 @@ export class InstitutionsDocumentService implements IInstitutionsService {
 
     private async loadData() {
         try {
-            const data = require('../../data/22052024-RZ-instytucje-enriched.json');
+            const data = require('../../data/06062024-RZ-instytucje-enriched.json');
             this.institutions = data as InstitutionDto[];
         } catch (error) {
             console.error('Error loading data:', error);
