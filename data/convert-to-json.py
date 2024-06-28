@@ -25,10 +25,17 @@ class Pin:
 
 # Read the input file
 input_file = sys.argv[1]
+
+# add parameter with deafult false value
+add_id = False
+if len(sys.argv) > 2:
+    add_id = sys.argv[2] == 'true'
+
 df = pd.read_csv(input_file, sep=';')
 
 # Add ID column
-df['id'] = range(1, len(df) + 1)
+if add_id:
+    df['id'] = range(1, len(df) + 1)
 
 # Convert institution type to enum
 df['institutionType'] = df['institutionType'].map({'Żłobek': 'NURSERY', 'Klub dziecięcy': 'CHILDCLUB'})
