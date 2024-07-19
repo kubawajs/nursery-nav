@@ -12,7 +12,12 @@ interface CitiesFilterValue {
     voivodeship: string;
 }
 
-export default function Filters() {
+interface FiltersProps {
+    defaultVoivodeship?: string;
+    defaultCity?: string;
+}
+
+export default function Filters({ defaultVoivodeship, defaultCity }: FiltersProps) {
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
 
@@ -95,41 +100,47 @@ export default function Filters() {
                 size="small"
                 sx={{ width: 400, maxWidth: '100%' }}
             />
-            <Autocomplete
-                id="cityFilter"
-                options={cities.filter(city => !searchParams.get('voivodeship') || city.voivodeship === searchParams.get('voivodeship'))?.map(city => city.city) || []}
-                value={searchParams.get('city') || ''}
-                onChange={(_event, value) => {
-                    if (!value && searchParams.has('city')) {
-                        searchParams.delete('city');
-                    }
-                    else if (value) {
-                        searchParams.set('city', value);
-                        searchParams.set('voivodeship', cities.find(city => city.city === value)?.voivodeship || '');
-                    }
-                    setSearchParams(searchParams);
-                }}
-                renderInput={(params) => <TextField {...params} label="Miasto" />}
-                size="small"
-                sx={{ width: 300, maxWidth: '100%' }}
-            />
-            <Autocomplete
-                id="voivodeshipFilter"
-                options={voivodeships || []}
-                value={searchParams.get('voivodeship') || ''}
-                onChange={(_event, value) => {
-                    if (!value && searchParams.has('voivodeship')) {
-                        searchParams.delete('voivodeship');
-                    }
-                    else if (value) {
-                        searchParams.set('voivodeship', value);
-                    }
-                    setSearchParams(searchParams);
-                }}
-                renderInput={(params) => <TextField {...params} label="Województwo" />}
-                size="small"
-                sx={{ width: 300, maxWidth: '100%' }}
-            />
+            {!defaultCity &&
+                <Autocomplete
+                    id="cityFilter"
+                    options={cities.filter(city => !searchParams.get('voivodeship') || city.voivodeship === searchParams.get('voivodeship'))?.map(city => city.city) || []}
+                    value={searchParams.get('city') || ''}
+                    onChange={(_event, value) => {
+                        if (!value && searchParams.has('city')) {
+                            searchParams.delete('city');
+                        }
+                        else if (value) {
+                            searchParams.set('city', value);
+                            searchParams.set('voivodeship', cities.find(city => city.city === value)?.voivodeship || '');
+                        }
+                        setSearchParams(searchParams);
+                    }}
+                    renderInput={(params) => <TextField {...params} label="Miasto" />}
+                    size="small"
+                    sx={{ width: 300, maxWidth: '100%' }}
+                />
+            }
+
+            {!defaultVoivodeship &&
+                < Autocomplete
+                    id="voivodeshipFilter"
+                    options={voivodeships || []}
+                    value={searchParams.get('voivodeship') || ''}
+                    onChange={(_event, value) => {
+                        if (!value && searchParams.has('voivodeship')) {
+                            searchParams.delete('voivodeship');
+                        }
+                        else if (value) {
+                            searchParams.set('voivodeship', value);
+                        }
+                        setSearchParams(searchParams);
+                    }}
+                    renderInput={(params) => <TextField {...params} label="Województwo" />}
+                    size="small"
+                    sx={{ width: 300, maxWidth: '100%' }}
+                />
+            }
+
             <FormControl>
                 <FormLabel id="demo-row-radio-buttons-group-label">Typ placówki</FormLabel>
                 <RadioGroup
