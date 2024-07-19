@@ -19,7 +19,7 @@ export default function InstitutionDetailsTop(institution: Institution) {
         <Box p={1}>
             <Stack direction='row' justifyContent='space-between' alignItems='center'>
                 <Breadcrumbs aria-label="breadcrumb">
-                    <Link href={generatePath(`${PathConstants.HOME}?voivodeship=${institution.address.voivodeship}`)} color="inherit" variant="overline">{institution.address.voivodeship}</Link>
+                    <Link href={generatePath(`${PathConstants.HOME}/institutions/${institution.address.voivodeship}`)} color="inherit" variant="overline">{institution.address.voivodeship}</Link>
                     <Typography color="text.light" variant="overline">{institution.address.county}</Typography>
                     <Link href={generatePath(`${PathConstants.HOME}?city=${institution.address.city}`)} variant="overline" underline="none">{institution.address.city}</Link>
                 </Breadcrumbs>
