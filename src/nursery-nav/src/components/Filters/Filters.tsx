@@ -103,7 +103,9 @@ export default function Filters({ defaultVoivodeship, defaultCity }: FiltersProp
             {!defaultCity &&
                 <Autocomplete
                     id="cityFilter"
-                    options={cities.filter(city => !searchParams.get('voivodeship') || city.voivodeship === searchParams.get('voivodeship'))?.map(city => city.city) || []}
+                    options={cities.filter(city =>
+                        (defaultVoivodeship && city.voivodeship === defaultVoivodeship) ||
+                        (!defaultVoivodeship && (!searchParams.get('voivodeship') || city.voivodeship === searchParams.get('voivodeship'))))?.map(city => city.city) || []}
                     value={searchParams.get('city') || ''}
                     onChange={(_event, value) => {
                         if (!value && searchParams.has('city')) {
