@@ -3,9 +3,18 @@ import { Helmet } from "react-helmet-async";
 import FiltersBar from "../components/Filters/FiltersBar";
 import MapComponent from "../components/MapComponent/MapComponent";
 import ListComponent from "../components/ListComponent/ListComponent";
+import { useParams } from "react-router-dom";
 
 export default function MapPage() {
-    const title = `Wyszukiwarka Żłobków i Klubów Dziecięcych - widok mapy | ${process.env.REACT_APP_NAME}`;
+    const { voivodeship, city } = useParams<{ voivodeship: string | undefined, city: string | undefined }>();
+    let title = `Wyszukiwarka Żłobków i Klubów Dziecięcych - widok mapy | ${process.env.REACT_APP_NAME}`;
+    if (voivodeship && city) {
+        title = `Żłobek ${city.toLocaleUpperCase()}, ${voivodeship.toLocaleUpperCase()} - ` + title;
+    }
+    else if (voivodeship) {
+        title = `Żłobki ${voivodeship.toLocaleUpperCase()} - ` + title;
+    }
+
     const description = "Znajdź idealny żłobek dla dziecka w najlepszej cenie PLN na miesiąc. Sprawdź dostępność miejsc i dowiedz się, gdzie ich brak. Poznaj nazwy żłobków w okolicy.";
     const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
 
@@ -24,10 +33,10 @@ export default function MapPage() {
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <Grid item xs={12} zIndex={19}>
-                <FiltersBar />
+                <FiltersBar defaultVoivodeship={voivodeship} defaultCity={city} />
             </Grid>
             <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
-                <ListComponent />
+                <ListComponent defaultVoivodeship={voivodeship} defaultCity={city} />
             </Grid>
             <Grid item xs={12} md={6}>
                 <MapComponent />

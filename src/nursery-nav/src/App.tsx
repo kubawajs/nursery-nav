@@ -20,6 +20,14 @@ const routes = [
     element: <ComparisonPage />
   },
   {
+    path: PathConstants.INSTITUTION_BY_VOIVODESHIP,
+    element: <ListPage />
+  },
+  {
+    path: PathConstants.INSTITUTION_BY_CITY,
+    element: <ListPage />
+  },
+  {
     path: PathConstants.INSTITUTION_DETAILS,
     element: <InstitutionDetailsPage />
   },

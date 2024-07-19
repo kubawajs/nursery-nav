@@ -12,7 +12,12 @@ import { Close, FilterList } from "@mui/icons-material";
 import { useContext, useEffect, useState } from "react";
 import { InstitutionContext } from "../Layout/Layout";
 
-export default function FiltersBar() {
+interface FiltersBarProps {
+    defaultVoivodeship?: string;
+    defaultCity?: string;
+}
+
+export default function FiltersBar({ defaultVoivodeship, defaultCity }: FiltersBarProps) {
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const { institutionIds } = useContext(InstitutionContext);
 
@@ -34,7 +39,7 @@ export default function FiltersBar() {
                         alignItems: 'center'
                     }}
                 >
-                    <Filters />
+                    <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} />
                 </Stack>
             </Box >
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
@@ -58,7 +63,7 @@ export default function FiltersBar() {
                             spacing={2}
                             direction={'column'}
                             p={1}>
-                            <Filters />
+                            <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} />
                             <Button onClick={() => setIsExpanded(false)}>Zamknij<Close /></Button>
                         </Stack>
                     </AccordionDetails>

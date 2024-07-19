@@ -12,7 +12,12 @@ import {
 import PathConstants from '../../shared/pathConstants';
 import InfiniteScroll from 'react-infinite-scroller';
 
-export default function ListComponent() {
+interface ListComponentProps {
+	defaultVoivodeship?: string;
+	defaultCity?: string;
+}
+
+export default function ListComponent({ defaultVoivodeship, defaultCity }: ListComponentProps) {
 	const { setInstitutionIds, setSelectedInstitution } = useContext(InstitutionContext);
 	const [searchParams, setSearchParams] = useSearchParams();
 	setSelectedInstitution(null);
@@ -23,6 +28,14 @@ export default function ListComponent() {
 	const [totalPages, setTotalPages] = useState(1);
 	const [totalItems, setTotalItems] = useState(0);
 	const [itemsToCompare, setItemsToCompare] = useState<number[]>([]);
+
+	if (defaultVoivodeship) {
+		searchParams.set('voivodeship', defaultVoivodeship);
+	}
+
+	if (defaultCity) {
+		searchParams.set('city', defaultCity);
+	}
 
 	const fetchInstitutions = useCallback(async () => {
 		if (loading || pageNum > totalPages) return;
