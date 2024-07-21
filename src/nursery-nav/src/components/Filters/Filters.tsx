@@ -1,4 +1,4 @@
-import { FormControlLabel, Autocomplete, TextField, debounce, RadioGroup } from "@mui/material";
+import { FormControlLabel, Autocomplete, TextField, debounce, RadioGroup, Stack } from "@mui/material";
 import Radio from '@mui/material/Radio';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
@@ -15,9 +15,10 @@ interface CitiesFilterValue {
 interface FiltersProps {
     defaultVoivodeship?: string;
     defaultCity?: string;
+    isMobile?: boolean;
 }
 
-export default function Filters({ defaultVoivodeship, defaultCity }: FiltersProps) {
+export default function Filters({ defaultVoivodeship, defaultCity, isMobile }: FiltersProps) {
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
 
@@ -87,7 +88,12 @@ export default function Filters({ defaultVoivodeship, defaultCity }: FiltersProp
     }
 
     return (
-        <>
+        <Stack
+            spacing={2}
+            direction={isMobile ? 'column' : 'row'}
+            p={1}
+            sx={{ alignItems: 'center' }}
+        >
             <Autocomplete
                 disablePortal
                 onChange={goToDetails}
@@ -162,7 +168,7 @@ export default function Filters({ defaultVoivodeship, defaultCity }: FiltersProp
                 value[1] && searchParams.set('priceMax', value[1].toString());
                 setSearchParams(searchParams);
             }} /> */}
-        </>
+        </Stack>
     );
 }
 

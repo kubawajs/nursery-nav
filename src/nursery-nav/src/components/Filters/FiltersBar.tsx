@@ -11,6 +11,7 @@ import Filters from "./Filters";
 import { Close, FilterList } from "@mui/icons-material";
 import { useContext, useEffect, useState } from "react";
 import { InstitutionContext } from "../Layout/Layout";
+import CityQuickFilters from "./CityQuickFilter";
 
 interface FiltersBarProps {
     defaultVoivodeship?: string;
@@ -29,17 +30,11 @@ export default function FiltersBar({ defaultVoivodeship, defaultCity }: FiltersB
         <Box boxShadow={3}>
             <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                 <Stack
-                    spacing={2}
-                    direction={'row'}
-                    p={1}
-                    sx={{
-                        bgcolor: 'primary.light',
-                        borderBottomLeftRadius: 8,
-                        borderBottomRightRadius: 8,
-                        alignItems: 'center'
-                    }}
+                    direction={'column'}
+                    sx={{ bgcolor: 'primary.light', alignItems: 'center' }}
                 >
                     <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} />
+                    <CityQuickFilters />
                 </Stack>
             </Box >
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
@@ -63,12 +58,13 @@ export default function FiltersBar({ defaultVoivodeship, defaultCity }: FiltersB
                             spacing={2}
                             direction={'column'}
                             p={1}>
-                            <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} />
+                            <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} isMobile={true} />
+                            <CityQuickFilters />
                             <Button onClick={() => setIsExpanded(false)}>Zamknij<Close /></Button>
                         </Stack>
                     </AccordionDetails>
                 </Accordion>
             </Box>
-        </Box>
+        </Box >
     );
 }

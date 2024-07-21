@@ -189,7 +189,7 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 | Add Google Analytics                                 | ✅      |
 | Comparison view                                      | ✅      |
 | Select items to compare on the list view             | ✅      |
-| Quick filters with cities                            |        |
+| Quick filters with cities                            | ✅      |
 | Direct URLs to filtered cities and voivodeships      | ✅      |
 | Feedback form v1 (report data error, suggest change) | ✅      |
 | *About* page content                                 | ✅      |
@@ -215,7 +215,7 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 #### Backend
 
 * [ ] Profile management
-* [ ] Convert data source to MongoDB
+* [ ] Convert data source to DB
 * [ ] CSV import
 * [ ] Fully automate data update process
 
