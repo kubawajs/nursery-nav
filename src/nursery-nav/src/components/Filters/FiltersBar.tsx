@@ -11,6 +11,7 @@ import Filters from "./Filters";
 import { Close, FilterList } from "@mui/icons-material";
 import { useContext, useEffect, useState } from "react";
 import { InstitutionContext } from "../Layout/Layout";
+import CityQuickFilters from "./CityQuickFilter";
 
 interface FiltersBarProps {
     defaultVoivodeship?: string;
@@ -40,6 +41,7 @@ export default function FiltersBar({ defaultVoivodeship, defaultCity }: FiltersB
                     }}
                 >
                     <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} />
+                    <CityQuickFilters />
                 </Stack>
             </Box >
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
