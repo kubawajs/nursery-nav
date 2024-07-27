@@ -77,6 +77,7 @@ FRONTEND_URL=
 CACHE_TTL=
 THROTTLE_TTL=
 THROTTLE_LIMIT=
+MONGODB_URI=
 ```
 
 | Parameter          | Type   | Description                                                                                                                                                                                                                        |
@@ -85,6 +86,7 @@ THROTTLE_LIMIT=
 | **CACHE_TTL**      | number | Cache expiration TTL in milliseconds.                                                                                                                                                                                              |
 | **THROTTLE_TTL**   | number | Throttle time limit in milliseconds.                                                                                                                                                                                               |
 | **THROTTLE_LIMIT** | number | Calls limit within the TTL.                                                                                                                                                                                                        |
+| **MONGODB_URI**    | string | Connection string to MongoDB database.                                                                                                                                                                                             |
 
 #### Running backend
 Go to `./src/nursery-nav-api` and run `npm run start:dev`.
@@ -215,7 +217,7 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 #### Backend
 
 * [ ] Profile management
-* [ ] Convert data source to DB
+* [x] Convert data source to MongoDB
 * [ ] CSV import
 * [ ] Fully automate data update process
 
