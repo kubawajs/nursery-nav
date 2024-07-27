@@ -4,7 +4,6 @@ import { InstitutionsMongoDbService } from "./institutions.mongodb.service";
 import { InstitutionsController } from "./institutions.controller";
 import { Module } from "@nestjs/common";
 import { CacheModule } from "@nestjs/cache-manager";
-import { IInstitutionsService } from "./iinstitutions.service";
 
 @Module({
     imports: [
@@ -14,12 +13,7 @@ import { IInstitutionsService } from "./iinstitutions.service";
         }),
     ],
     controllers: [InstitutionsController],
-    providers: [
-        {
-            provide: IInstitutionsService,
-            useClass: InstitutionsMongoDbService
-        }
-    ]
+    providers: [InstitutionsMongoDbService]
 })
 
 export class InstitutionsModule { }

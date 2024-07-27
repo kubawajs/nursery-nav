@@ -2,12 +2,12 @@ import { Controller, Get, HttpCode, Inject, UseInterceptors } from '@nestjs/comm
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { CityDto } from './DTO/cityDto';
 import { CacheInterceptor } from '@nestjs/cache-manager';
-import { ICitiesService } from './icities.service';
+import { CitiesMongoDbService } from './cities.mongodb.service';
 
 @Controller('cities')
 @UseInterceptors(CacheInterceptor)
 export class CitiesController {
-    constructor(@Inject(ICitiesService) private readonly citiesService: ICitiesService) { }
+    constructor(@Inject(CitiesMongoDbService) private readonly citiesService: CitiesMongoDbService) { }
 
     @Get()
     @HttpCode(200)

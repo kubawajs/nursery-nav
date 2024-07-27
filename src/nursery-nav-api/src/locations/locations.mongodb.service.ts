@@ -2,13 +2,12 @@ import { Inject, Injectable } from "@nestjs/common";
 import { LocationDto } from "./DTO/locationDto";
 import { Cache } from "cache-manager";
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
-import { ILocationsService } from "./ilocations.service";
 import { InjectModel } from "@nestjs/mongoose";
 import { Institution } from "../shared/schemas/institution.schema";
 import { Model } from "mongoose";
 
 @Injectable()
-export class LocationsMongoDbService implements ILocationsService {
+export class LocationsMongoDbService {
     constructor(
         @InjectModel(Institution.name) private institutionModel: Model<Institution>,
         @Inject(CACHE_MANAGER) private cacheManager: Cache) { }

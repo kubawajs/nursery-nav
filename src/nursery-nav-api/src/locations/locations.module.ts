@@ -3,7 +3,6 @@ import { CacheModule } from "@nestjs/cache-manager";
 import { Module } from "@nestjs/common";
 import { Institution, InstitutionSchema } from "../shared/schemas/institution.schema";
 import { LocationsMongoDbService } from "./locations.mongodb.service";
-import { ILocationsService } from "./ilocations.service";
 import { LocationsController } from "./locations.controller";
 
 @Module({
@@ -14,12 +13,7 @@ import { LocationsController } from "./locations.controller";
         }),
     ],
     controllers: [LocationsController],
-    providers: [
-        {
-            provide: ILocationsService,
-            useClass: LocationsMongoDbService
-        }
-    ]
+    providers: [LocationsMongoDbService]
 })
 
 export class LocationModule { }

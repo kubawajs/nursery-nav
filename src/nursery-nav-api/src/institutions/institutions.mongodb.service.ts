@@ -4,7 +4,6 @@ import PaginatedResult from "../shared/models/paginatedresult";
 import { InstitutionAutocompleteDto } from "./DTO/institutionAutocompleteDto";
 import { InstitutionDto } from "./DTO/institutionDto";
 import { InstitutionListItemDto } from "./DTO/institutionListItemDto";
-import { IInstitutionsService } from "./iinstitutions.service";
 import { SortParams } from "./params/sortParams";
 import { Get, Inject, Injectable } from "@nestjs/common";
 import { Institution } from "../shared/schemas/institution.schema";
@@ -13,7 +12,7 @@ import { Cache } from 'cache-manager';
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
 
 @Injectable()
-export class InstitutionsMongoDbService implements IInstitutionsService {
+export class InstitutionsMongoDbService {
     constructor(
         @InjectModel(Institution.name) private institutionModel: Model<Institution>,
         @Inject(CACHE_MANAGER) private cacheManager: Cache) { }
