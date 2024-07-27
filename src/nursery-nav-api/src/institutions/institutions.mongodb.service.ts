@@ -1,24 +1,23 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { InstitutionType } from '../shared/models/institutionType';
-import PaginatedResult from '../shared/models/paginatedresult';
-import { SortParams } from './params/sortParams';
+import { InjectModel } from "@nestjs/mongoose";
+import { InstitutionType } from "../shared/models/institutionType";
+import PaginatedResult from "../shared/models/paginatedresult";
+import { InstitutionAutocompleteDto } from "./DTO/institutionAutocompleteDto";
+import { InstitutionDto } from "./DTO/institutionDto";
+import { InstitutionListItemDto } from "./DTO/institutionListItemDto";
+import { SortParams } from "./params/sortParams";
+import { Inject, Injectable } from "@nestjs/common";
+import { Institution } from "../shared/schemas/institution.schema";
+import { Model } from "mongoose";
 import { Cache } from 'cache-manager';
-import { CACHE_MANAGER } from '@nestjs/cache-manager';
-import { InstitutionAutocompleteDto } from './DTO/institutionAutocompleteDto';
-import { InstitutionDto } from './DTO/institutionDto';
-import { InstitutionListItemDto } from './DTO/institutionListItemDto';
-import { IInstitutionsService } from './iinstitutions.service';
+import { CACHE_MANAGER } from "@nestjs/cache-manager";
 
 @Injectable()
-export class InstitutionsDocumentService implements IInstitutionsService {
-    private institutions: InstitutionDto[];
+export class InstitutionsMongoDbService {
+    constructor(
+        @InjectModel(Institution.name) private institutionModel: Model<Institution>,
+        @Inject(CACHE_MANAGER) private cacheManager: Cache) { }
 
-    constructor(@Inject(CACHE_MANAGER) private cacheManager: Cache) {
-        this.loadData();
-    }
-
-    async findAll(page: number, size: number, sort: SortParams, city?: string, voivodeship?: string, institutionType?: InstitutionType[], priceMin?: number, priceMax?: number)
-        : Promise<PaginatedResult<InstitutionListItemDto>> {
+    async findAll(page: number, size: number, sort: SortParams, city?: string, voivodeship?: string, institutionType?: InstitutionType[], priceMin?: number, priceMax?: number): Promise<PaginatedResult<InstitutionListItemDto>> {
         const CACHE_KEY = 'InstitutionsService_findAll';
         size = this.setPageSize(size);
 
@@ -39,24 +38,28 @@ export class InstitutionsDocumentService implements IInstitutionsService {
         }
 
         // If cache doesn't exist, filter and sort data
-        if (this.institutions) {
-            let institutionsArray = Array.from(this.institutions);
+        let institutions = this.institutionModel.find();
+        if (institutions) {
             if (city) {
-                institutionsArray = institutionsArray.filter((institution) => institution.address.city && institution.address.city.toLowerCase().indexOf(city.toLowerCase()) !== -1);
+                institutions = institutions.find({ 'address.city': { $regex: city, $options: 'i' } });
             }
             if (voivodeship) {
-                institutionsArray = institutionsArray.filter((institution) => institution.address.voivodeship && institution.address.voivodeship.toLowerCase().indexOf(voivodeship.toLowerCase()) !== -1);
+                institutions = institutions.find({ 'address.voivodeship': { $regex: voivodeship, $options: 'i' } });
             }
             if (institutionType && institutionType.length > 0) {
-                institutionsArray = institutionsArray.filter((institution) => institutionType.includes(institution.institutionType));
+                institutions = institutions.find({ institutionType: { $in: institutionType } });
             }
             if (priceMin) {
-                institutionsArray = institutionsArray.filter((institution) => institution.basicPricePerMonth >= priceMin);
+                institutions = institutions.find({ basicPricePerMonth: { $gte: priceMin } });
             }
             if (priceMax) {
-                institutionsArray = institutionsArray.filter((institution) => institution.basicPricePerMonth <= priceMax);
+                institutions = institutions.find({ basicPricePerMonth: { $lte: priceMax } });
             }
-            paginatedResult.totalPages = this.institutions?.length ? Math.ceil(institutionsArray.length / size) : 0;
+
+            const institutionsArray = (await institutions.exec()) as InstitutionDto[];
+            const allInstitutionsCount = await this.GetInstitutionsCount();
+
+            paginatedResult.totalPages = allInstitutionsCount ? Math.ceil(institutionsArray.length / size) : 0;
             paginatedResult.pageIndex = this.setPage(page, paginatedResult.totalPages);
             paginatedResult.totalItems = institutionsArray.length;
             paginatedResult.ids = institutionsArray?.map((institution) => institution.id) ?? [];
@@ -86,10 +89,10 @@ export class InstitutionsDocumentService implements IInstitutionsService {
             return Promise.resolve(cacheData);
         }
 
-        const institution = this.institutions.find((institution) => institution.id === id);
+        const institution = this.institutionModel.findOne({ id: id }).exec();
         if (institution) {
             await this.cacheManager.set(cacheKey, institution);
-            return Promise.resolve(institution);
+            return institution as unknown as InstitutionDto;
         }
 
         return Promise.reject(`Institution with id ${id} not found`);
@@ -103,24 +106,25 @@ export class InstitutionsDocumentService implements IInstitutionsService {
             return Promise.resolve(cacheData);
         }
 
-        const institutions = this.institutions.filter((institution) => ids.includes(institution.id));
+        const institutions = await this.institutionModel.find({ id: { $in: ids } }).exec();
         if (institutions.length === 0) {
             return Promise.reject('Institutions not found');
         }
 
         await this.cacheManager.set(cacheKey, institutions);
-        return Promise.resolve(institutions);
+        return institutions as unknown as InstitutionDto[];
     }
 
-    async getInstitutionsAutocomplete(searchQuery: string): Promise<InstitutionAutocompleteDto[]> {
-        const CACHE_KEY = 'InstitutionsService_getInstitutionsAutocomplete';
+    async getInstitutionsAutocomplete(searchQuery: string, size?: number): Promise<InstitutionAutocompleteDto[]> {
+        size = this.setPageSize(size);
+        const CACHE_KEY = `$InstitutionsService_getInstitutionsAutocomplete_${size}`;
         const cacheKey = `${CACHE_KEY}_${searchQuery}`;
         const cacheData = await this.cacheManager.get(cacheKey) as InstitutionAutocompleteDto[];
         if (cacheData) {
             return Promise.resolve(cacheData);
         }
 
-        const institutions = this.institutions.filter((institution) => institution.name.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1);
+        const institutions = await this.institutionModel.find({ name: { '$regex': searchQuery, '$options': 'i' } }).limit(size).exec();
         const institutionList = institutions.map((institution) => {
             const institutionAutocompleteDto: InstitutionAutocompleteDto = {
                 name: institution.name,
@@ -133,13 +137,16 @@ export class InstitutionsDocumentService implements IInstitutionsService {
         return Promise.resolve(institutionList);
     }
 
-    private async loadData() {
-        try {
-            const data = require('../../data/06062024-RZ-instytucje-enriched.json');
-            this.institutions = data as InstitutionDto[];
-        } catch (error) {
-            console.error('Error loading data:', error);
+    private async GetInstitutionsCount(): Promise<number> {
+        const CACHE_KEY = 'InstitutionsService_GetInstitutionsCount';
+        const cacheData = await this.cacheManager.get(CACHE_KEY) as number;
+        if (cacheData) {
+            return Promise.resolve(cacheData);
         }
+
+        const count = await this.institutionModel.countDocuments().exec();
+        await this.cacheManager.set(CACHE_KEY, count);
+        return count;
     }
 
     private setPage(page: number, totalPages: number): number {
