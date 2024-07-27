@@ -5,7 +5,7 @@ import { InstitutionAutocompleteDto } from "./DTO/institutionAutocompleteDto";
 import { InstitutionDto } from "./DTO/institutionDto";
 import { InstitutionListItemDto } from "./DTO/institutionListItemDto";
 import { SortParams } from "./params/sortParams";
-import { Get, Inject, Injectable } from "@nestjs/common";
+import { Inject, Injectable } from "@nestjs/common";
 import { Institution } from "../shared/schemas/institution.schema";
 import { Model } from "mongoose";
 import { Cache } from 'cache-manager';
@@ -115,15 +115,16 @@ export class InstitutionsMongoDbService {
         return institutions as unknown as InstitutionDto[];
     }
 
-    async getInstitutionsAutocomplete(searchQuery: string): Promise<InstitutionAutocompleteDto[]> {
-        const CACHE_KEY = 'InstitutionsService_getInstitutionsAutocomplete';
+    async getInstitutionsAutocomplete(searchQuery: string, size?: number): Promise<InstitutionAutocompleteDto[]> {
+        size = this.setPageSize(size);
+        const CACHE_KEY = `$InstitutionsService_getInstitutionsAutocomplete_${size}`;
         const cacheKey = `${CACHE_KEY}_${searchQuery}`;
         const cacheData = await this.cacheManager.get(cacheKey) as InstitutionAutocompleteDto[];
         if (cacheData) {
             return Promise.resolve(cacheData);
         }
 
-        const institutions = await this.institutionModel.find({ name: { '$regex': searchQuery, '$options': 'i' } }).exec();
+        const institutions = await this.institutionModel.find({ name: { '$regex': searchQuery, '$options': 'i' } }).limit(size).exec();
         const institutionList = institutions.map((institution) => {
             const institutionAutocompleteDto: InstitutionAutocompleteDto = {
                 name: institution.name,
