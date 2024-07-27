@@ -13,7 +13,7 @@ import { LocationModule as LocationsModule } from './locations/locations.module'
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    MongooseModule.forRoot("mongodb://localhost:27017/NurseryNavDev"),
+    MongooseModule.forRoot(process.env.MONGODB_URI),
     InstitutionsModule,
     CitiesModule,
     LocationsModule,
