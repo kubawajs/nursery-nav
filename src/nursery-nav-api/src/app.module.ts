@@ -15,17 +15,18 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { InstitutionsModule } from './institutions/institutions.module';
 
 import * as mongoose from 'mongoose';
+import { CitiesModule } from './cities/cities.module';
+import { LocationModule as LocationsModule } from './locations/locations.module';
 
 mongoose.set('debug', true);
 
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    CacheModule.register({
-      ttl: Number(process.env.CACHE_TTL)
-    }),
     MongooseModule.forRoot("mongodb://localhost:27017/NurseryNavDev"),
     InstitutionsModule,
+    CitiesModule,
+    LocationsModule,
     ThrottlerModule.forRoot([{
       ttl: Number(process.env.THROTTLE_TTL),
       limit: Number(process.env.THROTTLE_LIMIT),
@@ -33,23 +34,13 @@ mongoose.set('debug', true);
   ],
   controllers: [
     AppController,
-    LocationsController,
-    CitiesController
   ],
   providers: [
     {
       provide: APP_GUARD,
       useClass: ThrottlerGuard,
     },
-    AppService,
-    {
-      provide: ILocationsService,
-      useClass: LocationsDocumentService
-    },
-    {
-      provide: ICitiesService,
-      useClass: CitiesDocumentService
-    }
+    AppService
   ],
 })
 export class AppModule { }
