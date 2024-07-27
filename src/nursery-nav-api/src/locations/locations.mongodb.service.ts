@@ -21,9 +21,6 @@ export class LocationsMongoDbService implements ILocationsService {
         }
 
         const locations = await this.institutionModel.find({}, { id: 1, institutionType: 1, 'address.pin': 1 }).exec();
-
-        console.log(locations);
-
         const locationsDto = locations.map(location => {
             return {
                 institutionType: location.institutionType,
