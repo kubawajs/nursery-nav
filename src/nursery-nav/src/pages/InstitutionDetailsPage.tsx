@@ -16,8 +16,8 @@ export default function InstitutionDetailsPage() {
 
     useEffect(() => {
         const fetchInstitution = async () => {
-            const institution = await getInstitutionDetails([parseInt(id || "")]);
-            setSelectedInstitution(institution[0]);
+            const institution = await getInstitutionDetails(parseInt(id ?? ""));
+            setSelectedInstitution(institution);
         };
         fetchInstitution();
     }, [id, setSelectedInstitution]);

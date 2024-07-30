@@ -31,7 +31,18 @@ export const getInstitutions = async (searchParams: URLSearchParams, pageNum?: n
     return data;
 }
 
-export const getInstitutionDetails = async (ids: number[]): Promise<Institution[]> => {
+export const getInstitutionDetails = async (id: number): Promise<Institution> => {
+    const url = `${process.env.REACT_APP_API_URL}/institutions/details/${id}`;
+    const res = await axios.get(url);
+    if (res.status !== 200) {
+        throw new Error('Failed to fetch institution details');
+    }
+
+    const data = res.data as Institution;
+    return data;
+}
+
+export const getInstitutionsDetails = async (ids: number[]): Promise<Institution[]> => {
     const url = `${process.env.REACT_APP_API_URL}/institutions/details?id=${ids.join('&id=')}`;
     const res = await axios.get(url);
     if (res.status !== 200) {
