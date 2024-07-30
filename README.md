@@ -220,6 +220,7 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 * [x] Convert data source to MongoDB
 * [ ] CSV import
 * [ ] Fully automate data update process
+* [x] Performance upgrade
 
 ### Known bugs
 
