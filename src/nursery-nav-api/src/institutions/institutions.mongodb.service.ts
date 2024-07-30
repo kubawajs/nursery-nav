@@ -63,13 +63,12 @@ export class InstitutionsMongoDbService {
             return Promise.resolve(paginatedResult);
         }
 
-        paginatedResult.totalPages = Math.ceil(institutionsArray.length / size) ?? 0;
-        paginatedResult.pageIndex = this.setPage(page, paginatedResult.totalPages);
-        paginatedResult.totalItems = institutionsArray.length;
-
         let institutionIdsQuery = this.buildFilteredQuery(params).select('id');
         const institutionIds = await institutionIdsQuery.select('id').exec();
         paginatedResult.ids = institutionIds.map((id) => id.id);
+        paginatedResult.totalPages = Math.ceil(institutionIds.length / size) ?? 0;
+        paginatedResult.pageIndex = this.setPage(page, paginatedResult.totalPages);
+        paginatedResult.totalItems = institutionIds.length;
 
         const institutionList = institutionsArray.map((institution) => {
             const institutionListItem: InstitutionListItemDto = this.mapToInstutionListItem(institution);
