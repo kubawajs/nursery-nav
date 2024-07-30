@@ -11,6 +11,7 @@ import {
 	generatePath,
 } from 'react-router-dom';
 import PathConstants from '../../shared/pathConstants';
+import { getLocations } from '../../api/LocationsFetcher';
 
 export default function MapComponent() {
 	const { institutionIds } = useContext(InstitutionContext);
@@ -23,8 +24,7 @@ export default function MapComponent() {
 	const isSm = window.innerWidth < 900;
 
 	const fetchLocations = async () => {
-		const res = await fetch(`${process.env.REACT_APP_API_URL}/locations`);
-		const data = await res.json() as LocationResponse[];
+		const data = await getLocations();
 		setLocations(data);
 	};
 

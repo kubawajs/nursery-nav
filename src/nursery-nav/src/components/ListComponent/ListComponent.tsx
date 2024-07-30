@@ -11,6 +11,7 @@ import {
 } from 'react-router-dom';
 import PathConstants from '../../shared/pathConstants';
 import InfiniteScroll from 'react-infinite-scroller';
+import { getInstitutions } from '../../api/InstitutionsFetcher';
 
 interface ListComponentProps {
 	defaultVoivodeship?: string;
@@ -41,8 +42,7 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 		if (loading || pageNum > totalPages) return;
 
 		setLoading(true);
-		const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?page=${pageNum}&${searchParams}`);
-		const data = await res.json() as { items: InstitutionListItem[], totalItems: number, totalPages: number };
+		const data = await getInstitutions(searchParams, pageNum);
 		setInstitutions((prevInstitutions) => [...prevInstitutions, ...data.items]);
 		setPageNum((prevPageNum) => prevPageNum + 1);
 		setLoading(false);
@@ -70,8 +70,7 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 		const getData = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch(`${process.env.REACT_APP_API_URL}/institutions?${searchParams}`);
-				const data = await res.json() as { items: InstitutionListItem[], ids: number[], totalItems: number, totalPages: number };
+				const data = await getInstitutions(searchParams);
 				setInstitutions(data.items);
 				setTotalItems(data.totalItems);
 				setTotalPages(data.totalPages);
