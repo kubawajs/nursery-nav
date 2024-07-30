@@ -3,6 +3,7 @@ import { Institution, InstitutionType } from "../../shared/nursery.interface";
 import { useEffect, useState } from "react";
 import { generatePath } from "react-router-dom";
 import PathConstants from "../../shared/pathConstants";
+import { getInstitutionsDetails } from "../../api/InstitutionsFetcher";
 
 export interface InstitutionToCompare {
     id: number;
@@ -27,8 +28,7 @@ export default function Comparison({ ids }: ComparisonProps) {
 
     useEffect(() => {
         const fetchInstitution = async () => {
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions/details?id=${ids.join('&id=')}`);
-            const institutionsDto = await response.json() as Institution[];
+            const institutionsDto = await getInstitutionsDetails(ids);
             const institutionsToCompare: InstitutionToCompare[] = institutionsDto.map((institution: Institution) => {
                 const institutionToCompare: InstitutionToCompare = {
                     id: institution.id,

@@ -36,7 +36,8 @@ export class InstitutionsController {
         @Query('priceMax') priceMax: number,
         @Query('sort') sort: SortParams = SortParams.NAME_ASC)
         : Promise<PaginatedResult<InstitutionListItemDto>> {
-        return await this.institutionsService.findAll(page, size, sort, city, voivodeship, insType, priceMin, priceMax);
+        const params = { page, size, sort, city, voivodeship, insType, priceMin, priceMax };
+        return await this.institutionsService.findAll(params);
     }
 
     @Get('details/:id')

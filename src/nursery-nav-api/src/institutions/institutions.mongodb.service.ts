@@ -7,9 +7,20 @@ import { InstitutionListItemDto } from "./DTO/institutionListItemDto";
 import { SortParams } from "./params/sortParams";
 import { Inject, Injectable } from "@nestjs/common";
 import { Institution } from "../shared/schemas/institution.schema";
-import { Model } from "mongoose";
+import { Document, Model, Query, Types } from "mongoose";
 import { Cache } from 'cache-manager';
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
+
+export interface findAllParams {
+    page: number;
+    size: number;
+    sort: SortParams;
+    city?: string;
+    voivodeship?: string;
+    insType?: InstitutionType[];
+    priceMin?: number;
+    priceMax?: number;
+}
 
 @Injectable()
 export class InstitutionsMongoDbService {
@@ -17,9 +28,9 @@ export class InstitutionsMongoDbService {
         @InjectModel(Institution.name) private institutionModel: Model<Institution>,
         @Inject(CACHE_MANAGER) private cacheManager: Cache) { }
 
-    async findAll(page: number, size: number, sort: SortParams, city?: string, voivodeship?: string, institutionType?: InstitutionType[], priceMin?: number, priceMax?: number): Promise<PaginatedResult<InstitutionListItemDto>> {
+    async findAll(params: findAllParams): Promise<PaginatedResult<InstitutionListItemDto>> {
         const CACHE_KEY = 'InstitutionsService_findAll';
-        size = this.setPageSize(size);
+        let size = this.setPageSize(params.size);
 
         const paginatedResult: PaginatedResult<InstitutionListItemDto> = {
             items: [],
@@ -31,53 +42,44 @@ export class InstitutionsMongoDbService {
         };
 
         // If cache exists, return it
-        const cacheKey = `${CACHE_KEY}_${page || 1}_${size}_${sort}_${city}_${voivodeship}_${institutionType}_${priceMin}_${priceMax}`;
+        let cacheKey = `${CACHE_KEY}_${params.page || 1}_${size}_${params.sort}_${params.city}_${params.voivodeship}_${params.insType}_${params.priceMin}_${params.priceMax}`;
         const result = await this.cacheManager.get(cacheKey) as PaginatedResult<InstitutionListItemDto>;
         if (result) {
             return Promise.resolve(result);
         }
 
         // If cache doesn't exist, filter and sort data
-        let institutions = this.institutionModel.find();
-        if (institutions) {
-            if (city) {
-                institutions = institutions.find({ 'address.city': { $regex: city, $options: 'i' } });
-            }
-            if (voivodeship) {
-                institutions = institutions.find({ 'address.voivodeship': { $regex: voivodeship, $options: 'i' } });
-            }
-            if (institutionType && institutionType.length > 0) {
-                institutions = institutions.find({ institutionType: { $in: institutionType } });
-            }
-            if (priceMin) {
-                institutions = institutions.find({ basicPricePerMonth: { $gte: priceMin } });
-            }
-            if (priceMax) {
-                institutions = institutions.find({ basicPricePerMonth: { $lte: priceMax } });
-            }
+        let institutionsQuery = this.buildFilteredQuery(params);
+        institutionsQuery = this.addQuerySorting(params.sort, institutionsQuery);
 
-            const institutionsArray = (await institutions.exec()) as InstitutionDto[];
-            const allInstitutionsCount = await this.GetInstitutionsCount();
+        let page = params.page === undefined || isNaN(params.page) || params.page < 1 ? 1 : params.page;
+        institutionsQuery = institutionsQuery
+            .skip((page - 1) * size)
+            .limit(size)
+            .select('id institutionType name website email phone basicPricePerMonth basicPricePerHour isAdaptedToDisabledChildren address');
+        const institutionsArray = (await institutionsQuery.exec()) as InstitutionDto[];
 
-            paginatedResult.totalPages = allInstitutionsCount ? Math.ceil(institutionsArray.length / size) : 0;
-            paginatedResult.pageIndex = this.setPage(page, paginatedResult.totalPages);
-            paginatedResult.totalItems = institutionsArray.length;
-            paginatedResult.ids = institutionsArray?.map((institution) => institution.id) ?? [];
-
-            const sortedInstutions = institutionsArray.sort((a, b) => this.sortMethod(sort, a, b));
-            const pageData = sortedInstutions.slice((paginatedResult.pageIndex - 1) * size, paginatedResult.pageIndex * size);
-            const institutionList = pageData.map((institution) => {
-                const institutionListItem: InstitutionListItemDto = this.mapToInstutionListItem(institution);
-                return institutionListItem;
-            });
-            paginatedResult.items = institutionList;
-
-            // Save to cache
-            const cacheKey = `${CACHE_KEY}_${paginatedResult.pageIndex}_${size}_${sort}_${city}_${voivodeship}_${institutionType}_${priceMin}_${priceMax}`;
-            await this.cacheManager.set(cacheKey, paginatedResult);
+        if (institutionsArray.length === 0) {
             return Promise.resolve(paginatedResult);
         }
 
+        paginatedResult.totalPages = Math.ceil(institutionsArray.length / size) ?? 0;
+        paginatedResult.pageIndex = this.setPage(page, paginatedResult.totalPages);
+        paginatedResult.totalItems = institutionsArray.length;
+
+        let institutionIdsQuery = this.buildFilteredQuery(params).select('id');
+        const institutionIds = await institutionIdsQuery.select('id').exec();
+        paginatedResult.ids = institutionIds.map((id) => id.id);
+
+        const institutionList = institutionsArray.map((institution) => {
+            const institutionListItem: InstitutionListItemDto = this.mapToInstutionListItem(institution);
+            return institutionListItem;
+        });
+        paginatedResult.items = institutionList;
+
+        // Save to cache
+        cacheKey = `${CACHE_KEY}_${paginatedResult.pageIndex}_${size}_${params.sort}_${params.city}_${params.voivodeship}_${params.insType}_${params.priceMin}_${params.priceMax}`;
+        await this.cacheManager.set(cacheKey, paginatedResult);
         return Promise.resolve(paginatedResult);
     }
 
@@ -137,18 +139,6 @@ export class InstitutionsMongoDbService {
         return Promise.resolve(institutionList);
     }
 
-    private async GetInstitutionsCount(): Promise<number> {
-        const CACHE_KEY = 'InstitutionsService_GetInstitutionsCount';
-        const cacheData = await this.cacheManager.get(CACHE_KEY) as number;
-        if (cacheData) {
-            return Promise.resolve(cacheData);
-        }
-
-        const count = await this.institutionModel.countDocuments().exec();
-        await this.cacheManager.set(CACHE_KEY, count);
-        return count;
-    }
-
     private setPage(page: number, totalPages: number): number {
         if (page === undefined || isNaN(page)) {
             return 1;
@@ -183,18 +173,45 @@ export class InstitutionsMongoDbService {
         };
     }
 
-    private sortMethod(sort: SortParams, a: InstitutionDto, b: InstitutionDto) {
+    private buildFilteredQuery(params: findAllParams) {
+        let institutionsQuery = this.institutionModel.find();
+        if (params.city) {
+            institutionsQuery = institutionsQuery.find({ 'address.city': { $regex: params.city, $options: 'i' } });
+        }
+        if (params.voivodeship) {
+            institutionsQuery = institutionsQuery.find({ 'address.voivodeship': { $regex: params.voivodeship, $options: 'i' } });
+        }
+        if (params.insType && params.insType.length > 0) {
+            console.log("params.insType", params.insType);
+            institutionsQuery = institutionsQuery.find({ institutionType: { $in: params.insType } });
+        }
+        if (params.priceMin) {
+            institutionsQuery = institutionsQuery.find({ basicPricePerMonth: { $gte: params.priceMin } });
+        }
+        if (params.priceMax) {
+            institutionsQuery = institutionsQuery.find({ basicPricePerMonth: { $lte: params.priceMax } });
+        }
+        return institutionsQuery;
+    }
+
+    private addQuerySorting(sort: SortParams, institutionsQuery: Query<(Document<unknown, {}, Institution> & Institution & { _id: Types.ObjectId; })[], Document<unknown, {}, Institution> & Institution & { _id: Types.ObjectId; }, {}, Institution, "find", {}>) {
         switch (sort) {
             case SortParams.PRICE_ASC:
-                return a.basicPricePerMonth - b.basicPricePerMonth || a.basicPricePerHour - b.basicPricePerHour;
+                institutionsQuery = institutionsQuery.sort({ basicPricePerMonth: 1, basicPricePerHour: 1 });
+                break;
             case SortParams.PRICE_DESC:
-                return b.basicPricePerMonth - a.basicPricePerMonth || b.basicPricePerHour - a.basicPricePerHour;
+                institutionsQuery = institutionsQuery.sort({ basicPricePerMonth: -1, basicPricePerHour: -1 });
+                break;
             case SortParams.NAME_ASC:
-                return a.name.localeCompare(b.name);
+                institutionsQuery = institutionsQuery.sort({ name: 1 });
+                break;
             case SortParams.NAME_DESC:
-                return b.name.localeCompare(a.name);
+                institutionsQuery = institutionsQuery.sort({ name: -1 });
+                break;
             default:
-                return 0;
+                institutionsQuery = institutionsQuery.sort({ name: 1 });
+                break;
         }
+        return institutionsQuery;
     }
 }

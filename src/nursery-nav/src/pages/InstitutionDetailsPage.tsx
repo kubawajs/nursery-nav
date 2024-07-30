@@ -5,6 +5,7 @@ import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { InstitutionContext } from "../components/Layout/Layout";
 import { Helmet } from "react-helmet-async";
+import { getInstitutionDetails } from "../api/InstitutionsFetcher";
 
 export default function InstitutionDetailsPage() {
     const { selectedInstitution, setSelectedInstitution } = useContext(InstitutionContext);
@@ -15,8 +16,7 @@ export default function InstitutionDetailsPage() {
 
     useEffect(() => {
         const fetchInstitution = async () => {
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/institutions/details/${id}`);
-            const institution = await response.json();
+            const institution = await getInstitutionDetails(parseInt(id ?? ""));
             setSelectedInstitution(institution);
         };
         fetchInstitution();
