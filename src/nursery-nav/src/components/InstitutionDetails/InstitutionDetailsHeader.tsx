@@ -2,11 +2,11 @@ import { Box, Chip, Paper, Stack, Typography } from "@mui/material";
 import { Institution, InstitutionType } from "../../shared/nursery.interface";
 import { Accessible, CurrencyExchange, DinnerDining, FmdGood, MoreTime, Payments } from "@mui/icons-material";
 import PropTypes from "prop-types";
+import { useMemo } from "react";
 
-function PriceWithLabel(label: string, icon: PropTypes.ReactComponentLike, color: string, price?: number) {
-    const Icon = icon;
+const PriceWithLabel = ({ label, icon: Icon, color, price }: { label: string, icon: React.ElementType, color: string, price?: number }) => {
     const iconColor = color + '.dark';
-    return (price && price > 0 && (
+    return price && price > 0 ? (
         <Paper elevation={0}>
             <Stack direction='column' justifyContent='center' alignItems='center'>
                 <Icon fontSize='large' sx={{ color: iconColor }} />
@@ -18,13 +18,20 @@ function PriceWithLabel(label: string, icon: PropTypes.ReactComponentLike, color
                 </Typography>
             </Stack>
         </Paper>
-    )) || null;
-}
+    ) : null;
+};
 
-export default function InstitutionDetailsHeader(institution: Institution) {
-    const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
-    const institutionType = institution.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY';
-    const backgroundColor = mainColor + '.light';
+PriceWithLabel.propTypes = {
+    label: PropTypes.string.isRequired,
+    icon: PropTypes.elementType.isRequired,
+    color: PropTypes.string.isRequired,
+    price: PropTypes.number,
+};
+
+export default function InstitutionDetailsHeader({ institution }: { institution: Institution }) {
+    const mainColor = useMemo(() => institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary', [institution.institutionType]);
+    const institutionType = useMemo(() => institution.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY', [institution.institutionType]);
+    const backgroundColor = useMemo(() => mainColor + '.light', [mainColor]);
 
     return (
         <Box p={2}>
@@ -53,14 +60,14 @@ export default function InstitutionDetailsHeader(institution: Institution) {
                         textAlign='center'
                         gap={{ xs: 1, sm: 2, md: 3 }}
                     >
-                        {PriceWithLabel('miesiąc', Payments, mainColor, institution.basicPricePerMonth)}
-                        {PriceWithLabel('godzina', CurrencyExchange, mainColor, institution.basicPricePerHour)}
-                        {PriceWithLabel('pobyt powyżej 10h', MoreTime, mainColor, institution.extendedStayOver10H)}
-                        {PriceWithLabel('wyżywienie / miesiąc', DinnerDining, mainColor, institution.foodPricePerMonth)}
-                        {PriceWithLabel('wyżywienie / dzień', DinnerDining, mainColor, institution.foodPricePerDay)}
+                        <PriceWithLabel label="miesiąc" icon={Payments} color={mainColor} price={institution.basicPricePerMonth} />
+                        <PriceWithLabel label="godzina" icon={CurrencyExchange} color={mainColor} price={institution.basicPricePerHour ?? 0} />
+                        <PriceWithLabel label="pobyt powyżej 10h" icon={MoreTime} color={mainColor} price={institution.extendedStayOver10H} />
+                        <PriceWithLabel label="wyżywienie / miesiąc" icon={DinnerDining} color={mainColor} price={institution.foodPricePerMonth} />
+                        <PriceWithLabel label="wyżywienie / dzień" icon={DinnerDining} color={mainColor} price={institution.foodPricePerDay} />
                     </Stack>
                 </Box>
             </Paper>
-        </Box >
+        </Box>
     );
 }

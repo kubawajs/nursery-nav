@@ -1,40 +1,45 @@
 import { ChatBubble } from "@mui/icons-material";
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab } from "@mui/material";
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 
 export default function ContactUs() {
     const [open, setOpen] = useState(false);
-    const contactMail = process.env.REACT_APP_CONTACT_MAIL;
+    const contactMail = useMemo(() => process.env.REACT_APP_CONTACT_MAIL, []);
 
-    const handleClickOpen = () => {
+    const handleClickOpen = useCallback(() => {
         setOpen(true);
-    }
+    }, []);
 
-    const handleClose = () => {
+    const handleClose = useCallback(() => {
         setOpen(false);
+    }, []);
+
+    if (!contactMail) {
+        return null;
     }
 
     return (
-        contactMail ? <>
-            <Fab color="secondary" aria-label="Skontaktuj się z nami"
+        <>
+            <Fab
+                color="secondary"
+                aria-label="Skontaktuj się z nami"
                 sx={{ position: 'fixed', right: '0.5rem', bottom: '0.5rem', color: '#fff' }}
-                onClick={handleClickOpen}>
+                onClick={handleClickOpen}
+            >
                 <ChatBubble />
             </Fab>
             <Dialog open={open} onClose={handleClose}>
-                <DialogTitle variant="h3">
-                    Skontaktuj się z nami
-                </DialogTitle>
+                <DialogTitle variant="h3">Skontaktuj się z nami</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
                         Jeśli masz pytania, uwagi lub sugestie, skontaktuj się z nami.
                     </DialogContentText>
                     <DialogActions>
                         <Button onClick={handleClose}>Anuluj</Button>
-                        <Button href={`mailto:${process.env.REACT_APP_CONTACT_MAIL}`} onClick={handleClose}>Wyślij e-mail</Button>
+                        <Button href={`mailto:${contactMail}`} onClick={handleClose}>Wyślij e-mail</Button>
                     </DialogActions>
                 </DialogContent>
             </Dialog>
-        </> : <></>
-    )
-};
+        </>
+    );
+}
