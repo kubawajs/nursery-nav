@@ -5,7 +5,10 @@ import { Clear, Map, SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-ma
 import { InstitutionListItem } from '../../shared/nursery.interface';
 import { InstitutionContext } from '../Layout/Layout';
 import { useSearchParams } from 'react-router-dom';
-import { Link as RouterLink, generatePath } from 'react-router-dom';
+import {
+	Link as RouterLink,
+	generatePath,
+} from 'react-router-dom';
 import PathConstants from '../../shared/pathConstants';
 import InfiniteScroll from 'react-infinite-scroller';
 import { getInstitutions } from '../../api/InstitutionsFetcher';
@@ -18,23 +21,52 @@ interface ListComponentProps {
 export default function ListComponent({ defaultVoivodeship, defaultCity }: ListComponentProps) {
 	const { setInstitutionIds, setSelectedInstitution } = useContext(InstitutionContext);
 	const [searchParams, setSearchParams] = useSearchParams();
+	setSelectedInstitution(null);
 
 	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
 	const [loading, setLoading] = useState(true);
-	const [pageNum, setPageNum] = useState(1);
+	const [pageNum, setPageNum] = useState(2);
 	const [totalPages, setTotalPages] = useState(1);
 	const [totalItems, setTotalItems] = useState(0);
 	const [itemsToCompare, setItemsToCompare] = useState<number[]>([]);
 
-	useEffect(() => {
-		if (defaultVoivodeship) searchParams.set('voivodeship', defaultVoivodeship);
-		if (defaultCity) searchParams.set('city', defaultCity);
-		setSearchParams(searchParams);
-	}, [defaultVoivodeship, defaultCity, searchParams, setSearchParams]);
+	if (defaultVoivodeship) {
+		searchParams.set('voivodeship', defaultVoivodeship);
+	}
+
+	if (defaultCity) {
+		searchParams.set('city', defaultCity);
+	}
+
+	const fetchInstitutions = useCallback(async () => {
+		if (loading || pageNum > totalPages) return;
+
+		setLoading(true);
+		const data = await getInstitutions(searchParams, pageNum);
+		setInstitutions((prevInstitutions) => [...prevInstitutions, ...data.items]);
+		setPageNum((prevPageNum) => prevPageNum + 1);
+		setLoading(false);
+	}, [pageNum, loading, totalPages, searchParams]);
+
+	const institutionItems = useMemo(() => institutions.map((institution, index) => (
+		<Box key={index}>
+			<ListComponentItem
+				key={institution.id}
+				name={institution.name}
+				id={institution.id}
+				institutionType={institution.institutionType}
+				city={institution.city}
+				basicPricePerHour={institution.basicPricePerHour}
+				basicPricePerMonth={institution.basicPricePerMonth}
+				website={institution.website}
+				phone={institution.phone}
+				email={institution.email}
+				isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
+				isAvailable={institution.isAvailable} />
+		</Box>
+	)), [institutions]);
 
 	useEffect(() => {
-		setSelectedInstitution(null);
-
 		const getData = async () => {
 			setLoading(true);
 			try {
@@ -50,61 +82,24 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 		};
 
 		getData();
-	}, [searchParams, setInstitutionIds, setSelectedInstitution]);
+	}, [searchParams, setInstitutionIds]);
 
 	useEffect(() => {
 		const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
 		setItemsToCompare(itemsToCompare);
-
-		const handleStorageChange = () => {
-			const updatedItems = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
-			setItemsToCompare(updatedItems);
-		};
-
-		window.addEventListener('storage', handleStorageChange);
-		return () => {
-			window.removeEventListener('storage', handleStorageChange);
-		};
-	}, []);
-
-	const fetchInstitutions = useCallback(async () => {
-		if (loading || pageNum > totalPages) return;
-
-		setLoading(true);
-		const data = await getInstitutions(searchParams, pageNum);
-		setInstitutions((prevInstitutions) => [...prevInstitutions, ...data.items]);
-		setPageNum((prevPageNum) => prevPageNum + 1);
-		setLoading(false);
-	}, [loading, pageNum, totalPages, searchParams]);
+		window.dispatchEvent(new Event('storage'))
+	}, [itemsToCompare]);
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		searchParams.set('sort', event.target.value);
 		setSearchParams(searchParams);
 	}, [searchParams, setSearchParams]);
 
-	const clearComparison = useCallback(() => {
+	const clearComparison = () => {
 		localStorage.removeItem('itemsToCompare');
 		setItemsToCompare([]);
-		window.dispatchEvent(new Event('storage'));
-	}, []);
-
-	const institutionItems = useMemo(() => institutions.map((institution) => (
-		<Box key={institution.id}>
-			<ListComponentItem
-				name={institution.name}
-				id={institution.id}
-				institutionType={institution.institutionType}
-				city={institution.city}
-				basicPricePerHour={institution.basicPricePerHour}
-				basicPricePerMonth={institution.basicPricePerMonth}
-				website={institution.website}
-				phone={institution.phone}
-				email={institution.email}
-				isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
-				isAvailable={institution.isAvailable}
-			/>
-		</Box>
-	)), [institutions]);
+		window.dispatchEvent(new Event('storage'))
+	};
 
 	return (
 		<Box>
@@ -121,16 +116,18 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 								Porównanie ({itemsToCompare.length}/5)
 							</Button>
 							{itemsToCompare.length > 0 && (
-								<Button variant='contained' color='error' aria-label="Wyczyść porównanie" sx={{ marginLeft: '0.5rem' }} onClick={clearComparison}>
+								<Button variant='contained' color='error' aria-label="Wyczyść porównanie" sx={{ marginLeft: '0.5rem' }} onClick={() => clearComparison()}>
 									<Clear /> Wyczyść
 								</Button>
 							)}
 						</Box>
-						{institutions.length > 0 && (
+
+						{institutions && institutions.length > 0 && (
 							<Typography variant='body2' color="text.secondary" gutterBottom>
 								Znaleziono {totalItems} placówek
 							</Typography>
 						)}
+
 						<FormControl variant="standard" sx={{ m: 1, minWidth: 180 }}>
 							<InputLabel id="sorting-select-label">Sortowanie</InputLabel>
 							<Select
@@ -164,9 +161,9 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 						</Stack>
 					}
 				>
-					{institutionItems}
+					{institutions && institutions.length > 0 && institutionItems}
 				</InfiniteScroll>
 			</List>
-		</Box>
+		</Box >
 	);
 }

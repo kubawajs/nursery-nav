@@ -1,12 +1,15 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
 import { Box, Button, Container } from '@mui/material';
 import MapPin from '../MapPin/MapPin';
-import { useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import MarkerClusterGroup from 'react-leaflet-cluster';
+import { useContext, useEffect, useMemo, useState } from 'react';
+import MarkerClusterGroup from 'react-leaflet-cluster'
 import './MapComponent.css';
 import { LocationResponse } from '../../shared/nursery.interface';
 import { InstitutionContext } from '../Layout/Layout';
-import { Link as RouterLink, generatePath } from 'react-router-dom';
+import {
+	Link as RouterLink,
+	generatePath,
+} from 'react-router-dom';
 import PathConstants from '../../shared/pathConstants';
 import { getLocations } from '../../api/LocationsFetcher';
 
@@ -20,22 +23,10 @@ export default function MapComponent() {
 	const isXs = window.innerWidth < 600;
 	const isSm = window.innerWidth < 900;
 
-	const fetchLocations = useCallback(async () => {
+	const fetchLocations = async () => {
 		const data = await getLocations();
 		setLocations(data);
-	}, []);
-
-	useEffect(() => {
-		fetchLocations();
-	}, [fetchLocations]);
-
-	useEffect(() => {
-		if (institutionIds.length === 0) {
-			setLocationsFiltered(locations);
-		} else {
-			setLocationsFiltered(locations.filter(location => institutionIds.includes(location.id)));
-		}
-	}, [institutionIds, locations]);
+	};
 
 	const markers = useMemo(() => locationsFiltered.map((location) => (
 		<MapPin
@@ -46,6 +37,19 @@ export default function MapComponent() {
 			institutionType={location.institutionType}
 		/>
 	)), [locationsFiltered]);
+
+	useEffect(() => {
+		fetchLocations();
+	}, []);
+
+	useEffect(() => {
+		if (institutionIds.length === 0) {
+			setLocationsFiltered(locations);
+		}
+		else {
+			setLocationsFiltered(locations.filter((location) => institutionIds.includes(location.id)));
+		}
+	}, [institutionIds, locations]);
 
 	return (
 		<Box>
@@ -71,8 +75,7 @@ export default function MapComponent() {
 					<MarkerClusterGroup
 						className="marker-cluster-group"
 						polygonOptions={{ opacity: 0 }}
-						chunkedLoading
-					>
+						chunkedLoading>
 						{markers}
 					</MarkerClusterGroup>
 				</MapContainer>

@@ -181,6 +181,7 @@ export class InstitutionsMongoDbService {
             institutionsQuery = institutionsQuery.find({ 'address.voivodeship': { $regex: params.voivodeship, $options: 'i' } });
         }
         if (params.insType && params.insType.length > 0) {
+            console.log("params.insType", params.insType);
             institutionsQuery = institutionsQuery.find({ institutionType: { $in: params.insType } });
         }
         if (params.priceMin) {

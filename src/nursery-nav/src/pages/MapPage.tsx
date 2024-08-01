@@ -4,21 +4,16 @@ import FiltersBar from "../components/Filters/FiltersBar";
 import MapComponent from "../components/MapComponent/MapComponent";
 import ListComponent from "../components/ListComponent/ListComponent";
 import { useParams } from "react-router-dom";
-import { useMemo } from "react";
 
 export default function MapPage() {
     const { voivodeship, city } = useParams<{ voivodeship: string | undefined, city: string | undefined }>();
-
-    const title = useMemo(() => {
-        let baseTitle = `Wyszukiwarka Żłobków i Klubów Dziecięcych - widok mapy | ${process.env.REACT_APP_NAME}`;
-        if (voivodeship && city) {
-            return `Żłobek ${city.toLocaleUpperCase()}, ${voivodeship.toLocaleUpperCase()} - ` + baseTitle;
-        }
-        if (voivodeship) {
-            return `Żłobki ${voivodeship.toLocaleUpperCase()} - ` + baseTitle;
-        }
-        return baseTitle;
-    }, [voivodeship, city]);
+    let title = `Wyszukiwarka Żłobków i Klubów Dziecięcych - widok mapy | ${process.env.REACT_APP_NAME}`;
+    if (voivodeship && city) {
+        title = `Żłobek ${city.toLocaleUpperCase()}, ${voivodeship.toLocaleUpperCase()} - ` + title;
+    }
+    else if (voivodeship) {
+        title = `Żłobki ${voivodeship.toLocaleUpperCase()} - ` + title;
+    }
 
     const description = "Znajdź idealny żłobek dla dziecka w najlepszej cenie PLN na miesiąc. Sprawdź dostępność miejsc i dowiedz się, gdzie ich brak. Poznaj nazwy żłobków w okolicy.";
     const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
@@ -37,16 +32,14 @@ export default function MapPage() {
                 <meta name="twitter:image" content={image} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
-            <Grid container spacing={2}>
-                <Grid item xs={12} zIndex={19}>
-                    <FiltersBar defaultVoivodeship={voivodeship} defaultCity={city} />
-                </Grid>
-                <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
-                    <ListComponent defaultVoivodeship={voivodeship} defaultCity={city} />
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <MapComponent />
-                </Grid>
+            <Grid item xs={12} zIndex={19}>
+                <FiltersBar defaultVoivodeship={voivodeship} defaultCity={city} />
+            </Grid>
+            <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
+                <ListComponent defaultVoivodeship={voivodeship} defaultCity={city} />
+            </Grid>
+            <Grid item xs={12} md={6}>
+                <MapComponent />
             </Grid>
         </>
     );

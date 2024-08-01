@@ -2,7 +2,7 @@ import { Marker, Popup, useMap } from 'react-leaflet';
 import { Crib } from '@mui/icons-material';
 import { divIcon } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { useContext, useEffect, useCallback, useMemo } from 'react';
+import { useContext, useEffect } from 'react';
 import { InstitutionContext } from '../Layout/Layout';
 import { Institution, InstitutionType } from '../../shared/nursery.interface';
 import './MapPin.css';
@@ -21,37 +21,23 @@ export default function MapPin(props: MapPinProps) {
 	const map = useMap();
 	const { selectedInstitution } = useContext(InstitutionContext);
 	const navigate = useNavigate();
-
-	const zoomOnInstitution = useCallback((institution: Institution) => {
+	const zoomOnInstitution = (institution: Institution) => {
 		map.setView([institution.address.pin.latitude, institution.address.pin.longitude], 18, {
-			animate: true,
+			animate: true
 		});
-	}, [map]);
+	};
 
 	useEffect(() => {
-		if (selectedInstitution) {
+		if (selectedInstitution !== null) {
 			zoomOnInstitution(selectedInstitution);
 		}
-	}, [selectedInstitution, zoomOnInstitution]);
+	});
 
-	const position: [number, number] = useMemo(() => [props.latitude, props.longitude], [props.latitude, props.longitude]);
-	const institutionType = useMemo(() => (props.institutionType === InstitutionType.NURSERY ? 'nursery' : 'childclub'), [props.institutionType]);
-	const institutionLabel = useMemo(() => (props.institutionType === InstitutionType.NURSERY ? 'żłobek' : 'klub dziecięcy'), [props.institutionType]);
-	const iconBackgroundColor = useMemo(() => `map-pin-icon map-pin-icon-${institutionType}`, [institutionType]);
-	const mainColor = useMemo(() => (props.institutionType === InstitutionType.NURSERY ? "primary" : "secondary"), [props.institutionType]);
-
-	const markerIcon = useMemo(() => (
-		divIcon({
-			html: renderToStaticMarkup(
-				<Crib
-					className={iconBackgroundColor}
-					fill='#fff'
-				/>
-			),
-			iconSize: [30, 30],
-			className: 'map-pin-div-icon',
-		})
-	), [iconBackgroundColor]);
+	const position: [number, number] = [props.latitude, props.longitude];
+	const institutionType = props.institutionType === InstitutionType.NURSERY ? 'nursery' : 'childclub';
+	const institutionLabel = props.institutionType === InstitutionType.NURSERY ? 'żłobek' : 'klub dziecięcy';
+	const iconBackgroundColor = `map-pin-icon map-pin-icon-${institutionType}`;
+	const mainColor = props.institutionType === InstitutionType.NURSERY ? "primary" : "secondary";
 
 	return (
 		<Marker
@@ -61,17 +47,26 @@ export default function MapPin(props: MapPinProps) {
 				}
 			}}
 			position={position}
-			icon={markerIcon}
+			icon={divIcon({
+				html: renderToStaticMarkup(
+					<Crib
+						className={iconBackgroundColor}
+						fill='#fff'
+					/>
+				),
+				iconSize: [30, 30],
+				className: 'map-pin-div-icon',
+			})}
 		>
-			{selectedInstitution && (
+			{selectedInstitution &&
 				<Popup>
 					<Box>
 						<Chip label={institutionLabel.toLocaleUpperCase()} color={mainColor} sx={{ marginBottom: 1 }} />
-						<Typography variant='h5'>{selectedInstitution.name}</Typography>
-						<Typography variant='body1'>{selectedInstitution.address.fullAddress}</Typography>
+						<Typography variant='h5'>{selectedInstitution?.name}</Typography>
+						<Typography variant='body1'>{selectedInstitution?.address.fullAddress}</Typography>
 					</Box>
 				</Popup>
-			)}
+			}
 		</Marker>
 	);
 }
