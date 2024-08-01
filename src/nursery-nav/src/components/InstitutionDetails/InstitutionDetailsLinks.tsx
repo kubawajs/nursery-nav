@@ -1,9 +1,10 @@
 import { PhoneAndroid, Mail, Language } from "@mui/icons-material";
 import { Box, Stack, Divider, Typography, Link } from "@mui/material";
 import { Institution } from "../../shared/nursery.interface";
+import { useMemo } from "react";
 
 export default function InstitutionDetailsLinks(institution: Institution) {
-    const mainColor = institution.institutionType === 'NURSERY' ? 'primary.dark' : 'secondary.dark';
+    const mainColor = useMemo(() => institution.institutionType === 'NURSERY' ? 'primary.dark' : 'secondary.dark', [institution.institutionType]);
 
     return (
         <Box p={2}>

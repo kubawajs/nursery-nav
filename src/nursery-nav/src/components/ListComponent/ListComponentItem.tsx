@@ -1,14 +1,9 @@
-import {
-    Box, Button, Card, CardContent, Chip, Link, ListItem, Stack, Typography
-} from '@mui/material';
+import { Box, Button, Card, CardContent, Chip, Link, ListItem, Stack, Typography } from '@mui/material';
 import { Accessible, FmdGood, Language, Mail, Phone } from '@mui/icons-material';
 import { InstitutionType } from '../../shared/nursery.interface';
 import PathConstants from '../../shared/pathConstants';
-import {
-    Link as RouterLink,
-    generatePath,
-} from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Link as RouterLink, generatePath } from 'react-router-dom';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 interface ListComponentItemProps {
     name: string;
@@ -25,43 +20,40 @@ interface ListComponentItemProps {
 }
 
 export function ListComponentItem(props: ListComponentItemProps) {
-    const mainColor = props.institutionType === InstitutionType.NURSERY ? "primary" : "secondary";
+    const mainColor = props.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
     const [compareItems, setCompareItems] = useState<number[]>([]);
-    const [disabled, setDisabled] = useState(true);
-    const [addMode, setAddMode] = useState(true);
 
-    const handleCompare = (id: number) => {
+    const handleCompare = useCallback((id: number) => {
         const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
+        let updatedCompareItems: number[] = [];
+
         if (itemsToCompare.includes(id)) {
-            setCompareItems(compareItems.filter((item) => item !== id));
+            updatedCompareItems = compareItems.filter(item => item !== id);
             itemsToCompare.splice(itemsToCompare.indexOf(id), 1);
         } else if (itemsToCompare.length <= 5) {
-            setCompareItems([...compareItems, id]);
+            updatedCompareItems = [...compareItems, id];
             itemsToCompare.push(id);
         }
+
+        setCompareItems(updatedCompareItems);
         localStorage.setItem('itemsToCompare', JSON.stringify(itemsToCompare));
-    }
+        window.dispatchEvent(new Event('storage'));
+    }, [compareItems]);
 
     useEffect(() => {
-        window.addEventListener('storage', () => {
+        const handleStorageChange = () => {
             const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
-            setCompareItems(itemsToCompare)
-        });
+            setCompareItems(itemsToCompare);
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
     }, []);
 
-    useEffect(() => {
-        const isDisabled = compareItems.length >= 5 && !compareItems.includes(props.id);
-        setDisabled(isDisabled);
-    }, [compareItems, props.id]);
-
-    useEffect(() => {
-        if (compareItems.includes(props.id)) {
-            setAddMode(false);
-        }
-        else {
-            setAddMode(true);
-        }
-    }, [compareItems, props.id]);
+    const isDisabled = useMemo(() => compareItems.length >= 5 && !compareItems.includes(props.id), [compareItems, props.id]);
+    const isAddMode = useMemo(() => !compareItems.includes(props.id), [compareItems, props.id]);
 
     return (
         <ListItem sx={{ display: 'block' }}>
@@ -72,56 +64,52 @@ export function ListComponentItem(props: ListComponentItemProps) {
                             <Box display='flex' marginBottom={1} sx={{ justifyContent: 'space-between' }}>
                                 <Stack direction='row' spacing={1} alignItems='center'>
                                     <Chip label={props.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY'} color={mainColor} />
-                                    {props.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" sx={{ display: { xs: 'none', lg: 'flex' } }} />}
+                                    {props.isAdaptedToDisabledChildren && (
+                                        <Chip label={<Accessible fontSize='small' />} color='info' sx={{ display: { xs: 'none', lg: 'flex' } }} />
+                                    )}
                                 </Stack>
-                                <Typography
-                                    component="span"
-                                    variant="subtitle1"
-                                    padding={0.25}
-                                    fontWeight={700}
-                                    textAlign={'end'}
-                                >
+                                <Typography component='span' variant='subtitle1' padding={0.25} fontWeight={700} textAlign={'end'}>
                                     {props.basicPricePerHour > 0 && <>{props.basicPricePerHour.toFixed(2)} PLN / godzina</>}
                                     {props.basicPricePerMonth > 0 && <>{props.basicPricePerMonth.toFixed(2)} PLN / miesiąc</>}
                                     {!props.basicPricePerMonth && !props.basicPricePerHour && <Typography variant='overline'>Brak danych</Typography>}
                                 </Typography>
                             </Box>
-                            <Box display='flex' justifyContent='space-between' alignItems='center' >
+                            <Box display='flex' justifyContent='space-between' alignItems='center'>
                                 <Link component={RouterLink} to={generatePath(PathConstants.INSTITUTION_DETAILS, { id: props.id })} sx={{ textDecoration: 'none' }}>
-                                    <Typography variant="h2" typography={{ xs: 'h5', md: 'h4' }} color='text.primary' paddingBottom={2}>
+                                    <Typography variant='h2' typography={{ xs: 'h5', md: 'h4' }} color='text.primary' paddingBottom={2}>
                                         {props.name}
                                     </Typography>
                                 </Link>
-                                <Stack direction='row' aria-label="Opcje kontaktu" justifyContent='flex-start' alignItems='center' spacing={2}>
-                                    {props.phone &&
+                                <Stack direction='row' aria-label='Opcje kontaktu' justifyContent='flex-start' alignItems='center' spacing={2}>
+                                    {props.phone && (
                                         <Link aria-label='Zadzwoń do placówki' href={`tel:${props.phone}`}>
                                             <Phone sx={{ fontSize: '1.25rem' }} />
                                         </Link>
-                                    }
-                                    {props.email &&
+                                    )}
+                                    {props.email && (
                                         <Link aria-label='Napisz wiadomość email' href={`mailto:${props.email}`}>
                                             <Mail sx={{ fontSize: '1.25rem' }} />
                                         </Link>
-                                    }
-                                    {props.website &&
+                                    )}
+                                    {props.website && (
                                         <Link aria-label='Odwiedź stronę internetową' href={props.website.startsWith('http') ? props.website : `http://${props.website}`}>
                                             <Language sx={{ fontSize: '1.25rem' }} />
                                         </Link>
-                                    }
+                                    )}
                                 </Stack>
                             </Box>
                             <Box display='flex' justifyContent='space-between' alignItems='center'>
-                                <Typography variant="h4" typography="body1" color="text.secondary">
+                                <Typography variant='h4' typography='body1' color='text.secondary'>
                                     <FmdGood />{props.city}
                                 </Typography>
-                                <Button onClick={() => handleCompare(props.id)} disabled={disabled} color={addMode ? 'primary' : 'secondary'}>
-                                    <Typography variant='button' >{addMode ? "+ Dodaj do" : "- Usuń z"} porównania</Typography>
+                                <Button onClick={() => handleCompare(props.id)} disabled={isDisabled} color={isAddMode ? 'primary' : 'secondary'}>
+                                    <Typography variant='button'>{isAddMode ? '+ Dodaj do' : '- Usuń z'} porównania</Typography>
                                 </Button>
                             </Box>
                         </Box>
                     </CardContent>
                 </Box>
-            </Card >
-        </ListItem >
+            </Card>
+        </ListItem>
     );
 }

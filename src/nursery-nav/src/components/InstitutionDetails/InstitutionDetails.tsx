@@ -7,9 +7,9 @@ import { Institution } from '../../shared/nursery.interface';
 export default function InstitutionDetails(institution: Institution) {
 	return (
 		<Box p={1} height='82.4vh'>
-			{institution && <InstitutionDetailsTop {...institution} />}
-			{institution && <InstitutionDetailsHeader {...institution} />}
-			{institution && <InstitutionDetailsDescription {...institution} />}
+			{institution && <InstitutionDetailsTop institution={institution} />}
+			{institution && <InstitutionDetailsHeader institution={institution} />}
+			{institution && <InstitutionDetailsDescription institution={institution} />}
 		</Box>
 	);
 }
