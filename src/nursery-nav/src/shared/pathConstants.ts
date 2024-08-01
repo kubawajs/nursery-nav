@@ -1,7 +1,7 @@
 const PathConstants = {
     HOME: "/",
     ABOUT: "/about",
-    COMPARISON: "institutions/compare",
+    COMPARISON: "/institutions/compare",
     CONTACT: "/contact",
     INSTITUTION_BY_VOIVODESHIP: "/institutions/:voivodeship",
     INSTITUTION_BY_CITY: "/institutions/:voivodeship/:city",
