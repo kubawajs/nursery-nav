@@ -39,7 +39,7 @@ export default function MapComponent({ locations }: MapComponentProps) {
 			selectedLocationLat={selectedLocation?.latitude}
 			selectedLocationLon={selectedLocation?.longitude}
 		/>
-	)), [locationsFiltered]);
+	)), [locationsFiltered, selectedLocation]);
 
 	useEffect(() => {
 		if (institutionIds.length === 0) {

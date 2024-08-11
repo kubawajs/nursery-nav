@@ -1,10 +1,9 @@
-import { Marker, Popup, useMap } from 'react-leaflet';
+import { Marker, useMap } from 'react-leaflet';
 import { Crib } from '@mui/icons-material';
 import { divIcon } from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { InstitutionType } from '../../shared/nursery.interface';
 import './MapPin.css';
-import { Box, Chip, Typography } from '@mui/material';
 import { useNavigate, generatePath } from 'react-router-dom';
 import PathConstants from '../../shared/pathConstants';
 
