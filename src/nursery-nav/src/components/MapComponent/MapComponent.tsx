@@ -9,13 +9,16 @@ import { InstitutionContext } from '../Layout/Layout';
 import {
 	Link as RouterLink,
 	generatePath,
+	useParams,
 } from 'react-router-dom';
 import PathConstants from '../../shared/pathConstants';
-import { getLocations } from '../../api/LocationsFetcher';
 
-export default function MapComponent() {
+interface MapComponentProps {
+	locations: LocationResponse[];
+}
+
+export default function MapComponent({ locations }: MapComponentProps) {
 	const { institutionIds } = useContext(InstitutionContext);
-	const [locations, setLocations] = useState<LocationResponse[]>([]);
 	const [locationsFiltered, setLocationsFiltered] = useState<LocationResponse[]>([]);
 
 	const mapUrl = `https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`;
@@ -23,10 +26,8 @@ export default function MapComponent() {
 	const isXs = window.innerWidth < 600;
 	const isSm = window.innerWidth < 900;
 
-	const fetchLocations = async () => {
-		const data = await getLocations();
-		setLocations(data);
-	};
+	const { id } = useParams();
+	const selectedLocation = id ? locations.find((location) => location.id === parseInt(id)) : undefined;
 
 	const markers = useMemo(() => locationsFiltered.map((location) => (
 		<MapPin
@@ -35,12 +36,10 @@ export default function MapComponent() {
 			latitude={location.latitude}
 			longitude={location.longitude}
 			institutionType={location.institutionType}
+			selectedLocationLat={selectedLocation?.latitude}
+			selectedLocationLon={selectedLocation?.longitude}
 		/>
 	)), [locationsFiltered]);
-
-	useEffect(() => {
-		fetchLocations();
-	}, []);
 
 	useEffect(() => {
 		if (institutionIds.length === 0) {

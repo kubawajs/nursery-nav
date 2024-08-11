@@ -24,7 +24,6 @@ export class LocationsMongoDbService {
             return {
                 institutionType: location.institutionType,
                 id: location.id,
-                name: location.name, // Add the 'name' property
                 longitude: location.address.pin.longitude,
                 latitude: location.address.pin.latitude
             } as LocationDto;

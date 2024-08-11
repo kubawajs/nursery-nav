@@ -1,9 +1,12 @@
-import { Grid } from "@mui/material";
+import { CircularProgress, Grid } from "@mui/material";
 import { Helmet } from "react-helmet-async";
 import FiltersBar from "../components/Filters/FiltersBar";
 import MapComponent from "../components/MapComponent/MapComponent";
 import ListComponent from "../components/ListComponent/ListComponent";
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getLocations } from "../api/LocationsFetcher";
+import { LocationResponse } from "../shared/nursery.interface";
 
 export default function MapPage() {
     const { voivodeship, city } = useParams<{ voivodeship: string | undefined, city: string | undefined }>();
@@ -17,6 +20,20 @@ export default function MapPage() {
 
     const description = "Znajdź idealny żłobek dla dziecka w najlepszej cenie PLN na miesiąc. Sprawdź dostępność miejsc i dowiedz się, gdzie ich brak. Poznaj nazwy żłobków w okolicy.";
     const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
+
+    const [locations, setLocations] = useState<LocationResponse[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setIsLoading(true);
+            const locations = await getLocations();
+            setLocations(locations);
+            setIsLoading(false);
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <>
@@ -39,7 +56,10 @@ export default function MapPage() {
                 <ListComponent defaultVoivodeship={voivodeship} defaultCity={city} />
             </Grid>
             <Grid item xs={12} md={6}>
-                <MapComponent />
+                {isLoading ?
+                    <CircularProgress />
+                    :
+                    <MapComponent locations={locations} />}
             </Grid>
         </>
     );

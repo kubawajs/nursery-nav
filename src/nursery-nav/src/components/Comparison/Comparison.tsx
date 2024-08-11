@@ -47,6 +47,7 @@ export default function Comparison({ ids }: ComparisonProps) {
             });
             setInstitutions(institutionsToCompare);
         };
+
         fetchInstitution();
     }, [ids]);
 

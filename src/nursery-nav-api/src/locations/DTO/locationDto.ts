@@ -6,9 +6,6 @@ export class LocationDto {
     id: number;
 
     @ApiProperty()
-    name: string;
-
-    @ApiProperty()
     institutionType: InstitutionType;
 
     @ApiProperty()

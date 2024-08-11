@@ -19,9 +19,8 @@ interface ListComponentProps {
 }
 
 export default function ListComponent({ defaultVoivodeship, defaultCity }: ListComponentProps) {
-	const { setInstitutionIds, setSelectedInstitution } = useContext(InstitutionContext);
+	const { setInstitutionIds } = useContext(InstitutionContext);
 	const [searchParams, setSearchParams] = useSearchParams();
-	setSelectedInstitution(null);
 
 	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
 	const [loading, setLoading] = useState(true);
