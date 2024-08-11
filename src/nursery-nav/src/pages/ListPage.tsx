@@ -7,6 +7,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getLocations } from "../api/LocationsFetcher";
 import { LocationResponse } from "../shared/nursery.interface";
+import { getCities, getCitiesResponse } from "../api/CitiesFetcher";
 
 export default function ListPage() {
     const { voivodeship, city } = useParams<{
@@ -17,6 +18,7 @@ export default function ListPage() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
     const [locations, setLocations] = useState<LocationResponse[]>([]);
     const [isLoading, setIsLoading] = useState(true); // Add loading state
+    const [cities, setCities] = useState<getCitiesResponse[]>();
 
     useLayoutEffect(() => {
         const handleResize = () => {
@@ -36,6 +38,15 @@ export default function ListPage() {
         };
 
         fetchData();
+    }, []);
+
+    useEffect(() => {
+        const fetchCities = async () => {
+            const response = await getCities();
+            setCities(response);
+        };
+
+        fetchCities();
     }, []);
 
     const title = getTitle(voivodeship, city);
@@ -58,7 +69,7 @@ export default function ListPage() {
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <Grid item xs={12} zIndex={19}>
-                <FiltersBar defaultVoivodeship={voivodeship} defaultCity={city} />
+                <FiltersBar defaultVoivodeship={voivodeship} defaultCity={city} citiesResponse={cities} />
             </Grid>
             <Grid item xs={12} md={6}>
                 <ListComponent defaultVoivodeship={voivodeship} defaultCity={city} />

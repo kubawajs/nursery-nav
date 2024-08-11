@@ -12,13 +12,15 @@ import { Close, FilterList } from "@mui/icons-material";
 import { useContext, useEffect, useState } from "react";
 import { InstitutionContext } from "../Layout/Layout";
 import CityQuickFilters from "./CityQuickFilter";
+import { getCitiesResponse } from "../../api/CitiesFetcher";
 
 interface FiltersBarProps {
     defaultVoivodeship?: string;
     defaultCity?: string;
+    citiesResponse?: getCitiesResponse[];
 }
 
-export default function FiltersBar({ defaultVoivodeship, defaultCity }: FiltersBarProps) {
+export default function FiltersBar({ defaultVoivodeship, defaultCity, citiesResponse }: FiltersBarProps) {
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const { institutionIds } = useContext(InstitutionContext);
 
@@ -33,7 +35,7 @@ export default function FiltersBar({ defaultVoivodeship, defaultCity }: FiltersB
                     direction={'column'}
                     sx={{ bgcolor: 'primary.light', alignItems: 'center' }}
                 >
-                    <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} />
+                    <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} citiesResponse={citiesResponse} />
                     <CityQuickFilters />
                 </Stack>
             </Box >
@@ -58,7 +60,7 @@ export default function FiltersBar({ defaultVoivodeship, defaultCity }: FiltersB
                             spacing={2}
                             direction={'column'}
                             p={1}>
-                            <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} isMobile={true} />
+                            <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} isMobile={true} citiesResponse={citiesResponse} />
                             <CityQuickFilters />
                             <Button onClick={() => setIsExpanded(false)}>Zamknij<Close /></Button>
                         </Stack>
