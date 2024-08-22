@@ -16,7 +16,6 @@ export default function CityQuickFilters() {
         <Stack
             spacing={2}
             pb={1}
-            margin={2}
             direction={'row'}
             flexWrap='wrap'
             useFlexGap

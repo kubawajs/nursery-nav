@@ -145,7 +145,7 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 					</Stack>
 				</Paper>
 			</Box>
-			<List component="section" style={{ overflowY: 'auto', height: '75.4vh' }}>
+			<List component="section" style={{ overflowY: 'auto', height: '65vh' }}>
 				<InfiniteScroll
 					pageStart={0}
 					loadMore={fetchInstitutions}

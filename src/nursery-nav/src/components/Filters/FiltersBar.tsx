@@ -45,8 +45,6 @@ export default function FiltersBar({ defaultVoivodeship, defaultCity, citiesResp
                     onChange={() => setIsExpanded(!isExpanded)}
                     sx={{
                         display: 'block',
-                        borderBottomLeftRadius: 8,
-                        borderBottomRightRadius: 8,
                         p: 0
                     }}>
                     <AccordionSummary sx={{ bgcolor: 'primary.light' }}>
@@ -55,9 +53,9 @@ export default function FiltersBar({ defaultVoivodeship, defaultCity, citiesResp
                             Filtruj
                         </Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
+                    <AccordionDetails sx={{ pb: 0, pt: 0 }}>
                         <Stack
-                            spacing={2}
+                            spacing={1}
                             direction={'column'}
                             p={1}>
                             <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} isMobile={true} citiesResponse={citiesResponse} />
