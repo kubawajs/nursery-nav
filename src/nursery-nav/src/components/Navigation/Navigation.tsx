@@ -1,5 +1,6 @@
 import { AppBar, Container, Toolbar, Link, Typography, Box } from '@mui/material';
 import { FamilyRestroom } from '@mui/icons-material';
+import CityQuickFilters from '../Filters/CityQuickFilter';
 
 export default function Navigation() {
 	return (
@@ -23,6 +24,9 @@ export default function Navigation() {
 								{process.env.REACT_APP_NAME}
 							</Typography>
 						</Link>
+					</Box>
+					<Box sx={{ display: { xs: 'none', sm: 'block' }, width: '100%' }}>
+						<CityQuickFilters />
 					</Box>
 				</Toolbar>
 			</Container>

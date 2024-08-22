@@ -36,7 +36,6 @@ export default function FiltersBar({ defaultVoivodeship, defaultCity, citiesResp
                     sx={{ bgcolor: 'primary.light', alignItems: 'center' }}
                 >
                     <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} citiesResponse={citiesResponse} />
-                    <CityQuickFilters />
                 </Stack>
             </Box >
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
