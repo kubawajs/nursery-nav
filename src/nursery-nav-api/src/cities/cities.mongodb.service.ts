@@ -19,11 +19,12 @@ export class CitiesMongoDbService {
             return Promise.resolve(cacheData);
         }
 
-        const cities = await this.cityModel.find().exec();
+        const cities = await this.cityModel.find().sort({ 'city': 1 }).exec();
         const citiesDto = cities.map(city => {
             return {
                 city: city.city,
                 county: city.county,
+                community: city.community,
                 voivodeship: city.voivodeship
             };
         });

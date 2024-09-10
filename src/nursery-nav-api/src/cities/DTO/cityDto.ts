@@ -8,5 +8,7 @@ export class CityDto {
     county: string;
 
     @ApiProperty()
+    community: string;
+    @ApiProperty()
     city: string;
 }

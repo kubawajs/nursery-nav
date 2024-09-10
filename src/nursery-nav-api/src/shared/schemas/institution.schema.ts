@@ -36,7 +36,19 @@ export class Pin {
 @Schema()
 export class Address {
     @Prop()
+    houseNumber: string;
+
+    @Prop()
+    localNumber: string;
+
+    @Prop()
+    street: string;
+
+    @Prop()
     city: string;
+
+    @Prop()
+    community: string;
 
     @Prop()
     county: string;

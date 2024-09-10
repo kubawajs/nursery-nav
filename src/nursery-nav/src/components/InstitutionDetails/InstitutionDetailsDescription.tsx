@@ -41,7 +41,8 @@ export default function InstitutionDetailsDescription(institution: Institution) 
                 </Box>
                 <DescriptionBox>
                     <Typography variant="h6">Dane adresowe</Typography>
-                    <Typography variant="body1">{institution.address.fullAddress}</Typography>
+                    <Typography variant="body1">{institution.address.city}</Typography>
+                    <Typography variant="body1">{`${institution.address.street} ${institution.address.houseNumber}${institution.address.localNumber ? '/' + institution.address.localNumber : ''}`.trim()}</Typography>
                 </DescriptionBox>
                 <DescriptionBox>
                     <Typography variant="h6">Godziny otwarcia</Typography>
