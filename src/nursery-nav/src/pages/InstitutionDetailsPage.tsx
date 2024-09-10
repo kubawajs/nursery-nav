@@ -17,6 +17,11 @@ export default function InstitutionDetailsPage() {
     useEffect(() => {
         const fetchInstitution = async () => {
             const institution = await getInstitutionDetails(parseInt(id ?? ""));
+            if (!institution || Object.keys(institution).length === 0) {
+                // Redirect to home page if institution is empty or an empty object
+                window.location.href = '/';
+                return;
+            }
             setSelectedInstitution(institution);
         };
 
