@@ -12,6 +12,9 @@ export class City {
     county: string;
 
     @Prop()
+    community: string;
+
+    @Prop()
     voivodeship: string;
 }
 

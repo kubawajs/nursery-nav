@@ -28,17 +28,10 @@ class Pin:
 
 # Read the input file
 input_file = sys.argv[1]
-
-# add parameter with deafult false value
-add_id = False
-if len(sys.argv) > 2:
-    add_id = sys.argv[2] == 'true'
-
 df = pd.read_csv(input_file, sep=';')
 
-# Add ID column
-if add_id:
-    df['id'] = range(1, len(df) + 1)
+# Convert ID column
+df['id'] = df['id'].str.replace('/Z', '').astype(int)
 
 # Convert institution type to enum
 df['institutionType'] = df['institutionType'].map({'Żłobek': 'NURSERY', 'Klub dziecięcy': 'CHILDCLUB'})
@@ -51,6 +44,7 @@ df['businessActivitySuspended'] = df['businessActivitySuspended'].map({'TAK': Tr
 df['basicPricePerMonth'] = df['basicPricePerMonth'].str.replace(' zł', '').astype(float)
 df['extendedStayOver10H'] = df['extendedStayOver10H'].str.replace(' zł', '').astype(float)
 df['basicPricePerHour'] = df['basicPricePerHour'].str.replace(' zł', '').astype(float)
+df['basicPricePerMonthKPOFERS'] = df['basicPricePerMonthKPOFERS'].str.replace(' zł', '').astype(float)
 df['foodPricePerMonth'] = df['foodPricePerMonth'].str.replace(' zł', '').astype(float)
 df['foodPricePerDay'] = df['foodPricePerDay'].str.replace(' zł', '').astype(float)
 

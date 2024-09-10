@@ -8,8 +8,17 @@ export class AddressDto {
     county: string;
 
     @ApiProperty()
+    community: string;
+
+    @ApiProperty()
     city: string;
 
     @ApiProperty()
-    fullAddress: string;
+    street: string;
+
+    @ApiProperty()
+    houseNumber: string;
+
+    @ApiProperty()
+    localNumber: string;
 }

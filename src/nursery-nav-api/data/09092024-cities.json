@@ -1,0 +1,2287 @@
+voivodeship;county;community;city
+MAŁOPOLSKIE;limanowski;Łukowica;Przyszowa
+WIELKOPOLSKIE;pilski;Piła;Piła
+LUBUSKIE;gorzowski;Deszczno;Maszewo, wieś
+PODKARPACKIE;dębicki;Dębica;Dębica
+POMORSKIE;słupski;Redzikowo;Siemianice
+MAZOWIECKIE;nowodworski;Nowy Dwór Mazowiecki;Nowy Dwór Mazowiecki
+LUBUSKIE;żarski;Lubsko;Białków
+MAŁOPOLSKIE;chrzanowski;Alwernia;Alwernia, miasto
+WIELKOPOLSKIE;Kalisz;Kalisz;Kalisz
+WIELKOPOLSKIE;Konin;Konin;Konin
+ŚWIĘTOKRZYSKIE;starachowicki;Starachowice;Starachowice
+MAZOWIECKIE;grójecki;Grójec;Marianów, wieś
+DOLNOŚLĄSKIE;świdnicki;Świdnica;Świdnica
+DOLNOŚLĄSKIE;wałbrzyski;Głuszyca;Głuszyca
+WIELKOPOLSKIE;kolski;Grzegorzew;Grzegorzew
+ŚLĄSKIE;Zabrze;Zabrze;Zabrze
+PODLASKIE;Białystok;Białystok;Białystok
+MAZOWIECKIE;legionowski;Jabłonna;Jabłonna
+WIELKOPOLSKIE;wolsztyński;Siedlec;Siedlec
+ŚLĄSKIE;kłobucki;Kłobuck;Kłobuck
+MAZOWIECKIE;Warszawa;Warszawa - Ursynów;Warszawa - Ursynów, dzielnica m. st. Warszawy
+ŚLĄSKIE;Tychy;Tychy;Tychy, miasto
+MAZOWIECKIE;Warszawa;Warszawa - Praga-Południe;Warszawa - Praga-Południe, dzielnica m. st. Warszawy
+ŚLĄSKIE;Siemianowice Śląskie;Siemianowice Śląskie;Siemianowice Śląskie
+MAŁOPOLSKIE;olkuski;Olkusz;Olkusz
+MAZOWIECKIE;nowodworski;Leoncin;Leoncin
+MAZOWIECKIE;miński;Mińsk Mazowiecki;Mińsk Mazowiecki
+DOLNOŚLĄSKIE;głogowski;Głogów;Głogów
+DOLNOŚLĄSKIE;dzierżoniowski;Łagiewniki;Łagiewniki
+WIELKOPOLSKIE;poznański;Suchy Las;Suchy Las
+WIELKOPOLSKIE;kościański;Czempiń;Czempiń, miasto
+OPOLSKIE;opolski;Prószków;Przysiecz
+MAZOWIECKIE;Warszawa;Warszawa - Wola;Warszawa - Wola, dzielnica m. st. Warszawy
+ŚLĄSKIE;Gliwice;Gliwice;Gliwice
+MAZOWIECKIE;piaseczyński;Lesznowola;Lesznowola
+MAŁOPOLSKIE;Kraków;Kraków-Krowodrza;Kraków-Krowodrza
+DOLNOŚLĄSKIE;wrocławski;Kobierzyce;Bielany Wrocławskie, wieś
+WIELKOPOLSKIE;kaliski;Brzeziny;Brzeziny
+WARMIŃSKO-MAZURSKIE;giżycki;Wydminy;Wydminy
+ŚLĄSKIE;Świętochłowice;Świętochłowice;Świętochłowice
+WIELKOPOLSKIE;poznański;Komorniki;Wiry
+LUBELSKIE;Lublin;Lublin;Lublin
+OPOLSKIE;Opole;Opole;Opole, miasto
+OPOLSKIE;Opole;Opole;Opole
+WIELKOPOLSKIE;ostrzeszowski;Ostrzeszów;Ostrzeszów
+WIELKOPOLSKIE;poznański;Suchy Las;Złotniki
+LUBUSKIE;międzyrzecki;Międzyrzecz;Międzyrzecz
+WIELKOPOLSKIE;kępiński;Baranów;Mroczeń
+MAZOWIECKIE;Warszawa;Warszawa - Wilanów;Wilanów
+WIELKOPOLSKIE;Poznań;Poznań-Stare Miasto;Poznań-Stare Miasto
+MAZOWIECKIE;Warszawa;Warszawa - Ochota;Warszawa - Ochota, dzielnica m. st. Warszawy
+MAZOWIECKIE;Radom;Radom;Radom
+WIELKOPOLSKIE;poznański;Swarzędz;Jasin, wieś
+WARMIŃSKO-MAZURSKIE;olsztyński;Biskupiec;Nowe Marcinkowo, wieś
+KUJAWSKO-POMORSKIE;Toruń;Toruń;Toruń
+MAZOWIECKIE;grodziski;Jaktorów;Henryszew, wieś
+WIELKOPOLSKIE;Poznań;Poznań-Grunwald;Poznań-Grunwald
+DOLNOŚLĄSKIE;jaworski;Wądroże Wielkie;Postolice
+DOLNOŚLĄSKIE;polkowicki;Gaworzyce;Gaworzyce
+DOLNOŚLĄSKIE;wrocławski;Siechnice;Siechnice
+PODKARPACKIE;Krosno;Krosno;Krosno, miasto
+PODKARPACKIE;Krosno;Krosno;Krosno
+PODKARPACKIE;przemyski;Żurawica;Buszkowice
+MAZOWIECKIE;wołomiński;Radzymin;Słupno
+WARMIŃSKO-MAZURSKIE;lidzbarski;Orneta;Orneta
+ŚLĄSKIE;mikołowski;Łaziska Górne;Łaziska Górne
+ŚLĄSKIE;Bielsko-Biała;Bielsko-Biała;Bielsko-Biała, miasto
+DOLNOŚLĄSKIE;kłodzki;Bystrzyca Kłodzka;Bystrzyca Kłodzka
+WIELKOPOLSKIE;poznański;Dopiewo;Dąbrówka
+ŚWIĘTOKRZYSKIE;staszowski;Staszów;Staszów, miasto
+WIELKOPOLSKIE;Poznań;Poznań-Jeżyce;Poznań-Jeżyce
+WIELKOPOLSKIE;jarociński;Jarocin;Jarocin
+ZACHODNIOPOMORSKIE;policki;Police;Police
+ŚLĄSKIE;Mysłowice;Mysłowice;Mysłowice
+MAZOWIECKIE;radomski;Jedlińsk;Jedlińsk
+PODKARPACKIE;łańcucki;Łańcut;Łańcut
+MAZOWIECKIE;wołomiński;Radzymin;Radzymin
+DOLNOŚLĄSKIE;oleśnicki;Oleśnica;Oleśnica
+ŚLĄSKIE;Katowice;Katowice;Katowice, miasto
+POMORSKIE;chojnicki;Chojnice;Chojnice
+POMORSKIE;Gdynia;Gdynia;Gdynia, miasto
+PODKARPACKIE;rzeszowski;Boguchwała;Racławówka, wieś
+KUJAWSKO-POMORSKIE;nakielski;Szubin;Szubin
+MAZOWIECKIE;Siedlce;Siedlce;Siedlce
+ŚLĄSKIE;tarnogórski;Radzionków;Radzionków, miasto
+MAŁOPOLSKIE;wielicki;Wieliczka;Zabawa, wieś
+POMORSKIE;wejherowski;Wejherowo;Wejherowo, miasto
+POMORSKIE;kartuski;Żukowo;Banino, wieś
+POMORSKIE;malborski;Malbork;Malbork
+ŁÓDZKIE;łaski;Łask;Łask
+DOLNOŚLĄSKIE;świdnicki;Świebodzice;Świebodzice
+POMORSKIE;tczewski;Pelplin;Rudno
+MAŁOPOLSKIE;krakowski;Świątniki Górne;Wrząsowice, wieś
+DOLNOŚLĄSKIE;górowski;Góra;Góra, miasto
+MAŁOPOLSKIE;nowosądecki;Łososina Dolna;Tęgoborze
+WIELKOPOLSKIE;nowotomyski;Nowy Tomyśl;Nowy Tomyśl
+ZACHODNIOPOMORSKIE;świdwiński;Świdwin;Świdwin, miasto
+PODKARPACKIE;rzeszowski;Sokołów Małopolski;Nienadówka
+LUBELSKIE;łukowski;Łuków;Łuków
+DOLNOŚLĄSKIE;wałbrzyski;Stare Bogaczowice;Struga
+MAZOWIECKIE;Warszawa;Warszawa - Ursus;Warszawa - Ursus, dzielnica m. st. Warszawy
+MAZOWIECKIE;Warszawa;Warszawa - Bielany;Warszawa - Bielany, dzielnica m. st. Warszawy
+ŁÓDZKIE;poddębicki;Uniejów;Uniejów
+MAŁOPOLSKIE;Kraków;Kraków-Podgórze;Kraków-Podgórze
+WIELKOPOLSKIE;śremski;Książ Wielkopolski;Książ Wielkopolski
+LUBUSKIE;Gorzów Wielkopolski;Gorzów Wielkopolski;Gorzów Wielkopolski
+MAZOWIECKIE;Warszawa;Warszawa - Bemowo;Warszawa - Bemowo, dzielnica m. st. Warszawy
+ŁÓDZKIE;sieradzki;Sieradz;Sieradz
+DOLNOŚLĄSKIE;Legnica;Legnica;Legnica
+MAZOWIECKIE;Warszawa;Warszawa - Białołęka;Warszawa - Białołęka, dzielnica m. st. Warszawy
+MAZOWIECKIE;wołomiński;Kobyłka;Kobyłka
+OPOLSKIE;strzelecki;Zawadzkie;Zawadzkie, miasto
+MAZOWIECKIE;pruszkowski;Pruszków;Pruszków
+MAZOWIECKIE;żyrardowski;Żyrardów;Żyrardów
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Tarnowo Podgórne
+ŚLĄSKIE;pszczyński;Pszczyna;wieś Poręba
+WARMIŃSKO-MAZURSKIE;giżycki;Giżycko;Giżycko, miasto
+MAŁOPOLSKIE;Kraków;Kraków-Śródmieście;Kraków-Śródmieście
+ZACHODNIOPOMORSKIE;policki;Dobra (Szczecińska);Mierzyn
+WIELKOPOLSKIE;obornicki;Oborniki;Bogdanowo, wieś
+MAŁOPOLSKIE;krakowski;Igołomia-Wawrzeńczyce;Igołomia
+POMORSKIE;Gdańsk;Gdańsk;Gdańsk
+POMORSKIE;wejherowski;Rumia;Rumia
+WIELKOPOLSKIE;poznański;Buk;Buk
+WARMIŃSKO-MAZURSKIE;Olsztyn;Olsztyn;Olsztyn
+ŚLĄSKIE;cieszyński;Strumień;Strumień
+MAŁOPOLSKIE;Kraków;Kraków-Nowa Huta;Kraków-Nowa Huta, delegatura
+DOLNOŚLĄSKIE;Wrocław;Wrocław-Fabryczna;Wrocław-Fabryczna, delegatura
+MAŁOPOLSKIE;myślenicki;Raciechowice;Raciechowice, wieś
+MAZOWIECKIE;Warszawa;Warszawa - Wola;Wola
+PODLASKIE;siemiatycki;Siemiatycze;Siemiatycze, miasto
+DOLNOŚLĄSKIE;średzki;Miękinia;Lutynia, wieś
+MAZOWIECKIE;wołomiński;Marki;Marki
+ŚLĄSKIE;Sosnowiec;Sosnowiec;Sosnowiec, miasto
+POMORSKIE;kartuski;Przodkowo;Przodkowo
+MAZOWIECKIE;Warszawa;Warszawa - Wesoła;Wesoła
+DOLNOŚLĄSKIE;oleśnicki;Twardogóra;Moszyce, wieś
+ŚLĄSKIE;Bytom;Bytom;Bytom, miasto
+ŚLĄSKIE;Bielsko-Biała;Bielsko-Biała;Bielsko-Biała
+POMORSKIE;gdański;Pruszcz Gdański;Pruszcz Gdański
+ŁÓDZKIE;piotrkowski;Czarnocin;Czarnocin, wieś
+ŚLĄSKIE;Piekary Śląskie;Piekary Śląskie;Piekary Śląskie, miasto
+MAZOWIECKIE;sochaczewski;Sochaczew;Sochaczew
+ZACHODNIOPOMORSKIE;goleniowski;Goleniów;Załom, wieś
+OPOLSKIE;nyski;Otmuchów;Kałków
+DOLNOŚLĄSKIE;wrocławski;Długołęka;Długołęka
+ZACHODNIOPOMORSKIE;policki;Police;Niekłończyca
+LUBUSKIE;zielonogórski;Nowogród Bobrzański;Nowogród Bobrzański
+WIELKOPOLSKIE;leszczyński;Włoszakowice;Włoszakowice
+PODKARPACKIE;Tarnobrzeg;Tarnobrzeg;Tarnobrzeg
+WIELKOPOLSKIE;poznański;Komorniki;Plewiska
+DOLNOŚLĄSKIE;lubiński;Lubin;Lubin
+ŚLĄSKIE;Sosnowiec;Sosnowiec;Sosnowiec
+LUBUSKIE;Zielona Góra;Zielona Góra;Zielona Góra
+MAZOWIECKIE;piaseczyński;Góra Kalwaria;Góra Kalwaria
+OPOLSKIE;brzeski;Brzeg;Brzeg, miasto
+WARMIŃSKO-MAZURSKIE;mrągowski;Mrągowo;Mrągowo
+ŁÓDZKIE;piotrkowski;Wolbórz;Wolbórz
+POMORSKIE;kościerski;Stara Kiszewa;Stara Kiszewa
+MAŁOPOLSKIE;wadowicki;Andrychów;Andrychów, miasto
+ŁÓDZKIE;łódzki wschodni;Nowosolna;Kopanka, wieś
+DOLNOŚLĄSKIE;wrocławski;Jordanów Śląski;Jordanów Śląski
+WIELKOPOLSKIE;szamotulski;Pniewy;Pniewy
+DOLNOŚLĄSKIE;Wrocław;Wrocław-Psie Pole;Wrocław-Psie Pole, delegatura
+ŁÓDZKIE;łódzki wschodni;Koluszki;Koluszki
+MAZOWIECKIE;węgrowski;Węgrów;Węgrów
+WIELKOPOLSKIE;szamotulski;Wronki;Wronki
+DOLNOŚLĄSKIE;bolesławiecki;Bolesławiec;Bolesławiec
+MAZOWIECKIE;wołomiński;Ząbki;Ząbki
+DOLNOŚLĄSKIE;kłodzki;Lądek-Zdrój;Lądek-Zdrój, miasto
+ŚLĄSKIE;pszczyński;Pszczyna;Pszczyna
+MAZOWIECKIE;wołomiński;Wołomin;Duczki
+PODKARPACKIE;rzeszowski;Świlcza;Bratkowice, wieś
+PODKARPACKIE;jasielski;Jasło;Jasło
+PODKARPACKIE;strzyżowski;Wiśniowa;Wiśniowa, wieś
+ŁÓDZKIE;bełchatowski;Szczerców;Szczerców, wieś
+DOLNOŚLĄSKIE;Wrocław;Wrocław-Krzyki;Wrocław-Krzyki, delegatura
+POMORSKIE;starogardzki;Zblewo;Zblewo
+MAŁOPOLSKIE;Kraków;Kraków-Nowa Huta;Kraków-Nowa Huta
+KUJAWSKO-POMORSKIE;świecki;Pruszcz;Pruszcz
+DOLNOŚLĄSKIE;Wrocław;Wrocław-Śródmieście;Wrocław-Śródmieście, delegatura
+PODKARPACKIE;krośnieński;Jedlicze;Jedlicze, miasto
+MAZOWIECKIE;Warszawa;Warszawa - Żoliborz;Żoliborz
+MAŁOPOLSKIE;limanowski;Dobra;Porąbka
+WIELKOPOLSKIE;szamotulski;Szamotuły;Przecław
+WIELKOPOLSKIE;szamotulski;Szamotuły;Szamotuły
+MAŁOPOLSKIE;oświęcimski;Brzeszcze;Jawiszowice
+PODKARPACKIE;leżajski;Leżajsk;Leżajsk, miasto
+MAZOWIECKIE;Warszawa;Warszawa - Wawer;Wawer
+MAZOWIECKIE;Warszawa;Warszawa - Włochy;Warszawa - Włochy, dzielnica m. st. Warszawy
+PODKARPACKIE;niżański;Rudnik nad Sanem;Rudnik nad Sanem, miasto
+MAZOWIECKIE;Warszawa;Warszawa - Wesoła;Warszawa - Wesoła, dzielnica m. st. Warszawy
+ŚLĄSKIE;Bytom;Bytom;Bytom
+MAŁOPOLSKIE;oświęcimski;Oświęcim;Oświęcim
+WIELKOPOLSKIE;poznański;Czerwonak;Miękowo
+ŚLĄSKIE;Katowice;Katowice;Katowice
+ZACHODNIOPOMORSKIE;Szczecin;Szczecin;Szczecin, miasto
+ŁÓDZKIE;pabianicki;Pabianice;Pabianice
+PODKARPACKIE;dębicki;Dębica;Brzeźnica
+ŚLĄSKIE;Chorzów;Chorzów;Chorzów
+MAZOWIECKIE;przasnyski;Przasnysz;Przasnysz
+MAŁOPOLSKIE;krakowski;Zielonki;Zielonki
+OPOLSKIE;brzeski;Brzeg;Brzeg
+MAŁOPOLSKIE;wielicki;Gdów;Nieznanowice
+KUJAWSKO-POMORSKIE;lipnowski;Bobrowniki;Bobrowniki
+PODLASKIE;białostocki;Supraśl;Grabówka
+MAZOWIECKIE;Warszawa;Warszawa - Targówek;Warszawa - Targówek, dzielnica m. st. Warszawy
+PODKARPACKIE;strzyżowski;Czudec;Czudec, wieś
+KUJAWSKO-POMORSKIE;Bydgoszcz;Bydgoszcz;Bydgoszcz
+LUBELSKIE;Biała Podlaska;Biała Podlaska;Biała Podlaska, miasto
+ZACHODNIOPOMORSKIE;stargardzki;Stargard;Stargard, miasto
+DOLNOŚLĄSKIE;lubiński;Lubin;Osiek
+MAŁOPOLSKIE;olkuski;Wolbrom;Wolbrom
+LUBUSKIE;nowosolski;Kożuchów;Kożuchów
+MAZOWIECKIE;legionowski;Serock;Stasi Las
+DOLNOŚLĄSKIE;kłodzki;Kłodzko;Jaszkowa Dolna
+MAZOWIECKIE;piaseczyński;Lesznowola;Nowa Iwiczna
+MAŁOPOLSKIE;wielicki;Wieliczka;Koźmice Wielkie
+MAZOWIECKIE;pruszkowski;Nadarzyn;Rozalin
+ŁÓDZKIE;Piotrków Trybunalski;Piotrków Trybunalski;Piotrków Trybunalski
+ZACHODNIOPOMORSKIE;koszaliński;Biesiekierz;Stare Bielice
+WIELKOPOLSKIE;kępiński;Bralin;Bralin
+MAZOWIECKIE;legionowski;Nieporęt;Stanisławów Drugi, wieś
+KUJAWSKO-POMORSKIE;Bydgoszcz;Bydgoszcz;Bydgoszcz, miasto
+LUBELSKIE;tomaszowski;Tomaszów Lubelski;Tomaszów Lubelski
+ZACHODNIOPOMORSKIE;białogardzki;Tychowo;Tychowo
+ŁÓDZKIE;piotrkowski;Gorzkowice;Gorzkowice
+ŚWIĘTOKRZYSKIE;skarżyski;Bliżyn;Bliżyn, wieś
+WIELKOPOLSKIE;gostyński;Gostyń;Gostyń
+WIELKOPOLSKIE;średzki;Środa Wielkopolska;Środa Wielkopolska
+KUJAWSKO-POMORSKIE;toruński;Obrowo;Głogowo
+PODKARPACKIE;rzeszowski;Błażowa;Błażowa, miasto
+MAŁOPOLSKIE;krakowski;Michałowice;Kozierów, wieś
+DOLNOŚLĄSKIE;trzebnicki;Trzebnica;Trzebnica
+POMORSKIE;tczewski;Tczew;Tczew, miasto
+ŚLĄSKIE;bielski;Jasienica;Mazańcowice, wieś
+ŚLĄSKIE;mikołowski;Orzesze;Orzesze, miasto
+MAŁOPOLSKIE;brzeski;Czchów;Czchów
+PODLASKIE;białostocki;Łapy;Łapy
+MAZOWIECKIE;nowodworski;Czosnów;Cząstków Mazowiecki, wieś
+ZACHODNIOPOMORSKIE;drawski;Czaplinek;Czaplinek
+KUJAWSKO-POMORSKIE;toruński;Obrowo;Kawęczyn, wieś
+PODKARPACKIE;krośnieński;Miejsce Piastowe;Miejsce Piastowe
+MAZOWIECKIE;legionowski;Serock;Serock
+PODKARPACKIE;przeworski;Zarzecze;Zarzecze, wieś
+ŚLĄSKIE;gliwicki;Knurów;Knurów
+MAZOWIECKIE;Radom;Radom;Radom, miasto
+KUJAWSKO-POMORSKIE;sępoleński;Więcbork;Więcbork, miasto
+LUBUSKIE;krośnieński;Gubin;Gubin
+PODKARPACKIE;rzeszowski;Lubenia;Sołonka, wieś
+WIELKOPOLSKIE;chodzieski;Szamocin;Szamocin, miasto
+OPOLSKIE;nyski;Korfantów;Korfantów, miasto
+MAŁOPOLSKIE;proszowicki;Proszowice;Proszowice
+MAZOWIECKIE;legionowski;Wieliszew;Wieliszew
+ZACHODNIOPOMORSKIE;Koszalin;Koszalin;Koszalin
+ŁÓDZKIE;pajęczański;Strzelce Wielkie;Strzelce Wielkie
+PODLASKIE;Suwałki;Suwałki;Suwałki
+MAŁOPOLSKIE;oświęcimski;Kęty;Kęty
+LUBELSKIE;świdnicki;Trawniki;Pełczyn
+WARMIŃSKO-MAZURSKIE;olsztyński;Dobre Miasto;Dobre Miasto, miasto
+WIELKOPOLSKIE;kościański;Kościan;Kościan
+OPOLSKIE;nyski;Nysa;Nysa
+DOLNOŚLĄSKIE;ząbkowicki;Ząbkowice Śląskie;Ząbkowice Śląskie, miasto
+LUBELSKIE;Lublin;Lublin;Lublin, miasto
+MAZOWIECKIE;sokołowski;Bielany;Bielany-Jarosławy, wieś
+POMORSKIE;Słupsk;Słupsk;Słupsk
+MAŁOPOLSKIE;Kraków;Kraków-Podgórze;Kraków-Podgórze, delegatura
+KUJAWSKO-POMORSKIE;radziejowski;Piotrków Kujawski;Piotrków Kujawski
+ŁÓDZKIE;pajęczański;Pajęczno;Pajęczno
+ZACHODNIOPOMORSKIE;policki;Dobra (Szczecińska);Dołuje
+ŁÓDZKIE;łęczycki;Łęczyca;Łęczyca
+ŚWIĘTOKRZYSKIE;Kielce;Kielce;Kielce
+LUBUSKIE;gorzowski;Santok;Wawrów
+LUBELSKIE;lubelski;Jastków;Panieńszczyzna, wieś
+WIELKOPOLSKIE;Leszno;Leszno;Leszno
+MAZOWIECKIE;grójecki;Grójec;Grójec
+WIELKOPOLSKIE;gnieźnieński;Czerniejewo;Czerniejewo
+WIELKOPOLSKIE;gnieźnieński;Gniezno;Gniezno, miasto
+PODLASKIE;siemiatycki;Mielnik;Mielnik
+WIELKOPOLSKIE;jarociński;Żerków;Żerków
+DOLNOŚLĄSKIE;górowski;Wąsosz;Wąsosz, miasto
+ŁÓDZKIE;opoczyński;Opoczno;Opoczno
+LUBUSKIE;żagański;Żagań;Żagań
+LUBUSKIE;słubicki;Słubice;Słubice
+WIELKOPOLSKIE;wrzesiński;Nekla;Nekla
+DOLNOŚLĄSKIE;lwówecki;Lwówek Śląski;Lwówek Śląski
+MAŁOPOLSKIE;Nowy Sącz;Nowy Sącz;Nowy Sącz, miasto
+POMORSKIE;nowodworski;Nowy Dwór Gdański;Nowy Dwór Gdański
+ZACHODNIOPOMORSKIE;Świnoujście;Świnoujście;Świnoujście, miasto
+DOLNOŚLĄSKIE;wołowski;Wołów;Wołów, miasto
+DOLNOŚLĄSKIE;zgorzelecki;Zgorzelec;Zgorzelec
+DOLNOŚLĄSKIE;oławski;Oława;Marcinkowice
+KUJAWSKO-POMORSKIE;żniński;Żnin;Żnin
+PODKARPACKIE;mielecki;Wadowice Górne;Wadowice Górne
+WIELKOPOLSKIE;czarnkowsko-trzcianecki;Drawsko;Drawski Młyn, wieś
+DOLNOŚLĄSKIE;zgorzelecki;Zgorzelec;Zgorzelec, miasto
+ŁÓDZKIE;zduńskowolski;Zduńska Wola;Zduńska Wola
+LUBELSKIE;lubelski;Głusk;Kalinówka, kolonia
+ŚLĄSKIE;myszkowski;Żarki;Żarki
+ŚLĄSKIE;pszczyński;Suszec;Suszec
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Wysogotowo
+WIELKOPOLSKIE;turecki;Tuliszków;Tuliszków
+WIELKOPOLSKIE;poznański;Swarzędz;Swarzędz
+LUBELSKIE;lubelski;Niemce;Dys
+ŚLĄSKIE;Jaworzno;Jaworzno;Jaworzno, miasto
+ŚLĄSKIE;zawierciański;Zawiercie;Zawiercie, miasto
+ŁÓDZKIE;bełchatowski;Bełchatów;Bełchatów, miasto
+MAZOWIECKIE;otwocki;Wiązowna;Zakręt
+DOLNOŚLĄSKIE;strzeliński;Borów;Borów
+ŁÓDZKIE;Łódź;Łódź-Widzew;Łódź-Widzew
+ŁÓDZKIE;zgierski;Aleksandrów Łódzki;Aleksandrów Łódzki
+OPOLSKIE;namysłowski;Namysłów;Namysłów, miasto
+PODKARPACKIE;ropczycko-sędziszowski;Sędziszów Małopolski;Sędziszów Małopolski
+WIELKOPOLSKIE;turecki;Władysławów;Russocice
+DOLNOŚLĄSKIE;oleśnicki;Oleśnica;Oleśnica, miasto
+ŚLĄSKIE;kłobucki;Lipie;Lipie
+WIELKOPOLSKIE;kaliski;Żelazków;Szosa Turecka
+ŁÓDZKIE;kutnowski;Kutno;Kutno
+ZACHODNIOPOMORSKIE;Szczecin;Szczecin;Szczecin
+LUBELSKIE;puławski;Puławy;Puławy
+KUJAWSKO-POMORSKIE;toruński;Zławieś Wielka;Górsk, wieś
+MAŁOPOLSKIE;miechowski;Miechów;Miechów
+ŁÓDZKIE;bełchatowski;Bełchatów;Bełchatów
+LUBELSKIE;lubelski;Głusk;Dominów
+ZACHODNIOPOMORSKIE;policki;Dobra (Szczecińska);Mierzyn, wieś
+MAŁOPOLSKIE;wielicki;Wieliczka;Strumiany, wieś
+ŁÓDZKIE;pabianicki;Pabianice;Pabianice, miasto
+PODKARPACKIE;krośnieński;Rymanów;Rymanów
+MAŁOPOLSKIE;bocheński;Bochnia;Proszówki, wieś
+WIELKOPOLSKIE;kościański;Śmigiel;Śmigiel, miasto
+KUJAWSKO-POMORSKIE;bydgoski;Dobrcz;Dobrcz
+DOLNOŚLĄSKIE;oleśnicki;Dobroszyce;Dobroszyce
+PODKARPACKIE;Przemyśl;Przemyśl;Przemyśl
+WARMIŃSKO-MAZURSKIE;kętrzyński;Kętrzyn;Kętrzyn, miasto
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Chyby
+POMORSKIE;bytowski;Bytów;Bytów
+KUJAWSKO-POMORSKIE;golubsko-dobrzyński;Golub-Dobrzyń;Golub-Dobrzyń, miasto
+DOLNOŚLĄSKIE;kłodzki;Międzylesie;Międzylesie
+MAZOWIECKIE;pruszkowski;Michałowice;Opacz-Kolonia, wieś
+MAZOWIECKIE;garwoliński;Garwolin;Garwolin
+ŁÓDZKIE;brzeziński;Brzeziny;Brzeziny, miasto
+POMORSKIE;Gdańsk;Gdańsk;Gdańsk, miasto
+ŁÓDZKIE;poddębicki;Poddębice;Poddębice
+MAZOWIECKIE;ciechanowski;Ciechanów;Ciechanów
+KUJAWSKO-POMORSKIE;tucholski;Kęsowo;Kęsowo
+PODKARPACKIE;kolbuszowski;Niwiska;Siedlanka
+PODLASKIE;augustowski;Augustów;Augustów
+ZACHODNIOPOMORSKIE;Koszalin;Koszalin;Koszalin, miasto
+MAZOWIECKIE;gostyniński;Gostynin;Gostynin
+MAZOWIECKIE;legionowski;Wieliszew;Kałuszyn
+LUBELSKIE;Chełm;Chełm;Chełm
+DOLNOŚLĄSKIE;wrocławski;Czernica;Dobrzykowice
+PODLASKIE;białostocki;Juchnowiec Kościelny;Kleosin
+MAŁOPOLSKIE;nowotarski;Nowy Targ;Nowy Targ, miasto
+ŚWIĘTOKRZYSKIE;starachowicki;Pawłów;Pawłów
+MAZOWIECKIE;piaseczyński;Konstancin-Jeziorna;Konstancin-Jeziorna
+WARMIŃSKO-MAZURSKIE;olsztyński;Barczewo;Barczewo
+DOLNOŚLĄSKIE;wrocławski;Kobierzyce;Kobierzyce
+MAŁOPOLSKIE;wadowicki;Kalwaria Zebrzydowska;Kalwaria Zebrzydowska
+MAZOWIECKIE;przysuski;Odrzywół;Odrzywół
+WIELKOPOLSKIE;poznański;Pobiedziska;Pobiedziska, miasto
+MAZOWIECKIE;Warszawa;Warszawa - Mokotów;Warszawa - Mokotów, dzielnica m. st. Warszawy
+ŚLĄSKIE;Dąbrowa Górnicza;Dąbrowa Górnicza;Dąbrowa Górnicza
+LUBUSKIE;zielonogórski;Babimost;Babimost
+POMORSKIE;kartuski;Żukowo;Tuchom, wieś
+MAZOWIECKIE;warszawski zachodni;Stare Babice;Zielonki-Wieś
+PODKARPACKIE;stalowowolski;Stalowa Wola;Stalowa Wola
+LUBELSKIE;bialski;Wisznice;Wisznice
+LUBUSKIE;nowosolski;Nowa Sól;Nowa Sól, miasto
+LUBELSKIE;radzyński;Radzyń Podlaski;Radzyń Podlaski
+MAŁOPOLSKIE;krakowski;Liszki;Liszki, wieś
+MAŁOPOLSKIE;myślenicki;Dobczyce;Dobczyce
+POMORSKIE;wejherowski;Wejherowo;Bolszewo, wieś
+DOLNOŚLĄSKIE;wołowski;Wołów;Wołów
+DOLNOŚLĄSKIE;wrocławski;Siechnice;Groblice
+LUBUSKIE;zielonogórski;Czerwieńsk;Czerwieńsk
+ŁÓDZKIE;Łódź;Łódź-Górna;Łódź-Górna
+PODKARPACKIE;Rzeszów;Rzeszów;Rzeszów
+PODKARPACKIE;rzeszowski;Dynów;Dynów
+ŚLĄSKIE;wodzisławski;Wodzisław Śląski;Wodzisław Śląski
+LUBUSKIE;nowosolski;Siedlisko;Siedlisko
+ŁÓDZKIE;rawski;Biała Rawska;Biała Rawska
+POMORSKIE;pucki;Kosakowo;Suchy Dwór
+MAZOWIECKIE;garwoliński;Garwolin;Garwolin, miasto
+MAZOWIECKIE;miński;Sulejówek;Sulejówek
+WIELKOPOLSKIE;czarnkowsko-trzcianecki;Czarnków;Gębice, wieś
+DOLNOŚLĄSKIE;wrocławski;Sobótka;Sobótka
+WIELKOPOLSKIE;poznański;Suchy Las;Chludowo
+PODKARPACKIE;krośnieński;Wojaszówka;Ustrobna, wieś
+ŚLĄSKIE;tarnogórski;Tarnowskie Góry;Tarnowskie Góry
+MAZOWIECKIE;siedlecki;Suchożebry;Suchożebry
+ŚLĄSKIE;Jastrzębie-Zdrój;Jastrzębie-Zdrój;Jastrzębie-Zdrój
+ŚWIĘTOKRZYSKIE;włoszczowski;Włoszczowa;Włoszczowa, miasto
+MAŁOPOLSKIE;krakowski;Kocmyrzów-Luborzyca;Wysiołek Luborzycki, wieś
+ŚLĄSKIE;Ruda Śląska;Ruda Śląska;Ruda Śląska
+OPOLSKIE;opolski;Niemodlin;Niemodlin
+MAZOWIECKIE;miński;Dobre;Dobre
+ŁÓDZKIE;zgierski;Zgierz;Łagiewniki Nowe, wieś
+ŚLĄSKIE;Rybnik;Rybnik;Rybnik, miasto
+KUJAWSKO-POMORSKIE;Grudziądz;Grudziądz;Grudziądz
+PODKARPACKIE;rzeszowski;Krasne;Krasne
+MAŁOPOLSKIE;wielicki;Wieliczka;Wieliczka
+WARMIŃSKO-MAZURSKIE;nowomiejski;Nowe Miasto Lubawskie;Nowe Miasto Lubawskie, miasto
+WARMIŃSKO-MAZURSKIE;ełcki;Ełk;Ełk
+PODKARPACKIE;przeworski;Tryńcza;Tryńcza
+ŁÓDZKIE;zgierski;Stryków;Stryków
+MAŁOPOLSKIE;suski;Jordanów;Naprawa
+LUBELSKIE;kraśnicki;Urzędów;Wierzbica-Kolonia, kolonia
+POMORSKIE;kartuski;Kartuzy;Kiełpino
+ŚLĄSKIE;zawierciański;Poręba;Poręba
+ŁÓDZKIE;radomszczański;Radomsko;Radomsko
+MAŁOPOLSKIE;gorlicki;Gorlice;Gorlice
+DOLNOŚLĄSKIE;Wałbrzych;Wałbrzych;Wałbrzych
+ŁÓDZKIE;bełchatowski;Kleszczów;Kleszczów
+WIELKOPOLSKIE;wrzesiński;Kołaczkowo;Borzykowo
+LUBUSKIE;żarski;Lubsko;Lubsko
+LUBUSKIE;zielonogórski;Świdnica;Świdnica
+POMORSKIE;tczewski;Gniew;Gniew, miasto
+MAŁOPOLSKIE;oświęcimski;Chełmek;Chełmek, miasto
+MAZOWIECKIE;siedlecki;Siedlce;Stare Opole
+KUJAWSKO-POMORSKIE;aleksandrowski;Ciechocinek;Ciechocinek
+POMORSKIE;kościerski;Karsin;Karsin
+MAŁOPOLSKIE;wielicki;Niepołomice;Niepołomice
+MAŁOPOLSKIE;Kraków;Kraków-Krowodrza;Kraków-Krowodrza, delegatura
+PODKARPACKIE;stalowowolski;Zaklików;Zaklików, miasto
+KUJAWSKO-POMORSKIE;tucholski;Tuchola;Tuchola, miasto
+ZACHODNIOPOMORSKIE;wałecki;Tuczno;Tuczno, miasto
+KUJAWSKO-POMORSKIE;toruński;Zławieś Wielka;Stary Toruń, wieś
+MAZOWIECKIE;garwoliński;Górzno;Górzno
+WIELKOPOLSKIE;gostyński;Borek Wielkopolski;Karolew
+POMORSKIE;kartuski;Kartuzy;Kartuzy
+DOLNOŚLĄSKIE;Wrocław;Wrocław-Krzyki;Wrocław-Krzyki
+ŚLĄSKIE;lubliniecki;Lubliniec;Lubliniec
+PODKARPACKIE;kolbuszowski;Dzikowiec;Lipnica, wieś
+MAZOWIECKIE;płocki;Radzanowo;Stróżewko
+ŚLĄSKIE;bielski;Czechowice-Dziedzice;Ligota, wieś
+PODKARPACKIE;przeworski;Jawornik Polski;Hadle Szklarskie
+MAZOWIECKIE;ostrowski;Ostrów Mazowiecka;Ostrów Mazowiecka
+ZACHODNIOPOMORSKIE;wałecki;Wałcz;Wałcz, miasto
+DOLNOŚLĄSKIE;kłodzki;Szczytna;Szczytna, miasto
+ŁÓDZKIE;tomaszowski;Będków;Rzeczków, wieś
+MAZOWIECKIE;szydłowiecki;Szydłowiec;Szydłowiec
+MAŁOPOLSKIE;brzeski;Iwkowa;Drużków Pusty
+ŚLĄSKIE;pszczyński;Pszczyna;Jankowice
+DOLNOŚLĄSKIE;trzebnicki;Trzebnica;Księginice
+DOLNOŚLĄSKIE;trzebnicki;Trzebnica;Ligota
+DOLNOŚLĄSKIE;trzebnicki;Trzebnica;Kuźniczysko
+PODKARPACKIE;dębicki;Brzostek;Brzostek
+WIELKOPOLSKIE;międzychodzki;Międzychód;Dzięcielin, wieś
+PODKARPACKIE;przeworski;Gać;Ostrów, wieś
+PODLASKIE;hajnowski;Hajnówka;Hajnówka, miasto
+PODKARPACKIE;strzyżowski;Frysztak;GlinikŚredni
+POMORSKIE;gdański;Kolbudy;Bąkowo
+DOLNOŚLĄSKIE;jaworski;Męcinka;Męcinka
+MAŁOPOLSKIE;tarnowski;Zakliczyn;Zakliczyn
+ŚLĄSKIE;rybnicki;Czerwionka-Leszczyny;Przegędza
+OPOLSKIE;strzelecki;Ujazd;Ujazd, miasto
+MAZOWIECKIE;ciechanowski;Ciechanów;Ciechanów, miasto
+MAZOWIECKIE;przysuski;Potworów;Długie, wieś
+WIELKOPOLSKIE;złotowski;Krajenka;Krajenka, miasto
+LUBUSKIE;nowosolski;Otyń;Otyń, miasto
+MAZOWIECKIE;Warszawa;Warszawa - Włochy;Włochy
+WIELKOPOLSKIE;ostrzeszowski;Doruchów;Doruchów
+MAŁOPOLSKIE;nowosądecki;Nawojowa;Żeleźnikowa Wielka, wieś
+LUBUSKIE;krośnieński;Krosno Odrzańskie;Krosno Odrzańskie
+DOLNOŚLĄSKIE;lwówecki;Mirsk;Mirsk
+MAŁOPOLSKIE;tarnowski;Wojnicz;Wojnicz
+WIELKOPOLSKIE;ostrzeszowski;Kraszewice;Kraszewice
+ŁÓDZKIE;sieradzki;Warta;Warta
+PODKARPACKIE;rzeszowski;Trzebownisko;Jasionka, wieś
+ŚLĄSKIE;Dąbrowa Górnicza;Dąbrowa Górnicza;Dąbrowa Górnicza, miasto
+DOLNOŚLĄSKIE;wołowski;Brzeg Dolny;Brzeg Dolny
+MAZOWIECKIE;garwoliński;Sobolew;Sobolew, wieś
+ZACHODNIOPOMORSKIE;łobeski;Węgorzyno;Węgorzyno, miasto
+ŚWIĘTOKRZYSKIE;sandomierski;Koprzywnica;Koprzywnica
+DOLNOŚLĄSKIE;Wrocław;Wrocław-Fabryczna;Wrocław-Fabryczna
+MAZOWIECKIE;kozienicki;Głowaczów;Głowaczów
+ŁÓDZKIE;łęczycki;Daszyna;Daszyna
+POMORSKIE;bytowski;Bytów;Rzepnica, wieś
+PODKARPACKIE;przeworski;Przeworsk;Grzęska
+ŚLĄSKIE;żywiecki;Radziechowy-Wieprz;Radziechowy, wieś
+PODKARPACKIE;krośnieński;Dukla;Dukla, miasto
+WIELKOPOLSKIE;wolsztyński;Wolsztyn;Wolsztyn
+MAZOWIECKIE;piaseczyński;Konstancin-Jeziorna;Bielawa
+KUJAWSKO-POMORSKIE;aleksandrowski;Aleksandrów Kujawski;Odolion
+WIELKOPOLSKIE;Poznań;Poznań-Jeżyce;Poznań-Jeżyce, delegatura
+POMORSKIE;lęborski;Lębork;Lębork
+MAZOWIECKIE;ostrowski;Małkinia Górna;Małkinia Górna
+LUBUSKIE;gorzowski;Kostrzyn nad Odrą;Kostrzyn nad Odrą, miasto
+ŁÓDZKIE;łaski;Łask;Łask, miasto
+POMORSKIE;starogardzki;Kaliska;Frank
+ŁÓDZKIE;zgierski;Głowno;Głowno, miasto
+ŚLĄSKIE;mikołowski;Ornontowice;Ornontowice, wieś
+DOLNOŚLĄSKIE;lwówecki;Lubomierz;Wojciechów, wieś
+MAZOWIECKIE;miński;Latowicz;Wielgolas
+ŚWIĘTOKRZYSKIE;kielecki;Chęciny;Chęciny
+DOLNOŚLĄSKIE;lubiński;Lubin;Krzeczyn Wielki, wieś
+WIELKOPOLSKIE;nowotomyski;Zbąszyń;Zbąszyń, miasto
+PODKARPACKIE;rzeszowski;Głogów Małopolski;Głogów Małopolski
+LUBUSKIE;słubicki;Rzepin;Rzepin
+LUBELSKIE;bialski;Konstantynów;Konstantynów
+MAZOWIECKIE;miński;Halinów;Józefin, wieś
+MAŁOPOLSKIE;nowosądecki;Grybów;Grybów, miasto
+MAŁOPOLSKIE;nowosądecki;Chełmiec;Dąbrowa, wieś
+LUBELSKIE;rycki;Ryki;Ryki
+ZACHODNIOPOMORSKIE;koszaliński;Bobolice;Bobolice
+MAZOWIECKIE;radomski;Iłża;Iłża
+MAŁOPOLSKIE;nowosądecki;Łososina Dolna;Łęki, wieś
+POMORSKIE;Słupsk;Słupsk;Słupsk, miasto
+ZACHODNIOPOMORSKIE;goleniowski;Goleniów;Żółwia Błoć, wieś
+DOLNOŚLĄSKIE;oleśnicki;Oleśnica;Spalice
+WARMIŃSKO-MAZURSKIE;ostródzki;Ostróda;Idzbark, wieś
+WARMIŃSKO-MAZURSKIE;gołdapski;Gołdap;Gołdap
+PODLASKIE;białostocki;Choroszcz;Choroszcz
+ŁÓDZKIE;zgierski;Ozorków;Ozorków
+ZACHODNIOPOMORSKIE;kamieński;Kamień Pomorski;Kamień Pomorski
+DOLNOŚLĄSKIE;trzebnicki;Żmigród;Żmigród
+POMORSKIE;bytowski;Bytów;Bytów, miasto
+DOLNOŚLĄSKIE;oleśnicki;Twardogóra;Moszyce
+PODKARPACKIE;stalowowolski;Stalowa Wola;Stalowa Wola, miasto
+DOLNOŚLĄSKIE;polkowicki;Polkowice;Polkowice
+PODKARPACKIE;dębicki;Żyraków;Zawierzbie
+DOLNOŚLĄSKIE;świdnicki;Jaworzyna Śląska;Jaworzyna Śląska
+KUJAWSKO-POMORSKIE;bydgoski;Osielsko;Niemcz
+MAZOWIECKIE;pruszkowski;Raszyn;Raszyn
+WIELKOPOLSKIE;poznański;Luboń;Luboń
+WIELKOPOLSKIE;turecki;Turek;Turek, miasto
+MAZOWIECKIE;garwoliński;Miastków Kościelny;Miastków Kościelny
+KUJAWSKO-POMORSKIE;Włocławek;Włocławek;Włocławek, miasto
+WIELKOPOLSKIE;poznański;Swarzędz;Zalasewo
+WIELKOPOLSKIE;poznański;Kórnik;Szczytniki, wieś
+LUBUSKIE;żarski;Żary;Żary
+POMORSKIE;wejherowski;Łęczyce;Bożepole Małe
+DOLNOŚLĄSKIE;ząbkowicki;Ciepłowody;Ciepłowody
+DOLNOŚLĄSKIE;złotoryjski;Świerzawa;Świerzawa
+MAŁOPOLSKIE;myślenicki;Lubień;Skomielna Biała, wieś
+MAŁOPOLSKIE;nowosądecki;Chełmiec;Biczyce Dolne, wieś
+ŚLĄSKIE;częstochowski;Poczesna;Huta Stara B, wieś
+ŁÓDZKIE;piotrkowski;Rozprza;Rozprza
+ŚLĄSKIE;Piekary Śląskie;Piekary Śląskie;Piekary Śląskie
+PODKARPACKIE;mielecki;Mielec;Mielec, miasto
+MAZOWIECKIE;legionowski;Legionowo;Legionowo
+WIELKOPOLSKIE;wągrowiecki;Wągrowiec;Wągrowiec
+PODLASKIE;białostocki;Zabłudów;Zabłudów
+ŚWIĘTOKRZYSKIE;sandomierski;Sandomierz;Sandomierz
+DOLNOŚLĄSKIE;oławski;Oława;Oława
+ŚLĄSKIE;będziński;Czeladź;Czeladź
+MAŁOPOLSKIE;limanowski;Mszana Dolna;Mszana Dolna, miasto
+MAZOWIECKIE;Warszawa;Warszawa - Żoliborz;Warszawa - Żoliborz, dzielnica m. st. Warszawy
+MAZOWIECKIE;piaseczyński;Lesznowola;Nowa Wola
+ZACHODNIOPOMORSKIE;choszczeński;Choszczno;Choszczno
+DOLNOŚLĄSKIE;lubański;Lubań;Lubań, miasto
+WIELKOPOLSKIE;wrzesiński;Pyzdry;Pyzdry
+MAZOWIECKIE;przysuski;Borkowice;Borkowice
+DOLNOŚLĄSKIE;lubiński;Rudna;Rudna
+KUJAWSKO-POMORSKIE;Włocławek;Włocławek;Włocławek
+ŚLĄSKIE;Zabrze;Zabrze;Zabrze, miasto
+DOLNOŚLĄSKIE;kłodzki;Nowa Ruda;Nowa Ruda
+DOLNOŚLĄSKIE;świdnicki;Strzegom;Strzegom
+WIELKOPOLSKIE;chodzieski;Chodzież;Chodzież
+POMORSKIE;kwidzyński;Kwidzyn;Kwidzyn
+WIELKOPOLSKIE;śremski;Śrem;Śrem
+DOLNOŚLĄSKIE;Wrocław;Wrocław-Psie Pole;Wrocław-Psie Pole
+POMORSKIE;starogardzki;Starogard Gdański;Starogard Gdański
+MAZOWIECKIE;piaseczyński;Tarczyn;Tarczyn
+DOLNOŚLĄSKIE;bolesławiecki;Bolesławiec;Łaziska
+MAZOWIECKIE;węgrowski;Węgrów;Węgrów, miasto
+WIELKOPOLSKIE;ostrowski;Odolanów;Odolanów
+MAZOWIECKIE;wyszkowski;Wyszków;Lucynów Duży
+MAZOWIECKIE;piaseczyński;Piaseczno;Piaseczno
+WIELKOPOLSKIE;czarnkowsko-trzcianecki;Trzcianka;Trzcianka, miasto
+MAZOWIECKIE;płoński;Płońsk;Płońsk
+WIELKOPOLSKIE;gnieźnieński;Trzemeszno;Trzemeszno
+KUJAWSKO-POMORSKIE;bydgoski;Białe Błota;Murowaniec
+LUBELSKIE;świdnicki;Świdnik;Świdnik, miasto
+MAŁOPOLSKIE;krakowski;Jerzmanowice-Przeginia;Jerzmanowice
+WIELKOPOLSKIE;złotowski;Złotów;Złotów
+OPOLSKIE;kluczborski;Wołczyn;Wołczyn, miasto
+MAŁOPOLSKIE;krakowski;Krzeszowice;Krzeszowice
+POMORSKIE;bytowski;Tuchomie;Tuchomie, wieś
+OPOLSKIE;strzelecki;Strzelce Opolskie;Strzelce Opolskie, miasto
+WIELKOPOLSKIE;Poznań;Poznań-Stare Miasto;Poznań-Stare Miasto, delegatura
+WIELKOPOLSKIE;Poznań;Poznań-Nowe Miasto;Poznań-Nowe Miasto
+ŚLĄSKIE;tarnogórski;Zbrosławice;Zbrosławice, wieś
+PODKARPACKIE;łańcucki;Łańcut;Łańcut, miasto
+PODKARPACKIE;dębicki;Żyraków;Żyraków
+MAZOWIECKIE;makowski;Maków Mazowiecki;Maków Mazowiecki
+KUJAWSKO-POMORSKIE;włocławski;Lubień Kujawski;Lubień Kujawski, miasto
+POMORSKIE;wejherowski;Szemud;Bojano
+DOLNOŚLĄSKIE;oławski;Jelcz-Laskowice;Jelcz-Laskowice
+DOLNOŚLĄSKIE;Wrocław;Wrocław-Stare Miasto;Wrocław-Stare Miasto
+POMORSKIE;kartuski;Żukowo;Borkowo, wieś
+MAŁOPOLSKIE;Tarnów;Tarnów;Tarnów
+MAZOWIECKIE;warszawski zachodni;Błonie;Błonie
+ŚLĄSKIE;gliwicki;Sośnicowice;Sośnicowice
+MAŁOPOLSKIE;nowosądecki;Łącko;Łącko, wieś
+LUBELSKIE;łęczyński;Łęczna;Łęczna
+ZACHODNIOPOMORSKIE;kołobrzeski;Kołobrzeg;Kołobrzeg, miasto
+WIELKOPOLSKIE;pleszewski;Pleszew;Zielona Łąka, wieś
+DOLNOŚLĄSKIE;oleśnicki;Międzybórz;Międzybórz, miasto
+ZACHODNIOPOMORSKIE;świdwiński;Świdwin;Kluczkowo
+ZACHODNIOPOMORSKIE;świdwiński;Świdwin;Oparzno
+WIELKOPOLSKIE;czarnkowsko-trzcianecki;Czarnków;Czarnków
+LUBELSKIE;biłgorajski;Józefów;Józefów
+WIELKOPOLSKIE;poznański;Dopiewo;Dopiewiec
+LUBELSKIE;świdnicki;Piaski;Piaski, miasto
+WIELKOPOLSKIE;nowotomyski;Opalenica;Opalenica
+MAZOWIECKIE;wołomiński;Marki;Marki, miasto
+DOLNOŚLĄSKIE;oleśnicki;Bierutów;Bierutów
+DOLNOŚLĄSKIE;wrocławski;Kobierzyce;Bielany Wrocławskie
+MAZOWIECKIE;sierpecki;Sierpc;Sierpc
+OPOLSKIE;opolski;Tułowice;Tułowice, miasto
+WIELKOPOLSKIE;Poznań;Poznań-Wilda;Poznań-Wilda, delegatura
+OPOLSKIE;głubczycki;Głubczyce;Głubczyce, miasto
+ŁÓDZKIE;radomszczański;Gomunice;Gomunice
+MAŁOPOLSKIE;oświęcimski;Chełmek;Chełmek
+MAZOWIECKIE;grójecki;Grójec;Grójec, miasto
+DOLNOŚLĄSKIE;wrocławski;Siechnice;Radwanice
+MAŁOPOLSKIE;bocheński;Łapanów;Łapanów
+PODKARPACKIE;dębicki;Dębica;Dębica, miasto
+MAŁOPOLSKIE;limanowski;Limanowa;Siekierczyna, wieś
+ZACHODNIOPOMORSKIE;sławieński;Darłowo;Darłowo
+MAŁOPOLSKIE;limanowski;Laskowa;Ujanowice
+MAŁOPOLSKIE;krakowski;Mogilany;Libertów
+ŁÓDZKIE;kutnowski;Kutno;Gołębiew Stary, wieś
+WIELKOPOLSKIE;poznański;Suchy Las;Biedrusko, wieś
+WIELKOPOLSKIE;złotowski;Zakrzewo;Zakrzewo, wieś
+WIELKOPOLSKIE;chodzieski;Budzyń;Budzyń, miasto
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Lusowo
+POMORSKIE;malborski;Nowy Staw;Nowy Staw
+POMORSKIE;starogardzki;Zblewo;Pinczyn
+DOLNOŚLĄSKIE;milicki;Milicz;Milicz
+KUJAWSKO-POMORSKIE;tucholski;Gostycyn;Gostycyn, wieś
+MAŁOPOLSKIE;wadowicki;Andrychów;Andrychów
+MAŁOPOLSKIE;krakowski;Wielka Wieś;Modlniczka
+DOLNOŚLĄSKIE;lubański;Leśna;Szyszkowa
+MAŁOPOLSKIE;gorlicki;Bobowa;Sędziszowa, wieś
+OPOLSKIE;namysłowski;Namysłów;Namysłów
+DOLNOŚLĄSKIE;średzki;Miękinia;Wróblowice, wieś
+ŁÓDZKIE;piotrkowski;Sulejów;Poniatów
+POMORSKIE;pucki;Krokowa;Krokowa
+LUBUSKIE;międzyrzecki;Skwierzyna;Skwierzyna
+OPOLSKIE;brzeski;Lubsza;Lubsza
+ŚLĄSKIE;żywiecki;Ślemień;Las, wieś
+ZACHODNIOPOMORSKIE;koszaliński;Świeszyno;Konikowo
+POMORSKIE;słupski;Kępice;Kępice, miasto
+ŚLĄSKIE;raciborski;Krzyżanowice;Tworków
+OPOLSKIE;kluczborski;Kluczbork;Kluczbork
+KUJAWSKO-POMORSKIE;chełmiński;Unisław;Unisław, wieś
+KUJAWSKO-POMORSKIE;włocławski;Choceń;Choceń
+PODKARPACKIE;rzeszowski;Kamień;Łowisko, wieś
+ŚLĄSKIE;Jastrzębie-Zdrój;Jastrzębie-Zdrój;Jastrzębie-Zdrój, miasto
+WIELKOPOLSKIE;szamotulski;Kaźmierz;Kaźmierz, wieś
+KUJAWSKO-POMORSKIE;radziejowski;Osięciny;Osięciny
+WIELKOPOLSKIE;kaliski;Koźminek;Koźminek
+DOLNOŚLĄSKIE;złotoryjski;Złotoryja;Złotoryja
+PODLASKIE;sejneński;Sejny;Sejny, miasto
+MAZOWIECKIE;przysuski;Przysucha;Przysucha
+DOLNOŚLĄSKIE;Wrocław;Wrocław-Śródmieście;Wrocław-Śródmieście
+DOLNOŚLĄSKIE;dzierżoniowski;Pieszyce;Pieszyce, miasto
+DOLNOŚLĄSKIE;lwówecki;Gryfów Śląski;Gryfów Śląski
+WIELKOPOLSKIE;kaliski;Blizanów;Jastrzębniki
+WIELKOPOLSKIE;kępiński;Łęka Opatowska;Łęka Opatowska, wieś
+ZACHODNIOPOMORSKIE;szczecinecki;Szczecinek;Szczecinek
+ŚLĄSKIE;żywiecki;Łodygowice;Zarzecze
+LUBELSKIE;lubelski;Niemce;Elizówka
+WIELKOPOLSKIE;czarnkowsko-trzcianecki;Krzyż Wielkopolski;Krzyż Wielkopolski
+MAZOWIECKIE;warszawski zachodni;Ożarów Mazowiecki;Kaputy
+POMORSKIE;chojnicki;Chojnice;Charzykowy
+LUBELSKIE;łęczyński;Cyców;Cyców
+POMORSKIE;kartuski;Żukowo;Miszewo, wieś
+MAŁOPOLSKIE;miechowski;Charsznica;Miechów-Charsznica
+POMORSKIE;wejherowski;Reda;Reda
+MAZOWIECKIE;grójecki;Warka;Warka
+WARMIŃSKO-MAZURSKIE;olsztyński;Stawiguda;Jaroty
+MAZOWIECKIE;Warszawa;Warszawa - Praga-Północ;Warszawa - Praga-Północ, dzielnica m. st. Warszawy
+KUJAWSKO-POMORSKIE;inowrocławski;Inowrocław;Inowrocław
+ŁÓDZKIE;kutnowski;Kutno;Kutno, miasto
+DOLNOŚLĄSKIE;wrocławski;Czernica;Kamieniec Wrocławski, wieś
+ŚWIĘTOKRZYSKIE;kielecki;Chmielnik;Chmielnik
+WIELKOPOLSKIE;poznański;Dopiewo;Dopiewiec, wieś
+WIELKOPOLSKIE;pleszewski;Pleszew;Pleszew
+PODLASKIE;bielski;Bielsk Podlaski;Bielsk Podlaski
+MAZOWIECKIE;siedlecki;Siedlce;Pruszyn-Pieńki, wieś
+MAŁOPOLSKIE;krakowski;Wielka Wieś;Biały Kościół
+POMORSKIE;pucki;Puck;Starzyno
+POMORSKIE;pucki;Kosakowo;Kosakowo
+WIELKOPOLSKIE;poznański;Kórnik;Kórnik
+PODKARPACKIE;lubaczowski;Lubaczów;Lubaczów, miasto
+WIELKOPOLSKIE;turecki;Turek;Słodków-Kolonia
+MAŁOPOLSKIE;wielicki;Kłaj;Kłaj
+WIELKOPOLSKIE;poznański;Swarzędz;Rabowice, wieś
+MAZOWIECKIE;Siedlce;Siedlce;Siedlce, miasto
+MAŁOPOLSKIE;myślenicki;Myślenice;Myślenice
+MAŁOPOLSKIE;myślenicki;Myślenice;Głogoczów
+WIELKOPOLSKIE;poznański;Kórnik;Czmoń, wieś
+MAZOWIECKIE;otwocki;Karczew;Karczew
+MAZOWIECKIE;żyrardowski;Wiskitki;Wiskitki
+MAZOWIECKIE;żyrardowski;Mszczonów;Mszczonów
+PODKARPACKIE;rzeszowski;Trzebownisko;Zaczernie
+MAŁOPOLSKIE;gorlicki;Gorlice;Gorlice, miasto
+MAŁOPOLSKIE;chrzanowski;Chrzanów;Chrzanów
+WIELKOPOLSKIE;ostrzeszowski;Mikstat;Mikstat
+LUBUSKIE;zielonogórski;Sulechów;Sulechów
+KUJAWSKO-POMORSKIE;brodnicki;Brodnica;Brodnica
+LUBELSKIE;biłgorajski;Biłgoraj;Biłgoraj
+POMORSKIE;słupski;Kobylnica;Kobylnica
+MAŁOPOLSKIE;wielicki;Gdów;Niegowić
+ZACHODNIOPOMORSKIE;goleniowski;Goleniów;Goleniów, miasto
+WIELKOPOLSKIE;kaliski;Lisków;Lisków
+WARMIŃSKO-MAZURSKIE;lidzbarski;Lubomino;Rogiedle, wieś
+LUBELSKIE;puławski;Puławy;Gołąb, wieś
+PODKARPACKIE;kolbuszowski;Majdan Królewski;Majdan Królewski
+PODKARPACKIE;rzeszowski;Głogów Małopolski;Głogów Małopolski, miasto
+WIELKOPOLSKIE;poznański;Kostrzyn;Kostrzyn
+ŚLĄSKIE;Żory;Żory;Żory, miasto
+ŚLĄSKIE;bielski;Jasienica;Rudzica
+PODKARPACKIE;przeworski;Sieniawa;Sieniawa
+DOLNOŚLĄSKIE;wrocławski;Długołęka;Kiełczówek
+MAZOWIECKIE;wołomiński;Radzymin;Stary Dybów
+MAŁOPOLSKIE;nowotarski;Ochotnica Dolna;Ochotnica Dolna
+MAŁOPOLSKIE;nowosądecki;Stary Sącz;Gołkowice Dolne
+POMORSKIE;Sopot;Sopot;Sopot, miasto
+WARMIŃSKO-MAZURSKIE;Elbląg;Elbląg;Elbląg
+MAZOWIECKIE;płoński;Raciąż;Kraszewo-Czubaki, wieś
+LUBELSKIE;radzyński;Radzyń Podlaski;Zabiele, wieś
+MAZOWIECKIE;grodziski;Jaktorów;Międzyborów
+MAŁOPOLSKIE;olkuski;Olkusz;Olkusz, miasto
+KUJAWSKO-POMORSKIE;Toruń;Toruń;Toruń, miasto
+ŚLĄSKIE;bieruńsko-lędziński;Lędziny;Lędziny, miasto
+PODLASKIE;bielski;Bielsk Podlaski;Bielsk Podlaski, miasto
+LUBELSKIE;kraśnicki;Kraśnik;Kraśnik, miasto
+ZACHODNIOPOMORSKIE;sławieński;Sławno;Gwiazdowo, wieś
+ŚLĄSKIE;Częstochowa;Częstochowa;Częstochowa, miasto
+LUBELSKIE;parczewski;Parczew;Parczew, miasto
+ŚLĄSKIE;żywiecki;Lipowa;Lipowa, wieś
+MAZOWIECKIE;pruszkowski;Pruszków;Pruszków, miasto
+ŚLĄSKIE;Ruda Śląska;Ruda Śląska;Ruda Śląska, miasto
+WIELKOPOLSKIE;Poznań;Poznań-Grunwald;Poznań-Grunwald, delegatura
+MAŁOPOLSKIE;myślenicki;Dobczyce;Dobczyce, miasto
+LUBUSKIE;wschowski;Sława;Śmieszkowo, wieś
+DOLNOŚLĄSKIE;polkowicki;Grębocice;Grębocice, wieś
+MAZOWIECKIE;miński;Mińsk Mazowiecki;Mińsk Mazowiecki, miasto
+ŚWIĘTOKRZYSKIE;jędrzejowski;Jędrzejów;Jędrzejów, miasto
+ŚLĄSKIE;myszkowski;Niegowa;Niegowa, wieś
+MAŁOPOLSKIE;gorlicki;Łużna;Łużna, wieś
+MAZOWIECKIE;płocki;Bielsk;Bielsk, wieś
+LUBELSKIE;włodawski;Włodawa;Suszno, wieś
+POMORSKIE;chojnicki;Chojnice;Chojnice, miasto
+WIELKOPOLSKIE;słupecki;Ostrowite;Ostrowite, wieś
+PODLASKIE;Białystok;Białystok;Białystok, miasto
+WARMIŃSKO-MAZURSKIE;lidzbarski;Lidzbark Warmiński;Lidzbark Warmiński, miasto
+ŚWIĘTOKRZYSKIE;kielecki;Górno;Cedzyna, wieś
+WARMIŃSKO-MAZURSKIE;elbląski;Pasłęk;Pasłęk, miasto
+WIELKOPOLSKIE;poznański;Komorniki;Chomęcice, wieś
+WARMIŃSKO-MAZURSKIE;iławski;Kisielice;Kisielice, miasto
+LUBELSKIE;bialski;Biała Podlaska;Cicibór Duży, wieś
+WIELKOPOLSKIE;kępiński;Trzcinica;Trzcinica, wieś
+WIELKOPOLSKIE;turecki;Przykona;Rogów, wieś
+ZACHODNIOPOMORSKIE;policki;Dobra (Szczecińska);Dobra, wieś
+ŚWIĘTOKRZYSKIE;Kielce;Kielce;Kielce, miasto
+MAZOWIECKIE;sokołowski;Kosów Lacki;Kosów Lacki, miasto
+POMORSKIE;sztumski;Dzierzgoń;Dzierzgoń, miasto
+ŚLĄSKIE;cieszyński;Hażlach;Hażlach, wieś
+ŁÓDZKIE;łódzki wschodni;Rzgów;Guzew, wieś
+ZACHODNIOPOMORSKIE;drawski;Złocieniec;Złocieniec, miasto
+MAZOWIECKIE;legionowski;Legionowo;Legionowo, miasto
+MAZOWIECKIE;grójecki;Grójec;Janówek, wieś
+ŁÓDZKIE;Łódź;Łódź-Górna;Łódź-Górna, delegatura
+WARMIŃSKO-MAZURSKIE;mrągowski;Piecki;Piecki, wieś
+MAZOWIECKIE;wołomiński;Wołomin;Wołomin, miasto
+POMORSKIE;kartuski;Żukowo;Małkowo, wieś
+WIELKOPOLSKIE;złotowski;Lipka;Lipka, wieś
+ŁÓDZKIE;Łódź;Łódź-Widzew;Łódź-Widzew, delegatura
+ŚLĄSKIE;będziński;Psary;Psary, wieś
+ŚWIĘTOKRZYSKIE;skarżyski;Skarżysko-Kamienna;Skarżysko-Kamienna, miasto
+LUBELSKIE;Chełm;Chełm;Chełm, miasto
+WIELKOPOLSKIE;leszczyński;Święciechowa;Święciechowa, wieś
+MAŁOPOLSKIE;Kraków;Kraków-Śródmieście;Kraków-Śródmieście, delegatura
+DOLNOŚLĄSKIE;oławski;Oława;Oława, miasto
+KUJAWSKO-POMORSKIE;brodnicki;Bobrowo;Zgniłobłoty, wieś
+ŁÓDZKIE;łęczycki;Świnice Warckie;Świnice Warckie, wieś
+LUBUSKIE;Zielona Góra;Zielona Góra;Zielona Góra, miasto
+DOLNOŚLĄSKIE;Wałbrzych;Wałbrzych;Wałbrzych, miasto
+PODLASKIE;Suwałki;Suwałki;Suwałki, miasto
+DOLNOŚLĄSKIE;świdnicki;Strzegom;Strzegom, miasto
+LUBELSKIE;łukowski;Łuków;Łuków, miasto
+LUBELSKIE;łęczyński;Puchaczów;Wesołówka, wieś
+ŁÓDZKIE;zgierski;Stryków;Smolice, wieś
+WIELKOPOLSKIE;pleszewski;Chocz;Chocz, miasto
+WIELKOPOLSKIE;gnieźnieński;Łubowo;Łubowo, wieś
+OPOLSKIE;opolski;Dąbrowa;Żelazna, wieś
+ŚLĄSKIE;Siemianowice Śląskie;Siemianowice Śląskie;Siemianowice Śląskie, miasto
+LUBELSKIE;lubelski;Jabłonna;Piotrków Pierwszy, wieś
+MAŁOPOLSKIE;miechowski;Gołcza;Gołcza, wieś
+DOLNOŚLĄSKIE;średzki;Malczyce;Malczyce, wieś
+MAZOWIECKIE;wołomiński;Ząbki;Ząbki, miasto
+LUBELSKIE;opolski;Poniatowa;Poniatowa, miasto
+ZACHODNIOPOMORSKIE;wałecki;Mirosławiec;Mirosławiec, miasto
+WARMIŃSKO-MAZURSKIE;iławski;Iława;Iława, miasto
+WIELKOPOLSKIE;koniński;Kazimierz Biskupi;Kazimierz Biskupi, wieś
+ŚLĄSKIE;tarnogórski;Tarnowskie Góry;Tarnowskie Góry, miasto
+WIELKOPOLSKIE;turecki;Brudzew;Kolnica, wieś
+MAŁOPOLSKIE;olkuski;Trzyciąż;Trzyciąż, wieś
+ŚWIĘTOKRZYSKIE;kazimierski;Kazimierza Wielka;Kazimierza Wielka, miasto
+ŚLĄSKIE;lubliniecki;Lubliniec;Lubliniec, miasto
+PODKARPACKIE;mielecki;Radomyśl Wielki;Radomyśl Wielki
+MAŁOPOLSKIE;bocheński;Trzciana;Leszczyna, wieś
+MAZOWIECKIE;przasnyski;Jednorożec;Jednorożec, wieś
+PODKARPACKIE;jasielski;Tarnowiec;Tarnowiec, wieś
+DOLNOŚLĄSKIE;polkowicki;Chocianów;Chocianów, miasto
+KUJAWSKO-POMORSKIE;żniński;Barcin;Barcin, miasto
+LUBUSKIE;zielonogórski;Zabór;Zabór, wieś
+MAŁOPOLSKIE;proszowicki;Pałecznica;Ibramowice, wieś
+MAZOWIECKIE;sokołowski;Sterdyń;Sterdyń, wieś
+WIELKOPOLSKIE;ostrowski;Sośnie;Sośnie, wieś
+MAZOWIECKIE;otwocki;Osieck;Sobienki, wieś
+MAŁOPOLSKIE;wielicki;Wieliczka;Wieliczka, miasto
+POMORSKIE;lęborski;Nowa Wieś Lęborska;Nowa Wieś Lęborska, wieś
+ŚLĄSKIE;żywiecki;Żywiec;Żywiec, miasto
+MAŁOPOLSKIE;limanowski;Tymbark;Tymbark, wieś
+ŚLĄSKIE;zawierciański;Szczekociny;Szczekociny, miasto
+LUBELSKIE;bialski;Łomazy;Łomazy, wieś
+WIELKOPOLSKIE;koniński;Krzymów;Krzymów, wieś
+ŚLĄSKIE;żywiecki;Gilowice;Gilowice, wieś
+WIELKOPOLSKIE;poznański;Kórnik;Kórnik, miasto
+OPOLSKIE;oleski;Praszka;Praszka, miasto
+ŁÓDZKIE;łowicki;Zduny;Nowe Zduny, wieś
+PODKARPACKIE;brzozowski;Dydnia;Dydnia, wieś
+MAŁOPOLSKIE;nowosądecki;Podegrodzie;Brzezna, wieś
+MAŁOPOLSKIE;wielicki;Niepołomice;Wola Batorska, wieś
+LUBELSKIE;krasnostawski;Krasnystaw;Stężyca-Kolonia, wieś
+DOLNOŚLĄSKIE;średzki;Kostomłoty;Kostomłoty, wieś
+MAŁOPOLSKIE;wadowicki;Lanckorona;Lanckorona, wieś
+PODKARPACKIE;ropczycko-sędziszowski;Ostrów;Zdżary, wieś
+KUJAWSKO-POMORSKIE;świecki;Świecie;Świecie, miasto
+MAŁOPOLSKIE;tarnowski;Wierzchosławice;Bogumiłowice, wieś
+MAŁOPOLSKIE;bocheński;Drwinia;Drwinia, wieś
+MAŁOPOLSKIE;bocheński;Nowy Wiśnicz;Stary Wiśnicz, wieś
+PODKARPACKIE;krośnieński;Chorkówka;Świerzowa Polska, wieś
+PODKARPACKIE;sanocki;Zarszyn;Nowosielce, wieś
+MAZOWIECKIE;grodziski;Grodzisk Mazowiecki;Grodzisk Mazowiecki, miasto
+LUBUSKIE;sulęciński;Sulęcin;Sulęcin, miasto
+OPOLSKIE;opolski;Prószków;Prószków, miasto
+ŚWIĘTOKRZYSKIE;sandomierski;Klimontów;Klimontów, miasto
+ŁÓDZKIE;łowicki;Nieborów;Dzierzgówek, wieś
+PODKARPACKIE;kolbuszowski;Raniżów;Raniżów, wieś
+MAŁOPOLSKIE;tarnowski;Tarnów;Wola Rzędzińska, wieś
+MAŁOPOLSKIE;myślenicki;Sułkowice;Sułkowice, miasto
+ŚLĄSKIE;bielski;Kozy;Kozy, wieś
+KUJAWSKO-POMORSKIE;bydgoski;Sicienko;Kruszyn, wieś
+ŚWIĘTOKRZYSKIE;jędrzejowski;Sędziszów;Sędziszów, miasto
+WIELKOPOLSKIE;poznański;Buk;Buk, miasto
+OPOLSKIE;krapkowicki;Walce;Walce, wieś
+KUJAWSKO-POMORSKIE;radziejowski;Bytoń;Morzyce, wieś
+WARMIŃSKO-MAZURSKIE;iławski;Susz;Susz, miasto
+LUBELSKIE;lubelski;Konopnica;Radawczyk Drugi, kolonia
+PODKARPACKIE;dębicki;Pilzno;Pilzno, miasto
+LUBELSKIE;puławski;Nałęczów;Nałęczów, miasto
+MAZOWIECKIE;wyszkowski;Zabrodzie;Choszczowe, wieś
+ŁÓDZKIE;opoczyński;Białaczów;Białaczów, miasto
+ŚLĄSKIE;będziński;Sławków;Sławków, miasto
+MAŁOPOLSKIE;olkuski;Wolbrom;Załęże, wieś
+MAŁOPOLSKIE;krakowski;Skała;Skała, miasto
+PODKARPACKIE;rzeszowski;Trzebownisko;Trzebownisko, wieś
+ŁÓDZKIE;wieluński;Osjaków;Osjaków, miasto
+KUJAWSKO-POMORSKIE;toruński;Obrowo;Obrowo, wieś
+MAŁOPOLSKIE;nowosądecki;Stary Sącz;Stary Sącz, miasto
+WIELKOPOLSKIE;ostrzeszowski;Ostrzeszów;Ostrzeszów, miasto
+ZACHODNIOPOMORSKIE;myśliborski;Myślibórz;Myślibórz, miasto
+MAŁOPOLSKIE;nowosądecki;Chełmiec;Piątkowa, wieś
+DOLNOŚLĄSKIE;wrocławski;Długołęka;Kiełczów, wieś
+MAZOWIECKIE;grodziski;Milanówek;Milanówek, miasto
+ŚLĄSKIE;Gliwice;Gliwice;Gliwice, miasto
+DOLNOŚLĄSKIE;wałbrzyski;Jedlina-Zdrój;Jedlina-Zdrój, miasto
+ZACHODNIOPOMORSKIE;policki;Kołbaskowo;Przecław, osada
+MAZOWIECKIE;pruszkowski;Michałowice;Komorów, wieś
+OPOLSKIE;głubczycki;Kietrz;Kietrz, miasto
+POMORSKIE;człuchowski;Człuchów;Człuchów, miasto
+MAZOWIECKIE;wołomiński;Zielonka;Zielonka, miasto
+LUBUSKIE;zielonogórski;Sulechów;Sulechów, miasto
+LUBUSKIE;Gorzów Wielkopolski;Gorzów Wielkopolski;Gorzów Wielkopolski, miasto
+PODLASKIE;białostocki;Supraśl;Supraśl, miasto
+MAŁOPOLSKIE;suski;Jordanów;Jordanów, miasto
+MAZOWIECKIE;radomski;Wierzbica;Wierzbica, wieś
+MAZOWIECKIE;pruszkowski;Raszyn;Janki, wieś
+WIELKOPOLSKIE;jarociński;Jaraczewo;Jaraczewo, miasto
+MAZOWIECKIE;Warszawa;Warszawa - Wawer;Warszawa - Wawer, dzielnica m. st. Warszawy
+POMORSKIE;chojnicki;Brusy;Brusy, miasto
+ŚLĄSKIE;bielski;Bestwina;Bestwinka, wieś
+KUJAWSKO-POMORSKIE;brodnicki;Brzozie;Brzozie, wieś
+POMORSKIE;wejherowski;Reda;Reda, miasto
+DOLNOŚLĄSKIE;dzierżoniowski;Dzierżoniów;Dzierżoniów, miasto
+ŁÓDZKIE;piotrkowski;Łęki Szlacheckie;Trzepnica-Kolonia, część miejscowości
+MAZOWIECKIE;grójecki;Pniewy;Kruszew, wieś
+DOLNOŚLĄSKIE;wołowski;Wińsko;Wińsko, wieś
+WIELKOPOLSKIE;wolsztyński;Przemęt;Błotnica, wieś
+DOLNOŚLĄSKIE;wrocławski;Kąty Wrocławskie;Smolec, wieś
+WIELKOPOLSKIE;chodzieski;Chodzież;Chodzież, miasto
+KUJAWSKO-POMORSKIE;inowrocławski;Inowrocław;Inowrocław, miasto
+ŁÓDZKIE;skierniewicki;Bolimów;Kurabka, wieś
+WIELKOPOLSKIE;gostyński;Krobia;Krobia, miasto
+POMORSKIE;kartuski;Żukowo;Żukowo, miasto
+PODKARPACKIE;Rzeszów;Rzeszów;Rzeszów, miasto
+MAZOWIECKIE;ostrołęcki;Rzekuń;Rzekuń, wieś
+MAZOWIECKIE;grodziski;Żabia Wola;Żabia Wola, wieś
+DOLNOŚLĄSKIE;oławski;Domaniów;Domaniów, wieś
+OPOLSKIE;kędzierzyńsko-kozielski;Kędzierzyn-Koźle;Kędzierzyn-Koźle, miasto
+MAZOWIECKIE;pruszkowski;Michałowice;Nowa Wieś, wieś
+WIELKOPOLSKIE;gnieźnieński;Trzemeszno;Wymysłowo, wieś
+KUJAWSKO-POMORSKIE;toruński;Lubicz;Lubicz Górny, wieś
+PODLASKIE;białostocki;Dobrzyniewo Duże;Dobrzyniewo Duże, wieś
+POMORSKIE;pucki;Puck;Leśniewo, wieś
+MAŁOPOLSKIE;limanowski;Limanowa;Mordarka, wieś
+ŁÓDZKIE;Piotrków Trybunalski;Piotrków Trybunalski;Piotrków Trybunalski, miasto
+ŚLĄSKIE;bielski;Jasienica;Międzyrzecze Górne, wieś
+DOLNOŚLĄSKIE;wołowski;Brzeg Dolny;Brzeg Dolny, miasto
+WIELKOPOLSKIE;Poznań;Poznań-Nowe Miasto;Poznań-Nowe Miasto, delegatura
+WIELKOPOLSKIE;kaliski;Godziesze Wielkie;Borek, wieś
+PODKARPACKIE;ropczycko-sędziszowski;Wielopole Skrzyńskie;Wielopole Skrzyńskie, wieś
+DOLNOŚLĄSKIE;bolesławiecki;Gromadka;Modła, wieś
+DOLNOŚLĄSKIE;Legnica;Legnica;Legnica, miasto
+DOLNOŚLĄSKIE;oleśnicki;Syców;Syców, miasto
+WARMIŃSKO-MAZURSKIE;Olsztyn;Olsztyn;Olsztyn, miasto
+MAŁOPOLSKIE;nowosądecki;Chełmiec;Mała Wieś, wieś
+ZACHODNIOPOMORSKIE;policki;Police;Police, miasto
+MAŁOPOLSKIE;bocheński;Bochnia;Bochnia, miasto
+WIELKOPOLSKIE;poznański;Murowana Goślina;Murowana Goślina, miasto
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Przeźmierowo
+POMORSKIE;gdański;Pszczółki;Pszczółki, wieś
+DOLNOŚLĄSKIE;polkowicki;Polkowice;Polkowice, miasto
+DOLNOŚLĄSKIE;wołowski;Wińsko;Głębowice, wieś
+LUBELSKIE;lubelski;Wólka;Turka, wieś
+WARMIŃSKO-MAZURSKIE;Elbląg;Elbląg;Elbląg, miasto
+PODKARPACKIE;rzeszowski;Trzebownisko;Zaczernie, wieś
+LUBELSKIE;kraśnicki;Kraśnik;Stróża-Kolonia, kolonia
+WIELKOPOLSKIE;gnieźnieński;Witkowo;Małachowo-Szemborowice, wieś
+ŁÓDZKIE;Łódź;Łódź-Bałuty;Łódź-Bałuty, delegatura
+MAŁOPOLSKIE;olkuski;Wolbrom;Wolbrom, miasto
+DOLNOŚLĄSKIE;lubański;Leśna;Leśna, miasto
+MAZOWIECKIE;piaseczyński;Piaseczno;Józefosław, wieś
+WIELKOPOLSKIE;poznański;Luboń;Luboń, miasto
+LUBUSKIE;żagański;Gozdnica;Gozdnica, miasto
+LUBUSKIE;strzelecko-drezdenecki;Drezdenko;Drezdenko, miasto
+ŚWIĘTOKRZYSKIE;starachowicki;Mirzec;Tychów Stary, wieś
+WIELKOPOLSKIE;poznański;Czerwonak;Czerwonak, wieś
+LUBUSKIE;świebodziński;Świebodzin;Świebodzin, miasto
+ŚLĄSKIE;będziński;Będzin;Będzin, miasto
+MAZOWIECKIE;wołomiński;Radzymin;Radzymin, miasto
+LUBUSKIE;zielonogórski;Trzebiechów;Trzebiechów, wieś
+DOLNOŚLĄSKIE;oławski;Jelcz-Laskowice;Jelcz-Laskowice, miasto
+MAZOWIECKIE;legionowski;Wieliszew;Góra, wieś
+MAŁOPOLSKIE;limanowski;Limanowa;Limanowa, miasto
+MAŁOPOLSKIE;krakowski;Mogilany;Mogilany, wieś
+WIELKOPOLSKIE;leszczyński;Krzemieniewo;Oporówko, wieś
+WIELKOPOLSKIE;poznański;Komorniki;Plewiska, wieś
+KUJAWSKO-POMORSKIE;tucholski;Lubiewo;Bysław, wieś
+ŚLĄSKIE;kłobucki;Krzepice;Krzepice, miasto
+DOLNOŚLĄSKIE;strzeliński;Strzelin;Strzelin, miasto
+POMORSKIE;wejherowski;Szemud;Szemud, wieś
+KUJAWSKO-POMORSKIE;włocławski;Brześć Kujawski;Wieniec, wieś
+WARMIŃSKO-MAZURSKIE;mrągowski;Mrągowo;Mrągowo, miasto
+ŚLĄSKIE;zawierciański;Ogrodzieniec;Ogrodzieniec, miasto
+ŁÓDZKIE;Łódź;Łódź-Polesie;Łódź-Polesie, delegatura
+MAŁOPOLSKIE;olkuski;Klucze;Klucze, wieś
+PODKARPACKIE;przemyski;Krasiczyn;Krasiczyn, wieś
+ŚLĄSKIE;gliwicki;Knurów;Knurów, miasto
+LUBELSKIE;lubartowski;Lubartów;Lubartów, miasto
+ŚLĄSKIE;raciborski;Kuźnia Raciborska;Kuźnia Raciborska, miasto
+MAZOWIECKIE;piaseczyński;Lesznowola;Stara Iwiczna, wieś
+WIELKOPOLSKIE;pilski;Piła;Piła, miasto
+PODKARPACKIE;strzyżowski;Strzyżów;Dobrzechów, wieś
+MAZOWIECKIE;warszawski zachodni;Błonie;Błonie, miasto
+DOLNOŚLĄSKIE;głogowski;Jerzmanowa;Jaczów, wieś
+DOLNOŚLĄSKIE;trzebnicki;Trzebnica;Trzebnica, miasto
+KUJAWSKO-POMORSKIE;toruński;Lubicz;Złotoria, wieś
+MAZOWIECKIE;nowodworski;Pomiechówek;Pomiechówek, wieś
+ZACHODNIOPOMORSKIE;sławieński;Postomino;Jarosławiec, wieś
+MAŁOPOLSKIE;myślenicki;Myślenice;Myślenice, miasto
+DOLNOŚLĄSKIE;dzierżoniowski;Bielawa;Bielawa, miasto
+WIELKOPOLSKIE;kolski;Babiak;Babiak, wieś
+WIELKOPOLSKIE;poznański;Stęszew;Stęszew, miasto
+ŚLĄSKIE;bielski;Jasienica;Jasienica, wieś
+ŚLĄSKIE;Chorzów;Chorzów;Chorzów, miasto
+POMORSKIE;kościerski;Kościerzyna;Kościerzyna, miasto
+ZACHODNIOPOMORSKIE;pyrzycki;Pyrzyce;Pyrzyce, miasto
+DOLNOŚLĄSKIE;wrocławski;Żórawina;Galowice, wieś
+WIELKOPOLSKIE;gnieźnieński;Gniezno;Zdziechowa, wieś
+WIELKOPOLSKIE;poznański;Swarzędz;Zalasewo, wieś
+MAZOWIECKIE;zwoleński;Przyłęk;Mszadla Stara, wieś
+ŚLĄSKIE;częstochowski;Koniecpol;Koniecpol, miasto
+KUJAWSKO-POMORSKIE;włocławski;Lubraniec;Lubraniec, miasto
+POMORSKIE;gdański;Pruszcz Gdański;Cieplewo, wieś
+MAZOWIECKIE;piaseczyński;Piaseczno;Zalesie Górne, wieś
+LUBELSKIE;puławski;Puławy;Puławy, miasto
+PODKARPACKIE;tarnobrzeski;Gorzyce;Gorzyce, wieś
+MAŁOPOLSKIE;oświęcimski;Oświęcim;Oświęcim, miasto
+POMORSKIE;wejherowski;Wejherowo;Gościcino, wieś
+POMORSKIE;gdański;Pruszcz Gdański;Borkowo, wieś
+ŁÓDZKIE;wieluński;Wieluń;Wieluń, miasto
+MAZOWIECKIE;legionowski;Jabłonna;Rajszew, osada leśna
+KUJAWSKO-POMORSKIE;brodnicki;Brodnica;Brodnica, miasto
+LUBELSKIE;janowski;Janów Lubelski;Janów Lubelski, miasto
+ŁÓDZKIE;piotrkowski;Gorzkowice;Gorzkowice, wieś
+WIELKOPOLSKIE;grodziski;Grodzisk Wielkopolski;Grodzisk Wielkopolski, miasto
+MAŁOPOLSKIE;nowosądecki;Muszyna;Muszyna, miasto
+ZACHODNIOPOMORSKIE;stargardzki;Suchań;Suchań, miasto
+MAŁOPOLSKIE;krakowski;Skawina;Skawina, miasto
+POMORSKIE;pucki;Puck;Swarzewo, wieś
+POMORSKIE;starogardzki;Smętowo Graniczne;Smętowo Graniczne, wieś
+LUBELSKIE;hrubieszowski;Hrubieszów;Hrubieszów, miasto
+ZACHODNIOPOMORSKIE;stargardzki;Stargard;Lipnik, osada
+MAZOWIECKIE;Warszawa;Warszawa - Wilanów;Warszawa - Wilanów, dzielnica m. st. Warszawy
+WIELKOPOLSKIE;wrzesiński;Września;Września, miasto
+ZACHODNIOPOMORSKIE;goleniowski;Maszewo;Dębice, wieś
+POMORSKIE;lęborski;Wicko;Charbrowo, wieś
+ŚLĄSKIE;żywiecki;Radziechowy-Wieprz;Przybędza, wieś
+MAZOWIECKIE;pruszkowski;Michałowice;Reguły, wieś
+ZACHODNIOPOMORSKIE;szczecinecki;Szczecinek;Szczecinek, miasto
+DOLNOŚLĄSKIE;milicki;Krośnice;Krośnice, wieś
+WIELKOPOLSKIE;rawicki;Rawicz;Rawicz, miasto
+PODKARPACKIE;krośnieński;Miejsce Piastowe;Głowienka, wieś
+MAZOWIECKIE;pułtuski;Winnica;Winnica, wieś
+WIELKOPOLSKIE;Leszno;Leszno;Leszno, miasto
+ŚLĄSKIE;mikołowski;Mikołów;Mikołów, miasto
+ZACHODNIOPOMORSKIE;łobeski;Łobez;Łobez, miasto
+MAZOWIECKIE;żyrardowski;Mszczonów;Mszczonów, miasto
+ŚWIĘTOKRZYSKIE;pińczowski;Pińczów;Pińczów, miasto
+POMORSKIE;wejherowski;Rumia;Rumia, miasto
+ŚLĄSKIE;kłobucki;Popów;Zawady, osada leśna
+PODKARPACKIE;strzyżowski;Strzyżów;Strzyżów, miasto
+ŁÓDZKIE;zgierski;Zgierz;Zgierz, miasto
+ŚLĄSKIE;bielski;Czechowice-Dziedzice;Czechowice-Dziedzice, miasto
+MAZOWIECKIE;piaseczyński;Lesznowola;Lesznowola, wieś
+ZACHODNIOPOMORSKIE;goleniowski;Maszewo;Maszewo, miasto
+WIELKOPOLSKIE;średzki;Zaniemyśl;Jeziory Małe, wieś
+LUBELSKIE;łęczyński;Milejów;Jaszczów, wieś
+MAŁOPOLSKIE;wadowicki;Spytkowice;Spytkowice, wieś
+ZACHODNIOPOMORSKIE;drawski;Drawsko Pomorskie;Drawsko Pomorskie, miasto
+WIELKOPOLSKIE;kaliski;Ceków-Kolonia;Ceków-Kolonia, wieś
+OPOLSKIE;prudnicki;Biała;Biała, miasto
+KUJAWSKO-POMORSKIE;grudziądzki;Radzyń Chełmiński;Radzyń Chełmiński, miasto
+ZACHODNIOPOMORSKIE;białogardzki;Białogard;Białogard, miasto
+KUJAWSKO-POMORSKIE;toruński;Chełmża;Chełmża, miasto
+KUJAWSKO-POMORSKIE;wąbrzeski;Książki;Książki, wieś
+MAŁOPOLSKIE;wadowicki;Brzeźnica;Chrząstowice, wieś
+WIELKOPOLSKIE;poznański;Dopiewo;Konarzewo, wieś
+WIELKOPOLSKIE;jarociński;Jarocin;Jarocin, miasto
+PODLASKIE;białostocki;Wasilków;Wasilków, miasto
+ŁÓDZKIE;bełchatowski;Bełchatów;Niedyszyna, wieś
+LUBUSKIE;świebodziński;Szczaniec;Szczaniec, wieś
+ŁÓDZKIE;Łódź;Łódź-Śródmieście;Łódź-Śródmieście, delegatura
+ŚWIĘTOKRZYSKIE;kielecki;Mniów;Mniów, wieś
+WIELKOPOLSKIE;kaliski;Ceków-Kolonia;Kamień, wieś
+OPOLSKIE;opolski;Niemodlin;Niemodlin, miasto
+KUJAWSKO-POMORSKIE;wąbrzeski;Wąbrzeźno;Wąbrzeźno, miasto
+PODLASKIE;Łomża;Łomża;Łomża, miasto
+WIELKOPOLSKIE;międzychodzki;Sieraków;Sieraków, miasto
+WIELKOPOLSKIE;Konin;Konin;Konin, miasto
+LUBUSKIE;krośnieński;Dąbie;Szczawno, wieś
+LUBELSKIE;łęczyński;Łęczna;Łęczna, miasto
+KUJAWSKO-POMORSKIE;aleksandrowski;Ciechocinek;Ciechocinek, miasto
+DOLNOŚLĄSKIE;głogowski;Głogów;Głogów, miasto
+LUBELSKIE;puławski;Kazimierz Dolny;Kazimierz Dolny, miasto
+MAZOWIECKIE;legionowski;Jabłonna;Jabłonna, wieś
+WIELKOPOLSKIE;Kalisz;Kalisz;Kalisz, miasto
+MAŁOPOLSKIE;wielicki;Wieliczka;Czarnochowice, wieś
+MAŁOPOLSKIE;myślenicki;Tokarnia;Skomielna Czarna, wieś
+LUBELSKIE;rycki;Ryki;Ryki, miasto
+DOLNOŚLĄSKIE;średzki;Udanin;Ujazd Górny, wieś
+ŁÓDZKIE;sieradzki;Błaszki;Brzozowiec, wieś
+MAŁOPOLSKIE;wielicki;Niepołomice;Niepołomice, miasto
+WIELKOPOLSKIE;gnieźnieński;Czerniejewo;Żydowo, wieś
+KUJAWSKO-POMORSKIE;toruński;Łubianka;Zamek Bierzgłowski, wieś
+MAZOWIECKIE;szydłowiecki;Mirów;Mirów Stary, wieś
+ŚWIĘTOKRZYSKIE;sandomierski;Zawichost;Zawichost, miasto
+ŚLĄSKIE;wodzisławski;Pszów;Pszów, miasto
+ŁÓDZKIE;łódzki wschodni;Tuszyn;Tuszyn, miasto
+MAŁOPOLSKIE;krakowski;Zabierzów;Rząska, wieś
+ŁÓDZKIE;poddębicki;Poddębice;Poddębice, miasto
+ŁÓDZKIE;tomaszowski;Tomaszów Mazowiecki;Tomaszów Mazowiecki, miasto
+POMORSKIE;kartuski;Kartuzy;Łapalice, wieś
+WIELKOPOLSKIE;turecki;Malanów;Malanów, wieś
+PODKARPACKIE;mielecki;Radomyśl Wielki;Radomyśl Wielki, miasto
+ZACHODNIOPOMORSKIE;policki;Dobra (Szczecińska);Bezrzecze, osada
+MAZOWIECKIE;sochaczewski;Sochaczew;Żuków, wieś
+MAŁOPOLSKIE;tarnowski;Wietrzychowice;Wietrzychowice, wieś
+MAZOWIECKIE;płoński;Załuski;Kroczewo, wieś
+PODKARPACKIE;dębicki;Dębica;Nagawczyna, wieś
+MAŁOPOLSKIE;myślenicki;Tokarnia;Tokarnia, wieś
+PODKARPACKIE;leski;Lesko;Lesko, miasto
+WIELKOPOLSKIE;turecki;Kawęczyn;Kawęczyn, wieś
+KUJAWSKO-POMORSKIE;toruński;Czernikowo;Czernikowo, wieś
+OPOLSKIE;oleski;Rudniki;Rudniki, wieś
+MAŁOPOLSKIE;suski;Maków Podhalański;Białka, wieś
+KUJAWSKO-POMORSKIE;radziejowski;Radziejów;Radziejów, miasto
+MAZOWIECKIE;mławski;Mława;Mława, miasto
+WIELKOPOLSKIE;poznański;Mosina;Mosina, miasto
+WIELKOPOLSKIE;koniński;Rychwał;Rychwał, miasto
+WIELKOPOLSKIE;gostyński;Gostyń;Gostyń, miasto
+PODKARPACKIE;łańcucki;Markowa;Markowa, wieś
+ŚWIĘTOKRZYSKIE;sandomierski;Sandomierz;Sandomierz, miasto
+ŁÓDZKIE;skierniewicki;Maków;Maków, wieś
+MAZOWIECKIE;miński;Stanisławów;Stanisławów, wieś
+LUBELSKIE;parczewski;Jabłoń;Jabłoń, wieś
+WIELKOPOLSKIE;leszczyński;Osieczna;Osieczna, miasto
+WIELKOPOLSKIE;leszczyński;Osieczna;Kąkolewo, wieś
+ŚLĄSKIE;gliwicki;Toszek;Toszek, miasto
+LUBUSKIE;nowosolski;Nowe Miasteczko;Nowe Miasteczko, miasto
+KUJAWSKO-POMORSKIE;toruński;Lubicz;Rogowo, wieś
+PODKARPACKIE;krośnieński;Korczyna;Korczyna, wieś
+WIELKOPOLSKIE;nowotomyski;Lwówek;Lwówek
+WIELKOPOLSKIE;turecki;Dobra;Długa Wieś, osada
+MAŁOPOLSKIE;tarnowski;Radłów;Radłów, miasto
+MAZOWIECKIE;siedlecki;Wodynie;Seroczyn, wieś
+ŁÓDZKIE;bełchatowski;Zelów;Bujny Szlacheckie, wieś
+ŚLĄSKIE;cieszyński;Skoczów;Skoczów, miasto
+LUBELSKIE;lubelski;Niedrzwica Duża;Niedrzwica Duża, wieś
+OPOLSKIE;oleski;Gorzów Śląski;Gorzów Śląski, miasto
+OPOLSKIE;strzelecki;Leśnica;Leśnica, miasto
+MAZOWIECKIE;pruszkowski;Nadarzyn;Nadarzyn, wieś
+PODKARPACKIE;mielecki;Przecław;Przecław, miasto
+KUJAWSKO-POMORSKIE;aleksandrowski;Aleksandrów Kujawski;Aleksandrów Kujawski, miasto
+MAZOWIECKIE;pruszkowski;Piastów;Piastów, miasto
+MAZOWIECKIE;grójecki;Jasieniec;Jasieniec, wieś
+KUJAWSKO-POMORSKIE;bydgoski;Dobrcz;Dobrcz, wieś
+PODKARPACKIE;łańcucki;Łańcut;Kraczkowa, wieś
+PODKARPACKIE;łańcucki;Łańcut;Kosina, wieś
+ŁÓDZKIE;łódzki wschodni;Andrespol;Andrespol, wieś
+MAŁOPOLSKIE;Tarnów;Tarnów;Tarnów, miasto
+MAZOWIECKIE;warszawski zachodni;Stare Babice;Stare Babice, wieś
+ŚLĄSKIE;zawierciański;Kroczyce;Kroczyce, wieś
+DOLNOŚLĄSKIE;wrocławski;Długołęka;Brzezia Łąka, wieś
+WIELKOPOLSKIE;kaliski;Szczytniki;Marchwacz, osada
+ŁÓDZKIE;łowicki;Bielawy;Bielawy, wieś
+PODKARPACKIE;rzeszowski;Krasne;Palikówka, wieś
+OPOLSKIE;nyski;Otmuchów;Otmuchów, miasto
+MAZOWIECKIE;przasnyski;Przasnysz;Przasnysz, miasto
+ZACHODNIOPOMORSKIE;kamieński;Wolin;Wolin, miasto
+LUBUSKIE;międzyrzecki;Międzyrzecz;Międzyrzecz, miasto
+MAZOWIECKIE;kozienicki;Magnuszew;Magnuszew, wieś
+MAŁOPOLSKIE;brzeski;Szczurowa;Strzelce Małe, wieś
+WIELKOPOLSKIE;koniński;Golina;Golina, miasto
+ZACHODNIOPOMORSKIE;szczecinecki;Biały Bór;Biały Bór, miasto
+ZACHODNIOPOMORSKIE;sławieński;Darłowo;Rusko, wieś
+WARMIŃSKO-MAZURSKIE;ełcki;Ełk;Ełk, miasto
+KUJAWSKO-POMORSKIE;inowrocławski;Złotniki Kujawskie;Złotniki Kujawskie, wieś
+ŚLĄSKIE;bielski;Bestwina;Kaniów, wieś
+DOLNOŚLĄSKIE;legnicki;Legnickie Pole;Legnickie Pole, wieś
+KUJAWSKO-POMORSKIE;aleksandrowski;Bądkowo;Bądkowo, wieś
+WIELKOPOLSKIE;czarnkowsko-trzcianecki;Czarnków;Gajewo, wieś
+MAZOWIECKIE;pruszkowski;Nadarzyn;Stara Wieś, wieś
+PODLASKIE;siemiatycki;Perlejewo;Perlejewo, wieś
+LUBUSKIE;zielonogórski;Świdnica;Świdnica, wieś
+ZACHODNIOPOMORSKIE;choszczeński;Bierzwnik;Bierzwnik, wieś
+MAŁOPOLSKIE;proszowicki;Koniusza;Wierzbno, wieś
+OPOLSKIE;opolski;Popielów;Stare Siołkowice, wieś
+DOLNOŚLĄSKIE;bolesławiecki;Nowogrodziec;Nowogrodziec, miasto
+ŁÓDZKIE;kutnowski;Kutno;Gołębiewek Nowy, wieś
+ŚWIĘTOKRZYSKIE;włoszczowski;Krasocin;Krasocin, wieś
+WIELKOPOLSKIE;pleszewski;Gołuchów;Gołuchów, wieś
+MAZOWIECKIE;grójecki;Chynów;Sułkowice, wieś
+MAZOWIECKIE;siedlecki;Kotuń;Broszków, wieś
+ŁÓDZKIE;pabianicki;Lutomiersk;Kazimierz, wieś
+MAZOWIECKIE;piaseczyński;Góra Kalwaria;Góra Kalwaria, miasto
+POMORSKIE;starogardzki;Lubichowo;Lubichowo, wieś
+LUBELSKIE;łukowski;Wojcieszków;Wojcieszków, wieś
+PODKARPACKIE;jarosławski;Jarosław;Jarosław, miasto
+MAZOWIECKIE;piaseczyński;Lesznowola;Wola Mrokowska, wieś
+KUJAWSKO-POMORSKIE;mogileński;Strzelno;Strzelno, miasto
+ŁÓDZKIE;opoczyński;Drzewica;Drzewica, miasto
+KUJAWSKO-POMORSKIE;golubsko-dobrzyński;Kowalewo Pomorskie;Kowalewo Pomorskie, miasto
+OPOLSKIE;brzeski;Skarbimierz;Skarbimierz-Osiedle, osiedle
+WIELKOPOLSKIE;rawicki;Miejska Górka;Miejska Górka, miasto
+ŚWIĘTOKRZYSKIE;kielecki;Morawica;Morawica, miasto
+LUBUSKIE;strzelecko-drezdenecki;Zwierzyn;Zwierzyn, wieś
+MAZOWIECKIE;płocki;Wyszogród;Wyszogród, miasto
+ŚWIĘTOKRZYSKIE;ostrowiecki;Ostrowiec Świętokrzyski;Ostrowiec Świętokrzyski, miasto
+DOLNOŚLĄSKIE;lubiński;Lubin;Lubin, miasto
+PODKARPACKIE;rzeszowski;Świlcza;Mrowla, wieś
+POMORSKIE;kościerski;Dziemiany;Dziemiany, wieś
+PODLASKIE;augustowski;Augustów;Augustów, miasto
+DOLNOŚLĄSKIE;wałbrzyski;Boguszów-Gorce;Boguszów-Gorce, miasto
+MAZOWIECKIE;radomski;Jastrzębia;Jastrzębia, wieś
+MAZOWIECKIE;ostrołęcki;Czarnia;Surowe, wieś
+ŚLĄSKIE;Mysłowice;Mysłowice;Mysłowice, miasto
+POMORSKIE;kościerski;Lipusz;Lipusz, wieś
+ŚWIĘTOKRZYSKIE;kielecki;Miedziana Góra;Kostomłoty Drugie, wieś
+WIELKOPOLSKIE;złotowski;Jastrowie;Jastrowie, miasto
+LUBELSKIE;lubelski;Wólka;Kolonia Pliszczyn, kolonia
+ŁÓDZKIE;łódzki wschodni;Koluszki;Koluszki, miasto
+MAZOWIECKIE;wołomiński;Poświętne;Cygów, wieś
+OPOLSKIE;oleski;Dobrodzień;Dobrodzień, miasto
+WIELKOPOLSKIE;czarnkowsko-trzcianecki;Wieleń;Wieleń, miasto
+POMORSKIE;kartuski;Sierakowice;Sierakowice, wieś
+PODLASKIE;białostocki;Tykocin;Tykocin, miasto
+KUJAWSKO-POMORSKIE;lipnowski;Lipno;Karnkowo, wieś
+KUJAWSKO-POMORSKIE;inowrocławski;Pakość;Pakość, miasto
+POMORSKIE;gdański;Kolbudy;Kowale, wieś
+DOLNOŚLĄSKIE;Wrocław;Wrocław-Stare Miasto;Wrocław-Stare Miasto, delegatura
+KUJAWSKO-POMORSKIE;lipnowski;Lipno;Lipno, miasto
+WIELKOPOLSKIE;ostrowski;Ostrów Wielkopolski;Gorzyce Wielkie, wieś
+KUJAWSKO-POMORSKIE;lipnowski;Kikół;Kikół, wieś
+POMORSKIE;starogardzki;Starogard Gdański;Starogard Gdański, miasto
+ŚWIĘTOKRZYSKIE;staszowski;Bogoria;Bogoria, wieś
+WARMIŃSKO-MAZURSKIE;ostródzki;Ostróda;Wałdowo, osada
+MAZOWIECKIE;sochaczewski;Teresin;Granice, wieś
+PODKARPACKIE;ropczycko-sędziszowski;Sędziszów Małopolski;Sędziszów Małopolski, miasto
+ŚLĄSKIE;lubliniecki;Ciasna;Ciasna, wieś
+DOLNOŚLĄSKIE;wrocławski;Kąty Wrocławskie;Kąty Wrocławskie, miasto
+MAŁOPOLSKIE;wielicki;Gdów;Bilczyce, wieś
+MAZOWIECKIE;piaseczyński;Lesznowola;Zamienie, osada
+DOLNOŚLĄSKIE;świdnicki;Marcinowice;Wiry, wieś
+ŚWIĘTOKRZYSKIE;opatowski;Opatów;Opatów, miasto
+POMORSKIE;słupski;Redzikowo;Redzikowo, wieś
+WIELKOPOLSKIE;poznański;Czerwonak;Koziegłowy, wieś
+PODKARPACKIE;rzeszowski;Krasne;Malawa, wieś
+POMORSKIE;gdański;Pruszcz Gdański;Pruszcz Gdański, miasto
+KUJAWSKO-POMORSKIE;włocławski;Brześć Kujawski;Brześć Kujawski, miasto
+ŁÓDZKIE;bełchatowski;Zelów;Zelów, miasto
+ŚWIĘTOKRZYSKIE;jędrzejowski;Jędrzejów;Piaski, wieś
+MAZOWIECKIE;pułtuski;Pułtusk;Pułtusk, miasto
+ŁÓDZKIE;kutnowski;Bedlno;Bedlno, wieś
+KUJAWSKO-POMORSKIE;inowrocławski;Kruszwica;Kruszwica, miasto
+WIELKOPOLSKIE;poznański;Suchy Las;Zielątkowo, wieś
+WIELKOPOLSKIE;koniński;Sompolno;Sompolno, miasto
+LUBELSKIE;łukowski;Adamów;Adamów, wieś
+LUBELSKIE;Zamość;Zamość;Zamość, miasto
+POMORSKIE;malborski;Malbork;Malbork, miasto
+POMORSKIE;bytowski;Studzienice;Studzienice, wieś
+ŚLĄSKIE;żywiecki;Rajcza;Rajcza, wieś
+KUJAWSKO-POMORSKIE;brodnicki;Brzozie;Jajkowo, wieś
+DOLNOŚLĄSKIE;wałbrzyski;Mieroszów;Mieroszów, miasto
+KUJAWSKO-POMORSKIE;mogileński;Mogilno;Mogilno, miasto
+MAZOWIECKIE;warszawski zachodni;Ożarów Mazowiecki;Umiastów, wieś
+PODLASKIE;zambrowski;Zambrów;Zambrów, miasto
+POMORSKIE;słupski;Smołdzino;Smołdzino, wieś
+LUBUSKIE;międzyrzecki;Trzciel;Trzciel, miasto
+MAZOWIECKIE;płoński;Płońsk;Płońsk, miasto
+WARMIŃSKO-MAZURSKIE;olsztyński;Dywity;Dywity, wieś
+ŁÓDZKIE;zduńskowolski;Szadek;Hamentów, wieś
+MAZOWIECKIE;mławski;Strzegowo;Strzegowo, wieś
+MAZOWIECKIE;miński;Jakubów;Jędrzejów Nowy, wieś
+PODKARPACKIE;przeworski;Zarzecze;Rożniatów, wieś
+MAZOWIECKIE;Ostrołęka;Ostrołęka;Ostrołęka, miasto
+MAŁOPOLSKIE;nowotarski;Szaflary;Bańska Niżna, wieś
+DOLNOŚLĄSKIE;bolesławiecki;Bolesławiec;Bolesławiec, miasto
+KUJAWSKO-POMORSKIE;inowrocławski;Gniewkowo;Gniewkowo, miasto
+PODKARPACKIE;leżajski;Nowa Sarzyna;Nowa Sarzyna, miasto
+LUBUSKIE;gorzowski;Kłodawa;Kłodawa, wieś
+MAZOWIECKIE;białobrzeski;Wyśmierzyce;Kostrzyn, wieś
+WIELKOPOLSKIE;kolski;Kościelec;Kościelec, wieś
+WIELKOPOLSKIE;koniński;Stare Miasto;Żychlin, wieś
+MAZOWIECKIE;piaseczyński;Lesznowola;Nowa Iwiczna, wieś
+ŚLĄSKIE;żywiecki;Czernichów;Międzybrodzie Żywieckie, wieś
+ŁÓDZKIE;radomszczański;Radomsko;Radomsko, miasto
+POMORSKIE;kwidzyński;Kwidzyn;Kwidzyn, miasto
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Tarnowo Podgórne, wieś
+MAŁOPOLSKIE;chrzanowski;Trzebinia;Trzebinia, miasto
+KUJAWSKO-POMORSKIE;bydgoski;Osielsko;Niemcz, wieś
+MAZOWIECKIE;legionowski;Jabłonna;Chotomów, wieś
+MAŁOPOLSKIE;oświęcimski;Polanka Wielka;Polanka Wielka, wieś
+WIELKOPOLSKIE;poznański;Kórnik;Robakowo, wieś
+ŚLĄSKIE;bielski;Wilkowice;Wilkowice, wieś
+DOLNOŚLĄSKIE;wrocławski;Siechnice;Siechnice, miasto
+DOLNOŚLĄSKIE;wrocławski;Czernica;Jeszkowice, wieś
+MAŁOPOLSKIE;brzeski;Brzesko;Brzesko, miasto
+MAZOWIECKIE;otwocki;Karczew;Karczew, miasto
+WIELKOPOLSKIE;kępiński;Rychtal;Rychtal, wieś
+ŚLĄSKIE;będziński;Siewierz;Siewierz, miasto
+WIELKOPOLSKIE;śremski;Śrem;Psarskie, wieś
+MAZOWIECKIE;węgrowski;Łochów;Jasiorówka, wieś
+WIELKOPOLSKIE;kaliski;Stawiszyn;Petryki, wieś
+PODKARPACKIE;przeworski;Przeworsk;Gorliczyna, wieś
+MAŁOPOLSKIE;oświęcimski;Brzeszcze;Jawiszowice, wieś
+WARMIŃSKO-MAZURSKIE;ostródzki;Grunwald;Stębark, wieś
+ŁÓDZKIE;wieruszowski;Galewice;Galewice, wieś
+ZACHODNIOPOMORSKIE;świdwiński;Połczyn-Zdrój;Połczyn-Zdrój, miasto
+MAZOWIECKIE;zwoleński;Przyłęk;Łaguszów, wieś
+LUBELSKIE;chełmski;Wierzbica;Wierzbica-Osiedle, wieś
+PODLASKIE;siemiatycki;Drohiczyn;Drohiczyn, miasto
+MAZOWIECKIE;wołomiński;Klembów;Dobczyn, wieś
+WIELKOPOLSKIE;wrzesiński;Miłosław;Miłosław, miasto
+MAZOWIECKIE;garwoliński;Łaskarzew;Stary Helenów, wieś
+ŁÓDZKIE;pajęczański;Rząśnia;Rząśnia, wieś
+MAZOWIECKIE;Płock;Płock;Płock, miasto
+KUJAWSKO-POMORSKIE;aleksandrowski;Zakrzewo;Zakrzewo, wieś
+ŚLĄSKIE;będziński;Czeladź;Czeladź, miasto
+MAŁOPOLSKIE;krakowski;Wielka Wieś;Wielka Wieś, wieś
+ŚLĄSKIE;bielski;Wilamowice;Zasole Bielańskie, wieś
+WIELKOPOLSKIE;poznański;Swarzędz;Swarzędz, miasto
+ŁÓDZKIE;łowicki;Łowicz;Łowicz, miasto
+MAZOWIECKIE;sokołowski;Repki;Repki, wieś
+WARMIŃSKO-MAZURSKIE;iławski;Zalewo;Zalewo, miasto
+ŚLĄSKIE;raciborski;Pietrowice Wielkie;Cyprzanów, wieś
+WARMIŃSKO-MAZURSKIE;ostródzki;Ostróda;Ostróda, miasto
+ŁÓDZKIE;łowicki;Domaniewice;Domaniewice, wieś
+ZACHODNIOPOMORSKIE;koszaliński;Biesiekierz;Stare Bielice, wieś
+ŚLĄSKIE;bielski;Jaworze;Jaworze, wieś
+DOLNOŚLĄSKIE;średzki;Miękinia;Miękinia, wieś
+OPOLSKIE;opolski;Ozimek;Schodnia, wieś
+MAZOWIECKIE;warszawski zachodni;Stare Babice;Blizne Łaszczyńskiego, wieś
+Fundacja Mali Wojownicy;ul.  Różana 9 lok. 5 15-669 Białystok, Białystok, miasto;9662114919.0;368226348.0
+MAZOWIECKIE;ostrowski;Ostrów Mazowiecka;Ostrów Mazowiecka, miasto
+WIELKOPOLSKIE;poznański;Suchy Las;Suchy Las, wieś
+PODLASKIE;moniecki;Mońki;Mońki, miasto
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Baranowo, wieś
+ŁÓDZKIE;skierniewicki;Godzianów;Godzianów, wieś
+MAŁOPOLSKIE;bocheński;Łapanów;Kobylec, wieś
+DOLNOŚLĄSKIE;lwówecki;Wleń;Pilchowice, wieś
+WIELKOPOLSKIE;kępiński;Kępno;Kępno, miasto
+ŁÓDZKIE;tomaszowski;Inowłódz;Inowłódz, wieś
+ŚLĄSKIE;wodzisławski;Radlin;Radlin, miasto
+WARMIŃSKO-MAZURSKIE;giżycki;Wydminy;Wydminy, wieś
+MAZOWIECKIE;warszawski zachodni;Łomianki;Łomianki, miasto
+MAZOWIECKIE;makowski;Maków Mazowiecki;Maków Mazowiecki, miasto
+KUJAWSKO-POMORSKIE;świecki;Lniano;Lniano, wieś
+ŚLĄSKIE;wodzisławski;Gorzyce;Gorzyce, wieś
+MAZOWIECKIE;grójecki;Warka;Warka, miasto
+LUBELSKIE;biłgorajski;Aleksandrów;Aleksandrów, wieś
+PODLASKIE;wysokomazowiecki;Ciechanowiec;Ciechanowiec, miasto
+KUJAWSKO-POMORSKIE;bydgoski;Białe Błota;Łochowo, wieś
+DOLNOŚLĄSKIE;Jelenia Góra;Jelenia Góra;Jelenia Góra, miasto
+ŚWIĘTOKRZYSKIE;sandomierski;Samborzec;Samborzec, wieś
+KUJAWSKO-POMORSKIE;bydgoski;Sicienko;Sicienko, wieś
+PODLASKIE;wysokomazowiecki;Sokoły;Sokoły, wieś
+ŚLĄSKIE;wodzisławski;Marklowice;Marklowice, wieś
+POMORSKIE;kartuski;Kartuzy;Kiełpino, wieś
+POMORSKIE;kartuski;Kartuzy;Kartuzy, miasto
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Lusowo, wieś
+MAZOWIECKIE;białobrzeski;Białobrzegi;Białobrzegi, miasto
+ŚLĄSKIE;częstochowski;Olsztyn;Olsztyn, wieś
+PODLASKIE;białostocki;Michałowo;Michałowo, miasto
+PODLASKIE;suwalski;Bakałarzewo;Bakałarzewo, wieś
+OPOLSKIE;oleski;Zębowice;Kadłub Wolny, wieś
+PODKARPACKIE;Przemyśl;Przemyśl;Przemyśl, miasto
+MAZOWIECKIE;grodziski;Grodzisk Mazowiecki;Marynin, wieś
+DOLNOŚLĄSKIE;świdnicki;Świdnica;Pszenno, wieś
+ŁÓDZKIE;bełchatowski;Drużbice;Drużbice, wieś
+MAZOWIECKIE;płocki;Gąbin;Dobrzyków, wieś
+ŁÓDZKIE;bełchatowski;Rusiec;Rusiec, wieś
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Wysogotowo, wieś
+DOLNOŚLĄSKIE;zgorzelecki;Węgliniec;Węgliniec, miasto
+KUJAWSKO-POMORSKIE;bydgoski;Dąbrowa Chełmińska;Dąbrowa Chełmińska, wieś
+WIELKOPOLSKIE;kolski;Kłodawa;Korzecznik, wieś
+MAZOWIECKIE;piaseczyński;Prażmów;Uwieliny, wieś
+LUBUSKIE;żarski;Żary;Żary, miasto
+POMORSKIE;gdański;Pruszcz Gdański;Rotmanka, osada
+WARMIŃSKO-MAZURSKIE;giżycki;Giżycko;Gajewo, wieś
+PODKARPACKIE;krośnieński;Rymanów;Rymanów-Zdrój, wieś
+LUBELSKIE;puławski;Kurów;Kurów, osada
+ŁÓDZKIE;łódzki wschodni;Rzgów;Rzgów, miasto
+OPOLSKIE;strzelecki;Jemielnica;Jemielnica, wieś
+PODKARPACKIE;przeworski;Przeworsk;Przeworsk, miasto
+WIELKOPOLSKIE;poznański;Mosina;Krosinko, wieś
+MAZOWIECKIE;zwoleński;Tczów;Tczów, wieś
+POMORSKIE;lęborski;Lębork;Lębork, miasto
+MAZOWIECKIE;miński;Cegłów;Cegłów, miasto
+LUBUSKIE;świebodziński;Zbąszynek;Zbąszynek, miasto
+ŁÓDZKIE;zduńskowolski;Zduńska Wola;Henryków, wieś
+ŚLĄSKIE;lubliniecki;Koszęcin;Koszęcin, wieś
+MAZOWIECKIE;Warszawa;Warszawa - Rembertów;Warszawa - Rembertów, dzielnica m. st. Warszawy
+KUJAWSKO-POMORSKIE;żniński;Barcin;Piechcin, osada
+MAZOWIECKIE;sochaczewski;Sochaczew;Sochaczew, miasto
+MAŁOPOLSKIE;wadowicki;Wadowice;Wadowice, miasto
+ŚWIĘTOKRZYSKIE;buski;Wiślica;Wiślica, miasto
+MAZOWIECKIE;legionowski;Wieliszew;Łajski, wieś
+MAŁOPOLSKIE;proszowicki;Koszyce;Koszyce, miasto
+WIELKOPOLSKIE;krotoszyński;Krotoszyn;Krotoszyn, miasto
+MAZOWIECKIE;ostrołęcki;Goworowo;Goworówek, wieś
+LUBUSKIE;strzelecko-drezdenecki;Stare Kurowo;Stare Kurowo, wieś
+LUBELSKIE;świdnicki;Mełgiew;Mełgiew, wieś
+MAŁOPOLSKIE;oświęcimski;Kęty;Malec, wieś
+ZACHODNIOPOMORSKIE;kołobrzeski;Gościno;Gościno, miasto
+MAŁOPOLSKIE;limanowski;Łukowica;Łukowica, wieś
+WIELKOPOLSKIE;gostyński;Piaski;Piaski, wieś
+MAŁOPOLSKIE;wielicki;Gdów;Gdów, wieś
+DOLNOŚLĄSKIE;dzierżoniowski;Piława Górna;Piława Górna, miasto
+WIELKOPOLSKIE;wrzesiński;Miłosław;Orzechowo, wieś
+KUJAWSKO-POMORSKIE;bydgoski;Białe Błota;Łochowo (wieś)
+LUBELSKIE;Zamość;Zamość;Zamość
+MAZOWIECKIE;garwoliński;Garwolin;Miętne, wieś
+POMORSKIE;gdański;Pruszcz Gdański;Łęgowo, wieś
+MAZOWIECKIE;sochaczewski;Iłów;Giżyce, wieś
+POMORSKIE;chojnicki;Czersk;Krzyż, wieś
+OPOLSKIE;prudnicki;Prudnik;Prudnik, miasto
+PODKARPACKIE;rzeszowski;Świlcza;Trzciana, wieś
+WIELKOPOLSKIE;leszczyński;Lipno;Wilkowice, wieś
+WIELKOPOLSKIE;kolski;Koło;Koło, miasto
+ŁÓDZKIE;wieruszowski;Wieruszów;Wieruszów, miasto
+KUJAWSKO-POMORSKIE;włocławski;Izbica Kujawska;Izbica Kujawska, miasto
+ŚWIĘTOKRZYSKIE;skarżyski;Skarżysko-Kamienna;Skarżysko-Kamienna
+WIELKOPOLSKIE;wolsztyński;Wolsztyn;Wolsztyn, miasto
+MAZOWIECKIE;pruszkowski;Brwinów;Brwinów, miasto
+POMORSKIE;pucki;Puck;Celbówko, osada
+MAZOWIECKIE;piaseczyński;Piaseczno;Piaseczno, miasto
+MAZOWIECKIE;legionowski;Nieporęt;Kąty Węgierskie, wieś
+ZACHODNIOPOMORSKIE;gryfiński;Gryfino;Gryfino, miasto
+KUJAWSKO-POMORSKIE;świecki;Świekatowo;Zalesie Królewskie, wieś
+ŚLĄSKIE;tarnogórski;Ożarowice;Tąpkowice, wieś
+LUBUSKIE;gorzowski;Deszczno;Ulim, wieś
+MAŁOPOLSKIE;suski;Maków Podhalański;Maków Podhalański, miasto
+LUBUSKIE;żagański;Żagań;Bożnów, wieś
+MAŁOPOLSKIE;tarnowski;Skrzyszów;Skrzyszów, wieś
+ŚLĄSKIE;będziński;Mierzęcice;Boguchwałowice, wieś
+OPOLSKIE;nyski;Nysa;Nysa, miasto
+KUJAWSKO-POMORSKIE;włocławski;Włocławek;Kruszyn, wieś
+WIELKOPOLSKIE;ostrowski;Raszków;Raszków, miasto
+MAZOWIECKIE;nowodworski;Czosnów;Czosnów, wieś
+ZACHODNIOPOMORSKIE;kołobrzeski;Kołobrzeg;Drzonowo, wieś
+OPOLSKIE;opolski;Ozimek;Ozimek, miasto
+OPOLSKIE;nyski;Otmuchów;Grądy, wieś
+WIELKOPOLSKIE;poznański;Kostrzyn;Siekierki Wielkie, wieś
+PODKARPACKIE;przeworski;Jawornik Polski;Jawornik Polski, miasto
+WIELKOPOLSKIE;poznański;Kostrzyn;Kostrzyn, miasto
+MAZOWIECKIE;grójecki;Goszczyn;Bądków, wieś
+MAŁOPOLSKIE;limanowski;Dobra;Gruszowiec, wieś
+LUBELSKIE;kraśnicki;Kraśnik;Kraśnik
+WIELKOPOLSKIE;gnieźnieński;Niechanowo;Niechanowo, wieś
+WIELKOPOLSKIE;poznański;Dopiewo;wieś Skórzewo
+WIELKOPOLSKIE;obornicki;Rogoźno;Rogoźno, miasto
+WIELKOPOLSKIE;poznański;Dopiewo;wieś Dąbrowa
+PODKARPACKIE;rzeszowski;Boguchwała;Boguchwała, miasto
+KUJAWSKO-POMORSKIE;wąbrzeski;Płużnica;Płużnica, wieś
+MAŁOPOLSKIE;krakowski;Wielka Wieś;Biały Kościół, wieś
+WIELKOPOLSKIE;słupecki;Lądek;Ląd, wieś
+MAŁOPOLSKIE;chrzanowski;Babice;Rozkochów, wieś
+MAŁOPOLSKIE;brzeski;Borzęcin;Borzęcin, wieś
+ŁÓDZKIE;łowicki;Nieborów;Kompina, wieś
+LUBUSKIE;strzelecko-drezdenecki;Strzelce Krajeńskie;Strzelce Krajeńskie
+LUBUSKIE;wschowski;Sława;Sława
+KUJAWSKO-POMORSKIE;włocławski;Lubanie;Lubanie, wieś
+POMORSKIE;kościerski;Kościerzyna;Kościerzyna
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Lusówko, wieś
+ŚWIĘTOKRZYSKIE;kielecki;Łagów;Czyżów, wieś
+MAŁOPOLSKIE;chrzanowski;Chrzanów;Chrzanów, miasto
+WIELKOPOLSKIE;poznański;Swarzędz;Gruszczyn
+MAZOWIECKIE;sokołowski;Sokołów Podlaski;Skibniew-Podawce, wieś
+MAZOWIECKIE;otwocki;Kołbiel;Kołbiel, wieś
+MAZOWIECKIE;sokołowski;Sokołów Podlaski;Nowa Wieś, wieś
+ŁÓDZKIE;opoczyński;Opoczno;Opoczno, miasto
+KUJAWSKO-POMORSKIE;lipnowski;Skępe;Skępe, miasto
+MAZOWIECKIE;radomski;Wolanów;Wolanów, wieś
+MAZOWIECKIE;nowodworski;Zakroczym;Wygoda Smoszewska, wieś
+WIELKOPOLSKIE;słupecki;Słupca;Słupca, miasto
+ŚLĄSKIE;wodzisławski;Wodzisław Śląski;Wodzisław Śląski, miasto
+MAŁOPOLSKIE;wadowicki;Wieprz;Frydrychowice
+KUJAWSKO-POMORSKIE;sępoleński;Sępólno Krajeńskie;Sępólno Krajeńskie
+MAZOWIECKIE;nowodworski;Nowy Dwór Mazowiecki;Nowy Dwór Mazowiecki, miasto
+ZACHODNIOPOMORSKIE;policki;Kołbaskowo;Kurów, wieś
+LUBELSKIE;zamojski;Sitno;Sitno, wieś
+MAZOWIECKIE;otwocki;Otwock;Otwock, miasto
+LUBUSKIE;zielonogórski;Kargowa;Kargowa, miasto
+LUBUSKIE;żagański;Szprotawa;Szprotawa
+PODKARPACKIE;sanocki;Zagórz;Zagórz
+MAZOWIECKIE;żyrardowski;Radziejowice;Tartak Brzózki, wieś
+MAŁOPOLSKIE;tarnowski;Żabno;Łęg Tarnowski, wieś
+MAZOWIECKIE;piaseczyński;Lesznowola;Janczewice, wieś
+ŚLĄSKIE;raciborski;Racibórz;Racibórz, miasto
+ŚWIĘTOKRZYSKIE;starachowicki;Starachowice;Starachowice, miasto
+MAZOWIECKIE;garwoliński;Pilawa;Pilawa, miasto
+KUJAWSKO-POMORSKIE;świecki;Świecie;Świecie
+WIELKOPOLSKIE;ostrowski;Ostrów Wielkopolski;Ostrów Wielkopolski, miasto
+WIELKOPOLSKIE;ostrowski;Ostrów Wielkopolski;Ostrów Wielkopolski
+WIELKOPOLSKIE;średzki;Środa Wielkopolska;Środa Wielkopolska, miasto
+KUJAWSKO-POMORSKIE;Grudziądz;Grudziądz;Grudziądz, miasto
+DOLNOŚLĄSKIE;wrocławski;Długołęka;Wilczyce, wieś
+ŚLĄSKIE;bieruńsko-lędziński;Bieruń;Bieruń, miasto
+ŚWIĘTOKRZYSKIE;opatowski;Baćkowice;Baćkowice, wieś
+POMORSKIE;chojnicki;Czersk;Czersk, miasto
+MAŁOPOLSKIE;krakowski;Zielonki;Przybysławice, wieś
+ŚWIĘTOKRZYSKIE;konecki;Stąporków;Stąporków, miasto
+DOLNOŚLĄSKIE;wrocławski;Długołęka;Kamień, wieś
+WIELKOPOLSKIE;poznański;Kleszczewo;Gowarzewo, wieś
+DOLNOŚLĄSKIE;legnicki;Chojnów;Kolonia Kołłątaja, kolonia
+WIELKOPOLSKIE;krotoszyński;Krotoszyn;Krotoszyn
+PODLASKIE;białostocki;Supraśl;Sobolewo, wieś
+POMORSKIE;słupski;Damnica;Damnica, wieś
+WARMIŃSKO-MAZURSKIE;olsztyński;Jonkowo;Warkały, wieś
+MAZOWIECKIE;ciechanowski;Ciechanów;Kargoszyn, wieś
+ZACHODNIOPOMORSKIE;białogardzki;Białogard;Kościernica, wieś
+WARMIŃSKO-MAZURSKIE;szczycieński;Szczytno;Szczytno, miasto
+PODKARPACKIE;łańcucki;Rakszawa;Rakszawa, wieś
+PODKARPACKIE;przemyski;Dubiecko;Dubiecko, miasto
+WIELKOPOLSKIE;gnieźnieński;Witkowo;Witkowo, miasto
+DOLNOŚLĄSKIE;wrocławski;Sobótka;Sobótka, miasto
+WIELKOPOLSKIE;wrzesiński;Września;Września
+MAŁOPOLSKIE;krakowski;Słomniki;Słomniki, miasto
+POMORSKIE;słupski;Potęgowo;Potęgowo, wieś
+WARMIŃSKO-MAZURSKIE;gołdapski;Gołdap;Gołdap, miasto
+OPOLSKIE;opolski;Tarnów Opolski;Kosorowice, wieś
+MAŁOPOLSKIE;tarnowski;Pleśna;Pleśna, wieś
+MAŁOPOLSKIE;nowosądecki;Podegrodzie;Gostwica, wieś
+ŚLĄSKIE;bielski;Porąbka;Bujaków, wieś
+MAZOWIECKIE;legionowski;Nieporęt;Stanisławów Pierwszy
+ŚLĄSKIE;Świętochłowice;Świętochłowice;Świętochłowice, miasto
+OPOLSKIE;nyski;Głuchołazy;Głuchołazy, miasto
+ZACHODNIOPOMORSKIE;drawski;Kalisz Pomorski;Kalisz Pomorski, miasto
+OPOLSKIE;nyski;Głuchołazy;Głuchołazy
+MAZOWIECKIE;ostrołęcki;Troszyn;Troszyn, wieś
+ŚLĄSKIE;żywiecki;Jeleśnia;Mutne, wieś
+LUBUSKIE;międzyrzecki;Bledzew;Nowa Wieś, wieś
+DOLNOŚLĄSKIE;kłodzki;Kłodzko;Kłodzko, miasto
+WIELKOPOLSKIE;poznański;Dopiewo;Skórzewo, wieś
+ZACHODNIOPOMORSKIE;goleniowski;Goleniów;Goleniów
+MAŁOPOLSKIE;krakowski;Wielka Wieś;Giebułtów, wieś
+OPOLSKIE;oleski;Olesno;Olesno, miasto
+WIELKOPOLSKIE;poznański;Komorniki;Komorniki
+WIELKOPOLSKIE;jarociński;Kotlin;Kotlin, wieś
+ŚWIĘTOKRZYSKIE;buski;Busko-Zdrój;Busko-Zdrój, miasto
+MAZOWIECKIE;warszawski zachodni;Stare Babice;Zielonki-Parcela, wieś
+LUBUSKIE;żagański;Żagań;Żagań, miasto
+WIELKOPOLSKIE;Poznań;Poznań-Wilda;Poznań-Wilda
+MAŁOPOLSKIE;limanowski;Jodłownik;Sadek, wieś
+ŚLĄSKIE;cieszyński;Istebna;Istebna, wieś
+MAŁOPOLSKIE;tarnowski;Żabno;Żabno, miasto
+WIELKOPOLSKIE;złotowski;Złotów;Złotów, miasto
+ŚLĄSKIE;gliwicki;Gierałtowice;Gierałtowice, wieś
+WIELKOPOLSKIE;ostrowski;Przygodzice;Wysocko Małe, wieś
+POMORSKIE;kartuski;Żukowo;Chwaszczyno, wieś
+ZACHODNIOPOMORSKIE;myśliborski;Barlinek;Barlinek, miasto
+POMORSKIE;kartuski;Żukowo;Miszewko, wieś
+LUBUSKIE;strzelecko-drezdenecki;Dobiegniew;Dobiegniew, miasto
+DOLNOŚLĄSKIE;wrocławski;Długołęka;Mirków, wieś
+MAZOWIECKIE;otwocki;Józefów;Józefów, miasto
+MAZOWIECKIE;piaseczyński;Konstancin-Jeziorna;Bielawa, wieś
+MAŁOPOLSKIE;krakowski;Sułoszowa;Sułoszowa, wieś
+MAZOWIECKIE;nowodworski;Nasielsk;Stare Pieścirogi, wieś
+PODKARPACKIE;krośnieński;Krościenko Wyżne;Krościenko Wyżne, wieś
+ŚWIĘTOKRZYSKIE;pińczowski;Działoszyce;Działoszyce, miasto
+KUJAWSKO-POMORSKIE;nakielski;Nakło nad Notecią;Nakło nad Notecią, miasto
+ŁÓDZKIE;piotrkowski;Moszczenica;Moszczenica, wieś
+POMORSKIE;kartuski;Żukowo;Dąbrowa, wieś
+WIELKOPOLSKIE;poznański;Komorniki;Komorniki, wieś
+MAŁOPOLSKIE;krakowski;Igołomia-Wawrzeńczyce;Złotniki, wieś
+MAŁOPOLSKIE;suski;Sucha Beskidzka;Sucha Beskidzka, miasto
+MAZOWIECKIE;garwoliński;Trojanów;Trojanów, wieś
+ZACHODNIOPOMORSKIE;choszczeński;Choszczno;Choszczno, miasto
+PODLASKIE;białostocki;Czarna Białostocka;Czarna Białostocka, miasto
+DOLNOŚLĄSKIE;wrocławski;Kobierzyce;Wysoka, wieś
+WIELKOPOLSKIE;kolski;Kłodawa;Kłodawa, miasto
+ZACHODNIOPOMORSKIE;goleniowski;Nowogard;Nowogard
+WIELKOPOLSKIE;słupecki;Słupca;Piotrowice, wieś
+WIELKOPOLSKIE;ostrzeszowski;Czajków;Czajków, wieś
+WIELKOPOLSKIE;pilski;Kaczory;Kaczory, miasto
+KUJAWSKO-POMORSKIE;toruński;Lubicz;Lubicz Dolny, wieś
+ŚLĄSKIE;żywiecki;Milówka;Milówka, wieś
+MAŁOPOLSKIE;nowotarski;Rabka-Zdrój;Rabka-Zdrój
+DOLNOŚLĄSKIE;trzebnicki;Prusice;Prusice, miasto
+MAŁOPOLSKIE;brzeski;Dębno;Sufczyn, wieś
+WARMIŃSKO-MAZURSKIE;olecki;Olecko;Olecko
+WIELKOPOLSKIE;gnieźnieński;Mieleszyn;Przysieka, wieś
+WIELKOPOLSKIE;poznański;Czerwonak;Bolechowo-Osiedle
+ŚLĄSKIE;zawierciański;Irządze;Irządze, wieś
+MAZOWIECKIE;płocki;Słupno;Nowe Gulczewo, wieś
+WIELKOPOLSKIE;koniński;Ślesin;Ślesin, miasto
+MAŁOPOLSKIE;wadowicki;Tomice;Tomice, wieś
+ŁÓDZKIE;kutnowski;Strzelce;Strzelce, wieś
+ŁÓDZKIE;bełchatowski;Kleszczów;Kleszczów, wieś
+MAZOWIECKIE;mławski;Lipowiec Kościelny;Cegielnia Lewicka, wieś
+PODKARPACKIE;sanocki;Besko;Besko, wieś
+OPOLSKIE;kędzierzyńsko-kozielski;Reńska Wieś;Mechnica, wieś
+POMORSKIE;starogardzki;Zblewo;Zblewo, wieś
+ŚWIĘTOKRZYSKIE;jędrzejowski;Małogoszcz;Małogoszcz, miasto
+MAZOWIECKIE;otwocki;Wiązowna;Glinianka, wieś
+WARMIŃSKO-MAZURSKIE;działdowski;Działdowo;Działdowo, miasto
+WIELKOPOLSKIE;poznański;Suchy Las;Złotniki, wieś
+MAŁOPOLSKIE;bocheński;Żegocina;Żegocina, wieś
+OPOLSKIE;kędzierzyńsko-kozielski;Reńska Wieś;Reńska Wieś, wieś
+MAZOWIECKIE;ciechanowski;Glinojeck;Glinojeck, miasto
+ŚWIĘTOKRZYSKIE;jędrzejowski;Sobków;Staniowice, wieś
+MAZOWIECKIE;wyszkowski;Długosiodło;Długosiodło, wieś
+LUBELSKIE;puławski;Żyrzyn;Żyrzyn, wieś
+OPOLSKIE;kluczborski;Kluczbork;Gotartów, wieś
+ŁÓDZKIE;wieruszowski;Wieruszów;Cieszęcin, wieś
+ŁÓDZKIE;zgierski;Aleksandrów Łódzki;Aleksandrów Łódzki, miasto
+MAZOWIECKIE;sokołowski;Sokołów Podlaski;Sokołów Podlaski, miasto
+LUBUSKIE;gorzowski;Bogdaniec;Jenin, wieś
+OPOLSKIE;kędzierzyńsko-kozielski;Kędzierzyn-Koźle;Kędzierzyn-Koźle
+OPOLSKIE;krapkowicki;Krapkowice;Krapkowice, miasto
+OPOLSKIE;głubczycki;Branice;Branice
+WARMIŃSKO-MAZURSKIE;bartoszycki;Bartoszyce;Tolko, osada
+OPOLSKIE;krapkowicki;Krapkowice;Krapkowice
+POMORSKIE;gdański;Kolbudy;Lublewo Gdańskie, wieś
+OPOLSKIE;opolski;Chrząstowice;Suchy Bór
+OPOLSKIE;opolski;Łubniany;Kępa
+POMORSKIE;gdański;Przywidz;Przywidz, wieś
+MAŁOPOLSKIE;wielicki;Niepołomice;Staniątki, wieś
+ŚLĄSKIE;bieruńsko-lędziński;Bojszowy;Bojszowy, wieś
+OPOLSKIE;krapkowicki;Zdzieszowice;Zdzieszowice, miasto
+DOLNOŚLĄSKIE;świdnicki;Świdnica;Świdnica, miasto
+WIELKOPOLSKIE;koniński;Stare Miasto;Stare Miasto, wieś
+LUBELSKIE;krasnostawski;Krasnystaw;Krasnystaw
+ŁÓDZKIE;skierniewicki;Skierniewice;Dębowa Góra, wieś
+ZACHODNIOPOMORSKIE;goleniowski;Nowogard;Nowogard, miasto
+ŁÓDZKIE;pajęczański;Nowa Brzeźnica;Dubidze, wieś
+OPOLSKIE;brzeski;Lewin Brzeski;Lewin Brzeski, miasto
+LUBELSKIE;łęczyński;Spiczyn;Kijany, wieś
+ŚWIĘTOKRZYSKIE;kielecki;Zagnańsk;Zagnańsk, wieś
+MAZOWIECKIE;żyrardowski;Żyrardów;Żyrardów, miasto
+MAZOWIECKIE;siedlecki;Zbuczyn;Zbuczyn, wieś
+ŁÓDZKIE;łowicki;Łyszkowice;Łyszkowice, wieś
+LUBELSKIE;świdnicki;Świdnik;Świdnik
+ŚLĄSKIE;raciborski;Pietrowice Wielkie;Kornice, wieś
+PODLASKIE;białostocki;Gródek;Gródek, wieś
+PODKARPACKIE;leżajski;Nowa Sarzyna;Wólka Łętowska, wieś
+DOLNOŚLĄSKIE;wrocławski;Czernica;Chrząstawa Mała
+ŁÓDZKIE;łódzki wschodni;Rzgów;Tadzin, wieś
+WARMIŃSKO-MAZURSKIE;węgorzewski;Węgorzewo;Węgorzewo, miasto
+MAZOWIECKIE;wołomiński;Kobyłka;Kobyłka, miasto
+MAZOWIECKIE;płocki;Staroźreby;Smardzewo, wieś
+ŚWIĘTOKRZYSKIE;konecki;Smyków;Królewiec, wieś
+ŁÓDZKIE;pajęczański;Sulmierzyce;Sulmierzyce, wieś
+MAZOWIECKIE;piaseczyński;Konstancin-Jeziorna;Konstancin-Jeziorna, miasto
+ŚLĄSKIE;cieszyński;Cieszyn;Cieszyn, miasto
+POMORSKIE;wejherowski;Szemud;Bojano, wieś
+ŚLĄSKIE;rybnicki;Czerwionka-Leszczyny;Czerwionka-Leszczyny
+ŚLĄSKIE;cieszyński;Chybie;Chybie, wieś
+DOLNOŚLĄSKIE;oleśnicki;Dobroszyce;Dobroszyce, wieś
+PODKARPACKIE;leżajski;Leżajsk;Brzóza Królewska, wieś
+DOLNOŚLĄSKIE;kłodzki;Radków;Ścinawka Średnia, wieś
+WIELKOPOLSKIE;koniński;Stare Miasto;Główiew, wieś
+DOLNOŚLĄSKIE;kłodzki;Radków;Radków, miasto
+OPOLSKIE;kluczborski;Kluczbork;Kluczbork, miasto
+WIELKOPOLSKIE;czarnkowsko-trzcianecki;Czarnków;Czarnków, miasto
+PODKARPACKIE;leżajski;Leżajsk;Wierzawice, wieś
+WIELKOPOLSKIE;krotoszyński;Koźmin Wielkopolski;Koźmin Wielkopolski, miasto
+MAZOWIECKIE;warszawski zachodni;Stare Babice;Wierzbin, wieś
+POMORSKIE;bytowski;Bytów;Rzepnica
+LUBELSKIE;rycki;Dęblin;Dęblin, miasto
+ŚLĄSKIE;wodzisławski;Godów;Gołkowice, wieś
+ŚLĄSKIE;raciborski;Racibórz;Racibórz
+MAŁOPOLSKIE;proszowicki;Koniusza;Biórków Mały, wieś
+WARMIŃSKO-MAZURSKIE;kętrzyński;Kętrzyn;Kętrzyn
+MAŁOPOLSKIE;wielicki;Wieliczka;Kokotów, wieś
+WARMIŃSKO-MAZURSKIE;mrągowski;Mikołajki;Mikołajki, miasto
+ŚLĄSKIE;bielski;Kozy;Kozy
+OPOLSKIE;strzelecki;Ujazd;Zimna Wódka, wieś
+ZACHODNIOPOMORSKIE;białogardzki;Karlino;Karlino
+WIELKOPOLSKIE;śremski;Śrem;Śrem, miasto
+PODKARPACKIE;rzeszowski;Trzebownisko;Łukawiec, wieś
+ŚLĄSKIE;będziński;Bobrowniki;Rogoźnik
+PODKARPACKIE;leżajski;Kuryłówka;Kuryłówka, wieś
+ZACHODNIOPOMORSKIE;choszczeński;Choszczno;Oraczewice, wieś
+ŚLĄSKIE;cieszyński;Zebrzydowice;Zebrzydowice
+OPOLSKIE;opolski;Popielów;Popielów
+ZACHODNIOPOMORSKIE;policki;Kołbaskowo;Przecław
+OPOLSKIE;brzeski;Grodków;Grodków, miasto
+WIELKOPOLSKIE;poznański;Rokietnica;Rokietnica, wieś
+MAZOWIECKIE;miński;Sulejówek;Sulejówek, miasto
+ŚLĄSKIE;żywiecki;Świnna;Świnna, wieś
+ŚLĄSKIE;Jaworzno;Jaworzno;Jaworzno
+ŚLĄSKIE;częstochowski;Dąbrowa Zielona;Dąbrowa Zielona, wieś
+ŚLĄSKIE;pszczyński;Pawłowice;Pawłowice
+PODKARPACKIE;łańcucki;Łańcut;Głuchów, wieś
+ŚLĄSKIE;tarnogórski;Świerklaniec;Świerklaniec, wieś
+WARMIŃSKO-MAZURSKIE;giżycki;Ryn;Ryn, miasto
+POMORSKIE;bytowski;Kołczygłowy;Kołczygłowy, wieś
+ZACHODNIOPOMORSKIE;gryficki;Rewal;Niechorze, wieś
+ŁÓDZKIE;Łódź;Łódź-Śródmieście;Łódź-Śródmieście
+ŁÓDZKIE;Łódź;Łódź-Bałuty;Łódź-Bałuty
+ŁÓDZKIE;Łódź;Łódź-Polesie;Łódź-Polesie
+DOLNOŚLĄSKIE;milicki;Milicz;Wszewilki, wieś
+MAŁOPOLSKIE;nowotarski;Czarny Dunajec;Czarny Dunajec, miasto
+WARMIŃSKO-MAZURSKIE;piski;Orzysz;Orzysz
+POMORSKIE;słupski;Kobylnica;Bolesławice, wieś
+ZACHODNIOPOMORSKIE;gryficki;Gryfice;Gryfice, miasto
+MAZOWIECKIE;wołomiński;Tłuszcz;Tłuszcz, miasto
+ŚWIĘTOKRZYSKIE;jędrzejowski;Jędrzejów;Jędrzejów
+WARMIŃSKO-MAZURSKIE;olsztyński;Dywity;Spręcowo
+MAŁOPOLSKIE;tarnowski;Szerzyny;Szerzyny, wieś
+WIELKOPOLSKIE;międzychodzki;Międzychód;Międzychód
+ZACHODNIOPOMORSKIE;sławieński;Darłowo;Darłowo, miasto
+WIELKOPOLSKIE;międzychodzki;Międzychód;Międzychód, miasto
+LUBUSKIE;międzyrzecki;Trzciel;Lutol Suchy, wieś
+PODLASKIE;grajewski;Grajewo;Grajewo, miasto
+PODLASKIE;sokólski;Dąbrowa Białostocka;Dąbrowa Białostocka
+WIELKOPOLSKIE;złotowski;Tarnówka;Tarnówka, osada
+ŁÓDZKIE;łaski;Buczek;Buczek, wieś
+KUJAWSKO-POMORSKIE;bydgoski;Nowa Wieś Wielka;Nowa Wieś Wielka, wieś
+ŁÓDZKIE;zduńskowolski;Zduńska Wola;Zduńska Wola, miasto
+MAZOWIECKIE;warszawski zachodni;Stare Babice;Babice Nowe, wieś
+MAŁOPOLSKIE;krakowski;Czernichów;Rybna, wieś
+ZACHODNIOPOMORSKIE;pyrzycki;Bielice;Bielice, wieś
+MAZOWIECKIE;grodziski;Żabia Wola;Osowiec, wieś
+ŚLĄSKIE;bielski;Wilkowice;Meszna, wieś
+WIELKOPOLSKIE;poznański;Mosina;Rogalinek, wieś
+ŚWIĘTOKRZYSKIE;konecki;Końskie;Końskie, miasto
+POMORSKIE;gdański;Pruszcz Gdański;Rokitnica, wieś
+ŚLĄSKIE;bieruńsko-lędziński;Imielin;Imielin, miasto
+DOLNOŚLĄSKIE;wrocławski;Siechnice;Radwanice, wieś
+KUJAWSKO-POMORSKIE;sępoleński;Kamień Krajeński;Płocicz, wieś
+DOLNOŚLĄSKIE;oławski;Jelcz-Laskowice;Miłoszyce, wieś
+DOLNOŚLĄSKIE;milicki;Milicz;Milicz, miasto
+DOLNOŚLĄSKIE;strzeliński;Wiązów;Wiązów, miasto
+WIELKOPOLSKIE;poznański;Dopiewo;Zakrzewo, wieś
+OPOLSKIE;strzelecki;Izbicko;Izbicko, wieś
+ŚLĄSKIE;bielski;Wilamowice;Pisarzowice, wieś
+ŚWIĘTOKRZYSKIE;kielecki;Strawczyn;Promnik, wieś
+POMORSKIE;kwidzyński;Gardeja;Bądki, wieś
+MAŁOPOLSKIE;bocheński;Bochnia;Siedlec, wieś
+DOLNOŚLĄSKIE;strzeliński;Strzelin;Strzelin
+PODLASKIE;wysokomazowiecki;Wysokie Mazowieckie;Jabłonka Kościelna, wieś
+LUBELSKIE;tomaszowski;Tomaszów Lubelski;Jeziernia, wieś
+ŁÓDZKIE;pabianicki;Konstantynów Łódzki;Konstantynów Łódzki, miasto
+POMORSKIE;kartuski;Sierakowice;Gowidlino, wieś
+ŁÓDZKIE;zgierski;Stryków;Stryków, miasto
+KUJAWSKO-POMORSKIE;świecki;Osie;Brzeziny, wieś
+ŚWIĘTOKRZYSKIE;buski;Stopnica;Stopnica, miasto
+ŁÓDZKIE;kutnowski;Krzyżanów;Krzyżanów, wieś
+ŚWIĘTOKRZYSKIE;ostrowiecki;Kunów;Kunów, miasto
+OPOLSKIE;strzelecki;Kolonowskie;Kolonowskie, miasto
+KUJAWSKO-POMORSKIE;toruński;Łubianka;Łubianka, wieś
+ŚWIĘTOKRZYSKIE;buski;Tuczępy;Tuczępy, wieś
+ŚWIĘTOKRZYSKIE;opatowski;Tarłów;Tarłów, wieś
+ŚWIĘTOKRZYSKIE;staszowski;Rytwiany;Sichów Duży, wieś
+DOLNOŚLĄSKIE;średzki;Miękinia;Pisarzowice, wieś
+DOLNOŚLĄSKIE;wrocławski;Kobierzyce;Tyniec Mały, wieś
+ŚLĄSKIE;częstochowski;Mykanów;Stary Cykarzew
+DOLNOŚLĄSKIE;lwówecki;Wleń;Wleń
+DOLNOŚLĄSKIE;kłodzki;Nowa Ruda;Bożków
+ŚLĄSKIE;rybnicki;Świerklany;Jankowice, wieś
+WIELKOPOLSKIE;turecki;Turek;Turek
+DOLNOŚLĄSKIE;ząbkowicki;Ziębice;Ziębice
+MAZOWIECKIE;piaseczyński;Piaseczno;Bobrowiec, wieś
+MAZOWIECKIE;pruszkowski;Raszyn;Raszyn, wieś
+DOLNOŚLĄSKIE;trzebnicki;Oborniki Śląskie;Oborniki Śląskie
+MAŁOPOLSKIE;krakowski;Liszki;Mników, wieś
+POMORSKIE;słupski;Ustka;Ustka, miasto
+KUJAWSKO-POMORSKIE;żniński;Łabiszyn;Łabiszyn
+PODLASKIE;wysokomazowiecki;Nowe Piekuty;Nowe Piekuty, wieś
+MAŁOPOLSKIE;gorlicki;Moszczenica;Moszczenica, wieś
+MAZOWIECKIE;miński;Dębe Wielkie;Dębe Wielkie, wieś
+KUJAWSKO-POMORSKIE;golubsko-dobrzyński;Golub-Dobrzyń;Gałczewo
+PODLASKIE;wysokomazowiecki;Nowe Piekuty;Jabłoń Kościelna, wieś
+DOLNOŚLĄSKIE;wrocławski;Kąty Wrocławskie;Krzeptów, wieś
+ŁÓDZKIE;piotrkowski;Grabica;Grabica, wieś
+MAZOWIECKIE;piaseczyński;Lesznowola;Nowa Wola, wieś
+PODKARPACKIE;łańcucki;Białobrzegi;Białobrzegi, wieś
+MAZOWIECKIE;sochaczewski;Sochaczew;Kuznocin, wieś
+DOLNOŚLĄSKIE;polkowicki;Radwanice;Radwanice, wieś
+DOLNOŚLĄSKIE;kłodzki;Polanica-Zdrój;Polanica-Zdrój, miasto
+PODKARPACKIE;tarnobrzeski;Baranów Sandomierski;Baranów Sandomierski, miasto
+KUJAWSKO-POMORSKIE;radziejowski;Dobre;Dobre, wieś
+WIELKOPOLSKIE;poznański;Dopiewo;Palędzie, wieś
+MAŁOPOLSKIE;myślenicki;Wiśniowa;Wiśniowa, wieś
+WIELKOPOLSKIE;wrzesiński;Września;Kleparz, wieś
+KUJAWSKO-POMORSKIE;toruński;Chełmża;Chełmża
+KUJAWSKO-POMORSKIE;lipnowski;Tłuchowo;Tłuchowo, wieś
+WARMIŃSKO-MAZURSKIE;olecki;Olecko;Olecko, miasto
+MAZOWIECKIE;Warszawa;Warszawa - Śródmieście;Warszawa - Śródmieście, dzielnica m. st. Warszawy
+KUJAWSKO-POMORSKIE;świecki;Jeżewo;Laskowice
+KUJAWSKO-POMORSKIE;rypiński;Wąpielsk;Półwiesk Mały, wieś
+MAZOWIECKIE;piaseczyński;Lesznowola;Zgorzała, wieś
+POMORSKIE;wejherowski;Łęczyce;Bożepole Małe, osada
+KUJAWSKO-POMORSKIE;włocławski;Kowal;Więsławice, wieś
+MAŁOPOLSKIE;krakowski;Michałowice;Michałowice, wieś
+WARMIŃSKO-MAZURSKIE;iławski;Iława;Frednowy, wieś
+WIELKOPOLSKIE;krotoszyński;Kobylin;Kobylin, miasto
+MAZOWIECKIE;łosicki;Łosice;Łosice, miasto
+ZACHODNIOPOMORSKIE;łobeski;Resko;Resko
+ZACHODNIOPOMORSKIE;stargardzki;Stara Dąbrowa;Parlino, wieś
+WIELKOPOLSKIE;rawicki;Bojanowo;Bojanowo, miasto
+WIELKOPOLSKIE;kolski;Koło;Powiercie
+ŚWIĘTOKRZYSKIE;ostrowiecki;Ostrowiec Świętokrzyski;Ostrowiec Świętokrzyski
+ŁÓDZKIE;pabianicki;Lutomiersk;Wrząca, wieś
+DOLNOŚLĄSKIE;trzebnicki;Oborniki Śląskie;Oborniki Śląskie, miasto
+ŚLĄSKIE;mikołowski;Łaziska Górne;Łaziska Górne, miasto
+ŚLĄSKIE;bieruńsko-lędziński;Chełm Śląski;Chełm Śląski, wieś
+KUJAWSKO-POMORSKIE;grudziądzki;Gruta;Nicwałd
+MAZOWIECKIE;wyszkowski;Wyszków;Wyszków, miasto
+MAŁOPOLSKIE;tarnowski;Ciężkowice;Kipszna, wieś
+KUJAWSKO-POMORSKIE;świecki;Nowe;Nowe
+ŚLĄSKIE;częstochowski;Janów;Janów, wieś
+DOLNOŚLĄSKIE;wrocławski;Czernica;Dobrzykowice, wieś
+LUBELSKIE;łukowski;Stoczek Łukowski;Stoczek Łukowski, miasto
+PODLASKIE;białostocki;Turośń Kościelna;Niewodnica Kościelna, wieś
+ŚWIĘTOKRZYSKIE;ostrowiecki;Bałtów;Bałtów
+LUBELSKIE;łukowski;Stoczek Łukowski;Stare Kobiałki
+LUBELSKIE;lubelski;Bełżyce;Bełżyce, miasto
+LUBELSKIE;parczewski;Milanów;Milanów, wieś
+ŚWIĘTOKRZYSKIE;kielecki;Chmielnik;Chmielnik, miasto
+MAŁOPOLSKIE;gorlicki;Uście Gorlickie;Brunary Wyżne, część miejscowości
+MAŁOPOLSKIE;nowotarski;Ochotnica Dolna;Ochotnica Dolna, wieś
+KUJAWSKO-POMORSKIE;toruński;Lubicz;Grębocin, wieś
+KUJAWSKO-POMORSKIE;tucholski;Śliwice;Śliwiczki, wieś
+WIELKOPOLSKIE;kaliski;Opatówek;Opatówek
+MAŁOPOLSKIE;olkuski;Bukowno;Bukowno, miasto
+ŁÓDZKIE;wieluński;Czarnożyły;Wydrzyn, wieś
+PODKARPACKIE;mielecki;Czermin;Trzciana, wieś
+OPOLSKIE;prudnicki;Lubrza;Lubrza
+MAŁOPOLSKIE;nowotarski;Spytkowice;Spytkowice, wieś
+LUBUSKIE;międzyrzecki;Przytoczna;Przytoczna, wieś
+WARMIŃSKO-MAZURSKIE;szczycieński;Szczytno;Szczytno
+OPOLSKIE;opolski;Turawa;Kotórz Mały, wieś
+MAZOWIECKIE;warszawski zachodni;Izabelin;Izabelin C
+PODKARPACKIE;ropczycko-sędziszowski;Ropczyce;Brzezówka, wieś
+LUBELSKIE;bialski;Janów Podlaski;Janów Podlaski, wieś
+LUBELSKIE;zamojski;Krasnobród;Majdan Wielki, wieś
+LUBELSKIE;zamojski;Nielisz;Krzak, wieś
+MAZOWIECKIE;ostrołęcki;Kadzidło;Kadzidło, wieś
+OPOLSKIE;brzeski;Lubsza;Dobrzyń, wieś
+WIELKOPOLSKIE;koniński;Kleczew;Kleczew, miasto
+LUBELSKIE;krasnostawski;Krasnystaw;Krasnystaw, miasto
+MAZOWIECKIE;lipski;Solec nad Wisłą;Przedmieście Bliższe, wieś
+PODKARPACKIE;kolbuszowski;Kolbuszowa;Kolbuszowa Dolna, wieś
+MAZOWIECKIE;sokołowski;Jabłonna Lacka;Jabłonna Lacka, wieś
+MAZOWIECKIE;garwoliński;Łaskarzew;Łaskarzew, miasto
+MAZOWIECKIE;grodziski;Grodzisk Mazowiecki;Szczęsne, wieś
+ŚLĄSKIE;tarnogórski;Tworóg;Tworóg, wieś
+OPOLSKIE;kędzierzyńsko-kozielski;Bierawa;Brzeźce, wieś
+ŚLĄSKIE;cieszyński;Skoczów;Harbutowice, wieś
+MAŁOPOLSKIE;brzeski;Iwkowa;Iwkowa, wieś
+WIELKOPOLSKIE;średzki;Dominowo;Dominowo
+WIELKOPOLSKIE;leszczyński;Krzemieniewo;Garzyn, wieś
+DOLNOŚLĄSKIE;jaworski;Bolków;Bolków, miasto
+MAŁOPOLSKIE;dąbrowski;Dąbrowa Tarnowska;Dąbrowa Tarnowska, miasto
+POMORSKIE;wejherowski;Luzino;Luzino, wieś
+WARMIŃSKO-MAZURSKIE;olsztyński;Gietrzwałd;Sząbruk, wieś
+DOLNOŚLĄSKIE;oleśnicki;Bierutów;Bierutów, miasto
+LUBUSKIE;sulęciński;Słońsk;Słońsk, wieś
+KUJAWSKO-POMORSKIE;brodnicki;Górzno;Górzno, miasto
+LUBUSKIE;nowosolski;Bytom Odrzański;Bytom Odrzański
+PODKARPACKIE;dębicki;Dębica;Pustków-Osiedle, wieś
+MAZOWIECKIE;siedlecki;Siedlce;Żelków-Kolonia, wieś
+WARMIŃSKO-MAZURSKIE;braniewski;Braniewo;Braniewo, miasto
+WARMIŃSKO-MAZURSKIE;ełcki;Prostki;Prostki, wieś
+KUJAWSKO-POMORSKIE;toruński;Obrowo;Osiek nad Wisłą, wieś
+PODKARPACKIE;jarosławski;Jarosław;Sobiecin, wieś
+WIELKOPOLSKIE;koniński;Kramsk;Wola Podłężna, wieś
+WARMIŃSKO-MAZURSKIE;piski;Pisz;Pisz, miasto
+MAZOWIECKIE;grójecki;Grójec;Głuchów, wieś
+OPOLSKIE;kluczborski;Byczyna;Byczyna
+POMORSKIE;wejherowski;Wejherowo;Orle, wieś
+KUJAWSKO-POMORSKIE;bydgoski;Koronowo;Koronowo, miasto
+ŚLĄSKIE;cieszyński;Ustroń;Ustroń
+POMORSKIE;gdański;Trąbki Wielkie;Trąbki Wielkie, wieś
+ŁÓDZKIE;pabianicki;Konstantynów Łódzki;Konstantynów Łódzki
+PODKARPACKIE;strzyżowski;Niebylec;Niebylec, wieś
+POMORSKIE;pucki;Puck;Puck, miasto
+LUBELSKIE;włodawski;Włodawa;Włodawa
+MAZOWIECKIE;warszawski zachodni;Leszno;Leszno, wieś
+PODKARPACKIE;łańcucki;Czarna;Czarna, wieś
+ŚLĄSKIE;cieszyński;Cieszyn;Cieszyn
+WIELKOPOLSKIE;gostyński;Poniec;Poniec, miasto
+POMORSKIE;pucki;Kosakowo;Kosakowo, wieś
+PODKARPACKIE;rzeszowski;Boguchwała;Kielanówka, wieś
+MAZOWIECKIE;piaseczyński;Prażmów;Jaroszowa Wola, wieś
+ŚLĄSKIE;pszczyński;Pszczyna;Pszczyna, miasto
+KUJAWSKO-POMORSKIE;tucholski;Kęsowo;Żalno, wieś
+LUBUSKIE;żarski;Trzebiel;Trzebiel, wieś
+MAŁOPOLSKIE;tatrzański;Zakopane;Zakopane
+POMORSKIE;kartuski;Żukowo;Pępowo, wieś
+LUBELSKIE;bialski;Sławatycze;Sławatycze, wieś
+MAZOWIECKIE;legionowski;Serock;Zegrze, wieś
+DOLNOŚLĄSKIE;wrocławski;Długołęka;Długołęka, wieś
+LUBELSKIE;tomaszowski;Tomaszów Lubelski;Tomaszów Lubelski, miasto
+PODKARPACKIE;łańcucki;Żołynia;Żołynia, wieś
+PODKARPACKIE;ropczycko-sędziszowski;Ropczyce;Ropczyce, miasto
+PODKARPACKIE;brzozowski;Jasienica Rosielna;Blizne, wieś
+PODKARPACKIE;rzeszowski;Kamień;Kamień, wieś
+ŚWIĘTOKRZYSKIE;sandomierski;Dwikozy;Góry Wysokie, wieś
+ŁÓDZKIE;pajęczański;Kiełczygłów;Kiełczygłów, wieś
+DOLNOŚLĄSKIE;wrocławski;Kobierzyce;Kobierzyce, wieś
+LUBUSKIE;nowosolski;Nowa Sól;Lubięcin, wieś
+PODLASKIE;białostocki;Choroszcz;Porosły, wieś
+WIELKOPOLSKIE;słupecki;Strzałkowo;Strzałkowo, wieś
+WIELKOPOLSKIE;czarnkowsko-trzcianecki;Połajewo;Połajewo, wieś
+WIELKOPOLSKIE;obornicki;Oborniki;Oborniki, miasto
+POMORSKIE;pucki;Kosakowo;Suchy Dwór, wieś
+ŚLĄSKIE;żywiecki;Łodygowice;Łodygowice
+MAZOWIECKIE;radomski;Iłża;Iłża, miasto
+ŚLĄSKIE;myszkowski;Myszków;Myszków, miasto
+PODLASKIE;sokólski;Sokółka;Sokółka, miasto
+ŚLĄSKIE;mikołowski;Wyry;Gostyń, wieś
+POMORSKIE;kwidzyński;Ryjewo;Ryjewo, wieś
+KUJAWSKO-POMORSKIE;brodnicki;Brodnica;Cielęta, wieś
+ŚLĄSKIE;pszczyński;Pszczyna;Piasek, wieś
+PODKARPACKIE;przemyski;Orły;Orły, wieś
+ŚWIĘTOKRZYSKIE;kielecki;Piekoszów;Piekoszów
+PODKARPACKIE;stalowowolski;Radomyśl nad Sanem;Wola Rzeczycka, wieś
+DOLNOŚLĄSKIE;średzki;Miękinia;Wilkszyn, wieś
+WIELKOPOLSKIE;kolski;Osiek Mały;Osiek Wielki, wieś
+LUBUSKIE;żagański;Małomice;Małomice, miasto
+WIELKOPOLSKIE;średzki;Zaniemyśl;Czarnotki, wieś
+DOLNOŚLĄSKIE;milicki;Cieszków;Cieszków, wieś
+DOLNOŚLĄSKIE;trzebnicki;Wisznia Mała;Ozorowice, wieś
+DOLNOŚLĄSKIE;wrocławski;Siechnice;Iwiny, wieś
+PODKARPACKIE;leżajski;Nowa Sarzyna;Wola Zarczycka, wieś
+MAŁOPOLSKIE;krakowski;Wielka Wieś;Modlniczka, wieś
+PODKARPACKIE;ropczycko-sędziszowski;Iwierzyce;Iwierzyce, wieś
+POMORSKIE;kartuski;Żukowo;Czaple, wieś
+POMORSKIE;gdański;Kolbudy;Bielkówko
+POMORSKIE;słupski;Główczyce;Pobłocie, wieś
+WIELKOPOLSKIE;poznański;Czerwonak;Promnice, wieś
+PODKARPACKIE;rzeszowski;Głogów Małopolski;Lipie
+ŚLĄSKIE;cieszyński;Skoczów;Skoczów
+DOLNOŚLĄSKIE;kłodzki;Stronie Śląskie;Stronie Śląskie
+PODKARPACKIE;Tarnobrzeg;Tarnobrzeg;Tarnobrzeg, miasto
+DOLNOŚLĄSKIE;zgorzelecki;Bogatynia;Bogatynia, miasto
+WIELKOPOLSKIE;nowotomyski;Nowy Tomyśl;Nowy Tomyśl, miasto
+MAZOWIECKIE;grodziski;Grodzisk Mazowiecki;Grodzisk Mazowiecki
+MAZOWIECKIE;grodziski;Grodzisk Mazowiecki;Książenice
+MAZOWIECKIE;pruszkowski;Brwinów;Parzniew, wieś
+MAZOWIECKIE;pruszkowski;Brwinów;Brwinów
+MAZOWIECKIE;miński;Siennica;Siennica
+DOLNOŚLĄSKIE;kamiennogórski;Kamienna Góra;Kamienna Góra, miasto
+DOLNOŚLĄSKIE;jaworski;Jawor;Jawor
+MAZOWIECKIE;piaseczyński;Piaseczno;Baszkówka
+MAZOWIECKIE;kozienicki;Kozienice;Kozienice, miasto
+DOLNOŚLĄSKIE;dzierżoniowski;Dzierżoniów;Dzierżoniów
+DOLNOŚLĄSKIE;wrocławski;Siechnice;Zębice
+DOLNOŚLĄSKIE;zgorzelecki;Zgorzelec;Jędrzychowice, wieś
+MAZOWIECKIE;warszawski zachodni;Łomianki;Łomianki
+MAZOWIECKIE;miński;Mrozy;Wola Paprotnia, wieś
+MAZOWIECKIE;Płock;Płock;Płock
+MAZOWIECKIE;Ostrołęka;Ostrołęka;Ostrołęka
+MAZOWIECKIE;legionowski;Jabłonna;Skierdy
+MAZOWIECKIE;legionowski;Jabłonna;Rajszew (wieś)
+MAZOWIECKIE;sierpecki;Gozdowo;Lelice, wieś
+MAZOWIECKIE;pruszkowski;Michałowice;Michałowice
+MAZOWIECKIE;pruszkowski;Michałowice;Nowa Wieś
+DOLNOŚLĄSKIE;karkonoski;Kowary;Kowary
+MAZOWIECKIE;pruszkowski;Michałowice;Komorów
+PODKARPACKIE;ropczycko-sędziszowski;Ropczyce;Ropczyce
+MAZOWIECKIE;mławski;Mława;Mława
+MAZOWIECKIE;nowodworski;Nasielsk;Kosewo, wieś
+MAZOWIECKIE;nowodworski;Nasielsk;Nasielsk
+DOLNOŚLĄSKIE;Jelenia Góra;Jelenia Góra;Jelenia Góra
+OPOLSKIE;nyski;Otmuchów;Otmuchów
+LUBELSKIE;kraśnicki;Annopol;Annopol
+DOLNOŚLĄSKIE;kłodzki;Kłodzko;Ołdrzychowice Kłodzkie
+ŚLĄSKIE;pszczyński;Goczałkowice-Zdrój;Goczałkowice-Zdrój
+MAZOWIECKIE;warszawski zachodni;Błonie;Stare Faszczyce, wieś
+MAZOWIECKIE;otwocki;Otwock;Otwock
+MAZOWIECKIE;wołomiński;Tłuszcz;Tłuszcz
+WARMIŃSKO-MAZURSKIE;olsztyński;Stawiguda;Bartąg
+OPOLSKIE;krapkowicki;Gogolin;Gogolin, miasto
+MAZOWIECKIE;zwoleński;Zwoleń;Zwoleń
+PODKARPACKIE;brzozowski;Brzozów;Brzozów
+OPOLSKIE;prudnicki;Głogówek;Głogówek
+ŚLĄSKIE;Częstochowa;Częstochowa;Częstochowa
+KUJAWSKO-POMORSKIE;tucholski;Cekcyn;Cekcyn
+MAŁOPOLSKIE;Kraków;Kraków-Podgórze;delegatura Kraków-Podgórze
+WARMIŃSKO-MAZURSKIE;lidzbarski;Lidzbark Warmiński;Lidzbark Warmiński
+WIELKOPOLSKIE;poznański;Czerwonak;Koziegłowy
+ŚLĄSKIE;wodzisławski;Radlin;Radlin
+MAZOWIECKIE;grodziski;Milanówek;Milanówek
+POMORSKIE;kartuski;Kartuzy;Łapalice
+MAZOWIECKIE;piaseczyński;Piaseczno;Chyliczki, wieś
+MAŁOPOLSKIE;limanowski;Limanowa;Limanowa
+DOLNOŚLĄSKIE;złotoryjski;Wojcieszów;Wojcieszów
+LUBUSKIE;wschowski;Wschowa;Wschowa
+MAZOWIECKIE;wołomiński;Wołomin;Wołomin
+PODLASKIE;Łomża;Łomża;Łomża
+MAŁOPOLSKIE;nowosądecki;Kamionka Wielka;Kamionka Wielka, wieś
+PODKARPACKIE;przeworski;Kańczuga;Kańczuga
+POMORSKIE;kartuski;Żukowo;Rębiechowo, wieś
+MAZOWIECKIE;płocki;Gąbin;Gąbin, miasto
+ZACHODNIOPOMORSKIE;kamieński;Międzyzdroje;Międzyzdroje
+MAZOWIECKIE;legionowski;Jabłonna;Chotomów
+ŚLĄSKIE;mikołowski;Mikołów;Mikołów
+ŚLĄSKIE;częstochowski;Olsztyn;Olsztyn
+MAZOWIECKIE;sochaczewski;Teresin;Teresin, wieś
+WIELKOPOLSKIE;złotowski;Jastrowie;Jastrowie
+ŚLĄSKIE;częstochowski;Konopiska;Wygoda
+ŚLĄSKIE;wodzisławski;Rydułtowy;Rydułtowy
+ŚLĄSKIE;pszczyński;Miedźna;Wola
+ŁÓDZKIE;rawski;Rawa Mazowiecka;Rawa Mazowiecka
+DOLNOŚLĄSKIE;średzki;Środa Śląska;Szczepanów
+MAZOWIECKIE;nowodworski;Czosnów;Kaliszki
+POMORSKIE;gdański;Pruszcz Gdański;Łęgowo
+LUBUSKIE;żagański;Niegosławice;Przecław
+DOLNOŚLĄSKIE;wrocławski;Kąty Wrocławskie;Smolec
+PODKARPACKIE;niżański;Nisko;Nisko
+PODKARPACKIE;jarosławski;Jarosław;Jarosław
+MAŁOPOLSKIE;brzeski;Gnojnik;Gnojnik, wieś
+PODLASKIE;kolneński;Kolno;Kolno
+PODKARPACKIE;lubaczowski;Lubaczów;Lubaczów
+MAZOWIECKIE;pułtuski;Pułtusk;Pułtusk
+PODKARPACKIE;sanocki;Sanok;Sanok, miasto
+MAŁOPOLSKIE;krakowski;Zielonki;Węgrzce
+MAŁOPOLSKIE;krakowski;Zabierzów;Bolechowice
+WIELKOPOLSKIE;obornicki;Rogoźno;Rogoźno
+KUJAWSKO-POMORSKIE;inowrocławski;Gniewkowo;Gniewkowo
+WIELKOPOLSKIE;poznański;Rokietnica;Rokietnica
+WIELKOPOLSKIE;kępiński;Baranów;Baranów
+DOLNOŚLĄSKIE;kłodzki;Kłodzko;Kłodzko
+WIELKOPOLSKIE;poznański;Dopiewo;Zakrzewo
+WIELKOPOLSKIE;ostrzeszowski;Grabów nad Prosną;Grabów nad Prosną
+DOLNOŚLĄSKIE;wrocławski;Długołęka;Mirków
+MAZOWIECKIE;piaseczyński;Góra Kalwaria;Brześce
+MAZOWIECKIE;warszawski zachodni;Stare Babice;Wierzbin
+MAZOWIECKIE;warszawski zachodni;Stare Babice;Latchorzew
+MAZOWIECKIE;warszawski zachodni;Stare Babice;Stare Babice
+KUJAWSKO-POMORSKIE;bydgoski;Białe Błota;Białe Błota
+POMORSKIE;gdański;Pruszcz Gdański;Borkowo
+POMORSKIE;gdański;Pruszcz Gdański;Straszyn
+MAŁOPOLSKIE;dąbrowski;Radgoszcz;Radgoszcz
+POMORSKIE;gdański;Pruszcz Gdański;Rotmanka
+WIELKOPOLSKIE;poznański;Mosina;Czapury
+MAZOWIECKIE;Warszawa;Warszawa - Wilanów;Wilanów, część miasta
+WIELKOPOLSKIE;poznański;Czerwonak;Kicin
+WIELKOPOLSKIE;pleszewski;Dobrzyca;Dobrzyca, miasto
+KUJAWSKO-POMORSKIE;nakielski;Nakło nad Notecią;Nakło nad Notecią
+DOLNOŚLĄSKIE;wrocławski;Żórawina;Żórawina
+DOLNOŚLĄSKIE;karkonoski;Szklarska Poręba;Szklarska Poręba
+ŚWIĘTOKRZYSKIE;staszowski;Połaniec;Połaniec, miasto
+POMORSKIE;człuchowski;Rzeczenica;Gwieździn, wieś
+DOLNOŚLĄSKIE;wrocławski;Długołęka;Kiełczów
+MAZOWIECKIE;wołomiński;Zielonka;Zielonka
+ŚWIĘTOKRZYSKIE;kielecki;Morawica;Bilcza, wieś
+WARMIŃSKO-MAZURSKIE;ostródzki;Morąg;Morąg
+MAZOWIECKIE;pruszkowski;Nadarzyn;Rusiec
+DOLNOŚLĄSKIE;ząbkowicki;Ząbkowice Śląskie;Ząbkowice Śląskie
+ŚWIĘTOKRZYSKIE;sandomierski;Dwikozy;Mściów, wieś
+MAŁOPOLSKIE;nowosądecki;Łososina Dolna;Łososina Dolna
+MAŁOPOLSKIE;wadowicki;Mucharz;Mucharz, wieś
+MAZOWIECKIE;piaseczyński;Lesznowola;Łazy
+LUBELSKIE;bialski;Międzyrzec Podlaski;Międzyrzec Podlaski, miasto
+MAŁOPOLSKIE;limanowski;Laskowa;Laskowa
+ŚLĄSKIE;gliwicki;Pyskowice;Pyskowice, miasto
+ZACHODNIOPOMORSKIE;białogardzki;Białogard;Białogard
+MAZOWIECKIE;siedlecki;Skórzec;Dąbrówka-Ług
+WARMIŃSKO-MAZURSKIE;olsztyński;Biskupiec;Biskupiec
+MAŁOPOLSKIE;suski;Sucha Beskidzka;Sucha Beskidzka
+MAŁOPOLSKIE;wielicki;Wieliczka;Śledziejowice, wieś
+MAŁOPOLSKIE;krakowski;Czernichów;Rybna
+MAŁOPOLSKIE;nowosądecki;Podegrodzie;Podegrodzie, wieś
+ŚLĄSKIE;myszkowski;Poraj;Żarki-Letnisko
+LUBUSKIE;żagański;Niegosławice;Gościeszowice
+MAŁOPOLSKIE;wielicki;Wieliczka;Chorągwica, wieś
+MAZOWIECKIE;piaseczyński;Tarczyn;Przypki
+WARMIŃSKO-MAZURSKIE;olsztyński;Stawiguda;Bartąg, wieś
+MAŁOPOLSKIE;krakowski;Michałowice;Michałowice
+MAZOWIECKIE;piaseczyński;Prażmów;Ustanów, wieś
+POMORSKIE;bytowski;Bytów;Udorpie, wieś
+POMORSKIE;człuchowski;Debrzno;Debrzno, miasto
+MAŁOPOLSKIE;wadowicki;Wadowice;Wadowice
+POMORSKIE;sztumski;Sztum;Sztum
+MAZOWIECKIE;legionowski;Nieporęt;Michałów-Grabina
+MAZOWIECKIE;przasnyski;Chorzele;Chorzele
+MAŁOPOLSKIE;wielicki;Wieliczka;Grabówki, wieś
+WARMIŃSKO-MAZURSKIE;nidzicki;Nidzica;Piątki, wieś
+MAŁOPOLSKIE;tarnowski;Tuchów;Tuchów
+WIELKOPOLSKIE;poznański;Pobiedziska;Bugaj, wieś
+WIELKOPOLSKIE;poznański;Pobiedziska;Biskupice
+WIELKOPOLSKIE;poznański;Murowana Goślina;Murowana Goślina
+ŚLĄSKIE;lubliniecki;Kochanowice;Kochanowice
+PODLASKIE;białostocki;Juchnowiec Kościelny;Księżyno
+ŁÓDZKIE;sieradzki;Sieradz;Sieradz, miasto
+MAZOWIECKIE;nowodworski;Czosnów;Janów-Mikołajówka
+KUJAWSKO-POMORSKIE;toruński;Lubicz;Krobia
+ŚLĄSKIE;zawierciański;Łazy;Łazy
+MAZOWIECKIE;warszawski zachodni;Ożarów Mazowiecki;Płochocin-Osiedle, część miejscowości
+DOLNOŚLĄSKIE;wrocławski;Kąty Wrocławskie;Kąty Wrocławskie
+MAZOWIECKIE;otwocki;Józefów;Józefów
+MAŁOPOLSKIE;wielicki;Niepołomice;Wola Zabierzowska, wieś
+POMORSKIE;kartuski;Sierakowice;Sierakowice
+PODKARPACKIE;łańcucki;Rakszawa;Rakszawa
+PODKARPACKIE;krośnieński;Krościenko Wyżne;Krościenko Wyżne
+PODKARPACKIE;strzyżowski;Strzyżów;Strzyżów
+LUBUSKIE;gorzowski;Kostrzyn nad Odrą;Kostrzyn nad Odrą
+ZACHODNIOPOMORSKIE;koszaliński;Biesiekierz;Nowe Bielice
+PODLASKIE;białostocki;Wasilków;Wasilków
+WIELKOPOLSKIE;kościański;Śmigiel;Śmigiel
+KUJAWSKO-POMORSKIE;chełmiński;Chełmno;Chełmno, miasto
+PODKARPACKIE;tarnobrzeski;Nowa Dęba;Nowa Dęba
+WIELKOPOLSKIE;poznański;Kórnik;Borówiec, wieś
+MAŁOPOLSKIE;krakowski;Zabierzów;Rząska
+PODKARPACKIE;lubaczowski;Lubaczów;Dąbków, wieś
+ŁÓDZKIE;Skierniewice;Skierniewice;Skierniewice, miasto
+POMORSKIE;tczewski;Pelplin;Pelplin
+KUJAWSKO-POMORSKIE;bydgoski;Osielsko;Osielsko
+ZACHODNIOPOMORSKIE;myśliborski;Myślibórz;Myślibórz
+MAZOWIECKIE;grodziski;Grodzisk Mazowiecki;Wólka Grodziska
+MAZOWIECKIE;piaseczyński;Piaseczno;Józefosław
+ZACHODNIOPOMORSKIE;goleniowski;Goleniów;Kliniska Wielkie, wieś
+LUBELSKIE;lubelski;Niemce;Niemce
+MAZOWIECKIE;garwoliński;Żelechów;Żelechów
+ŚWIĘTOKRZYSKIE;kielecki;Łopuszno;Łopuszno
+WIELKOPOLSKIE;ostrowski;Nowe Skalmierzyce;Nowe Skalmierzyce
+LUBELSKIE;opolski;Karczmiska;Karczmiska Pierwsze
+ZACHODNIOPOMORSKIE;myśliborski;Dębno;Dębno, miasto
+ŚWIĘTOKRZYSKIE;kielecki;Masłów;Domaszowice, wieś
+DOLNOŚLĄSKIE;legnicki;Chojnów;Chojnów, miasto
+ŚLĄSKIE;bieruńsko-lędziński;Bojszowy;Bojszowy
+POMORSKIE;pucki;Krokowa;Wierzchucino
+MAZOWIECKIE;wyszkowski;Wyszków;Wyszków
+PODLASKIE;białostocki;Czarna Białostocka;Czarna Białostocka
+ŚLĄSKIE;będziński;Wojkowice;Wojkowice, miasto
+MAŁOPOLSKIE;krakowski;Skawina;Skawina
+POMORSKIE;człuchowski;Przechlewo;Przechlewo
+MAZOWIECKIE;miński;Stanisławów;Pustelnik
+MAZOWIECKIE;piaseczyński;Lesznowola;Mroków
+PODKARPACKIE;rzeszowski;Hyżne;Brzezówka, wieś
+MAZOWIECKIE;miński;Kałuszyn;Kałuszyn
+PODKARPACKIE;rzeszowski;Boguchwała;Nosówka, wieś
+MAZOWIECKIE;miński;Cegłów;Wiciejów, wieś
+ŚWIĘTOKRZYSKIE;kielecki;Daleszyce;Daleszyce, miasto
+OPOLSKIE;opolski;Komprachcice;Polska Nowa Wieś
+OPOLSKIE;nyski;Paczków;Unikowice
+PODKARPACKIE;krośnieński;Miejsce Piastowe;Łężany
+POMORSKIE;malborski;Stare Pole;Stare Pole, wieś
+WIELKOPOLSKIE;ostrzeszowski;Kobyla Góra;Mąkoszyce
+WIELKOPOLSKIE;gnieźnieński;Kłecko;Kłecko, miasto
+ZACHODNIOPOMORSKIE;koszaliński;Sianów;Sianów, miasto
+ŚLĄSKIE;tarnogórski;Świerklaniec;Nakło Śląskie
+ŁÓDZKIE;zgierski;Zgierz;Zgierz
+ŚLĄSKIE;pszczyński;Pszczyna;Łąka
+POMORSKIE;wejherowski;Wejherowo;Wejherowo
+KUJAWSKO-POMORSKIE;bydgoski;Koronowo;Wtelno
+WARMIŃSKO-MAZURSKIE;braniewski;Braniewo;Braniewo
+PODKARPACKIE;rzeszowski;Tyczyn;Tyczyn
+MAZOWIECKIE;legionowski;Wieliszew;Krubin
+MAZOWIECKIE;otwocki;Wiązowna;Wiązowna, wieś
+MAŁOPOLSKIE;limanowski;Limanowa;Pisarzowa
+MAŁOPOLSKIE;bocheński;Lipnica Murowana;Lipnica Murowana, wieś
+WIELKOPOLSKIE;poznański;Pobiedziska;Pobiedziska
+MAŁOPOLSKIE;chrzanowski;Libiąż;Libiąż
+MAZOWIECKIE;piaseczyński;Lesznowola;Wola Mrokowska
+MAŁOPOLSKIE;nowotarski;Raba Wyżna;Raba Wyżna, wieś
+DOLNOŚLĄSKIE;średzki;Środa Śląska;Środa Śląska, miasto
+POMORSKIE;starogardzki;Skarszewy;Skarszewy
+PODLASKIE;białostocki;Juchnowiec Kościelny;Kleosin, osada
+PODLASKIE;hajnowski;Hajnówka;Lipiny
+OPOLSKIE;opolski;Dobrzeń Wielki;Dobrzeń Wielki
+WIELKOPOLSKIE;złotowski;Okonek;Okonek
+PODLASKIE;wysokomazowiecki;Wysokie Mazowieckie;Wysokie Mazowieckie
+MAŁOPOLSKIE;oświęcimski;Zator;Łowiczki
+WIELKOPOLSKIE;kaliski;Blizanów;Jarantów
+DOLNOŚLĄSKIE;kłodzki;Nowa Ruda;Ludwikowice Kłodzkie
+ŚLĄSKIE;mikołowski;Wyry;Gostyń
+ŚLĄSKIE;bielski;Wilamowice;Dankowice
+ŚLĄSKIE;bielski;Wilamowice;Stara Wieś
+MAZOWIECKIE;warszawski zachodni;Ożarów Mazowiecki;Ożarów Mazowiecki
+LUBELSKIE;biłgorajski;Biłgoraj;Biłgoraj, miasto
+DOLNOŚLĄSKIE;wrocławski;Kobierzyce;Wysoka
+PODKARPACKIE;rzeszowski;Sokołów Małopolski;Sokołów Małopolski, miasto
+MAŁOPOLSKIE;oświęcimski;Kęty;Bulowice
+MAŁOPOLSKIE;tarnowski;Tarnów;Radlna, wieś
+DOLNOŚLĄSKIE;oleśnicki;Syców;Syców
+MAŁOPOLSKIE;limanowski;Dobra;Dobra
+ŁÓDZKIE;skierniewicki;Głuchów;Głuchów
+PODKARPACKIE;kolbuszowski;Kolbuszowa;Kolbuszowa
+ŁÓDZKIE;łódzki wschodni;Rzgów;Rzgów
+MAŁOPOLSKIE;krakowski;Zabierzów;Zabierzów
+KUJAWSKO-POMORSKIE;inowrocławski;Janikowo;Janikowo, miasto
+KUJAWSKO-POMORSKIE;mogileński;Mogilno;Mogilno
+ŁÓDZKIE;piotrkowski;Moszczenica;Jarosty
+ZACHODNIOPOMORSKIE;sławieński;Sławno;Sławno, miasto
+LUBUSKIE;gorzowski;Bogdaniec;Bogdaniec, wieś
+OPOLSKIE;kluczborski;Kluczbork;Ligota Górna
+ŁÓDZKIE;zgierski;Ozorków;Ozorków, miasto
+ŚLĄSKIE;bielski;Wilamowice;Pisarzowice
+ŁÓDZKIE;łowicki;Łowicz;Łowicz
+MAZOWIECKIE;grójecki;Nowe Miasto nad Pilicą;Nowe Miasto nad Pilicą
+ŁÓDZKIE;bełchatowski;Zelów;Zelów
+MAZOWIECKIE;żuromiński;Żuromin;Żuromin, miasto
+OPOLSKIE;oleski;Praszka;Praszka
+WARMIŃSKO-MAZURSKIE;iławski;Lubawa;Lubawa, miasto
+WIELKOPOLSKIE;poznański;Stęszew;Dębno
+MAŁOPOLSKIE;limanowski;Mszana Dolna;MszanaDolna
+POMORSKIE;chojnicki;Chojnice;Klawkowo
+DOLNOŚLĄSKIE;kłodzki;Duszniki-Zdrój;Duszniki-Zdrój
+DOLNOŚLĄSKIE;świdnicki;Żarów;Żarów, miasto
+WIELKOPOLSKIE;poznański;Kostrzyn;Siekierki Wielkie
+MAŁOPOLSKIE;olkuski;Bolesław;Laski
+MAŁOPOLSKIE;tarnowski;Lisia Góra;Lisia Góra, wieś
+MAŁOPOLSKIE;olkuski;Klucze;Jaroszowiec, wieś
+WARMIŃSKO-MAZURSKIE;olsztyński;Świątki;Świątki, wieś
+MAZOWIECKIE;nowodworski;Zakroczym;Zakroczym
+WARMIŃSKO-MAZURSKIE;olsztyński;Olsztynek;Olsztynek, miasto
+ŁÓDZKIE;piotrkowski;Sulejów;Sulejów
+WARMIŃSKO-MAZURSKIE;ostródzki;Ostróda;Ostróda
+ŁÓDZKIE;wieruszowski;Wieruszów;Wieruszów
+MAŁOPOLSKIE;gorlicki;Biecz;Biecz, miasto
+POMORSKIE;człuchowski;Czarne;Czarne
+PODKARPACKIE;rzeszowski;Głogów Małopolski;Budy Głogowskie
+MAZOWIECKIE;szydłowiecki;Jastrząb;Gąsawy Plebańskie
+LUBELSKIE;łukowski;Stanin;Wesołówka, wieś
+WIELKOPOLSKIE;kępiński;Łęka Opatowska;Opatów, wieś
+WIELKOPOLSKIE;kępiński;Perzów;Perzów
+POMORSKIE;wejherowski;Linia;Linia, wieś
+LUBELSKIE;łukowski;Krzywda;Krzywda, wieś
+ŁÓDZKIE;wieluński;Osjaków;Drobnice
+MAZOWIECKIE;pruszkowski;Piastów;Piastów
+ŚLĄSKIE;bielski;Jasienica;Międzyrzecze Dolne
+MAZOWIECKIE;legionowski;Nieporęt;Nieporęt, wieś
+DOLNOŚLĄSKIE;trzebnicki;Wisznia Mała;Psary
+DOLNOŚLĄSKIE;trzebnicki;Wisznia Mała;Kryniczno
+DOLNOŚLĄSKIE;świdnicki;Świebodzice;Świebodzice, miasto
+DOLNOŚLĄSKIE;karkonoski;Karpacz;Karpacz
+MAZOWIECKIE;piaseczyński;Lesznowola;Stara Iwiczna
+MAZOWIECKIE;ostrołęcki;Czerwin;Czerwin
+MAZOWIECKIE;węgrowski;Łochów;Łochów
+WIELKOPOLSKIE;wągrowiecki;Skoki;Skoki
+WIELKOPOLSKIE;nowotomyski;Opalenica;Opalenica, miasto
+ZACHODNIOPOMORSKIE;koszaliński;Będzino;Mścice, wieś
+DOLNOŚLĄSKIE;kłodzki;Kudowa-Zdrój;Kudowa-Zdrój, miasto
+ŚLĄSKIE;wodzisławski;Gorzyce;Czyżowice
+ŁÓDZKIE;kutnowski;Kutno;Bielawki
+KUJAWSKO-POMORSKIE;bydgoski;Koronowo;Koronowo
+MAZOWIECKIE;warszawski zachodni;Łomianki;Dziekanów Leśny
+PODLASKIE;zambrowski;Zambrów;Zambrów
+MAŁOPOLSKIE;chrzanowski;Trzebinia;Trzebinia
+WIELKOPOLSKIE;poznański;Tarnowo Podgórne;Sady
+WIELKOPOLSKIE;koniński;Golina;Golina
+KUJAWSKO-POMORSKIE;włocławski;Chodecz;Chodecz, miasto
+OPOLSKIE;głubczycki;Kietrz;Rozumice
+ZACHODNIOPOMORSKIE;Świnoujście;Świnoujście;Świnoujście
+MAŁOPOLSKIE;wadowicki;Tomice;Tomice
+MAŁOPOLSKIE;krakowski;Iwanowice;Iwanowice Dworskie, wieś
+PODKARPACKIE;przeworski;Przeworsk;Przeworsk
+ŚLĄSKIE;myszkowski;Poraj;Poraj
+DOLNOŚLĄSKIE;legnicki;Kunice;Spalona
+OPOLSKIE;brzeski;Grodków;Grodków
+DOLNOŚLĄSKIE;wrocławski;Kobierzyce;Domasław
+ŁÓDZKIE;pabianicki;Ksawerów;Ksawerów
+MAZOWIECKIE;miński;Dębe Wielkie;Dębe Wielkie
+POMORSKIE;kartuski;Chmielno;Chmielno
+ŁÓDZKIE;tomaszowski;Tomaszów Mazowiecki;Tomaszów Mazowiecki
+PODLASKIE;wysokomazowiecki;Nowe Piekuty;Kostry-Noski, wieś
+OPOLSKIE;strzelecki;Strzelce Opolskie;Strzelce Opolskie
+PODKARPACKIE;sanocki;Zagórz;Tarnawa Dolna, wieś
+PODKARPACKIE;przemyski;Przemyśl;Ostrów
+ŁÓDZKIE;łódzki wschodni;Andrespol;Andrespol
+WARMIŃSKO-MAZURSKIE;iławski;Lubawa;Fijewo, wieś
+ŚLĄSKIE;częstochowski;Lelów;Lelów
+MAZOWIECKIE;siedlecki;Siedlce;Chodów
+KUJAWSKO-POMORSKIE;bydgoski;Solec Kujawski;Solec Kujawski
+MAZOWIECKIE;białobrzeski;Białobrzegi;Białobrzegi
+POMORSKIE;bytowski;Miastko;Miastko
+ŚWIĘTOKRZYSKIE;kielecki;Strawczyn;Strawczyn
+POMORSKIE;nowodworski;Stegna;Stegna, wieś
+POMORSKIE;gdański;Pruszcz Gdański;Juszkowo
+MAZOWIECKIE;wołomiński;Tłuszcz;Postoliska
+MAZOWIECKIE;ostrołęcki;Łyse;Łyse
+WIELKOPOLSKIE;wągrowiecki;Skoki;Potrzanowo
+LUBUSKIE;zielonogórski;Sulechów;Brzezie k. Sulechowa
+MAZOWIECKIE;sierpecki;Gozdowo;Gozdowo
+LUBELSKIE;opolski;Opole Lubelskie;Opole Lubelskie
+PODKARPACKIE;stalowowolski;Zaleszany;Obojna, wieś
+PODKARPACKIE;rzeszowski;Sokołów Małopolski;Sokołów Małopolski
+WIELKOPOLSKIE;poznański;Kleszczewo;Gowarzewo
+WARMIŃSKO-MAZURSKIE;działdowski;Działdowo;Działdowo
+MAZOWIECKIE;radomski;Pionki;Pionki, miasto
+MAŁOPOLSKIE;olkuski;Wolbrom;Chrząstowice
+ŚLĄSKIE;mikołowski;Orzesze;Orzesze
+WIELKOPOLSKIE;poznański;Swarzędz;Paczkowo, wieś
+DOLNOŚLĄSKIE;wołowski;Wińsko;Iwno, wieś
+ŚLĄSKIE;Żory;Żory;Żory
+ŁÓDZKIE;tomaszowski;Rokiciny;Rokiciny-Kolonia, wieś
+WIELKOPOLSKIE;poznański;Kórnik;Kamionki
+KUJAWSKO-POMORSKIE;golubsko-dobrzyński;Golub-Dobrzyń;Ostrowite
+PODKARPACKIE;mielecki;Tuszów Narodowy;Grochowe
+ŚWIĘTOKRZYSKIE;kazimierski;Kazimierza Wielka;Kazimierza Wielka
+ZACHODNIOPOMORSKIE;koszaliński;Polanów;Polanów, miasto
+MAZOWIECKIE;płocki;Słupno;Słupno, wieś
+WIELKOPOLSKIE;poznański;Puszczykowo;Puszczykowo
+ŚLĄSKIE;cieszyński;Skoczów;Międzyświeć
+ŚLĄSKIE;tarnogórski;Miasteczko Śląskie;Miasteczko Śląskie
+POMORSKIE;kartuski;Chmielno;Garcz, wieś
+KUJAWSKO-POMORSKIE;bydgoski;Białe Błota;Zielonka
+ŚWIĘTOKRZYSKIE;kielecki;Górno;Radlin
+ŁÓDZKIE;pajęczański;Działoszyn;Działoszyn
+POMORSKIE;kartuski;Żukowo;Nowy Świat, osada
+ŚWIĘTOKRZYSKIE;opatowski;Ożarów;Ożarów
+ZACHODNIOPOMORSKIE;choszczeński;Pełczyce;Pełczyce
+MAŁOPOLSKIE;nowosądecki;Korzenna;Korzenna
+WARMIŃSKO-MAZURSKIE;bartoszycki;Bisztynek;Bisztynek
+ŚWIĘTOKRZYSKIE;kielecki;Nowiny;Nowiny
+MAŁOPOLSKIE;wadowicki;Brzeźnica;Brzeźnica
+WARMIŃSKO-MAZURSKIE;nowomiejski;Kurzętnik;Kurzętnik
+MAZOWIECKIE;płocki;Gąbin;Nowe Grabie, wieś
+LUBELSKIE;radzyński;Ulan-Majorat;Ulan-Majorat, wieś
+WARMIŃSKO-MAZURSKIE;działdowski;Lidzbark;Lidzbark
+LUBUSKIE;gorzowski;Witnica;Witnica
+MAZOWIECKIE;płocki;Drobin;Drobin
+ŚLĄSKIE;będziński;Siewierz;Siewierz
+ŚLĄSKIE;będziński;Mierzęcice;Nowa Wieś
+MAŁOPOLSKIE;wielicki;Biskupice;Trąbki
+PODKARPACKIE;bieszczadzki;Ustrzyki Dolne;Ustrzyki Dolne, miasto
+MAŁOPOLSKIE;wielicki;Biskupice;Tomaszkowice
+PODLASKIE;białostocki;Supraśl;Sobolewo
+OPOLSKIE;nyski;Paczków;Paczków

@@ -56,8 +56,11 @@ export interface OperatingEntity {
 export interface Address {
 	voivodeship: string;
 	county: string;
+	community: string;
 	city: string;
-	fullAddress: string;
+	street: string;
+	houseNumber: string;
+	localNumber: string;
 	pin: {
 		latitude: number;
 		longitude: number;

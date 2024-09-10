@@ -52,7 +52,7 @@ print("Replaced column names")
 
 # Split the geolocation column into separate columns if it contains a value
 df['geolocation'] = df['geolocation'].astype(str)  # Ensure geolocation is a string
-df[['latitude', 'longitude']] = df['geolocation'].str.split(';', expand=True, n=1)
+df[['longitude', 'latitude']] = df['geolocation'].str.split(';', expand=True, n=1)
 df['latitude'] = pd.to_numeric(df['latitude'], errors='coerce')
 df['longitude'] = pd.to_numeric(df['longitude'], errors='coerce')
 print("Split geolocation column where possible")
