@@ -1,8 +1,8 @@
 from datetime import date
 import sys
+import csv
 
 domain = sys.argv[1]
-number_of_institutions = int(sys.argv[2])
 
 # Generate the sitemap
 print("Generating sitemap")
@@ -53,6 +53,16 @@ major_cities = [
     ('ZABRZE', 'ŚLĄSKIE'),
 ]
 
+# Load institutions file from args
+institutions_file = sys.argv[2]
+
+with open(institutions_file, 'r', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile, delimiter=';')
+    headers = next(reader)  # Read the header row
+    institutions = []
+    for row in reader:
+        institutions.append(dict(zip(headers, row)))
+
 with open(sitemap, 'w', encoding="utf8") as f:
     f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
     f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
@@ -74,10 +84,13 @@ with open(sitemap, 'w', encoding="utf8") as f:
         f.write(f'    <lastmod>{current_date}</lastmod>\n')
         f.write(f'  </url>\n')
 
-    for i in range(1, number_of_institutions + 1):
-        f.write(f'  <url>\n')
-        f.write(f'    <loc>{domain}/institutions/details/{i}</loc>\n')
-        f.write(f'    <lastmod>{current_date}</lastmod>\n')
-        f.write(f'  </url>\n')
+    for inst in institutions:
+        if 'id' in inst and inst['id']:
+            f.write(f'  <url>\n')
+            f.write(f'    <loc>{domain}/institutions/details/{inst["id"].replace('/Z', '')}</loc>\n')
+            f.write(f'    <lastmod>{current_date}</lastmod>\n')
+            f.write(f'  </url>\n')
+        else:
+            print(f"Warning: No 'id' found for institution: {inst}")
     
     f.write('</urlset>')
