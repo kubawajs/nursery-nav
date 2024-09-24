@@ -20,8 +20,6 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
 
-    console.log(citiesResponse);
-
     const [institutionsAutocomplete, setInstitutionsAutocomplete] = useState<InstitutionAutocomplete[]>([]);
     const voivodeships = [
         'DOLNOŚLĄSKIE',
