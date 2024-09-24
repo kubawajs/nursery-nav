@@ -1,11 +1,15 @@
-import { Marker, useMap } from 'react-leaflet';
-import { Crib } from '@mui/icons-material';
-import { divIcon } from 'leaflet';
+import { useEffect } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { InstitutionType } from '../../shared/nursery.interface';
-import './MapPin.css';
 import { useNavigate, generatePath } from 'react-router-dom';
+import { Marker, useMap } from 'react-leaflet';
+
+import { divIcon } from 'leaflet';
+import { Crib } from '@mui/icons-material';
+
+import { InstitutionType } from '../../shared/nursery.interface';
 import PathConstants from '../../shared/pathConstants';
+
+import './MapPin.css';
 
 export interface MapPinProps {
 	institutionType: InstitutionType;
@@ -20,11 +24,12 @@ export default function MapPin(props: MapPinProps) {
 	const map = useMap();
 	const navigate = useNavigate();
 
-	if (props.selectedLocationLat !== undefined && props.selectedLocationLon !== undefined) {
-		map.setView([props.selectedLocationLat, props.selectedLocationLon], 18, {
-			animate: true
-		});
-	}
+	// Update map view only if necessary
+	useEffect(() => {
+		if (props.selectedLocationLat !== undefined && props.selectedLocationLon !== undefined) {
+			map.setView([props.selectedLocationLat, props.selectedLocationLon], 18, { animate: true });
+		}
+	}, [props.selectedLocationLat, props.selectedLocationLon, map]);
 
 	const position: [number, number] = [props.latitude, props.longitude];
 	const institutionType = props.institutionType === InstitutionType.NURSERY ? 'nursery' : 'childclub';
@@ -32,6 +37,7 @@ export default function MapPin(props: MapPinProps) {
 
 	return (
 		<Marker
+			aria-label={`Details for ${institutionType} with ID ${props.id}`}
 			eventHandlers={{
 				click: () => {
 					navigate(generatePath(PathConstants.INSTITUTION_DETAILS, { id: props.id }));
