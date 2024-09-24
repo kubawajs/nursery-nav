@@ -101,7 +101,7 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
                     options={cities.filter(city =>
                         (defaultVoivodeship && city.voivodeship === defaultVoivodeship) ||
                         (!defaultVoivodeship && (!searchParams.get('voivodeship') || city.voivodeship === searchParams.get('voivodeship'))))?.map(city => city.city) || []}
-                    value={searchParams.get('city') || ''}
+                    value={searchParams.get('city') || null}
                     onChange={(_event, value) => {
                         if (!value && searchParams.has('city')) {
                             searchParams.delete('city');
@@ -119,10 +119,10 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
             }
 
             {!defaultVoivodeship &&
-                < Autocomplete
+                <Autocomplete
                     id="voivodeshipFilter"
                     options={voivodeships || []}
-                    value={searchParams.get('voivodeship') || ''}
+                    value={searchParams.get('voivodeship') || null}
                     onChange={(_event, value) => {
                         if (!value && searchParams.has('voivodeship')) {
                             searchParams.delete('voivodeship');
