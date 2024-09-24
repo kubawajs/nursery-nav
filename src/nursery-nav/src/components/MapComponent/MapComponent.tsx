@@ -1,34 +1,53 @@
-import { MapContainer, TileLayer } from 'react-leaflet';
-import { Box, Button, Container } from '@mui/material';
-import MapPin from '../MapPin/MapPin';
 import { useContext, useEffect, useMemo, useState } from 'react';
-import MarkerClusterGroup from 'react-leaflet-cluster'
-import './MapComponent.css';
-import { LocationResponse } from '../../shared/nursery.interface';
-import { InstitutionContext } from '../Layout/Layout';
+import { MapContainer, TileLayer } from 'react-leaflet';
 import {
 	Link as RouterLink,
 	generatePath,
 	useParams,
 } from 'react-router-dom';
+
+import { Box, Button, Container, debounce } from '@mui/material';
+import MarkerClusterGroup from 'react-leaflet-cluster'
+
+import MapPin from '../MapPin/MapPin';
+import { InstitutionContext } from '../Layout/Layout';
 import PathConstants from '../../shared/pathConstants';
+
+import { LocationResponse } from '../../shared/nursery.interface';
+
+import './MapComponent.css';
 
 interface MapComponentProps {
 	locations: LocationResponse[];
 	setIsMapLoaded: (isMapLoaded: boolean) => void;
 }
 
+const attributionText = 'Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors';
+const mapUrl = `https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`;
+
+function useFilteredLocations(locations: LocationResponse[], institutionIds: number[]) {
+	return useMemo(() => {
+		if (institutionIds.length === 0) {
+			return locations;
+		}
+
+		return locations.filter((location) => institutionIds.includes(location.id));
+	}, [locations, institutionIds]);
+}
+
 export default function MapComponent({ locations, setIsMapLoaded }: MapComponentProps) {
 	const { institutionIds } = useContext(InstitutionContext);
-	const [locationsFiltered, setLocationsFiltered] = useState<LocationResponse[]>([]);
-
-	const mapUrl = `https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`;
-	const attributionText = 'Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors';
-	const isXs = window.innerWidth < 600;
-	const isSm = window.innerWidth < 900;
-
 	const { id } = useParams();
-	const selectedLocation = id ? locations.find((location) => location.id === parseInt(id)) : undefined;
+	const [size, setSize] = useState({
+		isXs: window.innerWidth < 600,
+		isSm: window.innerWidth < 900,
+	});
+	const locationsFiltered = useFilteredLocations(locations, institutionIds);
+
+	const selectedLocation = useMemo(
+		() => id ? locations.find((location) => location.id === parseInt(id)) : undefined,
+		[id, locations]
+	);
 
 	const markers = useMemo(() => locationsFiltered.map((location) => (
 		<MapPin
@@ -43,13 +62,19 @@ export default function MapComponent({ locations, setIsMapLoaded }: MapComponent
 	)), [locationsFiltered, selectedLocation]);
 
 	useEffect(() => {
-		if (institutionIds.length === 0) {
-			setLocationsFiltered(locations);
+		const handleResize = debounce(() => {
+			setSize({
+				isXs: window.innerWidth < 600,
+				isSm: window.innerWidth < 900,
+			});
+		}, 200);
+
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+			handleResize.clear();
 		}
-		else {
-			setLocationsFiltered(locations.filter((location) => institutionIds.includes(location.id)));
-		}
-	}, [institutionIds, locations]);
+	}, []);
 
 	return (
 		<Box>
@@ -62,10 +87,10 @@ export default function MapComponent({ locations, setIsMapLoaded }: MapComponent
 				<MapContainer
 					preferCanvas={true}
 					center={[52.5, 19.14]}
-					zoom={isXs ? 6 : 7}
+					zoom={size.isXs ? 6 : 7}
 					scrollWheelZoom={true}
 					zoomControl={false}
-					style={{ position: 'fixed', top: 0, bottom: 0, width: isSm ? '100%' : '50%' }}
+					style={{ position: 'fixed', top: 0, bottom: 0, width: size.isSm ? '100%' : '50%' }}
 				>
 					<TileLayer
 						attribution={attributionText}
