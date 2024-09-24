@@ -15,9 +15,10 @@ import PathConstants from '../../shared/pathConstants';
 
 interface MapComponentProps {
 	locations: LocationResponse[];
+	setIsMapLoaded: (isMapLoaded: boolean) => void;
 }
 
-export default function MapComponent({ locations }: MapComponentProps) {
+export default function MapComponent({ locations, setIsMapLoaded }: MapComponentProps) {
 	const { institutionIds } = useContext(InstitutionContext);
 	const [locationsFiltered, setLocationsFiltered] = useState<LocationResponse[]>([]);
 
@@ -70,11 +71,15 @@ export default function MapComponent({ locations }: MapComponentProps) {
 						attribution={attributionText}
 						url={mapUrl}
 						maxZoom={20}
+						eventHandlers={{
+							load: () => setIsMapLoaded(true),
+						}}
 					/>
 					<MarkerClusterGroup
 						className="marker-cluster-group"
 						polygonOptions={{ opacity: 0 }}
-						chunkedLoading>
+						chunkedLoading
+					>
 						{markers}
 					</MarkerClusterGroup>
 				</MapContainer>
