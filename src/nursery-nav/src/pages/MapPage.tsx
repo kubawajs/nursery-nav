@@ -23,6 +23,7 @@ export default function MapPage() {
 
     const [locations, setLocations] = useState<LocationResponse[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [isMapLoaded, setIsMapLoaded] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -56,10 +57,11 @@ export default function MapPage() {
                 <ListComponent defaultVoivodeship={voivodeship} defaultCity={city} />
             </Grid>
             <Grid item xs={12} md={6}>
-                {isLoading ?
+                {(isLoading && !isMapLoaded) ?
                     <CircularProgress />
                     :
-                    <MapComponent locations={locations} />}
+                    <MapComponent locations={locations} setIsMapLoaded={setIsMapLoaded} />
+                }
             </Grid>
         </>
     );

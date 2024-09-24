@@ -13,6 +13,7 @@ export default function InstitutionDetailsPage() {
     const [locations, setLocations] = useState<LocationResponse[]>([]);
     const [selectedInstitution, setSelectedInstitution] = useState<Institution | null>(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [isMapLoaded, setIsMapLoaded] = useState(false);
 
     useEffect(() => {
         const fetchInstitution = async () => {
@@ -61,7 +62,7 @@ export default function InstitutionDetailsPage() {
                 {selectedInstitution && <InstitutionDetails {...selectedInstitution} />}
             </Grid>
             <Grid item display={{ xs: "none", md: "block" }} md={6}>
-                {isLoading ? <CircularProgress /> : <MapComponent locations={locations} />}
+                {(isLoading && !isMapLoaded) ? <CircularProgress /> : <MapComponent locations={locations} setIsMapLoaded={setIsMapLoaded} />}
             </Grid>
         </>
     );

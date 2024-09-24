@@ -75,7 +75,7 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 				setTotalPages(data.totalPages);
 				setInstitutionIds(data.ids);
 			} catch (error) {
-				console.log(error);
+				console.error(error);
 			}
 			setLoading(false);
 		};

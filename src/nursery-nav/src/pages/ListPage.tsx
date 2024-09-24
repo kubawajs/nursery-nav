@@ -1,4 +1,4 @@
-import { Grid, CircularProgress } from "@mui/material";
+import { Grid, CircularProgress, Box } from "@mui/material";
 import ListComponent from "../components/ListComponent/ListComponent";
 import MapComponent from "../components/MapComponent/MapComponent";
 import FiltersBar from "../components/Filters/FiltersBar";
@@ -18,6 +18,7 @@ export default function ListPage() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
     const [locations, setLocations] = useState<LocationResponse[]>([]);
     const [isLoading, setIsLoading] = useState(true); // Add loading state
+    const [isMapLoaded, setIsMapLoaded] = useState(false);
     const [cities, setCities] = useState<getCitiesResponse[]>();
 
     useLayoutEffect(() => {
@@ -31,13 +32,11 @@ export default function ListPage() {
 
     useEffect(() => {
         const fetchData = async () => {
-            setIsLoading(true); // Set loading state to true before fetching data
             const locations = await getLocations();
             setLocations(locations);
-            setIsLoading(false); // Set loading state to false after fetching data
         };
 
-        fetchData();
+        fetchData().then(() => setIsLoading(false));
     }, []);
 
     useEffect(() => {
@@ -76,10 +75,12 @@ export default function ListPage() {
             </Grid>
             {!isMobile && (
                 <Grid item xs={12} md={6} sx={{ display: { xs: "none", md: "block" } }}>
-                    {isLoading ? (
-                        <CircularProgress /> // Render loading animation when isLoading is true
+                    {(isLoading && !isMapLoaded) ? (
+                        <Box alignItems="center" justifyContent={"center"} display="flex" height="100%" width="100%">
+                            <CircularProgress />
+                        </Box>
                     ) : (
-                        <MapComponent locations={locations} />
+                        <MapComponent locations={locations} setIsMapLoaded={setIsMapLoaded} />
                     )}
                 </Grid>
             )}
