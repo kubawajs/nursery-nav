@@ -31,21 +31,17 @@ export default function ListPage() {
     }, []);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchLocations = async () => {
             const locations = await getLocations();
             setLocations(locations);
         };
 
-        fetchData().then(() => setIsLoading(false));
-    }, []);
-
-    useEffect(() => {
         const fetchCities = async () => {
-            const response = await getCities();
-            setCities(response);
+            const cities = await getCities();
+            setCities(cities);
         };
 
-        fetchCities();
+        Promise.all([fetchLocations(), fetchCities()]).then(() => setIsLoading(false));
     }, []);
 
     const title = getTitle(voivodeship, city);
