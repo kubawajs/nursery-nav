@@ -1,19 +1,16 @@
-import axios from "axios";
+import { fetchFromApi } from './fetcher';
 
 export interface getCitiesResponse {
     city: string;
     voivodeship: string;
 }
 
-export const getCities = async (): Promise<getCitiesResponse[]> => {
-    const url = `${process.env.REACT_APP_API_URL}/cities`;
-    const res = await axios.get(url);
-    if (res.status !== 200) {
-        throw new Error('Failed to fetch cities');
-    }
+const API_URL = process.env.REACT_APP_API_URL;
 
-    const data = res.data as getCitiesResponse[];
-    return data;
+export const getCities = async (): Promise<getCitiesResponse[]> => {
+    const url = `${API_URL}/cities`;
+
+    return fetchFromApi<getCitiesResponse[]>(url);
 }
 
 export { }

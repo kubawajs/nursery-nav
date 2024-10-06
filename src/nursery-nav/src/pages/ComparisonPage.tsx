@@ -1,7 +1,8 @@
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
-import { Helmet } from "react-helmet-async";
-import Comparison from "../components/Comparison/Comparison";
 import { useSearchParams } from "react-router-dom";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+
+import Comparison from "../components/Comparison/Comparison";
+import Metadata from "../components/Metadata/Metadata";
 
 
 export default function ComparisonPage() {
@@ -18,18 +19,7 @@ export default function ComparisonPage() {
 
     return (
         <>
-            <Helmet>
-                <title>{title}</title>
-                <meta name="description" content={description} />
-                <meta property="og:title" content={title} />
-                <meta property="og:description" content={description} />
-                <meta property="og:image" content={image} />
-                <meta property="og:url" content={title} />
-                <meta name="twitter:title" content={title} />
-                <meta name="twitter:description" content={description} />
-                <meta name="twitter:image" content={image} />
-                <meta name="twitter:card" content="summary_large_image" />
-            </Helmet>
+            <Metadata title={title} description={description} image={image} url={title} />
             <Grid item xs={12}>
                 {displayError &&
                     <Container fixed>
