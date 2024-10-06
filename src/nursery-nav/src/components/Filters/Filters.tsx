@@ -1,13 +1,16 @@
+import { useState } from "react";
+import { generatePath, useNavigate, useSearchParams } from "react-router-dom";
+
 import { FormControlLabel, Autocomplete, TextField, debounce, RadioGroup, Stack } from "@mui/material";
 import Radio from '@mui/material/Radio';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
-import { useState } from "react";
-import { InstitutionAutocomplete, InstitutionType } from "../../shared/nursery.interface";
-import { generatePath, useNavigate, useSearchParams } from "react-router-dom";
-import PathConstants from "../../shared/pathConstants";
+
 import { getInstitutionAutocomplete } from "../../api/InstitutionsFetcher";
 import { getCitiesResponse } from "../../api/CitiesFetcher";
+
+import PathConstants from "../../shared/pathConstants";
+import { InstitutionAutocomplete, InstitutionType } from "../../shared/nursery.interface";
 
 interface FiltersProps {
     defaultVoivodeship?: string;
@@ -16,35 +19,45 @@ interface FiltersProps {
     citiesResponse?: getCitiesResponse[];
 }
 
+interface City {
+    city: string;
+    voivodeship: string;
+}
+
+const voivodeships = [
+    'DOLNOŚLĄSKIE',
+    'KUJAWSKO-POMORSKIE',
+    'LUBELSKIE',
+    'LUBUSKIE',
+    'ŁÓDZKIE',
+    'MAŁOPOLSKIE',
+    'MAZOWIECKIE',
+    'OPOLSKIE',
+    'PODKARPACKIE',
+    'PODLASKIE',
+    'POMORSKIE',
+    'ŚLĄSKIE',
+    'ŚWIĘTOKRZYSKIE',
+    'WARMIŃSKO-MAZURSKIE',
+    'WIELKOPOLSKIE',
+    'ZACHODNIOPOMORSKIE',
+] as const;
+
 export default function Filters({ defaultVoivodeship, defaultCity, isMobile, citiesResponse }: FiltersProps) {
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
 
     const [institutionsAutocomplete, setInstitutionsAutocomplete] = useState<InstitutionAutocomplete[]>([]);
-    const voivodeships = [
-        'DOLNOŚLĄSKIE',
-        'KUJAWSKO-POMORSKIE',
-        'LUBELSKIE',
-        'LUBUSKIE',
-        'ŁÓDZKIE',
-        'MAŁOPOLSKIE',
-        'MAZOWIECKIE',
-        'OPOLSKIE',
-        'PODKARPACKIE',
-        'PODLASKIE',
-        'POMORSKIE',
-        'ŚLĄSKIE',
-        'ŚWIĘTOKRZYSKIE',
-        'WARMIŃSKO-MAZURSKIE',
-        'WIELKOPOLSKIE',
-        'ZACHODNIOPOMORSKIE',
-    ];
 
-
-    const citiesUnique = (citiesResponse || [])
-        .map(city => ({ city: city?.city, voivodeship: city?.voivodeship }))
-        .filter((city, index, self) => self.findIndex(c => c.city === city.city) === index);
-    const cities = citiesUnique.filter(city => city !== undefined && city !== null);
+    const cities = (citiesResponse || [])
+        .reduce<City[]>((uniqueCities, { city, voivodeship }) => {
+            // Check if city exists and if it's already in the uniqueCities array
+            if (city && !uniqueCities.some(c => c.city === city)) {
+                // If not, add the city to the uniqueCities array
+                uniqueCities.push({ city, voivodeship });
+            }
+            return uniqueCities;
+        }, []);
 
     const getAutocompleteData = async (value: string) => {
         const institutions = await getInstitutionAutocomplete(value);
@@ -52,12 +65,7 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
     }
 
     const onInputChange = (_event: any, value: string | null) => {
-        if (value) {
-            getAutocompleteData(value);
-        }
-        else {
-            setInstitutionsAutocomplete([]);
-        }
+        value ? getAutocompleteData(value) : setInstitutionsAutocomplete([]);
     }
 
     const goToDetails = (_event: any, value: InstitutionAutocomplete | null) => {
@@ -67,12 +75,7 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
     }
 
     const handleInstitutionTypeFilter = (value: string) => {
-        if (value === 'ALL') {
-            searchParams.delete('insType');
-        }
-        else {
-            searchParams.set('insType', value);
-        }
+        value === 'ALL' ? searchParams.delete('insType') : searchParams.set('insType', value);
         setSearchParams(searchParams);
     }
 
