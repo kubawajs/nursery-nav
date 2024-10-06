@@ -1,11 +1,14 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { CircularProgress, Grid } from "@mui/material";
-import { Helmet } from "react-helmet-async";
+
 import FiltersBar from "../components/Filters/FiltersBar";
 import MapComponent from "../components/MapComponent/MapComponent";
 import ListComponent from "../components/ListComponent/ListComponent";
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import Metadata from "../components/Metadata/Metadata";
+
 import { getLocations } from "../api/LocationsFetcher";
+
 import { LocationResponse } from "../shared/nursery.interface";
 
 export default function MapPage() {
@@ -38,18 +41,7 @@ export default function MapPage() {
 
     return (
         <>
-            <Helmet>
-                <title>{title}</title>
-                <meta name="description" content={description} />
-                <meta property="og:title" content={title} />
-                <meta property="og:description" content={description} />
-                <meta property="og:image" content={image} />
-                <meta property="og:url" content={window.location.href} />
-                <meta name="twitter:title" content={title} />
-                <meta name="twitter:description" content={description} />
-                <meta name="twitter:image" content={image} />
-                <meta name="twitter:card" content="summary_large_image" />
-            </Helmet>
+            <Metadata title={title} description={description} image={image} url={window.location.href} />
             <Grid item xs={12} zIndex={19}>
                 <FiltersBar defaultVoivodeship={voivodeship} defaultCity={city} />
             </Grid>

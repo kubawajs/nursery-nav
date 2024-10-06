@@ -1,6 +1,7 @@
 import { Container, Link, Stack, Typography } from "@mui/material";
-import { Helmet } from "react-helmet-async";
+
 import PathConstants from "../shared/pathConstants";
+import Metadata from "../components/Metadata/Metadata";
 
 export default function PageNotFoundPage() {
     const title = `Strona nie istnieje`;
@@ -8,11 +9,7 @@ export default function PageNotFoundPage() {
 
     return (
         <>
-            <Helmet>
-                <title>{title}</title>
-                <meta property="og:image" content={image} />
-                <meta property="og:title" content={title} />
-            </Helmet>
+            <Metadata title={title} image={image} />
             <Container fixed>
                 <Stack direction="column" justifyContent="center" alignItems="center" height="80vh">
                     <Typography variant="h1">Strona nie istnieje</Typography>
