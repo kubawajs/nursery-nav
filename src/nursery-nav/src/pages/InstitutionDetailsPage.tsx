@@ -34,13 +34,11 @@ export default function InstitutionDetailsPage() {
 
     useEffect(() => {
         const fetchData = async () => {
-            setIsLoading(true);
             const locations = await getLocations();
             setLocations(locations);
-            setIsLoading(false);
         };
 
-        fetchData();
+        fetchData().then(() => setIsLoading(false));
     }, []);
 
     const title = `${selectedInstitution?.name} - ${selectedInstitution?.address.city} (${selectedInstitution?.address.voivodeship})`;

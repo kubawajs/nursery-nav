@@ -30,13 +30,11 @@ export default function MapPage() {
 
     useEffect(() => {
         const fetchData = async () => {
-            setIsLoading(true);
             const locations = await getLocations();
             setLocations(locations);
-            setIsLoading(false);
         };
 
-        fetchData();
+        fetchData().then(() => setIsLoading(false));
     }, []);
 
     return (
