@@ -1,4 +1,4 @@
-import { Grid, CircularProgress, Box } from "@mui/material";
+import { Grid, CircularProgress, Box, debounce } from "@mui/material";
 import ListComponent from "../components/ListComponent/ListComponent";
 import MapComponent from "../components/MapComponent/MapComponent";
 import FiltersBar from "../components/Filters/FiltersBar";
@@ -22,9 +22,9 @@ export default function ListPage() {
     const [cities, setCities] = useState<getCitiesResponse[]>();
 
     useLayoutEffect(() => {
-        const handleResize = () => {
+        const handleResize = debounce(() => {
             setIsMobile(window.innerWidth < 600);
-        };
+        }, 150);
 
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
