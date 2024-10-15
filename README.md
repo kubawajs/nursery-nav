@@ -22,6 +22,7 @@ This project is part of [100 commitow challenge](https://100commitow.pl/). It he
 
 * [React](https://react.dev/)
 * [Typescript](https://www.typescriptlang.org/)
+* [Vite](https://vite.dev/)
 * [React Leaflet](https://react-leaflet.js.org/)
 * [MUI](https://mui.com/material-ui/getting-started/)
 
@@ -33,7 +34,7 @@ This project is part of [100 commitow challenge](https://100commitow.pl/). It he
 
 ### Prerequisites
 
-* Node v21.6.2
+* Node v20.18.0
 
 ### Frontend
 
@@ -61,7 +62,7 @@ VITE_APP_DATA_SOURCE_UPDATE_DATE=
 
 #### Running frontend
 
-Go to `./src/nursery-nav` and run `npm run start`.
+Go to `./src/nursery-nav` and run `npm run`.
 
 ### Backend
 
@@ -212,15 +213,23 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 * [ ] Institution profile
 * [ ] Institution rating
-* [ ] Performance upgrades
+* [x] Performance upgrades
+* [x] Migrate to Vite
 
 #### Backend
 
 * [ ] Profile management
 * [x] Convert data source to MongoDB
-* [ ] CSV import
-* [ ] Fully automate data update process
 * [x] Performance upgrade
+
+#### Admin
+
+* [ ] Create Admin App
+* [ ] Display institution list
+* [ ] Display institution details
+* [ ] Edit institution details
+* [ ] Batch update institutions with file import
+* [ ] Display update comparison
 
 ### Known bugs
 
