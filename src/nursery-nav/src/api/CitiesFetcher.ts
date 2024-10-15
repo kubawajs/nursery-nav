@@ -5,7 +5,7 @@ export interface getCitiesResponse {
     voivodeship: string;
 }
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = import.meta.env.VITE_APP_API_URL;
 
 export const getCities = async (): Promise<getCitiesResponse[]> => {
     const url = `${API_URL}/cities`;

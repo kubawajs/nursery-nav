@@ -5,7 +5,7 @@ import Metadata from "../components/Metadata/Metadata";
 
 export default function PageNotFoundPage() {
     const title = `Strona nie istnieje`;
-    const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
+    const image = `${import.meta.env.VITE_APP_API_URL}/images/favicon.ico`;
 
     return (
         <>

@@ -50,7 +50,7 @@ export default function ListPage() {
     const title = getTitle(voivodeship, city);
     const description =
         "Znajdź idealny żłobek dla dziecka w najlepszej cenie PLN na miesiąc. Sprawdź dostępność miejsc i dowiedz się, gdzie ich brak. Poznaj nazwy żłobków w okolicy.";
-    const image = `${process.env.REACT_APP_API_URL}/images/favicon.ico`;
+    const image = `${import.meta.env.VITE_APP_API_URL}/images/favicon.ico`;
 
     return (
         <>
@@ -77,7 +77,7 @@ export default function ListPage() {
 }
 
 function getTitle(voivodeship: string | undefined, city: string | undefined) {
-    let title = `Darmowa Wyszukiwarka Żłobków i Klubów Dziecięcych | ${process.env.REACT_APP_NAME}`;
+    let title = `Darmowa Wyszukiwarka Żłobków i Klubów Dziecięcych | ${import.meta.env.VITE_APP_NAME}`;
     if (voivodeship && city) {
         title = `Żłobek ${city.toLocaleUpperCase()}, ${voivodeship.toLocaleUpperCase()} - ` + title;
     } else if (voivodeship) {
