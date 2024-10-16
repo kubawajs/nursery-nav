@@ -21,7 +21,7 @@ export default function Navigation() {
 									textDecoration: 'none'
 								}}
 							>
-								{process.env.REACT_APP_NAME}
+								{import.meta.env.VITE_APP_NAME}
 							</Typography>
 						</Link>
 					</Box>

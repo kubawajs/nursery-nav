@@ -22,6 +22,7 @@ This project is part of [100 commitow challenge](https://100commitow.pl/). It he
 
 * [React](https://react.dev/)
 * [Typescript](https://www.typescriptlang.org/)
+* [Vite](https://vite.dev/)
 * [React Leaflet](https://react-leaflet.js.org/)
 * [MUI](https://mui.com/material-ui/getting-started/)
 
@@ -33,7 +34,7 @@ This project is part of [100 commitow challenge](https://100commitow.pl/). It he
 
 ### Prerequisites
 
-* Node v21.6.2
+* Node v20.18.0
 
 ### Frontend
 
@@ -42,26 +43,26 @@ This project is part of [100 commitow challenge](https://100commitow.pl/). It he
 Add the `.env` file in the folder root with the keys:
 
 ```
-REACT_APP_GEOAPIFY_API_KEY=
-REACT_APP_API_URL=
-REACT_APP_NAME=
-REACT_APP_CONTACT_MAIL=
-REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID=
-REACT_APP_DATA_SOURCE_UPDATE_DATE=
+VITE_APP_GEOAPIFY_API_KEY=
+VITE_APP_API_URL=
+VITE_APP_NAME=
+VITE_APP_CONTACT_MAIL=
+VITE_APP_GOOGLE_ANALYTICS_TRACKING_ID=
+VITE_APP_DATA_SOURCE_UPDATE_DATE=
 ```
 
-| Parameter                                  | Type   | Description                                                                                                                                                                        |
-| ------------------------------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **REACT_APP_GEOAPIFY_API_KEY**             | string | Key to enable the map. Can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project) |
-| **REACT_APP_API_URL**                      | string | URL to the API instance, e.g. on local it can be `http://localhost:3000`                                                                                                           |
-| **REACT_APP_NAME**                         | string | The custom name of your application. It is displayed in the header and titles across the website                                                                                   |
-| **REACT_APP_CONTACT_MAIL**                 | string | Email used in contact dialog on a map view                                                                                                                                         |
-| **REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID** | string | Google Analytics 4 tracking ID                                                                                                                                                     |
-| **REACT_APP_DATA_SOURCE_UPDATE_DATE**      | date   | Last data update date, manually entered (displayed in tooltips)                                                                                                                    |
+| Parameter                                 | Type   | Description                                                                                                                                                                        |
+| ----------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **VITE_APP_GEOAPIFY_API_KEY**             | string | Key to enable the map. Can be created here: [https://www.geoapify.com/get-started-with-maps-api#create-project](https://www.geoapify.com/get-started-with-maps-api#create-project) |
+| **VITE_APP_API_URL**                      | string | URL to the API instance, e.g. on local it can be `http://localhost:3000`                                                                                                           |
+| **VITE_APP_NAME**                         | string | The custom name of your application. It is displayed in the header and titles across the website                                                                                   |
+| **VITE_APP_CONTACT_MAIL**                 | string | Email used in contact dialog on a map view                                                                                                                                         |
+| **VITE_APP_GOOGLE_ANALYTICS_TRACKING_ID** | string | Google Analytics 4 tracking ID                                                                                                                                                     |
+| **VITE_APP_DATA_SOURCE_UPDATE_DATE**      | date   | Last data update date, manually entered (displayed in tooltips)                                                                                                                    |
 
 #### Running frontend
 
-Go to `./src/nursery-nav` and run `npm run start`.
+Go to `./src/nursery-nav` and run `npm run`.
 
 ### Backend
 
@@ -212,15 +213,23 @@ Project backlog is available in [Github Projects](https://github.com/users/kubaw
 
 * [ ] Institution profile
 * [ ] Institution rating
-* [ ] Performance upgrades
+* [x] Performance upgrades
+* [x] Migrate to Vite
 
 #### Backend
 
 * [ ] Profile management
 * [x] Convert data source to MongoDB
-* [ ] CSV import
-* [ ] Fully automate data update process
 * [x] Performance upgrade
+
+#### Admin
+
+* [ ] Create Admin App
+* [ ] Display institution list
+* [ ] Display institution details
+* [ ] Edit institution details
+* [ ] Batch update institutions with file import
+* [ ] Display update comparison
 
 ### Known bugs
 

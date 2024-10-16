@@ -23,7 +23,7 @@ interface MapComponentProps {
 }
 
 const attributionText = 'Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors';
-const mapUrl = `https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`;
+const mapUrl = `https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKey=${import.meta.env.VITE_APP_GEOAPIFY_API_KEY}`;
 
 function useFilteredLocations(locations: LocationResponse[], institutionIds: number[]) {
 	return useMemo(() => {

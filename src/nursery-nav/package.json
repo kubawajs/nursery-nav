@@ -2,7 +2,9 @@
 	"name": "nursery-nav",
 	"version": "0.1.0",
 	"private": true,
+	"type": "module",
 	"dependencies": {
+		"@emotion/babel-plugin": "^11.12.0",
 		"@emotion/react": "^11.11.4",
 		"@emotion/styled": "^11.11.0",
 		"@fontsource/roboto": "^5.0.8",
@@ -12,12 +14,17 @@
 		"@testing-library/react": "^13.4.0",
 		"@testing-library/user-event": "^13.5.0",
 		"@types/jest": "^27.5.2",
-		"@types/node": "^16.18.86",
+		"@types/leaflet": "^1.9.12",
+		"@types/node": "^22.7.5",
 		"@types/react": "^18.2.61",
 		"@types/react-dom": "^18.2.19",
 		"@types/react-infinite-scroller": "^1.2.5",
+		"@types/react-leaflet": "^2.8.3",
+		"@vitejs/plugin-react": "^4.3.2",
 		"axios": "^1.7.2",
+		"leaflet": "^1.9.4",
 		"mini.css": "^3.0.1",
+		"node": "^20.18.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-ga4": "^2.1.0",
@@ -26,16 +33,16 @@
 		"react-leaflet": "^4.2.1",
 		"react-leaflet-cluster": "^2.1.0",
 		"react-router-dom": "^6.23.0",
-		"react-scripts": "5.0.1",
-		"typescript": "^4.9.5",
+		"typescript": "^5.6.3",
 		"uuid": "^9.0.1",
+		"vite": "^5.4.9",
+		"vite-tsconfig-paths": "^5.0.1",
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build && compress-cra",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"start": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -43,22 +50,12 @@
 			"react-app/jest"
 		]
 	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not op_mini all"
+	],
 	"devDependencies": {
-		"@types/leaflet": "^1.9.8",
-		"@types/uuid": "^9.0.8",
-		"compress-create-react-app": "^1.4.5",
-		"prettier": "^3.2.5"
+		"@types/uuid": "^10.0.0"
 	}
 }
