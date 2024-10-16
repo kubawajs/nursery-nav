@@ -12,11 +12,11 @@
 }
 
 .map-pin-icon-nursery {
-    background-color: #315292;
+    background-image: linear-gradient(to right, #4580c4, #315292);
 }
 
 .map-pin-icon-childclub {
-    background-color: #c44580;
+    background-image: linear-gradient(to right, #c44580, #6f365d);
 }
 
 .map-pin-div-icon {

@@ -1,17 +1,19 @@
 @import 'leaflet/dist/leaflet.css';
 
 .marker-cluster-small {
-	background-color: #4580c4;
+	background-image: linear-gradient(to right, #4580c4, #315292);
 	color: #fff;
 }
 
 .marker-cluster-small div {
 	font-family: 'Roboto Latin', sans-serif;
 	font-weight: bold;
-	background-color: #315292;
+	font-size: medium;
+	background-image: linear-gradient(to right, #4580c4, #315292);
 }
 
 .marker-cluster-medium {
+	background-image: linear-gradient(to right, #315292, #0d0c1d);
 	background-color: #315292;
 	color: #fff;
 }
@@ -19,7 +21,7 @@
 .marker-cluster-medium div {
 	font-family: 'Roboto Latin', sans-serif;
 	font-weight: bold;
-	background-color: #0d0c1d;
+	background-image: linear-gradient(to right, #315292, #0d0c1d);
 }
 
 .marker-cluster-large {
@@ -30,5 +32,5 @@
 .marker-cluster-large div {
 	font-family: 'Roboto Latin', sans-serif;
 	font-weight: bold;
-	background-color: #0000;
+	background-color: #0d0c1d;
 }

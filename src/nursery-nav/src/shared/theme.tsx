@@ -13,11 +13,6 @@ export const theme = createTheme({
             main: '#c44580',
             dark: '#6f365d',
         },
-        success: {
-            light: '#d1e9c8',
-            main: '#4caf50',
-            dark: '#27632a',
-        },
         text: {
             primary: '#0d0c1d',
             secondary: '#5e5d70',
