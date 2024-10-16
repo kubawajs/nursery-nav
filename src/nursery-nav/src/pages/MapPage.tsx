@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { CircularProgress, Grid } from "@mui/material";
+import { CircularProgress, Grid2 } from "@mui/material";
 
 import FiltersBar from "../components/Filters/FiltersBar";
 import MapComponent from "../components/MapComponent/MapComponent";
@@ -40,19 +40,19 @@ export default function MapPage() {
     return (
         <>
             <Metadata title={title} description={description} image={image} url={window.location.href} />
-            <Grid item xs={12} zIndex={19}>
+            <Grid2 size={{ xs: 12 }} zIndex={19}>
                 <FiltersBar defaultVoivodeship={voivodeship} defaultCity={city} />
-            </Grid>
-            <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
+            </Grid2>
+            <Grid2 size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
                 <ListComponent defaultVoivodeship={voivodeship} defaultCity={city} />
-            </Grid>
-            <Grid item xs={12} md={6}>
+            </Grid2>
+            <Grid2 size={{ xs: 12, md: 6 }}>
                 {(isLoading && !isMapLoaded) ?
                     <CircularProgress />
                     :
                     <MapComponent locations={locations} setIsMapLoaded={setIsMapLoaded} />
                 }
-            </Grid>
+            </Grid2>
         </>
     );
 }

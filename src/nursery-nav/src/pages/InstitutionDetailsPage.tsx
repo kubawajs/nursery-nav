@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { CircularProgress, Grid } from "@mui/material";
+import { CircularProgress, Grid2 } from "@mui/material";
 
 import MapComponent from "../components/MapComponent/MapComponent";
 import Metadata from "../components/Metadata/Metadata";
@@ -48,12 +48,12 @@ export default function InstitutionDetailsPage() {
     return (
         <>
             <Metadata title={title} description={description} image={image} url={title} />
-            <Grid item xs={12} md={6}>
+            <Grid2 size={{ xs: 12, md: 6 }}>
                 {selectedInstitution && <InstitutionDetails {...selectedInstitution} />}
-            </Grid>
-            <Grid item display={{ xs: "none", md: "block" }} md={6}>
+            </Grid2>
+            <Grid2 size={{ xs: 12, md: 6 }} display={{ xs: "none", md: "block" }}>
                 {(isLoading && !isMapLoaded) ? <CircularProgress /> : <MapComponent locations={locations} setIsMapLoaded={setIsMapLoaded} />}
-            </Grid>
+            </Grid2>
         </>
     );
 }

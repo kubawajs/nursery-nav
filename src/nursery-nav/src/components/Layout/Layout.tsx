@@ -3,7 +3,7 @@ import { theme } from "../../shared/theme";
 import React from "react";
 import Navigation from "../Navigation/Navigation";
 import { Outlet } from "react-router-dom";
-import { Grid } from "@mui/material";
+import { Grid2 } from "@mui/material";
 import { HelmetProvider } from "react-helmet-async";
 import ContactUs from "../ContactUs/ContactUs";
 
@@ -20,9 +20,9 @@ export default function Layout() {
             <ThemeProvider theme={theme}>
                 <HelmetProvider>
                     <Navigation />
-                    <Grid container>
+                    <Grid2 container>
                         <Outlet />
-                    </Grid>
+                    </Grid2>
                     <ContactUs />
                 </HelmetProvider>
             </ThemeProvider>

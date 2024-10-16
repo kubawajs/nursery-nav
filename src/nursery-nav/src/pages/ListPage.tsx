@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Grid, CircularProgress, Box, debounce } from "@mui/material";
+import { Grid2, CircularProgress, Box, debounce } from "@mui/material";
 
 import ListComponent from "../components/ListComponent/ListComponent";
 import MapComponent from "../components/MapComponent/MapComponent";
@@ -55,14 +55,14 @@ export default function ListPage() {
     return (
         <>
             <Metadata title={title} description={description} image={image} url={window.location.href} />
-            <Grid item xs={12} zIndex={19}>
+            <Grid2 size={{ xs: 12 }} zIndex={19}>
                 <FiltersBar defaultVoivodeship={voivodeship} defaultCity={city} citiesResponse={cities} />
-            </Grid>
-            <Grid item xs={12} md={6}>
+            </Grid2>
+            <Grid2 size={{ xs: 12, md: 6 }}>
                 <ListComponent defaultVoivodeship={voivodeship} defaultCity={city} />
-            </Grid>
+            </Grid2>
             {!isMobile && (
-                <Grid item xs={12} md={6} sx={{ display: { xs: "none", md: "block" } }}>
+                <Grid2 size={{ xs: 12, md: 6 }} sx={{ display: { xs: "none", md: "block" } }}>
                     {(isLoading && !isMapLoaded) ? (
                         <Box alignItems="center" justifyContent={"center"} display="flex" height="100%" width="100%">
                             <CircularProgress />
@@ -70,7 +70,7 @@ export default function ListPage() {
                     ) : (
                         <MapComponent locations={locations} setIsMapLoaded={setIsMapLoaded} />
                     )}
-                </Grid>
+                </Grid2>
             )}
         </>
     );

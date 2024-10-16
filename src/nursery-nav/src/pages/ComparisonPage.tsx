@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid2, Stack, Typography } from "@mui/material";
 
 import Comparison from "../components/Comparison/Comparison";
 import Metadata from "../components/Metadata/Metadata";
@@ -20,7 +20,7 @@ export default function ComparisonPage() {
     return (
         <>
             <Metadata title={title} description={description} image={image} url={title} />
-            <Grid item xs={12}>
+            <Grid2 size={{ xs: 12 }}>
                 {displayError &&
                     <Container fixed>
                         <Stack direction="column" justifyContent="center" alignItems="center" height="80vh">
@@ -37,7 +37,7 @@ export default function ComparisonPage() {
                         <Comparison ids={institutionIds} />
                     </>
                 }
-            </Grid>
+            </Grid2>
         </>
     );
 }
