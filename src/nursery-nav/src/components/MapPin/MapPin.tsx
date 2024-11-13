@@ -37,7 +37,6 @@ export default function MapPin(props: MapPinProps) {
 
 	return (
 		<Marker
-			aria-label={`Details for ${institutionType} with ID ${props.id}`}
 			eventHandlers={{
 				click: () => {
 					navigate(generatePath(PathConstants.INSTITUTION_DETAILS, { id: props.id }));
@@ -54,6 +53,7 @@ export default function MapPin(props: MapPinProps) {
 				iconSize: [30, 30],
 				className: 'map-pin-div-icon',
 			})}
+			title={`Szczegóły dla ${institutionType} o ID ${props.id}`}
 		>
 		</Marker>
 	);
