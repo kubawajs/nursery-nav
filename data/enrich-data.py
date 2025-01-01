@@ -50,26 +50,33 @@ for i in range(len(mapping)):
 
 print("Replaced column names")
 
-# Split the Localization column into separate columns
-df[['voivodeship', 'county', 'city', 'address']] = df['localization'].str.split('> ', expand=True)
-print("Split Localization column")
+# Split the geolocation column into separate columns if it contains a value
+df['geolocation'] = df['geolocation'].astype(str)  # Ensure geolocation is a string
+df[['longitude', 'latitude']] = df['geolocation'].str.split(';', expand=True, n=1)
+df['latitude'] = pd.to_numeric(df['latitude'], errors='coerce')
+df['longitude'] = pd.to_numeric(df['longitude'], errors='coerce')
+print("Split geolocation column where possible")
 
+# Get coordinates for rows where latitude or longitude is missing
 broken_rows = []
 for i in range(len(df)):
     print(f"Processing row {i+1} of {len(df)}")
 
-    if df.at[i, 'localization'] is None:
-        broken_rows.append(df.at[i])
-        continue
-
-    address = df.at[i, 'localization']
-    lat, lon = get_coordinates(address) or (None, None)
-
-    if lat is not None and lon is not None:
-        df.at[i, 'latitude'] = lat
-        df.at[i, 'longitude'] = lon
+    # Check if latitude or longitude is missing
+    if pd.isna(df.at[i, 'latitude']) or pd.isna(df.at[i, 'longitude']):
+        address = f"{df.at[i, 'voivodeship']} > {df.at[i, 'county']} > {df.at[i, 'city']} > {df.at[i, 'street']} {df.at[i, 'houseNumber']}"
+        print(address)
+        lat, lon = get_coordinates(address) or (None, None)
+        
+        if lat is not None and lon is not None:
+            df.at[i, 'latitude'] = lat
+            df.at[i, 'longitude'] = lon
+        else:
+            broken_rows.append(df.iloc[i])
     else:
-        broken_rows.append(df.iloc[i])
+        # Convert existing values to float
+        df.at[i, 'latitude'] = float(df.at[i, 'latitude'])
+        df.at[i, 'longitude'] = float(df.at[i, 'longitude'])
 
 df.to_csv(input_file.replace('.csv', '-enriched.csv'), sep=';', index=False)
 pd.DataFrame(broken_rows).to_csv(input_file.replace('.csv', '-broken.csv'), sep=';', index=False)

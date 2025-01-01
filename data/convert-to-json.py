@@ -11,11 +11,14 @@ class OperatingEntity:
         self.website = website
 
 class Address:
-    def __init__(self, voivodeship, county, city, fullAddress, pin):
-        self.voivodeship = voivodeship.strip()
-        self.county = county.strip()
-        self.city = city.strip()
-        self.fullAddress = fullAddress.strip()
+    def __init__(self, voivodeship, county, community, city, street, houseNumber, localNumber, pin):
+        self.voivodeship = voivodeship
+        self.county = county
+        self.community = community
+        self.city = city
+        self.street = street
+        self.houseNumber = houseNumber
+        self.localNumber = localNumber
         self.pin = pin
 
 class Pin: 
@@ -25,17 +28,10 @@ class Pin:
 
 # Read the input file
 input_file = sys.argv[1]
-
-# add parameter with deafult false value
-add_id = False
-if len(sys.argv) > 2:
-    add_id = sys.argv[2] == 'true'
-
 df = pd.read_csv(input_file, sep=';')
 
-# Add ID column
-if add_id:
-    df['id'] = range(1, len(df) + 1)
+# Convert ID column
+df['id'] = df['id'].str.replace('/Z', '').astype(int)
 
 # Convert institution type to enum
 df['institutionType'] = df['institutionType'].map({'Żłobek': 'NURSERY', 'Klub dziecięcy': 'CHILDCLUB'})
@@ -48,6 +44,7 @@ df['businessActivitySuspended'] = df['businessActivitySuspended'].map({'TAK': Tr
 df['basicPricePerMonth'] = df['basicPricePerMonth'].str.replace(' zł', '').astype(float)
 df['extendedStayOver10H'] = df['extendedStayOver10H'].str.replace(' zł', '').astype(float)
 df['basicPricePerHour'] = df['basicPricePerHour'].str.replace(' zł', '').astype(float)
+df['basicPricePerMonthKPOFERS'] = df['basicPricePerMonthKPOFERS'].str.replace(' zł', '').astype(float)
 df['foodPricePerMonth'] = df['foodPricePerMonth'].str.replace(' zł', '').astype(float)
 df['foodPricePerDay'] = df['foodPricePerDay'].str.replace(' zł', '').astype(float)
 
@@ -56,10 +53,10 @@ df['discounts'] = df['discounts'].str.split('Zniżka - ').str[1:]
 
 # Build objects
 df['operatingEntity'] = df.apply(lambda row: OperatingEntity(row['operatingEntityName'], row['operatingEntityAddress'], row['operatingEntityNIP'], row['operatingEntityREGON'], row['operatingEntityRegNoPosition'], row['operatingEntityWebsite']), axis=1)
-df['address'] = df.apply(lambda row: Address(row['voivodeship'], row['county'], row['city'], row['address'], Pin(row['longitude'], row['latitude'])), axis=1)
+df['address'] = df.apply(lambda row: Address(row['voivodeship'], row['county'], row['community'], row['city'], row['street'], row['houseNumber'], row['localNumber'], Pin(row['longitude'], row['latitude'])), axis=1)
 
 # Remove column from data frame
-df = df.drop('localization', axis=1)
+df = df.drop('geolocation', axis=1)
 df = df.drop('operatingEntityName', axis=1)
 df = df.drop('operatingEntityAddress', axis=1)
 df = df.drop('operatingEntityNIP', axis=1)
@@ -68,7 +65,11 @@ df = df.drop('operatingEntityRegNoPosition', axis=1)
 df = df.drop('operatingEntityWebsite', axis=1)
 df = df.drop('voivodeship', axis=1)
 df = df.drop('county', axis=1)
+df = df.drop('community', axis=1)
 df = df.drop('city', axis=1)
+df = df.drop('street', axis=1)
+df = df.drop('houseNumber', axis=1)
+df = df.drop('localNumber', axis=1)
 df = df.drop('latitude', axis=1)
 df = df.drop('longitude', axis=1)
 
