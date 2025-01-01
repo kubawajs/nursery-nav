@@ -1,6 +1,6 @@
 {
-	"short_name": "nursery-nav",
-	"name": "NurseryNav",
+	"short_name": "ZnajdzZlobek",
+	"name": "ZnajdzZlobek.pl",
 	"icons": [
 		{
 			"src": "favicon.ico",
@@ -20,6 +20,6 @@
 	],
 	"start_url": ".",
 	"display": "standalone",
-	"theme_color": "#98d9ff",
+	"theme_color": "#315292",
 	"background_color": "#ffffff"
 }

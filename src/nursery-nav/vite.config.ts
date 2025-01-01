@@ -4,7 +4,7 @@ import viteTsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
     // depending on your application, base can also be "/"
-    base: '',
+    base: '/',
     plugins: [react({
         jsxImportSource: '@emotion/react',
         babel: {
@@ -17,5 +17,7 @@ export default defineConfig({
         // this sets a default port to 3000  
         port: 3001,
     },
-
+    preview: {
+        port: 3001
+    }
 })
