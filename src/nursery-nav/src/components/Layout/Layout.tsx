@@ -6,6 +6,7 @@ import { Outlet } from "react-router-dom";
 import { Grid2 } from "@mui/material";
 import { HelmetProvider } from "react-helmet-async";
 import ContactUs from "../ContactUs/ContactUs";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export const InstitutionContext = React.createContext({
     institutionIds: [] as number[],
@@ -19,6 +20,7 @@ export default function Layout() {
         <InstitutionContext.Provider value={{ institutionIds, setInstitutionIds }}>
             <ThemeProvider theme={theme}>
                 <HelmetProvider>
+                    <SpeedInsights />
                     <Navigation />
                     <Grid2 container>
                         <Outlet />
