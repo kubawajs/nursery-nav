@@ -1,7 +1,7 @@
 @import 'leaflet/dist/leaflet.css';
 
 .marker-cluster-small {
-	background-image: linear-gradient(to right, #4580c4, #315292);
+	background-image: linear-gradient(to right, #3e73b0, #315292);
 	color: #fff;
 }
 
@@ -9,7 +9,7 @@
 	font-family: 'Roboto Latin', sans-serif;
 	font-weight: bold;
 	font-size: medium;
-	background-image: linear-gradient(to right, #4580c4, #315292);
+	background-image: linear-gradient(to right, #3e73b0, #315292);
 }
 
 .marker-cluster-medium {
