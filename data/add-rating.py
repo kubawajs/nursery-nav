@@ -3,7 +3,7 @@ import csv
 import sys
 import os
 
-gmaps = googlemaps.Client(key='AIzaSyA1KfNPR3f0Qp1sFkFBfo70kcWQAsQanmQ')
+gmaps = googlemaps.Client(key='')
 
 def get_place_rating(lat, lng):
     # Retrieve place details using the coordinates
