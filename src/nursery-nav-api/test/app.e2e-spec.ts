@@ -19,6 +19,37 @@ describe('AppController (e2e)', () => {
     return request(app.getHttpServer())
       .get('/')
       .expect(200)
-      .expect('Hello World!');
+      .expect('Status: running');
+  });
+
+  it('/institutions (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/institutions')
+      .expect(200)
+  });
+
+  it('/institutions/details/{id} (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/institutions/details/1')
+      .expect(200)
+      .expect('');
+  });
+
+  it('/cities (GET}', () => {
+    return request(app.getHttpServer())
+      .get('/cities')
+      .expect(200);
+  });
+
+  it('/locations (GET}', () => {
+    return request(app.getHttpServer())
+      .get('/locations')
+      .expect(200);
+  });
+
+  it('/institutions/autocomplete (GET)', () => {
+    return request(app.getHttpServer())
+      .get('/institutions/autocomplete?search=test')
+      .expect(200);
   });
 });
