@@ -60,6 +60,9 @@ export class InstitutionDto {
 
     @ApiProperty()
     address: AddressDto;
+
+    @ApiProperty()
+    rating: number;
 }
 
 

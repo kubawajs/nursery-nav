@@ -121,6 +121,9 @@ export class Institution {
 
     @Prop()
     operatingEntity: OperatingEntity;
+
+    @Prop()
+    rating: number;
 }
 
 export const InstitutionSchema = SchemaFactory.createForClass(Institution);

@@ -34,4 +34,7 @@ export class InstitutionListItemDto {
 
     @ApiProperty()
     city: string;
+
+    @ApiProperty()
+    rating: number;
 }
