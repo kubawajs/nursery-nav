@@ -1,4 +1,4 @@
-import { Box, Chip, Paper, Stack, Typography } from "@mui/material";
+import { Box, Chip, Paper, Rating, Stack, Typography } from "@mui/material";
 import { Institution, InstitutionType } from "../../shared/nursery.interface";
 import { Accessible, CurrencyExchange, DinnerDining, FmdGood, MoreTime, Payments } from "@mui/icons-material";
 import PropTypes from "prop-types";
@@ -31,13 +31,16 @@ export default function InstitutionDetailsHeader(institution: Institution) {
             <Paper elevation={2} sx={{ padding: 0 }}>
                 <Box>
                     <Paper elevation={0} sx={{ backgroundColor: backgroundColor }}>
-                        <Stack direction='row' justifyContent='flex-start' spacing={1} pt={2}>
-                            <Chip label={institutionType} color={mainColor} />
-                            {institution.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" />}
+                        <Stack direction='row' justifyContent='space-between' alignItems='center' spacing={1} pt={2}>
+                            <Stack direction='row' alignItems='center' spacing={1}>
+                                <Chip label={institutionType} color={mainColor} />
+                                {institution.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" />}
+                            </Stack>
+                            {institution.rating && <Rating name="read-only" value={institution.rating} precision={0.1} readOnly />}
                         </Stack>
-                        <Box pt={2}>
+                        <Stack pt={2}>
                             <Typography variant="h1" typography="h3">{institution.name}</Typography>
-                        </Box>
+                        </Stack>
                         <Box pt={1}>
                             <Typography variant="subtitle1" color="text.secondary">
                                 <FmdGood />{institution.address.city}

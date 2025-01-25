@@ -1,5 +1,5 @@
 import {
-    Box, Button, Card, CardContent, Chip, Link, ListItem, Stack, Typography
+    Box, Button, Card, CardContent, Chip, Link, ListItem, Rating, Stack, Tooltip, Typography
 } from '@mui/material';
 import { Accessible, FmdGood, Language, Mail, Phone } from '@mui/icons-material';
 import { InstitutionType } from '../../shared/nursery.interface';
@@ -22,6 +22,7 @@ interface ListComponentItemProps {
     email: string;
     isAdaptedToDisabledChildren: boolean;
     isAvailable: boolean;
+    rating: number;
 }
 
 export function ListComponentItem(props: ListComponentItemProps) {
@@ -73,6 +74,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                 <Stack direction='row' spacing={1} alignItems='center'>
                                     <Chip label={props.institutionType === InstitutionType.NURSERY ? 'ŻŁOBEK' : 'KLUB DZIECIĘCY'} color={mainColor} />
                                     {props.isAdaptedToDisabledChildren && <Chip label={<Accessible fontSize='small' />} color="info" sx={{ display: { xs: 'none', lg: 'flex' } }} />}
+                                    {props.rating && <Rating name="read-only" value={props.rating} precision={0.1} readOnly />}
                                 </Stack>
                                 <Typography
                                     component="span"

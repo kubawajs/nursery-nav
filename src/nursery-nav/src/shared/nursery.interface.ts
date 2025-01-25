@@ -18,6 +18,7 @@ export interface Institution {
 	operatingEntity: OperatingEntity;
 	businessActivitySuspended: boolean;
 	address: Address;
+	rating: number;
 }
 
 export interface InstitutionListItem {
