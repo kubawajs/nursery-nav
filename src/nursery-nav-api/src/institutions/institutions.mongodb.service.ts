@@ -169,6 +169,7 @@ export class InstitutionsMongoDbService {
             isAdaptedToDisabledChildren: institution.isAdaptedToDisabledChildren,
             isAvailable: institution.capacity > institution.kidsEnrolled,
             city: institution.address?.city,
+            rating: institution.rating,
         };
     }
 
