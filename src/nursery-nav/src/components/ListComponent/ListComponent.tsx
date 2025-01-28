@@ -61,7 +61,8 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 				phone={institution.phone}
 				email={institution.email}
 				isAdaptedToDisabledChildren={institution.isAdaptedToDisabledChildren}
-				isAvailable={institution.isAvailable} />
+				isAvailable={institution.isAvailable}
+				rating={institution.rating} />
 		</Box>
 	)), [institutions]);
 

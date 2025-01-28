@@ -33,6 +33,7 @@ export interface InstitutionListItem {
 	isAdaptedToDisabledChildren: boolean;
 	isAvailable: boolean;
 	city: string;
+	rating: number;
 }
 
 export enum InstitutionType {
