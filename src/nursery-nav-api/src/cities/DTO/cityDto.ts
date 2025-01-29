@@ -9,6 +9,7 @@ export class CityDto {
 
     @ApiProperty()
     community: string;
+
     @ApiProperty()
     city: string;
 }
