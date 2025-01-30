@@ -1,4 +1,4 @@
-import { Controller, Get, HttpCode, Inject, Param, Query, UseInterceptors } from '@nestjs/common';
+import { Controller, Get, HttpCode, Inject, Param, Query, UseInterceptors, NotFoundException, BadRequestException } from '@nestjs/common';
 import { ApiParam, ApiQuery, ApiResponse, ApiTags } from '@nestjs/swagger';
 import PaginatedResult from '../shared/models/paginatedresult';
 import { SortParams } from './params/sortParams';
@@ -42,28 +42,46 @@ export class InstitutionsController {
 
     @Get('details/:id')
     @HttpCode(200)
-    @HttpCode(404)
     @ApiResponse({ status: 200, description: 'Returns an institution by id', type: InstitutionDto })
+    @ApiResponse({ status: 404, description: 'Institution not found' })
     @ApiParam({ name: 'id', description: 'The id of the institution', required: true })
     @ApiTags('nursery-nav')
     async getById(@Param() params: any): Promise<InstitutionDto> {
         const id = parseInt(params.id);
         if (isNaN(id)) {
-            return Promise.reject('Id parameter must be a correct number');
+            throw new BadRequestException('Id parameter must be a correct number');
         }
-        return await this.institutionsService.getById(id);
+
+        try {
+            const result = await this.institutionsService.getById(id);
+            if (!result) {
+                throw new NotFoundException(`Institution with id ${id} not found`);
+            }
+            return result;
+        } catch (error) {
+            if (error instanceof NotFoundException) {
+                throw error;
+            }
+            throw new NotFoundException(`Institution with id ${id} not found`);
+        }
     }
 
     @Get('details')
     @HttpCode(200)
     @ApiQuery({ name: 'id', required: true, type: [Number], isArray: true })
-    @ApiResponse({ status: 200, description: 'Returns a list of institutions by ids. Maximum 5 ids.', type: [InstitutionListItemDto] })
+    @ApiResponse({ status: 200, description: 'Returns a list of institutions by ids. Maximum 5 ids.' })
+    @ApiResponse({ status: 400, description: 'Maximum 5 ids can be passed' })
     @ApiTags('nursery-nav')
-    async getByIds(@Query('id') ids: Number[]): Promise<InstitutionDto[]> {
+    async getByIds(@Query('id') ids: number[]): Promise<InstitutionDto[]> {
         if (ids.length > 5) {
-            return Promise.reject('Maximum 5 ids can be passed');
+            throw new BadRequestException('Maximum 5 ids can be passed');
         }
-        return await this.institutionsService.getByIds(ids.map(id => Number(id)));
+
+        try {
+            return await this.institutionsService.getByIds(ids.map(id => Number(id)));
+        } catch (error) {
+            throw new NotFoundException('Institutions not found');
+        }
     }
 
     @Get('autocomplete')
