@@ -27,7 +27,7 @@ export interface findAllParams {
 @Injectable()
 export class InstitutionsMongoDbService {
     private readonly cacheTTL: number;
-    private readonly logger = new Logger(AppService.name);
+    private readonly logger = new Logger(InstitutionsMongoDbService.name);
 
     constructor(
         @InjectModel(Institution.name) private institutionModel: Model<Institution>,
@@ -90,8 +90,6 @@ export class InstitutionsMongoDbService {
         // Save to cache with TTL
         this.logger.debug("saving to cache with cache key", cacheKey);
         await this.cacheManager.set(cacheKey, paginatedResult, this.cacheTTL);
-        var test = await this.cacheManager.get<PaginatedResult<InstitutionListItemDto>>(cacheKey);
-        this.logger.debug("test", test);
 
         return paginatedResult;
     }
