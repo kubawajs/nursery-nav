@@ -10,18 +10,16 @@ import { redisStore } from "cache-manager-redis-store";
 @Module({
     imports: [
         MongooseModule.forFeature([{ name: Institution.name, schema: InstitutionSchema }]),
+        ConfigModule,
         CacheModule.register({
             isGlobal: true,
-            ttl: Number(process.env.CACHE_TTL),
             imports: [ConfigModule],
-            useFactory: async (configService: ConfigService) => {
-                const store = await redisStore({
-                    url: configService.get<string>('REDIS_URL'),
-                });
-                return {
-                    store: () => store,
-                };
-            }
+            useFactory: async (configService: ConfigService) => ({
+                store: redisStore,
+                url: configService.get<string>('REDIS_URL'),
+                ttl: configService.get<number>('CACHE_TTL'),
+            }),
+            inject: [ConfigService]
         }),
     ],
     controllers: [InstitutionsController],

@@ -5,11 +5,13 @@ import { InstitutionAutocompleteDto } from "./DTO/institutionAutocompleteDto";
 import { InstitutionDto } from "./DTO/institutionDto";
 import { InstitutionListItemDto } from "./DTO/institutionListItemDto";
 import { SortParams } from "./params/sortParams";
-import { Inject, Injectable } from "@nestjs/common";
+import { Inject, Injectable, Logger } from "@nestjs/common";
 import { Institution } from "../shared/schemas/institution.schema";
 import { Document, Model, Query, Types } from "mongoose";
 import { Cache } from 'cache-manager';
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
+import { ConfigService } from '@nestjs/config';
+import { AppService } from "../app.service";
 
 export interface findAllParams {
     page: number;
@@ -24,13 +26,22 @@ export interface findAllParams {
 
 @Injectable()
 export class InstitutionsMongoDbService {
+    private readonly cacheTTL: number;
+    private readonly logger = new Logger(AppService.name);
+
     constructor(
         @InjectModel(Institution.name) private institutionModel: Model<Institution>,
-        @Inject(CACHE_MANAGER) private cacheManager: Cache) { }
+        @Inject(CACHE_MANAGER) private cacheManager: Cache,
+        private configService: ConfigService
+    ) {
+        this.cacheTTL = this.configService.get<number>('CACHE_TTL') || 3600; // Default 1 hour if not set
+        this.verifyRedisConnection();
+    }
 
     async findAll(params: findAllParams): Promise<PaginatedResult<InstitutionListItemDto>> {
-        const CACHE_KEY = 'InstitutionsService_findAll';
-        let size = this.setPageSize(params.size);
+        this.logger.debug("findAll called");
+        const CACHE_KEY = 'institutions:list';
+        const size = this.setPageSize(params.size);
 
         const paginatedResult: PaginatedResult<InstitutionListItemDto> = {
             items: [],
@@ -41,119 +52,122 @@ export class InstitutionsMongoDbService {
             totalPages: 1,
         };
 
-        // If cache exists, return it
-        let cacheKey = `${CACHE_KEY}_${params.page || 1}_${size}_${params.sort}_${params.city}_${params.voivodeship}_${params.insType}_${params.priceMin}_${params.priceMax}`;
-        const result = await this.cacheManager.get(cacheKey) as PaginatedResult<InstitutionListItemDto>;
-        if (result) {
-            return Promise.resolve(result);
+        // Generate cache key with all parameters
+        const cacheKey = `${CACHE_KEY}:${JSON.stringify(params)}`;
+        const cachedResult = await this.cacheManager.get<PaginatedResult<InstitutionListItemDto>>(cacheKey);
+
+        if (cachedResult) {
+            this.logger.debug("returning cached result");
+            return cachedResult;
         }
 
         // If cache doesn't exist, filter and sort data
         let institutionsQuery = this.buildFilteredQuery(params);
         institutionsQuery = this.addQuerySorting(params.sort, institutionsQuery);
 
-        let page = params.page === undefined || isNaN(params.page) || params.page < 1 ? 1 : params.page;
+        let page = this.setPage(params.page, 1); // Default to 1 total page initially
         institutionsQuery = institutionsQuery
             .skip((page - 1) * size)
             .limit(size)
-            .select('id institutionType name website email phone basicPricePerMonth basicPricePerHour isAdaptedToDisabledChildren address');
-        const institutionsArray = (await institutionsQuery.exec()) as InstitutionDto[];
+            .select('id institutionType name website email phone basicPricePerMonth basicPricePerHour isAdaptedToDisabledChildren address rating capacity kidsEnrolled');
+
+        const [institutionsArray, totalCount] = await Promise.all([
+            institutionsQuery.exec(),
+            this.buildFilteredQuery(params).countDocuments()
+        ]);
 
         if (institutionsArray.length === 0) {
-            return Promise.resolve(paginatedResult);
+            return paginatedResult;
         }
 
-        let institutionIdsQuery = this.buildFilteredQuery(params).select('id');
-        const institutionIds = await institutionIdsQuery.select('id').exec();
-        paginatedResult.ids = institutionIds.map((id) => id.id);
-        paginatedResult.totalPages = Math.ceil(institutionIds.length / size) ?? 0;
-        paginatedResult.pageIndex = this.setPage(page, paginatedResult.totalPages);
-        paginatedResult.totalItems = institutionIds.length;
+        const totalPages = Math.ceil(totalCount / size);
+        paginatedResult.totalPages = totalPages;
+        paginatedResult.pageIndex = this.setPage(page, totalPages);
+        paginatedResult.totalItems = totalCount;
+        paginatedResult.ids = institutionsArray.map(inst => inst.id);
+        paginatedResult.items = institutionsArray.map(inst => this.mapToInstutionListItem(inst.toObject() as InstitutionDto));
 
-        const institutionList = institutionsArray.map((institution) => {
-            const institutionListItem: InstitutionListItemDto = this.mapToInstutionListItem(institution);
-            return institutionListItem;
-        });
-        paginatedResult.items = institutionList;
+        // Save to cache with TTL
+        this.logger.debug("saving to cache with cache key", cacheKey);
+        await this.cacheManager.set(cacheKey, paginatedResult, this.cacheTTL);
+        var test = await this.cacheManager.get<PaginatedResult<InstitutionListItemDto>>(cacheKey);
+        this.logger.debug("test", test);
 
-        // Save to cache
-        cacheKey = `${CACHE_KEY}_${paginatedResult.pageIndex}_${size}_${params.sort}_${params.city}_${params.voivodeship}_${params.insType}_${params.priceMin}_${params.priceMax}`;
-        await this.cacheManager.set(cacheKey, paginatedResult);
-        return Promise.resolve(paginatedResult);
+        return paginatedResult;
     }
 
     async getById(id: number): Promise<InstitutionDto> {
-        const CACHE_KEY = 'InstitutionsService_getById';
-        const cacheKey = `${CACHE_KEY}_${id}`;
-        const cacheData = await this.cacheManager.get(cacheKey) as InstitutionDto;
-        if (cacheData) {
-            return Promise.resolve(cacheData);
+        const CACHE_KEY = `institution:${id}`;
+
+        const cachedInstitution = await this.cacheManager.get<InstitutionDto>(CACHE_KEY);
+        if (cachedInstitution) {
+            return cachedInstitution;
         }
 
-        const institution = this.institutionModel.findOne({ id: id }).exec();
-        if (institution) {
-            await this.cacheManager.set(cacheKey, institution);
-            return institution as unknown as InstitutionDto;
+        const institution = await this.institutionModel.findOne({ id }).exec();
+        if (!institution) {
+            throw new Error(`Institution with id ${id} not found`);
         }
 
-        return Promise.reject(`Institution with id ${id} not found`);
+        await this.cacheManager.set(CACHE_KEY, institution, this.cacheTTL);
+        return institution as unknown as InstitutionDto;
     }
 
     async getByIds(ids: number[]): Promise<InstitutionDto[]> {
-        const CACHE_KEY = 'InstitutionsService_getByIds';
-        const cacheKey = `${CACHE_KEY}_${ids.join('_')}`;
-        const cacheData = await this.cacheManager.get(cacheKey) as InstitutionDto[];
-        if (cacheData) {
-            return Promise.resolve(cacheData);
+        const CACHE_KEY = `institutions:multiple`;
+        const cacheKey = `${CACHE_KEY}:${ids.sort().join(',')}`;
+
+        const cachedInstitutions = await this.cacheManager.get<InstitutionDto[]>(cacheKey);
+        if (cachedInstitutions) {
+            return cachedInstitutions;
         }
 
         const institutions = await this.institutionModel.find({ id: { $in: ids } }).exec();
         if (institutions.length === 0) {
-            return Promise.reject('Institutions not found');
+            throw new Error('Institutions not found');
         }
 
-        await this.cacheManager.set(cacheKey, institutions);
+        await this.cacheManager.set(cacheKey, institutions, this.cacheTTL);
         return institutions as unknown as InstitutionDto[];
     }
 
     async getInstitutionsAutocomplete(searchQuery: string, size?: number): Promise<InstitutionAutocompleteDto[]> {
-        size = this.setPageSize(size);
-        const CACHE_KEY = `$InstitutionsService_getInstitutionsAutocomplete_${size}`;
-        const cacheKey = `${CACHE_KEY}_${searchQuery}`;
-        const cacheData = await this.cacheManager.get(cacheKey) as InstitutionAutocompleteDto[];
-        if (cacheData) {
-            return Promise.resolve(cacheData);
+        const CACHE_KEY = 'institutions:autocomplete';
+        const adjustedSize = this.setPageSize(size);
+        const cacheKey = `${CACHE_KEY}:${searchQuery}:${adjustedSize}`;
+
+        const cachedResults = await this.cacheManager.get<InstitutionAutocompleteDto[]>(cacheKey);
+        if (cachedResults) {
+            return cachedResults;
         }
 
-        const institutions = await this.institutionModel.find({ name: { '$regex': searchQuery, '$options': 'i' } }).limit(size).exec();
-        const institutionList = institutions.map((institution) => {
-            const institutionAutocompleteDto: InstitutionAutocompleteDto = {
-                name: institution.name,
-                id: institution.id,
-            };
-            return institutionAutocompleteDto;
-        });
+        const institutions = await this.institutionModel
+            .find({ name: { '$regex': searchQuery, '$options': 'i' } })
+            .limit(adjustedSize)
+            .select('id name')
+            .exec();
 
-        await this.cacheManager.set(cacheKey, institutionList);
-        return Promise.resolve(institutionList);
+        const institutionList = institutions.map(institution => ({
+            name: institution.name,
+            id: institution.id,
+        }));
+
+        await this.cacheManager.set(cacheKey, institutionList, this.cacheTTL);
+        return institutionList;
     }
 
     private setPage(page: number, totalPages: number): number {
         if (page === undefined || isNaN(page)) {
             return 1;
         }
-        page = page < 1 ? 1 : page;
-        page = page > totalPages ? totalPages : page;
-        return page;
+        return Math.max(1, Math.min(page, totalPages));
     }
 
     private setPageSize(size: number): number {
         if (size === undefined || isNaN(size)) {
             return 10;
         }
-        size = size < 1 ? 10 : size;
-        size = size > 100 ? 100 : size;
-        return size;
+        return Math.max(1, Math.min(size, 100));
     }
 
     private mapToInstutionListItem(institution: InstitutionDto): InstitutionListItemDto {
@@ -175,13 +189,14 @@ export class InstitutionsMongoDbService {
 
     private buildFilteredQuery(params: findAllParams) {
         let institutionsQuery = this.institutionModel.find();
+
         if (params.city) {
             institutionsQuery = institutionsQuery.find({ 'address.city': { $regex: params.city, $options: 'i' } });
         }
         if (params.voivodeship) {
             institutionsQuery = institutionsQuery.find({ 'address.voivodeship': { $regex: params.voivodeship, $options: 'i' } });
         }
-        if (params.insType && params.insType.length > 0) {
+        if (params.insType?.length > 0) {
             institutionsQuery = institutionsQuery.find({ institutionType: { $in: params.insType } });
         }
         if (params.priceMin) {
@@ -190,27 +205,31 @@ export class InstitutionsMongoDbService {
         if (params.priceMax) {
             institutionsQuery = institutionsQuery.find({ basicPricePerMonth: { $lte: params.priceMax } });
         }
+
         return institutionsQuery;
     }
 
     private addQuerySorting(sort: SortParams, institutionsQuery: Query<(Document<unknown, {}, Institution> & Institution & { _id: Types.ObjectId; })[], Document<unknown, {}, Institution> & Institution & { _id: Types.ObjectId; }, {}, Institution, "find", {}>) {
         switch (sort) {
             case SortParams.PRICE_ASC:
-                institutionsQuery = institutionsQuery.sort({ basicPricePerMonth: 1, basicPricePerHour: 1 });
-                break;
+                return institutionsQuery.sort({ basicPricePerMonth: 1, basicPricePerHour: 1 });
             case SortParams.PRICE_DESC:
-                institutionsQuery = institutionsQuery.sort({ basicPricePerMonth: -1, basicPricePerHour: -1 });
-                break;
-            case SortParams.NAME_ASC:
-                institutionsQuery = institutionsQuery.sort({ name: 1 });
-                break;
+                return institutionsQuery.sort({ basicPricePerMonth: -1, basicPricePerHour: -1 });
             case SortParams.NAME_DESC:
-                institutionsQuery = institutionsQuery.sort({ name: -1 });
-                break;
+                return institutionsQuery.sort({ name: -1 });
+            case SortParams.NAME_ASC:
             default:
-                institutionsQuery = institutionsQuery.sort({ name: 1 });
-                break;
+                return institutionsQuery.sort({ name: 1 });
         }
-        return institutionsQuery;
+    }
+
+    private async verifyRedisConnection() {
+        try {
+            await this.cacheManager.set('test', 'test', 10);
+            const testResult = await this.cacheManager.get('test');
+            this.logger.log('Redis connection test:', testResult === 'test' ? 'successful' : 'failed');
+        } catch (error) {
+            this.logger.error('Redis connection failed:', error);
+        }
     }
 }
