@@ -84,8 +84,10 @@ export class InstitutionsMongoDbService {
         paginatedResult.totalPages = totalPages;
         paginatedResult.pageIndex = this.setPage(page, totalPages);
         paginatedResult.totalItems = totalCount;
-        paginatedResult.ids = institutionsArray.map(inst => inst.id);
-        paginatedResult.items = institutionsArray.map(inst => this.mapToInstutionListItem(inst.toObject() as InstitutionDto));
+
+        let institutionIdsQuery = this.buildFilteredQuery(params).select('id');
+        const institutionIds = await institutionIdsQuery.select('id').exec();
+        paginatedResult.ids = institutionIds.map((id) => id.id); paginatedResult.items = institutionsArray.map(inst => this.mapToInstutionListItem(inst.toObject() as InstitutionDto));
 
         // Save to cache with TTL
         this.logger.debug("saving to cache with cache key", cacheKey);
