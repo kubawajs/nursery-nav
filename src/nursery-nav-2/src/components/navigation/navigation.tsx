@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navigation() {
     return (
         <nav className="flex items-center justify-between p-4 bg-white shadow-md">
@@ -7,7 +9,7 @@ export default function Navigation() {
             <div className="hidden md:flex items-center gap-4">
                 <ul className="ml-auto flex items-center gap-4">
                     <li>
-                        <a href="/about" className="text-gray-800 hover:text-blue-500">O nas</a>
+                        <Link href="/about" className="text-gray-800 hover:text-blue-500">O nas</Link>
                     </li>
                     <li>
                         <a href="/contact" className="text-gray-800 hover:text-blue-500">Kontakt</a>
