@@ -87,8 +87,16 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 	useEffect(() => {
 		const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
 		setItemsToCompare(itemsToCompare);
-		window.dispatchEvent(new Event('storage'))
-	}, [itemsToCompare]);
+
+		// Optional: Listen for storage changes from other components
+		const handleStorageChange = () => {
+			const items = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
+			setItemsToCompare(items);
+		};
+
+		window.addEventListener('storage', handleStorageChange);
+		return () => window.removeEventListener('storage', handleStorageChange);
+	}, []); // Empty dependency array means this only runs once on mount
 
 	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
 		searchParams.set('sort', event.target.value);
@@ -98,7 +106,8 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 	const clearComparison = () => {
 		localStorage.removeItem('itemsToCompare');
 		setItemsToCompare([]);
-		window.dispatchEvent(new Event('storage'))
+		// Dispatch storage event after state is cleared
+		window.dispatchEvent(new Event('storage'));
 	};
 
 	return (
