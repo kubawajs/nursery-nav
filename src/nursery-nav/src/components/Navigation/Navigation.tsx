@@ -21,7 +21,7 @@ export default function Navigation() {
 									textDecoration: 'none'
 								}}
 							>
-								{import.meta.env.VITE_APP_NAME}
+								{process.env.NEXT_PUBLIC_NAME}
 							</Typography>
 						</Link>
 					</Box>

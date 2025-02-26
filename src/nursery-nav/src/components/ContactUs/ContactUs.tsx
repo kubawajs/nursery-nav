@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function ContactUs() {
     const [open, setOpen] = useState(false);
-    const contactMail = import.meta.env.VITE_APP_CONTACT_MAIL;
+    const contactMail = process.env.NEXT_PUBLIC_CONTACT_MAIL;
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -31,7 +31,7 @@ export default function ContactUs() {
                     </DialogContentText>
                     <DialogActions>
                         <Button onClick={handleClose}>Anuluj</Button>
-                        <Button href={`mailto:${import.meta.env.VITE_APP_CONTACT_MAIL}`} onClick={handleClose}>Wyślij e-mail</Button>
+                        <Button href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_MAIL}`} onClick={handleClose}>Wyślij e-mail</Button>
                     </DialogActions>
                 </DialogContent>
             </Dialog>

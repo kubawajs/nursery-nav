@@ -13,7 +13,7 @@ import { LocationResponse } from "../shared/nursery.interface";
 
 export default function MapPage() {
     const { voivodeship, city } = useParams<{ voivodeship: string | undefined, city: string | undefined }>();
-    let title = `Wyszukiwarka Żłobków i Klubów Dziecięcych - widok mapy | ${import.meta.env.VITE_APP_NAME}`;
+    let title = `Wyszukiwarka Żłobków i Klubów Dziecięcych - widok mapy | ${process.env.NEXT_PUBLIC_NAME}`;
     if (voivodeship && city) {
         title = `Żłobek ${city.toLocaleUpperCase()}, ${voivodeship.toLocaleUpperCase()} - ` + title;
     }
@@ -22,7 +22,7 @@ export default function MapPage() {
     }
 
     const description = "Znajdź idealny żłobek dla dziecka w najlepszej cenie PLN na miesiąc. Sprawdź dostępność miejsc i dowiedz się, gdzie ich brak. Poznaj nazwy żłobków w okolicy.";
-    const image = `${import.meta.env.VITE_APP_API_URL}/images/favicon.ico`;
+    const image = `${process.env.NEXT_PUBLIC_API_URL}/images/favicon.ico`;
 
     const [locations, setLocations] = useState<LocationResponse[]>([]);
     const [isLoading, setIsLoading] = useState(true);

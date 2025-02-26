@@ -62,7 +62,7 @@ export default function InstitutionDetailsDescription(institution: Institution) 
                         </DialogTitle>
                         <DialogContent>
                             <DialogContentText>
-                                Dane dotyczące dostępności żłobków i klubów dziecięcych wyświetlane na stronie mogą nie być aktualne, gdyż są odświeżane cyklicznie. Ostatnia aktualizacja: {import.meta.env.VITE_APP_DATA_SOURCE_UPDATE_DATE}
+                                Dane dotyczące dostępności żłobków i klubów dziecięcych wyświetlane na stronie mogą nie być aktualne, gdyż są odświeżane cyklicznie. Ostatnia aktualizacja: {process.env.NEXT_PUBLIC_DATA_SOURCE_UPDATE_DATE}
                             </DialogContentText>
                             <DialogActions>
                                 <Button onClick={() => setAvailabilityDialog(false)}>Zamknij</Button>

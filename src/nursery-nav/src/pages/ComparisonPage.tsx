@@ -6,9 +6,9 @@ import Metadata from "../components/Metadata/Metadata";
 
 
 export default function ComparisonPage() {
-    const title = `Porównanie Żłobków i Klubów Dziecięcych | ${import.meta.env.VITE_APP_NAME}`;
+    const title = `Porównanie Żłobków i Klubów Dziecięcych | ${process.env.NEXT_PUBLIC_NAME}`;
     const description = "Porównaj wybrane żłobki i kluby dziecięce. Sprawdź dostępność miejsc, ceny oraz opinie o placówkach.";
-    const image = `${import.meta.env.VITE_APP_API_URL}/images/favicon.ico`;
+    const image = `${process.env.NEXT_PUBLIC_API_URL}/images/favicon.ico`;
 
     const ids = useSearchParams()[0].get("ids");
     const idsArr: string[] = ids ? ids.split(",") : [];

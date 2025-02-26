@@ -1,7 +1,7 @@
 import ReactGA from 'react-ga4';
 import generateClientIdGa from './generate-client-id-ga';
 
-export const gaEnvKey = 'VITE_APP_GOOGLE_ANALYTICS_TRACKING_ID';
+export const gaEnvKey = 'NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID';
 
 const ga = {
     initGoogleAnalytics() {

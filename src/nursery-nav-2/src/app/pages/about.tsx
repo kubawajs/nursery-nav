@@ -1,10 +1,12 @@
+import logo from "../public/images/logo.png";
+
 export default function About() {
     return (
         <div className="p-4">
             <div className="bg-white shadow-md p-4">
                 <div className="flex flex-col space-y-4">
                     <div className="flex justify-center text-center">
-                        <img src="/images/logo.png" alt="" width="200px" />
+                        <img src={logo.src} alt="" width="200px" />
                     </div>
                     <h1 className="text-4xl text-center">O projekcie</h1>
                     <p className="text-base">

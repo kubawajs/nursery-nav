@@ -1,11 +1,12 @@
 import { Box, Container, Link, List, ListItem, ListItemText, Paper, Stack, Typography } from "@mui/material";
+//import logo from "../public/images/logo.png";
 
 import Metadata from "../components/Metadata/Metadata";
 
 export default function AboutPage() {
-    const title = `O aplikacji - ${import.meta.env.VITE_APP_NAME}`;
+    const title = `O aplikacji - ${process.env.NEXT_PUBLIC_NAME}`;
     const description = "Informacje o aplikacji";
-    const image = `${import.meta.env.VITE_APP_API_URL}/favicon.ico`;
+    const image = `${process.env.NEXT_PUBLIC_API_URL}/favicon.ico`;
 
     return (
         <>
@@ -14,11 +15,11 @@ export default function AboutPage() {
                 <Paper elevation={3} sx={{ padding: '1rem' }}>
                     <Stack direction="column" spacing={2}>
                         <Box justifyItems={'center'} textAlign={'center'}>
-                            <img src="/images/logo.png" alt={import.meta.env.VITE_APP_NAME} width="200px" />
+                            {/* <img src={logo.src} alt={process.env.NEXT_PUBLIC_NAME} width="200px" /> */}
                         </Box>
                         <Typography variant="h1" textAlign={'center'}>O projekcie</Typography>
                         <Typography variant="body1">
-                            Celem projektu <Link href="/">{import.meta.env.VITE_APP_NAME}</Link> jest ułatwienie rodzicom wyszukiwania pobliskich żłobków i przedszkoli.
+                            Celem projektu <Link href="/">{process.env.NEXT_PUBLIC_NAME}</Link> jest ułatwienie rodzicom wyszukiwania pobliskich żłobków i przedszkoli.
                             Dzięki intuicyjnemu interfejsowi, użytkownicy mogą szybko znaleźć idealne miejsce dla swojego dziecka, spełniające ich wymagania i oczekiwania.
                         </Typography>
                         <Typography variant="h2" typography="h3" textAlign={'center'}>Funkcje</Typography>

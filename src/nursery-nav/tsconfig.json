@@ -1,29 +1,41 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
+		"useDefineForClassFields": true,
 		"lib": [
 			"dom",
 			"dom.iterable",
 			"esnext"
 		],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"noFallthroughCasesInSwitch": true,
 		"module": "esnext",
-		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
 		"resolveJsonModule": true,
-		"types": [
-			"vite/client"
-		],
 		"isolatedModules": true,
 		"noEmit": true,
-		"jsx": "react-jsx"
+		"jsx": "preserve",
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"allowJs": true,
+		"forceConsistentCasingInFileNames": true,
+		"incremental": true,
+		"allowSyntheticDefaultImports": true,
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
 	},
 	"include": [
-		"src"
+		"./src",
+		"./dist/types/**/*.ts",
+		"./next-env.d.ts"
+	],
+	"exclude": [
+		"./node_modules"
 	]
 }
