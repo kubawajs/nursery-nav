@@ -1,5 +1,7 @@
 import { Box, Container, Link, List, ListItem, ListItemText, Paper, Stack, Typography } from "@mui/material";
-//import logo from "../public/images/logo.png";
+import logo from "../../public/images/logo.png";
+import author from "../../public/author.png";
+import Image from 'next/image';
 
 import Metadata from "../components/Metadata/Metadata";
 
@@ -15,7 +17,7 @@ export default function AboutPage() {
                 <Paper elevation={3} sx={{ padding: '1rem' }}>
                     <Stack direction="column" spacing={2}>
                         <Box justifyItems={'center'} textAlign={'center'}>
-                            {/* <img src={logo.src} alt={process.env.NEXT_PUBLIC_NAME} width="200px" /> */}
+                            <Image src={logo.src} alt="Logo ZnajdzZlobek.pl" width={206} height={63} />
                         </Box>
                         <Typography variant="h1" textAlign={'center'}>O projekcie</Typography>
                         <Typography variant="body1">
@@ -23,7 +25,7 @@ export default function AboutPage() {
                             Dzięki intuicyjnemu interfejsowi, użytkownicy mogą szybko znaleźć idealne miejsce dla swojego dziecka, spełniające ich wymagania i oczekiwania.
                         </Typography>
                         <Typography variant="h2" typography="h3" textAlign={'center'}>Funkcje</Typography>
-                        <Typography variant="body1">
+                        <Box>
                             <List>
                                 <ListItem>
                                     <ListItemText><strong>Mapa z pinezkami:</strong> Widok mapy pokazujący lokalizacje żłobków i przedszkoli.</ListItemText>
@@ -38,10 +40,10 @@ export default function AboutPage() {
                                     <ListItemText><strong>Integracja z API:</strong> API z bieżąco aktualizowaną bazą danych</ListItemText>
                                 </ListItem>
                             </List>
-                        </Typography>
+                        </Box>
                         <Typography variant="h2" typography="h3" textAlign={'center'}>Technologie</Typography>
                         <Typography variant="body1">
-                            Projekt wykorzystuje technologie takie jak React, Typescript, NestJS, oraz biblioteki MUI i React Leaflet.
+                            Projekt wykorzystuje technologie takie jak NextJS, Typescript, NestJS, oraz biblioteki MUI i React Leaflet.
                             Kod źródłowy aplikacji dostępny jest pod adresem URL: <Link href="https://github.com/kubawajs/nursery-nav">github.com/kubawajs/nursery-nav</Link>.
                         </Typography>
                         <Typography variant="h2" typography="h3" textAlign={'center'}>Dane</Typography>
@@ -53,7 +55,7 @@ export default function AboutPage() {
                         </Typography>
                         <Typography variant="h2" typography="h3" textAlign={'center'}>Autor</Typography>
                         <Box justifyItems={'center'} textAlign={'center'}>
-                            <Link href="www.wajs-dev.net"><img src="/author.png" alt="Author's logo" width="150px" height="150px" /></Link>
+                            <Link href="www.wajs-dev.net"><Image src={author} alt="Author's logo" width={150} height={150} /></Link>
                         </Box>
                     </Stack>
                 </Paper>

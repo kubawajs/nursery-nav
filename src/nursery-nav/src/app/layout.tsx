@@ -27,7 +27,6 @@ export default function RootLayout({
         <html lang="pl" className={roboto.className}>
             <head>
                 <link rel="apple-touch-icon" href="/logo192.png" />
-
             </head>
             <body>
                 <div id="root">{children}</div>
