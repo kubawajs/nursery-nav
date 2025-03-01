@@ -33,19 +33,19 @@ export default function ListPage() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    useEffect(() => {
-        const fetchLocations = async () => {
-            const locations = await getLocations();
-            setLocations(locations);
-        };
+    // useEffect(() => {
+    //     const fetchLocations = async () => {
+    //         const locations = await getLocations();
+    //         setLocations(locations);
+    //     };
 
-        const fetchCities = async () => {
-            const cities = await getCities();
-            setCities(cities);
-        };
+    //     const fetchCities = async () => {
+    //         const cities = await getCities();
+    //         setCities(cities);
+    //     };
 
-        Promise.all([fetchLocations(), fetchCities()]).then(() => setIsLoading(false));
-    }, []);
+    //     Promise.all([fetchLocations(), fetchCities()]).then(() => setIsLoading(false));
+    // }, []);
 
     const title = getTitle(voivodeship, city);
     const description =

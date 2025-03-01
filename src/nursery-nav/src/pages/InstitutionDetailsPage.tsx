@@ -32,14 +32,14 @@ export default function InstitutionDetailsPage() {
         fetchInstitution();
     }, [id]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const locations = await getLocations();
-            setLocations(locations);
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const locations = await getLocations();
+    //         setLocations(locations);
+    //     };
 
-        fetchData().then(() => setIsLoading(false));
-    }, []);
+    //     fetchData().then(() => setIsLoading(false));
+    // }, []);
 
     const title = `${selectedInstitution?.name} - ${selectedInstitution?.address.city} (${selectedInstitution?.address.voivodeship})`;
     const description = `Informacje o placówce wraz z lokalizacją na mapie - ${selectedInstitution?.name} - ${selectedInstitution?.address.city} (${selectedInstitution?.address.voivodeship})`;
