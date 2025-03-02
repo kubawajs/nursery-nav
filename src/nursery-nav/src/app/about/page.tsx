@@ -1,18 +1,11 @@
 import { Box, Container, Link, List, ListItem, ListItemText, Paper, Stack, Typography } from "@mui/material";
-import logo from "../../public/images/logo.png";
-import author from "../../public/author.png";
+import logo from "../../../public/images/logo.png";
+import author from "../../../public/author.png";
 import Image from 'next/image';
 
-import Metadata from "../components/Metadata/Metadata";
-
-export default function AboutPage() {
-    const title = `O aplikacji - ${process.env.NEXT_PUBLIC_NAME}`;
-    const description = "Informacje o aplikacji";
-    const image = `${process.env.NEXT_PUBLIC_API_URL}/favicon.ico`;
-
+export default function About() {
     return (
         <>
-            <Metadata title={title} description={description} image={image} url={window.location.href} />
             <Container sx={{ padding: '1rem' }}>
                 <Paper elevation={3} sx={{ padding: '1rem' }}>
                     <Stack direction="column" spacing={2}>

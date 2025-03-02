@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Roboto } from 'next/font/google'
+import { Roboto } from 'next/font/google';
 
 const roboto = Roboto({
     subsets: ['latin'],
@@ -28,6 +28,7 @@ export default function RootLayout({
             <head>
                 <link rel="apple-touch-icon" href="/logo192.png" />
             </head>
+
             <body>
                 <div id="root">{children}</div>
             </body>
