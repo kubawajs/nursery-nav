@@ -1,3 +1,5 @@
+'use client'
+
 import { ChatBubble } from "@mui/icons-material";
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab } from "@mui/material";
 import { useState } from "react";

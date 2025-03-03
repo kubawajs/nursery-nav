@@ -1,5 +1,13 @@
+import './global.css';
+
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { Grid2, ThemeProvider } from "@mui/material";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Metadata } from "next";
 import { Roboto } from 'next/font/google';
+import ContactUs from "../components/ContactUs/ContactUs";
+import Navigation from "../components/Navigation/Navigation";
+import { theme } from '../shared/theme';
 
 const roboto = Roboto({
     subsets: ['latin'],
@@ -30,8 +38,19 @@ export default function RootLayout({
             </head>
 
             <body>
-                <div id="root">{children}</div>
+                <AppRouterCacheProvider>
+                    <ThemeProvider theme={theme}>
+                        <SpeedInsights />
+                        <Navigation />
+                        <main>
+                            <Grid2 container>
+                                {children}
+                            </Grid2>
+                        </main>
+                        <ContactUs />
+                    </ThemeProvider>
+                </AppRouterCacheProvider>
             </body>
-        </html>
+        </html >
     );
 }
