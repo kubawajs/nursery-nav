@@ -5,15 +5,15 @@ import PathConstants from "../../shared/pathConstants";
 
 export default function InstitutionDetailsTop(institution: Institution) {
     const mainColor = institution.institutionType === InstitutionType.NURSERY ? 'primary' : 'secondary';
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    const handleBackButton = () => {
-        if (window.history?.length && window.history.length > 2) {
-            navigate(-1);
-        } else {
-            navigate(PathConstants.HOME, { replace: true });
-        }
-    };
+    // const handleBackButton = () => {
+    //     if (window.history?.length && window.history.length > 2) {
+    //         navigate(-1);
+    //     } else {
+    //         navigate(PathConstants.HOME, { replace: true });
+    //     }
+    // };
 
     return (
         <Box p={1}>
@@ -24,7 +24,7 @@ export default function InstitutionDetailsTop(institution: Institution) {
                     <Link href={generatePath(`${PathConstants.HOME}?city=${institution.address.city}`)} variant="overline" underline="none">{institution.address.city}</Link>
                 </Breadcrumbs>
 
-                <Button variant="contained" color={mainColor} onClick={handleBackButton}>Powrót</Button>
+                <Button variant="contained" color={mainColor}>Powrót</Button>
             </Stack>
         </Box>
     );

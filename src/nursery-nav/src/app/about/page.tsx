@@ -3,6 +3,11 @@ import logo from "../../../public/images/logo.png";
 import author from "../../../public/author.png";
 import Image from 'next/image';
 
+export const metadata = {
+    title: 'O projekcie | ZnajdzZlobek.pl',
+    description: 'Informacje o projekcie ZnajdzZlobek.pl',
+}
+
 export default function About() {
     return (
         <>

@@ -1,3 +1,5 @@
+'use client'
+
 import { Box } from '@mui/material';
 import InstitutionDetailsHeader from './InstitutionDetailsHeader';
 import InstitutionDetailsDescription from './InstitutionDetailsDescription';
