@@ -1,5 +1,5 @@
 import {
-    Box, Button, Card, CardContent, Chip, Link, ListItem, Rating, Stack, Tooltip, Typography
+    Box, Button, Card, CardContent, Chip, Link, ListItem, Rating, Stack, Typography
 } from '@mui/material';
 import { Accessible, FmdGood, Language, Mail, Phone } from '@mui/icons-material';
 import { InstitutionType } from '../../shared/nursery.interface';
