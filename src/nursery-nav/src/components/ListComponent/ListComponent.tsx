@@ -1,17 +1,15 @@
+'use client'
+
 import { Box, Button, FormControl, InputLabel, List, MenuItem, Paper, Select, SelectChangeEvent, Skeleton, Stack, Typography } from '@mui/material';
-import { ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 import { ListComponentItem } from './ListComponentItem';
-import { Clear, Map, SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
+import { Clear, SortByAlpha, TrendingDown, TrendingUp } from '@mui/icons-material';
 import { InstitutionListItem } from '../../shared/nursery.interface';
-import { InstitutionContext } from '../Layout/Layout';
-import { useSearchParams } from 'react-router-dom';
-import {
-	Link as RouterLink,
-	generatePath,
-} from 'react-router-dom';
+import { useSearchParams } from 'next/navigation';
 import PathConstants from '../../shared/pathConstants';
 import InfiniteScroll from 'react-infinite-scroller';
 import { getInstitutions } from '../../api/InstitutionsFetcher';
+import { useRouter } from 'next/navigation';
 
 interface ListComponentProps {
 	defaultVoivodeship?: string;
@@ -19,8 +17,8 @@ interface ListComponentProps {
 }
 
 export default function ListComponent({ defaultVoivodeship, defaultCity }: ListComponentProps) {
-	const { setInstitutionIds } = useContext(InstitutionContext);
-	const [searchParams, setSearchParams] = useSearchParams();
+	const searchParams = useSearchParams();
+	const router = useRouter();
 
 	const [institutions, setInstitutions] = useState<InstitutionListItem[]>([]);
 	const [loading, setLoading] = useState(true);
@@ -29,19 +27,25 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 	const [totalItems, setTotalItems] = useState(0);
 	const [itemsToCompare, setItemsToCompare] = useState<number[]>([]);
 
-	if (defaultVoivodeship) {
-		searchParams.set('voivodeship', defaultVoivodeship);
-	}
+	useEffect(() => {
+		if (defaultVoivodeship) {
+			const params = new URLSearchParams(searchParams?.toString());
+			params.set('voivodeship', defaultVoivodeship);
+			router.push(`${window.location.pathname}?${params.toString()}`);
+		}
 
-	if (defaultCity) {
-		searchParams.set('city', defaultCity);
-	}
+		if (defaultCity) {
+			const params = new URLSearchParams(searchParams?.toString());
+			params.set('city', defaultCity);
+			router.push(`${window.location.pathname}?${params.toString()}`);
+		}
+	}, [defaultVoivodeship, defaultCity, router, searchParams]);
 
 	const fetchInstitutions = useCallback(async () => {
 		if (loading || pageNum > totalPages) return;
 
 		setLoading(true);
-		const data = await getInstitutions(searchParams, pageNum);
+		const data = await getInstitutions(searchParams as URLSearchParams, pageNum);
 		setInstitutions((prevInstitutions) => [...prevInstitutions, ...data.items]);
 		setPageNum((prevPageNum) => prevPageNum + 1);
 		setLoading(false);
@@ -70,11 +74,10 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 		const getData = async () => {
 			setLoading(true);
 			try {
-				const data = await getInstitutions(searchParams);
+				const data = await getInstitutions(searchParams as URLSearchParams);
 				setInstitutions(data.items);
 				setTotalItems(data.totalItems);
 				setTotalPages(data.totalPages);
-				setInstitutionIds(data.ids);
 			} catch (error) {
 				console.error(error);
 			}
@@ -82,7 +85,7 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 		};
 
 		getData();
-	}, [searchParams, setInstitutionIds]);
+	}, [searchParams]);
 
 	useEffect(() => {
 		const itemsToCompare = JSON.parse(localStorage.getItem('itemsToCompare') || '[]') as number[];
@@ -98,10 +101,11 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 		return () => window.removeEventListener('storage', handleStorageChange);
 	}, []); // Empty dependency array means this only runs once on mount
 
-	const handleChange = useCallback((event: SelectChangeEvent<string>, _child: ReactNode) => {
-		searchParams.set('sort', event.target.value);
-		setSearchParams(searchParams);
-	}, [searchParams, setSearchParams]);
+	const handleChange = (event: SelectChangeEvent<string>, _child: ReactNode) => {
+		const params = new URLSearchParams(searchParams?.toString());
+		params.set('sort', event.target.value);
+		router.push(`${window.location.pathname}?${params.toString()}`);
+	};
 
 	const clearComparison = () => {
 		localStorage.removeItem('itemsToCompare');
@@ -113,15 +117,15 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 	return (
 		<Box>
 			<Box display={{ xs: 'flex', md: 'none' }} pt={3} pb={3} justifyContent='center' sx={{ backgroundImage: `url(${"/images/map-mobile-background.png"})` }}>
-				<Button component={RouterLink} to={generatePath(PathConstants.MAP)} variant='contained' color='success'>
+				{/* <Button component={RouterLink} to={generatePath(PathConstants.MAP)} variant='contained' color='success'>
 					<Map /> Zobacz na mapie
-				</Button>
+				</Button> */}
 			</Box>
 			<Box>
 				<Paper elevation={0}>
 					<Stack direction={{ xs: 'column', sm: 'row', md: 'column', lg: 'row' }} spacing={1} justifyContent='space-between' alignItems='center'>
 						<Box display='flex' justifyContent='space-around' alignItems='center'>
-							<Button variant='contained' color='success' disabled={itemsToCompare.length < 1 || itemsToCompare.length > 5} href={`${generatePath(PathConstants.COMPARISON)}?ids=${itemsToCompare.join(',')}`}>
+							<Button variant='contained' color='success' disabled={itemsToCompare.length < 1 || itemsToCompare.length > 5} href={`${PathConstants.COMPARISON}?ids=${itemsToCompare.join(',')}`}>
 								Porównanie ({itemsToCompare.length}/5)
 							</Button>
 							{itemsToCompare.length > 0 && (
@@ -142,7 +146,7 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 							<Select
 								labelId="sorting-select-label"
 								id="sorting-select"
-								value={searchParams.get('sort') || 'name-asc'}
+								value={searchParams?.get('sort') || 'name-asc'}
 								label="Sortowanie"
 								onChange={handleChange}
 							>

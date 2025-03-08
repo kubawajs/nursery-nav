@@ -1,3 +1,5 @@
+'use client'
+
 import {
     Accordion,
     AccordionDetails,
@@ -9,8 +11,7 @@ import {
 } from "@mui/material";
 import Filters from "./Filters";
 import { Close, FilterList } from "@mui/icons-material";
-import { useContext, useEffect, useState } from "react";
-import { InstitutionContext } from "../Layout/Layout";
+import { useEffect, useState } from "react";
 import CityQuickFilters from "./CityQuickFilter";
 import { getCitiesResponse } from "../../api/CitiesFetcher";
 
@@ -22,11 +23,10 @@ interface FiltersBarProps {
 
 export default function FiltersBar({ defaultVoivodeship, defaultCity, citiesResponse }: FiltersBarProps) {
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
-    const { institutionIds } = useContext(InstitutionContext);
 
     useEffect(() => {
         setIsExpanded(false);
-    }, [institutionIds]);
+    });
 
     return (
         <Box boxShadow={3}>

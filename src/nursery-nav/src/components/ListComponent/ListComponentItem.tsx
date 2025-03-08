@@ -4,10 +4,6 @@ import {
 import { Accessible, FmdGood, Language, Mail, Phone } from '@mui/icons-material';
 import { InstitutionType } from '../../shared/nursery.interface';
 import PathConstants from '../../shared/pathConstants';
-import {
-    Link as RouterLink,
-    generatePath,
-} from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 interface ListComponentItemProps {
@@ -89,7 +85,7 @@ export function ListComponentItem(props: ListComponentItemProps) {
                                 </Typography>
                             </Box>
                             <Box display='flex' justifyContent='space-between' alignItems='center' >
-                                <Link component={RouterLink} to={generatePath(PathConstants.INSTITUTION_DETAILS, { id: props.id })} sx={{ textDecoration: 'none' }}>
+                                <Link href={`${PathConstants.INSTITUTION_DETAILS}/${props.id}`} sx={{ textDecoration: 'none' }}>
                                     <Typography variant="h2" typography={{ xs: 'h5', md: 'h4' }} color='text.primary' paddingBottom={2}>
                                         {props.name}
                                     </Typography>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { generatePath, useNavigate, useSearchParams } from "react-router-dom";
 
 import { FormControlLabel, Autocomplete, TextField, debounce, RadioGroup, Stack } from "@mui/material";
 import Radio from '@mui/material/Radio';
@@ -9,8 +8,9 @@ import FormLabel from '@mui/material/FormLabel';
 import { getInstitutionAutocomplete } from "../../api/InstitutionsFetcher";
 import { getCitiesResponse } from "../../api/CitiesFetcher";
 
-import PathConstants from "../../shared/pathConstants";
 import { InstitutionAutocomplete, InstitutionType } from "../../shared/nursery.interface";
+import PathConstants from "../../shared/pathConstants";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface FiltersProps {
     defaultVoivodeship?: string;
@@ -44,8 +44,8 @@ const voivodeships = [
 ] as const;
 
 export default function Filters({ defaultVoivodeship, defaultCity, isMobile, citiesResponse }: FiltersProps) {
-    const [searchParams, setSearchParams] = useSearchParams();
-    const navigate = useNavigate();
+    const searchParams = useSearchParams();
+    const router = useRouter();
 
     const [institutionsAutocomplete, setInstitutionsAutocomplete] = useState<InstitutionAutocomplete[]>([]);
 
@@ -70,7 +70,9 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
 
     const goToDetails = (_event: any, value: InstitutionAutocomplete | null) => {
         if (value) {
-            navigate(generatePath(PathConstants.INSTITUTION_DETAILS, { id: value.id }));
+            router.push(
+                `${PathConstants.INSTITUTION_DETAILS}/${value.id}`
+            );
         }
     }
 
