@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import InstitutionDetailsPage from "../../../../pages/InstitutionDetailsPage";
 import { getInstitutionDetails } from "../../../../api/InstitutionsFetcher";
+import { getLocations } from "../../../../api/LocationsFetcher";
 
 export async function generateMetadata(
     { params }: { params: Promise<{ id: number }> }): Promise<Metadata> {
@@ -16,9 +17,10 @@ export async function generateMetadata(
 
 export default async function Institution({ params }: { params: Promise<{ id: number }> }) {
     const institution = await getInstitutionDetails((await params).id);
+    const locations = await getLocations();
     return (
         <>
-            <InstitutionDetailsPage institution={institution} />
+            <InstitutionDetailsPage institution={institution} locations={locations} />
         </>
     );
 }

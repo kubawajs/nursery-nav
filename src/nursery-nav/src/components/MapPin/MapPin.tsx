@@ -1,6 +1,7 @@
+'use client'
+
 import { useEffect } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { useNavigate, generatePath } from 'react-router-dom';
 import { Marker, useMap } from 'react-leaflet';
 
 import { divIcon } from 'leaflet';
@@ -10,6 +11,7 @@ import { InstitutionType } from '../../shared/nursery.interface';
 import PathConstants from '../../shared/pathConstants';
 
 import './MapPin.css';
+import { useRouter } from 'next/navigation';
 
 export interface MapPinProps {
 	institutionType: InstitutionType;
@@ -22,7 +24,7 @@ export interface MapPinProps {
 
 export default function MapPin(props: MapPinProps) {
 	const map = useMap();
-	const navigate = useNavigate();
+	const router = useRouter();
 
 	// Update map view only if necessary
 	useEffect(() => {
@@ -39,7 +41,7 @@ export default function MapPin(props: MapPinProps) {
 		<Marker
 			eventHandlers={{
 				click: () => {
-					navigate(generatePath(PathConstants.INSTITUTION_DETAILS, { id: props.id }));
+					router.push(`${PathConstants.INSTITUTION_DETAILS}/${props.id}`);
 				}
 			}}
 			position={position}

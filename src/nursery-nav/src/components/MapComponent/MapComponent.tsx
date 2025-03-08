@@ -1,8 +1,8 @@
-import { useContext, useEffect, useMemo, useState } from 'react';
+'use client'
+
+import { useEffect, useMemo, useState } from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import {
-	Link as RouterLink,
-	generatePath,
 	useParams,
 } from 'react-router-dom';
 
@@ -10,8 +10,6 @@ import { Box, Button, Container, debounce } from '@mui/material';
 import MarkerClusterGroup from 'react-leaflet-cluster'
 
 import MapPin from '../MapPin/MapPin';
-import { InstitutionContext } from '../Layout/Layout';
-import PathConstants from '../../shared/pathConstants';
 
 import { LocationResponse } from '../../shared/nursery.interface';
 
@@ -19,7 +17,6 @@ import './MapComponent.css';
 
 interface MapComponentProps {
 	locations: LocationResponse[];
-	setIsMapLoaded: (isMapLoaded: boolean) => void;
 }
 
 const attributionText = 'Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors';
@@ -35,14 +32,15 @@ function useFilteredLocations(locations: LocationResponse[], institutionIds: num
 	}, [locations, institutionIds]);
 }
 
-export default function MapComponent({ locations, setIsMapLoaded }: MapComponentProps) {
-	const { institutionIds } = useContext(InstitutionContext);
+export default function MapComponent({ locations }: MapComponentProps) {
 	const { id } = useParams();
 	const [size, setSize] = useState({
 		isXs: window.innerWidth < 600,
 		isSm: window.innerWidth < 900,
 	});
-	const locationsFiltered = useFilteredLocations(locations, institutionIds);
+	//const locationsFiltered = useFilteredLocations(locations, institutionIds);
+
+	const locationsFiltered = locations; // TODO: temporarty fix
 
 	const selectedLocation = useMemo(
 		() => id ? locations.find((location) => location.id === parseInt(id)) : undefined,
@@ -79,7 +77,7 @@ export default function MapComponent({ locations, setIsMapLoaded }: MapComponent
 	return (
 		<Box>
 			<Box display={{ xs: 'block', md: 'none' }} zIndex='100' position='fixed' p={1}>
-				<Button component={RouterLink} to={generatePath(PathConstants.HOME)} variant='contained'>
+				<Button variant='contained'>
 					Powrót
 				</Button>
 			</Box>
@@ -96,9 +94,6 @@ export default function MapComponent({ locations, setIsMapLoaded }: MapComponent
 						attribution={attributionText}
 						url={mapUrl}
 						maxZoom={20}
-						eventHandlers={{
-							load: () => setIsMapLoaded(true),
-						}}
 					/>
 					<MarkerClusterGroup
 						className="marker-cluster-group"
