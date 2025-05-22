@@ -10,6 +10,8 @@ import PathConstants from '../../shared/pathConstants';
 import InfiniteScroll from 'react-infinite-scroller';
 import { getInstitutions } from '../../api/InstitutionsFetcher';
 import { useRouter } from 'next/navigation';
+import { generatePath } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function ListComponent() {
 	const searchParams = useSearchParams();
@@ -115,9 +117,9 @@ export default function ListComponent() {
 	return (
 		<Box>
 			<Box display={{ xs: 'flex', md: 'none' }} pt={3} pb={3} justifyContent='center' sx={{ backgroundImage: `url(${"/images/map-mobile-background.png"})` }}>
-				{/* <Button component={RouterLink} to={generatePath(PathConstants.MAP)} variant='contained' color='success'>
-					<Map /> Zobacz na mapie
-				</Button> */}
+				<Button component={Link} href={generatePath(PathConstants.MAP)} variant='contained' color='success'>
+					Zobacz na mapie
+				</Button>
 			</Box>
 			<Box>
 				<Paper elevation={0}>
