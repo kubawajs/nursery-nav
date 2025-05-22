@@ -46,8 +46,8 @@ export default function Comparison({ institutions }: { institutions: Institution
                     <TableHead>
                         <TableRow>
                             <TableCell />
-                            {institutionsToCompare.map((institution, index) => (
-                                <TableCell key={index} align="center">
+                            {institutionsToCompare.map((institution) => (
+                                <TableCell key={institution.id} align="center">
                                     <Typography variant="h2" typography="h5">{institution.name}</Typography>
                                     <Typography variant="h3" typography="body1">{institution.address}</Typography>
                                 </TableCell>
@@ -59,8 +59,8 @@ export default function Comparison({ institutions }: { institutions: Institution
                             <TableCell>
                                 <Typography variant="h2" typography="h6">Typ</Typography>
                             </TableCell>
-                            {institutionsToCompare.map((institution, index) => (
-                                <TableCell key={index} align="center">
+                            {institutionsToCompare.map((institution) => (
+                                <TableCell key={institution.id} align="center">
                                     <Chip label={institution.institutionType}
                                         color={institution.institutionType === "ŻŁOBEK" ? 'primary' : 'secondary'}
                                     />
@@ -71,8 +71,8 @@ export default function Comparison({ institutions }: { institutions: Institution
                             <TableCell>
                                 <Typography variant="h2" typography="h6">Cena</Typography>
                             </TableCell>
-                            {institutionsToCompare.map((institution, index) => (
-                                <TableCell key={index} align="center">
+                            {institutionsToCompare.map((institution) => (
+                                <TableCell key={institution.id} align="center">
                                     <Typography variant="h2" typography="h6">
                                         <strong>{institution.price}</strong>
                                     </Typography>
@@ -83,8 +83,8 @@ export default function Comparison({ institutions }: { institutions: Institution
                             <TableCell>
                                 <Typography variant="h2" typography="h6">Wyżywienie</Typography>
                             </TableCell>
-                            {institutionsToCompare.map((institution, index) => (
-                                <TableCell key={index} align="center">
+                            {institutionsToCompare.map((institution) => (
+                                <TableCell key={institution.id} align="center">
                                     {institution.food}
                                 </TableCell>
                             ))}
@@ -93,8 +93,8 @@ export default function Comparison({ institutions }: { institutions: Institution
                             <TableCell>
                                 <Typography variant="h2" typography="h6">Pobyt powyżej 10h</Typography>
                             </TableCell>
-                            {institutionsToCompare.map((institution, index) => (
-                                <TableCell key={index} align="center">
+                            {institutionsToCompare.map((institution) => (
+                                <TableCell key={institution.id} align="center">
                                     {institution.extendedStay}
                                 </TableCell>
                             ))}
@@ -103,8 +103,8 @@ export default function Comparison({ institutions }: { institutions: Institution
                             <TableCell>
                                 <Typography variant="h2" typography="h6">Dostępność miejsc</Typography>
                             </TableCell>
-                            {institutionsToCompare.map((institution, index) => (
-                                <TableCell key={index} align="center">
+                            {institutionsToCompare.map((institution) => (
+                                <TableCell key={institution.id} align="center">
                                     {institution.availability}
                                 </TableCell>
                             ))}
@@ -113,8 +113,8 @@ export default function Comparison({ institutions }: { institutions: Institution
                             <TableCell>
                                 <Typography variant="h2" typography="h6">Godziny otwarcia</Typography>
                             </TableCell>
-                            {institutionsToCompare.map((institution, index) => (
-                                <TableCell key={index} align="center">
+                            {institutionsToCompare.map((institution) => (
+                                <TableCell key={institution.id} align="center">
                                     {institution.openingHours}
                                 </TableCell>
                             ))}
@@ -123,8 +123,8 @@ export default function Comparison({ institutions }: { institutions: Institution
                             <TableCell>
                                 <Typography variant="h2" typography="h6">Zniżki</Typography>
                             </TableCell>
-                            {institutionsToCompare.map((institution, index) => (
-                                <TableCell key={index} align="center">
+                            {institutionsToCompare.map((institution) => (
+                                <TableCell key={institution.id} align="center">
                                     {institution.discounts.map((discount, index) => (
                                         <Box p={0.25}>
                                             <Chip key={index} label={discount} color="primary" />
@@ -139,16 +139,16 @@ export default function Comparison({ institutions }: { institutions: Institution
                             <TableCell>
                                 <Typography variant="h2" typography="h6">Przystosowany do osób z niepełnosprawnościami</Typography>
                             </TableCell>
-                            {institutionsToCompare.map((institution, index) => (
-                                <TableCell key={index} align="center">
+                            {institutionsToCompare.map((institution) => (
+                                <TableCell key={institution.id} align="center">
                                     {institution.isAdapted}
                                 </TableCell>
                             ))}
                         </TableRow>
                         <TableRow>
                             <TableCell />
-                            {institutionsToCompare.map((institution, index) => (
-                                <TableCell key={index} align="center">
+                            {institutionsToCompare.map((institution) => (
+                                <TableCell key={institution.id} align="center">
                                     <Button variant="contained" color="success" href={generatePath(PathConstants.INSTITUTION_DETAILS, { id: institution.id })}>Zobacz więcej</Button>
                                 </TableCell>
                             ))}

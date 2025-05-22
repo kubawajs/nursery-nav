@@ -13,8 +13,6 @@ import PathConstants from "../../shared/pathConstants";
 import { useRouter, useSearchParams } from "next/navigation";
 
 interface FiltersProps {
-    defaultVoivodeship?: string;
-    defaultCity?: string;
     isMobile?: boolean;
     citiesResponse?: getCitiesResponse[];
 }
@@ -43,9 +41,12 @@ const voivodeships = [
     'ZACHODNIOPOMORSKIE',
 ] as const;
 
-export default function Filters({ defaultVoivodeship, defaultCity, isMobile, citiesResponse }: FiltersProps) {
+export default function Filters({ isMobile, citiesResponse }: FiltersProps) {
     const searchParams = useSearchParams();
     const router = useRouter();
+
+    const voivodeship = searchParams ? searchParams.get('voivodeship') || undefined : undefined;
+    const city = searchParams ? searchParams.get('city') || undefined : undefined;
 
     const [institutionsAutocomplete, setInstitutionsAutocomplete] = useState<InstitutionAutocomplete[]>([]);
 
@@ -130,12 +131,12 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
                 size="small"
                 sx={{ width: 400, maxWidth: '100%' }}
             />
-            {!defaultCity &&
+            {!city &&
                 <Autocomplete
                     id="cityFilter"
                     options={cities.filter(city =>
-                        (defaultVoivodeship && city.voivodeship === defaultVoivodeship) ||
-                        (!defaultVoivodeship && (!searchParams?.get('voivodeship') || city.voivodeship === searchParams?.get('voivodeship'))))?.map(city => city.city) || []}
+                        (voivodeship && city.voivodeship === voivodeship) ||
+                        (!voivodeship && (!searchParams?.get('voivodeship') || city.voivodeship === searchParams?.get('voivodeship'))))?.map(city => city.city) || []}
                     value={searchParams?.get('city') || null}
                     onChange={(_event, value) => handleCityFilter(value || '')}
                     renderInput={(params) => <TextField {...params} label="Miasto" />}
@@ -144,7 +145,7 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
                 />
             }
 
-            {!defaultVoivodeship &&
+            {!voivodeship &&
                 <Autocomplete
                     id="voivodeshipFilter"
                     options={voivodeships || []}

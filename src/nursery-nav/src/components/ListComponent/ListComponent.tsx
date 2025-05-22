@@ -11,12 +11,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 import { getInstitutions } from '../../api/InstitutionsFetcher';
 import { useRouter } from 'next/navigation';
 
-interface ListComponentProps {
-	defaultVoivodeship?: string;
-	defaultCity?: string;
-}
-
-export default function ListComponent({ defaultVoivodeship, defaultCity }: ListComponentProps) {
+export default function ListComponent() {
 	const searchParams = useSearchParams();
 	const router = useRouter();
 
@@ -27,19 +22,22 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 	const [totalItems, setTotalItems] = useState(0);
 	const [itemsToCompare, setItemsToCompare] = useState<number[]>([]);
 
+	const voivodeship = searchParams ? searchParams.get('voivodeship') || undefined : undefined;
+	const city = searchParams ? searchParams.get('city') || undefined : undefined;
+
 	useEffect(() => {
-		if (defaultVoivodeship) {
+		if (voivodeship) {
 			const params = new URLSearchParams(searchParams?.toString());
-			params.set('voivodeship', defaultVoivodeship);
+			params.set('voivodeship', voivodeship);
 			router.push(`${window.location.pathname}?${params.toString()}`);
 		}
 
-		if (defaultCity) {
+		if (city) {
 			const params = new URLSearchParams(searchParams?.toString());
-			params.set('city', defaultCity);
+			params.set('city', city);
 			router.push(`${window.location.pathname}?${params.toString()}`);
 		}
-	}, [defaultVoivodeship, defaultCity, router, searchParams]);
+	}, [voivodeship, city, router, searchParams]);
 
 	const fetchInstitutions = useCallback(async () => {
 		if (loading || pageNum > totalPages) return;

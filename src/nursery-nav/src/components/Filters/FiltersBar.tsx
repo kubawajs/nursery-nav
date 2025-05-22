@@ -16,12 +16,10 @@ import CityQuickFilters from "./CityQuickFilter";
 import { getCitiesResponse } from "../../api/CitiesFetcher";
 
 interface FiltersBarProps {
-    defaultVoivodeship?: string;
-    defaultCity?: string;
     citiesResponse?: getCitiesResponse[];
 }
 
-export default function FiltersBar({ defaultVoivodeship, defaultCity, citiesResponse }: FiltersBarProps) {
+export default function FiltersBar({ citiesResponse }: FiltersBarProps) {
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
     useEffect(() => {
@@ -35,7 +33,7 @@ export default function FiltersBar({ defaultVoivodeship, defaultCity, citiesResp
                     direction={'column'}
                     sx={{ bgcolor: 'white', alignItems: 'center' }}
                 >
-                    <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} citiesResponse={citiesResponse} />
+                    <Filters citiesResponse={citiesResponse} />
                 </Stack>
             </Box >
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
@@ -57,7 +55,7 @@ export default function FiltersBar({ defaultVoivodeship, defaultCity, citiesResp
                             spacing={1}
                             direction={'column'}
                             p={1}>
-                            <Filters defaultVoivodeship={defaultVoivodeship} defaultCity={defaultCity} isMobile={true} citiesResponse={citiesResponse} />
+                            <Filters isMobile={true} citiesResponse={citiesResponse} />
                             <CityQuickFilters />
                             <Button onClick={() => setIsExpanded(false)}>Zamknij<Close /></Button>
                         </Stack>

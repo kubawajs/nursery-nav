@@ -17,6 +17,7 @@ import './MapComponent.css';
 
 interface MapComponentProps {
 	locations: LocationResponse[];
+	institutionIds?: number[];
 }
 
 const attributionText = 'Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | <a href="https://openmaptiles.org/" target="_blank">© OpenMapTiles</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a> contributors';
@@ -32,15 +33,13 @@ function useFilteredLocations(locations: LocationResponse[], institutionIds: num
 	}, [locations, institutionIds]);
 }
 
-export default function MapComponent({ locations }: MapComponentProps) {
+export default function MapComponent({ locations, institutionIds }: MapComponentProps) {
 	const { id } = useParams();
 	const [size, setSize] = useState({
 		isXs: window.innerWidth < 600,
 		isSm: window.innerWidth < 900,
 	});
-	//const locationsFiltered = useFilteredLocations(locations, institutionIds);
-
-	const locationsFiltered = locations; // TODO: temporarty fix
+	const locationsFiltered = useFilteredLocations(locations, institutionIds ?? []);
 
 	const selectedLocation = useMemo(
 		() => id ? locations.find((location) => location.id === parseInt(id)) : undefined,
