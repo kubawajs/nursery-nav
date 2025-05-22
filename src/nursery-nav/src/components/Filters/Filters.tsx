@@ -51,9 +51,7 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
 
     const cities = (citiesResponse || [])
         .reduce<City[]>((uniqueCities, { city, voivodeship }) => {
-            // Check if city exists and if it's already in the uniqueCities array
             if (city && !uniqueCities.some(c => c.city === city)) {
-                // If not, add the city to the uniqueCities array
                 uniqueCities.push({ city, voivodeship });
             }
             return uniqueCities;
@@ -77,8 +75,40 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
     }
 
     const handleInstitutionTypeFilter = (value: string) => {
-        value === 'ALL' ? searchParams.delete('insType') : searchParams.set('insType', value);
-        setSearchParams(searchParams);
+        var params = new URLSearchParams(searchParams?.toString());
+        if (value === 'NURSERY') {
+            params.set('insType', InstitutionType.NURSERY);
+        }
+        else if (value === 'CHILDCLUB') {
+            params.set('insType', InstitutionType.CHILDCLUB);
+        }
+        else if (value === 'ALL') {
+            params.delete('insType');
+        }
+        router.push(`${window.location.pathname}?${params.toString()}`);
+    }
+
+    const handleVoivodeshipFilter = (value: string) => {
+        var params = new URLSearchParams(searchParams?.toString());
+        if (value) {
+            params.set('voivodeship', value);
+        }
+        else {
+            params.delete('voivodeship');
+        }
+        router.push(`${window.location.pathname}?${params.toString()}`);
+    }
+
+    const handleCityFilter = (value: string) => {
+        var params = new URLSearchParams(searchParams?.toString());
+        if (!value && searchParams?.has('city')) {
+            params.delete('city');
+        }
+        else if (value) {
+            params.set('city', value);
+            params.set('voivodeship', cities.find(city => city.city === value)?.voivodeship || '');
+        }
+        router.push(`${window.location.pathname}?${params.toString()}`);
     }
 
     return (
@@ -105,18 +135,9 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
                     id="cityFilter"
                     options={cities.filter(city =>
                         (defaultVoivodeship && city.voivodeship === defaultVoivodeship) ||
-                        (!defaultVoivodeship && (!searchParams.get('voivodeship') || city.voivodeship === searchParams.get('voivodeship'))))?.map(city => city.city) || []}
-                    value={searchParams.get('city') || null}
-                    onChange={(_event, value) => {
-                        if (!value && searchParams.has('city')) {
-                            searchParams.delete('city');
-                        }
-                        else if (value) {
-                            searchParams.set('city', value);
-                            searchParams.set('voivodeship', cities.find(city => city.city === value)?.voivodeship || '');
-                        }
-                        setSearchParams(searchParams);
-                    }}
+                        (!defaultVoivodeship && (!searchParams?.get('voivodeship') || city.voivodeship === searchParams?.get('voivodeship'))))?.map(city => city.city) || []}
+                    value={searchParams?.get('city') || null}
+                    onChange={(_event, value) => handleCityFilter(value || '')}
                     renderInput={(params) => <TextField {...params} label="Miasto" />}
                     size="small"
                     sx={{ width: 300, maxWidth: '100%' }}
@@ -127,16 +148,8 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
                 <Autocomplete
                     id="voivodeshipFilter"
                     options={voivodeships || []}
-                    value={searchParams.get('voivodeship') || null}
-                    onChange={(_event, value) => {
-                        if (!value && searchParams.has('voivodeship')) {
-                            searchParams.delete('voivodeship');
-                        }
-                        else if (value) {
-                            searchParams.set('voivodeship', value);
-                        }
-                        setSearchParams(searchParams);
-                    }}
+                    value={searchParams?.get('voivodeship') || null}
+                    onChange={(_event, value) => handleVoivodeshipFilter(value || '')}
                     renderInput={(params) => <TextField {...params} label="Województwo" />}
                     size="small"
                     sx={{ width: 300, maxWidth: '100%' }}
@@ -150,7 +163,7 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
                     aria-labelledby="demo-row-radio-buttons-group-label"
                     name="row-radio-buttons-group"
                     defaultValue='ALL'
-                    value={searchParams.get('insType') || 'ALL'}
+                    value={searchParams?.get('insType') || 'ALL'}
                     onChange={(_event, value) => handleInstitutionTypeFilter(value)}>
                     <FormControlLabel value={InstitutionType.NURSERY} control={<Radio />} label="Żłobek" />
                     <FormControlLabel value={InstitutionType.CHILDCLUB} control={<Radio />} label="Klub dziecięcy" />
