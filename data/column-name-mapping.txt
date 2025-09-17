@@ -21,7 +21,7 @@ Liczba miejsc ze środków FERS;capacityFERS
 Liczba dzieci zapisanych;kidsEnrolled
 Liczba dzieci zapisanych na miejsca z KPO;kidsEnrolledKPO
 Liczba dzieci zapisanych na miejsca z FERS;kidsEnrolledFERS
-Opłata miesięczna - podstawowa opłata ponoszona przez rodziców za pobyt dziecka (bez zniżek i bez wyżywienia);basicPricePerMonth
+Podstawowa opłata ponoszona przez rodziców za pobyt dziecka (bez zniżek i bez wyżywienia) - opłata miesięczna;basicPricePerMonth
 Opłata miesięczna na miejscach z KPO/FERS;basicPricePerMonthKPOFERS
 Stawka za pobyt dziecka przekraczający 10 godzin dziennie - opłata godzinowa;extendedStayOver10H
 Opłata godzinowa - podstawowa opłata ponoszona przez rodziców za pobyt dziecka (bez zniżek i bez wyżywienia);basicPricePerHour
@@ -31,9 +31,16 @@ Zniżki;discounts
 Godziny otwarcia;openingHours
 Czy żłobek/klub jest dostosowany do potrzeb dzieci niepełnosprawnych lub wymagających szczególnej opieki?;isAdaptedToDisabledChildren
 Podmiot prowadzący - nazwa;operatingEntityName
+Podmiot prowadzący - miejscowość;operatingEntityCity
+Podmiot prowadzący - ulica;operatingEntityStreet
+Podmiot prowadzący - nr domu;operatingEntityHouseNumber
+Podmiot prowadzący - nr lokalu;operatingEntityLocalNumber
+Podmiot prowadzący - kod pocztowy;operatingEntityPostalCode
 Podmiot prowadzący - adres;operatingEntityAddress
 Podmiot prowadzący - NIP;operatingEntityNIP
 Podmiot prowadzący - REGON;operatingEntityREGON
 Podmiot prowadzący - numery pozycji rejestru;operatingEntityRegNoPosition
 Adres WWW podmiotu prowadzącego żłobek/klub;operatingEntityWebsite
-Czy podmiot prowadzący zawiesił działalność gospodarczą?;businessActivitySuspended
+Czy podmiot prowadzący zawiesił działalność instytucji opieki?;businessActivitySuspended
+Wydatki na funkcjonowanie – miesięcznie;monthlyOperatingCosts
+W tym z programu Dofinansowanie wynagrodzeń;monthlyWageSubsidy

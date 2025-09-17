@@ -6,7 +6,19 @@ export type InstitutionDocument = HydratedDocument<Institution>;
 @Schema()
 export class OperatingEntity {
     @Prop()
-    address: string;
+    city: string;
+
+    @Prop()
+    street: string;
+
+    @Prop()
+    houseNumber: string;
+
+    @Prop()
+    localNumber: string;
+
+    @Prop()
+    postalCode: string;
 
     @Prop()
     name: string;
