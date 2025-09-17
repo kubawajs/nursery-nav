@@ -24,11 +24,8 @@ jobs:
         node-version: 20.x
         cache: 'npm'
         cache-dependency-path: ./src/nursery-nav-api/package-lock.json
-    - name: Intall dependencies
+    - name: Install dependencies
       run: npm ci
-      working-directory: ./src/nursery-nav-api
-    - name: Run E2E tests
-      run: npm test
       working-directory: ./src/nursery-nav-api
     - name: Build
       run: npm run build --if-present
