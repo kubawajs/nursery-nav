@@ -5,7 +5,19 @@ export class OperatingEntityDto {
     name: string;
 
     @ApiProperty()
-    address: string;
+    city: string;
+
+    @ApiProperty()
+    street: string;
+
+    @ApiProperty()
+    houseNumber: string;
+
+    @ApiProperty()
+    localNumber: string;
+
+    @ApiProperty()
+    postalCode: string;
 
     @ApiProperty()
     nip: string;

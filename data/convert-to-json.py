@@ -2,9 +2,13 @@ import pandas as pd
 import sys
 
 class OperatingEntity:
-    def __init__(self, name, address, nip, regon, regNoPosition, website):
+    def __init__(self, name, city, street, houseNumber, localNumber, postalCode, nip, regon, regNoPosition, website):
         self.name = name
-        self.address = address
+        self.city = city
+        self.street = street
+        self.houseNumber = houseNumber
+        self.localNumber = localNumber
+        self.postalCode = postalCode
         self.nip = nip
         self.regon = regon
         self.regNoPosition = regNoPosition
@@ -41,24 +45,28 @@ df['isAdaptedToDisabledChildren'] = df['isAdaptedToDisabledChildren'].map({'TAK'
 df['businessActivitySuspended'] = df['businessActivitySuspended'].map({'TAK': True, 'NIE': False})
 
 # Convert price columns
-df['basicPricePerMonth'] = df['basicPricePerMonth'].str.replace(' zł', '').astype(float)
-df['extendedStayOver10H'] = df['extendedStayOver10H'].str.replace(' zł', '').astype(float)
-df['basicPricePerHour'] = df['basicPricePerHour'].str.replace(' zł', '').astype(float)
-df['basicPricePerMonthKPOFERS'] = df['basicPricePerMonthKPOFERS'].str.replace(' zł', '').astype(float)
-df['foodPricePerMonth'] = df['foodPricePerMonth'].str.replace(' zł', '').astype(float)
-df['foodPricePerDay'] = df['foodPricePerDay'].str.replace(' zł', '').astype(float)
+# df['basicPricePerMonth'] = df['basicPricePerMonth'].str.replace(' zł', '').astype(float)
+# df['extendedStayOver10H'] = df['extendedStayOver10H'].str.replace(' zł', '').astype(float)
+# df['basicPricePerHour'] = df['basicPricePerHour'].str.replace(' zł', '').astype(float)
+# df['basicPricePerMonthKPOFERS'] = df['basicPricePerMonthKPOFERS'].str.replace(' zł', '').astype(float)
+# df['foodPricePerMonth'] = df['foodPricePerMonth'].str.replace(' zł', '').astype(float)
+# df['foodPricePerDay'] = df['foodPricePerDay'].str.replace(' zł', '').astype(float)
 
 # Convert to array column
 df['discounts'] = df['discounts'].str.split('Zniżka - ').str[1:]
 
 # Build objects
-df['operatingEntity'] = df.apply(lambda row: OperatingEntity(row['operatingEntityName'], row['operatingEntityAddress'], row['operatingEntityNIP'], row['operatingEntityREGON'], row['operatingEntityRegNoPosition'], row['operatingEntityWebsite']), axis=1)
+df['operatingEntity'] = df.apply(lambda row: OperatingEntity(row['operatingEntityName'], row['operatingEntityCity'], row['operatingEntityStreet'], row['operatingEntityHouseNumber'], row['operatingEntityLocalNumber'], row['operatingEntityPostalCode'], row['operatingEntityNIP'], row['operatingEntityREGON'], row['operatingEntityRegNoPosition'], row['operatingEntityWebsite']), axis=1)
 df['address'] = df.apply(lambda row: Address(row['voivodeship'], row['county'], row['community'], row['city'], row['street'], row['houseNumber'], row['localNumber'], Pin(row['longitude'], row['latitude'])), axis=1)
 
 # Remove column from data frame
 df = df.drop('geolocation', axis=1)
 df = df.drop('operatingEntityName', axis=1)
-df = df.drop('operatingEntityAddress', axis=1)
+df = df.drop('operatingEntityCity', axis=1)
+df = df.drop('operatingEntityStreet', axis=1)
+df = df.drop('operatingEntityHouseNumber', axis=1)
+df = df.drop('operatingEntityLocalNumber', axis=1)
+df = df.drop('operatingEntityPostalCode', axis=1)
 df = df.drop('operatingEntityNIP', axis=1)
 df = df.drop('operatingEntityREGON', axis=1)
 df = df.drop('operatingEntityRegNoPosition', axis=1)

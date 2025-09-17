@@ -48,7 +48,11 @@ export interface InstitutionAutocomplete {
 
 export interface OperatingEntity {
 	name: string;
-	address: string;
+	city: string;
+	street: string;
+	houseNumber: string;
+	localNumber: string;
+	postalCode: string;
 	nip: string;
 	regon: string;
 	regNoPosition: string;
