@@ -27,6 +27,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
       working-directory: ./src/nursery-nav-api
+    - name: Run tests
+      run: npm test
+      working-directory: ./src/nursery-nav-api
     - name: Build
       run: npm run build --if-present
       working-directory: ./src/nursery-nav-api

@@ -65,8 +65,10 @@ export class InstitutionsMongoDbService {
         }
 
         // If cache doesn't exist, filter and sort data
-        // Build base filtered query once
-        const baseQuery = this.buildFilteredQuery(params);
+        // Build plain filter and use separate Query instances so we don't reuse the same
+        // Mongoose Query object (executing a Query twice throws an error)
+        const baseFilter = this.buildFilter(params);
+        const baseQuery = this.institutionModel.find(baseFilter);
         const sortedQuery = this.addQuerySorting(params.sort, baseQuery);
 
         const page = this.setPage(params.page, 1);
@@ -81,7 +83,7 @@ export class InstitutionsMongoDbService {
         // Run count and paged query in parallel to reduce latency
         const [institutionsArray, totalCount] = await Promise.all([
             pagedQuery.exec(),
-            baseQuery.countDocuments()
+            this.institutionModel.countDocuments(baseFilter)
         ]);
 
         if (!institutionsArray || institutionsArray.length === 0) {
@@ -94,7 +96,7 @@ export class InstitutionsMongoDbService {
         paginatedResult.totalItems = totalCount;
 
         // Compute ids from the filtered query (single projection) without a separate full query
-        const institutionIds = await this.buildFilteredQuery(params).select('id').lean().exec();
+        const institutionIds = await this.institutionModel.find(baseFilter).select('id').lean().exec();
         paginatedResult.ids = institutionIds.map((id) => id.id);
         paginatedResult.items = institutionsArray.map(inst => this.mapToInstutionListItem(inst as unknown as InstitutionDto));
 
@@ -195,6 +197,28 @@ export class InstitutionsMongoDbService {
             city: institution.address?.city,
             rating: institution.rating,
         };
+    }
+
+    private buildFilter(params: findAllParams) {
+        const filter: any = {};
+
+        if (params.city) {
+            filter['address.city'] = { $regex: params.city, $options: 'i' };
+        }
+        if (params.voivodeship) {
+            filter['address.voivodeship'] = { $regex: params.voivodeship, $options: 'i' };
+        }
+        if (params.insType?.length > 0) {
+            filter['institutionType'] = { $in: params.insType };
+        }
+        if (params.priceMin) {
+            filter['basicPricePerMonth'] = { ...(filter['basicPricePerMonth'] || {}), $gte: params.priceMin };
+        }
+        if (params.priceMax) {
+            filter['basicPricePerMonth'] = { ...(filter['basicPricePerMonth'] || {}), $lte: params.priceMax };
+        }
+
+        return filter;
     }
 
     private buildFilteredQuery(params: findAllParams) {
