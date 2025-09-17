@@ -8,12 +8,26 @@ import { redisStore } from 'cache-manager-redis-yet';
     imports: [
         CacheModule.registerAsync({
             imports: [ConfigModule],
-            useFactory: async (configService: ConfigService) => ({
-                store: await redisStore({
-                    url: configService.get<string>('REDIS_URL'),
-                    ttl: configService.get<number>('CACHE_TTL'),
-                }),
-            }),
+            useFactory: async (configService: ConfigService) => {
+                const redisUrl = configService.get<string>('REDIS_URL');
+                const ttl = configService.get<number>('CACHE_TTL');
+
+                if (redisUrl) {
+                    // Use Redis store when REDIS_URL is present
+                    return {
+                        store: await redisStore({
+                            url: redisUrl,
+                            ttl,
+                        }),
+                        ttl,
+                    };
+                }
+
+                // Fallback to in-memory cache for development or when REDIS_URL not provided
+                return {
+                    ttl,
+                };
+            },
             inject: [ConfigService],
         }),
     ],

@@ -27,11 +27,16 @@ const mapUrl = `https://maps.geoapify.com/v1/tile/positron/{z}/{x}/{y}.png?apiKe
 
 function useFilteredLocations(locations: LocationResponse[], institutionIds: number[]) {
 	return useMemo(() => {
-		if (institutionIds.length === 0) {
-			return locations;
+		const locs = Array.isArray(locations) ? locations : [];
+		const idsArr = Array.isArray(institutionIds) ? institutionIds : [];
+
+		if (idsArr.length === 0) {
+			return locs;
 		}
 
-		return locations.filter((location) => institutionIds.includes(location.id));
+		// Convert to Set for O(1) membership checks when filtering large lists
+		const idSet = new Set<number>(idsArr);
+		return locs.filter((location) => idSet.has(location.id));
 	}, [locations, institutionIds]);
 }
 
@@ -44,12 +49,12 @@ export default function MapComponent({ locations, setIsMapLoaded }: MapComponent
 	});
 	const locationsFiltered = useFilteredLocations(locations, institutionIds);
 
-	const selectedLocation = useMemo(
-		() => id ? locations.find((location) => location.id === parseInt(id)) : undefined,
-		[id, locations]
-	);
+	const selectedLocation = useMemo(() => {
+		const locs = Array.isArray(locations) ? locations : [];
+		return id ? locs.find((location) => location.id === parseInt(id)) : undefined;
+	}, [id, locations]);
 
-	const markers = useMemo(() => locationsFiltered.map((location) => (
+	const markers = useMemo(() => (Array.isArray(locationsFiltered) ? locationsFiltered : []).map((location) => (
 		<MapPin
 			key={location.id}
 			id={location.id}

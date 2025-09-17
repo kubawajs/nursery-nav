@@ -47,7 +47,7 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 		setLoading(false);
 	}, [pageNum, loading, totalPages, searchParams]);
 
-	const institutionItems = useMemo(() => institutions.map((institution, index) => (
+	const institutionItems = useMemo(() => (Array.isArray(institutions) ? institutions : []).map((institution, index) => (
 		<Box key={index}>
 			<ListComponentItem
 				key={institution.id}
@@ -74,7 +74,8 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 				setInstitutions(data.items);
 				setTotalItems(data.totalItems);
 				setTotalPages(data.totalPages);
-				setInstitutionIds(data.ids);
+				// Defensive: ensure ids is always an array
+				setInstitutionIds(Array.isArray(data.ids) ? data.ids : []);
 			} catch (error) {
 				console.error(error);
 			}
@@ -161,7 +162,12 @@ export default function ListComponent({ defaultVoivodeship, defaultCity }: ListC
 						</Stack>
 					}
 				>
-					{institutions && institutions.length > 0 && institutionItems}
+					{institutionItems}
+					{(!institutions || institutions.length === 0) && !loading && (
+						<Box p={2}>
+							<Typography variant='body1'>Brak wyników</Typography>
+						</Box>
+					)}
 				</InfiniteScroll>
 			</List>
 		</Box >

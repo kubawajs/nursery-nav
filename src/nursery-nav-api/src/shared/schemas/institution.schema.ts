@@ -139,3 +139,9 @@ export class Institution {
 }
 
 export const InstitutionSchema = SchemaFactory.createForClass(Institution);
+// Indexes to support filtering and sorting performance
+InstitutionSchema.index({ id: 1 }, { unique: true, background: true });
+InstitutionSchema.index({ 'address.city': 1 }, { background: true });
+InstitutionSchema.index({ 'address.voivodeship': 1 }, { background: true });
+InstitutionSchema.index({ name: 1 }, { background: true });
+InstitutionSchema.index({ basicPricePerMonth: 1 }, { background: true });

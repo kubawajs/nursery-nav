@@ -49,7 +49,9 @@ export default function Filters({ defaultVoivodeship, defaultCity, isMobile, cit
 
     const [institutionsAutocomplete, setInstitutionsAutocomplete] = useState<InstitutionAutocomplete[]>([]);
 
-    const cities = (citiesResponse || [])
+    const citiesSource = Array.isArray(citiesResponse) ? citiesResponse : [];
+
+    const cities = citiesSource
         .reduce<City[]>((uniqueCities, { city, voivodeship }) => {
             // Check if city exists and if it's already in the uniqueCities array
             if (city && !uniqueCities.some(c => c.city === city)) {

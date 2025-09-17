@@ -65,21 +65,26 @@ export class InstitutionsMongoDbService {
         }
 
         // If cache doesn't exist, filter and sort data
-        let institutionsQuery = this.buildFilteredQuery(params);
-        institutionsQuery = this.addQuerySorting(params.sort, institutionsQuery);
+        // Build base filtered query once
+        const baseQuery = this.buildFilteredQuery(params);
+        const sortedQuery = this.addQuerySorting(params.sort, baseQuery);
 
-        let page = this.setPage(params.page, 1); // Default to 1 total page initially
-        institutionsQuery = institutionsQuery
+        const page = this.setPage(params.page, 1);
+
+        // Run paged query with projection and lean to get plain JS objects
+        const pagedQuery = sortedQuery
             .skip((page - 1) * size)
             .limit(size)
-            .select('id institutionType name website email phone basicPricePerMonth basicPricePerHour isAdaptedToDisabledChildren address rating capacity kidsEnrolled');
+            .select('id institutionType name website email phone basicPricePerMonth basicPricePerHour isAdaptedToDisabledChildren address rating capacity kidsEnrolled')
+            .lean();
 
+        // Run count and paged query in parallel to reduce latency
         const [institutionsArray, totalCount] = await Promise.all([
-            institutionsQuery.exec(),
-            this.buildFilteredQuery(params).countDocuments()
+            pagedQuery.exec(),
+            baseQuery.countDocuments()
         ]);
 
-        if (institutionsArray.length === 0) {
+        if (!institutionsArray || institutionsArray.length === 0) {
             return paginatedResult;
         }
 
@@ -88,12 +93,14 @@ export class InstitutionsMongoDbService {
         paginatedResult.pageIndex = this.setPage(page, totalPages);
         paginatedResult.totalItems = totalCount;
 
-        let institutionIdsQuery = this.buildFilteredQuery(params).select('id');
-        const institutionIds = await institutionIdsQuery.select('id').exec();
-        paginatedResult.ids = institutionIds.map((id) => id.id); paginatedResult.items = institutionsArray.map(inst => this.mapToInstutionListItem(inst.toObject() as InstitutionDto));
+        // Compute ids from the filtered query (single projection) without a separate full query
+        const institutionIds = await this.buildFilteredQuery(params).select('id').lean().exec();
+        paginatedResult.ids = institutionIds.map((id) => id.id);
+        paginatedResult.items = institutionsArray.map(inst => this.mapToInstutionListItem(inst as unknown as InstitutionDto));
 
         // Save to cache with TTL
         this.logger.debug("saving to cache with cache key", cacheKey);
+        // cacheManager in many setups accepts TTL as the third numeric argument; keep current pattern
         await this.cacheManager.set(cacheKey, paginatedResult, this.cacheTTL);
 
         return paginatedResult;
@@ -107,12 +114,12 @@ export class InstitutionsMongoDbService {
             return cachedInstitution;
         }
 
-        const institution = await this.institutionModel.findOne({ id }).exec();
+        const institution = await this.institutionModel.findOne({ id }).lean().exec();
         if (!institution) {
             throw new Error(`Institution with id ${id} not found`);
         }
 
-        await this.cacheManager.set(CACHE_KEY, institution, this.cacheTTL);
+        await this.cacheManager.set(CACHE_KEY, institution as InstitutionDto, this.cacheTTL);
         return institution as unknown as InstitutionDto;
     }
 
@@ -125,12 +132,12 @@ export class InstitutionsMongoDbService {
             return cachedInstitutions;
         }
 
-        const institutions = await this.institutionModel.find({ id: { $in: ids } }).exec();
-        if (institutions.length === 0) {
+        const institutions = await this.institutionModel.find({ id: { $in: ids } }).lean().exec();
+        if (!institutions || institutions.length === 0) {
             throw new Error('Institutions not found');
         }
 
-        await this.cacheManager.set(cacheKey, institutions, this.cacheTTL);
+        await this.cacheManager.set(cacheKey, institutions as InstitutionDto[], this.cacheTTL);
         return institutions as unknown as InstitutionDto[];
     }
 
