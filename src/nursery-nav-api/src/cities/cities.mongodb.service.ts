@@ -1,4 +1,4 @@
-import { Injectable, Inject, Logger } from "@nestjs/common";
+import { Injectable, Inject, Logger, Optional } from "@nestjs/common";
 import { CityDto } from "./DTO/cityDto";
 import { Cache } from "cache-manager";
 import { CACHE_MANAGER } from "@nestjs/cache-manager";
@@ -16,10 +16,14 @@ export class CitiesMongoDbService {
     constructor(
         @InjectModel(City.name) private cityModel: Model<City>,
         @Inject(CACHE_MANAGER) private cacheManager: Cache,
-        private configService: ConfigService
+        // make ConfigService optional so tests that don't import ConfigModule won't fail
+        @Optional() private configService?: ConfigService
     ) {
-        this.cacheTTL = this.configService.get<number>('CACHE_TTL') || 3600;
-        this.verifyRedisConnection();
+        this.cacheTTL = this.configService?.get<number>('CACHE_TTL') || 3600;
+        // only try to verify redis if a config service exists (usually in prod/dev)
+        if (this.configService) {
+            this.verifyRedisConnection();
+        }
     }
 
     async findAll(): Promise<CityDto[]> {

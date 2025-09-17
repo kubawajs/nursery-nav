@@ -5,7 +5,7 @@ import { InstitutionAutocompleteDto } from "./DTO/institutionAutocompleteDto";
 import { InstitutionDto } from "./DTO/institutionDto";
 import { InstitutionListItemDto } from "./DTO/institutionListItemDto";
 import { SortParams } from "./params/sortParams";
-import { Inject, Injectable, Logger } from "@nestjs/common";
+import { Inject, Injectable, Logger, Optional } from "@nestjs/common";
 import { Institution } from "../shared/schemas/institution.schema";
 import { Document, Model, Query, Types } from "mongoose";
 import { Cache } from 'cache-manager';
@@ -32,10 +32,13 @@ export class InstitutionsMongoDbService {
     constructor(
         @InjectModel(Institution.name) private institutionModel: Model<Institution>,
         @Inject(CACHE_MANAGER) private cacheManager: Cache,
-        private configService: ConfigService
+        // make ConfigService optional so tests that don't import ConfigModule won't fail
+        @Optional() private configService?: ConfigService
     ) {
-        this.cacheTTL = this.configService.get<number>('CACHE_TTL') || 3600; // Default 1 hour if not set
-        this.verifyRedisConnection();
+        this.cacheTTL = this.configService?.get<number>('CACHE_TTL') || 3600; // Default 1 hour if not set
+        if (this.configService) {
+            this.verifyRedisConnection();
+        }
     }
 
     async findAll(params: findAllParams): Promise<PaginatedResult<InstitutionListItemDto>> {
