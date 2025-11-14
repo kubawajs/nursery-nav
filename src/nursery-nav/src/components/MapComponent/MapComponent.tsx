@@ -54,17 +54,24 @@ export default function MapComponent({ locations, setIsMapLoaded }: MapComponent
 		return id ? locs.find((location) => location.id === parseInt(id)) : undefined;
 	}, [id, locations]);
 
-	const markers = useMemo(() => (Array.isArray(locationsFiltered) ? locationsFiltered : []).map((location) => (
-		<MapPin
-			key={location.id}
-			id={location.id}
-			latitude={location.latitude}
-			longitude={location.longitude}
-			institutionType={location.institutionType}
-			selectedLocationLat={selectedLocation?.latitude}
-			selectedLocationLon={selectedLocation?.longitude}
-		/>
-	)), [locationsFiltered, selectedLocation]);
+	const markers = useMemo(() => (Array.isArray(locationsFiltered) ? locationsFiltered : [])
+		.filter((location) =>
+			location.latitude != null &&
+			location.longitude != null &&
+			!isNaN(location.latitude) &&
+			!isNaN(location.longitude)
+		)
+		.map((location) => (
+			<MapPin
+				key={location.id}
+				id={location.id}
+				latitude={location.latitude}
+				longitude={location.longitude}
+				institutionType={location.institutionType}
+				selectedLocationLat={selectedLocation?.latitude}
+				selectedLocationLon={selectedLocation?.longitude}
+			/>
+		)), [locationsFiltered, selectedLocation]);
 
 	useEffect(() => {
 		const handleResize = debounce(() => {
